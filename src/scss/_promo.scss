@@ -1,0 +1,23 @@
+// Promo
+.promo {
+  color: $white;
+  text-align: center;
+  padding-top: $promo-padding;
+  padding-bottom: $promo-padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-title {
+    color: $promo-title-color;
+    margin: 0;
+    font-weight: $font-weight-normal;
+    display: inline-block;
+  }
+}
+
+// Promo left
+.promo-left {
+  text-align: left;
+  justify-content: start;
+}

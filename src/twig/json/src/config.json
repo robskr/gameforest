@@ -1,0 +1,17 @@
+{
+    "config": {
+        "title": "Gameforest Bootstrap Gaming Theme",
+        "brand": "Gameforest",
+        "version": "1.0",
+        "navbar": "fixed",
+        "footer": "static",
+        "dateformat": "F d, Y",
+        "docs": "local",
+        "disqus": "gameforest",
+        "facebook": {
+            "lang": "en_US",
+            "version": "v3.2",
+            "appID": ""
+        }
+    }
+}

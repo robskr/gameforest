@@ -1,0 +1,81 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Breadcrumb Component</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Breadcrumb</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card card-default">
+                        <h6 class="card-header">Breadcrumb</h6>
+                        <div class="card-body">
+                            <nav class="bg-white border-bottom px-4" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Games</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card card-default mb-0">
+                        <h6 class="card-header">Variations</h6>
+                        <div class="card-body">
+                            <nav class="bg-dark px-4 mb-2" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Games</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+                                </ol>
+                            </nav>
+
+                            <nav class="bg-purple px-4 mb-2" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Games</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+                                </ol>
+                            </nav>
+
+                            <nav class="bg-primary px-4 mb-2" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Games</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+                                </ol>
+                            </nav>
+
+                            <nav class="bg-danger px-4 mb-0" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Games</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

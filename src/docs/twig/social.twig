@@ -1,0 +1,167 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Social',
+    text: 'Use social buttons to display a button for login or register forms. It\' easy to use just copy to selected code from below.',
+    blocks: [
+        {
+            title: 'Buttons',
+            text: 'Add <code>.btn-social</code> class to the button with the choosen social platform name for more check the example below.',
+            code: '<a class="btn btn-social btn-facebook" href="#" role="button">Facebook</a>
+<a class="btn btn-social btn-twitter" href="#" role="button">Twitter</a>
+<a class="btn btn-social btn-google-plus" href="#" role="button">Google Plus</a>
+<a class="btn btn-social btn-youtube" href="#" role="button">Youtube</a>
+<a class="btn btn-social btn-linkedin" href="#" role="button">Linkedin</a>
+<a class="btn btn-social btn-skype" href="#" role="button">Skype</a>
+<a class="btn btn-social btn-vk" href="#" role="button">vk</a>
+<a class="btn btn-social btn-twitch" href="#" role="button">Twitch</a>
+<a class="btn btn-social btn-steam" href="#" role="button">Steam</a>
+<a class="btn btn-social btn-dribbble" href="#" role="button">Dribbble</a>
+<a class="btn btn-social btn-vimeo" href="#" role="button">Vimeo</a>
+<a class="btn btn-social btn-pinterest" href="#" role="button">Pinterest</a>
+<a class="btn btn-social btn-instagram" href="#" role="button">Instagram</a>
+<a class="btn btn-social btn-soundcloud" href="#" role="button">Soundcloud</a>
+<a class="btn btn-social btn-spotify" href="#" role="button">Spotify</a>
+<a class="btn btn-social btn-tumblr" href="#" role="button">Tumblr</a>
+<a class="btn btn-social btn-reddit" href="#" role="button">Reddit</a>
+<a class="btn btn-social btn-paypal" href="#" role="button">Paypal</a>
+<a class="btn btn-social btn-wordpress" href="#" role="button">Wordpress</a>
+<a class="btn btn-social btn-drupal" href="#" role="button">Drupal</a>
+<a class="btn btn-social btn-joomla" href="#" role="button">Joomla</a>
+<a class="btn btn-social btn-github" href="#" role="button">Github</a>
+<a class="btn btn-social btn-slack" href="#" role="button">Slack</a>
+<a class="btn btn-social btn-windows" href="#" role="button">Windows</a>
+<a class="btn btn-social btn-linux" href="#" role="button">Linux</a>'
+        },
+        {
+            title: 'Button Icons',
+            text: 'We can use social icons in a button just add the selected icon with <code>i</code> attribute to the button. We used fontawesome social icons in this example below.',
+            code: '<a class="btn btn-social btn-facebook" href="#" role="button"><i class="fab fa-facebook-f mr-1"></i> Facebook</a>
+<a class="btn btn-social btn-twitter" href="#" role="button"><i class="fab fa-twitter mr-1"></i> Twitter</a>
+<a class="btn btn-social btn-google-plus" href="#" role="button"><i class="fab fa-google-plus-g mr-1"></i> Google Plus</a>
+<a class="btn btn-social btn-youtube" href="#" role="button"><i class="fab fa-youtube mr-1"></i> Youtube</a>
+<a class="btn btn-social btn-linkedin" href="#" role="button"><i class="fab fa-linkedin-in mr-1"></i> Linkedin</a>
+<a class="btn btn-social btn-skype" href="#" role="button"><i class="fab fa-skype mr-1"></i> Skype</a>
+<a class="btn btn-social btn-vk" href="#" role="button"><i class="fab fa-vk mr-1"></i> vk</a>
+<a class="btn btn-social btn-twitch" href="#" role="button"><i class="fab fa-twitch mr-1"></i> Twitch</a>
+<a class="btn btn-social btn-steam" href="#" role="button"><i class="fab fa-steam-symbol mr-1"></i> Steam</a>
+<a class="btn btn-social btn-discord" href="#" role="button"><i class="fab fa-discord mr-1"></i> Discord</a>
+<a class="btn btn-social btn-dribbble" href="#" role="button"><i class="fab fa-dribbble mr-1"></i> Dribbble</a>
+<a class="btn btn-social btn-vimeo" href="#" role="button"><i class="fab fa-vimeo-v mr-1"></i> Vimeo</a>
+<a class="btn btn-social btn-pinterest" href="#" role="button"><i class="fab fa-pinterest mr-1"></i> Pinterest</a>
+<a class="btn btn-social btn-instagram" href="#" role="button"><i class="fab fa-instagram mr-1"></i> Instagram</a>
+<a class="btn btn-social btn-soundcloud" href="#" role="button"><i class="fab fa-soundcloud mr-1"></i> Soundcloud</a>
+<a class="btn btn-social btn-spotify" href="#" role="button"><i class="fab fa-spotify mr-1"></i> Spotify</a>
+<a class="btn btn-social btn-tumblr" href="#" role="button"><i class="fab fa-tumblr mr-1"></i> Tumblr</a>
+<a class="btn btn-social btn-reddit" href="#" role="button"><i class="fab fa-reddit mr-1"></i> Reddit</a>
+<a class="btn btn-social btn-paypal" href="#" role="button"><i class="fab fa-paypal mr-1"></i> Paypal</a>
+<a class="btn btn-social btn-wordpress" href="#" role="button"><i class="fab fa-wordpress mr-1"></i> Wordpress</a>
+<a class="btn btn-social btn-drupal" href="#" role="button"><i class="fab fa-drupal mr-1"></i> Drupal</a>
+<a class="btn btn-social btn-joomla" href="#" role="button"><i class="fab fa-joomla mr-1"></i> Joomla</a>
+<a class="btn btn-social btn-github" href="#" role="button"><i class="fab fa-github mr-1"></i> Github</a>
+<a class="btn btn-social btn-slack" href="#" role="button"><i class="fab fa-slack mr-1"></i> Slack</a>
+<a class="btn btn-social btn-windows" href="#" role="button"><i class="fab fa-windows mr-1"></i> Windows</a>
+<a class="btn btn-social btn-linux" href="#" role="button"><i class="fab fa-linux mr-1"></i> Linux</a>'
+        },
+        {
+            title: 'Social Icons',
+            text: 'It is also possible to use only social icons with the button by adding <code>.btn-icon</code> class to the button just like in the example below.',
+            code: '<a class="btn btn-social btn-facebook btn-icon" href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+<a class="btn btn-social btn-twitter btn-icon" href="#" role="button"><i class="fab fa-twitter"></i></a>
+<a class="btn btn-social btn-google-plus btn-icon" href="#" role="button"><i class="fab fa-google-plus-g"></i></a>
+<a class="btn btn-social btn-youtube btn-icon" href="#" role="button"><i class="fab fa-youtube"></i></a>
+<a class="btn btn-social btn-linkedin btn-icon" href="#" role="button"><i class="fab fa-linkedin-in"></i></a>
+<a class="btn btn-social btn-skype btn-icon" href="#" role="button"><i class="fab fa-skype"></i></a>
+<a class="btn btn-social btn-vk btn-icon" href="#" role="button"><i class="fab fa-vk"></i></a>
+<a class="btn btn-social btn-twitch btn-icon" href="#" role="button"><i class="fab fa-twitch"></i></a>
+<a class="btn btn-social btn-steam btn-icon" href="#" role="button"><i class="fab fa-steam-symbol"></i></a>
+<a class="btn btn-social btn-dribbble btn-icon" href="#" role="button"><i class="fab fa-dribbble"></i></a>
+<a class="btn btn-social btn-vimeo btn-icon" href="#" role="button"><i class="fab fa-vimeo-v"></i></a>
+<a class="btn btn-social btn-pinterest btn-icon" href="#" role="button"><i class="fab fa-pinterest"></i></a>
+<a class="btn btn-social btn-instagram btn-icon" href="#" role="button"><i class="fab fa-instagram"></i></a>
+<a class="btn btn-social btn-soundcloud btn-icon" href="#" role="button"><i class="fab fa-soundcloud"></i></a>
+<a class="btn btn-social btn-spotify btn-icon" href="#" role="button"><i class="fab fa-spotify"></i></a>
+<a class="btn btn-social btn-tumblr btn-icon" href="#" role="button"><i class="fab fa-tumblr"></i></a>
+<a class="btn btn-social btn-reddit btn-icon" href="#" role="button"><i class="fab fa-reddit"></i></a>
+<a class="btn btn-social btn-paypal btn-icon" href="#" role="button"><i class="fab fa-paypal"></i></a>
+<a class="btn btn-social btn-wordpress btn-icon" href="#" role="button"><i class="fab fa-wordpress"></i></a>
+<a class="btn btn-social btn-drupal btn-icon" href="#" role="button"><i class="fab fa-drupal"></i></a>
+<a class="btn btn-social btn-joomla btn-icon" href="#" role="button"><i class="fab fa-joomla"></i></a>
+<a class="btn btn-social btn-github btn-icon" href="#" role="button"><i class="fab fa-github"></i></a>
+<a class="btn btn-social btn-slack btn-icon" href="#" role="button"><i class="fab fa-slack"></i></a>
+<a class="btn btn-social btn-windows btn-icon" href="#" role="button"><i class="fab fa-windows"></i></a>'
+        },
+        {
+            title: 'Social effects',
+            text: 'Add custom effect to the social buttons by using <code>.btn-effect</code> class just like in the example below.',
+            code: '<a class="btn btn-social btn-facebook btn-icon btn-effect" href="#" role="button"><i class="fab fa-facebook-f"></i><i class="fab fa-facebook-f"></i></a>
+<a class="btn btn-social btn-twitter btn-icon btn-effect" href="#" role="button"><i class="fab fa-twitter"></i><i class="fab fa-twitter"></i></a>
+<a class="btn btn-social btn-google-plus btn-icon btn-effect" href="#" role="button"><i class="fab fa-google-plus-g"></i><i class="fab fa-google-plus-g"></i></a>
+<a class="btn btn-social btn-youtube btn-icon btn-effect" href="#" role="button"><i class="fab fa-youtube"></i><i class="fab fa-youtube"></i></a>
+<a class="btn btn-social btn-linkedin btn-icon btn-effect" href="#" role="button"><i class="fab fa-linkedin-in"></i><i class="fab fa-linkedin-in"></i></a>
+<a class="btn btn-social btn-skype btn-icon btn-effect" href="#" role="button"><i class="fab fa-skype"></i><i class="fab fa-skype"></i></a>
+<a class="btn btn-social btn-vk btn-icon btn-effect" href="#" role="button"><i class="fab fa-vk"></i><i class="fab fa-vk"></i></a>
+<a class="btn btn-social btn-twitch btn-icon btn-effect" href="#" role="button"><i class="fab fa-twitch"></i><i class="fab fa-twitch"></i></a>
+<a class="btn btn-social btn-steam btn-icon btn-effect" href="#" role="button"><i class="fab fa-steam-symbol"></i><i class="fab fa-steam-symbol"></i></a>
+<a class="btn btn-social btn-dribbble btn-icon btn-effect" href="#" role="button"><i class="fab fa-dribbble"></i><i class="fab fa-dribbble"></i></a>
+<a class="btn btn-social btn-vimeo btn-icon btn-effect" href="#" role="button"><i class="fab fa-vimeo-v"></i><i class="fab fa-vimeo-v"></i></a>
+<a class="btn btn-social btn-pinterest btn-icon btn-effect" href="#" role="button"><i class="fab fa-pinterest"></i><i class="fab fa-pinterest"></i></a>
+<a class="btn btn-social btn-instagram btn-icon btn-effect" href="#" role="button"><i class="fab fa-instagram"></i><i class="fab fa-instagram"></i></a>
+<a class="btn btn-social btn-soundcloud btn-icon btn-effect" href="#" role="button"><i class="fab fa-soundcloud"></i><i class="fab fa-soundcloud"></i></a>
+<a class="btn btn-social btn-spotify btn-icon btn-effect" href="#" role="button"><i class="fab fa-spotify"></i><i class="fab fa-spotify"></i></a>
+<a class="btn btn-social btn-tumblr btn-icon btn-effect" href="#" role="button"><i class="fab fa-tumblr"></i><i class="fab fa-tumblr"></i></a>
+<a class="btn btn-social btn-reddit btn-icon btn-effect" href="#" role="button"><i class="fab fa-reddit"></i><i class="fab fa-reddit"></i></a>
+<a class="btn btn-social btn-paypal btn-icon btn-effect" href="#" role="button"><i class="fab fa-paypal"></i><i class="fab fa-paypal"></i></a>
+<a class="btn btn-social btn-wordpress btn-icon btn-effect" href="#" role="button"><i class="fab fa-wordpress"></i><i class="fab fa-wordpress"></i></a>
+<a class="btn btn-social btn-drupal btn-icon btn-effect" href="#" role="button"><i class="fab fa-drupal"></i><i class="fab fa-drupal"></i></a>
+<a class="btn btn-social btn-joomla btn-icon btn-effect" href="#" role="button"><i class="fab fa-joomla"></i><i class="fab fa-joomla"></i></a>
+<a class="btn btn-social btn-github btn-icon btn-effect" href="#" role="button"><i class="fab fa-github"></i><i class="fab fa-github"></i></a>
+<a class="btn btn-social btn-slack btn-icon btn-effect" href="#" role="button"><i class="fab fa-slack"></i><i class="fab fa-slack"></i></a>
+<a class="btn btn-social btn-windows btn-icon btn-effect" href="#" role="button"><i class="fab fa-windows"></i><i class="fab fa-windows"></i></a>',
+        },
+        {
+            title: 'Social links',
+            text: 'It is also possible to use social buttons without background and text color by adding <code>.btn-link</code> class to the button.',
+            code: '<a class="btn btn-social btn-facebook btn-link" href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+<a class="btn btn-social btn-twitter btn-link" href="#" role="button"><i class="fab fa-twitter"></i></a>
+<a class="btn btn-social btn-google-plus btn-link" href="#" role="button"><i class="fab fa-google-plus-g"></i></a>
+<a class="btn btn-social btn-youtube btn-link" href="#" role="button"><i class="fab fa-youtube"></i></a>
+<a class="btn btn-social btn-linkedin btn-link" href="#" role="button"><i class="fab fa-linkedin-in"></i></a>
+<a class="btn btn-social btn-skype btn-link" href="#" role="button"><i class="fab fa-skype"></i></a>
+<a class="btn btn-social btn-vk btn-link" href="#" role="button"><i class="fab fa-vk"></i></a>
+<a class="btn btn-social btn-twitch btn-link" href="#" role="button"><i class="fab fa-twitch"></i></a>
+<a class="btn btn-social btn-steam btn-link" href="#" role="button"><i class="fab fa-steam-symbol"></i></a>
+<a class="btn btn-social btn-dribbble btn-link" href="#" role="button"><i class="fab fa-dribbble"></i></a>
+<a class="btn btn-social btn-vimeo btn-link" href="#" role="button"><i class="fab fa-vimeo-v"></i></a>
+<a class="btn btn-social btn-pinterest btn-link" href="#" role="button"><i class="fab fa-pinterest"></i></a>
+<a class="btn btn-social btn-instagram btn-link" href="#" role="button"><i class="fab fa-instagram"></i></a>
+<a class="btn btn-social btn-soundcloud btn-link" href="#" role="button"><i class="fab fa-soundcloud"></i></a>
+<a class="btn btn-social btn-spotify btn-link" href="#" role="button"><i class="fab fa-spotify"></i></a>
+<a class="btn btn-social btn-tumblr btn-link" href="#" role="button"><i class="fab fa-tumblr"></i></a>
+<a class="btn btn-social btn-reddit btn-link" href="#" role="button"><i class="fab fa-reddit"></i></a>
+<a class="btn btn-social btn-paypal btn-link" href="#" role="button"><i class="fab fa-paypal"></i></a>
+<a class="btn btn-social btn-wordpress btn-link" href="#" role="button"><i class="fab fa-wordpress"></i></a>
+<a class="btn btn-social btn-drupal btn-link" href="#" role="button"><i class="fab fa-drupal"></i></a>
+<a class="btn btn-social btn-joomla btn-link" href="#" role="button"><i class="fab fa-joomla"></i></a>
+<a class="btn btn-social btn-github btn-link" href="#" role="button"><i class="fab fa-github"></i></a>
+<a class="btn btn-social btn-slack btn-link" href="#" role="button"><i class="fab fa-slack"></i></a>
+<a class="btn btn-social btn-windows btn-link" href="#" role="button"><i class="fab fa-windows"></i></a>
+<a class="btn btn-social btn-linux btn-link" href="#" role="button"><i class="fab fa-linux"></i></a>'
+        },
+        {
+            title: 'Social blocks',
+            text: 'Use <code>.btn-block</code> class with the choosen button. It can be useful when you would like to add a login button to the login or register form.',
+            code: '<div class="row row-xs">
+    <div class="col-lg-4">
+        <a class="btn btn-social btn-facebook btn-block" href="#" role="button"><i class="ya ya-facebook"></i> connect with facebook</a>
+    </div>
+    <div class="col-lg-4">
+        <a class="btn btn-social btn-twitch btn-block" href="#" role="button"><i class="ya ya-twitch"></i> connect with twitch</a>
+    </div>
+    <div class="col-lg-4">
+        <a class="btn btn-social btn-github btn-block" href="#" role="button"><i class="ya ya-github"></i> connect with github</a>
+    </div>
+</div>',
+        }
+    ]
+} %}

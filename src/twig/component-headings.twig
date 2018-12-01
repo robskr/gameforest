@@ -1,0 +1,65 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Headings</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Headings</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card card-default">
+                        <h6 class="card-header">Basic</h6>
+                        <div class="card-body pt-5 pb-0">
+                            <div class="heading">
+                                <i class="ya ya-time-alarm"></i>
+                                <h2 class="heading-title">Recent News at Gameforest</h2>
+                                <p class="heading-lead">May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-default">
+                        <h6 class="card-header">Alignment</h6>
+                        <div class="card-body">
+                            <div class="heading heading-left mb-0">
+                                <i class="ya ya-time-alarm"></i>
+                                <h2 class="heading-title">Recent News at Gameforest</h2>
+                                <p class="heading-lead">May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-default">
+                        <h6 class="card-header">Small Heading</h6>
+                        <div class="card-body">
+                            <div class="heading heading-sm">
+                                <div>
+                                    <h2 class="heading-title h4">Forum Topic</h2>
+                                    <p class="heading-text">It is also possible to describe the forum topic in this small section.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

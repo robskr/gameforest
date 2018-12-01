@@ -1,0 +1,60 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Lightbox',
+    text: 'Add image to the current page in a popup box by using gameforest lightweight lightbox component. Easy to use and can be customized in several ways.',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'To apply the lightbox component just add the <code>ya-lightbox</code> attribute to an element to turn all anchors from element into lightbox links.',
+            code: '<a class="btn btn-outline" href="https://static.giantbomb.com/uploads/original/5/56742/3058974-3631271585-rdr2-.jpg" ya-lightbox role="button">Open lightbox</a>',
+        },
+        {
+            title: 'Gallery',
+            text: 'Add images into a gallery with the lightbox component by using the <code>rel</code> attribute. It will append images to a gallery where rel attribute values are equals.',
+            code: '<a class="btn btn-outline" href="https://static.giantbomb.com/uploads/original/8/85316/2851845-uncharted+4_+a+thief%E2%80%99s+end%E2%84%A2_20160515122710.png" ya-lightbox rel="anthem" role="button">Open Gallery</a>
+<a class="d-none" href="https://static.giantbomb.com/uploads/original/8/85316/2851846-uncharted+4_+a+thief%E2%80%99s+end%E2%84%A2_20160515122915.png" ya-lightbox rel="anthem" role="button"></a>
+<a class="d-none" href="https://static.giantbomb.com/uploads/original/8/85316/2851827-uncharted+4_+a+thief%E2%80%99s+end%E2%84%A2_20160514193831.png" ya-lightbox rel="anthem" role="button"></a>',
+        },
+        {
+            title: 'Video',
+            text: 'To add a video to the lightbox, use video url in a <code>href</code> attribute. It is also possible to use customizations from embed component.',
+            code: '<a class="btn btn-outline" href="https://www.youtube.com/watch?v=Dw_oH5oiUSE" ya-lightbox role="button">Youtube</a>
+<a class="btn btn-outline" href="https://clips.twitch.tv/EncouragingShakingPoxRalpherZ" ya-lightbox role="button">Twitch</a>',
+        },
+        {
+            title: 'Comments',
+            text: 'We can display user comments with lightbox plugin. Recommended to add a custom url to the opened image just like in the example below.',
+            code: '<a class="btn btn-outline" href="https://www.youtube.com/watch?v=Dw_oH5oiUSE" ya-lightbox="disqus: gameforest" role="button">Disqus</a>
+<a class="btn btn-outline" href="https://static.giantbomb.com/uploads/original/5/56742/3058975-9282494737-rdr2-.jpg" ya-lightbox="facebook: true" rel="read-dead-redemption2" role="button">Facebook</a>
+<a class="d-none" href="https://static.giantbomb.com/uploads/original/5/56742/3058981-0739123767-rdr2-.jpg" ya-lightbox rel="read-dead-redemption2" role="button"></a>
+<a class="d-none" href="https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg" ya-lightbox rel="read-dead-redemption2" role="button"></a>',
+        },
+        {
+            title: 'Options',
+            text: '',
+            table: {
+                head: [
+                    { title: 'option' },
+                    { title: 'value' },
+                    { title: 'default' },
+                    { title: 'description', width: '60%' }
+                ],
+                body: [
+                    [
+                        { text: 'disqus', code: true },
+                        { text: 'string' },
+                        { text: 'null' },
+                        { text: 'Add disqus comment plugin to the lightbox by adding disqus url.' }
+                    ],
+                    [
+                        { text: 'facebook', code: true },
+                        { text: 'string' },
+                        { text: 'null' },
+                        { text: 'Add facebook comment plugin to the lightbox by adding facebook api id.' }
+                    ]
+                ]
+            }
+        }
+    ]
+} %}

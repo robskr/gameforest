@@ -1,0 +1,11 @@
+// Badge
+.badge {
+  text-transform: uppercase;
+}
+
+// Social badges
+@each $color, $value in $social-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}

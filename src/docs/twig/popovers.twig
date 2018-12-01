@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Popovers',
+    text: 'Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.',
+    bootstrap: 'components/popovers',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Add popover to the button by using <code>data-toggle="popover"</code> attribute and with the necesary attributes like in the example below.',
+            code: '<button type="button" class="btn btn-outline" data-toggle="popover" title="Popover title" data-content="And here\'s some amazing content. It\'s very engaging. Right?">Click to toggle popover</button>',
+        },
+        {
+            title: 'Positions',
+            text: 'Use <code>data-placement</code> attribute with the chosen position on the element to set the right position for your popover.',
+            code: '<button type="button" class="btn btn-outline" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on top
+</button>
+
+<button type="button" class="btn btn-outline" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on right
+</button>
+
+<button type="button" class="btn btn-outline" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn btn-outline" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on left
+</button>',
+        }
+    ]
+} %}

@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+button {
+  outline: none !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site {
+  min-height: 100%;
+  position: relative;
+}
+
+.display-5 {
+  font-size: $display5-size;
+}
+
+.display-6 {
+  font-size: $display6-size;
+}

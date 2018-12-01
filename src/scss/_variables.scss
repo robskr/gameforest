@@ -1,0 +1,297 @@
+// Fonts
+$font-family-base:             "Roboto", sans-serif !default;
+$font-family-icon:             "nucleo" !default;
+
+$font-weight-light:            300 !default;
+$font-weight-normal:           400 !default;
+$font-weight-semibold:         500 !default;
+$font-weight-bold:             700 !default;
+$font-weight-black:            900 !default;
+$font-weight-base:             $font-weight-normal !default;
+
+$font-size-base:               1rem !default;
+$font-size-lg:                 ($font-size-base * 1.25) !default;
+$font-size-md:                 ($font-size-base * .9375) !default;
+$font-size-sm:                 ($font-size-base * .875) !default;
+
+$h1-font-size:                 1.75rem !default;
+$h2-font-size:                 1.525rem !default;
+$h3-font-size:                 1.375rem !default;
+$h4-font-size:                 1.25rem !default;
+$h5-font-size:                 1.125rem !default;
+$h6-font-size:                 1rem !default;
+
+$display1-size:                3.5rem !default;
+$display2-size:                3.25rem !default;
+$display3-size:                2.825rem !default;
+$display4-size:                2.5rem !default;
+$display5-size:                2.25rem !default;
+$display6-size:                1.925rem !default;
+
+// Colors
+$white:                        #fff !default;
+$black:                        #000 !default;
+$blue:                         #2575dc !default;
+$purple:                       #5d54e4 !default;
+$red:                          #e45454 !default;
+$orange:                       #fb9c5d !default;
+$green:                        #7fad4a !default;
+$gray:                         #67646b !default;
+
+$primary:                      $blue !default;
+$danger:                       $red !default;
+$warning:                      $orange !default;
+$secondary:                    $gray !default;
+$light:                        #ebeaec !default;
+$dark:                         #2a2b2d !default;
+$info:                         #52BAFF !default;
+
+$theme-colors: (
+  "purple": $purple
+);
+
+// Social colors
+$social-colors: (
+  "facebook":                  #3b5999,
+  "twitter":                   #55acee,
+  "linkedin":                  #0077B5,
+  "skype":                     #00AFF0,
+  "vk":                        #4c75a3,
+  "vimeo":                     #1ab7ea,
+  "google-plus":               #dd4b39,
+  "youtube":                   #cd201f,
+  "reddit":                    #ff5700,
+  "pinterest":                 #bd081c,
+  "instagram":                 #3F729B,
+  "dribbble":                  #ea4c89,
+  "twitch":                    #6441a5,
+  "steam":                     #111,
+  "discord":                   #7289da,
+  "paypal":                    #00588B,
+  "wordpress":                 #0087be,
+  "drupal":                    #0077c0,
+  "joomla":                    #5091cd,
+  "tumblr":                    #34526F,
+  "github":                    #333,
+  "soundcloud":                #ff5500,
+  "spotify":                   #1db954,
+  "slack":                     #e01563,
+  "windows":                   #00bcf2,
+  "linux":                     #1793d1,
+  "ps4":                       $blue,
+  "xbox":                      $green
+);
+
+$yiq-contrasted-threshold:     200 !default;
+$yiq-text-dark:                #757373 !default;
+
+// Link
+$link-color:                   inherit !default;
+$link-hover-color:             darken($primary, 5%) !default;
+$link-hover-decoration:        none !default;
+
+// Dropdown
+$dropdown-border-color:        rgba(27,31,35, .1) !default;
+$dropdown-link-color:          #414242 !default;
+$zindex-dropdown:              7 !default;
+
+// Heading
+$headings-color:               #505050 !default;
+$headings-font-weight:         $font-weight-semibold !default;
+
+// Lead
+$lead-font-size:               18px !default;
+$lead-font-weight:             400 !default;
+
+// Body
+$body-bg:                      #fafafa !default;
+$body-color:                   #59595f !default;
+$box-shadow:                   0 2px 3px 0px rgba(0,0,0, .05) !default;
+
+// Navbar
+$navbar-dark-color:            rgba($white, .8) !default;
+$navbar-dark-hover-color:      $white !default;
+$navbar-dark-active-color:     $navbar-dark-hover-color !default;
+
+$navbar-nav-link-padding-x:    10px !default;
+$nav-link-padding-y:           0.625rem !default;
+
+// Avatar
+$avatar-radius:                4px !default;
+$avatar-size:                  6.25rem !default;
+$avatar-size-xl:               12.5rem !default;
+$avatar-size-lg:               9.375rem !default;
+$avatar-size-md:               4.0625rem !default;
+$avatar-size-sm:               3.125rem !default;
+$avatar-size-xs:               2.5rem !default;
+$avatar-size-stack:            30px !default;
+
+// Image thumbnails
+$thumbnail-bg:                 $white !default;
+$thumbnail-border-color:       rgba($black, .15) !default;
+$thumbnail-padding:            5px !default;
+$thumbnail-transition:         all .15s ease-in-out !default;
+
+// Buttons
+$btn-padding-y:                6px !default;
+$btn-padding-x:                12px !default;
+$btn-padding-y-lg:             10px !default;
+$btn-padding-x-lg:             20px !default;
+$btn-padding-y-sm:             $btn-padding-y !default;
+$btn-padding-x-sm:             $btn-padding-x !default;
+$btn-padding-y-xs:             3px !default;
+$btn-padding-x-xs:             8px !default;
+$btn-padding-icon:             11px !default;
+$btn-font-size-xs:             .875rem !default;
+$btn-font-size-lg:             16px !default;
+$btn-font-weight:              $font-weight-normal !default;
+$btn-shadow:                   0 1px 2px 0 rgba($black, .2) !default;
+$btn-focus-width:              0 !default;
+$btn-icon-margin:              5px !default;
+
+$btn-rounded:                  12px 25px !default;
+$btn-rounded-xs:               8px 20px !default;
+$btn-rounded-sm:               10px 25px !default;
+$btn-rounded-lg:               14px 27px !default;
+
+$btn-outline-color:            darken($primary, 5%) !default;
+$btn-outline-bg:               $body-bg !default;
+$btn-outline-border:           rgba($black, .15) !default;
+
+$btn-outline-light-color:      $white !default;
+$btn-outline-light-bg:         transparent !default;
+$btn-outline-light-border:     rgba($white, .2) !default;
+
+$btn-light-color:              #67646b !default;
+$btn-light-border:             #d4d4d4 !default;
+$btn-light-bg:                 $white !default;
+
+$btn-default-color:            #565458 !default;
+$btn-default-border:           #d4d4d4 !default;
+$btn-default-bg:               $body-bg !default;
+
+// Code
+$code-color:                   $primary !default;
+
+// Forms
+$input-border-color:           #d9d8de !default;
+$input-btn-focus-color:        lighten($primary, 40%) !default;
+$input-group-addon-bg:         #f7f7f7 !default;
+$input-group-addon-color:      #5d5d5d !default;
+$input-disabled-bg:            darken($body-bg, 1%) !default;
+$input-color:                  #37393c !default;
+
+$form-text-margin-top:         .725rem !default;
+$form-group-margin-bottom:     1.5rem !default;
+
+$custom-control-indicator-bg:  #dadada !default;
+
+// Alerts
+$alert-bg-level:               -10 !default;
+$alert-border-level:           -7 !default;
+$alert-color-level:            4 !default;
+$alert-link-font-weight:       500 !default;
+$alert-padding-y:              .7rem !default;
+
+$alert-light-color:            $body-color !default;
+$alert-light-border:           rgba($black, .15) !default;
+$alert-light-bg:               $white !default;
+
+$alert-dark-color:             $white !default;
+$alert-dark-border:            $dark !default;
+$alert-dark-bg:                $dark !default;
+
+$alert-secondary-color:        $body-color !default;
+$alert-secondary-border:       rgba($black, .15) !default;
+$alert-secondary-bg:           $body-bg !default;
+
+// Lightbox
+$lightbox-bg:                  rgba(37,37,37, .8) !default;
+
+// Progress
+$progress-height:              10px !default;
+$progress-bg:                  #ebedef !default;
+
+// Promo
+$promo-padding:                1.875rem !default;
+$promo-title-color:            $white !default;
+
+// Badges
+$badge-font-size:              70% !default;
+$badge-padding-y:              10px !default;
+$badge-padding-x:              10px !default;
+$badge-pill-padding-x:         15px !default;
+
+// Card
+$card-spacer-x:                15px !default;
+$card-spacer-img:              10px !default;
+$card-cap-bg:                  #fdfdfd !default;
+$card-box-shadow:              0 2px 0px 0 rgba($black, 0.05) !default;
+$card-margin:                  35px !default;
+
+// Tooltips
+$tooltip-bg:                   darken($gray, 20%) !default;
+$tooltip-opacity:              1 !default;
+
+// Table
+$table-hover-bg:               darken($body-bg, 3%) !default;
+$table-accent-bg:              darken($body-bg, 2.5%) !default;
+
+// Popover
+$popover-border-color:         lighten($dark, 65%) !default;
+
+// Owl carousel
+$dot-width:				             16px !default;
+$dot-height:		            	 16px !default;
+$dot-rounded:		             	 30px !default;
+$dot-margin: 	            		 5px 3px !default;
+$dot-background:	           	 rgba(0,0,0, .15) !default;
+$dot-background-active:	       rgba(0,0,0, .5) !default;
+
+$small-font-size:              14px !default;
+
+// Modal
+$modal-sm:                     380px !default;
+
+// Pagination
+$pagination-focus-box-shadow:           none !default;
+$pagination-hover-color:                inherit !default;
+$pagination-hover-bg:                   rgba($black, .05) !default;
+$pagination-disabled-border-color:      #d5d9de !default;
+$pagination-border-color:               #d5d9de !default;
+$pagination-hover-border-color:         #d5d9de !default;
+
+// Dropdown
+$dropdown-min-width:           180px !default;
+$dropdown-link-color:          #232323 !default;
+$dropdown-item-padding-x:      15px !default;
+
+// Breadcrumb
+$breadcrumb-bg:                transparent !default;
+$breadcrumb-margin-bottom:     0 !default;
+$breadcrumb-padding-x:         0 !default;
+$breadcrumb-item-padding:      5px !default;
+$breadcrumb-item-color:        #616161 !default;
+$breadcrumb-content-size:      11px !default;
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: (
+  6: ($spacer * 3.75),
+  7: ($spacer * 5)
+);
+
+// Animation delay
+$animation-delay: () !default;
+$animation-delay: map-merge((
+  1: .2s,
+  2: .4s,
+  3: .6s,
+  4: .8s,
+  5: 1s,
+  6: 1.2s,
+  7: 1.4s,
+  8: 1.6s,
+  9: 1.8s,
+  10: 2s,
+), $animation-delay);

@@ -1,0 +1,121 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Twig',
+    text: 'Gameforest includes several html templates and source code that compiled by twig. Twig.js is a pure JavaScript implementation of the Twig PHP templating language.',
+    blocks: [
+        {
+            title: 'How to use',
+            text: 'We can reach twig files from <code>./src/twig</code> directory. After we have made new modifications in source then need to run a task to compile twig files into html.',
+            pre: 'yarn html',
+            custom: '<p class="mt-4">It will compile our twig files into the <code>./dist</code> directory as pure and clean html files.</p>'
+        },
+        {
+            title: 'Extends',
+            text: 'With extends we can add base html attributes to our twig file like header or footer so required to include it in every single twig file at top of the page.',
+            pre: '{% extends "base.twig" %}',
+        },
+        {
+            title: 'CSS block',
+            text: 'Add your custom css or 3rd party plugin stylesheets by using <code>block css</code> just like in the example below and it will be displayed in the html header.',
+            pre: '{% block css %}
+    <link rel="stylesheet" href="...">
+{% endblock %}',
+        },
+        {
+            title: 'Javascript block',
+            text: 'Add your custom javascript or 3rd party plugin javascripts by using <code>block js</code> just like in the example below and it will be displayed at the bottom of page.',
+            pre: '{% block js %}
+    <script src="..."></script>
+{% endblock %}',
+        },
+        {
+            title: 'Body block',
+            text: 'Use <code>body block</code> to display sections and components inside html body attribute just like in the example below.',
+            pre: '{% block body %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    ...
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}',
+        },
+        {
+            title: 'Twig markup',
+            text: 'Basic example to get start to build your own twig page.',
+            pre: '{% extends "base.twig" %}
+
+{% block body %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    ...
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}',
+        },
+        {
+            title: 'JSON data',
+            text: 'Json data is a great way if we would like to define a global variable like sitename or just add posts etc...',
+            json: true,
+            pre: '{
+    "config": {
+        "title": "Gameforest Bootstrap Gaming Theme",
+        "brand": "Gameforest",
+        "version": "1.0",
+        "navbar": "fixed",
+        "footer": "static",
+        "dateformat": "F d, Y"
+    }
+}',
+        },
+        {
+            title: 'Variable',
+            text: 'A variable can be set on every page like in the example below. In this case we would like to set a sticky footer for our page so we define page variable and the footer key.',
+            pre: '{% set page = {
+    footer: \'sticky' ~ '\'
+} %}',
+            table: {
+                head: [
+                    { title: 'option' },
+                    { title: 'value' },
+                    { title: 'default' },
+                    { title: 'description', width: '60%' }
+                ],
+                body: [
+                    [
+                        { text: 'title', code: true },
+                        { text: 'string' },
+                        { text: 'empty' },
+                        { text: 'Meta title for the current page.' }
+                    ],
+                    [
+                        { text: 'description', code: true },
+                        { text: 'string' },
+                        { text: 'empty' },
+                        { text: 'Meta description for the current page.' }
+                    ],
+                    [
+                        { text: 'navbar', code: true },
+                        { text: 'string' },
+                        { text: 'fixed' },
+                        { text: 'Set requested header for the page by using: <code>static</code>, <code>fixed</code> value.' }
+                    ],
+                    [
+                        { text: 'footer', code: true },
+                        { text: 'string' },
+                        { text: 'static' },
+                        { text: 'Set requested footer for the page by using: <code>sticky</code>, <code>static</code> value.' }
+                    ]
+                ]
+            }
+        }
+    ]
+} %}

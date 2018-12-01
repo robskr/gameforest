@@ -1,0 +1,117 @@
+.custom-control {
+  padding-left: 30px;
+}
+
+.custom-control-label {
+  display: block;
+
+  &::before {
+    background-color: #FFF;
+    border: 1px solid #d4d4d4;
+    width: 20px;
+    height: 20px;
+    top: 1.5px;
+    left: -30px;
+    box-shadow: none !important;
+    transition: none;
+  }
+
+  &::after {
+    width: 20px;
+    height: 20px;
+    left: -30px;
+    top: 1.5px;
+  }
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before,
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: $primary;
+}
+
+.form-footer {
+  border-top: 1px solid rgba($black, .05);
+  border-bottom: 1px solid rgba($black, .05);
+  background-color: rgba($black, .04);
+  padding: 20px;
+}
+
+.form-control-default {
+  background-color: $body-bg;
+}
+
+.input-group .btn-lg {
+  padding: 9px 20px
+}
+
+.input-group .btn-lg,
+.form-control-lg {
+  font-size: 18px;
+}
+
+.form-control-inline {
+  min-width: 400px;
+}
+
+.form-box {
+  height: 270px;
+  overflow: auto;
+}
+
+.dropload {
+  width: 100%;
+  height: 180px;
+  border: 1px dashed rgba($black, .2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba($black, .4);
+
+  &:hover {
+    border: 1px dashed rgba($black, .3);
+  }
+
+  i {
+    font-size: 32px;
+    margin-top: 23px;
+    margin-bottom: 10px;
+    color: rgba($black, .3);
+  }
+
+  &-text {
+    font-weight: 500;
+    display: block;
+  }
+}
+
+.separator {
+  margin: 15px 0;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+
+  span {
+    background-color: $body-bg;
+    display: inline-block;
+    padding: 0 12px;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: #ececec;
+    }
+  }
+}
+
+.modal-body .separator {
+  span {
+    background-color: $white;
+  }
+}

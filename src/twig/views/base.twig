@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+    {% endif %}
+
+    <title>{% if page.title %}{{ page.title ~ ' - ' }}{% endif %}{{ config.title }}</title>
+
+    {% if block("css") is defined %}
+        <!-- css: plugins -->
+        {% block css %}{% endblock %}
+    {% endif %}
+
+    <!-- css: theme -->
+    <link rel="stylesheet" href="css/theme.min.css">
+</head>
+<body class="{% if (page.navbar != 'static') and (config.navbar == 'fixed') and (page.header != false) %}fixed-navbar{% endif %}{% if page.footer == 'sticky' %} sticky-footer{% endif %}{% if page.class %} {{ page.class }}{% endif %}">
+    <div class="site{% if page.center %} d-flex align-items-center{% endif %}">
+        {% if page.header != false %}
+            <header class="site-header">
+                {% include 'header.twig' %}
+            </header>
+            <!-- end .site-header -->
+        {% endif %}
+
+        <div class="site-content{% if page.center %} w-100{% endif %}" role="main">
+            {% block body %}{% endblock %}
+        </div>
+        <!-- end .site-content -->
+
+        {% if page.footer != false %}
+            <footer class="site-footer bg-dark">
+                {% include 'footer.twig' %}
+            </footer>
+            <!-- end .site-footer -->
+        {% endif %}
+    </div>
+    <!-- end .site -->
+
+    <!-- js: vendor -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- js: theme -->
+    <script src="js/theme.bundle.min.js"></script>
+    {% if block("js") is defined %}
+        <!-- js: plugins -->
+        {% block js %}{% endblock %}
+    {% endif %}
+    <!-- js: theme settings -->
+    <script>
+        var gameforest = {
+            disqus: '{{ config.disqus }}',
+            facebook: {
+                lang: '{{ config.facebook.lang }}',
+                version: '{{ config.facebook.version }}',
+                id: '{{ config.facebook.appID }}',
+            }
+        }
+    </script>
+</body>
+</html>

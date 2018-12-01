@@ -1,0 +1,148 @@
+// Post
+.post {
+  margin-bottom: 40px;
+  padding-bottom: 35px;
+  border-bottom: 1px dashed rgba($black, .12);
+
+  &-title {
+    font-weight: $font-weight-bold;
+  }
+
+  &-thumbnail {
+    margin-bottom: 20px;
+
+    .owl-carousel .owl-dots {
+      bottom: 20px;
+    }
+  }
+
+  p:last-child {
+    margin: 0;
+  }
+
+  &-header-author {
+    display: flex;
+
+    img {
+      margin-right: 15px;
+      border-radius: 50%;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  &-meta {
+    margin-bottom: 20px;
+    color: #717275;
+
+    &-item {
+      &:after {
+        content: "\2022";
+        margin: 0 6px;
+        display: inline-block;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+// Post single
+.post-single {
+  border: 0;
+  margin-bottom: 20px;
+
+  .post-header-align {
+    margin-left: -83px;
+  }
+
+  .post-thumbnail,
+  .blockquote {
+    margin-left: -95px;
+    margin-right: -95px;
+  }
+
+  .post-thumbnail {
+    margin-bottom: 30px;
+  }
+
+  .post-body {
+    ul,
+    .blockquote {
+      margin-bottom: 30px;
+    }
+
+    .blockquote {
+      margin-top: 30px;
+    }
+
+    p > a {
+      color: $primary;
+      text-decoration: underline;
+
+      &:hover {
+        color: darken($primary, 5%);
+      }
+    }
+  }
+}
+
+// Post medium
+.post-medium {
+  display: flex;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+
+  .post-meta {
+    margin-bottom: 15px;
+  }
+
+  .post-thumbnail {
+    width: 30%;
+    min-height: 200px;
+    margin-bottom: 0;
+    @include img-cover();
+  }
+
+  .post-body {
+    width: 75%;
+    padding-left: 20px;
+  }
+}
+
+// Tags
+.tags {
+  a {
+    color: darken($primary, 5%);
+    font-weight: $font-weight-semibold;
+    border: 1px dashed rgba($black, .2);
+    padding: 5px 8px;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 2px;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: $white;
+      color: inherit;
+      border: 1px solid rgba($black, .2);
+      box-shadow: 0 1px 3px 0 rgba(0,0,0, .08);
+    }
+  }
+
+  &-secondary a {
+    background-color: transparent;
+    border: 1px solid rgba($black, .1);
+    color: inherit;
+  }
+
+  &-sm a {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,106 @@
+// Lightbox
+.ya-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-backdrop {
+    background-color: $lightbox-bg;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 8;
+    left: 0;
+  }
+
+  &-close {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    z-index: 9;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:before {
+      content: $ya-times;
+      font-family: $font-family-icon;
+      font-size: 20px;
+      color: $white;
+    }
+  }
+
+  &-body {
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display: flex;
+  }
+
+  .embed-responsive {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .owl-carousel {
+    margin: 0 auto;
+    max-width: 80%;
+
+    .owl-item img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  &-img {
+    margin: 0 auto;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1);
+    position: relative;
+    max-width: 80%;
+    z-index: 100;
+  }
+
+  &-comments {
+    background-color: $white;
+    width: 480px;
+    height: 100%;
+    overflow: auto;
+    margin-left: auto;
+    padding: 5px 20px;
+  }
+
+  &-comment {
+    overflow: hidden;
+
+    &.ya-lightbox-gallery {
+      padding: 0 60px;
+    }
+
+    .owl-carousel {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .embed-responsive {
+      width: 90%;
+      height: 90%;
+    }
+  }
+}

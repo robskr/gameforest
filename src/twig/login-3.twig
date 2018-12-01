@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="py-7" ya-background="https://vimeo.com/300249379" ya-option="loop: true;mute: true;controls: 0;opacity: .4;quality: 4k" ya-style="background-color: #464242">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <div class="card mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Login to your account</h5>
+                        </div>
+                        <div class="card-body p-3">
+                            <button class="btn btn-social btn-facebook btn-block"><i class="ya ya-facebook"></i> connect with facebook</button>
+                            <div class="separator"><span>or</span></div>
+                            <form action="profile.html">
+                                <input type="email" class="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="password" class="form-control mb-3" id="exampleInputPassword1" placeholder="Password">
+                                <div class="form-group form-check custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                            </form>
+                            <div class="separator mt-4"><span>Don't have an account?</span></div>
+                            <a class="btn btn-default btn-block" href="register.html" role="button">Register</a>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

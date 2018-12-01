@@ -1,0 +1,296 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Tables',
+    text: 'Documentation and examples for opt-in styling of tables. Display custom data like users, posts etc in tables by choosing from several styles.',
+    bootstrap: 'content/tables',
+    blocks: [
+        {
+            title: 'Examples',
+            text: 'To apply this component, add the <code>.table</code> class to a <code>&lt;table&gt;</code> element.',
+            code: '<table class="table align-items-center">
+    <thead>
+        <tr>
+            <th scope="col">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1"></label>
+                </div>
+            </th>
+            <th scope="col">avatar</th>
+            <th scope="col">username</th>
+            <th scope="col">email</th>
+            <th scope="col">role</th>
+            <th scope="col">action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label" for="customCheck2"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-1.jpg"></td>
+            <td>Nathan Drake</td>
+            <td>nathan@drake.com</td>
+            <td>author</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                    <label class="custom-control-label" for="customCheck3"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-4.jpg"></td>
+            <td>Trevor</td>
+            <td>trevor@gtav.com</td>
+            <td>admin</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                    <label class="custom-control-label" for="customCheck4"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-3.jpg"></td>
+            <td>Elizabeth</td>
+            <td>elizabeth@gs.com</td>
+            <td>member</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>',
+        },
+        {
+            title: 'Striped rows',
+            text: 'Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.',
+            code: '<table class="table table-striped align-items-center">
+    <thead>
+        <tr>
+            <th scope="col">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck16">
+                    <label class="custom-control-label" for="customCheck16"></label>
+                </div>
+            </th>
+            <th scope="col">avatar</th>
+            <th scope="col">username</th>
+            <th scope="col">email</th>
+            <th scope="col">role</th>
+            <th scope="col">action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck5">
+                    <label class="custom-control-label" for="customCheck5"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-1.jpg"></td>
+            <td>Nathan Drake</td>
+            <td>nathan@drake.com</td>
+            <td>author</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck6">
+                    <label class="custom-control-label" for="customCheck6"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-4.jpg"></td>
+            <td>Trevor</td>
+            <td>trevor@gtav.com</td>
+            <td>admin</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck7">
+                    <label class="custom-control-label" for="customCheck7"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-3.jpg"></td>
+            <td>Elizabeth</td>
+            <td>elizabeth@gs.com</td>
+            <td>member</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>',
+            pre: '<table class="table table-striped">'
+        },
+        {
+            title: 'Bordered table',
+            text: 'Add <code>.table-bordered</code> for borders on all sides of the table and cells.',
+            code: '<table class="table table-bordered align-items-center">
+    <thead>
+        <tr>
+            <th scope="col">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck8">
+                    <label class="custom-control-label" for="customCheck8"></label>
+                </div>
+            </th>
+            <th scope="col">avatar</th>
+            <th scope="col">username</th>
+            <th scope="col">email</th>
+            <th scope="col">role</th>
+            <th scope="col">action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck9">
+                    <label class="custom-control-label" for="customCheck9"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-1.jpg"></td>
+            <td>Nathan Drake</td>
+            <td>nathan@drake.com</td>
+            <td>author</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck10">
+                    <label class="custom-control-label" for="customCheck10"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-4.jpg"></td>
+            <td>Trevor</td>
+            <td>trevor@gtav.com</td>
+            <td>admin</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck11">
+                    <label class="custom-control-label" for="customCheck11"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-3.jpg"></td>
+            <td>Elizabeth</td>
+            <td>elizabeth@gs.com</td>
+            <td>member</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>',
+            pre: '<table class="table table-bordered">'
+        },
+        {
+            title: 'Hoverable rows',
+            text: 'Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.',
+            code: '<table class="table table-hover align-items-center">
+    <thead>
+        <tr>
+            <th scope="col">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck12">
+                    <label class="custom-control-label" for="customCheck12"></label>
+                </div>
+            </th>
+            <th scope="col">avatar</th>
+            <th scope="col">username</th>
+            <th scope="col">email</th>
+            <th scope="col">role</th>
+            <th scope="col">action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck13">
+                    <label class="custom-control-label" for="customCheck13"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-1.jpg"></td>
+            <td>Nathan Drake</td>
+            <td>nathan@drake.com</td>
+            <td>author</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck14">
+                    <label class="custom-control-label" for="customCheck14"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-4.jpg"></td>
+            <td>Trevor</td>
+            <td>trevor@gtav.com</td>
+            <td>admin</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck15">
+                    <label class="custom-control-label" for="customCheck15"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-3.jpg"></td>
+            <td>Elizabeth</td>
+            <td>elizabeth@gs.com</td>
+            <td>member</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>',
+            pre: '<table class="table table-hover">'
+        }
+    ]
+} %}

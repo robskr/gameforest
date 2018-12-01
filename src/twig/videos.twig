@@ -1,0 +1,117 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    class: 'page-lg'
+}%}
+
+{% block js %}
+    <script>
+        $(function() {
+            $('.form-control').keyup(function() {
+                var search = $(this).val().toLowerCase();
+                $.each($('.card-title'), function() {
+                    if ($(this).text().toLowerCase().indexOf(search) === -1) {
+                        $(this).parent().parent().parent().hide();
+                    } else {
+                        $(this).parent().parent().parent().show();
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="bg-image py-5" ya-style="background-color: #2e2f2f">
+        <img class="background" src="https://img.youtube.com/vi/reAPorQHxNQ/maxresdefault.jpg" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div ya-embed="https://www.youtube.com/watch?v=q4GdJVvdxss" ya-title="Marvel’s Spider-Man Gameplay Launch Trailer" ya-length="15:05">
+                        <img src="https://img.youtube.com/vi/reAPorQHxNQ/maxresdefault.jpg" alt="">
+                    </div>
+                    <!-- end ya-embed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-bottom-dashed">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form class="form-inline">
+                        <button class="btn btn-light mr-2" type="button" name="button" data-toggle="tooltip" title="refresh" data-placement="bottom"><i class="ya ya-refresh ml-0"></i></button>
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-inline" placeholder="Search in videos...">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-auto">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Recent Videos
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item active" href="#">Recent</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-light ml-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random m-0"></i></button>
+                        <div class="btn-group ml-2" role="group">
+                            <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
+                            <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="d-flex align-items-center mb-4">
+                <h5 class="subtitle border-0 pl-1 mb-0"><i class="ya ya-player mr-2"></i> Recent videos</h5>
+                <a class="btn btn-primary ml-auto" href="#" role="button">Upload video</a>
+            </div>
+            <div class="row row-sm">
+                {% for video in videos %}
+                    <div class="col-3 card-group mb-4">
+                        <div class="card card-default card-video">
+                            <a class="card-img" href="video-post.html">
+                                <img class="card-img-top" src="https://i1.ytimg.com/vi/{{ video.id }}/mqdefault.jpg" alt="{{ video.title }}">
+                                <div class="card-meta">
+                                    <span>{{ video.length }}</span>
+                                </div>
+                            </a>
+                            <div class="card-body">
+                                <h6 class="card-title"><a href="video-post.html">{{ video.title }}</a></h6>
+                                <p class="card-text">{{ video.text|slice(0, 80) ~ '...' }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <span><i class="ya ya-clock"></i> {{ video.date|date("M d, Y") }}</span>
+                                <span class="ml-auto"><i class="ya ya-eye"></i> {{ video.views }} views</span>
+                            </div>
+                        </div>
+                        <!-- end .card-video -->
+                    </div>
+                {% endfor %}
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination mt-2 justify-content-end">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item gap"><span class="page-link">...</span></li>
+                    <li class="page-item"><a class="page-link" href="#">25</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+{% endblock %}

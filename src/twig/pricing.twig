@@ -1,0 +1,138 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="py-6 bg-dark" ya-background="https://vimeo.com/300249379" ya-option="loop: true;mute: true;controls: 0;opacity: .15;quality: 4k" ya-style="background-color: #353434">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="heading">
+                        <h2 class="heading-title display-6 text-white">Join to Gaming Community</h2>
+                        <p class="heading-text text-lighten font-weight-light">Select from our pricing plans and enjoy the advantages of premium memberships. <br>We offer 14 days free trial period.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card card-price border-0">
+                        <h6 class="card-header">Free Member</h6>
+                        <div class="card-body pb-3 px-0">
+                            <div class="display-4 font-weight-bold">$0</div>
+                            <span class="text-light border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
+                            <ul class="list-unstyled">
+                                <li><i class="ya ya-check text-success"></i> 10 GB storage</li>
+                                <li><i class="ya ya-check text-success"></i> Allowed 1 groups</li>
+                                <li><i class="ya ya-times-circle text-danger"></i> Allowed to upload videos</li>
+                                <li><i class="ya ya-times-circle text-danger"></i> Access to premium contents</li>
+                                <li><i class="ya ya-times-circle text-danger"></i> Access to premium area</li>
+                            </ul>
+                            <small class="text-muted">View fine me gone this name an rank.</small>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-secondary btn-block">Sign up</button>
+                        </div>
+                    </div>
+                    <!-- end .card -->
+                </div>
+                <div class="col-4">
+                    <div class="card card-price border-0">
+                        <h6 class="card-header">Pro Member</h6>
+                        <div class="card-body pb-3 px-0">
+                            <div class="display-4 text-primary font-weight-bold">$19</div>
+                            <span class="text-light border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
+                            <ul class="list-unstyled">
+                                <li><i class="ya ya-check text-success"></i> 50 GB storage</li>
+                                <li><i class="ya ya-check text-success"></i> Allowed 5 groups</li>
+                                <li><i class="ya ya-check text-success"></i> Allowed to upload videos</li>
+                                <li><i class="ya ya-check text-success"></i> Access to premium contents</li>
+                                <li><i class="ya ya-check text-success"></i> Access to premium area</li>
+                            </ul>
+                            <small class="text-muted">View fine me gone this name an rank.</small>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-primary btn-block">Sign up</button>
+                        </div>
+                    </div>
+                    <!-- end .card -->
+                </div>
+                <div class="col-4">
+                    <div class="card card-price border-0">
+                        <h6 class="card-header">Elite Member</h6>
+                        <div class="card-body pb-3 px-0">
+                            <div class="display-4 text-primary font-weight-bold">$29</div>
+                            <span class="text-light border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
+                            <ul class="list-unstyled">
+                                <li><i class="ya ya-check text-success"></i> 150 GB storage</li>
+                                <li><i class="ya ya-check text-success"></i> Unlimited groups</li>
+                                <li><i class="ya ya-check text-success"></i> Allowed to upload videos</li>
+                                <li><i class="ya ya-check text-success"></i> Access to premium contents</li>
+                                <li><i class="ya ya-check text-success"></i> Access to premium area</li>
+                            </ul>
+                            <small class="text-muted">View fine me gone this name an rank.</small>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-secondary btn-block">Sign up</button>
+                        </div>
+                    </div>
+                    <!-- end .card -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p class="mt-5 text-lighten font-size-md font-weight-light">Do you need extra space and more premium content? <a class="link" href="#">Sign up for one of our free plans</a> <br>for unlimited public and open source projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-bottom py-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="promo py-4">
+                        <h2 class="promo-title text-dark h5 mr-5">Learn more about why we recommend to upgrade your account to pro or elite!</h2>
+                        <a class="btn btn-outline" href="#" role="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="heading mb-0">
+                        <i class="ya ya-helmet"></i>
+                        <h2 class="heading-title h1">Frequently Asked Questions</h2>
+                        <p class="heading-text">Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put. Be it reserved contempt rendered smallest. Studied to passage it mention calling believe an.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-5 mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-11 mx-auto">
+                    <div class="row">
+                        {% for faq in faq %}
+                            {% for faq in faq.Account %}
+                                {% if loop.index < 9 %}
+                                    <div class="col-6 card-group">
+                                        <div class="card mb-4">
+                                            <h6 class="card-header">{{ faq.title }}</h6>
+                                            <div class="card-body">
+                                                <p class="card-text">{{ faq.text|slice(0, 160) }}...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,30 @@
+.docs-footer {
+  padding: 20px 30px 20px 320px;
+  border-top: 1px dashed rgba($black, .1);
+  color: lighten($body-color, 13%);
+  font-size: 14px;
+  height: 63px;
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  width: 100%;
+  background-color: $body-bg;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    &:hover {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+
+  > a {
+    margin-left: 15px;
+    display: inline-block;
+  }
+}

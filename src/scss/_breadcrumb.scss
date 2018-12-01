@@ -1,0 +1,25 @@
+// Breadcrumb item
+.breadcrumb-item {
+  font-size: $font-size-md;
+  color: $breadcrumb-item-color;
+
+  + .breadcrumb-item::before {
+    content: $ya-small-right;
+    font-family: $font-family-icon;
+    font-size: $breadcrumb-content-size;
+  }
+}
+
+// Variations
+@each $color, $value in $theme-colors {
+  @if $color != 'default' {
+    .bg-#{$color} {
+      .breadcrumb-item,
+      .breadcrumb-item a:hover,
+      .breadcrumb-item::before,
+      .breadcrumb {
+        color: $white !important;
+      }
+    }
+  }
+}

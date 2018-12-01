@@ -1,0 +1,18 @@
+{
+    "users": [
+        { "name": "Nathan Drake", "img": "user-1.jpg", "status": "success", "friends": 49 },
+        { "name": "Venom", "img": "user-2.jpg", "friends": 214 },
+        { "name": "Elizabeth", "img": "user-3.jpg", "status": "warning", "friends": 13 },
+        { "name": "Trevor", "img": "user-4.jpg", "friends": 87 },
+        { "name": "Clark Kent", "img": "user-5.jpg", "status": "success", "friends": 99 },
+        { "name": "Aragorn", "img": "user-default.jpg", "friends": 451 },
+        { "name": "Michael", "img": "user-6.jpg", "status": "warning", "friends": 33 },
+        { "name": "Max Payne", "img": "user-7.jpg", "status": "danger", "friends": 50 },
+        { "name": "Shroud", "img": "user-default.jpg", "friends": 60 },
+        { "name": "Lara Croft", "img": "user-8.jpg", "friends": 16 },
+        { "name": "punisher", "img": "user-9.jpg", "friends": 69 },
+        { "name": "celebro", "img": "user-10.jpg", "friends": 10 },
+        { "name": "Hitman", "img": "user-11.jpg", "friends": 15 },
+        { "name": "Enigma", "img": "user-default.jpg", "friends": 5 }
+    ]
+}

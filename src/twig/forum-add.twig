@@ -1,0 +1,146 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="plugins/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
+{% endblock %}
+
+{% block js %}
+    <script src="plugins/flatpickr/flatpickr.min.js"></script>
+    <script src="plugins/ckeditor/ckeditor.js"></script>
+    <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script>
+        $(function() {
+            ClassicEditor.create( document.querySelector( '#editor' ));
+            $('.selectpicker').selectpicker();
+            $(".datepicker").flatpickr({allowInput:true, wrap: true});
+            $(".timepicker").flatpickr({noCalendar: true, enableTime: true, dateFormat: "H:i", allowInput:true, wrap: true});
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="heading heading-sm align-items-center py-2">
+                        <h2 class="heading-title h4 text-white mb-0 font-weight-semibold">Add topic</h2>
+                        <div class="ml-auto">
+                            <button type="button" class="btn btn-outline-light mr-1">Cancel</button>
+                            <button type="button" class="btn btn-dark" ya-notify="alert: success" ya-title="You have successfully added a new topic!">Publish <i class="ya ya-save ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="forums.html">Forums</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add topic</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <div class="form-group">
+                        <label for="exampleInputTitle">Topic Title</label>
+                        <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="topicHelp" placeholder="Enter title" required>
+                        <small id="topicHelp" class="form-text text-muted">Title of the topic what will be visible in forum (max 50 character).</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputDesc">Short Description</label>
+                        <input type="text" class="form-control" id="exampleInputDesc" aria-describedby="topicHelp" placeholder="Enter description">
+                        <small id="topicHelp" class="form-text text-muted">Short Description about your topic content.</small>
+                    </div>
+                    <div class="form-group ckeditor ckeditor-lg">
+                        <label for="editor">Content</label>
+                        <textarea name="content" id="editor"></textarea>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group mb-3">
+                        <label>Image</label>
+                        <div class="dropload">
+                            <div>
+                                <i class="ya ya-image-add"></i>
+                                <p class="dropload-text">Add image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="exampleInputSlug">Slug</label>
+                        <input type="text" class="form-control" id="exampleInputSlug">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="exampleFormControlSelect1">Forum</label>
+                        <select id="exampleFormControlSelect1" class="form-control selectpicker w-100">
+                            <option>Select forum</option>
+                            <option>General</option>
+                            <option>Platforms</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="exampleFormControlSelect2">Author</label>
+                        <select id="exampleFormControlSelect2" class="form-control selectpicker" data-size="5">
+                            <option>admin</option>
+                            {% for user in users %}
+                                <option>{{ user.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="exampleFormControlSelect3">Publish On</label>
+                        <div class="row row-xs">
+                            <div class="col-6">
+                                <div class="input-group datepicker">
+                                    <div class="input-group-prepend">
+                                        <button type="button" class="btn btn-light border-right-0" data-toggle><i class="ya ya-calendar m-0"></i></button>
+                                    </div>
+                                    <input type="text" class="form-control" id="exampleSelect3" data-input>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group timepicker">
+                                    <div class="input-group-prepend">
+                                        <button type="button" class="btn btn-light border-right-0" data-toggle><i class="ya ya-clock m-0"></i></button>
+                                    </div>
+                                    <input type="text" class="form-control" id="exampleSelect4" data-input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Access</label>
+                        <div class="form-group form-check custom-control custom-checkbox mb-1">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Registered</label>
+                        </div>
+                        <div class="form-group form-check custom-control custom-checkbox mb-1">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">Subscriber</label>
+                        </div>
+                        <div class="form-group form-check custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                            <label class="custom-control-label" for="customCheck3">Administrator</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Options</label>
+                        <div class="form-group form-check custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
+                            <label class="custom-control-label" for="customCheck4">Enable replies</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

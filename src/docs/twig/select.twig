@@ -1,0 +1,91 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ path }}plugins/bootstrap-select/css/bootstrap-select.min.css">
+{% endblock %}
+
+{% block js %}
+    <script src="{{ path }}plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script>
+        $(function() {
+            $('.selectpicker').selectpicker();
+        });
+    </script>
+{% endblock %}
+
+{% set page = {
+    title: 'Select',
+    text: 'The jQuery plugin that brings select elements into the 21st century with intuitive multiselection, searching, and much more. Now with Bootstrap 4 support.',
+    blocks: [
+        {
+            title: 'Introduction',
+            text: 'To getting started we need to add the required stylesheet and javascript files to our page. You can find an example below but for more examples check the <a href="https://developer.snapappointments.com/bootstrap-select/" target="_blank">bootstrap-select</a> website.',
+            code: '<!-- Stylesheet -->
+<link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
+
+<!-- Javascript -->
+<script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script>
+    $(function() {
+        $(".selectpicker").selectpicker();
+    });
+</script>',
+        },
+        {
+            title: 'Example',
+            text: 'It is easy to use just add selected class to the <code>select</code> attribute like in the example below.',
+            code: '<select class="selectpicker">
+  <option>Playstation 4</option>
+  <option>Xbox One</option>
+  <option>Steam</option>
+</select>',
+        },
+        {
+            title: 'Multiple',
+            text: 'It is also possible to select multiple options by adding <code>multiple</code> attribute to our select component.',
+            code: '<select class="selectpicker" multiple>
+  <option>Playstation 4</option>
+  <option>Xbox One</option>
+  <option>Steam</option>
+</select>',
+        },
+        {
+            title: 'Live search',
+            text: 'You can add a search input by passing <code>data-live-search="true"</code> attribute and add key words to options to improve their searchability using <code>data-tokens</code>.',
+            code: '<select class="selectpicker" data-live-search="true">
+  <option data-tokens="car sport">Forza Horizon 4</option>
+  <option>Tom Cancy\'s The Division 2</option>
+  <option>God of War</option>
+  <option>Spider-Man PS4</option>
+  <option>The Witcher 3: Wild Hunt</option>
+  <option>Anthem</option>
+  <option>Prey</option>
+  <option>Dark Souls Remastered</option>
+  <option>Far Cry 5</option>
+  <option>Call of Duty: Black Ops 4</option>
+  <option>Red Dead Redemption 2</option>
+</select>',
+        },
+        {
+            title: 'Height',
+            text: 'Set the dropdown height by using <code>data-size</code> attribute with custom number. It can be useful when your selection got a bit more options.',
+            code: '<select class="selectpicker" data-size="10">
+    <option>admin</option>
+    <option>Nathan Drake</option>
+    <option>Venom</option>
+    <option>Elizabeth</option>
+    <option>Trevor</option>
+    <option>Clark Kent</option>
+    <option>Aragorn</option>
+    <option>Michael</option>
+    <option>Max Payne</option>
+    <option>Shroud</option>
+    <option>Lara Croft</option>
+    <option>punisher</option>
+    <option>celebro</option>
+    <option>Hitman</option>
+    <option>Enigma</option>
+</select>',
+        }
+    ]
+} %}

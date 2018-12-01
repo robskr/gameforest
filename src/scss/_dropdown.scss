@@ -1,0 +1,150 @@
+// Dropdown menu
+.dropdown-menu {
+  box-shadow: 0 2px 12px rgba(27,31,35, .1);
+
+  .dropdown-item > i {
+    margin-right: 5px;
+  }
+}
+
+// Dropdown toggle
+.dropdown-toggle {
+  padding-right: 25px;
+
+  &::after {
+    content: $ya-caret-down;
+    font-family: $font-family-icon;
+    border: 0;
+    float: right;
+  }
+}
+
+// Drop fix
+.dropleft,
+.dropright,
+.dropup {
+  .dropdown-toggle::after  {
+    float: none;
+    margin-right: -.825rem;
+  }
+}
+
+// Dropdown height
+.dropdown-height {
+  max-height: 250px;
+  overflow: auto;
+}
+
+// Dropdown scrollable
+.dropdown-scrollable {
+  max-height: 320px;
+  overflow: auto;
+}
+
+// Dropdown header
+div.dropdown-header {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-md;
+  border-bottom: 1px solid rgba($black, .08);
+  background-color: rgba($black, .03);
+  margin-top: -9px;
+  border-top-right-radius: $dropdown-border-radius;
+  border-top-left-radius: $dropdown-border-radius;
+  color: darken($primary, 5%);
+  padding: 10px 15px;
+  margin-bottom: 5px;
+
+  i {
+    margin-right: 6px;
+  }
+}
+
+// Dropdown footer
+.dropdown-footer {
+  border-top: 1px solid rgba($black, .08);
+  padding: 5px 10px;
+  margin-bottom: -9px;
+}
+
+// Dropdown list
+.dropdown-list {
+  list-style-type: none;
+  padding: 0;
+  display: block;
+
+  &-item {
+    border-bottom: 1px dashed rgba($black, .1);
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-body {
+    width: 100%;
+    line-height: 1.4;
+  }
+
+  &-text {
+    background-color: darken($body-bg, 5%);
+    padding: 7px 9px;
+    margin-top: 3px;
+    margin-right: 17px;
+    font-size: 16px;
+  }
+}
+
+// Dropdown notification
+.dropdown-notification {
+  .dropdown-header {
+    margin-bottom: 0;
+  }
+
+  .dropdown-menu {
+    max-width: 330px;
+
+    .dropdown-list {
+      &-meta {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        font-size: 15px;
+        color: #7b7b7b;
+
+        i {
+          margin-right: 6px;
+        }
+
+        a {
+          border-right: 1px solid rgba($black, .15);
+          padding: 0 5px;
+          display: none;
+          font-size: 15px;
+
+          &:last-child {
+            border: 0;
+            padding-right: 0;
+          }
+        }
+      }
+
+      &-item {
+        &:hover .dropdown-list-meta a {
+          display: inline-block;
+        }
+
+        &:last-child {
+          border: 0;
+        }
+
+        a {
+          color: lighten($body-color, 1%);
+          font-weight: $font-weight-semibold;
+
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+}

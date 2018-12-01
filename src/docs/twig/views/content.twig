@@ -1,0 +1,61 @@
+<h1 class="mb-4">{{ page.title }}</h1>
+<p class="lead">{{ page.text }}</p>
+<hr class="docs-separator my-5">
+{% for docs in page.blocks %}
+    {% if docs.card %}
+        <div id="{{ docs.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="anchor">
+            <div class="card card-default">
+                <h6 class="card-header">{{ docs.title }}</h6>
+                <div class="card-body">
+                    <p class="card-text">{{ docs.text }}</p>
+                </div>
+                <div class="card-footer">
+                    {{ docs.custom }}
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="docs-block{% if docs.class %} {{ docs.class }}{% endif %}">
+            <h4 id="{{ docs.title|lower|replace({' ': "-", ':': ""}) }}" class="mb-3 anchor">
+                {% if docs.icon %}<i class="{{ docs.icon }} mr-2"></i>{% endif %}
+                {{ docs.title }}
+            </h4>
+
+            <p>{% if (config.docs == 'local') and (docs.verified) %}{{ docs.verified }}{% else %}{{ docs.text }}{% endif %}</p>
+
+            {% if docs.code %}
+                {{ docs.code|raw|replace({'img/': path ~ 'img/' }) }}
+            {% endif %}
+
+            {% if (docs.code) or (docs.pre) %}
+                <div class="docs-code{% if docs.single %} mt-0{% endif %}">
+                    {% if docs.copy != false %}<button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#{{ docs.title|lower|replace({' ': "-"}) }}_code"><i class="ya ya-save"></i></button>{% endif %}
+                    <pre class="pre"><code id="{{ docs.title|lower|replace({' ': "-"}) }}_code" class="{% if docs.json != true %}twig{% endif %}{% if docs.json %} json{% endif %}{% if docs.small %} shell-session p-4{% endif %}">{% if docs.pre %}{{ docs.pre|escape }}{% else %}{{ docs.code|escape }}{% endif %}</code></pre>
+                </div>
+            {% endif %}
+
+            {% if docs.table %}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {% for head in docs.table.head %}
+                                <th scope="col"{% if head.width %} style="width: {{ head.width }}"{% endif %}>{{ head.title }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for body in docs.table.body %}
+                            <tr>
+                                {% for td in body %}
+                                    <td>{% if td.code %}<code>{{ td.text }}</code>{% else %}{{ td.text }}{% endif %}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+
+            {{ docs.custom }}
+        </div>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,187 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    class: 'page-lg'
+}%}
+
+{% block body %}
+    <nav class="bg-white" aria-label="breadcrumb">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="videos.html">Videos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Video Post</li>
+                </ol>
+                <div class="btn-group ml-auto">
+                    <a class="btn btn-default btn-icon btn-xs" href=""><i class="ya ya-small-left"></i></a>
+                    <a class="btn btn-default btn-icon btn-xs" href=""><i class="ya ya-small-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-image py-5">
+        <img class="background" src="https://img.youtube.com/vi/LDzYR5_TR2o/maxresdefault.jpg" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/stUSvDY7uVU?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="post post-single border-bottom-dashed">
+                        <div class="post-header post-header-author">
+                            <img src="img/user-5.jpg" alt="">
+                            <div>
+                                <h1 class="post-title">Battlefield 5 Official Multiplayer Trailer</h1>
+                                <div class="post-meta">
+                                    <span class="post-meta-item"><i class="ya ya-calendar"></i>  {{ '1536931549'|date(config.dateformat) }}</span>
+                                    <span class="post-meta-item"><i class="ya ya-eye"></i>  {{ count[1][2] }} views</span>
+                                    <a class="post-meta-item" href="#comments"><i class="ya ya-comment"></i> 5 comments</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-body">
+                            <p>Remain valley who mrs uneasy remove wooded him you. Her questions favourite him concealed. We to wife face took he. The taste begin early old why since dried can first. Prepared as or humoured formerly. Evil mrs true get post. Express village evening prudent my as ye hundred forming thoughts she why not directly packages you.</p>
+                            <a class="btn btn-outline btn-block btn-sm btn-wide mt-4" href="#" role="button">Load More <i class="ya ya-caret-down m-0"></i></a>
+                        </div>
+                    </div>
+                    <!-- end .post-single -->
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
+                        <div class="dropdown ml-auto">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sort by date
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item active" href="#">Latest</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Best</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary">
+                        Please login to submit a comment under this post!
+                    </div>
+                    <div id="comments" class="anchor comments">
+                        {% for comment in comments %}
+                            <div class="media">
+                                {% for user in users %}
+                                    {% if loop.index == comment.user %}
+                                        <div class="avatar{% if comment.friend %} avatar-badge{% endif %}">
+                                            <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                            {% if comment.friend %}
+                                                <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="media-body">
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            {% for user in users %}
+                                                {% if loop.index == comment.user %}
+                                                    <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-meta">{{ comment.date|date('G') }} hours ago</div>
+                                        </div>
+                                        <div class="media-tools">
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                        </div>
+                                    </div>
+                                    <p>{{ comment.text }}</p>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                        <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ comment.like }})</button>
+                                    </div>
+                                    {% for reply in comment.reply %}
+                                        <div class="media">
+                                            {% for user in users %}
+                                                {% if loop.index == reply.user %}
+                                                    <div class="avatar{% if reply.friend %} avatar-badge{% endif %}">
+                                                        <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                        {% if reply.friend %}
+                                                            <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-body">
+                                                <div class="d-flex">
+                                                    <div class="d-flex">
+                                                        {% for user in users %}
+                                                            {% if loop.index == reply.user %}
+                                                                <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <div class="media-meta">{{ reply.date|date('G') }} hours ago</div>
+                                                    </div>
+                                                    <div class="media-tools">
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                                    </div>
+                                                </div>
+                                                <p>{{ reply.text }}</p>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                                    <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ reply.like }})</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <!-- end .media -->
+                        {% endfor %}
+                    </div>
+                    <!-- end .comments -->
+
+                    <h5 class="mt-5 mb-3">Leave a comment</h5>
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5"></textarea>
+                            <small class="form-text text-muted">Enter your comment in the textarea. Maximum 250 characters.</small>
+                        </div>
+                        <button type="button" class="btn btn-primary">Submit comment</button>
+                    </form>
+                </div>
+                <div class="col-4">
+                    <div class="widget widget-video">
+                        <h5 class="widget-header">Recent Videos</h5>
+                        <div class="list-group list-group-posts list-group-lg">
+                            {% for video in videos %}
+                                {% if loop.index < 14 %}
+                                    <div class="list-group-item">
+                                        <div>
+                                            <a class="list-group-item-img" href="#">
+                                                <img src="https://i.ytimg.com/vi/{{ video.id }}/mqdefault.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <h6 class="list-group-item-title"><a href="#">{{ video.title }}</a></h6>
+                                            <div class="list-group-item-meta"><i class="ya ya-clock"></i> {{ video.date|date("M d, Y") }}</div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">More Videos</a>
+                    </div>
+                    <!-- end .widget-video -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

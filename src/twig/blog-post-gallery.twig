@@ -1,0 +1,237 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Gallery Post</li>
+                </ol>
+                <div class="btn-group ml-auto">
+                    <a class="btn btn-default btn-icon btn-xs" href="{{ blogs[2]['url'] }}"><i class="ya ya-small-left"></i></a>
+                    <a class="btn btn-default btn-icon btn-xs" href="{{ blogs[0]['url'] }}"><i class="ya ya-small-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 border-bottom-dashed">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    {% for blog in blogs %}
+                        {% if blog.url == 'blog-post-gallery.html' %}
+                            <div class="post post-single">
+                                <div class="post-header">
+                                    <h1 class="post-title">{{ blog.title }}</h1>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</span>
+                                        <a class="post-meta-item" href="#comments"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> {{ blog.meta.time }} min read</span>
+                                    </div>
+                                </div>
+                                <div class="post-thumbnail">
+                                   <img class="mb-3" src="{{ blog.img }}" alt="">
+                                    <div class="owl-carousel" ya-carousel="autoplay: true;items: 3;margin: 10;dots: false;nav: false;loop: false">
+                                        {% for carousel in blog.gallery %}
+                                            <a href="{{ carousel }}" ya-lightbox rel="gallery">
+                                                <img src="{{ carousel }}" alt="{{ blog.title }}">
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="post-body">
+                                    {% for text in post.text %}
+                                        {{ text }}
+                                    {% endfor %}
+                                    <div class="d-flex align-items-center mt-4 pt-1">
+                                        <div class="tags">
+                                            <a href="#">#playstation4</a>
+                                            <a href="#">#anthem</a>
+                                            <a href="#">#fps</a>
+                                            <a href="#">#upcoming</a>
+                                            <a href="#">#gameplay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .post-single -->
+                        {% endif %}
+                    {% endfor %}
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p>send us your feedback</p>
+                            <div class="reaction">
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="awesome" data-toggle="tooltip" title="Awesome"></span> <span class="reaction-count">{{ count[0][3] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="like" data-toggle="tooltip" title="Like"></span> <span class="reaction-count">{{ count[0][8] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="sick" data-toggle="tooltip" title="Sick"></span> <span class="reaction-count">{{ count[0][2] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="angry" data-toggle="tooltip" title="Angry"></span> <span class="reaction-count">{{ count[0][7] }}</span></button>
+                            </div>
+                            <!-- end .reaction -->
+                        </div>
+                        <div class="ml-auto">
+                            <a class="avatar-card" href="profile.html">
+                                <div>
+                                    <div class="avatar-title">Smallville</div>
+                                    <p class="avatar-text">gameforest author</p>
+                                </div>
+                                <img src="img/user-5.jpg" alt="">
+                            </a>
+                            <!-- end .avatar-card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
+                        <div class="dropdown ml-auto">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sort by date
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item active" href="#">Latest</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Best</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary">
+                        Please login to submit a comment under this post!
+                    </div>
+                    <div id="comments" class="anchor comments">
+                        {% for comment in comments %}
+                            <div class="media">
+                                {% for user in users %}
+                                    {% if loop.index == comment.user %}
+                                        <div class="avatar{% if comment.friend %} avatar-badge{% endif %}">
+                                            <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                            {% if comment.friend %}
+                                                <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="media-body">
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            {% for user in users %}
+                                                {% if loop.index == comment.user %}
+                                                    <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-meta">{{ comment.date|date('G') }} hours ago</div>
+                                        </div>
+                                        <div class="media-tools">
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                        </div>
+                                    </div>
+                                    <p>{{ comment.text }}</p>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                        <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ comment.like }})</button>
+                                    </div>
+                                    {% for reply in comment.reply %}
+                                        <div class="media">
+                                            {% for user in users %}
+                                                {% if loop.index == reply.user %}
+                                                    <div class="avatar{% if reply.friend %} avatar-badge{% endif %}">
+                                                        <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                        {% if reply.friend %}
+                                                            <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-body">
+                                                <div class="d-flex">
+                                                    <div class="d-flex">
+                                                        {% for user in users %}
+                                                            {% if loop.index == reply.user %}
+                                                                <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <div class="media-meta">{{ reply.date|date('G') }} hours ago</div>
+                                                    </div>
+                                                    <div class="media-tools">
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                                    </div>
+                                                </div>
+                                                <p>{{ reply.text }}</p>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                                    <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ reply.like }})</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <!-- end .media -->
+                        {% endfor %}
+                    </div>
+                    <!-- end .comments -->
+                    <h5 class="mt-5 mb-3">Leave a comment</h5>
+                    <form>
+                        <div class="form-group mb-4">
+                            <textarea class="form-control" rows="5"></textarea>
+                            <small class="form-text text-muted">Enter your comment in the textarea. Maximum 250 characters.</small>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="check">
+                            <label class="custom-control-label" for="check">notify me when someone replies</label>
+                        </div>
+                        <button type="button" class="btn btn-primary mt-4">Submit comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 border-top-dashed">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="heading">
+                        <i class="ya ya-time-alarm"></i>
+                        <h2 class="heading-title">Maybe you would like to read about it</h2>
+                        <p class="heading-lead">May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for blog in blogs %}
+                    {% if loop.index < 4 %}
+                        <div class="col-4">
+                            <div class="card card-post mb-0">
+                                <a class="card-img" href="{{ blog.url }}">
+                                    <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
+                                    <div class="card-meta">
+                                        <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date("M d, Y") }}</span>
+                                        <a class="card-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
+                                    </div>
+                                    <p class="card-text">{{ blog.text|slice(0, 105) ~ '...' }}</p>
+                                </div>
+                            </div>
+                            <!-- end .card-post -->
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

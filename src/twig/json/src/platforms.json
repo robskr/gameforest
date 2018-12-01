@@ -1,0 +1,9 @@
+{
+    "platforms": [
+        { "title": "PS4" },
+        { "title": "Xbox One" },
+        { "title": "PC" },
+        { "title": "Steam" },
+        { "title": "Vita" }
+    ]
+}

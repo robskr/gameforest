@@ -1,0 +1,60 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Notification',
+    text: 'Documentation for built in notificiation with bootstrap alert component. Easy to use just check the available examples below.',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Add a notification alert by using <code>ya-notify</code> and <code>ya-title</code> attribute together on an element like in the example below.',
+            code: '<button class="btn btn-outline" ya-notify ya-title="A simple primary alert—check it out!">Notify me</button>',
+        },
+        {
+            title: 'Alignment',
+            text: 'Set the notification position by adding <code>align: *</code> option to the <code>ya-notify</code> attribute like in the example below and it will be display in the right place.',
+            code: '<button class="btn btn-outline" ya-notify="align: left" ya-title="A simple primary alert—check it out!">Top left</button>
+<button class="btn btn-outline" ya-notify="align: right" ya-title="A simple primary alert—check it out!">Top right</button>
+<button class="btn btn-outline" ya-notify ya-title="A simple primary alert—check it out!">Top center</button>
+<button class="btn btn-outline" ya-notify="align: bottom-left" ya-title="A simple primary alert—check it out!">Bottom left</button>
+<button class="btn btn-outline" ya-notify="align: bottom-right" ya-title="A simple primary alert—check it out!">Bottom right</button>
+<button class="btn btn-outline" ya-notify="align: bottom" ya-title="A simple primary alert—check it out!">Bottom center</button>',
+        },
+        {
+            title: 'Variations',
+            text: 'Set the notification alert type by adding <code>alert *</code> option to the <code>ya-notify</code> attribute like in the example below.',
+            code: '<button class="btn btn-primary" ya-notify ya-title="A simple primary alert—check it out!">Primary</button>
+<button class="btn btn-secondary" ya-notify="alert: secondary" ya-title="A simple secondary alert—check it out!">Secondary</button>
+<button class="btn btn-success" ya-notify="alert: success" ya-title="A simple success alert—check it out!">Success</button>
+<button class="btn btn-danger" ya-notify="alert: danger" ya-title="A simple danger alert—check it out!">Danger</button>
+<button class="btn btn-warning" ya-notify="alert: warning" ya-title="A simple warning alert—check it out!">Warning</button>
+<button class="btn btn-info" ya-notify="alert: info" ya-title="A simple info alert—check it out!">Info</button>
+<button class="btn btn-dark" ya-notify="alert: dark" ya-title="A simple dark alert—check it out!">Dark</button>',
+        },
+        {
+            title: 'Options',
+            text: 'Options can be passed via data attributes. For data attributes, append the option name to <code>ya-notify</code>. Default option names and values are available below in the table.',
+            table: {
+                head: [
+                    { title: 'option' },
+                    { title: 'value' },
+                    { title: 'default' },
+                    { title: 'description', width: '60%' }
+                ],
+                body: [
+                    [
+                        { text: 'align', code: true },
+                        { text: 'string' },
+                        { text: 'center' },
+                        { text: 'Display the alert component on selected place.' }
+                    ],
+                    [
+                        { text: 'alert', code: true },
+                        { text: 'string' },
+                        { text: 'primary' },
+                        { text: 'Display the alert component on different variation.' }
+                    ]
+                ]
+            }
+        }
+    ]
+} %}

@@ -1,0 +1,120 @@
+{% extends "base.twig" %}
+
+{% block js %}
+    <script src="plugins/easypiechart/jquery.easypiechart.min.js"></script>
+    <script>
+        $(function() {
+            $('.easypiechart').easyPieChart();
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Single Product</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                {% for product in shop.product %}
+                    <div class="col-6">
+                        <div class="product">
+                            <div class="owl-carousel product-carousel" ya-carousel="nav: false">
+                                {% for img in product.img %}
+                                    <div class="product-img">
+                                        <img src="{{ img }}" alt="">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <form action="shop-cart.html">
+                            <div class="mb-4 pb-4 border-bottom-dashed">
+                                <h1 class="font-weight-bold">{{ product.title }}</h1>
+                                <div class="d-flex align-items-center">
+                                    <ul class="list-inline mr-2 mb-0">
+                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
+                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
+                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
+                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
+                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-light"></i></li>
+                                    </ul>
+                                    <span class="text-light font-weight-semibold"><strong>25</strong> Reviews</span>
+                                </div>
+                            </div>
+                            <p class="lead mb-4">{{ product.text|slice(0, 240) }}...</p>
+                            <ul class="list-inline mb-4 d-flex align-items-start">
+                                <li class="list-inline-item display-5 font-weight-bold mb-0">$65.00</li>
+                                <li class="list-inline-item text-muted font-weight-light"><del>$90.00</del></li>
+                            </ul>
+                            <div class="tags mb-4">
+                                {% for tag in product.tags %}
+                                    <a href="#">#{{ tag }}</a>
+                                {% endfor %}
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <button type="submit" class="btn btn-primary btn-block font-weight-semibold btn-lg mb-2">Add to cart <i class="ya ya-shopping-cart ml-2"></i></button>
+                                    <button type="button" class="btn btn-outline btn-block">Add to wishlist <i class="ya ya-heart-add"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="py-0">
+        <div class="alert alert-warning mb-0 rounded-0 border-left-0 border-right-0">
+            <div class="container">
+                <i class="ya ya-alert mr-2"></i><strong>Note:</strong> Red Dead Redemption 2 is a digital product - no box delivery. The price applies to a digital version of the product.
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-bottom py-0" ya-sticky>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <div class="nav nav-list">
+                        <a class="nav-item nav-link active" href="#">Description</a>
+                        <a class="nav-item nav-link" href="#">Reviews (14)</a>
+                        <a class="nav-item nav-link" href="#">Images (52)</a>
+                        <a class="nav-item nav-link" href="#">Videos (8)</a>
+                        <a class="nav-item nav-link" href="#">Streams (24)</a>
+                    </div>
+                    <div class="btn-group ml-auto mr-2">
+                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-left"></i></a>
+                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-right"></i></a>
+                    </div>
+                    <a class="btn btn-default btn-icon" href=""><i class="ya ya-gear"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="subtitle subtitle-sm">Description</h2>
+                    <p class="lead"><strong><u>Red Dead Redemption 2</u></strong> is an epic tale of life in America’s unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience. <strong>America, 1899.</strong> </p>
+                    <p>The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. Those who will not surrender or succumb are killed. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and the best bounty hunters in the nation <b><u>massing on their heels</u></b>, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him.</p>
+                    <div class="my-4" ya-embed="https://www.youtube.com/watch?v=Dw_oH5oiUSE">
+                        <img src="https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg" alt="">
+                    </div>
+                    <p>Difficulty on insensible reasonable in. From as went he they. Preference themselves me as thoroughly partiality considered on in estimating. Middletons acceptance discovered projecting so is so or. In or attachment inquietude remarkably comparison at an. Is surrounded prosperous stimulated am me discretion expression. But truth being state can she china widow. Occasional preference fat remarkably now projecting uncommonly dissimilar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

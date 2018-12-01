@@ -1,0 +1,132 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    footer: 'sticky'
+} %}
+
+{% block body %}
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Search Results</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="border-bottom-dashed">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg form-control-inline" placeholder="Search within these results" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            <div class="input-group-append">
+                                <button class="btn btn-light border-left-0 btn-lg px-3" type="button"><i class="ya ya-search m-0"></i></button>
+                            </div>
+                        </div>
+                        <small id="emailHelp" class="form-text text-muted">We found <strong>184</strong> search results video games from $21. All created by our Global Community of independent Web Designers and Developers.</small>
+                    </form>
+                    <!-- end form -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form class="form-inline mb-4">
+                        <button class="btn btn-light mr-2" type="button" name="button" data-toggle="tooltip" title="refresh" data-placement="bottom"><i class="ya ya-refresh ml-0"></i></button>
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All site
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item active" href="#">All site</a>
+                                <a class="dropdown-item" href="#">Blogs</a>
+                                <a class="dropdown-item" href="#">Games</a>
+                                <a class="dropdown-item" href="#">Videos</a>
+                                <a class="dropdown-item" href="#">Forums</a>
+                                <a class="dropdown-item" href="#">Users</a>
+                            </div>
+                        </div>
+                        <span class="font-weight-semibold mr-1 ml-3">184</span> items found
+                        <div class="dropdown ml-auto">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Best Match
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item active" href="#">Best Match</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-light ml-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random m-0"></i></button>
+                        <div class="btn-group ml-2" role="group">
+                            <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
+                            <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
+                        </div>
+                    </form>
+                    <!-- end .form-inline -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {% for blog in blogs_medium %}
+                        <div class="card mb-3">
+                            <div class="card-body p-2">
+                                <div class="post post-medium">
+                                    <div class="post-thumbnail">
+                                        {% if blog.url == 'blog-post-video.html' %}
+                                            <div class="embed-player">
+                                                <img class="post-img" src="{{ blog.thumb }}" alt="">
+                                                <div class="embed-icon embed-icon-dark">
+                                                    <a href="{{ blog.url }}"><i class="ya ya-play"></i></a>
+                                                </div>
+                                            </div>
+                                        {% else %}
+                                            <img class="post-img" src="{{ blog.thumb }}" alt="{{ blog.title }}">
+                                        {% endif %}
+                                    </div>
+                                    <div class="post-body">
+                                        <h2 class="post-title h4"><a href="{{ blog.url }}">{{ blog.title }}</a></h2>
+                                        <div class="post-meta">
+                                            <span class="post-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</span>
+                                            <a class="post-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
+                                            <span class="post-meta-item"><i class="ya ya-clock"></i> {{ blog.meta.time }} min read</span>
+                                        </div>
+                                        <p>{{ blog.text|replace({'effect answer': '<mark>effect answer</mark>', 'enjoy': '<mark>enjoy</mark>', 'picture': '<mark>picture</mark>', 'Happiness': '<mark>Happiness</mark>'})|slice(0, 270)}}...</p>
+                                        <div class="tags tags-secondary">
+                                            {% for tags in blog.tags %}
+                                                <a href="#">#{{ tags }}</a>
+                                            {% endfor %}
+                                        </div>
+                                        <!-- end .tags -->
+                                    </div>
+                                </div>
+                                <!-- end .post -->
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination mt-4 justify-content-end">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item gap"><span class="page-link">...</span></li>
+                            <li class="page-item"><a class="page-link" href="#">25</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                    <!-- end pagination -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

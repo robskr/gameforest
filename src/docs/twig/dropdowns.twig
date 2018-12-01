@@ -1,0 +1,208 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Dropdowns',
+    text: 'Dropdowns are lightweight, JavaScript-powered context menus for housing navigation and actions. They’re great for instances where you don’t need the full power and code of the select menu.',
+    bootstrap: 'components/dropdowns',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Any single <code>.btn</code> can be turned into a dropdown toggle with some markup changes. Here’s how you can put them to work with either <code>&lt;button&gt;</code> elements.',
+            code: '<div class="dropdown">
+    <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+</div>',
+        },
+        {
+            title: 'Directions',
+            text: 'Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent element.',
+            code: '<div class="btn-group dropup">
+    <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropup
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+</div>
+
+<div class="btn-group dropright">
+    <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropright
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+</div>',
+        },
+        {
+            title: 'Header',
+            text: 'Add header to the dropdown list by using <code>.dropdown-header</code> class.',
+            code: '<div class="dropdown">
+    <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown header
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-header">Dropdown Header</div>
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+</div>',
+        },
+        {
+            title: 'Profile',
+            text: 'A simple example to list links for profile navigation.',
+            code: '<div class="dropdown d-inline-block mr-3">
+    <div class="avatar-badge cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img class="avatar-md" src="img/user-5.jpg" alt="">
+        <span class="badge badge-success"></span>
+    </div>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#"><i class="ya ya-user"></i> Profile</a>
+        <a class="dropdown-item" href="#"><i class="ya ya-gear"></i> Settings</a>
+        <a class="dropdown-item" href="#"><i class="ya ya-helmet"></i> Games</a>
+        <a class="dropdown-item" href="#"><i class="ya ya-player"></i> Videos (34)</a>
+        <a class="dropdown-item" href="#"><i class="ya ya-clock"></i> History</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#"><i class="ya ya-logout"></i> Logout</a>
+    </div>
+</div>
+<div class="dropdown d-inline-block">
+    <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        My Profile
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#"><i class="ya ya-user"></i> Profile</a>
+        <a class="dropdown-item" href="#"><i class="ya ya-gear"></i> Settings</a>
+        <a class="dropdown-item" href="#"><i class="ya ya-helmet"></i> Games</a>
+        <a class="dropdown-item" href="#"><i class="ya ya-player"></i> Videos (34)</a>
+        <a class="dropdown-item" href="#"><i class="ya ya-clock"></i> History</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#"><i class="ya ya-logout"></i> Logout</a>
+    </div>
+</div>',
+        },
+        {
+            title: 'Notification',
+            text: 'Customized dropdown component to list items for notification.',
+            code: '<div class="dropdown dropdown-notification">
+    <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Notifications
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-header"><i class="ya ya-bell"></i> Notification (5)</div>
+        <div class="dropdown-scrollable">
+            <ul class="dropdown-list">
+                <li class="dropdown-list-item">
+                    <span class="dropdown-list-text text-success"><i class="ya ya-calendar"></i></span>
+                    <div class="dropdown-list-body">
+                        <a href="../profile.html">Nathan Drake</a> invited you to find the lost chapter event.
+                        <div class="dropdown-list-meta">
+                            <i class="ya ya-clock"></i> 3 hours ago
+                            <div class="ml-auto">
+                                <a href="#"><i class="ya ya-check-circle"></i></a>
+                                <a href="#"><i class="ya ya-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown-list-item">
+                    <span class="dropdown-list-text text-primary"><i class="ya ya-user-add"></i></span>
+                    <div class="dropdown-list-body">
+                        <a href="../profile.html">Elizabeth</a> sent you a friend request.
+                        <div class="dropdown-list-meta">
+                            <i class="ya ya-clock"></i> 5 hours ago
+                            <div class="ml-auto">
+                                <a href="#"><i class="ya ya-check-circle"></i></a>
+                                <a href="#"><i class="ya ya-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown-list-item">
+                    <span class="dropdown-list-text text-danger"><i class="ya ya-camera"></i></span>
+                    <div class="dropdown-list-body">
+                        <a href="../profile.html">Clark Kent</a> started to stream <a href="../game-post.html">Forza horizon 4</a>
+                        <div class="dropdown-list-meta">
+                            <i class="ya ya-clock"></i> 2 days ago
+                            <div class="ml-auto">
+                                <a href="#"><i class="ya ya-check-circle"></i></a>
+                                <a href="#"><i class="ya ya-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown-list-item">
+                    <span class="dropdown-list-text text-secondary"><i class="ya ya-helmet"></i></span>
+                    <div class="dropdown-list-body">
+                        <a href="../profile.html">Clark Kent</a> started to stream.
+                        <div class="dropdown-list-meta">
+                            <i class="ya ya-clock"></i> 3 days ago
+                            <div class="ml-auto">
+                                <a href="#"><i class="ya ya-check-circle"></i></a>
+                                <a href="#"><i class="ya ya-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown-footer">
+            <a class="btn btn-link btn-sm" href="#">view all</a>
+        </div>
+    </div>
+</div>',
+            pre: '<div class="dropdown dropdown-notification">
+    <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Notifications
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-header"><i class="ya ya-bell"></i> Notification (5)</div>
+        <div class="dropdown-scrollable">
+            <ul class="dropdown-list">
+                <li class="dropdown-list-item">
+                    <span class="dropdown-list-text text-success"><i class="ya ya-calendar"></i></span>
+                    <div class="dropdown-list-body">
+                        <a href="../profile.html">Nathan Drake</a> invited you to find the lost chapter event.
+                        <div class="dropdown-list-meta">
+                            <i class="ya ya-clock"></i> 3 hours ago
+                            <div class="ml-auto">
+                                <a href="#"><i class="ya ya-check-circle"></i></a>
+                                <a href="#"><i class="ya ya-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown-footer">
+            <a class="btn btn-link btn-sm" href="#">view all</a>
+        </div>
+    </div>
+</div>'
+        },
+        {
+            title: 'Cart',
+            text: 'Use dropdown cart to list shopping items in a dropdown list.',
+            code: '',
+        }
+    ]
+} %}

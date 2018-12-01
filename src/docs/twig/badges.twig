@@ -1,0 +1,78 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Badges',
+    text: 'Documentation and examples for badges, our small count and labeling component. Badges scale to match the size of the immediate parent element by using relative font sizing and em units.',
+    bootstrap: 'components/badge',
+    blocks: [
+        {
+            title: 'Examples',
+            text: 'Add any of the below mentioned modifier classes to change the appearance of a badge. It can be useful if we would like to display categories or user ranks etc.',
+            code: '<span class="badge badge-primary">Primary</span>
+<span class="badge badge-secondary">Secondary</span>
+<span class="badge badge-success">Success</span>
+<span class="badge badge-danger">Danger</span>
+<span class="badge badge-warning">Warning</span>
+<span class="badge badge-info">Info</span>
+<span class="badge badge-light">Light</span>
+<span class="badge badge-dark">Dark</span>
+<span class="badge badge-purple">Purple</span>',
+        },
+        {
+            title: 'Pill badges',
+            text: 'Use the <code>.badge-pill</code> modifier class to make badges more rounded with a larger border-radius and additional horizontal padding.',
+            code: '<span class="badge badge-pill badge-primary">Primary</span>
+<span class="badge badge-pill badge-secondary">Secondary</span>
+<span class="badge badge-pill badge-success">Success</span>
+<span class="badge badge-pill badge-danger">Danger</span>
+<span class="badge badge-pill badge-warning">Warning</span>
+<span class="badge badge-pill badge-info">Info</span>
+<span class="badge badge-pill badge-light">Light</span>
+<span class="badge badge-pill badge-dark">Dark</span>
+<span class="badge badge-pill badge-purple">Purple</span>',
+        },
+        {
+            title: 'Links',
+            text: 'Using the contextual <code>.badge-*</code> classes on an <code>&lt;a&gt;</code> element quickly provide <em>actionable</em> badges with hover and focus states.',
+            code: '<a href="#" class="badge badge-primary">Primary</a>
+<a href="#" class="badge badge-secondary">Secondary</a>
+<a href="#" class="badge badge-success">Success</a>
+<a href="#" class="badge badge-danger">Danger</a>
+<a href="#" class="badge badge-warning">Warning</a>
+<a href="#" class="badge badge-info">Info</a>
+<a href="#" class="badge badge-light">Light</a>
+<a href="#" class="badge badge-dark">Dark</a>
+<a href="#" class="badge badge-purple">Purple</a>',
+        },
+        {
+            title: 'Social badges',
+            text: 'Display social badges and add <code>.badge-*</code> to the badge class. It can be useful when you would like to display it on a card.',
+            code: '<span class="badge badge-facebook">Facebook</span>
+<span class="badge badge-twitter">Twitter</span>
+<span class="badge badge-google-plus">Google Plus</span>
+<span class="badge badge-youtube">Youtube</span>
+<span class="badge badge-linkedin">Linkedin</span>
+<span class="badge badge-skype">Skype</span>
+<span class="badge badge-vk">vk</span>
+<span class="badge badge-twitch">Twitch</span>
+<span class="badge badge-steam">Steam</span>
+<span class="badge badge-discord">Discord</span>
+<span class="badge badge-dribbble">Dribbble</span>
+<span class="badge badge-vimeo">Vimeo</span>
+<span class="badge badge-pinterest">Pinterest</span>
+<span class="badge badge-instagram">Instagram</span>
+<span class="badge badge-soundcloud">Soundcloud</span>
+<span class="badge badge-spotify">Spotify</span>
+<span class="badge badge-tumblr">Tumblr</span>
+<span class="badge badge-reddit">Reddit</span>
+<span class="badge badge-paypal">Paypal</span>
+<span class="badge badge-wordpress">Wordpress</span>
+<span class="badge badge-drupal">Drupal</span>
+<span class="badge badge-joomla">Joomla</span>
+<span class="badge badge-github">Github</span>
+<span class="badge badge-slack">Slack</span>
+<span class="badge badge-windows">Windows</span>
+<span class="badge badge-linux">Linux</span>',
+        }
+    ]
+} %}

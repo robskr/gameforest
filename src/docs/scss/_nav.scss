@@ -1,0 +1,22 @@
+.nav-docs {
+  .nav-link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+
+    i {
+      float: left;
+      margin-right: 8px;
+      margin-top: 3px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid rgba($black, .09);
+    margin: 10px 0;
+  }
+}

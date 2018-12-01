@@ -1,0 +1,108 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ path }}plugins/datatables/css/dataTables.bootstrap4.min.css">
+{% endblock %}
+
+{% block js %}
+    <script src="{{ path }}plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="{{ path }}plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(function() {
+            $('#table_id').DataTable();
+        });
+    </script>
+{% endblock %}
+
+{% set page = {
+    title: 'DataTables',
+    text: 'DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, build upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.',
+    blocks: [
+        {
+            title: 'Introduction',
+            text: 'To getting started we need to add the required stylesheet and javascript files to our page. You can find an example below but for more examples check the <a href="https://datatables.net/manual/installation" target="_blank">datatables</a> website.',
+            pre: '<!-- Stylesheet -->
+<link rel="stylesheet" href="plugins/datatables/css/dataTables.bootstrap4.min.css">
+
+<!-- Javascript -->
+<script src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(function() {
+        $("#table_id").DataTable();
+    });
+</script>',
+        },
+        {
+            title: 'Example',
+            text: 'Add datatables to the table component by using custom id attribute with defined datatable function like in the example below.',
+            code: '<table id="table_id" class="table align-items-center">
+    <thead>
+        <tr>
+            <th scope="col">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1"></label>
+                </div>
+            </th>
+            <th scope="col">avatar</th>
+            <th scope="col">username</th>
+            <th scope="col">email</th>
+            <th scope="col">role</th>
+            <th scope="col">action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label" for="customCheck2"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-1.jpg"></td>
+            <td>Nathan Drake</td>
+            <td>nathan@drake.com</td>
+            <td>author</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                    <label class="custom-control-label" for="customCheck3"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-4.jpg"></td>
+            <td>Trevor</td>
+            <td>trevor@gtav.com</td>
+            <td>admin</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                    <label class="custom-control-label" for="customCheck4"></label>
+                </div>
+            </th>
+            <td><img class="avatar avatar-sm" src="../img/user-3.jpg"></td>
+            <td>Elizabeth</td>
+            <td>elizabeth@gs.com</td>
+            <td>member</td>
+            <td>
+                <button class="btn btn-link btn-icon px-0 mr-2" data-toggle="tooltip" title="Edit"><i class="ya ya-edit"></i></button>
+                <button class="btn btn-link btn-icon px-0" data-toggle="tooltip" title="Delete"><i class="ya ya-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>',
+        }
+    ]
+} %}

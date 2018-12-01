@@ -1,0 +1,139 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    class: 'page-lg'
+}%}
+
+{% block js %}
+    <script src="plugins/lazysizes/lazysizes.min.js"></script>
+{% endblock %}
+
+{% block body %}
+    <section class="bg-image py-5" ya-style="background-color: #303437">
+        <img class="background" src="https://static.giantbomb.com/uploads/original/5/56742/3053495-0981309717-rdr2-.jpg" alt="" ya-style="opacity: .35">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="embed-icon-dark" ya-embed="https://vimeo.com/284295451" ya-title="Red Dead Redemption 2: Epic &amp; Brutal Gameplay Moments" ya-length="15:05">
+                        <img class="lazyload" data-src="https://static.giantbomb.com/uploads/original/5/56742/3053495-0981309717-rdr2-.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary py-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="promo py-4">
+                        <h2 class="promo-title h5">Subscribe to upload and watch premium videos at gameforest!</h2>
+                        <a class="btn btn-outline-light ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Subscribe Now <i class="ya ya-next"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="heading">
+                        <i class="ya ya-player"></i>
+                        <h2 class="heading-title font-size-lg">Premium Videos on Gameforest</h2>
+                        <p class="heading-lead">Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. His boy middleton sir nor engrossed affection excellent.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-sm">
+                {% for video in videos %}
+                    {% if loop.index < 5 %}
+                        <div class="col-3 card-group mb-4">
+                            <div class="card card-video card-md">
+                                <div class="card-img">
+                                    <a href="video-post.html">
+                                        <img src="https://i1.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
+                                    </a>
+                                    <div class="card-meta">
+                                        <span>{{ video.length }}</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title"><a href="video-post.html">{{ video.title|slice(0, 38) }}</a></h6>
+                                    <p class="card-text">{{ video.text|slice(0, 80) ~ '...' }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <span><i class="ya ya-clock"></i> {{ video.date|date("M d, Y") }}</span>
+                                    <span class="ml-auto"><i class="ya ya-eye"></i> {{ video.views }} views</span>
+                                </div>
+                            </div>
+                            <!-- end .card-video -->
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="text-center my-3">
+                <a class="btn btn-dark btn-lg" href="videos.html" role="button">More Videos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-bottom border-top py-6">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-11 mx-auto">
+                    <div class="row justify-content-around align-items-center">
+                        <div class="col-6">
+                            <div class="embed-player embed-player-lg">
+                                <div class="embed-img">
+                                    <img src="https://static.giantbomb.com/uploads/original/5/56742/3058974-3631271585-rdr2-.jpg" alt="">
+                                </div>
+                                <div class="embed-icon">
+                                    <a href="https://www.youtube.com/watch?v=Dw_oH5oiUSE" ya-lightbox>
+                                        <i class="ya ya-play"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 pl-4">
+                            <h2 class="h1 text-dark font-weight-bold mb-3">Quality Videos for Gameforest Members</h2>
+                            <p class="lead mb-5">Received the likewise law graceful his. Nor might set along charm now equal green. <br>Pleased yet equally correct colonel not one. Say anxious carried compact conduct <br>ps4 general nay certain.</p>
+                            <a class="btn btn-primary btn-lg font-weight-semibold mr-1" href="pricing.html" role="button">View our plans <i class="ya ya-next"></i></a>
+                            <a class="btn btn-outline btn-lg" href="register.html" role="button">Create an account <i class="ya ya-user-add"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark py-2">
+        <div class="container-fluid px-2">
+            <div class="owl-carousel" ya-carousel="autoplay: true;items: 5;margin: 8;nav: false;dots: false">
+                {% for video in videos %}
+                    {% if loop.index < 16 %}
+                        <div class="embed-player">
+                            <img src="https://img.youtube.com/vi/{{ video.id }}/maxresdefault.jpg" alt="">
+                            <div class="embed-icon embed-icon-dark">
+                                <a href="https://www.youtube.com/watch?v={{ video.id}}" ya-lightbox><i class="ya ya-play"></i></a>
+                            </div>
+                            <div class="embed-caption">
+                                <div class="embed-length">{{ video.length }}</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

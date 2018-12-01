@@ -1,0 +1,49 @@
+// Section
+section {
+  padding: 1.5rem 0;
+  position: relative;
+
+  &.separated:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-image: url('../img/section-separator.png');
+    height: 100px;
+    width: 100%;
+  }
+}
+
+.bg-image {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #1f1f1f;
+}
+
+img.background {
+  object-fit: cover;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.player {
+  height: auto !important;
+  overflow: auto !important;
+}
+
+.overlay {
+  position: absolute;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}

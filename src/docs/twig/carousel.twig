@@ -1,0 +1,111 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Carousel',
+    text: 'Touch enabled javascript plugin that lets you create a beautiful responsive carousel slider. For more examples check the <a href="https://owlcarousel2.github.io/OwlCarousel2/" target="blank">official</a> plugin documentation.',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Add carousel to the selected section by using <code>ya-carousel</code> attribute and with <code>.owl-carousel</code> class.',
+            code: '<div class="owl-carousel" ya-carousel>
+    <img src="https://img.youtube.com/vi/EW8_OJn9oeE/maxresdefault.jpg" alt="">
+    <img src="https://img.youtube.com/vi/gJ56BJ-Ba9E/maxresdefault.jpg" alt="">
+    <img src="https://img.youtube.com/vi/0SXOB_Msiq8/maxresdefault.jpg" alt="">
+</div>',
+        },
+        {
+            title: 'Items',
+            text: 'Set the carousel items by adding items option with the choosen number to the <code>ya-carousel</code> attribute.',
+            code: '<div class="owl-carousel" ya-carousel="items: 3;margin: 10">
+    <img src="https://img.youtube.com/vi/EW8_OJn9oeE/mqdefault.jpg" alt="">
+    <img src="https://img.youtube.com/vi/gJ56BJ-Ba9E/mqdefault.jpg" alt="">
+    <img src="https://img.youtube.com/vi/0SXOB_Msiq8/mqdefault.jpg" alt="">
+</div>',
+        },
+        {
+            title: 'Video',
+            text: 'It is also possible to embed videos into the carousel by using the built in embed component like in the example below.',
+            code: '<div class="owl-carousel" ya-carousel="nav: false">
+    <div ya-embed="https://www.youtube.com/watch?v=EW8_OJn9oeE">
+        <img src="https://img.youtube.com/vi/EW8_OJn9oeE/maxresdefault.jpg" alt="">
+    </div>
+    <img src="https://img.youtube.com/vi/gJ56BJ-Ba9E/maxresdefault.jpg" alt="">
+    <img src="https://img.youtube.com/vi/0SXOB_Msiq8/maxresdefault.jpg" alt="">
+</div>',
+        },
+        {
+            title: 'Options',
+            text: 'Options can be passed via data attributes. For data attributes, append the option name to <code>ya-option</code>. Default option names and values are available below in the table.',
+            table: {
+                head: [
+                    { title: 'option' },
+                    { title: 'value' },
+                    { title: 'default' },
+                    { title: 'description', width: '60%' }
+                ],
+                body: [
+                    [
+                        { text: 'autoplay', code: true },
+                        { text: 'boolean' },
+                        { text: false },
+                        { text: 'Enable start carousel slide automatically by default.' }
+                    ],
+                    [
+                        { text: 'autoplaySpeed', code: true },
+                        { text: 'integer' },
+                        { text: 'null' },
+                        { text: 'The amount of time to delay between auto slide.' }
+                    ],
+                    [
+                        { text: 'items', code: true },
+                        { text: 'integer' },
+                        { text: 1 },
+                        { text: 'Number of items will be visible by default.' }
+                    ],
+                    [
+                        { text: 'nav', code: true },
+                        { text: 'boolean' },
+                        { text: true },
+                        { text: 'Display next and previous button on the carousel.' }
+                    ],
+                    [
+                        { text: 'dots', code: true },
+                        { text: 'boolean' },
+                        { text: true },
+                        { text: 'Display dots navigation on the carousel.' }
+                    ],
+                    [
+                        { text: 'loop', code: true },
+                        { text: 'boolean' },
+                        { text: true },
+                        { text: 'Infinity loop. Duplicate last and first items to get loop illusion.' }
+                    ],
+                    [
+                        { text: 'height', code: true },
+                        { text: 'boolean' },
+                        { text: false },
+                        { text: 'Set the carousel to full height.' }
+                    ],
+                    [
+                        { text: 'margin', code: true },
+                        { text: 'integer' },
+                        { text: 0 },
+                        { text: 'Add margin to the carousel item.' }
+                    ],
+                    [
+                        { text: 'center', code: true },
+                        { text: 'boolean' },
+                        { text: false },
+                        { text: 'Add a center aligned item to the carousel.' }
+                    ],
+                    [
+                        { text: 'slideItem', code: true },
+                        { text: 'integer' },
+                        { text: 1 },
+                        { text: 'Number for sliding items by default.' }
+                    ]
+                ]
+            }
+        }
+    ]
+} %}

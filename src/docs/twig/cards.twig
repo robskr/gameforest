@@ -1,0 +1,136 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Cards',
+    text: 'Display custom data like games, posts or videos with the card component what is a great way to make your website cleaner to read.',
+    bootstrap: 'components/card',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization.',
+            code: '<div class="row">
+    <div class="col-5">
+        <div class="card mb-0">
+            <img class="card-img-top" data-src="holder.js/323px250?theme=ya" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Do greatest at in learning steepest. Breakfast extremity suffering one who all otherwise suspected.</p>
+                <a href="#" class="btn btn-outline">Read more</a>
+            </div>
+        </div>
+    </div>
+</div>',
+            pre: '<div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Do greatest at in learning steepest. Breakfast extremity suffering one who all otherwise suspected.</p>
+        <a href="#" class="btn btn-outline">Read more</a>
+    </div>
+</div>'
+        },
+        {
+            title: 'Content types',
+            text: 'Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what’s supported.',
+            code: '<div class="card">
+    <div class="card-body px-3">
+        This is some text within a card body.
+    </div>
+</div>',
+        },
+        {
+            title: 'Card game',
+            text: 'List games with card game component by adding <code>.card-game</code> class to the .card element with customized metas like in the example.',
+            code: '<div class="row">
+    <div class="col-5">
+        <div class="card card-game mb-0">
+            <a class="card-img img-cover" href="game-post.html">
+                <img class="card-img-top" src="https://img.youtube.com/vi/HYrcX8QIIAs/maxresdefault.jpg" alt="God of War">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="ya ya-check-circle text-success" data-toggle="tooltip" data-placement="bottom" data-title="Available"></i>
+                    <a href="game-post.html">God of War</a>
+                </h5>
+                <p class="card-text">His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and mon...</p>
+            </div>
+            <div class="card-footer">
+                <span><i class="ya ya-calendar"></i> Apr 23, 2018</span>
+                <div class="ml-auto">
+                    <a href="#"><i class="ya ya-comment"></i> 675</a>
+                    <a href="#"><i class="ya ya-heart-o"></i> 49</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>',
+            pre: '<div class="card card-game">
+    <a class="card-img img-cover" href="game-post.html">
+        <img class="card-img-top" src="..." alt="card title">
+    </a>
+    <div class="card-body">
+        <h5 class="card-title">
+            <i class="ya ya-check-circle text-success" data-toggle="tooltip" data-placement="bottom" data-title="Available"></i>
+            <a href="game-post.html">God of War</a>
+        </h5>
+        <p class="card-text">His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and mon...</p>
+    </div>
+    <div class="card-footer">
+        <span><i class="ya ya-calendar"></i> Apr 23, 2018</span>
+        <div class="ml-auto">
+            <a href="#"><i class="ya ya-comment"></i> 675</a>
+            <a href="#"><i class="ya ya-heart-o"></i> 49</a>
+        </div>
+    </div>
+</div>'
+        },
+        {
+            title: 'Card video',
+            text: 'It is also possible to use custom cards for listing videos by adding <code>.card-video</code> to the card component.',
+            code: '<div class="row">
+    <div class="col-5">
+        <div class="card card-video">
+            <div class="card-img">
+                <a href="video-post.html">
+                    <img src="https://i1.ytimg.com/vi/N9fTYUj8pLE/mqdefault.jpg" alt="Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo">
+                </a>
+                <div class="card-meta">
+                    <span>4:32</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">
+                    <a href="video-post.html">Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo</a>
+                </h6>
+                <p class="card-text">We take an in-depth look at some of the traditional, and outright insane, vehicl...</p>
+            </div>
+            <div class="card-footer">
+                <span><i class="ya ya-clock"></i> Sep 11, 2018</span>
+                <span class="ml-auto"><i class="ya ya-eye"></i> 437 views</span>
+            </div>
+        </div>
+    </div>
+</div>',
+            pre: '<div class="card card-video">
+    <div class="card-img">
+        <a href="video-post.html">
+            <img src="..." alt="card title">
+        </a>
+        <div class="card-meta">
+            <span>4:32</span>
+        </div>
+    </div>
+    <div class="card-body">
+        <h6 class="card-title">
+            <a href="video-post.html">Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo</a>
+        </h6>
+        <p class="card-text">We take an in-depth look at some of the traditional, and outright insane, vehicl...</p>
+    </div>
+    <div class="card-footer">
+        <span><i class="ya ya-clock"></i> Sep 11, 2018</span>
+        <span class="ml-auto"><i class="ya ya-eye"></i> 437 views</span>
+    </div>
+</div>',
+        }
+    ]
+} %}

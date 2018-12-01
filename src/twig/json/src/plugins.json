@@ -1,0 +1,5 @@
+{
+    "plugins": {
+        "bootstrap": { "version": "4.1" }
+    }
+}

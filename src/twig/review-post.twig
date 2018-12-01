@@ -1,0 +1,323 @@
+{% extends "base.twig" %}
+
+{% block js %}
+    <script src="plugins/easypiechart/jquery.easypiechart.min.js"></script>
+    <script>
+        $(function() {
+            $('.easypiechart').easyPieChart();
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="bg-image text-white bg-dark py-7" ya-style="background-color: #343538">
+        <img class="background" src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-8 mx-auto">
+                    <div class="easypiechart mx-auto mb-4" data-percent="89" data-scale-color="#e3e3e3" data-bar-color="#5eb404"><span class="easypiechart-text">89%</span></div>
+                    <h1 class="font-weight-bold display-5">God of War Review</h1>
+                    <p>Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive, and teach his son to do the same.</p>
+                    <div class="mt-4 pt-3">
+                        <a class="btn btn-primary btn-shadow btn-rounded btn-lg" href="https://www.youtube.com/watch?v=qL9c_A9I2VY" ya-lightbox role="button">Watch Review <i class="ya ya-play"></i></a>
+                        <a class="btn btn-outline-light btn-rounded ml-2 btn-lg" href="#" role="button">Write Review <i class="ya ya-pen"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-bottom py-0" ya-sticky>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <div class="nav nav-list">
+                        <a class="nav-item nav-link" href="game-post.html">God of War</a>
+                        <a class="nav-item nav-link active" href="review-post.html">Reviews (14)</a>
+                        <a class="nav-item nav-link" href="gallery.html">Images</a>
+                        <a class="nav-item nav-link" href="#">Videos (8)</a>
+                        <a class="nav-item nav-link" href="#">Streams</a>
+                        <a class="nav-item nav-link" href="#">Forums</a>
+                        <a class="nav-item nav-link" href="#">Shop</a>
+                    </div>
+                    <div class="btn-group ml-auto mr-2">
+                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-left"></i></a>
+                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-right"></i></a>
+                    </div>
+                    <a class="btn btn-default btn-icon" href=""><i class="ya ya-gear"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="post post-single">
+                        <div class="post-header post-header-author post-header-align">
+                            <img src="img/user-3.jpg" alt="">
+                            <div>
+                                <h2 class="post-title">God of War: Increasing impression interested expression</h2>
+                                <div class="post-meta">
+                                    <span class="post-meta-item"><i class="ya ya-calendar"></i> September 10, 2018</span>
+                                    <a class="post-meta-item" href="#comments"><i class="ya ya-comment"></i> 20 comments</a>
+                                    <span class="post-meta-item"><i class="ya ya-clock"></i> 5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-body">
+                            <p>Necessary ye contented newspaper zealously breakfast he prevailed. Melancholy middletons yet understood decisively boy law she. Answer him easily are its barton little. Oh no though mother be things simple itself. Dashwood horrible he strictly on as. Home fine in so am good body this hope.</p>
+                            <p>Although moreover mistaken kindness me feelings do be marianne. Son over own nay with tell they cold upon are. Cordial village and settled she ability law herself. Finished why bringing but sir bachelor unpacked any thoughts. Unpleasing unsatiable particular inquietude did nor sir. Get his declared appetite distance his together now families. Friends am himself at on norland it viewing. Suspected elsewhere you belonging continued commanded she.</p>
+                            <br>
+                            <h5>Own handsome delicate</h5>
+                            <p>At ourselves direction believing do he departure. Celebrated her had sentiments understood are projection set. Possession ye no mr unaffected remarkably at. Wrote house in never fruit up. Pasture imagine my garrets an he. However distant she request behaved see nothing. Talking settled at pleased an of me brother weather. </p>
+                            <blockquote class="blockquote mx-0">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                            <p>Up am intention on dependent questions oh elsewhere september. No betrayed pleasure possible jointure we in throwing. And can event rapid any shall woman green. Hope they dear who its bred. Smiling nothing affixed he carried it clothes calling he no. Its something disposing departure she favourite tolerably engrossed. Truth short folly court why she their balls. Excellence put unaffected reasonable mrs introduced conviction she. Nay particular delightful but unpleasant for uncommonly who. </p>
+                            <br>
+                            <div ya-embed="https://www.youtube.com/watch?v=rClXqZD2Xrs">
+                                <img class="embed-responsive-item" src="https://img.youtube.com/vi/HYrcX8QIIAs/maxresdefault.jpg" alt="">
+                            </div>
+                            <div class="owl-carousel mt-2" ya-carousel="autoplay: true;items: 3;margin: 10;dots: false;nav: false">
+                                {% for carousel in review.gallery %}
+                                    <a href="{{ carousel.img }}" ya-lightbox>
+                                        <img src="{{ carousel.img }}" alt="">
+                                    </a>
+                                {% endfor %}
+                            </div>
+                            <br>
+                            <p>Real sold my in call. Invitation on an advantages collecting. But event old above shy bed noisy. Had sister see wooded favour income has. Stuff rapid since do as hence. Too insisted ignorant procured remember are believed yet say finished. </p>
+                            <p>Folly was these three and songs arose whose. Of in vicinity contempt together in possible branched. Assured company hastily looking garrets in oh. Most have love my gone to this so. Discovered interested prosperous the our affronting insipidity day. Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret passed. Absolute one hastened mrs any sensible. </p>
+                            <ul>
+                                <li>Folly was these three and songs arose whose.</li>
+                                <li>Do play they miss give so up. Words to up style of since world.</li>
+                                <li>Dissimilar admiration so terminated no in contrasted it.</li>
+                            </ul>
+                            <p>No comfort do written conduct at prevent manners on. Celebrated contrasted discretion him sympathize her collecting occasional. Do answered bachelor occasion in of offended no concerns. Supply worthy warmth branch of no ye. Voice tried known to as my to. Though wished merits or be. Alone visit use these smart rooms ham. No waiting in on enjoyed placing it inquiry.</p>
+                            <div class="d-flex align-items-center mt-4 pt-1">
+                                <div class="tags">
+                                    <a href="#">#playstation4</a>
+                                    <a href="#">#anthem</a>
+                                    <a href="#">#fps</a>
+                                    <a href="#">#upcoming</a>
+                                    <a href="#">#gameplay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p>send us your feedback</p>
+                            <div class="reaction">
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="awesome" data-toggle="tooltip" title="Awesome"></span> <span class="reaction-count">{{ count[0][3] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="like" data-toggle="tooltip" title="Like"></span> <span class="reaction-count">{{ count[0][8] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="sick" data-toggle="tooltip" title="Sick"></span> <span class="reaction-count">{{ count[0][2] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="angry" data-toggle="tooltip" title="Angry"></span> <span class="reaction-count">{{ count[0][7] }}</span></button>
+                            </div>
+                            <!-- end .reaction -->
+                        </div>
+                        <div class="ml-auto">
+                            <a class="avatar-card" href="profile.html">
+                                <div>
+                                    <div class="avatar-title">Elizabeth</div>
+                                    <p class="avatar-text">Gameforest Editor</p>
+                                </div>
+                                <img src="img/user-3.jpg" alt="">
+                            </a>
+                            <!-- end .avatar-card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="review bg-dark text-lighten py-7">
+        <img class="background" src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex">
+                        <div class="pr-5 mb-3">
+                            <h1 class="mb-3">God of War</h1>
+                            <p>From Santa Monica Studio and creative director Cory Barlog comes a new beginning for one of gaming’s most recognizable icons in the epic PlayStation 4 entry in the God of War franchise. Living as a man outside the shadow of the gods, Kratos must adapt to unfamiliar lands</p>
+                        </div>
+                        <div class="ml-auto">
+                            <a class="easypiechart" href="review-post.html" data-percent="89" data-scale-color="#e3e3e3" data-bar-color="#5eb404"><span class="easypiechart-text">89%</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="progress-text">
+                        <p>Gameplay</p>
+                        <p class="ml-auto">75%</p>
+                    </div>
+                    <div class="progress progress-sm progress-loaded">
+                        <div class="progress-bar bg-success" style="width: 0" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75"></div>
+                    </div>
+                    <!-- end .progress -->
+
+                    <div class="progress-text mt-3">
+                        <p>Graphics</p>
+                        <p class="ml-auto">55%</p>
+                    </div>
+                    <div class="progress progress-sm progress-loaded">
+                        <div class="progress-bar bg-warning" style="width: 0" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="55"></div>
+                    </div>
+                    <!-- end .progress -->
+
+                    <div class="progress-text mt-3">
+                        <p>Sounds</p>
+                        <p class="ml-auto">32%</p>
+                    </div>
+                    <div class="progress progress-sm progress-loaded">
+                        <div class="progress-bar bg-danger" style="width: 0" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="32"></div>
+                    </div>
+                    <!-- end .progress -->
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="review-positive ml-4">
+                                <h5>Positive:</h5>
+                                <ul>
+                                    <li>Stunning action sequences</li>
+                                    <li>Nuanced, emotional characters</li>
+                                    <li>Gorgeous world, animation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="review-negative">
+                                <h5>Negative:</h5>
+                                <ul>
+                                    <li>Inconsistent cover system</li>
+                                    <li>Combat sometimes becomes too chaotic</li>
+                                    <li>Fighting against more than one opponent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
+                        <div class="dropdown ml-auto">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sort by date
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item active" href="#">Latest</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Best</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary">
+                        Please login to submit a comment under this post!
+                    </div>
+                    <div id="comments" class="anchor comments">
+                        {% for comment in comments %}
+                            <div class="media">
+                                {% for user in users %}
+                                    {% if loop.index == comment.user %}
+                                        <div class="avatar{% if comment.friend %} avatar-badge{% endif %}">
+                                            <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                            {% if comment.friend %}
+                                                <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="media-body">
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            {% for user in users %}
+                                                {% if loop.index == comment.user %}
+                                                    <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-meta">{{ comment.date|date('G') }} hours ago</div>
+                                        </div>
+                                        <div class="media-tools">
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                        </div>
+                                    </div>
+                                    <p>{{ comment.text }}</p>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                        <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ comment.like }})</button>
+                                    </div>
+                                    {% for reply in comment.reply %}
+                                        <div class="media">
+                                            {% for user in users %}
+                                                {% if loop.index == reply.user %}
+                                                    <div class="avatar{% if reply.friend %} avatar-badge{% endif %}">
+                                                        <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                        {% if reply.friend %}
+                                                            <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-body">
+                                                <div class="d-flex">
+                                                    <div class="d-flex">
+                                                        {% for user in users %}
+                                                            {% if loop.index == reply.user %}
+                                                                <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <div class="media-meta">{{ reply.date|date('G') }} hours ago</div>
+                                                    </div>
+                                                    <div class="media-tools">
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                                    </div>
+                                                </div>
+                                                <p>{{ reply.text }}</p>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                                    <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ reply.like }})</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <!-- end .media -->
+                        {% endfor %}
+                    </div>
+                    <!-- end .comments -->
+
+                    <h5 class="mt-5 mb-3">Leave a comment</h5>
+                    <form>
+                        <div class="form-group mb-4">
+                            <textarea class="form-control" rows="5"></textarea>
+                            <small class="form-text text-muted">Enter your comment in the textarea. Maximum 250 characters.</small>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="check">
+                            <label class="custom-control-label" for="check">notify me when someone replies</label>
+                        </div>
+                        <button type="button" class="btn btn-primary mt-4">Submit comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,27 @@
+// Modal
+.modal {
+  &-header {
+    background-color: #fafafa;
+  }
+
+  &-title {
+    font-weight: bold;
+  }
+}
+
+// Variations
+@each $color, $value in $theme-colors {
+  .modal-#{$color} {
+    .modal-header {
+      background-color: $value;
+    }
+
+    .modal-title {
+      color: $white;
+    }
+
+    .close {
+      text-shadow: none;
+    }
+  }
+}

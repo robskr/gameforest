@@ -1,0 +1,207 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    footer: 'sticky'
+} %}
+
+{% block body %}
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Dropdown Component</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dropdowns</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card card-default">
+                                <h6 class="card-header">General Dropdown</h6>
+                                <div class="card-body">
+                                    <div class="dropdown">
+                                        <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Dropdown button
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card card-default">
+                                <h6 class="card-header">Directions</h6>
+                                <div class="card-body">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Dropup
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-group dropright">
+                                        <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Dropright
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card card-default mb-0">
+                                <h6 class="card-header">Header</h6>
+                                <div class="card-body">
+                                    <div class="dropdown">
+                                        <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Dropdown header
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="dropdown-header">Dropdown Header</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card card-default mb-0">
+                                <h6 class="card-header">Profile</h6>
+                                <div class="card-body">
+                                    <div class="dropdown">
+                                        <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            My Profile
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#"><i class="ya ya-user"></i> Profile</a>
+                                            <a class="dropdown-item" href="#"><i class="ya ya-gear"></i> Settings</a>
+                                            <a class="dropdown-item" href="#"><i class="ya ya-helmet"></i> Games</a>
+                                            <a class="dropdown-item" href="#"><i class="ya ya-player"></i> Videos (34)</a>
+                                            <a class="dropdown-item" href="#"><i class="ya ya-clock"></i> History</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#"><i class="ya ya-logout"></i> Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card card-default mb-0">
+                                <h6 class="card-header">Notification</h6>
+                                <div class="card-body">
+                                    <div class="dropdown dropdown-notification">
+                                        <button class="btn btn-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Notifications
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="dropdown-header"><i class="ya ya-bell"></i> Notification (5)</div>
+                                            <div class="dropdown-scrollable">
+                                                <ul class="dropdown-list">
+                                                    <li class="dropdown-list-item">
+                                                        <span class="dropdown-list-text text-success"><i class="ya ya-calendar"></i></span>
+                                                        <div class="dropdown-list-body">
+                                                            <a href="../profile.html">Nathan Drake</a> invited you to find the lost chapter event.
+                                                            <div class="dropdown-list-meta">
+                                                                <i class="ya ya-clock"></i> 3 hours ago
+                                                                <div class="ml-auto">
+                                                                    <a href="#"><i class="ya ya-check-circle"></i></a>
+                                                                    <a href="#"><i class="ya ya-trash"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="dropdown-list-item">
+                                                        <span class="dropdown-list-text text-primary"><i class="ya ya-user-add"></i></span>
+                                                        <div class="dropdown-list-body">
+                                                            <a href="../profile.html">Elizabeth</a> sent you a friend request.
+                                                            <div class="dropdown-list-meta">
+                                                                <i class="ya ya-clock"></i> 5 hours ago
+                                                                <div class="ml-auto">
+                                                                    <a href="#"><i class="ya ya-check-circle"></i></a>
+                                                                    <a href="#"><i class="ya ya-trash"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="dropdown-list-item">
+                                                        <span class="dropdown-list-text text-danger"><i class="ya ya-camera"></i></span>
+                                                        <div class="dropdown-list-body">
+                                                            <a href="../profile.html">Clark Kent</a> started to stream <a href="../game-post.html">Forza horizon 4</a>
+                                                            <div class="dropdown-list-meta">
+                                                                <i class="ya ya-clock"></i> 2 days ago
+                                                                <div class="ml-auto">
+                                                                    <a href="#"><i class="ya ya-check-circle"></i></a>
+                                                                    <a href="#"><i class="ya ya-trash"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="dropdown-list-item">
+                                                        <span class="dropdown-list-text text-secondary"><i class="ya ya-helmet"></i></span>
+                                                        <div class="dropdown-list-body">
+                                                            <a href="../profile.html">Clark Kent</a> started to stream.
+                                                            <div class="dropdown-list-meta">
+                                                                <i class="ya ya-clock"></i> 3 days ago
+                                                                <div class="ml-auto">
+                                                                    <a href="#"><i class="ya ya-check-circle"></i></a>
+                                                                    <a href="#"><i class="ya ya-trash"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown-footer">
+                                                <a class="btn btn-outline btn-block btn-sm" href="#">view all</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

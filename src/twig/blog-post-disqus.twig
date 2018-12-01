@@ -1,0 +1,141 @@
+{% extends "base.twig" %}
+
+{% block js %}
+    <script id="dsq-count-scr" src="//gameforest.disqus.com/count.js" async></script>
+{% endblock %}
+
+{% block body %}
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Disqus Comments</li>
+                </ol>
+                <div class="btn-group ml-auto">
+                    <a class="btn btn-default btn-icon btn-xs" href="{{ blogs[4]['url'] }}"><i class="ya ya-small-left"></i></a>
+                    <a class="btn btn-default btn-icon btn-xs" href="{{ blogs[1]['url'] }}"><i class="ya ya-small-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 border-bottom-dashed">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    {% for blog in blogs %}
+                        {% if (blog.url == 'blog-post.html') and (loop.index == 1) %}
+                            <div class="post post-single">
+                                <div class="post-header">
+                                    <h1 class="post-title">{{ blog.title }}</h1>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</span>
+                                        <span class="post-meta-item"><i class="ya ya-comment"></i> <a href="#disqus_thread"></a></span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> {{ blog.meta.time }} min read</span>
+                                    </div>
+                                </div>
+                                <div class="post-thumbnail">
+                                    <img class="post-img" src="{{ blog.img }}" alt="{{ blog.title }}">
+                                </div>
+                                <div class="post-body">
+                                    {% for text in post.text %}
+                                        {{ text }}
+                                    {% endfor %}
+                                    <div class="d-flex align-items-center mt-4 pt-1">
+                                        <div class="tags">
+                                            <a href="#">#playstation4</a>
+                                            <a href="#">#anthem</a>
+                                            <a href="#">#fps</a>
+                                            <a href="#">#upcoming</a>
+                                            <a href="#">#gameplay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .post-single -->
+                        {% endif %}
+                    {% endfor %}
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p>send us your feedback</p>
+                            <div class="reaction">
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="awesome" data-toggle="tooltip" title="Awesome"></span> <span class="reaction-count">{{ count[0][3] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="like" data-toggle="tooltip" title="Like"></span> <span class="reaction-count">{{ count[0][8] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="sick" data-toggle="tooltip" title="Sick"></span> <span class="reaction-count">{{ count[0][2] }}</span></button>
+                                <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="angry" data-toggle="tooltip" title="Angry"></span> <span class="reaction-count">{{ count[0][7] }}</span></button>
+                            </div>
+                            <!-- end .reaction -->
+                        </div>
+                        <div class="ml-auto">
+                            <a class="avatar-card" href="profile.html">
+                                <div>
+                                    <div class="avatar-title">Smallville</div>
+                                    <p class="avatar-text">gameforest author</p>
+                                </div>
+                                <img src="img/user-5.jpg" alt="">
+                            </a>
+                            <!-- end .avatar-card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
+                    </div>
+                    <div class="alert alert-primary">
+                        Please login to submit a comment under this post!
+                    </div>
+                    <div id="comments" class="comments anchor">
+                        <div ya-disqus></div>
+                    </div>
+                    <!-- end .comments -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 border-top-dashed">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="heading">
+                        <i class="ya ya-time-alarm"></i>
+                        <h2 class="heading-title">Maybe you would like to read about it</h2>
+                        <p class="heading-lead">May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for blog in blogs %}
+                    {% if loop.index < 4 %}
+                        <div class="col-4">
+                            <div class="card card-post mb-0">
+                                <a class="card-img" href="{{ blog.url }}">
+                                    <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
+                                    <div class="card-meta">
+                                        <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date("M d, Y") }}</span>
+                                        <a class="card-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
+                                    </div>
+                                    <p class="card-text">{{ blog.text|slice(0, 105) ~ '...' }}</p>
+                                </div>
+                            </div>
+                            <!-- end .card-post -->
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

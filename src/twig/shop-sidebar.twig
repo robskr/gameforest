@@ -1,0 +1,249 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="plugins/nouislider/nouislider.min.css">
+{% endblock %}
+
+{% block js %}
+    <script src="plugins/nouislider/nouislider.min.js"></script>
+    <script>
+        $(function() {
+            var html5Slider = document.getElementById('slider');
+            var minNumber = document.getElementById('min');
+            var maxNumber = document.getElementById('max');
+
+            noUiSlider.create(html5Slider, {
+                start: [6, 50],
+                connect: true,
+                step: 1,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
+            html5Slider.noUiSlider.on('update', function (values, handle) {
+                var value = values[handle];
+
+                if (handle) {
+                    maxNumber.value = Math.round(value);
+                } else {
+                    minNumber.value = Math.round(value);
+                }
+            });
+
+            minNumber.addEventListener('change', function () {
+                html5Slider.noUiSlider.set([this.value, null]);
+            });
+
+            maxNumber.addEventListener('change', function () {
+                html5Slider.noUiSlider.set([null, this.value]);
+            });
+
+            $('.form-control').keyup(function() {
+                var search = $(this).val().toLowerCase();
+                $.each($('.card-title'), function() {
+                    if ($(this).text().toLowerCase().indexOf(search) === -1) {
+                        $(this).parent().parent().parent().hide();
+                    } else {
+                        $(this).parent().parent().parent().show();
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shop Sidebar</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="border-bottom-dashed py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form class="form-inline">
+                        <button class="btn btn-light mr-2" type="button" name="button" data-toggle="tooltip" title="refresh" data-placement="bottom"><i class="ya ya-refresh ml-0"></i></button>
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-inline" placeholder="Search in shop...">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-auto">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Recent Products
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item active" href="#">Recent</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-light ml-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random m-0"></i></button>
+                        <div class="btn-group ml-2" role="group">
+                            <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
+                            <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
+                        </div>
+                    </form>
+                    <!-- end .form-inline -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="widget">
+                        <div class="widget-header">Price</div>
+                        <div class="widget-body">
+                            <form>
+                                <div id="slider"></div>
+                                <div class="form-group">
+                                    <div class="row mb-2">
+                                        <div class="col-6">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">$</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="min" aria-label="Dollar amount (with dot and two decimal places)">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                           <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">$</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="max" aria-label="Dollar amount (with dot and two decimal places)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">
+                                        Set minimum and maximum price
+                                    </small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget">
+                        <div class="widget-header">Gaming genre</div>
+                        <div class="widget-body overflow-auto" style="max-height: 380px">
+                            <form>
+                                <div class="form-group">
+                                    {% for genre in shop.genre %}
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input type="radio" id="genreRadio{{ loop.index }}" name="customRadio" class="custom-control-input"{% if loop.index == 1 %} checked{% endif %}>
+                                            <label class="custom-control-label" for="genreRadio{{ loop.index }}">{{ genre }}</label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget mb-3">
+                        <div class="widget-header">Platforms</div>
+                        <div class="widget-body overflow-auto" style="max-height: 380px">
+                            <form>
+                                <div class="form-group">
+                                    {% for platform in shop.platforms %}
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" id="platform{{ loop.index }}" name="customCheck" class="custom-control-input"{% if loop.index == 1 %} checked{% endif %}>
+                                            <label class="custom-control-label" for="platform{{ loop.index }}">{{ platform }}</label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget mb-0">
+                        <div class="widget-header">Type</div>
+                        <div class="widget-body">
+                            <form>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio mb-2">
+                                        <input type="radio" id="radioType1" name="customRadio" class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="radioType1">All</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mb-2">
+                                        <input type="radio" id="radioType2" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="radioType2">Pre-orders</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mb-2">
+                                        <input type="radio" id="radioType3" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="radioType3">New products</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <button type="button" class="btn btn-outline-primary btn-sm btn-block">Accept filters</button>
+                </div>
+                <div class="col-9">
+                    <div class="row row-sm">
+                        {% for game in games %}
+                            {% if loop.index < 13 %}
+                                <div class="col-4 card-group">
+                                    <div class="card card-shop mb-4">
+                                        <a class="card-img" href="shop-product.html">
+                                            {% if game.price.discount %}
+                                                <span class="badge badge-pill badge-dark">-4%</span>
+                                            {% endif %}
+                                            <img class="card-img-top" src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg" alt="{{ game.title }}">
+                                        </a>
+                                        <div class="card-body d-flex align-items-start flex-column">
+                                            <h5 class="card-title mb-auto">
+                                                {% if game.released %}
+                                                    <i class="ya ya-check-circle text-success" data-toggle="tooltip" data-placement="bottom" data-title="Available"></i>
+                                                {% endif %}
+                                                <a href="game-post.html">{{ game.title }}</a>
+                                            </h5>
+                                            <ul class="list-unstyled font-size-md mt-2 mb-0">
+                                                {% if game.preorder %}<li><u class="font-weight-bold">Preorder now</u></li>{% endif %}
+                                                <li><i class="ya ya-stock text-success mr-1"></i> Available in stock</li>
+                                                <li><i class="ya ya-delivery text-success mr-1"></i> Free home delivery</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex align-items-center">
+                                                <div class="font-weight-bold h4 mb-0 mr-2 {% if game.price.discount %}text-danger{% endif %}">${{ game.price.original }}</div>
+                                                {% if game.price.discount %}<div class="h6 mb-0 font-weight-light text-light"><s>${{ game.price.original + game.price.discount }}</s></div>{% endif %}
+                                            </div>
+                                            <button type="button" class="btn btn-outline btn-sm ml-auto font-weight-semibold">Add to cart <i class="ya ya-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- end .card-game -->
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination mt-2 justify-content-end">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item gap"><span class="page-link">...</span></li>
+                    <li class="page-item"><a class="page-link" href="#">25</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+{% endblock %}

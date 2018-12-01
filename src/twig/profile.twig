@@ -1,0 +1,346 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="bg-image text-white bg-dark d-flex align-items-end" style="background-color: #3a3a3c !important;min-height: 320px;">
+        <img class="background" src="https://img.youtube.com/vi/715r-8JJhpM/maxresdefault.jpg" alt="" ya-style="opacity: .25">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="heading heading-bottom w-100">
+                        <div>
+                            <h2 class="heading-title"><i class="ya ya-check verify"  data-toggle="tooltip" title="verified user"></i> Nathan Drake</h2>
+                        </div>
+                        <span class="badge badge-dark badge-pill ml-3" data-toggle="tooltip" title="level 12 - treasure hunter" data-placement="right">
+                            <i class="ya ya-star mr-1"></i>
+                            <i class="ya ya-star mr-1"></i>
+                            <i class="ya ya-star"></i>
+                        </span>
+                        <div class="ml-auto">
+                            <a class="btn btn-primary btn-sm btn-icon-left font-weight-semibold" href="#"><i class="ya ya-user-add"></i> Add friend</a>
+                            <a class="btn btn-outline-light btn-sm btn-icon-left font-weight-semibold ml-2" href="#"><i class="ya ya-email"></i> Send message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-bottom py-0 nav-profile" ya-sticky>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <a class="avatar-thumbnail avatar-xl position-absolute" href="#">
+                        <img src="img/user.jpg" alt="">
+                    </a>
+                    <div class="avatar-fixed">
+                        <a class="avatar-tile" href="#">
+                            <img src="img/user-1.jpg" alt="">
+                            <div>
+                                <strong>Nathan Drake</strong>
+                                <span class="d-block">@nathan</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="nav nav-list nav-list-profile">
+                        <a class="nav-item nav-link active" href="#">Timeline</a>
+                        <a class="nav-item nav-link" href="#">Friends (679)</a>
+                        <a class="nav-item nav-link" href="#">Groups</a>
+                        <a class="nav-item nav-link" href="#">Games (38)</a>
+                        <a class="nav-item nav-link" href="#">Images</a>
+                        <a class="nav-item nav-link" href="#">Videos (8)</a>
+                        <a class="nav-item nav-link" href="#">Streams</a>
+                        <a class="nav-item nav-link" href="#">Forums</a>
+                    </div>
+                    <div class="dropdown ml-auto">
+                        <button class="btn btn-default btn-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-gear"></i></button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="profile-settings.html">Settings</a>
+                            <a class="dropdown-item" href="#">Edit Games</a>
+                            <a class="dropdown-item" href="#">Mail</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">History</a>
+                            <a class="dropdown-item" href="#">Security</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="widget mt-4">
+                        <div class="widget-header">About me</div>
+                        <div class="widget-body">
+                            <p>I am a frontend developer &amp; web designer. I love to work on creative and standalone projects like gameforest.</p>
+                            <ul class="list-group list-group-items mb-4">
+                                <li class="list-group-item"><i class="ya ya-pin"></i> Budapest</li>
+                                <li class="list-group-item"><i class="ya ya-twitter"></i> <a href="https://twitter.com/yakuthemes" target="_blank">yakuthemes</a></li>
+                                <li class="list-group-item"><i class="ya ya-calendar"></i> Joined December 2009</li>
+                            </ul>
+                            <a class="btn btn-outline btn-sm btn-block" href="#" role="button">Send message</a>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-secondary">
+                        <div class="widget-header">Navigation</div>
+                        <div class="widget-body p-0">
+                            <div class="list-group list-group-nav">
+                                {% for nav in profile.nav %}
+                                    <a class="list-group-item" href="#">
+                                        <i class="{{ nav.icon }}"></i> {{ nav.title }}
+                                        {% if nav.count %}<span class="badge badge-dark badge-pill">{{ nav.count }}</span>{% endif %}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-users">
+                        <div class="widget-header">Friends (679)</div>
+                        <div class="widget-body">
+                            {% for user in users %}
+                                {% if loop.index != 1 %}
+                                    <a href="#" data-toggle="tooltip" title="{{ user.name }}">
+                                        <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                        {% if user.status %}<span class="badge badge-{{ user.status }}"></span>{% endif %}
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                            <a class="widget-user widget-user-count" href="#">
+                                <img src="img/user-default.jpg" alt="">
+                                <span>+48</span>
+                            </a>
+                            <div>
+                                <a class="btn btn-outline btn-block btn-sm mt-3" href="#">View all</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                </div>
+                <div class="col-7">
+                    <div class="card card-form">
+                        <div class="card-header">
+                            <div class="nav nav-tabs" id="shareTab" role="tablist">
+                                <a class="nav-item nav-link active" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status" aria-selected="true"><i class="ya ya-plus-content"></i> Status</a>
+                                <a class="nav-item nav-link" id="multimedia-tab" data-toggle="tab" href="#multimedia" role="tab" aria-controls="multimedia" aria-selected="false"><i class="ya ya-image"></i> Multimedia</a>
+                                <a class="nav-item nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false"><i class="ya ya-player"></i> Video</a>
+                                <a class="nav-item nav-link" id="stream-tab" data-toggle="tab" href="#stream" role="tab" aria-controls="stream" aria-selected="false"><i class="ya ya-camera"></i> Stream</a>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="card-body">
+                                <div class="tab-content" id="shareTabContent">
+                                    <div class="tab-pane fade show active" id="status" role="tabpanel" aria-labelledby="status-tab">
+                                        <div class="d-flex">
+                                            <div class="card-avatar">
+                                                <img src="img/user-1.jpg" alt="">
+                                            </div>
+                                            <div class="pl-2 flex-grow-1">
+                                                <div class="form-group mb-0">
+                                                    <textarea class="form-control border-0 shadow-none" rows="5" placeholder="What's in your mind?"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a class="btn btn-link px-0 ml-2" href="#" data-toggle="tooltip" title="Add images"><i class="ya ya-photo"></i></a>
+                                <a class="btn btn-link px-0" href="#" data-toggle="tooltip" title="Add location"><i class="ya ya-pin-add"></i></a>
+                                <a class="btn btn-link px-0" href="#" data-toggle="tooltip" title="Tag friend"><i class="ya ya-user-add"></i></a>
+                                <div class="d-flex justify-content-end w-100">
+                                    <button class="btn btn-default mr-1" role="button">Cancel</button>
+                                    <button class="btn btn-primary" role="button">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- end .card-form -->
+
+                    {% for post in profile.posts %}
+                        <div class="card card-timeline">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    {% for user in users %}
+                                        {% if loop.index == post.author %}
+                                            <div class="card-avatar">
+                                                <img src="img/{{ user.img }}" alt="">
+                                                {% if user.status %}<span class="badge badge-{{ user.status }}"></span>{% endif %}
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title">
+                                                    <a href="#">{{ user.name }}</a>
+                                                </h5>
+                                                <div class="card-meta"><span class="card-meta-item">{{ post.date|date('G') }} hours ago</span></div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="dropdown ml-auto">
+                                    <button class="btn btn-link btn-block btn-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-menu"></i></button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="#">Hide from timeline</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Mark as featured</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">{{ post.text }}</p>
+                                {% if post.video %}
+                                    <div ya-embed="{{ post.video.src }}">
+                                        <img class="embed-responsive-item" src="{{ post.video.img }}" alt="">
+                                    </div>
+                                {% endif %}
+                                {% if post.img %}
+                                    <a class="embed-image" href="{{ post.img }}" ya-lightbox="disqus: gameforest">
+                                        <img src="{{ post.img }}" alt="">
+                                    </a>
+                                {% endif %}
+                                {% if post.gallery %}
+                                    <div class="embed-gallery">
+                                        {% for gallery in post.gallery %}
+                                            <a class="embed-image" href="{{ gallery.img }}" ya-lightbox rel="gallery">
+                                                <img src="{{ gallery.img }}" alt="">
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="card-footer">
+                                <div class="avatar-stack">
+                                    {% for user in users %}
+                                        {% if loop.index < 6 %}
+                                            <img class="avatar" src="img/{{ user.img }}" alt="{{ user.name }}">
+                                        {% endif %}
+                                    {% endfor %}
+                                    <span class="avatar-text"><a href="profile.html">Elizabeth</a>,<a href="profile.html">Venom</a> and more {{post.like }} people like it.</span>
+                                </div>
+                                <div class="ml-auto">
+                                    <button class="btn btn-default btn-icon btn-xs mr-1"><i class="ya ya-like"></i> {{ post.like }}</button>
+                                    <button class="btn btn-default btn-icon btn-xs"><i class="ya ya-comment"></i> comments ({{ post.comment }})</button>
+                                </div>
+                            </div>
+                            {% if post.comments %}
+                                <div class="comments">
+                                    <form class="px-3 border-bottom-dashed pb-4">
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="4"></textarea>
+                                            <small class="form-text text-muted">Enter your comment in the textarea. Maximum 250 characters.</small>
+                                        </div>
+                                        <button type="button" class="btn btn-outline">Submit comment</button>
+                                    </form>
+                                    <!-- end form -->
+
+                                    {% for comment in post.comments %}
+                                        <div class="media">
+                                            {% for user in users %}
+                                                {% if loop.index == comment.user %}
+                                                    <div class="avatar{% if comment.friend %} avatar-badge{% endif %}">
+                                                        <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                        {% if comment.friend %}
+                                                            <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-body">
+                                                <div class="d-flex">
+                                                    <div class="d-flex">
+                                                        {% for user in users %}
+                                                            {% if loop.index == comment.user %}
+                                                                <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <div class="media-meta">{{ comment.date|date('G') }} hours ago</div>
+                                                    </div>
+                                                    <div class="media-tools">
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                                    </div>
+                                                </div>
+                                                <p>{{ comment.text }}</p>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                                    <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ comment.like }})</button>
+                                                </div>
+                                                {% for reply in comment.reply %}
+                                                    <div class="media">
+                                                        {% for user in users %}
+                                                            {% if loop.index == reply.user %}
+                                                                <div class="avatar{% if reply.friend %} avatar-badge{% endif %}">
+                                                                    <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                                    {% if reply.friend %}
+                                                                        <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                                                    {% endif %}
+                                                                </div>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <div class="media-body">
+                                                            <div class="d-flex">
+                                                                <div class="d-flex">
+                                                                    {% for user in users %}
+                                                                        {% if loop.index == reply.user %}
+                                                                            <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                    <div class="media-meta">{{ reply.date|date('G') }} hours ago</div>
+                                                                </div>
+                                                                <div class="media-tools">
+                                                                    <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                                                    <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <p>{{ reply.text }}</p>
+                                                            <div class="d-flex align-items-center">
+                                                                <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                                                <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ reply.like }})</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <!-- end .media -->
+                                    {% endfor %}
+                                </div>
+                                <!-- end .comments -->
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                    <!-- end .card-item -->
+                    <a class="btn btn-outline btn-block btn-sm" href="#" role="button">Load More</a>
+                </div>
+                <div class="col-2">
+                    <div class="widget widget-secondary widget-recommends">
+                        <div class="widget-header">Recommends</div>
+                        <div class="widget-body pb-0">
+                            {% for user in users %}
+                                {% if loop.index < 7 %}
+                                    {% if loop.index != 1 %}
+                                        <div class="widget-user">
+                                            <div class="d-flex align-items-start">
+                                                <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                <div>
+                                                    <a class="widget-user-title" href="#">{{ user.name }}</a>
+                                                    <a class="btn btn-outline btn-xs btn-icon-left text-center" href="#"><i class="ya ya-user-add"></i> Add</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end .widget-user -->
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- end .widget-users -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

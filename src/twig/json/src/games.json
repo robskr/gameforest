@@ -1,0 +1,167 @@
+{
+    "games": [
+        {
+            "title": "God of War",
+            "text": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive, and teach his son to do the same.",
+            "img": "HYrcX8QIIAs",
+            "platforms": [1],
+            "released": true,
+            "date": 1524520018,
+            "comments": 675,
+            "like": 49,
+            "preorder": true,
+            "price": {
+                "original": 64
+            }
+        },
+        {
+            "title": "Spider-Man PS4",
+            "text": "This isn’t the Spider-Man you’ve met or ever seen before. After eight years behind the mask, Peter Parker is more experienced, confident, and masterful with his dynamic powers and abilities than ever before.",
+            "img": "reAPorQHxNQ",
+            "platforms": [3, 1],
+            "released": true,
+            "new": true,
+            "date": 1536788818,
+            "comments": 103,
+            "like": 581,
+            "preorder": true,
+            "price": {
+                "original": 59
+            }
+        },
+        {
+            "title": "Forza Horizon 4",
+            "text": "In Forza Horizon 4, you’re in charge of the Horizon Seasons. Customize everything, hire and fire your friends, and explore Australia in over 350 of the world’s greatest cars. Make your Horizon the ultimate celebration of cars, music, and freedom of the open road. How you get there is up to you.",
+            "img": "MVTHYMkDvIs",
+            "platforms": [5, 1, 2],
+            "released": true,
+            "date": 1538776018,
+            "comments": 89,
+            "like": 44,
+            "preorder": true,
+            "price": {
+                "original": 44,
+                "discount": 23
+            }
+        },
+        {
+            "title": "The Witcher 3: Wild Hunt",
+            "text": "The world is in chaos. The air is thick with tension and the smoke of burnt villages. The fearsome Empire of Nilfgaard has struck again, ravaging the hapless Northern Kingdoms. The once-mighty who tried to use Geralt for their own gain are now gone. In these uncertain times, no one can say what fortune holds in store, who will bring peace to the world and who will cause it only misery.",
+            "img": "v2YvZCjieR0",
+            "platforms": [3, 4, 2],
+            "released": true,
+            "date": 1445636818,
+            "comments": 99,
+            "like": 19,
+            "price": {
+                "original": 19
+            }
+        },
+        {
+            "title": "Anthem",
+            "text": "Maids table how learn drift but purse stand yet set. Music me house could among oh as their. Piqued our sister shy nature almost his wicket.",
+            "img": "gJ56BJ-Ba9E",
+            "platforms": [2, 3, 1],
+            "date": 1556833618,
+            "comments": 22,
+            "like": 85,
+            "preorder": true,
+            "price": {
+                "original": 52
+            }
+        },
+        {
+            "title": "Prey",
+            "text": "Maids table how learn drift but purse stand yet set. Music me house could among oh as their. Piqued our sister shy nature almost his wicket.",
+            "img": "IzltYVmocOM",
+            "platforms": [4, 2, 3],
+            "released": true,
+            "date": 1489614418,
+            "comments": 25,
+            "like": 128,
+            "price": {
+                "original": 45,
+                "discount": 40
+            }
+        },
+        {
+            "title": "Tom Clancy's The Division 2",
+            "text": "Maids table how learn drift but purse stand yet set. Music me house could among oh as their. Piqued our sister shy nature almost his wicket.",
+            "img": "eh-_gm_61gM",
+            "platforms": [1],
+            "date": 1595368018,
+            "comments": 62,
+            "like": 49,
+            "preorder": true,
+            "price": {
+                "original": 139
+            }
+        },
+        {
+            "title": "Cyberpunk 2077",
+            "text": "Maids table how learn drift but purse stand yet set. Music me house could among oh as their. Piqued our sister shy nature almost his wicket.",
+            "img": "8X2kIfS6fb8",
+            "platforms": [5, 1, 2],
+            "date": 3393265618,
+            "comments": 19,
+            "like": 564,
+            "price": {
+                "original": 79
+            }
+        },
+        {
+            "title": "Dark Souls Remastered",
+            "text": "A spiritual successor to Demons Souls, the action RPG Dark Souls is set in a rich, dark fantasy universe. Intense action within the dungeons, encounters with terrifying enemies and innovative online features combine for a unique gaming experience. ",
+            "img": "OWBghlWBbhk",
+            "platforms": [2, 3],
+            "released": true,
+            "date": 1390945618,
+            "comments": 20,
+            "like": 33,
+            "preorder": true,
+            "price": {
+                "original": 39
+            }
+        },
+        {
+            "title": "Far Cry 5",
+            "text": "A Way Out is a co-op only game uniquely tailored for two players to work together no matter the situation. Through a compelling narrative, Leo and Vincent will embark on an emotional adventure, where they will live some memorable action moments that they will face together including car chases, stealth passages, melee fights, shootouts and many more.",
+            "img": "kUKrStkG-hE",
+            "platforms": [1, 3],
+            "date": 1521064018,
+            "comments": 34,
+            "like": 98,
+            "preorder": true,
+            "price": {
+                "original": 35,
+                "discount": 15
+            }
+        },
+        {
+            "title": "Call of Duty: Black Ops 4",
+            "text": "The battle royale-style Blackout experience combines Black Ops’ signature fast, fluid, guns-up combat, with fierce new levels of survival competition across iconic Black Ops settings re-imagined at a colossal scale.",
+            "img": "FpB455nPFGk",
+            "platforms": [1, 2],
+            "released": true,
+            "date": 1538257618,
+            "comments": 9,
+            "like": 43,
+            "price": {
+                "original": 29
+            }
+        },
+        {
+            "title": "Red Dead Redemption 2",
+            "text": "Red Dead Redemption 2 is an epic tale of life in America’s unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience.",
+            "img": "SG4hoev5uaI",
+            "platforms": [3, 1, 2],
+            "date": 1544651218,
+            "comments": 182,
+            "like": 88,
+            "preorder": true,
+            "price": {
+                "original": 59
+            }
+        }
+    ]
+}

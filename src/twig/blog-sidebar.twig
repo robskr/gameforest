@@ -1,0 +1,197 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Blog Sidebar</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="d-flex mb-4">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ya ya-tag"></i> All categories
+                            </button>
+                            <div class="dropdown-menu dropdown-height" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item active" href="#">All categories</a>
+                                {% for cat in categories %}
+                                    <a class="dropdown-item" href="#">{{ cat.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="dropdown mr-auto">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Recent posts
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item active" href="#">Recent</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Most Comments</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Descending
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item active" href="#">Descending</a>
+                                <a class="dropdown-item" href="#">Ascending</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                        <div class="btn-group ml-2" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
+                            <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
+                        </div>
+                    </div>
+                    {% for blog in blogs %}
+                        <div class="post">
+                            <div class="post-thumbnail">
+                                {% if blog.carousel %}
+                                    <div class="owl-carousel" ya-carousel>
+                                        {% for carousel in blog.carousel %}
+                                            <img src="{{ carousel }}" alt="{{ blog.title }}">
+                                        {% endfor %}
+                                    </div>
+                                {% elseif blog.video %}
+                                    <div ya-embed="{{ blog.video.src }}">
+                                        <img class="embed-responsive-item" src="{{ blog.video.img }}" alt="{{ blog.title }}">
+                                    </div>
+                                {% else %}
+                                    <img class="post-img" src="{{ blog.img }}" alt="{{ blog.title }}">
+                                {% endif %}
+                            </div>
+                            <div class="post-body">
+                                <h2 class="post-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h2>
+                                <div class="post-meta">
+                                    <span class="post-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</span>
+                                    <a class="post-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
+                                    <span class="post-meta-item"><i class="ya ya-clock"></i> {{ blog.meta.time }} min read</span>
+                                </div>
+                                <p>{{ blog.text }}</p>
+                            </div>
+                        </div>
+                        <!-- end .post -->
+                    {% endfor %}
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item gap"><span class="page-link">...</span></li>
+                            <li class="page-item"><a class="page-link" href="#">25</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                    <!-- end pagination -->
+                </div>
+                <div class="col-md-3">
+                    <div class="widget">
+                        <div class="widget-body">
+                            <form action="search.html">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search for blog...">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget widget-post">
+                        <div class="widget-header">Recommends</div>
+                        {% for blog in blogs %}
+                            {% if loop.index == 1 %}
+                                <a class="widget-img" href="{{ blog.url }}">
+                                    <img src="{{ blog.thumb }}" alt="">
+                                </a>
+                                <div class="widget-body">
+                                    <h5 class="widget-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
+                                    <div class="widget-meta"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
+                                    <p class="widget-text">{{ blog.text|slice(0, 120) }}...</p>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget widget-secondary">
+                        <div class="widget-header">Categories</div>
+                        <div class="widget-body p-0">
+                            <div class="list-group list-group-nav">
+                                {% for cat in categories %}
+                                    <a class="list-group-item{% if loop.index == 2 %} active{% endif %}" href="#">{{ cat.title }}{% if cat.posts %} <span class="badge badge-dark badge-pill">{{ cat.posts }}</span>{% endif %}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget widget-post mb-4">
+                        <div class="widget-header">Popular on Gameforest</div>
+                        {% for blog in blogs %}
+                            {% if loop.index == 4 %}
+                                <a class="widget-img" href="{{ blog.url }}">
+                                    <img src="{{ blog.thumb }}" alt="">
+                                </a>
+                                <div class="widget-body">
+                                    <h5 class="widget-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
+                                    <div class="widget-meta"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
+                                    <p class="widget-text">{{ blog.text|slice(0, 120) }}...</p>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget widget-post">
+                        <div class="widget-body">
+                            <div class="list-group list-group-posts list-group-sm mt-3">
+                                {% for blog in blogs %}
+                                    <div class="list-group-item">
+                                        <div>
+                                            <a class="list-group-item-img" href="#">
+                                                <img src="{{ blog.thumb }}" alt="">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <h6 class="list-group-item-title"><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 40) }}</a></h6>
+                                            <div class="list-group-item-meta"><i class="ya ya-clock"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">Load More</a>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget widget-tags">
+                        <div class="widget-header">Popular Tags</div>
+                        <div class="widget-body">
+                            <div class="tags">
+                                <a href="#">#playstation4</a>
+                                <a href="#">#anthem</a>
+                                <a href="#">#fps</a>
+                                <a href="#">#upcoming</a>
+                                <a href="#">#gameforest</a>
+                                <a href="#">#xbox</a>
+                                <a href="#">#gameplay</a>
+                                <a href="#">#red-dead</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

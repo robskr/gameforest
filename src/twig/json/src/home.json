@@ -1,0 +1,41 @@
+{
+    "home": {
+        "carousel": {
+            "landing": [
+                {
+                    "title": "The Witcher 3: Wild Hunt",
+                    "text": "The world is in chaos. The air is thick with tension and the smoke of burnt villages. The fearsome Empire of Nilfgaard has struck again, ravaging the hapless.",
+                    "img": "img/carousel-1.jpg",
+                    "url": "https://www.youtube.com/watch?v=c0i88t0Kacs",
+                    "opacity": ".28"
+                },
+                {
+                    "title": "For Honor: The Berserker",
+                    "text": "Enter the chaos of a raging war as a bold knight, brutal viking, or mysterious samurai, three of <br>the greatest warrior legacies.",
+                    "img": "https://img.youtube.com/vi/BhTkoDVgF6s/maxresdefault.jpg",
+                    "url": "https://www.youtube.com/watch?v=zFUymXnQ5z8",
+                    "opacity": ".3"
+                },
+                {
+                    "title": "Tom Clancy's The Division",
+                    "text": "An online-only open-world shooter-RPG from Ubisoft Massive set in a chaotic New York City <br>that is wrought by disease.",
+                    "img": "https://static.giantbomb.com/uploads/original/0/2840/2495891-the-division_2013_06-10-13_008.jpg",
+                    "url": "https://www.youtube.com/watch?v=yPq_NVi-TC4",
+                    "opacity": ".35",
+                    "color": "#373a44"
+                }
+            ],
+            "magazine": [
+                {
+                    "img": "https://static.giantbomb.com/uploads/original/13/135472/3043863-2132118041-xuYesStF"
+                },
+                {
+                    "img": "https://static.giantbomb.com/uploads/original/13/135472/3043860-3941938953-k1N1Ul48"
+                },
+                {
+                    "img": "https://static.giantbomb.com/uploads/original/13/135472/3043862-2380673707-IwuKTRWp"
+                }
+            ]
+        }
+    }
+}

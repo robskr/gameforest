@@ -1,0 +1,115 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ path }}plugins/flatpickr/flatpickr.min.css">
+{% endblock %}
+
+{% block js %}
+    <script src="{{ path }}plugins/flatpickr/flatpickr.min.js"></script>
+    <script>
+        $(function() {
+            $(".datepicker").flatpickr({allowInput:true});
+            $(".datetimepicker").flatpickr({allowInput:true,enableTime: true, dateFormat: "Y-m-d H:i"});
+            $(".inlinepicker").flatpickr({allowInput:true,inline: true});
+            $(".timepicker").flatpickr({allowInput:true,enableTime: true, noCalendar: true, dateFormat: "H:i"});
+            $(".custompicker").flatpickr({allowInput:true, wrap: true});
+        });
+    </script>
+{% endblock %}
+
+{% set page = {
+    title: 'DatePicker',
+    text: 'Flatpickr is a lightweight and powerful datetime picker. Lean, UX-driven, and extensible, yet it doesn’t depend on any libraries.',
+    blocks: [
+        {
+            title: 'Introduction',
+            text: 'To getting started we need to add the required stylesheet and javascript files to our page. You can find an example below but for more examples check the <a href="https://flatpickr.js.org/" target="_blank">flatpickr</a> website.',
+            pre: '<!-- Stylesheet -->
+<link rel="stylesheet" href="plugins/flatpickr/flatpickr.min.css">
+
+<!-- Javascript -->
+<script src="plugins/flatpickr/flatpickr.min.js"></script>
+<script>
+    $(function() {
+        $(".datepicker").flatpickr({
+            allowInput:true
+        });
+    });
+</script>',
+        },
+        {
+            title: 'Example',
+            text: 'We added <code>.datepicker</code> class to the input but you can rename the datepicker class anytime.',
+            code: '<input type="text" class="form-control datepicker">',
+        },
+        {
+            title: 'DateTime',
+            text: 'It is also possible to enable time for datepicker plugin by adding true value for <code>enableTime</code> option just like in the example below.',
+            code: '<input type="text" class="form-control datetimepicker">',
+            pre: '<input type="text" class="form-control datetimepicker">
+
+<!-- Javascript -->
+<script>
+    $(".datetimepicker").flatpickr({
+        allowInput: true,
+        enableTime: true,
+        dateFormat: "Y-m-d H:i"
+    });
+</script>'
+        },
+        {
+            title: 'Inline calendar',
+            text: 'Display the calendar in an always-open state with the <code>inline</code> option.',
+            code: '<input type="text" class="form-control inlinepicker">',
+            pre: '<input type="text" class="form-control inlinepicker">
+
+<!-- Javascript -->
+<script>
+    $(".inlinepicker").flatpickr({
+        allowInput: true,
+        inline: true
+    });
+</script>'
+        },
+        {
+            title: 'Time Picker',
+            text: 'Use the <code>noCalendar</code> option with true value for hide selectable dates and add only time to the picker.',
+            code: '<input type="text" class="form-control timepicker">',
+            pre: '<input type="text" class="form-control timepicker">
+
+<!-- Javascript -->
+<script>
+    $(".timepicker").flatpickr({
+        allowInput: true,
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i"
+    });
+</script>'
+        },
+        {
+            title: 'Custom selector',
+            text: 'Add <code>wrap</code> option to the picker with required data attributes to get the same results just like in the example.',
+            code: '<div class="input-group custompicker">
+    <div class="input-group-prepend">
+        <button type="button" class="btn btn-light btn-icon border-right-0" data-toggle><i class="ya ya-calendar"></i></button>
+    </div>
+    <input type="text" class="form-control" id="exampleSelect3" data-input>
+</div>',
+            pre: '<div class="input-group custompicker">
+    <div class="input-group-prepend">
+        <button type="button" class="btn btn-light btn-icon border-right-0" data-toggle><i class="ya ya-calendar"></i></button>
+    </div>
+    <input type="text" class="form-control" id="exampleSelect3" data-input>
+</div>
+
+<!-- Javascript -->
+<script>
+    $(".custompicker").flatpickr({
+        allowInput: true,
+        wrap: true
+    });
+</script>'
+        }
+    ]
+} %}

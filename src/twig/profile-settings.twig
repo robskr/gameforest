@@ -1,0 +1,119 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="heading heading-sm align-items-center py-2">
+                        <h2 class="heading-title h3 text-white font-weight-semibold mb-0 mr-auto">Profile Settings</h2>
+                        <a class="btn btn-outline-light" href="profile.html">Back to profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-bottom py-0" ya-sticky>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <div class="nav nav-list">
+                        <a class="nav-item nav-link active" href="#">Profile Information</a>
+                        <a class="nav-item nav-link" href="#">Images</a>
+                        <a class="nav-item nav-link" href="#">Videos</a>
+                        <a class="nav-item nav-link" href="#">Security</a>
+                        <a class="nav-item nav-link" href="#">History</a>
+                        <a class="nav-item nav-link" href="#">Billings</a>
+                        <a class="nav-item nav-link" href="#">Premium</a>
+                    </div>
+                    <div class="btn-group ml-auto mr-2">
+                        <a class="btn btn-default btn-icon btn-sm" href=""><i class="ya ya-small-left"></i></a>
+                        <a class="btn btn-default btn-icon btn-sm" href=""><i class="ya ya-small-right"></i></a>
+                    </div>
+                    <a class="btn btn-default btn-icon btn-sm" href=""><i class="ya ya-gear"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <div class="card card-default mb-4">
+                        <h6 class="card-header"><i class="ya ya-user mr-1"></i> Profile Information</h6>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter Username">
+                                    <small id="usernameHelp" class="form-text text-muted">This given name will be visible on community pages.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Add Email">
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-light btn-icon border-left-0" data-toggle="tooltip" title="Enter a valid email address."><i class="ya ya-help-circle"></i></button>
+                                        </div>
+                                    </div>
+                                    <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url">URL</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">https://yakuthemes.com/</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="url" placeholder="username" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label for="aboutMe">About me</label>
+                                    <textarea class="form-control" id="aboutMe" aria-describedby="aboutMeHelp" rows="3" placeholder="Short description"></textarea>
+                                    <small id="aboutMeHelp" class="form-text text-muted">A short description about yourself and your duty. You can @mention other users and organizations to link to them.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary disabled">Update profile</button>
+                    </form>
+                    <!-- end form -->
+
+                    <form class="mt-5">
+                        <div class="card card-default mb-4">
+                            <h6 class="card-header"><i class="ya ya-lock mr-1"></i> Change Password</h6>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="password">Current Password</label>
+                                            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter Password">
+                                            <small id="passwordHelp" class="form-text text-muted">Enter your current password into the input area.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group mb-2">
+                                            <label for="password1">New Password</label>
+                                            <input type="password" class="form-control" id="password1" aria-describedby="password1Help" placeholder="Enter New Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group mb-2">
+                                            <label for="password2">Confirm Password</label>
+                                            <input type="password" class="form-control" id="password2" aria-describedby="password2Help" placeholder="Confirm Password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-danger">Change password</button>
+                    </form>
+                    <!-- end form -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

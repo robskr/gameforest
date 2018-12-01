@@ -1,0 +1,160 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Forums</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="border-bottom-dashed">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form class="form-inline">
+                        <span class="font-weight-semibold mr-4">Filter:</span>
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-inline"  placeholder="Search in forums...">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-auto">
+                            <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Recent forums
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item active" href="#">Recent</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                        <div class="btn-group ml-2" role="group">
+                            <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
+                            <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
+                        </div>
+                    </form>
+                    <!-- end form -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    {% for forums in forums %}
+                        {% for title, forums in forums %}
+                            <div class="d-flex align-items-center mb-4">
+                                <h6 class="subtitle font-size-md mb-0">{{ title }} Forums</h6>
+                                <div class="btn-group ml-auto" role="group">
+                                    <a class="btn btn-primary" href="forum-add.html" role="button">Add topic</a>
+                                </div>
+                            </div>
+                            <table class="table table-bordered table-dashed">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%;" scope="col"></th>
+                                        <th scope="col">Forum</th>
+                                        <th class="text-center" style="width: 5%" scope="col">Topics</th>
+                                        <th class="text-center" style="width: 5%" scope="col">Replies</th>
+                                        <th style="width: 25%" scope="col">Latest Topic</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for forum in forums %}
+                                        <tr{% if forum.locked %} class="table-locked"{% endif %}>
+                                            <td class="table-icon">
+                                                <i class="{{ forum.icon }}"></i>
+                                                {% if forum.badge %}
+                                                    <span class="badge badge-{{ forum.badge.color }}">{{ forum.badge.title }}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                <h6 class="table-title"><a href="forum-topic.html">{{ forum.title }}</a></h6>
+                                                <p class="table-text">{{ forum.description }}</p>
+                                            </td>
+                                            <td class="text-center">{{ forum.topics }}</td>
+                                            <td class="text-center">{{ forum.replies }}</td>
+                                            <td>
+                                                {% for topic in topics %}
+                                                    {% if loop.index == forum.latest %}
+                                                        <a class="table-subtitle" href="forum-post.html">{{ topic.title }}</a>
+                                                        <div class="table-meta">
+                                                            {% for user in users %}
+                                                                {% if loop.index == topic.author %}
+                                                                    <a href="profile.html">{{ user.name }}</a> on {{ forum.date|date("M d, Y") }}
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Forum</th>
+                                        <th class="text-center" scope="col">Topics</th>
+                                        <th class="text-center" scope="col">Replies</th>
+                                        <th scope="col">Latest Topic</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <!-- end .table -->
+                        {% endfor %}
+                    {% endfor %}
+
+                    <div class="card mb-5">
+                        <h6 class="card-header">Login to the account</h6>
+                        <div class="card-body">
+                            <form class="form-inline">
+                                <div class="input-group mr-sm-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="ya ya-user"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="input-group mr-sm-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="ya ya-unlock"></i></div>
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Password">
+                                </div>
+                                <a class="border-right pr-3 mr-3" href="lost-password-html">I forgot my password</a>
+                                <div class="custom-control custom-checkbox mr-3">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end .card -->
+
+                    <div class="card card-default">
+                        <h6 class="card-header">Who is online <span class="text-success ml-1">&#9679;</span></h6>
+                        <div class="card-body">
+                            <p>In total there is <strong>151</strong> user online :: 88 registered, 0 hidden and 63 guest (based on users active over the past 5 minutes)<br>Most users ever online was <strong>355</strong> on {{ "1535222745"|date("F d, Y g:ia") }}</p>
+                            <hr>
+                            <h6 class="card-subtitle mt-1 mb-3">Online Users: <span class="font-weight-normal">151</span></h6>
+                            {% for user in users %}
+                                {% if loop.index < 6 %}
+                                    <a href="profile.html"><img class="avatar avatar-xs" src="img/{{ user.img }}" alt="" data-toggle="tooltip" title="{{ user.name }}"></a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- end .card -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

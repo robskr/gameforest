@@ -1,0 +1,46 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Sticky',
+    text: 'Make elements remain at the top of the viewport, like a sticky navigation. For more examples please check the <a href="https://github.com/garand/sticky" target="_blank">official</a> plugin documentation website.',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'To create an element that remains at the top of the viewport when scrolling down the site, add the <code>ya-sticky</code> attribute to that element.',
+            code: '<div class="alert alert-light" ya-sticky="top: 100" role="alert">A simple primary alert—check it out!</div>',
+        },
+        {
+            title: 'Options',
+            text: 'Options can be passed via data attributes. For data attributes, append the option name to <code>ya-ya-sticky</code>. Default option names and values are available below in the table.',
+            table: {
+                head: [
+                    { title: 'option' },
+                    { title: 'value' },
+                    { title: 'default' },
+                    { title: 'description', width: '60%' }
+                ],
+                body: [
+                    [
+                        { text: 'top', code: true },
+                        { text: 'integer' },
+                        { text: 60 },
+                        { text: 'Pixels between the page top and the element\'s top.' }
+                    ],
+                    [
+                        { text: 'bottom', code: true },
+                        { text: 'integer' },
+                        { text: 'null' },
+                        { text: 'Pixels between the page bottom and the element\'s bottom.' }
+                    ],
+                    [
+                        { text: 'zindex', code: true },
+                        { text: 'integer' },
+                        { text: 9 },
+                        { text: 'controls z-index of the sticked element.' }
+                    ]
+                ]
+            },
+            custom: '<div style="height: 500px"></div>'
+        }
+    ]
+} %}

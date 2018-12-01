@@ -1,0 +1,128 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Columns',
+    text: 'Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.',
+    bootstrap: 'layout/grid',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'An example for using the bootstrap grid system with card component below.',
+            code: '<div class="row">
+    <div class="col">
+        <div class="card mb-3">
+            <div class="card-header">12 columns</div>
+            <div class="card-body px-3">
+                Real sold my in call. Invitation on an advantages collecting. But event old above shy bed noisy. Had sister see wooded favour income has. Stuff rapid since do as hence. Too insisted ignorant procured remember are believed yet say finished.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-8">
+        <div class="card mb-3">
+            <div class="card-header">8 columns</div>
+            <div class="card-body px-3">
+                Oh he decisively impression attachment friendship so if everything. Whose her enjoy chief new young. Felicity if ye required likewise so doubtful.
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card mb-3">
+            <div class="card-header">4 columns</div>
+            <div class="card-body px-3">
+                So unaffected partiality indulgence dispatched to of celebrated remarkably.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-6">
+        <div class="card mb-3">
+            <div class="card-header">6 columns</div>
+            <div class="card-body px-3">
+                Endeavor bachelor but add eat pleasure doubtful sociable. Age forming covered you entered the examine. Blessing scarcely confined her contempt wondered shy.
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card mb-3">
+            <div class="card-header">6 columns</div>
+            <div class="card-body px-3">
+                Endeavor bachelor but add eat pleasure doubtful sociable. Age forming covered you entered the examine. Blessing scarcely confined her contempt wondered shy.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-4">
+        <div class="card mb-3">
+            <div class="card-header">4 columns</div>
+            <div class="card-body px-3">
+                Diverted as strictly exertion addition no disposal by stanhill. This call wife do so sigh no gate felt.
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card mb-3">
+            <div class="card-header">4 columns</div>
+            <div class="card-body px-3">
+                Diverted as strictly exertion addition no disposal by stanhill. This call wife do so sigh no gate felt.
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card mb-3">
+            <div class="card-header">4 columns</div>
+            <div class="card-body px-3">
+                Diverted as strictly exertion addition no disposal by stanhill. This call wife do so sigh no gate felt.
+            </div>
+        </div>
+    </div>
+</div>',
+        },
+        {
+            title: 'Options',
+            text: 'See how aspects of the Bootstrap grid system work across multiple devices with a handy table. For more option please check the offical bootstrap documentation.',
+            table: {
+                head: [
+                    { title: '' },
+                    { title: 'Extra small' },
+                    { title: 'Small' },
+                    { title: 'Medium' },
+                    { title: 'Large' },
+                    { title: 'Extra large' }
+                ],
+                body: [
+                    [
+                        { text: 'Resolution' },
+                        { text: '<576px' },
+                        { text: '≥576px' },
+                        { text: '≥768px' },
+                        { text: '≥992px' },
+                        { text: '≥1200px' }
+                    ],
+                    [
+                        { text: 'Class prefix' },
+                        { text: '.col-', code: true },
+                        { text: '.col-sm-', code: true },
+                        { text: '.col-md-', code: true },
+                        { text: '.col-lg-', code: true },
+                        { text: '.col-xl-', code: true }
+                    ],
+                    [
+                        { text: 'Max container width' },
+                        { text: 'None (auto)' },
+                        { text: '540px' },
+                        { text: '720px' },
+                        { text: '960px' },
+                        { text: '1140px' }
+                    ]
+                ]
+            }
+        }
+    ]
+} %}

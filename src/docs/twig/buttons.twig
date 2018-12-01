@@ -1,0 +1,175 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: "Buttons",
+    text: "Buttons are used for actions, like in forms, while textual hyperlinks are used for destinations, or moving from one page to another.",
+    bootstrap: "components/buttons",
+    blocks: [
+        {
+            title: "Examples",
+            text: "Included several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control. Use any of the available button classes to quickly create a styled button.",
+            code: '<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-link">Link</button>',
+        },
+        {
+            title: "Outline buttons",
+            text: "In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the <code>.btn-outline-*</code> ones to remove all background images and colors on any button.",
+            code: '<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline">Outline</button>',
+        },
+        {
+            title: "Button tags",
+            text: "The .btn classes are designed to be used with the <code>&lt;button&gt;</code> element. However, you can also use these classes on <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> elements.",
+            code: '<a class="btn btn-primary" href="#" role="button">Link</a>
+<button class="btn btn-primary" type="submit">Button</button>
+<input class="btn btn-primary" type="button" value="Input">
+<input class="btn btn-primary" type="submit" value="Submit">
+<input class="btn btn-primary" type="reset" value="Reset">',
+        },
+        {
+            title: "Sizes",
+            text: "Add the <code>.btn-sm</code> or <code>.btn-lg</code> class to a button to make it smaller or larger just like in the example below.",
+            code: '<button type="button" class="btn btn-outline btn-lg">Large button</button>
+<button type="button" class="btn btn-outline">Default button</button>
+<button type="button" class="btn btn-outline btn-sm">Small button</button>
+<button type="button" class="btn btn-outline btn-xs">Extra small button</button>',
+        },
+        {
+            title: "Rounded",
+            text: "It is also possible to use rounded buttons by adding <code>.btn-rounded</code> class to the button. It can be useful when we would like to display the button in different style.",
+            code: '<button type="button" class="btn btn-outline btn-lg btn-rounded">Large button</button>
+<button type="button" class="btn btn-outline btn-rounded">Default button</button>
+<button type="button" class="btn btn-outline btn-sm btn-rounded">Small button</button>
+<button type="button" class="btn btn-outline btn-xs btn-rounded">Extra small button</button>',
+        },
+        {
+            title: "Icons",
+            text: "Easy to use buttons with icons just add the requested icon with aligned class. Add <code>.mr-*</code> class to the icon if you would like to use a small margin.",
+            code: '<button type="button" class="btn btn-primary">Primary <i class="ya ya-shopping-cart"></i></button>
+<button type="button" class="btn btn-success btn-icon-left"><i class="ya ya-check-circle"></i> Success</button>
+<button type="button" class="btn btn-danger">Danger <i class="ya ya-bell"></i></button>
+<button type="button" class="btn btn-warning">Warning <i class="ya ya-email"></i></button>
+<button type="button" class="btn btn-info btn-icon-left"><i class="ya ya-gear"></i> Info</button>
+<button type="button" class="btn btn-dark btn-icon-left"><i class="ya ya-like"></i> Dark</button>
+<button type="button" class="btn btn-light btn-icon-left"><i class="ya ya-comments"></i> Light</button>
+<button type="button" class="btn btn-link btn-icon-left"><i class="ya ya-attachment"></i> Link</button>',
+        },
+        {
+            title: "Icon buttons",
+            text: "Use <code>.btn-icon</code> class for buttons when you would like to display only icon in the button. This will add a smaller padding to the button.",
+            code: '<button type="button" class="btn btn-primary btn-icon"><i class="ya ya-shopping-cart"></i></button>
+<button type="button" class="btn btn-secondary btn-icon"><i class="ya ya-comments"></i></button>
+<button type="button" class="btn btn-success btn-icon"><i class="ya ya-check-circle"></i></button>
+<button type="button" class="btn btn-danger btn-icon"><i class="ya ya-bell"></i></button>
+<button type="button" class="btn btn-warning btn-icon"><i class="ya ya-email"></i></button>
+<button type="button" class="btn btn-info btn-icon"><i class="ya ya-gear"></i></button>
+<button type="button" class="btn btn-dark btn-icon"><i class="ya ya-like"></i></button>
+<button type="button" class="btn btn-default btn-icon"><i class="ya ya-comment"></i></button>
+<button type="button" class="btn btn-link btn-icon"><i class="ya ya-attachment"></i></button>',
+        },
+        {
+            title: "Button with counts",
+            text: "We can easily append a count to any kind of button. Use the selected button in a <code>.btn-group</code> and add the selected size with number just like in the example below.",
+            code: '<div class="btn-group mr-1">
+    <a class="btn btn-default btn-xs btn-count" href="#" role="button"><i class="ya ya-eye"></i> Watch</a>
+    <a class="btn btn-light btn-xs" href="#" role="button">45</a>
+</div>
+
+<div class="btn-group">
+    <a class="btn btn-default btn-xs btn-count" href="#" role="button"><i class="ya ya-heart-add"></i> Like</a>
+    <a class="btn btn-light btn-xs" href="#" role="button">138</a>
+</div>'
+        },
+        {
+            title: "Button groups",
+            text: "Have a hankering for a series of buttons that are attached to one another? Wrap them in a <code>.btn-group</code> and the buttons will be rounded and spaced automatically.",
+            code: '<div class="btn-group ml-auto mr-2">
+    <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-left"></i></a>
+    <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-right"></i></a>
+</div>
+
+<div class="btn-group" role="group">
+    <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
+    <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
+</div>',
+            pre: '<div class="btn-group">
+    <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-left"></i></a>
+    <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-right"></i></a>
+</div>
+
+<div class="btn-group" role="group">
+    <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
+    <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
+</div>',
+        },
+        {
+            title: "Button labels",
+            text: "We can separate icons and text in buttons for this kind of action add buttons to btn-group.",
+            code: '<div class="btn-group mr-1" role="group">
+    <a class="btn btn-primary" href="#" role="button">Save game</a>
+    <a class="btn btn-primary btn-icon" href="#" role="button"><i class="ya ya-save"></i></a>
+</div>
+
+<div class="btn-group mr-1" role="group">
+    <a class="btn btn-danger" href="#" role="button">Stream now</a>
+    <a class="btn btn-danger btn-icon" href="#" role="button"><i class="ya ya-camera"></i></a>
+</div>
+
+<div class="btn-group mr-1" role="group">
+    <a class="btn btn-outline btn-icon" href="#" role="button"><i class="ya ya-like"></i></a>
+    <a class="btn btn-outline" href="#" role="button">342</a>
+</div>
+
+<div class="btn-group" role="group">
+    <a class="btn btn-outline" href="#" role="button">Comments</a>
+    <a class="btn btn-outline btn-icon" href="#" role="button"><i class="ya ya-comments"></i></a>
+</div>',
+            pre: '<div class="btn-group" role="group">
+    <a class="btn btn-primary" href="#" role="button">Save game</a>
+    <a class="btn btn-primary btn-icon" href="#" role="button"><i class="ya ya-save"></i></a>
+</div>
+
+<div class="btn-group" role="group">
+    <a class="btn btn-danger" href="#" role="button">Stream now</a>
+    <a class="btn btn-danger btn-icon" href="#" role="button"><i class="ya ya-camera"></i></a>
+</div>
+
+<div class="btn-group" role="group">
+    <a class="btn btn-outline btn-icon" href="#" role="button"><i class="ya ya-like"></i></a>
+    <a class="btn btn-outline" href="#" role="button">342</a>
+</div>
+
+<div class="btn-group" role="group">
+    <a class="btn btn-outline" href="#" role="button">Comments</a>
+    <a class="btn btn-outline btn-icon" href="#" role="button"><i class="ya ya-comments"></i></a>
+</div>'
+        },
+        {
+            title: "States",
+            text: "Disable <code>&lt;button&gt;</code> elements with the boolean <code>disabled</code> attribute and <code>&lt;a&gt;</code> elements with the <code>.disabled</code> class.",
+            code: '<button type="button" class="btn btn-primary" disabled>Disabled button</button>
+<a href="#" class="btn btn-primary active" role="button" aria-pressed="true">Active button</a>',
+        },
+        {
+            title: "Block buttons",
+            text: "Make any button full-width by adding <code>.btn-block</code>. It adds <code>width: 100%;</code>, changes the <code>display</code> from <code>inline-block</code> to <code>block</code>, and centers the button text.",
+            code: '<a class="btn btn-outline btn-block" href="#" role="button">Block button</a>
+<a class="btn btn-outline btn-block btn-sm" href="#" role="button">Small block button</a>',
+        }
+    ]
+} %}

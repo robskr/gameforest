@@ -1,0 +1,106 @@
+// Button icon align
+.btn {
+  > i {
+    margin-left: $btn-icon-margin;
+  }
+}
+
+// Button icon left
+.btn-icon-left {
+  > i {
+    margin-left: 0;
+    margin-right: $btn-icon-margin;
+  }
+}
+
+// Button icon
+.btn-icon {
+  padding-right: $btn-padding-icon;
+  padding-left: $btn-padding-icon;
+
+  > i {
+    margin: 0;
+  }
+}
+
+// Button count
+.btn-count {
+  font-weight: bold;
+
+  > i {
+    margin-left: 0;
+    margin-right: $btn-icon-margin;
+  }
+}
+
+// Button shadow
+.btn-shadow {
+  box-shadow: $btn-shadow;
+}
+
+// Button light
+.btn-light {
+  @include button-variant-theme($btn-light-color, $btn-light-border, $btn-light-bg);
+}
+
+// Button default
+.btn-default {
+  @include button-variant-theme($btn-default-color, $btn-default-border, $btn-default-bg);
+}
+
+// Button social
+@each $color, $value in $social-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+// Button social
+.btn-social {
+	@include button-social;
+}
+
+// Button darken
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    font-weight: 500;
+  }
+}
+
+// Button outline
+.btn-outline {
+  font-weight: 500;
+  @include button-outline-theme($btn-outline-color, $btn-outline-border, $btn-outline-bg);
+  @include button-hover() {
+    border-color: $btn-outline-color;
+  }
+}
+
+// Button outline light
+.btn-outline-light {
+  font-weight: 400;
+  @include button-outline-theme($btn-outline-light-color, $btn-outline-light-border, $btn-outline-light-bg);
+  @include button-hover() {
+    color: $white;
+    border-color: $btn-outline-light-border;
+    background-color: rgba($white, .03);
+  }
+}
+
+// Button sizes
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height, $btn-border-radius);
+}
+
+// Button rounded
+.btn-rounded {
+  @include button-rounded($btn-rounded, $btn-rounded-xs, $btn-rounded-sm, $btn-rounded-lg);
+}

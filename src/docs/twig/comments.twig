@@ -1,0 +1,149 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Comments',
+    text: 'Display user feedbacks under blog posts, videos or gaming reviews. Comments are perfect solution to start to build a great community for your website.',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Easy to display a comment under blog posts etc. You need to use <code>comment</code> component with the necessary elements from below.',
+            code: '<div class="comments">
+    <div class="media">
+        <div class="avatar avatar-badge">
+            <img src="img/' ~ users[2]['img'] ~ '" alt="">
+            <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+        </div>
+        <div class="media-body">
+            <div class="d-flex">
+                <a class="h6" href="profile.html">' ~ users[2]['name'] ~ '</a>
+                <div class="media-meta">9 hours ago</div>
+                <div class="media-tools">
+                    <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                    <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                </div>
+            </div>
+            <p>' ~ comments[0]['text'] ~ '</p>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-default btn-xs mr-1">Reply</button>
+                <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> (' ~ comments[0]['like'] ~ ')</button>
+            </div>
+        </div>
+    </div>
+</div>',
+        },
+        {
+            title: 'Status',
+            text: 'Add a badge to display user status by using <code>badge</code> component.',
+            code: '<div class="comments">
+    <div class="media">
+        <div class="avatar avatar-badge">
+            <img src="img/' ~ users[2]['img'] ~ '" alt="">
+            <span class="badge badge-success"></span>
+        </div>
+        <div class="media-body">
+            <div class="d-flex">
+                <a class="h6" href="profile.html">' ~ users[2]['name'] ~ '</a>
+                <div class="media-meta">9 hours ago</div>
+                <div class="media-tools">
+                    <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                    <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                </div>
+            </div>
+            <p>' ~ comments[0]['text'] ~ '</p>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-default btn-xs mr-1">Reply</button>
+                <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> (' ~ comments[0]['like'] ~ ')</button>
+            </div>
+        </div>
+    </div>
+</div>',
+        },
+        {
+            title: 'Reply',
+            text: 'We can list of replied comments by adding the comment component to a parent comment just like in the example below.',
+            code: '<div class="comments">
+    <div class="media">
+        <div class="avatar">
+            <img src="img/user-1.jpg" alt="Nathan Drake">
+        </div>
+        <div class="media-body">
+            <div class="d-flex">
+                <div class="d-flex">
+                    <a class="h6" href="profile.html">Nathan Drake</a>
+                    <div class="media-meta">10 hours ago</div>
+                </div>
+                <div class="media-tools">
+                    <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                    <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                </div>
+            </div>
+            <p>Repulsive questions contented him few extensive supported. Of remarkably thoroughly he appearance in. Supposing tolerably applauded or of be. Suffering unfeeling so objection agreeable allowance me of. Ask within entire season sex common far who family.</p>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-default btn-xs mr-2">Reply</button>
+                <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> (27)</button>
+            </div>
+            <div class="media">
+                <div class="avatar">
+                    <img class="avatar" src="img/user-4.jpg" alt="Trevor">
+                </div>
+                <div class="media-body">
+                    <div class="d-flex">
+                        <div class="d-flex">
+                            <a class="h6" href="profile.html">Trevor</a>
+                            <div class="media-meta">14 hours ago</div>
+                        </div>
+                        <div class="media-tools">
+                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                        </div>
+                    </div>
+                    <p>Delightful remarkably mr on announcing themselves entreaties favourable. About to in so terms voice at. Equal an would is found seems of. The particular friendship one sufficient terminated frequently themselves.</p>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-default btn-xs mr-2">Reply</button>
+                        <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> (72)</button>
+                    </div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="avatar">
+                    <img class="avatar" src="img/user-5.jpg" alt="Clark Kent">
+                </div>
+                <div class="media-body">
+                    <div class="d-flex">
+                        <div class="d-flex">
+                            <a class="h6" href="profile.html">Clark Kent</a>
+                            <div class="media-meta">15 hours ago</div>
+                        </div>
+                        <div class="media-tools">
+                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                        </div>
+                    </div>
+                    <p>To sorry world an at do spoil along. Incommode he depending do frankness remainder to. Edward day almost active him friend thirty piqued.</p>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-default btn-xs mr-2">Reply</button>
+                        <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> (29)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end .media -->
+</div>',
+        },
+        {
+            title: 'Disqus',
+            text: 'Add disqus plugin as a comment section to the page by using <code>ya-disqus</code> attribute with the right url just like in the example below.',
+            code: '<div class="comments">
+    <div ya-disqus></div>
+</div>',
+        },
+        {
+            title: 'Facebook',
+            text: 'Add facebook comment plugin to the page by using <code>ya-facebook</code> attribute with the right url just like in the example below.',
+            code: '<div class="comments">
+    <div ya-facebook></div>
+</div>',
+        }
+    ]
+} %}

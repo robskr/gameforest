@@ -1,0 +1,87 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Embed',
+    text: 'Allow browsers to determine video or slideshow dimensions based on the width of their containing block by creating an intrinsic ratio that will properly scale on any device.',
+    blocks: [
+        {
+            title: 'Embed video',
+            text: 'Add video to your section or blog post with <code>ya-embed</code> data attribute. Set the custom video thumbnail with the img attribute. Copy youtube url from browser bar and paste it into the data attribute and check the example below.',
+            code: '<div ya-embed="https://www.youtube.com/watch?v=vjF9GgrY9c0">
+    <img src="https://img.youtube.com/vi/vjF9GgrY9c0/maxresdefault.jpg" alt="">
+</div>'
+        },
+        {
+            title: 'Caption',
+            text: 'Add title or length to the embedded video by using <code>ya-title</code> or <code>ya-length</code> attribute. It is also possible to customize the looks of caption with scss just check <a href="scss.html">scss part</a>.',
+            code: '<div ya-embed="https://www.youtube.com/watch?v=dGl00hItvbw" ya-title="Forza Horizon 4 E3 2018: Announce Trailer" ya-length="15:05">
+    <img src="https://img.youtube.com/vi/MVTHYMkDvIs/maxresdefault.jpg" alt="">
+</div>'
+        },
+        {
+            title: 'Controls',
+            text: 'Controls are not hidden by default but we can use the <code>ya-options</code> data attribute to set the correct value for that action. So an example use <code>ya-options="controls: 0"</code> after the ya-embed attribute. For more options check the <a href="#options">options</a> part below.',
+            code: '<div ya-embed="https://www.youtube.com/watch?v=Dw_oH5oiUSE" ya-option="controls: 0">
+    <img src="https://img.youtube.com/vi/-DBi5FC1hXs/maxresdefault.jpg" alt="">
+</div>'
+        },
+        {
+            title: 'Embed twitch',
+            text: 'We can use another platform like twitch to embed videos or clips. Don\'t forget options are not available for embedded twitch players.',
+            code: '<div ya-embed="https://clips.twitch.tv/EncouragingShakingPoxRalpherZ">
+    <img src="https://img.youtube.com/vi/JJztiuDIKBo/maxresdefault.jpg" alt="">
+</div>'
+        },
+        {
+            title: 'Options',
+            text: 'Options can be passed via data attributes. For data attributes, append the option name to <code>ya-option</code>. Default option names and values are available below in the table.',
+            pre: 'ya-option="controls: 0"',
+            table: {
+                head: [
+                    { title: 'option' },
+                    { title: 'value' },
+                    { title: 'default' },
+                    { title: 'description', width: '60%' }
+                ],
+                body: [
+                    [
+                        { text: 'autoplay', code: true },
+                        { text: 'integer' },
+                        { text: 1 },
+                        { text: 'Play the video automatically when user clicked to the thumbnail.' }
+                    ],
+                    [
+                        { text: 'controls', code: true },
+                        { text: 'integer' },
+                        { text: 1 },
+                        { text: 'Display the player pause, volume control or timeline.' }
+                    ],
+                    [
+                        { text: 'recommends', code: true },
+                        { text: 'integer' },
+                        { text: 0 },
+                        { text: 'Display recommended playlist end of the video.' }
+                    ],
+                    [
+                        { text: 'mute', code: true },
+                        { text: 'integer' },
+                        { text: 0 },
+                        { text: 'Mute the embedded video by default.' }
+                    ],
+                    [
+                        { text: 'loop', code: true },
+                        { text: 'number' },
+                        { text: 0 },
+                        { text: 'Restart the video if it has ended.' }
+                    ],
+                    [
+                        { text: 'start', code: true },
+                        { text: 'number' },
+                        { text: 'null' },
+                        { text: 'Start to play the video from this time.' }
+                    ]
+                ]
+            }
+        }
+    ]
+} %}

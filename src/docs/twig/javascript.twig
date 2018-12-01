@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Javascript',
+    text: 'Gameforest includes a handful of JavaScript to help bring some of components to life. Learn more about how to include it, bootstrap data and programmatic API options, and more.',
+    bootstrap: 'getting-started/javascript',
+    blocks: [
+        {
+            title: 'Individual or compiled',
+            text: 'Plugins can be included individually or all at once using <code>theme.bundle.js</code> or the minified <code>theme.bundle.min.js</code> but don’t include both. Include the JavaScript files on your page by adding them before to the <code>&lt;/body&gt;</code> section.',
+            pre: '<!-- js: vendor -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/popper/popper.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- js: theme -->
+<script src="js/theme.bundle.min.js"></script>',
+        },
+        {
+            title: 'Add plugins',
+            text: 'Recommended way to add 3rd party plugins to site if you install it via node but you can upload it to the <code>./dist/plugins</code> folder and include it before <code>&lt;/body&gt;</code> section.',
+            pre: '<!-- js: vendor -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/popper/popper.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- js: plugin -->
+<script src="plugins/**/*.js"></script>
+
+<!-- js: theme -->
+<script src="js/theme.bundle.min.js"></script>',
+        }
+    ]
+} %}

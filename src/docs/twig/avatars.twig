@@ -1,0 +1,125 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Avatars',
+    text: 'Avatars are images that users can set as their profile picture. They can be custom photos, uploaded by users, or generated as Identicons as a placeholder.',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Add <code>.avatar</code> to any <code>img</code> element to make it an avatar. For different sizes you can add <code>.avatar-sm</code> or <code>.avatar-md</code> class to the avatar.',
+            code: '<div class="d-flex align-items-end">
+    <img class="avatar avatar-xl mr-3" src="img/user.jpg" alt="">
+    <img class="avatar avatar-lg mr-3" src="img/user.jpg" alt="">
+    <img class="avatar mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar avatar-md mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar avatar-sm mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar avatar-xs mr-3" src="img/user-1.jpg" alt="">
+</div>',
+            pre: '<img class="avatar avatar-xl" src="img/user.jpg" alt="">
+<img class="avatar avatar-lg" src="img/user.jpg" alt="">
+<img class="avatar" src="img/user-1.jpg" alt="">
+<img class="avatar avatar-md" src="img/user-1.jpg" alt="">
+<img class="avatar avatar-sm" src="img/user-1.jpg" alt="">
+<img class="avatar avatar-xs" src="img/user-1.jpg" alt="">'
+        },
+        {
+            title: 'Tile',
+            text: 'We can display avatars with custom text like user name or title by using <code>.avatar-tile</code> in a <code>href</code> element. In this case you don\'t have to add avatar class to the image element.',
+            code: '<a class="avatar-tile" href="#">
+    <img src="img/user-1.jpg" alt="">
+    <div>
+        <strong>Nathan Drake</strong>
+        <span class="d-block">@nathan</span>
+    </div>
+</a>'
+        },
+        {
+            title: 'Card',
+            text: 'Display avatar as a small card by adding <code>.avatar-card</code> component to the page. We can also add custom text and title to this component.',
+            code: '<div class="row">
+    <div class="col-4">
+        <a class="avatar-card" href="#">
+            <div>
+                <div class="avatar-title">Smallville</div>
+                <p class="avatar-text">gameforest author</p>
+            </div>
+            <img src="img/user-5.jpg" alt="">
+        </a>
+    </div>
+</div>',
+            pre: '<a class="avatar-card" href="#">
+    <div>
+        <div class="avatar-title">Smallville</div>
+        <p class="avatar-text">gameforest author</p>
+    </div>
+    <imgsrc="img/user-5.jpg" alt="">
+</a>'
+        },
+        {
+            title: 'Thumbnail',
+            text: 'Use <code>.avatar-thumbnail</code> class with img element to add a small padding and border with white background to the image. It can be useful on the profile page.',
+            code: '<div class="d-flex align-items-end">
+    <img class="avatar-thumbnail avatar-xl mr-3" src="img/user.jpg" alt="">
+    <img class="avatar-thumbnail avatar-lg mr-3" src="img/user.jpg" alt="">
+    <img class="avatar-thumbnail mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar-thumbnail avatar-md mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar-thumbnail avatar-sm mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar-thumbnail avatar-xs mr-3" src="img/user-1.jpg" alt="">
+</div>',
+            pre: '<img class="avatar-thumbnail avatar-xl" src="img/user.jpg" alt="">
+<img class="avatar-thumbnail avatar-lg" src="img/user.jpg" alt="">
+<img class="avatar-thumbnail" src="img/user-1.jpg" alt="">
+<img class="avatar-thumbnail avatar-md" src="img/user-1.jpg" alt="">
+<img class="avatar-thumbnail avatar-sm" src="img/user-1.jpg" alt="">
+<img class="avatar-thumbnail avatar-xs" src="img/user-1.jpg" alt="">'
+        },
+        {
+            title: 'Badge',
+            text: 'Use <code>.avatar-badge</code> class with div element to add a custom badge or status to the image. It can be useful on any listing page.',
+            code: '<div class="d-flex">
+    <div class="avatar-badge mr-3">
+        <img src="img/user-5.jpg" alt="">
+        <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+    </div>
+    <div class="avatar-badge">
+        <img src="img/user-5.jpg" alt="">
+        <span class="badge badge-success"></span>
+    </div>
+</div>',
+            pre: '<div class="avatar-badge">
+    <img src="img/user-5.jpg" alt="">
+    <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+</div>
+
+<div class="avatar-badge">
+    <img src="img/user-5.jpg" alt="">
+    <span class="badge badge-success"></span>
+</div>'
+        },
+        {
+            title: 'Stack',
+            text: 'Stacked avatars can be used to show multiple collaborators or participants when there is limited space available.',
+            code: '<div class="avatar-stack">
+    <img class="avatar" src="img/user-1.jpg" alt="">
+    <img class="avatar" src="img/user-2.jpg" alt="">
+    <img class="avatar" src="img/user-3.jpg" alt="">
+    <img class="avatar" src="img/user-4.jpg" alt="">
+    <img class="avatar" src="img/user-5.jpg" alt="">
+</div>'
+        },
+        {
+            title: 'Stack with text',
+            text: 'It is also possible to use custom text with avatar-stack by adding <code>.avatar-text</code> to the avatar element just like in the example below.',
+            code: '<div class="avatar-stack">
+    <img class="avatar" src="img/user-1.jpg" alt="">
+    <img class="avatar" src="img/user-2.jpg" alt="">
+    <img class="avatar" src="img/user-3.jpg" alt="">
+    <img class="avatar" src="img/user-4.jpg" alt="">
+    <img class="avatar" src="img/user-5.jpg" alt="">
+    <span class="avatar-text">
+        <a href="profile.html">Elizabeth</a>,<a href="profile.html">Venom</a> and more 45 people like it.
+    </span>
+</div>'
+        }
+    ]
+} %}

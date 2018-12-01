@@ -1,0 +1,18 @@
+:root {
+  --ck-color-list-button-on-background: #{$primary} !important;
+  --ck-color-focus-border: #{$primary} !important;
+  --ck-color-base-border: #d6d6d6 !important;
+  --ck-color-shadow-inner: transparent !important;
+}
+
+.ckeditor {
+  .ck-content {
+    min-height: 160px;
+  }
+
+  &-lg {
+    .ck-content {
+      min-height: 380px;
+    }
+  }
+}

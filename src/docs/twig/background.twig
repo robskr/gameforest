@@ -1,0 +1,82 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Background',
+    text: 'Similar for embed plugin but use the gameforest background component for add videos to the custom section or block.',
+    bootstrap: '',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Add youtube video to the element by using <code>ya-background</code> attribute. Copy youtube url from browser bar and paste it into the data attribute like in the example below.',
+            code: '<div ya-background="https://www.youtube.com/watch?v=wVMjIEtEokE" ya-option="mute: 1;controls: 0;loop: 1;opacity: 1" style="height: 600px"></div>',
+            pre: '<div ya-background="https://www.youtube.com/watch?v=wVMjIEtEokE" ya-option="mute: 1;controls: 0;loop: 1" style="height: 650px">
+    ...
+</div>'
+        },
+        {
+            title: 'Vimeo',
+            text: 'Add vimeo video to the element by using <code>ya-background</code> attribute. Copy youtube url from browser bar and paste it into the data attribute like in the example below.',
+            code: '<div ya-background="https://vimeo.com/300249379" ya-option="mute: 1;controls: 0;loop: 1;opacity: 1" style="height: 600px"></div>',
+            pre: '<div ya-background="https://vimeo.com/300249379" ya-option="mute: 1;controls: 0;loop: 1;opacity: 1" style="height: 650px">
+    ...
+</div>'
+        },
+        {
+            title: 'Options',
+            text: 'Options can be passed via data attributes. For data attributes, append the option name to <code>ya-option</code>. Default option names and values are available below in the table.',
+            pre: 'ya-option="mute: 1;controls: 0;loop: 1"',
+            table: {
+                head: [
+                    { title: 'option' },
+                    { title: 'value' },
+                    { title: 'default' },
+                    { title: 'description', width: '60%' }
+                ],
+                body: [
+                    [
+                        { text: 'autoplay', code: true },
+                        { text: 'integer' },
+                        { text: 1 },
+                        { text: 'Play the video automatically when user clicked to the thumbnail.' }
+                    ],
+                    [
+                        { text: 'controls', code: true },
+                        { text: 'integer' },
+                        { text: 1 },
+                        { text: 'Display the player pause, volume control or timeline.' }
+                    ],
+                    [
+                        { text: 'recommends', code: true },
+                        { text: 'integer' },
+                        { text: 0 },
+                        { text: 'Display recommended playlist end of the video.' }
+                    ],
+                    [
+                        { text: 'mute', code: true },
+                        { text: 'integer' },
+                        { text: 0 },
+                        { text: 'Mute the embedded video by default.' }
+                    ],
+                    [
+                        { text: 'loop', code: true },
+                        { text: 'number' },
+                        { text: 0 },
+                        { text: 'Restart the video if it has ended.' }
+                    ],
+                    [
+                        { text: 'start', code: true },
+                        { text: 'number' },
+                        { text: 'null' },
+                        { text: 'Start to play the video from this time.' }
+                    ],
+                    [
+                        { text: 'opacity', code: true },
+                        { text: 'number' },
+                        { text: '0.5' },
+                        { text: 'Set the opacity for the player.' }
+                    ]
+                ]
+            }
+        }
+    ]
+} %}

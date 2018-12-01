@@ -1,0 +1,37 @@
+.noUi {
+  &-handle {
+    box-shadow: none;
+    border: 0;
+    border-radius: 50%;
+    background-color: $white;
+    border: 8px solid $primary;
+  }
+
+  &-target {
+    border: 0;
+    background-color: #e0e0e0;
+    box-shadow: none;
+    border-radius: 30px;
+  }
+
+  &-connect {
+    background-color: $primary;
+  }
+
+  &-horizontal {
+    height: 10px;
+    margin-bottom: 30px;
+
+    .noUi-handle {
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      top: -8px;
+      outline: none;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}

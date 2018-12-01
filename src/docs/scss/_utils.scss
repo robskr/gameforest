@@ -1,0 +1,37 @@
+.bg-darken {
+  background-color: #31363e;
+}
+
+p > a {
+  text-decoration: underline;
+  color: $link-hover-color;
+
+  &:hover {
+    color: darken($link-hover-color, 5%);
+    text-decoration: underline;
+  }
+}
+
+.version {
+  display: inline-block;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+  color: #FFF;
+  background-color: lighten($dark, 5%);
+  padding: 6px 10px;
+  border-top-left-radius: 4px;
+  font-size: 15px;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: lighten($dark, 5%);
+  }
+}
+
+code {
+  background-color: lighten($primary, 45%);
+  padding: 5px;
+}

@@ -1,0 +1,18 @@
+// Product
+.product {
+  &-carousel {
+    border-radius: 6px;
+    background-color: $white;
+    border: 1px solid rgba($black, .15);
+    padding: 10px;
+  }
+
+  &-img {
+    min-height: 600px;
+    @include img-cover();
+
+    img {
+      border-radius: 6px;
+    }
+  }
+}

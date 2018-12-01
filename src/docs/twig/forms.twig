@@ -1,0 +1,211 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Forms',
+    text: 'Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.',
+    bootstrap: 'components/forms',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Here’s a quick example to demonstrate Gameforest form styles. Keep reading for documentation on required classes, form layout, and more.',
+            code: '<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
+    </div>
+</form>',
+        },
+        {
+            title: 'Form controls',
+            text: 'Individual form controls automatically receive some global styling. All textual input, textarea, and select elements with <code>.form-control</code>',
+            code: '<form>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect2">Example multiple select</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+</form>',
+        },
+        {
+            title: 'Inline forms',
+            text: 'Use the <code>.form-inline</code> class to display a series of labels, form controls, and buttons on a single horizontal row.',
+            code: '<form class="form-inline">
+    <div class="form-group">
+        <label for="inputPassword6">Password</label>
+        <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+        <small id="passwordHelpInline" class="text-muted">
+            Must be 8-20 characters long.
+        </small>
+    </div>
+</form>',
+        },
+        {
+            title: 'Horizontal Forms',
+            text: 'Create horizontal forms with the grid by adding the <code>.row</code> class to form groups and using the <code>.col-*</code> classes to specify the width of your labels and controls.',
+            code: '<form>
+    <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2">Checkbox</div>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                    Example checkbox
+                </label>
+            </div>
+        </div>
+    </div>
+</form>',
+        },
+        {
+            title: 'Readonly',
+            text: 'Add the readonly boolean attribute on an input to prevent modification of the input’s value.',
+            code: '<input class="form-control" type="text" placeholder="Readonly input here…" readonly>'
+        },
+        {
+            title: 'Textual Inputs',
+            text: 'Most common form control, text-based input fields. Includes support for all HTML5 types.',
+            code: '<form>
+    <div class="form-group row">
+        <label for="example-text-input" class="col-sm-2 col-form-label">Text</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" value="yakuzi" id="example-text-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-search-input" class="col-sm-2 col-form-label">Search</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-email-input" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="email" value="yakuthemes@example.com" id="example-email-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-url-input" class="col-sm-2 col-form-label">URL</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="url" value="https://yakuthemes.com" id="example-url-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-tel-input" class="col-sm-2 col-form-label">Telephone</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-password-input" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="password" value="yakuzitheking" id="example-password-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-number-input" class="col-sm-2 col-form-label">Number</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="number" value="42" id="example-number-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-datetime-local-input" class="col-sm-2 col-form-label">Datetime</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="datetime-local" value="2017-08-19T13:45:00" id="example-datetime-local-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-date-input" class="col-sm-2 col-form-label">Date</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="date" value="2017-08-19" id="example-date-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-month-input" class="col-sm-2 col-form-label">Month</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="month" value="2017-08" id="example-month-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-week-input" class="col-sm-2 col-form-label">Week</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="week" value="2017-W33" id="example-week-input">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="example-time-input" class="col-sm-2 col-form-label">Time</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+        </div>
+    </div>
+</form>',
+        },
+        {
+            title: 'Sizing',
+            text: 'Set heights using classes like <code>.form-control-lg</code> and <code>.form-control-sm</code>.',
+            code: '<input class="form-control form-control-lg mb-3" type="text" placeholder=".form-control-lg">
+<input class="form-control mb-3" type="text" placeholder="Default input">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">',
+            pre: '<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+<input class="form-control" type="text" placeholder="Default input">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">'
+        },
+        {
+            title: 'Columns',
+            text: 'More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.',
+            code: '<form>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
+        </div>
+    </div>
+</form>',
+        },
+        {
+            title: 'Custom forms',
+            text: 'For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. ',
+            code: '<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="customCheck1">
+    <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+</div>',
+        }
+    ]
+} %}

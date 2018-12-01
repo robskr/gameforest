@@ -1,0 +1,238 @@
+// Embed
+.embed {
+  background-color: $dark;
+
+  &-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  &:after {
+    content: $ya-play;
+    font-family: $font-family-icon;
+    background-color: $white;
+    display: inline-block;
+    color: darken($gray, 20%);
+    font-size: 28px;
+    position: relative;
+    z-index: 3;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    border-radius: 50%;
+    box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover {
+    &:after {
+      opacity: .85;
+      box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.play {
+    &:after {
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+      animation-name: zoomOut;
+    }
+  }
+
+  &-title {
+    z-index: 3;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    background-color: $dark;
+    color: $white;
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    border-left: 3px solid $primary;
+  }
+
+  &-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-length {
+    z-index: 3;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    background-color: $dark;
+    color: $white;
+    border-radius: 30px;
+    padding: 6px 10px;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    i {
+      background-color: $white;
+      display: inline-block;
+      color: darken($gray, 20%);
+      font-size: 28px;
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
+      text-align: center;
+      cursor: pointer;
+      transition: .1s ease-in-out;
+      border-radius: 50%;
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+
+      &:before {
+        margin-right: -2px;
+      }
+
+      &:hover {
+        opacity: .85;
+        box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      &-dark i {
+        background-color: darken($dark, 5%);
+        color: $white;
+      }
+    }
+  }
+
+  &-icon-dark:after {
+    background-color: darken($dark, 5%);
+    color: $white;
+  }
+}
+
+// Embed player
+.embed-player {
+  .embed-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    i {
+      background-color: $white;
+      display: inline-block;
+      color: darken($gray, 20%);
+      font-size: 22px;
+      width: 75px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: .1s ease-in-out;
+      border-radius: 50%;
+      box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
+
+      &:before {
+        margin-right: -2px;
+      }
+
+      &:hover {
+        opacity: .85;
+        box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &-dark i {
+      background-color: darken($dark, 5%);
+      color: $white;
+    }
+  }
+
+  .embed-length {
+    bottom: 15px;
+    right: 15px;
+    font-size: 14px;
+  }
+
+  &-lg {
+    .embed-img {
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: 100%;
+      background-size: cover;
+      height: 600px;
+
+      img {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+    }
+
+    .embed-icon {
+      i {
+        font-size: 26px;
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+}
+
+// Embed image
+.embed-image {
+  position: relative;
+}
+
+// Embed action
+.embed-action {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+
+  &-item {
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgba($white, .8);
+    display: flex;
+    margin-left: 5px;
+    background-color: darken($dark, 9%);
+    padding: 10px 9px;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

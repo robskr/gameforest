@@ -1,0 +1,169 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Theme Widgets</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="widget widget-post">
+                        <div class="widget-header">Recommends</div>
+                        <a class="widget-img" href="blog-post.html">
+                            <img src="https://i.ytimg.com/vi/PfQ8cOyuE1A/maxresdefault.jpg" alt="">
+                        </a>
+                        <div class="widget-body">
+                            <h5 class="widget-title"><a href="blog-post.html">Battle royale games explained what could be the next big hit</a></h5>
+                            <div class="widget-meta"><i class="ya ya-calendar"></i> Oct 18, 2018</div>
+                            <p class="widget-text">Timed voice share led his widen noisy young. On weddings believed laughing although material do exercis.</p>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget widget-secondary">
+                        <div class="widget-header">Navigation</div>
+                        <div class="widget-body p-0">
+                            <div class="list-group list-group-nav">
+                                {% for nav in profile.nav %}
+                                    <a class="list-group-item" href="#">
+                                        <i class="{{ nav.icon }}"></i> {{ nav.title }}
+                                        {% if nav.count %}<span class="badge badge-dark badge-pill">{{ nav.count }}</span>{% endif %}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-post">
+                        <div class="widget-header">Popular on Gameforest</div>
+                        <div class="widget-body">
+                            <div class="list-group list-group-posts list-group-sm mt-3">
+                                {% for blog in blogs %}
+                                    <div class="list-group-item">
+                                        <div>
+                                            <a class="list-group-item-img" href="#">
+                                                <img src="{{ blog.thumb }}" alt="">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <h6 class="list-group-item-title"><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 40) }}</a></h6>
+                                            <div class="list-group-item-meta"><i class="ya ya-clock"></i> {{ "now"|date_modify("-"~ loop.index ~" day")|date("M d, Y") }}</div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">Load More</a>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                </div>
+                <div class="col-4">
+                    <div class="widget widget-secondary">
+                        <div class="widget-header">Categories</div>
+                        <div class="widget-body p-0">
+                            <div class="list-group list-group-nav">
+                                <a class="list-group-item" href="#">Playstation 4</a>
+                                <a class="list-group-item active" href="#">Xbox One<span class="badge badge-dark badge-pill">55</span></a>
+                                <a class="list-group-item" href="#">PC</a>
+                                <a class="list-group-item" href="#">Steam<span class="badge badge-dark badge-pill">50</span></a>
+                                <a class="list-group-item" href="#">Rockstar</a>
+                                <a class="list-group-item" href="#">CD Project<span class="badge badge-dark badge-pill">38</span></a>
+                                <a class="list-group-item" href="#">Activision</a>
+                                <a class="list-group-item" href="#">BioWare<span class="badge badge-dark badge-pill">49</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget widget-gallery">
+                        <div class="widget-header">Images</div>
+                        <div class="widget-body">
+                            <div class="row">
+                                {% for img in game.images %}
+                                    <div class="col-6">
+                                        <a class="widget-img" href="{{ img.original }}" ya-lightbox="disqus: gameforest" rel="gallery">
+                                            <img src="{{ img.thumb }}" alt="">
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <a class="btn btn-outline btn-block btn-sm mt-2" href="games.html" role="button">View Galleries</a>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                </div>
+                <div class="col-4">
+                    <div class="widget widget-game bg-dark" ya-style="background-color: #343538">
+                        <img src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+                        <div class="widget-body">
+                            <h3 class="widget-title">God of War</h3>
+                            <p class="widget-text">Released April 20, 2018</p>
+                            <h6>Platforms:</h6>
+                            <a class="badge badge-primary" href="#">PS4</a>
+                            <h6>Developer</h6>
+                            <p class="widget-text"><a href="#">SCE Santa Monica</a></p>
+                            <h6>Publisher</h6>
+                            <p class="widget-text"><a href="#">Sony Interactive Entertainment</a></p>
+                            <p class="widget-text mt-4">The gods of Olympus believe their brother Ares to be insane, but they are commanded to take no action against him. The contemptuous Lord of War's siblings are bound by their father Zeus' law to not clash with one another directly.</p>
+                            <a class="btn btn-outline-light btn-block mt-4" href="" role="button">Add to favourites <i class="ya ya-heart-o"></i></a>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-tags">
+                        <div class="widget-header">Popular Tags</div>
+                        <div class="widget-body">
+                            <div class="tags">
+                                <a href="#">#playstation4</a>
+                                <a href="#">#anthem</a>
+                                <a href="#">#fps</a>
+                                <a href="#">#upcoming</a>
+                                <a href="#">#gameplay</a>
+                                <a href="#">#red-dead</a>
+                                <a href="#">#pubg</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget -->
+                    <div class="widget widget-video">
+                        <div class="widget-header">Recent Video</div>
+                        <div class="widget-img embed-player">
+                            <img src="https://i.ytimg.com/vi/Yo1grWlmSAs/maxresdefault.jpg" alt="">
+                            <div class="widget-meta">15:05</div>
+                            <a class="embed-icon" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox>
+                                <i class="ya ya-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-secondary">
+                        <div class="widget-header">Personal settings</div>
+                        <div class="widget-body p-0">
+                            <div class="list-group list-group-nav list-group-navs">
+                                {% for nav in profile.settings %}
+                                    <a class="list-group-item{% if loop.index == 1 %} active{% endif %}" href="#">{{ nav.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

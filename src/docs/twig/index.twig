@@ -1,0 +1,81 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Introduction',
+    text: 'Gameforest\'s built with <a href="https://getbootstrap.com" target="_blank">Bootstrap 4</a> ─ the world’s most popular framework for building responsive, mobile-first sites and applications. Inside you’ll find high quality HTML, CSS, SASS, TWIG and JavaScript files to make your own gaming website easier than ever.',
+    blocks: [
+        {
+            title: 'HTML markup',
+            text: 'The basic template is a guideline for how to structure your pages when building with the Gameforest theme. Included below are all the necessary bits for using the theme’s CSS and JS.',
+            single: true,
+            pre: '<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- css: theme -->
+    <link rel="stylesheet" href="css/theme.min.css">
+
+    <title>Gameforest Bootstrap Gaming Theme</title>
+</head>
+<body class="fixed-navbar">
+    <div class="site-content">...</div>
+
+    <!-- js: vendor -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- js: theme -->
+    <script src="js/theme.bundle.min.js"></script>
+</body>
+</html>',
+        },
+        {
+            title: 'Twig markup',
+            text: 'We can use <code>twig.js</code> to build our html pages. This is the recommended way because twig has several advantages what was used in the build process.',
+            single: true,
+            pre: '{% extends "base.twig" %}
+
+{% block body %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    ...
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}',
+        },
+        {
+            title: 'Browser support',
+            text: 'Gameforest was tested in the most common browsers and it is up to date. Latest means that it works just fine on all recent versions of that browser. Check the supported browsers below.',
+            custom: '<div class="border-top-dashed pt-3">
+            <table class="table table-borderless">
+<thead>
+    <tr>
+        <th class="text-center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome"></th>
+        <th class="text-center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox"></th>
+        <th class="text-center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge"></th>
+        <th class="text-center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png" alt="IE"></th>
+        <th class="text-center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari"></th>
+        <th class="text-center"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera"></th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="text-center">Latest</td>
+        <td class="text-center">Latest</td>
+        <td class="text-center">Latest</td>
+        <td class="text-center">11+</td>
+        <td class="text-center">9.1+</td>
+        <td class="text-center">Latest</td>
+    </tr>
+</tbody>
+</table></div>',
+        }
+    ]
+} %}

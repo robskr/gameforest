@@ -1,0 +1,93 @@
+{
+    "game": {
+        "posts": [
+            {
+                "title": "Future God of War Games Could Take on Egyptian Mythology",
+                "url": "blog-post.html",
+                "text": "Debating me breeding be answered an he. Spoil event was words her off cause any. Tears woman which no is world miles woody. Wished be do mutual except in effect answer. Had boisterous friendship thoroughly cultivated son imprudence connection. Windows because concern sex its. Law allow saved views hills day ten. Examine waiting his evening day passage proceed.",
+                "img": "https://img.youtube.com/vi/WYEb7Xscn98/maxresdefault.jpg",
+                "comments": 43,
+                "date": 1537124719
+            },
+            {
+                "title": "God of War Studio Confirms Final Easter Egg Has Been Discovered",
+                "url": "blog-post-carousel.html",
+                "text": "Promotion an ourselves up otherwise my. High what each snug rich far yet easy. In companions inhabiting mr principles at insensible do. Heard their sex hoped enjoy vexed child for. Prosperous so occasional assistance it discovered especially no. Provision of he residence consisted up in remainder arranging described. Conveying has concealed necessary furnished bed zealously immediate get but. Terminated as middletons or by instrument.",
+                "carousel": {
+                    "1": "https://img.youtube.com/vi/Yo1grWlmSAs/maxresdefault.jpg",
+                    "2": "https://img.youtube.com/vi/BJxsGslB4sQ/maxresdefault.jpg",
+                    "3": "https://img.youtube.com/vi/EiGPQgMwDis/maxresdefault.jpg"
+                },
+                "comments": 159,
+                "date": 1536606319
+            },
+            {
+                "title": "God of War Future Updates Detailed, Option to Remap Rage Mode Planned",
+                "url": "blog-post-video.html",
+                "text": "Affronting everything discretion men now own did. Still round match we to. Frankness pronounce daughters remainder extensive has but. Happiness cordially one determine concluded fat. Plenty season beyond by hardly giving of. Consulted or acuteness dejection an smallness if. Outward general passage another as it. Very his are come man walk one next. Delighted prevailed supported too not remainder perpetual who furnished.",
+                "video": {
+                    "src": "https://www.youtube.com/watch?v=rClXqZD2Xrs",
+                    "img": "https://img.youtube.com/vi/HYrcX8QIIAs/maxresdefault.jpg"
+                },
+                "comments": 25,
+                "date": 1535655919
+            },
+            {
+                "title": "God of War: Here's What Old Kratos Looks Like Without the Beard",
+                "url": "blog-post-gallery.html",
+                "text": "Ever man are put down his very. And marry may table him avoid. Hard sell it were into it upon. He forbade affixed parties of assured to me windows. Happiness him nor she disposing provision. Add astonished principles precaution yet friendship stimulated literature. State thing might stand one his plate. Offending or extremity therefore so difficult he on provision. Tended depart turned not are.",
+                "img": "https://img.youtube.com/vi/SYtff7AyBLM/maxresdefault.jpg",
+                "comments": 316,
+                "date": 1535223919
+            }
+        ],
+        "topics": [
+            { "title": "Share what do you think about God of War", "author": 3 },
+            { "title": "PS4 God of War getting stale", "author": 5 },
+            { "title": "Most popular God of War Settings", "author": 4 },
+            { "title": "Retro Import platformers", "author": 2 }
+        ],
+        "images": [
+            {
+                "thumb": "https://static.giantbomb.com/uploads/square_medium/0/329/3015852-god+of+war_20180420174408.jpg",
+                "original": "https://static.giantbomb.com/uploads/original/0/329/3015852-god+of+war_20180420174408.png"
+            },
+            {
+                "thumb": "https://static.giantbomb.com/uploads/square_medium/0/329/3015848-god+of+war_20180420173459.jpg",
+                "original": "https://static.giantbomb.com/uploads/original/0/329/3015848-god+of+war_20180420173459.png"
+            },
+            {
+                "thumb": "https://static.giantbomb.com/uploads/square_medium/0/329/3015846-god+of+war_20180420171302.jpg",
+                "original": "https://static.giantbomb.com/uploads/original/0/329/3015846-god+of+war_20180420171302.png"
+            },
+            {
+                "thumb": "https://static.giantbomb.com/uploads/square_medium/0/329/3015844-god+of+war_20180420170849.jpg",
+                "original": "https://static.giantbomb.com/uploads/original/0/329/3015844-god+of+war_20180420170849.png"
+            },
+            {
+                "thumb": "https://static.giantbomb.com/uploads/square_medium/0/329/3015849-god+of+war_20180420173540.jpg",
+                "original": "https://static.giantbomb.com/uploads/original/0/329/3015849-god+of+war_20180420173540.png"
+            },
+            {
+                "thumb": "https://static.giantbomb.com/uploads/square_medium/0/329/3015850-god+of+war_20180420174106.jpg",
+                "original": "https://static.giantbomb.com/uploads/original/0/329/3015850-god+of+war_20180420174106.png"
+            }
+        ],
+        "videos": [
+            { "img": "https://i.ytimg.com/vi/i8zcYj71CUs/mqdefault.jpg", "title": "God of War All Boss Death Scenes Gods Kratos Brutal Kills" },
+            { "img": "https://i.ytimg.com/vi/LiSm4G01IEY/mqdefault.jpg", "title": "God of War Atreus Gets Angry Awakens Spartan Rage" },
+            { "img": "https://i.ytimg.com/vi/tsSgKIQmEg0/mqdefault.jpg", "title": "The World Serpent Jormungandr Story All Cutscenes" },
+            { "img": "https://i.ytimg.com/vi/qRvZ2mcO7zA/mqdefault.jpg", "title": "God of War All Bosses, Boss Fights Gods, Dragons and Ending" },
+            { "img": "https://i.ytimg.com/vi/6LOD-pwJY6E/mqdefault.jpg", "title": "God of War 15 Minutes of Gameplay Demo PS4" }
+        ],
+        "nav": [
+            { "title": "Articles", "icon": "ya ya-content", "count": false },
+            { "title": "Reviews", "icon": "ya ya-star", "count": 14 },
+            { "title": "Images", "icon": "ya ya-image", "count": 42 },
+            { "title": "Videos", "icon": "ya ya-player", "count": false },
+            { "title": "Streams", "icon": "ya ya-camera", "count": 23 },
+            { "title": "Forums", "icon": "ya ya-comment", "count": false },
+            { "title": "Shop", "icon": "ya ya-shopping-cart", "count": false }
+        ]
+    }
+}

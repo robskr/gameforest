@@ -1,0 +1,190 @@
+{% extends "base.twig" %}
+
+{% block js %}
+    <script src="plugins/parallax/parallax.min.js"></script>
+    <script src="plugins/easypiechart/jquery.easypiechart.min.js"></script>
+    <script>
+        $(function() {
+            $('.easypiechart').easyPieChart();
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="p-0 overflow-hidden">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col">
+                    <div class="owl-carousel" ya-carousel="autoplay: true;height: true">
+                        {% for carousel in home.carousel.landing %}
+                            <div class="h-100"{% if carousel.color %} ya-style="background-color: {{ carousel.color|default('transparent') }}"{% endif %}>
+                                <img src="{{ carousel.img }}" ya-style="opacity: {{ carousel.opacity|default('0.25') }}" alt="">
+                                <div class="owl-caption">
+                                    <div class="w-50">
+                                        <h1 class="owl-title">{{ carousel.title }}</h1>
+                                        <p class="owl-text">{{ carousel.text }}</p>
+                                        <a class="btn btn-primary btn-lg btn-rounded" href="game-post.html" role="button">View Game</a>
+                                        <a class="btn btn-outline-light btn-lg btn-rounded ml-2" href="{{ carousel.url }}" ya-lightbox role="button">Watch Trailer</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="heading">
+                        <i class="ya ya-ranking"></i>
+                        <h2 class="heading-title font-size-lg">Recent Games at Gameforest</h2>
+                        <p class="heading-lead">Two assure edward whence the was. Who worthy yet ten boy denote wonder. Weeks views her sight old tears sorry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for game in games %}
+                    {% if loop.index < 4 %}
+                        <div class="col-4">
+                            <div class="card card-game">
+                                <a class="card-img" href="game-post.html">
+                                    {% if game.new %}
+                                        <span class="badge badge-danger">new</span>
+                                    {% endif %}
+                                    <img class="card-img-top" src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg" alt="{{ game.title }}">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {% if game.released %}
+                                            <i class="ya ya-check-circle text-success" data-toggle="tooltip" data-placement="bottom" data-title="Available"></i>
+                                        {% endif %}
+                                        <a href="game-post.html">{{ game.title }}</a>
+                                    </h5>
+                                    <p class="card-text">{{ game.text|slice(0, 120) }}...</p>
+                                </div>
+                                <div class="card-footer">
+                                    <span><i class="ya ya-calendar"></i> {{ "now"|date_modify("-"~ loop.index ~" day")|date("M d, Y") }}</span>
+                                    <div class="ml-auto">
+                                        <a href="#"><i class="ya ya-comment"></i> {{ random(70) }}</a>
+                                        <a href="#"><i class="ya ya-heart-o"></i> {{ random(70) }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .card-game -->
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="text-center">
+                <a class="btn btn-secondary btn-lg mt-3" href="games.html" role="button">Browse Games</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    <div class="widget widget-review text-lighten d-flex align-items-center py-7 overflow-hidden" data-parallax="scroll" data-image-src="https://img.youtube.com/vi/uPhovNvisWI/maxresdefault.jpg">
+                        <div class="overlay" ya-style="background-color: #292b2f"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h2 class="display-5 font-weight-bold">Castlevania Review</h2>
+                                    <p>Konami's famed vampire hunting series made its debut on the PlayStation with Castlevania: Lament of Innocence. It tells the story of the Belmont family's first encounter...</p>
+                                    <div class="mt-4 pt-3">
+                                        <a class="btn btn-primary btn-shadow btn-rounded btn-lg" href="review-post.html" role="button">Read Review</a>
+                                        <a class="btn btn-outline-light btn-rounded ml-2 btn-lg" href="#" role="button">Write Review <i class="ya ya-pen"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-4 d-flex align-items-center justify-content-end text-center">
+                                    <div>
+                                        <p class="font-weight-semibold text-white">Gameforest</p>
+                                        <a class="easypiechart" href="review-post.html" data-percent="89" data-scale-color="#e3e3e3" data-bar-color="#5eb404"><span class="easypiechart-text">89%</span></a>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-weight-semibold text-white">MetaCritic</p>
+                                        <a class="review-score" href="review-post.html">9.1</a>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-weight-semibold text-white">Users</p>
+                                        <a class="review-score" href="review-post.html">9.4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="heading">
+                        <i class="ya ya-time-alarm"></i>
+                        <h2 class="heading-title font-size-lg">Recent News at Gameforest</h2>
+                        <p class="heading-lead">May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for blog in blogs %}
+                    {% if loop.index < 4 %}
+                        <div class="col-4">
+                            <div class="card card-post">
+                                <a class="card-img" href="{{ blog.url }}">
+                                    <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
+                                    <div class="card-meta">
+                                        <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date("M d, Y") }}</span>
+                                        <a class="card-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
+                                    </div>
+                                    <p class="card-text">{{ blog.text|slice(0, 105) ~ '...' }}</p>
+                                </div>
+                            </div>
+                            <!-- end .card-post -->
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="text-center mt-2 mb-3">
+                <a class="btn btn-secondary btn-lg" href="blog.html" role="button">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-image py-6" ya-style="background-color: #2e2f2f">
+        <img class="background" src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div ya-embed="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-title="God of War: Gameplay Trailer 2018" ya-length="15:05">
+                        <img src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary py-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="promo">
+                        <h2 class="promo-title h4">Build your professional gaming website with Gameforest</h2>
+                        <a class="btn btn-outline-light ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

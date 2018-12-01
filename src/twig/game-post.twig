@@ -1,0 +1,237 @@
+{% extends "base.twig" %}
+
+{% block js %}
+    <script src="plugins/easypiechart/jquery.easypiechart.min.js"></script>
+    <script>
+        $(function() {
+            $('.easypiechart').easyPieChart();
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="bg-image text-white bg-dark py-7" ya-style="background-color: #343538">
+        <img class="background" src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <h1 class="font-weight-bold display-5">God of War</h1>
+                    <p>Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive, and teach his son to do the same.</p>
+                    <div class="mt-4 pt-2">
+                        <a class="btn btn-primary btn-shadow btn-rounded btn-lg" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox role="button">Watch Trailer <i class="ya ya-play"></i></a>
+                        <a class="btn btn-outline-light btn-rounded ml-2 btn-lg" href="shop-product.html" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-center justify-content-end text-center">
+                    <div>
+                        <p class="font-weight-semibold text-white">Gameforest</p>
+                        <a class="easypiechart" href="review-post.html" data-percent="89" data-scale-color="#e3e3e3" data-bar-color="#5eb404"><span class="easypiechart-text">89%</span></a>
+                    </div>
+                    <div class="ml-3">
+                        <p class="font-weight-semibold text-white">MetaCritic</p>
+                        <a class="review-score" href="review-post.html">9.1</a>
+                    </div>
+                    <div class="ml-3">
+                        <p class="font-weight-semibold text-white">Users</p>
+                        <a class="review-score" href="review-post.html">9.4</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-bottom py-0" ya-sticky>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <div class="nav nav-list">
+                        <a class="nav-item nav-link active" href="game-post.html">God of War</a>
+                        <a class="nav-item nav-link" href="review-post.html">Reviews (14)</a>
+                        <a class="nav-item nav-link" href="gallery.html">Images</a>
+                        <a class="nav-item nav-link" href="#">Videos (8)</a>
+                        <a class="nav-item nav-link" href="#">Streams</a>
+                        <a class="nav-item nav-link" href="#">Forums</a>
+                        <a class="nav-item nav-link" href="#">Shop</a>
+                    </div>
+                    <div class="btn-group ml-auto mr-2">
+                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-left"></i></a>
+                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-right"></i></a>
+                    </div>
+                    <a class="btn btn-default btn-icon" href=""><i class="ya ya-gear"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-bottom-dashed">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <form class="form-inline mb-4">
+                        <button class="btn btn-light mr-2" type="button" name="button" data-toggle="tooltip" title="refresh" data-placement="bottom"><i class="ya ya-refresh ml-0"></i></button>
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All platform
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item active" href="#">All platform</a>
+                                {% for platform in platforms %}
+                                    <a class="dropdown-item text-lowercase" href="#">{{ platform.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="dropdown ml-auto">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Recent posts
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item active" href="#">Recent</a>
+                                <a class="dropdown-item" href="#">Oldest</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                        <div class="btn-group ml-2" role="group">
+                            <button type="button" class="btn btn-light"><i class="ya ya-list ml-0"></i></button>
+                            <button type="button" class="btn btn-light"><i class="ya ya-table ml-0"></i></button>
+                        </div>
+                    </form>
+
+                    {% for post in game.posts %}
+                        <div class="post">
+                            <div class="post-thumbnail">
+                                {% if post.carousel %}
+                                    <div class="owl-carousel" ya-carousel>
+                                        {% for carousel in post.carousel %}
+                                            <img src="{{ carousel }}" alt="{{ post.title }}">
+                                        {% endfor %}
+                                    </div>
+                                {% elseif post.video %}
+                                    <div ya-embed="{{ post.video.src }}">
+                                        <img class="embed-responsive-item" src="{{ post.video.img }}" alt="{{ post.title }}">
+                                    </div>
+                                {% else %}
+                                    <img class="post-img" src="{{ post.img }}" alt="{{ post.title }}">
+                                {% endif %}
+                            </div>
+                            <div class="post-body">
+                                <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                                <div class="post-meta">
+                                    <span class="post-meta-item"><i class="ya ya-calendar"></i>  {{ post.date|date(config.dateformat) }}</span>
+                                    <a class="post-meta-item" href="{{ post.url }}"><i class="ya ya-comment"></i> {{ post.comments }} comments</a>
+                                </div>
+                                <p>{{ post.text }}</p>
+                            </div>
+                        </div>
+                        <!-- end .post -->
+                    {% endfor %}
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item gap"><span class="page-link">...</span></li>
+                            <li class="page-item"><a class="page-link" href="#">25</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-4">
+                    <div class="widget widget-game text-white" ya-style="background-color: #343538">
+                        <img src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+                        <div class="widget-body">
+                            <h3 class="widget-title">God of War</h3>
+                            <p class="widget-text">Released April 20, 2018</p>
+                            <h6>Platforms:</h6>
+                            <a class="badge badge-primary" href="#">PS4</a>
+                            <h6>Developer</h6>
+                            <p class="widget-text"><a href="#">SCE Santa Monica</a></p>
+                            <h6>Publisher</h6>
+                            <p class="widget-text"><a href="#">Sony Interactive Entertainment</a></p>
+                            <p class="widget-text mt-4">The gods of Olympus believe their brother Ares to be insane, but they are commanded to take no action against him. The contemptuous Lord of War's siblings are bound by their father Zeus' law to not clash with one another directly.</p>
+                            <a class="btn btn-outline-light btn-block mt-4" href="" role="button">Add to favourites <i class="ya ya-heart-o"></i></a>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-post">
+                        <div class="widget-header">Recommends</div>
+                        <a class="widget-img" href="blog-post.html">
+                            <img src="https://i.ytimg.com/vi/eyEhO0P2_HU/maxresdefault.jpg" alt="">
+                        </a>
+                        <div class="widget-body">
+                            <h5 class="widget-title"><a href="blog-post.html">God of War Director Clarifies Comments on Future of Franchise</a></h5>
+                            <div class="widget-meta"><i class="ya ya-calendar"></i> {{ "now"|date_modify("-"~ random(20) ~" day")|date("M d, Y") }}</div>
+                            <p class="widget-text">Timed voice share led his widen noisy young. On weddings believed laughing although material do exercis.</p>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-secondary">
+                        <div class="widget-header">Navigation</div>
+                        <div class="widget-body p-0">
+                            <div class="list-group list-group-nav">
+                                {% for nav in game.nav %}
+                                    <a class="list-group-item list-group-item-action{% if loop.index == 1 %} active{% endif %}" href="#">
+                                        <i class="{{ nav.icon }}"></i> {{ nav.title }}
+                                        {% if nav.count %}<span class="badge badge-dark badge-pill">{{ nav.count }}</span>{% endif %}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-gallery">
+                        <div class="widget-header">Images</div>
+                        <div class="widget-body">
+                            <div class="row">
+                                {% for img in game.images %}
+                                    <div class="col-6">
+                                        <a class="widget-img" href="{{ img.original }}" ya-lightbox="disqus: gameforest" rel="gallery">
+                                            <img src="{{ img.thumb }}" alt="">
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <a class="btn btn-outline btn-block btn-sm mt-2" href="games.html" role="button">View Galleries</a>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget widget-video">
+                        <div class="widget-header">Recent Video</div>
+                        <div class="widget-img embed-player">
+                            <img src="https://i.ytimg.com/vi/Yo1grWlmSAs/maxresdefault.jpg" alt="">
+                            <div class="widget-meta">15:05</div>
+                            <a class="embed-icon" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox>
+                                <i class="ya ya-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                    <div class="widget mb-3">
+                        <div class="widget-header">Popular posts</div>
+                        <div class="list-group list-group-posts">
+                            {% for video in game.videos %}
+                                <div class="list-group-item">
+                                    <div>
+                                        <a class="list-group-item-img" href="#">
+                                            <img src="{{ video.img }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <h6 class="list-group-item-title"><a href="#">{{ video.title }}</a></h6>
+                                        <div class="list-group-item-meta"><i class="ya ya-clock"></i> {{ "now"|date_modify("-"~ loop.index ~" day")|date("M d, Y") }}</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">More Videos</a>
+                    </div>
+                    <!-- end .widget -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

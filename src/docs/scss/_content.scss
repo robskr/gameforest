@@ -1,0 +1,101 @@
+.site-content {
+  padding-left: 290px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  min-height: 100%;
+
+  .comments {
+    .media:last-child {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.docs-block {
+  margin-bottom: 80px;
+  > p {
+    margin-bottom: 1.75rem;
+  }
+
+  > .btn,
+  > .badge {
+    margin-bottom: 5px;
+  }
+
+  .docs-code + table {
+    margin-top: 40px;
+  }
+}
+
+.fixed-navbar {
+  padding-top: 65px;
+}
+
+.docs-separator {
+  border-style: dashed;
+  border-color: rgba($black, .15);
+}
+
+.docs-example {
+  .badge {
+    margin-top: 5px;
+  }
+}
+
+.docs-icons {
+  margin: 0 -15px;
+
+  i {
+    font-size: 32px;
+    margin: 15px;
+    color: darken($body-color, 5%);
+  }
+}
+
+.docs-icon-sizes {
+  margin: 0 -5px;
+
+  i {
+    margin: 5px;
+    color: darken($body-color, 5%);
+  }
+}
+
+.docs-svg {
+  margin: 0 -5px;
+
+  svg {
+    margin: 0 5px;
+  }
+}
+
+.docs-block {
+  pre code {
+    background-color: rgba($black, .05);
+    padding: 30px;
+  }
+}
+
+.docs-code {
+  margin-top: 35px;
+  position: relative;
+
+  .btn-clipboard {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-radius: 0;
+    padding: 5px 9px;
+    border-color: rgba($black, .1);
+
+    &:not(:disabled):not(.disabled):active,
+    &:focus,
+    &:hover {
+      background-color: $body-bg;
+      color: $primary;
+      box-shadow: none;
+    }
+  }
+}

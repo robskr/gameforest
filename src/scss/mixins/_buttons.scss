@@ -1,0 +1,99 @@
+@mixin button-hover() {
+  .show > &.dropdown-toggle,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  &:focus,
+  &:active,
+  &:hover {
+    @content;
+  }
+}
+
+@mixin button-variant-theme($color, $border, $background) {
+  color: $color;
+  border-color: $border;
+  background-color: $background;
+
+  @include button-hover() {
+    color: $color;
+    background-color: darken($background, 3%);
+    border-color: darken($border, 5%);
+  }
+}
+
+@mixin button-outline-theme($color, $border, $background) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+}
+
+@mixin button-social() {
+	color: #fff;
+	font-weight: 500;
+  box-shadow: none !important;
+
+  &.btn-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+  }
+
+  &.btn-link {
+    background-color: transparent;
+    padding: 0 5px;
+    margin: 0;
+    width: auto;
+		border: 0;
+    color: #333;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+		}
+  }
+
+  &.btn-effect {
+    position: relative;
+    overflow: hidden;
+
+    i {
+			line-height: inherit;
+      transition: .2s ease-in-out;
+			display: block;
+    }
+
+    @include button-hover() {
+      i:first-child {
+        margin-top: -40px;
+      }
+    }
+  }
+
+  &.btn-block {
+    text-align: left;
+
+    i {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  }
+}
+
+@mixin button-rounded($btn-rounded, $btn-rounded-xs, $btn-rounded-sm, $btn-rounded-lg) {
+  padding: $btn-rounded;
+  border-radius: 30px;
+
+  &.btn-lg {
+    padding: $btn-rounded-lg;
+  }
+
+  &.btn-sm {
+    padding: $btn-rounded-sm;
+  }
+
+  &.btn-xs {
+    padding: $btn-rounded-xs;
+  }
+}

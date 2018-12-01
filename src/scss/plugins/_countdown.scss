@@ -1,0 +1,19 @@
+.countdown {
+  font-size: 30px;
+
+  div {
+    display: inline-block;
+    background-color: darken($dark, 3%);
+    padding: 16px;
+    font-size: 20px;
+    margin: 0 5px;
+    font-weight: 300;
+
+    span {
+      display: block;
+      font-size: 40px;
+      font-weight: bold;
+      color: rgba($white, .95);
+    }
+  }
+}

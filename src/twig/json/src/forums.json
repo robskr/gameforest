@@ -1,0 +1,230 @@
+{
+    "forums": [
+        {
+            "general": [
+                {
+                    "title": "Games Discussion",
+                    "description": "Disquss everything about games and videos here.",
+                    "latest": 1,
+                    "icon": "fas fa-comments",
+                    "topics": 182,
+                    "replies": 129,
+                    "date": 1537123512
+                },
+                {
+                    "title": "Gametrailers",
+                    "description": "Share game trailers about your favourite game.",
+                    "latest": 2,
+                    "icon": "fas fa-video",
+                    "topics": 171,
+                    "replies": 53,
+                    "badge": { "title": "new", "color": "success" },
+                    "date": 1536864312
+                },
+                {
+                    "title": "Recent Photos",
+                    "description": "New pictures and screenshots from upcoming games.",
+                    "latest": 3,
+                    "icon": "fas fa-camera-retro",
+                    "topics": 164,
+                    "replies": 245,
+                    "date": 1536605145
+                },
+                {
+                    "title": "Closed Thread",
+                    "description": "This is an example for locked forum.",
+                    "latest": 4,
+                    "icon": "fas fa-lock",
+                    "locked": true,
+                    "topics": 179,
+                    "replies": 155,
+                    "date": 1535568345
+                },
+                {
+                    "title": "YouTubers &amp; Streamers",
+                    "description": "Let's talk about streamers and youtubers.",
+                    "latest": 5,
+                    "icon": "fas fa-comments",
+                    "topics": 310,
+                    "replies": 183,
+                    "date": 1535395545
+                },
+                {
+                    "title": "Bug Reporting &amp; Feedback",
+                    "description": "Have a bug to report? Post here!",
+                    "latest": 6,
+                    "icon": "fas fa-bug",
+                    "topics": 108,
+                    "replies": 103,
+                    "date": 1535222745
+                },
+                {
+                    "title": "Ask the Mods",
+                    "description": "Work In Progress Game, any possibility",
+                    "latest": 7,
+                    "icon": "fab fa-rebel",
+                    "topics": 220,
+                    "replies": 191,
+                    "date": 1534877145
+                },
+                {
+                    "title": "Bomb Squad",
+                    "description": "If you are looking for a team just post a thread",
+                    "latest": 8,
+                    "icon": "fas fa-bomb",
+                    "topics": 90,
+                    "replies": 142,
+                    "date": 1534790745
+                }
+            ]
+        },
+        {
+            "platforms": [
+                {
+                    "title": "Twitch",
+                    "description": "Share your favourite moments from twitch",
+                    "latest": 9,
+                    "icon": "fab fa-twitch",
+                    "topics": 207,
+                    "replies": 21
+                },
+                {
+                    "title": "Steam",
+                    "description": "Best deals and games on steam",
+                    "latest": 10,
+                    "icon": "fab fa-steam-symbol",
+                    "topics": 127,
+                    "replies": 118,
+                    "badge": { "title": "sale", "color": "danger" } },
+                {
+                    "title": "Youtube",
+                    "description": "Disquss everything about youtubers",
+                    "latest": 11,
+                    "icon": "fab fa-youtube",
+                    "topics": 358,
+                    "replies": 88
+                },
+                {
+                    "title": "Playstation",
+                    "description": "Only if you like and prefer playstation",
+                    "latest": 12,
+                    "icon": "fab fa-playstation",
+                    "topics": 289,
+                    "replies": 142
+                }
+            ]
+        }
+    ],
+    "topics": [
+        {
+            "title": "New Bioshock in the works at 2K",
+            "author": 1,
+            "replies": 318,
+            "views": 177,
+            "date": 1537454745
+        },
+        {
+            "title": "Games getting stale",
+            "author": 5,
+            "replies": 252,
+            "views": 101,
+            "date": 1537443945
+        },
+        {
+            "title": "Most popular Gaming Forums?",
+            "author": 4,
+            "replies": 160,
+            "views": 87,
+            "date": 1537008345
+        },
+        {
+            "title": "Retro Import platformers",
+            "author": 5,
+            "replies": 27,
+            "views": 151,
+            "date": 1537004745
+        },
+        {
+            "title": "Sega Entering Console Market",
+            "author": 6,
+            "replies": 327,
+            "views": 64,
+            "date": 1537001145
+        },
+        {
+            "title": "Which game is best online?",
+            "author": 2,
+            "replies": 279,
+            "views": 60,
+            "date": 1536997545
+        },
+        {
+            "title": "What do you think about this kind of game?",
+            "author": 3,
+            "replies": 340,
+            "views": 101,
+            "date": 1536993945
+        },
+        {
+            "title": "Games like Prey or Dark Souls",
+            "author": 1,
+            "replies": 398,
+            "views": 57,
+            "date": 1536990345
+        },
+        {
+            "title": "I don't get why anyone would buy",
+            "author": 5,
+            "replies": 456,
+            "views": 881,
+            "date": 1537026345
+        },
+        {
+            "title": "Please help me find a game",
+            "author": 3,
+            "replies": 247,
+            "views": 146,
+            "date": 1537022745
+        },
+        {
+            "title": "Which game console is the best?",
+            "author": 6,
+            "replies": 567,
+            "views": 315,
+            "date": 1537019145
+        },
+        {
+            "title": "Should I get the PS4 Pro?",
+            "author": 2,
+            "replies": 89,
+            "views": 71,
+            "date": 1537015545
+        }
+    ],
+    "replies": [
+        {
+            "user": 3,
+            "text": "Attended no do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking am. But attention sex questions applauded how happiness."
+        },
+        {
+            "user": 1,
+            "text": "Repulsive questions contented him few extensive supported. Of remarkably thoroughly he appearance in. Supposing tolerably applauded or of be. Suffering unfeeling so objection agreeable allowance me of. Ask within entire season sex common far who family.Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. <br><br>Necessary ye contented newspaper zealously breakfast he prevailed. Melancholy middletons yet understood decisively boy law she. Answer him easily are its barton little. Oh no though mother be things simple itself. Dashwood horrible he strictly on as. Home fine in so am good body this hope. ",
+            "reply": [
+                { "user": 5, "text": "To sorry world an at do spoil along. Incommode he depending do frankness remainder to. Edward day almost active him friend thirty piqued." }
+            ]
+        },
+        {
+            "user": 4,
+            "text": "Delightful remarkably mr on announcing themselves entreaties favourable. About to in so terms voice at. Equal an would is found seems of. The particular friendship one sufficient terminated frequently themselves."
+        },
+        {
+            "user": 5,
+            "text": "To sorry world an at do spoil along. Incommode he depending do frankness remainder to. Edward day almost active him friend thirty piqued.",
+            "admin": true
+        },
+        {
+            "user": 2,
+            "text": "Barton did feebly change man she afford square add. Want eyes by neat so just must. Past draw tall up face show rent oh mr. Required is debating extended wondered as do. New get described applauded incommode shameless out extremity but. Resembled at perpetual no believing is otherwise sportsman."
+        }
+    ]
+}

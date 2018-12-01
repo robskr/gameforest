@@ -1,0 +1,189 @@
+// Heading
+.heading {
+  margin-bottom: 50px;
+  text-align: center;
+
+  .heading-icon i,
+  > i {
+    border: 3px solid $primary;
+    color: $primary;
+    width: 64px;
+    height: 64px;
+    line-height: 58px;
+    border-radius: 50%;
+    font-size: 28px;
+    display: inline-block;
+    margin-bottom: 20px;
+
+    &.bg-primary {
+      color: $white;
+      border-color: transparent;
+      box-shadow: 0 1px 2px 0 rgba($black, .35);
+    }
+  }
+
+  .heading-icon.square i {
+    border-radius: 0;
+    color: #464646;
+    background-color: #ececec;
+    border: 0;
+    line-height: 64px;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #acb0b5;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &-title {
+    font-weight: 700;
+  }
+
+  &-text {
+    margin-top: 10px;
+    color: #656565;
+  }
+
+  &-lead {
+    font-size: $lead-font-size;
+    font-weight: $lead-font-weight;
+    color: #626469;
+  }
+}
+
+.heading-left {
+  text-align: left;
+
+  > i {
+    text-align: center;
+  }
+
+  .heading-icon i {
+    width: 50px;
+    height: 50px;
+    line-height: 44px;
+    font-size: 24px;
+    margin-top: 5px;
+    text-align: center;
+  }
+}
+
+.heading-right {
+  text-align: right;
+
+  > i {
+    text-align: center;
+  }
+
+  .heading-icon i {
+    width: 50px;
+    height: 50px;
+    line-height: 44px;
+    font-size: 24px;
+    margin-top: 5px;
+    text-align: center;
+  }
+}
+
+.heading-bottom {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  padding-left: 240px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 0;
+
+  .verify {
+    background-color: $primary;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 12px;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .heading-title {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .badge {
+    margin: 0;
+    text-transform: inherit;
+    color: $warning;
+    font-weight: 500;
+  }
+
+  .heading-text {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.heading-left {
+  text-align: left;
+  margin-left: 0;
+
+  .heading-icon i {
+    text-align: center;
+    margin-right: 20px;
+  }
+}
+
+.subtitle {
+  border-left: 3px solid $primary;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  span {
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 5px;
+    color: lighten($body-color, 14%);
+  }
+}
+
+.heading-sm {
+  margin: 0;
+  text-align: left;
+  display: flex;
+
+  > i {
+    font-size: 28px;
+    margin-right: 13px;
+    border: 0;
+    width: auto;
+    height: auto;
+    line-height: 1.3;
+    margin-bottom: 0;
+    color: $headings-color;
+    border-radius: 0;
+  }
+
+  .heading-title {
+    margin: 0 0 5px 0;
+
+    i {
+      margin-right: 3px;
+    }
+  }
+
+  .heading-text {
+    margin: 0;
+    color: lighten($body-color, 5%);
+  }
+
+  .heading-lead {
+    margin-bottom: 0;
+  }
+}

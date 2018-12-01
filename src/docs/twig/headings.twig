@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Headings',
+    text: 'Documentation for Gameforest\'s heading component. Use it to display titles, icons and leading text for page sections.',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'A basic example for heading component. Select custom icons from the premium icon library and add it to the section.',
+            code: '<div class="heading">
+    <i class="ya ya-time-alarm"></i>
+    <h2 class="heading-title">Recent News at Gameforest</h2>
+    <p class="heading-lead">May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring.</p>
+</div>',
+        },
+        {
+            title: 'Alignment',
+            text: 'Set the heading position by using <code>.heading-left</code> or <code>.heading-right</code> class on the element.',
+            code: '<div class="heading heading-left">
+    <i class="ya ya-time-alarm"></i>
+    <h2 class="heading-title">Recent News at Gameforest</h2>
+    <p class="heading-lead">May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring.</p>
+</div>',
+        },
+        {
+            title: 'Small Heading',
+            text: 'Add smaller heading by using <code>.heading-sm</code> class on heading component like in the example below.',
+            code: '<div class="heading heading-sm">
+    <div>
+        <h2 class="heading-title h4">Forum Topic</h2>
+        <p class="heading-text">It is also possible to describe the forum topic in this small section.</p>
+    </div>
+    <div class="ml-auto">
+        <a class="btn btn-primary" href="forum-add.html" role="button">Add topic</a>
+    </div>
+</div>',
+        }
+    ]
+} %}

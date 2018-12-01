@@ -1,0 +1,30 @@
+// Video background
+.bg-video {
+  overflow: hidden;
+  position: relative;
+  background-color: $dark;
+
+  &-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .container {
+    z-index: 3;
+    position: relative;
+  }
+
+  .container-fluid {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    padding: 0;
+    display: flex;
+  }
+}

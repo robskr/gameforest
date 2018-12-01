@@ -1,0 +1,67 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Embed Component</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Embed</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card card-default">
+                        <h6 class="card-header">Embed video</h6>
+                        <div class="card-body">
+                            <div ya-embed="https://www.youtube.com/watch?v=vjF9GgrY9c0">
+                                <img src="https://img.youtube.com/vi/vjF9GgrY9c0/maxresdefault.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-default">
+                        <h6 class="card-header">Caption</h6>
+                        <div class="card-body">
+                            <div ya-embed="https://www.youtube.com/watch?v=dGl00hItvbw" ya-title="Forza Horizon 4 E3 2018: Announce Trailer" ya-length="15:05">
+                                <img src="https://img.youtube.com/vi/MVTHYMkDvIs/maxresdefault.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-default">
+                        <h6 class="card-header">Hide controls</h6>
+                        <div class="card-body">
+                            <div ya-embed="https://www.youtube.com/watch?v=Dw_oH5oiUSE" ya-option="controls: 0">
+                                <img src="https://img.youtube.com/vi/-DBi5FC1hXs/maxresdefault.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-default mb-0">
+                        <h6 class="card-header">Embed twitch</h6>
+                        <div class="card-body">
+                            <div ya-embed="https://clips.twitch.tv/EncouragingShakingPoxRalpherZ">
+                                <img src="https://img.youtube.com/vi/JJztiuDIKBo/maxresdefault.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

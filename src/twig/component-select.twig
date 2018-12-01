@@ -1,0 +1,118 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
+{% endblock %}
+
+{% block js %}
+    <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script>
+        $(function() {
+            $('.selectpicker').selectpicker();
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Select Component</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Select</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card card-default">
+                                <h6 class="card-header">Basic</h6>
+                                <div class="card-body">
+                                    <select class="selectpicker">
+                                        <option>Playstation 4</option>
+                                        <option>Xbox One</option>
+                                        <option>Steam</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card card-default">
+                                <h6 class="card-header">Multiple Select</h6>
+                                <div class="card-body">
+                                    <select class="selectpicker" multiple>
+                                        <option>Playstation 4</option>
+                                        <option>Xbox One</option>
+                                        <option>Steam</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card card-default mb-0">
+                                <h6 class="card-header">Live Search</h6>
+                                <div class="card-body">
+                                    <select class="selectpicker" data-live-search="true">
+                                        <option data-tokens="car sport">Forza Horizon 4</option>
+                                        <option>Tom Cancy's The Division 2</option>
+                                        <option>God of War</option>
+                                        <option>Spider-Man PS4</option>
+                                        <option>The Witcher 3: Wild Hunt</option>
+                                        <option>Anthem</option>
+                                        <option>Prey</option>
+                                        <option>Dark Souls Remastered</option>
+                                        <option>Far Cry 5</option>
+                                        <option>Call of Duty: Black Ops 4</option>
+                                        <option>Red Dead Redemption 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card card-default mb-0">
+                                <h6 class="card-header">Height</h6>
+                                <div class="card-body">
+                                    <select class="selectpicker" data-size="10">
+                                        <option>admin</option>
+                                        <option>Nathan Drake</option>
+                                        <option>Venom</option>
+                                        <option>Elizabeth</option>
+                                        <option>Trevor</option>
+                                        <option>Clark Kent</option>
+                                        <option>Aragorn</option>
+                                        <option>Michael</option>
+                                        <option>Max Payne</option>
+                                        <option>Shroud</option>
+                                        <option>Lara Croft</option>
+                                        <option>punisher</option>
+                                        <option>celebro</option>
+                                        <option>Hitman</option>
+                                        <option>Enigma</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

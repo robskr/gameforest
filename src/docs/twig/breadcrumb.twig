@@ -1,0 +1,62 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Breadcrumb',
+    text: 'Breadcrumbs are used to show taxonomical context on pages that are many levels deep in a site’s hierarchy. Breadcrumbs show and link to parent, grandparent, and sometimes great-grandparent pages. ',
+    bootstrap: 'components/breadcrumb',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'The Breadcrumb component consists of links, which are aligned side by side and separated by a divider. Add the <code>.breadcrumb</code> class to a <code>&lt;ol&gt;</code> element inside in a nav to define the component. ',
+            code: '<nav class="bg-white border-bottom px-4" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Games</a></li>
+        <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+    </ol>
+ </nav>',
+        },
+        {
+            title: 'Variations',
+            text: 'It is also possible to customize breadcrumb background by adding <code>.bg-*</code> class to the nav attribute.',
+            code: '<nav class="bg-dark px-4 mb-2" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Games</a></li>
+        <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+    </ol>
+</nav>
+
+<nav class="bg-purple px-4 mb-2" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Games</a></li>
+        <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+    </ol>
+</nav>
+
+<nav class="bg-primary px-4 mb-2" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Games</a></li>
+        <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+    </ol>
+</nav>
+
+<nav class="bg-danger px-4 mb-2" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Games</a></li>
+        <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+    </ol>
+</nav>',
+            pre: '<nav class="bg-*" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Games</a></li>
+        <li class="breadcrumb-item active" aria-current="page">The Witcher 3: Wild Hunt</li>
+    </ol>
+</nav>',
+        }
+    ]
+} %}

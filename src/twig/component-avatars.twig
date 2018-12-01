@@ -1,0 +1,134 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Avatar Component</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Avatars</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <h6 class="card-header">Avatars</h6>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-end">
+                                        <img class="avatar avatar-xl mr-3" src="img/user.jpg" alt="">
+                                        <img class="avatar avatar-lg mr-3" src="img/user.jpg" alt="">
+                                        <img class="avatar mr-3" src="img/user-1.jpg" alt="">
+                                        <img class="avatar avatar-md mr-3" src="img/user-1.jpg" alt="">
+                                        <img class="avatar avatar-sm mr-3" src="img/user-1.jpg" alt="">
+                                        <img class="avatar avatar-xs mr-3" src="img/user-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card card-default">
+                                <h6 class="card-header">Thumbnail</h6>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-end">
+                                        <img class="avatar-thumbnail avatar-xl mr-3" src="img/user.jpg" alt="">
+                                        <img class="avatar-thumbnail avatar-lg mr-3" src="img/user.jpg" alt="">
+                                        <img class="avatar-thumbnail mr-3" src="img/user-1.jpg" alt="">
+                                        <img class="avatar-thumbnail avatar-md mr-3" src="img/user-1.jpg" alt="">
+                                        <img class="avatar-thumbnail avatar-sm mr-3" src="img/user-1.jpg" alt="">
+                                        <img class="avatar-thumbnail avatar-xs mr-3" src="img/user-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card card-default">
+                                <h6 class="card-header">Tile</h6>
+                                <div class="card-body">
+                                    <a class="avatar-tile" href="#">
+                                        <img src="img/user-1.jpg" alt="">
+                                        <div>
+                                            <strong>Nathan Drake</strong>
+                                            <span class="d-block">@nathan</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card card-default">
+                                <h6 class="card-header">Card</h6>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a class="avatar-card" href="#">
+                                                <div>
+                                                    <div class="avatar-title">Smallville</div>
+                                                    <p class="avatar-text">gameforest author</p>
+                                                </div>
+                                                <img src="img/user-5.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card card-default mb-0">
+                                <h6 class="card-header">Stack</h6>
+                                <div class="card-body">
+                                    <div class="avatar-stack">
+                                        <img class="avatar" src="../img/user-1.jpg" alt="">
+                                        <img class="avatar" src="../img/user-2.jpg" alt="">
+                                        <img class="avatar" src="../img/user-3.jpg" alt="">
+                                        <img class="avatar" src="../img/user-4.jpg" alt="">
+                                        <img class="avatar" src="../img/user-5.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card card-default mb-0">
+                                <h6 class="card-header">Stack with text</h6>
+                                <div class="card-body">
+                                    <div class="avatar-stack">
+                                        <img class="avatar" src="../img/user-1.jpg" alt="">
+                                        <img class="avatar" src="../img/user-2.jpg" alt="">
+                                        <img class="avatar" src="../img/user-3.jpg" alt="">
+                                        <img class="avatar" src="../img/user-4.jpg" alt="">
+                                        <img class="avatar" src="../img/user-5.jpg" alt="">
+                                        <span class="avatar-text"><a href="profile.html">Elizabeth</a>,<a href="profile.html">Venom</a> and more 45 people like it.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

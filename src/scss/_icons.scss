@@ -1,0 +1,416 @@
+@font-face {
+	font-family: "nucleo";
+	src: url('../fonts/nucleo.eot');
+	src: url('../fonts/nucleo.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nucleo.ttf') format('truetype'),
+		url('../fonts/nucleo.woff') format('woff'),
+		url('../fonts/nucleo.svg#nucleo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+.ya {
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  font-family: 'nucleo';
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$ya-alert: unicode(E001);
+$ya-attachment: unicode(E002);
+$ya-bar: unicode(E003);
+$ya-bell: unicode(E004);
+$ya-blocks: unicode(E005);
+$ya-bold-down: unicode(E006);
+$ya-bold-left: unicode(E007);
+$ya-bold-right: unicode(E008);
+$ya-bold-up: unicode(E009);
+$ya-bulb: unicode(E00A);
+$ya-calendar: unicode(E00B);
+$ya-camera: unicode(E00C);
+$ya-caret-down: unicode(E00D);
+$ya-cash: unicode(E00E);
+$ya-check-circle: unicode(E00F);
+$ya-check: unicode(E010);
+$ya-clock: unicode(E011);
+$ya-code: unicode(E012);
+$ya-comment: unicode(E013);
+$ya-comments: unicode(E014);
+$ya-content: unicode(E015);
+$ya-credit-card: unicode(E016);
+$ya-delivery: unicode(E017);
+$ya-discord: unicode(E018);
+$ya-download: unicode(E019);
+$ya-edit: unicode(E01A);
+$ya-email: unicode(E01B);
+$ya-eye-closed: unicode(E01C);
+$ya-eye: unicode(E01D);
+$ya-facebook: unicode(E01E);
+$ya-flag: unicode(E01F);
+$ya-folder: unicode(E020);
+$ya-gear: unicode(E021);
+$ya-github: unicode(E022);
+$ya-heart-add: unicode(E023);
+$ya-heart-o: unicode(E024);
+$ya-heart: unicode(E025);
+$ya-helmet: unicode(E026);
+$ya-help-circle: unicode(E027);
+$ya-help: unicode(E028);
+$ya-hide: unicode(E029);
+$ya-image-add: unicode(E02A);
+$ya-image: unicode(E02B);
+$ya-instagram: unicode(E02C);
+$ya-like: unicode(E02D);
+$ya-link: unicode(E02E);
+$ya-list: unicode(E02F);
+$ya-lock: unicode(E030);
+$ya-login: unicode(E031);
+$ya-logout: unicode(E032);
+$ya-mark: unicode(E033);
+$ya-menu: unicode(E034);
+$ya-message: unicode(E035);
+$ya-minus: unicode(E036);
+$ya-next: unicode(E037);
+$ya-note: unicode(E038);
+$ya-paypal: unicode(E039);
+$ya-pen-2: unicode(E03A);
+$ya-pen: unicode(E03B);
+$ya-photo: unicode(E03C);
+$ya-pin-add: unicode(E03D);
+$ya-pin: unicode(E03E);
+$ya-play: unicode(E03F);
+$ya-player: unicode(E040);
+$ya-plus: unicode(E041);
+$ya-print: unicode(E042);
+$ya-random: unicode(E043);
+$ya-ranking: unicode(E044);
+$ya-refresh: unicode(E045);
+$ya-reply-all: unicode(E046);
+$ya-reply: unicode(E047);
+$ya-resize: unicode(E048);
+$ya-save: unicode(E049);
+$ya-search: unicode(E04A);
+$ya-share: unicode(E04B);
+$ya-shopping-cart: unicode(E04C);
+$ya-small-left: unicode(E04D);
+$ya-small-right: unicode(E04E);
+$ya-star-add: unicode(E04F);
+$ya-star-o: unicode(E050);
+$ya-star: unicode(E051);
+$ya-stock: unicode(E052);
+$ya-table: unicode(E053);
+$ya-tag: unicode(E054);
+$ya-time-alarm: unicode(E055);
+$ya-times-circle: unicode(E056);
+$ya-times: unicode(E057);
+$ya-trash: unicode(E058);
+$ya-twitch: unicode(E059);
+$ya-twitter: unicode(E05A);
+$ya-unlock: unicode(E05B);
+$ya-user-add: unicode(E05C);
+$ya-user: unicode(E05D);
+$ya-users: unicode(E05E);
+$ya-video: unicode(E05F);
+$ya-world: unicode(E060);
+$ya-youtube: unicode(E061);
+
+
+.ya-alert::before {
+  content: $ya-alert;
+}
+.ya-attachment::before {
+  content: $ya-attachment;
+}
+.ya-bar::before {
+  content: $ya-bar;
+}
+.ya-bell::before {
+  content: $ya-bell;
+}
+.ya-blocks::before {
+  content: $ya-blocks;
+}
+.ya-bold-down::before {
+  content: $ya-bold-down;
+}
+.ya-bold-left::before {
+  content: $ya-bold-left;
+}
+.ya-bold-right::before {
+  content: $ya-bold-right;
+}
+.ya-bold-up::before {
+  content: $ya-bold-up;
+}
+.ya-bulb::before {
+  content: $ya-bulb;
+}
+.ya-calendar::before {
+  content: $ya-calendar;
+}
+.ya-camera::before {
+  content: $ya-camera;
+}
+.ya-caret-down::before {
+  content: $ya-caret-down;
+}
+.ya-cash::before {
+  content: $ya-cash;
+}
+.ya-check-circle::before {
+  content: $ya-check-circle;
+}
+.ya-check::before {
+  content: $ya-check;
+}
+.ya-clock::before {
+  content: $ya-clock;
+}
+.ya-code::before {
+  content: $ya-code;
+}
+.ya-comment::before {
+  content: $ya-comment;
+}
+.ya-comments::before {
+  content: $ya-comments;
+}
+.ya-content::before {
+  content: $ya-content;
+}
+.ya-credit-card::before {
+  content: $ya-credit-card;
+}
+.ya-delivery::before {
+  content: $ya-delivery;
+}
+.ya-discord::before {
+  content: $ya-discord;
+}
+.ya-download::before {
+  content: $ya-download;
+}
+.ya-edit::before {
+  content: $ya-edit;
+}
+.ya-email::before {
+  content: $ya-email;
+}
+.ya-eye-closed::before {
+  content: $ya-eye-closed;
+}
+.ya-eye::before {
+  content: $ya-eye;
+}
+.ya-facebook::before {
+  content: $ya-facebook;
+}
+.ya-flag::before {
+  content: $ya-flag;
+}
+.ya-folder::before {
+  content: $ya-folder;
+}
+.ya-gear::before {
+  content: $ya-gear;
+}
+.ya-github::before {
+  content: $ya-github;
+}
+.ya-heart-add::before {
+  content: $ya-heart-add;
+}
+.ya-heart-o::before {
+  content: $ya-heart-o;
+}
+.ya-heart::before {
+  content: $ya-heart;
+}
+.ya-helmet::before {
+  content: $ya-helmet;
+}
+.ya-help-circle::before {
+  content: $ya-help-circle;
+}
+.ya-help::before {
+  content: $ya-help;
+}
+.ya-hide::before {
+  content: $ya-hide;
+}
+.ya-image-add::before {
+  content: $ya-image-add;
+}
+.ya-image::before {
+  content: $ya-image;
+}
+.ya-instagram::before {
+  content: $ya-instagram;
+}
+.ya-like::before {
+  content: $ya-like;
+}
+.ya-link::before {
+  content: $ya-link;
+}
+.ya-list::before {
+  content: $ya-list;
+}
+.ya-lock::before {
+  content: $ya-lock;
+}
+.ya-login::before {
+  content: $ya-login;
+}
+.ya-logout::before {
+  content: $ya-logout;
+}
+.ya-mark::before {
+  content: $ya-mark;
+}
+.ya-menu::before {
+  content: $ya-menu;
+}
+.ya-message::before {
+  content: $ya-message;
+}
+.ya-minus::before {
+  content: $ya-minus;
+}
+.ya-next::before {
+  content: $ya-next;
+}
+.ya-note::before {
+  content: $ya-note;
+}
+.ya-paypal::before {
+  content: $ya-paypal;
+}
+.ya-pen-2::before {
+  content: $ya-pen-2;
+}
+.ya-pen::before {
+  content: $ya-pen;
+}
+.ya-photo::before {
+  content: $ya-photo;
+}
+.ya-pin-add::before {
+  content: $ya-pin-add;
+}
+.ya-pin::before {
+  content: $ya-pin;
+}
+.ya-play::before {
+  content: $ya-play;
+}
+.ya-player::before {
+  content: $ya-player;
+}
+.ya-plus::before {
+  content: $ya-plus;
+}
+.ya-print::before {
+  content: $ya-print;
+}
+.ya-random::before {
+  content: $ya-random;
+}
+.ya-ranking::before {
+  content: $ya-ranking;
+}
+.ya-refresh::before {
+  content: $ya-refresh;
+}
+.ya-reply-all::before {
+  content: $ya-reply-all;
+}
+.ya-reply::before {
+  content: $ya-reply;
+}
+.ya-resize::before {
+  content: $ya-resize;
+}
+.ya-save::before {
+  content: $ya-save;
+}
+.ya-search::before {
+  content: $ya-search;
+}
+.ya-share::before {
+  content: $ya-share;
+}
+.ya-shopping-cart::before {
+  content: $ya-shopping-cart;
+}
+.ya-small-left::before {
+  content: $ya-small-left;
+}
+.ya-small-right::before {
+  content: $ya-small-right;
+}
+.ya-star-add::before {
+  content: $ya-star-add;
+}
+.ya-star-o::before {
+  content: $ya-star-o;
+}
+.ya-star::before {
+  content: $ya-star;
+}
+.ya-stock::before {
+  content: $ya-stock;
+}
+.ya-table::before {
+  content: $ya-table;
+}
+.ya-tag::before {
+  content: $ya-tag;
+}
+.ya-time-alarm::before {
+  content: $ya-time-alarm;
+}
+.ya-times-circle::before {
+  content: $ya-times-circle;
+}
+.ya-times::before {
+  content: $ya-times;
+}
+.ya-trash::before {
+  content: $ya-trash;
+}
+.ya-twitch::before {
+  content: $ya-twitch;
+}
+.ya-twitter::before {
+  content: $ya-twitter;
+}
+.ya-unlock::before {
+  content: $ya-unlock;
+}
+.ya-user-add::before {
+  content: $ya-user-add;
+}
+.ya-user::before {
+  content: $ya-user;
+}
+.ya-users::before {
+  content: $ya-users;
+}
+.ya-video::before {
+  content: $ya-video;
+}
+.ya-world::before {
+  content: $ya-world;
+}
+.ya-youtube::before {
+  content: $ya-youtube;
+}

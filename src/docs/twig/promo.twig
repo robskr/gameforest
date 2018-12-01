@@ -1,0 +1,82 @@
+{% extends "base.twig" %}
+
+{% set page = {
+    title: 'Promo',
+    text: 'Documentation for built in promo component. Add promo section to the page with custom heading and button element.',
+    blocks: [
+        {
+            title: 'Example',
+            text: 'Add promo component with customized section like in the example below.',
+            code: '<section class="bg-primary py-0">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="promo">
+                    <h2 class="promo-title h4">Build your professional gaming website with Gameforest</h2>
+                    <a class="btn btn-outline-light ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>',
+        },
+        {
+            title: 'Position',
+            text: 'It is also possible to add custom position to the promo title by usign bootstrap utils.',
+            code: '<section class="bg-primary py-0">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="promo px-4">
+                    <h2 class="promo-title d-block mb-3 h5">Guest it he tears aware as. Make my no cold of need. He been past in by my hard. Warmly thrown oh he common future.</h2>
+                    <a class="btn btn-outline-light ml-4" href="#" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>',
+        },
+        {
+            title: 'Variations',
+            text: 'Included several predefined backgrounds for variations. Use any of the available background classes to create a custom promo.',
+            code: '<section class="bg-primary py-0">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="promo">
+                    <h2 class="promo-title h4">Build your professional gaming website with Gameforest</h2>
+                    <a class="btn btn-outline-light ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-dark py-0">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="promo">
+                    <h2 class="promo-title h4">Build your professional gaming website with Gameforest</h2>
+                    <a class="btn btn-outline-light ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-danger py-0">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="promo">
+                    <h2 class="promo-title h4">Build your professional gaming website with Gameforest</h2>
+                    <a class="btn btn-outline-light ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>',
+        }
+    ]
+} %}
