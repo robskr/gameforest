@@ -18,4 +18,4 @@ Live examples for theme components and gameforest documentation is available in 
 If you found a bug what is related to gameforest then you are able to report it by [opening a new issue](https://github.com/yakuthemes/gameforest/issues/new). It can be helpful if you mention browser version and the device type where was the issue detected.
 
 ## License
-Gameforest is under GPLv3 [themeforest](https://themeforest.net/licenses/standard) license. It is not possible to use the theme for unlimited projects and required to have a license for each projects.
+Gameforest is under [themeforest](https://themeforest.net/licenses/standard) license. It is not possible to use the theme for unlimited projects and required to have a license for each single project.
