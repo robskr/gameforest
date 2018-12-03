@@ -1,5 +1,7 @@
 ## Gameforest Bootstrap Gaming Theme
+[![bootstrap](https://img.shields.io/badge/gamestrap-5.0.0-blue.svg?longCache=true&style=flat-square)](https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730)
 [![bootstrap](https://img.shields.io/badge/bootstrap-4.1.3-blue.svg?longCache=true&style=flat-square)](https://github.com/twbs/bootstrap)
+
 **Gameforest** is a bootstrap compatible gaming theme what is perfect way to build your own gaming website. Built with **[Bootstrap 4](https://github.com/twbs/bootstrap)**  ─ the world’s most popular framework for building responsive, mobile-first sites and applications.
 
 ## Installation
