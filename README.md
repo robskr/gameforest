@@ -1,6 +1,9 @@
 ## Gameforest Bootstrap Gaming Theme
-**Gameforest** is a bootstrap gaming theme what is perfect to build your own custom gaming website. Built with Bootstrap 4 ─ the world’s most popular framework for building responsive, mobile-first sites and applications. Inside you’ll find high quality HTML, CSS, SASS, TWIG and JavaScript files to make your own gaming website easier than ever.
+[![bootstrap](https://img.shields.io/badge/bootstrap-4.1.3-blue.svg?longCache=true&style=flat-square)](https://github.com/twbs/bootstrap)
+**Gameforest** is a bootstrap compatible gaming theme what is perfect way to build your own gaming website. Built with **[Bootstrap 4](https://github.com/twbs/bootstrap)**  ─ the world’s most popular framework for building responsive, mobile-first sites and applications.
 
 ## Installation
-In order to use the theme features you will need to install npm packages by using yarn. Run the following command to install packages.
-$ yarn
+In order to use the theme features you will need to install npm packages by using yarn. After you installed packages with yarn just run the following command to start a new development environment.
+```
+yarn start
+```
