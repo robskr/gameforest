@@ -15,4 +15,4 @@ It will open the compiled html files in a new browser tab. You just have to edit
 Live examples and gameforest documentation is available in this repository under the docs folder.
 
 ## Bug report
-If you found a bug what is related to gameforest then you are able to report it by [opening a new issue](https://github.com/yakuthemes/gameforest/issues/new). It can be helpful if you mention browser version and the device type.
+If you found a bug what is related to gameforest then you are able to report it by [opening a new issue](https://github.com/yakuthemes/gameforest/issues/new). It can be helpful if you mention browser version and the device type where was the issue detected.
