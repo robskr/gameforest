@@ -9,10 +9,13 @@ In order to use theme features you have to install npm packages by using [yarn](
 ```
 yarn start
 ```
-It will open the compiled html files in a new browser tab. You just have to edit required scss, js or twig files and the tab will be refreshed automatically.
+It will open the compiled html files in a new browser tab. You just have to edit required scss, js or twig files and the tab will be refreshed by automatically.
 
 ## Documentation
-Live examples and gameforest documentation is available in this repository under the docs folder.
+Live examples for theme components and gameforest documentation is available in this repository under the docs folder. It is also possible to access documentation from localhost by typing /docs after url.
 
 ## Bug report
 If you found a bug what is related to gameforest then you are able to report it by [opening a new issue](https://github.com/yakuthemes/gameforest/issues/new). It can be helpful if you mention browser version and the device type where was the issue detected.
+
+## License
+Gameforest is under GPLv3 [themeforest](https://themeforest.net/licenses/standard) license. It is not possible to use the theme for unlimited projects and required to have a license for each projects.
