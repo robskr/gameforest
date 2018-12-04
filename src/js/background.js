@@ -1,142 +1,135 @@
+/**
+ * --------------------------------------------------------------------------
+ * Gameforest Bootstrap Gaming Theme: background.js
+ * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
+ *
+ * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
+ * @version   5.0.0
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
+ * --------------------------------------------------------------------------
+ */
+
 import Helpers from './helpers'
 
 /**
- * Gameforest Bootstrap Gaming Theme
- * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
- *
- * Licensed under The GPLv3 License
- * For full copyright and license information, please see the LICENSE.md
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
- * @link      https://yakuthemes.com
- * @since     5.0.0
- * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
+ * ------------------------------------------------------------------------
+ * Constants
+ * ------------------------------------------------------------------------
  */
 
-const Background = (() => {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
+const DATA                   = 'ya-background'
+const DATA_KEY               = `[${DATA}]`
+const VERSION                = '1.0.0'
 
-    const DATA                   = 'ya-background'
-    const DATA_KEY               = `[${DATA}]`
-    const VERSION                = '1.0.0'
+const ClassName = {
+    EMBED               : 'bg-video',
+    EMBED_ITEM          : 'bg-video-item',
+    CONTAINER           : 'container-fluid'
+}
 
-    const ClassName = {
-        EMBED               : 'bg-video',
-        EMBED_ITEM          : 'bg-video-item',
-        CONTAINER           : 'container-fluid'
+/**
+ * ------------------------------------------------------------------------
+ * Class Definition
+ * ------------------------------------------------------------------------
+ */
+
+class Background extends Helpers {
+    constructor(element) {
+        super()
+        this._element       = element
+        this._attr          = element.getAttribute(DATA)
+        this._iframe        = document.createElement('iframe')
     }
 
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+    static get VERSION() {
+        return VERSION
+    }
 
-    class Background extends Helpers {
-        constructor(element) {
-            super()
-            this._element       = element
-            this._attr          = element.getAttribute(DATA)
-            this._iframe        = document.createElement('iframe')
+    _calc(el, video) {
+        // numbers
+        const num = {
+            calc    : 0.2,
+            half    : 2,
+            x       : 16,
+            y       : 9
         }
+        const ratio         = num.x / num.y
+        const abundance     = this._element.offsetHeight * num.calc
 
-        static get VERSION() {
-            return VERSION
-        }
+        // el parameters
+        el.width            = this._element.offsetWidth
+        el.outerheight      = this._element.offsetHeight
+        el.height           = this._element.offsetHeight + abundance
 
-        _calc(el, video) {
-            // numbers
-            const num = {
-                calc    : 0.2,
-                half    : 2,
-                x       : 16,
-                y       : 9
-            }
-            const ratio         = num.x / num.y
-            const abundance     = this._element.offsetHeight * num.calc
+        // video paramaters
+        video.width         = el.width
+        video.height        = Math.ceil(video.width / ratio)
+        video.marginTop     = Math.ceil(-((video.height - el.outerheight) / num.half))
+        video.marginLeft    = 0
 
-            // el parameters
-            el.width            = this._element.offsetWidth
-            el.outerheight      = this._element.offsetHeight
-            el.height           = this._element.offsetHeight + abundance
-
-            // video paramaters
-            video.width         = el.width
-            video.height        = Math.ceil(video.width / ratio)
-            video.marginTop     = Math.ceil(-((video.height - el.outerheight) / num.half))
-            video.marginLeft    = 0
-
-            // element height is smaller
-            if (video.height < el.height) {
-                video.marginTop   = Math.ceil(-((el.height - el.outerheight) / num.half))
-                video.height      = el.height
-                video.width       = Math.ceil(video.height * ratio)
-                video.marginLeft  = Math.ceil(-((video.width - el.width) / num.half))
-            }
-        }
-
-        // private
-        _add(src) {
-            // create container
-            const container = document.createElement('div')
-            container.className = ClassName.CONTAINER
-
-            const el            = {}
-            const video         = {}
-
-            // calculate
-            this._calc(el, video)
-
-            // set style
-            this._iframe.setAttribute('style', `width: ${video.width}px;height: ${video.height}px;margin-top: ${video.marginTop}px;margin-left: ${video.marginLeft}px`)
-
-            this.loopArray(src.getAttribute('ya-option'), this.options)
-            if (this.options.opacity) {
-                this._iframe.style.cssText += `opacity: ${this.options.opacity}`
-            }
-
-            // iframe
-            this._iframe.className    = ClassName.EMBED_ITEM
-            this._iframe.src          = this.video(src)
-            this._iframe.allow        = 'autoplay; encrypted-media'
-
-            // add class
-            this._element.classList.add(ClassName.EMBED)
-
-            // append to elements
-            this._element.appendChild(container)
-            this._element.appendChild(this._iframe)
-        }
-
-        _get() {
-            return this._add(this._element)
-        }
-
-        // static
-        static _init() {
-            const data = new Background(this)
-            data._get()
+        // element height is smaller
+        if (video.height < el.height) {
+            video.marginTop   = Math.ceil(-((el.height - el.outerheight) / num.half))
+            video.height      = el.height
+            video.width       = Math.ceil(video.height * ratio)
+            video.marginLeft  = Math.ceil(-((video.width - el.width) / num.half))
         }
     }
 
-    /**
-     * ------------------------------------------------------------------------
-     * Load Event
-     * ------------------------------------------------------------------------
-    */
+    // private
+    _add(src) {
+        // create container
+        const container = document.createElement('div')
+        container.className = ClassName.CONTAINER
 
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll(DATA_KEY).forEach((el) => {
-            Background._init.call(el)
-        })
+        const el            = {}
+        const video         = {}
+
+        // calculate
+        this._calc(el, video)
+
+        // set style
+        this._iframe.setAttribute('style', `width: ${video.width}px;height: ${video.height}px;margin-top: ${video.marginTop}px;margin-left: ${video.marginLeft}px`)
+
+        this.loopArray(src.getAttribute('ya-option'), this.options)
+        if (this.options.opacity) {
+            this._iframe.style.cssText += `opacity: ${this.options.opacity}`
+        }
+
+        // iframe
+        this._iframe.className    = ClassName.EMBED_ITEM
+        this._iframe.src          = this.video(src)
+        this._iframe.allow        = 'autoplay; encrypted-media'
+
+        // add class
+        this._element.classList.add(ClassName.EMBED)
+
+        // append to elements
+        this._element.appendChild(container)
+        this._element.appendChild(this._iframe)
+    }
+
+    _get() {
+        return this._add(this._element)
+    }
+
+    // static
+    static _init() {
+        const data = new Background(this)
+        data._get()
+    }
+}
+
+/**
+ * ------------------------------------------------------------------------
+ * Load Event
+ * ------------------------------------------------------------------------
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll(DATA_KEY).forEach((el) => {
+        Background._init.call(el)
     })
-
-    return Background
-})()
+})
 
 export default Background

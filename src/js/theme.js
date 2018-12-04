@@ -1,73 +1,66 @@
+/**
+ * --------------------------------------------------------------------------
+ * Gameforest Bootstrap Gaming Theme: theme.js
+ * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
+ *
+ * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
+ * @version   5.0.0
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
+ * --------------------------------------------------------------------------
+ */
+
 import $ from 'jquery'
 import WebFont from 'webfontloader'
 
 /**
- * Gameforest Bootstrap Gaming Theme
- * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
- *
- * Licensed under The GPLv3 License
- * For full copyright and license information, please see the LICENSE.md
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
- * @link      https://yakuthemes.com
- * @since     5.0.0
- * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
+ * ------------------------------------------------------------------------
+ * Constants
+ * ------------------------------------------------------------------------
  */
 
-const Theme = (() => {
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
+const FONTS  = 'Roboto:300,400,500,700,900'
 
-    const FONTS  = 'Roboto:300,400,500,700,900'
+/**
+ * ------------------------------------------------------------------------
+ * Class Definition
+ * ------------------------------------------------------------------------
+ */
 
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
-    class Theme {
-        _bootstrap() {
-            $('[data-toggle="tooltip"]').tooltip()
-            $('[data-toggle="popover"]').popover()
-        }
-
-        _webfont() {
-            return WebFont.load({
-                google: {
-                    families: [FONTS]
-                }
-            })
-        }
-
-        // private
-        _load() {
-            this._bootstrap()
-            this._webfont()
-        }
-
-        // static
-        static _init() {
-            const data = new Theme()
-            data._load()
-        }
+class Theme {
+    _bootstrap() {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
     }
 
-    /**
-     * ------------------------------------------------------------------------
-     * Load Event
-     * ------------------------------------------------------------------------
-    */
+    _webfont() {
+        return WebFont.load({
+            google: {
+                families: [FONTS]
+            }
+        })
+    }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        Theme._init.call()
-    })
+    // private
+    _load() {
+        this._bootstrap()
+        this._webfont()
+    }
 
-    return Theme
-})(WebFont)
+    // static
+    static _init() {
+        const data = new Theme()
+        data._load()
+    }
+}
+
+/**
+ * ------------------------------------------------------------------------
+ * Load Event
+ * ------------------------------------------------------------------------
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    Theme._init.call()
+})
 
 export default Theme
