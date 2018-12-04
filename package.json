@@ -15,8 +15,9 @@
         "docs": "browser-sync start --server --startPath docs",
         "docs:dev": "cd src/docs && gulp"
     },
+    "homepage": "https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730",
     "author": "https://yakuthemes.com",
-    "license": "GPLv3",
+    "license": "GPL-3.0",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/yakuthemes/gameforest.git"
