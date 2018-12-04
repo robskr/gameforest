@@ -29,6 +29,7 @@ const twig            = require('gulp-twig')
 const prettify        = require('gulp-jsbeautifier')
 const merge           = require('gulp-merge-json')
 const changed         = require('gulp-changed')
+const clean           = require('gulp-clean')
 
 /**
  * ------------------------------------------------------------------------
@@ -52,21 +53,22 @@ const config = {
 
 const path = {
     src: {
-        scss:   './src/scss/**/*.scss',
-        js:     './src/js/**/*.js',
-        svg:    './src/svg/*.svg',
-        json:   './src/twig/json/src/**/*.json',
-        img:    './src/img/*',
-        twig:   './src/twig/*.twig',
-        views: './src/twig/views/*.twig'
+        scss:    './src/scss/**/*.scss',
+        js:      './src/js/**/*.js',
+        svg:     './src/svg/*.svg',
+        json:    './src/twig/json/src/**/*.json',
+        img:     './src/img/*',
+        twig:    './src/twig/*.twig',
+        views:   './src/twig/views/*.twig'
     },
     dist: {
-        css:    './dist/css',
-        js:     './dist/js',
-        svg:    './dist/fonts',
-        json:   './src/twig/json/dist',
-        img:    './dist/img',
-        html:   './dist'
+        css:     './dist/css',
+        js:      './dist/js',
+        svg:     './dist/fonts',
+        json:    './src/twig/json/dist',
+        img:     './dist/img',
+        html:    './dist',
+        plugins: './dist/plugins/*'
     }
 }
 
@@ -254,6 +256,11 @@ function browser() {
  * ------------------------------------------------------------------------
  */
 
+function clear() {
+    return gulp.src(path.dist.plugins, {read: false})
+        .pipe(clean());
+}
+
 function bootstrap()        { return gulp.src('./node_modules/bootstrap/dist/**/*').pipe(gulp.dest('./dist/plugins/bootstrap')) }
 function jquery()           { return gulp.src('./node_modules/jquery/dist/**/*').pipe(gulp.dest('./dist/plugins/jquery')) }
 function popper()           { return gulp.src('./node_modules/popper.js/dist/umd/**/*').pipe(gulp.dest('./dist/plugins/popper')) }
@@ -269,7 +276,7 @@ function raphael()          { return gulp.src(['./node_modules/raphael/raphael.j
 function parallax()         { return gulp.src('./node_modules/jquery-parallax.js/*').pipe(gulp.dest('./dist/plugins/parallax')) }
 function countdown()        { return gulp.src('./node_modules/jquery-countdown/dist/*').pipe(gulp.dest('./dist/plugins/jquery-countdown')) }
 function nouislider()       { return gulp.src('./node_modules/nouislider/distribute/*').pipe(gulp.dest('./dist/plugins/nouislider')) }
-function lazysizes()       { return gulp.src(['./node_modules/lazysizes/lazysizes.js', './node_modules/lazysizes/lazysizes.min.js']).pipe(gulp.dest('./dist/plugins/lazysizes')) }
+function lazysizes()        { return gulp.src(['./node_modules/lazysizes/lazysizes.js', './node_modules/lazysizes/lazysizes.min.js']).pipe(gulp.dest('./dist/plugins/lazysizes')) }
 
 /**
  * ------------------------------------------------------------------------
@@ -285,7 +292,7 @@ const build = {
     html:        html,
     html_all:    gulp.series(json, html_all),
     icon:        gulp.series(svg, svg_copy),
-    plugins:     gulp.series(bootstrap, jquery, popper, fontawesome, ckeditor, easypiechart, bootstrap_select, flatpickr, sticky, datatables, morris, raphael, parallax, countdown, nouislider, lazysizes)
+    plugins:     gulp.series(clear, bootstrap, jquery, popper, fontawesome, ckeditor, easypiechart, bootstrap_select, flatpickr, sticky, datatables, morris, raphael, parallax, countdown, nouislider, lazysizes)
 }
 
 /**
