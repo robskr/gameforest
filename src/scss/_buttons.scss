@@ -43,6 +43,12 @@
   @include button-variant-theme($btn-light-color, $btn-light-border, $btn-light-bg);
 }
 
+// Button lighten
+.btn-lighten {
+  @include button-variant-theme($btn-lighten-color, $btn-lighten-border, $btn-lighten-bg);
+  box-shadow: none !important;
+}
+
 // Button default
 .btn-default {
   @include button-variant-theme($btn-default-color, $btn-default-border, $btn-default-bg);
