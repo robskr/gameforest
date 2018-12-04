@@ -12,7 +12,10 @@ yarn start
 It will open the compiled html files in a new browser tab. You just have to edit required scss, js or twig files and the tab will be refreshed by automatically.
 
 ## Documentation
-Live examples for theme components and gameforest documentation is available in this repository under the docs folder. It is also possible to access documentation from localhost by typing `http://localhost:3000/docs` in your browser.
+Live examples for theme components and gameforest documentation is available in this repository under the docs folder. It is also possible to access documentation from localhost by typing `http://localhost:3000/docs` in your browser or run the following command line.
+```
+yarn docs
+```
 
 ## Bug report
 If you found a bug what is related to gameforest then you are able to report it by [opening a new issue](https://github.com/yakuthemes/gameforest/issues/new). It can be helpful if you mention browser version and the device type where was the issue detected.
