@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('webfontloader')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'webfontloader'], factory) :
-	(factory((global.gamestrap = {}),global.jQuery,global.WebFont));
+	(factory((global.gameforest = {}),global.jQuery,global.WebFont));
 }(this, (function (exports,$,WebFont) { 'use strict';
 
 $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
@@ -39,7 +39,7 @@ function _inheritsLoose(subClass, superClass) {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 var Helpers = function () {
@@ -193,7 +193,7 @@ var Helpers = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -340,7 +340,7 @@ var Background = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -464,7 +464,7 @@ var Carousel = function ($$$1) {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -544,7 +544,7 @@ var Disqus = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -712,7 +712,7 @@ var Embed = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -791,7 +791,7 @@ var Facebook = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 var Icons = function () {
@@ -922,7 +922,7 @@ var Icons = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -1185,7 +1185,7 @@ var Lightbox = function ($$$1) {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -1307,7 +1307,7 @@ var Navbar = function ($$$1) {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -1447,7 +1447,7 @@ var Notify = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 var Progress = function () {
@@ -1537,7 +1537,7 @@ var Progress = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -1640,7 +1640,7 @@ var Sticky = function ($$$1) {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
@@ -1735,7 +1735,7 @@ var Style = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 var Svg = function () {
@@ -1819,7 +1819,7 @@ var Svg = function () {
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 

@@ -4,7 +4,7 @@
  *
  * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
  * @link      https://yakuthemes.com
- * @since     1.0.0
+ * @since     5.0.0
  * @license   GPLv3 License
  */
 

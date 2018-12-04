@@ -69,8 +69,8 @@
                                 <div class="card-footer">
                                     <span><i class="ya ya-calendar"></i> {{ "now"|date_modify("-"~ loop.index ~" day")|date("M d, Y") }}</span>
                                     <div class="ml-auto">
-                                        <a href="#"><i class="ya ya-comment"></i> {{ random(70) }}</a>
-                                        <a href="#"><i class="ya ya-heart-o"></i> {{ random(70) }}</a>
+                                        <a href="#"><i class="ya ya-comment"></i> {{ game.comments }}</a>
+                                        <a href="#"><i class="ya ya-heart-o"></i> {{ game.like }}</a>
                                     </div>
                                 </div>
                             </div>
