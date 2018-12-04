@@ -67,7 +67,7 @@
                                     <p class="card-text">{{ game.text|slice(0, 120) }}...</p>
                                 </div>
                                 <div class="card-footer">
-                                    <span><i class="ya ya-calendar"></i> {{ "now"|date_modify("-"~ loop.index ~" day")|date("M d, Y") }}</span>
+                                    <span><i class="ya ya-calendar"></i> {{ game.date|date("M d, Y") }}</span>
                                     <div class="ml-auto">
                                         <a href="#"><i class="ya ya-comment"></i> {{ game.comments }}</a>
                                         <a href="#"><i class="ya ya-heart-o"></i> {{ game.like }}</a>
