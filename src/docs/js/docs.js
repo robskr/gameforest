@@ -1,6 +1,8 @@
 (function($) {
 	"use strict";
 
+    window.path = '../dist/plugins';
+
     $('.nav-link').on('click', function (event) {
         var target = $(this.getAttribute('href'));
         var num = 500;
