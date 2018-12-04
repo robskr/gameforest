@@ -325,42 +325,37 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-9">
-                            <div class="card card-default mb-4">
-                                <h6 class="card-header"><i class="ya ya-user mr-1"></i> Profile Information</h6>
-                                <div class="card-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="username">Username</label>
-                                            <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter Username">
-                                            <small id="usernameHelp" class="form-text text-muted">This given name will be visible on community pages.</small>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <div class="input-group">
-                                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Add Email">
-                                                <div class="input-group-append">
-                                                    <button type="button" class="btn btn-light btn-icon border-left-0" data-toggle="tooltip" title="Enter a valid email address."><i class="ya ya-help-circle"></i></button>
-                                                </div>
-                                            </div>
-                                            <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="url">URL</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">https://yakuthemes.com/</span>
-                                                </div>
-                                                <input type="text" class="form-control" id="url" placeholder="username" aria-describedby="basic-addon3">
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-0">
-                                            <label for="aboutMe">About me</label>
-                                            <textarea class="form-control" id="aboutMe" aria-describedby="aboutMeHelp" rows="3" placeholder="Short description"></textarea>
-                                            <small id="aboutMeHelp" class="form-text text-muted">A short description about yourself and your duty. You can @mention other users and organizations to link to them.</small>
-                                        </div>
+                            <form>
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter Username">
+                                    <small id="usernameHelp" class="form-text text-muted">This given name will be visible on community pages.</small>
                                 </div>
-                            </div>
-                            <button type="button" class="btn btn-secondary disabled">Update profile</button>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Add Email">
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-light btn-icon border-left-0" data-toggle="tooltip" title="Enter a valid email address."><i class="ya ya-help-circle"></i></button>
+                                        </div>
+                                    </div>
+                                    <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url">URL</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">https://yakuthemes.com/</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="url" placeholder="username" aria-describedby="basic-addon3">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="aboutMe">About me</label>
+                                    <textarea class="form-control" id="aboutMe" aria-describedby="aboutMeHelp" rows="3" placeholder="Short description"></textarea>
+                                    <small id="aboutMeHelp" class="form-text text-muted">A short description about yourself and your duty. You can @mention other users and organizations to link to them.</small>
+                                </div>
+                                <button type="button" class="btn btn-secondary disabled">Update profile</button>
                             </form>
                             <!-- end form -->
                             <form class="mt-5">
@@ -391,8 +386,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="card-footer">
+                                        <button type="button" class="btn btn-danger">Change password</button>
+                                    </div>
                                 </div>
-                                <button type="button" class="btn btn-danger">Change password</button>
                             </form>
                             <!-- end form -->
                         </div>
