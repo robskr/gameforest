@@ -330,14 +330,14 @@ function _inheritsLoose(subClass, superClass) {
 }
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: helpers.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 
 /**
@@ -483,14 +483,14 @@ function () {
 }();
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: background.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -624,14 +624,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: carousel.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -742,14 +742,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: disqus.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -816,14 +816,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: embed.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -978,14 +978,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: facebook.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -1051,14 +1051,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: icons.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 
 /**
@@ -1177,14 +1177,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: lightbox.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -1434,14 +1434,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: navbar.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -1550,14 +1550,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: notify.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -1684,14 +1684,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: progress.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 
 /**
@@ -1769,14 +1769,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: sticky.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -1866,14 +1866,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: style.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------
@@ -1955,14 +1955,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: svg.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 
 /**
@@ -2034,14 +2034,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: theme.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 /**
  * ------------------------------------------------------------------------

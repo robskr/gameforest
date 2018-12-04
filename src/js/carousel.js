@@ -1,12 +1,12 @@
 /**
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: carousel.js
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * --------------------------------------------------------------------------
+ * ---------------------------------------------------------------------------------------
  */
 
 import $ from 'jquery'
