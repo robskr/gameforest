@@ -9,30 +9,30 @@
  * ---------------------------------------------------------------------------------------
  */
 
-const gulp            = require('gulp');
-const browserSync     = require('browser-sync');
-const stylelint       = require('gulp-stylelint');
-const sass            = require('gulp-sass');
-const postcss         = require('gulp-postcss');
-const sourcemaps      = require('gulp-sourcemaps');
-const iconfont        = require('gulp-iconfont');
-const imagemin        = require('gulp-image');
-const iconfontcss     = require('gulp-iconfont-css');
-const rollup          = require('rollup-stream');
-const uglify          = require('gulp-uglify-es').default;
-const source          = require('vinyl-source-stream');
-const eslint          = require('gulp-eslint');
-const concat          = require('gulp-concat');
-const fs              = require('fs');
-const rename          = require('gulp-rename');
-const twig            = require('gulp-twig');
-const prettify        = require('gulp-jsbeautifier');
-const merge           = require('gulp-merge-json');
-const changed         = require('gulp-changed');
+const gulp            = require('gulp')
+const browserSync     = require('browser-sync')
+const stylelint       = require('gulp-stylelint')
+const sass            = require('gulp-sass')
+const postcss         = require('gulp-postcss')
+const sourcemaps      = require('gulp-sourcemaps')
+const iconfont        = require('gulp-iconfont')
+const imagemin        = require('gulp-image')
+const iconfontcss     = require('gulp-iconfont-css')
+const rollup          = require('rollup-stream')
+const uglify          = require('gulp-uglify-es').default
+const source          = require('vinyl-source-stream')
+const eslint          = require('gulp-eslint')
+const concat          = require('gulp-concat')
+const fs              = require('fs')
+const rename          = require('gulp-rename')
+const twig            = require('gulp-twig')
+const prettify        = require('gulp-jsbeautifier')
+const merge           = require('gulp-merge-json')
+const changed         = require('gulp-changed')
 
 /**
  * ------------------------------------------------------------------------
- * CONFIG
+ * CONFIGURATION
  * ------------------------------------------------------------------------
  */
 
@@ -46,7 +46,7 @@ const config = {
 
 /**
  * ------------------------------------------------------------------------
- * PATH
+ * PATHS
  * ------------------------------------------------------------------------
  */
 
@@ -137,7 +137,7 @@ function script() {
 
 /**
  * ------------------------------------------------------------------------
- * IMAGE OPTIMIZER
+ * IMAGES
  * ------------------------------------------------------------------------
  */
 
@@ -153,7 +153,7 @@ function image() {
 
 /**
  * ------------------------------------------------------------------------
- * TWIG COMPILER
+ * BUILD HTML
  * ------------------------------------------------------------------------
  */
 
@@ -198,7 +198,7 @@ function html_all() {
 
 /**
  * ------------------------------------------------------------------------
- * ICON CREATE
+ * ICONS
  * ------------------------------------------------------------------------
  */
 
@@ -228,7 +228,7 @@ function svg_copy() {
 
 /**
  * ------------------------------------------------------------------------
- * BROWSERSYNC
+ * LOCALHOST
  * ------------------------------------------------------------------------
  */
 
@@ -273,7 +273,7 @@ function lazysizes()       { return gulp.src(['./node_modules/lazysizes/lazysize
 
 /**
  * ------------------------------------------------------------------------
- * DEFINE BUILD
+ * BUILD TASK
  * ------------------------------------------------------------------------
  */
 
@@ -306,7 +306,7 @@ function watch() {
 
 /**
  * ------------------------------------------------------------------------
- * TASKS
+ * GULP TASKS
  * ------------------------------------------------------------------------
  */
 
