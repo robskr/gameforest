@@ -12,7 +12,7 @@
         "image": "gulp image",
         "html": "gulp html",
         "plugins": "gulp plugins",
-        "docs": "browser-sync start --server --startPath docs",
+        "docs": "browser-sync start --server --startPath docs --no-notify",
         "docs:dev": "cd src/docs && gulp"
     },
     "homepage": "https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730",
