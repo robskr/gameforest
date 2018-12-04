@@ -1,33 +1,16 @@
-import $ from 'jquery'
+(function($) {
+	"use strict";
 
-const Docs = (() => {
-    class Docs {
-        // private
-        _load() {
-            $('.sticky').sticky({
-                topSpacing: 100,
-                zIndex: 3
-            })
+    $('.nav-link').on('click', function (event) {
+        var target = $(this.getAttribute('href'));
+        var num = 500;
+
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, num);
         }
+    });
 
-        // static
-        static _init() {
-            const data = new Docs()
-            data._load()
-        }
-    }
-
-    /**
-     * ------------------------------------------------------------------------
-     * Load Event
-     * ------------------------------------------------------------------------
-    */
-
-    document.addEventListener('DOMContentLoaded', () => {
-        Docs._init.call()
-    })
-
-    return Docs
-})()
-
-export default Docs
+})(window.jQuery);
