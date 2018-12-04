@@ -54,10 +54,6 @@ class Lightbox extends Helpers {
         return VERSION
     }
 
-    _config(config) {
-        console.log(config)
-    }
-
     // private
     _add(src) {
         // define types

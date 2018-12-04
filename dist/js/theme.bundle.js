@@ -1232,11 +1232,7 @@ function (_Helpers) {
 
   var _proto = Lightbox.prototype;
 
-  _proto._config = function _config(config) {
-    console.log(config);
-  }; // private
-
-
+  // private
   _proto._add = function _add(src) {
     var _this2 = this;
 
