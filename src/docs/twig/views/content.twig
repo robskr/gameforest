@@ -24,7 +24,7 @@
             <p>{% if (config.docs == 'local') and (docs.verified) %}{{ docs.verified }}{% else %}{{ docs.text }}{% endif %}</p>
 
             {% if docs.code %}
-                {{ docs.code|raw|replace({'img/': path ~ 'img/' }) }}
+                {{ docs.code|raw|replace({'img/': '../dist/img/' }) }}
             {% endif %}
 
             {% if (docs.code) or (docs.pre) %}

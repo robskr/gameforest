@@ -8,8 +8,6 @@
         <meta name="description" content="{{ meta.description }}">
     {% endif %}
 
-    {% if config.docs == 'local' %}{% set path = '../dist/' %}{% else %}{% set path = '../' %}{% endif %}
-
     <title>Documentation v{{ config.version }} | {{ config.title }}</title>
 
     <!-- css: plugins -->
@@ -19,7 +17,7 @@
     <link rel="stylesheet" href="plugins/highlight/styles/github.css">
 
     <!-- css: theme -->
-    <link rel="stylesheet" href="{{ path }}css/theme.min.css">
+    <link rel="stylesheet" href="../dist/css/theme.min.css">
     <link rel="stylesheet" href="css/docs.min.css">
 </head>
 <body class="fixed-navbar">
@@ -67,9 +65,9 @@
     <!-- end .site -->
 
     <!-- js: vendor -->
-    <script src="{{ path }}plugins/jquery/jquery.min.js"></script>
-    <script src="{{ path }}plugins/popper/popper.min.js"></script>
-    <script src="{{ path }}plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../dist/plugins/jquery/jquery.min.js"></script>
+    <script src="../dist/plugins/popper/popper.min.js"></script>
+    <script src="../dist/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="plugins/holder/holder.min.js"></script>
     <script src="plugins/clipboard/clipboard.min.js"></script>
     <script src="plugins/highlight/highlight.pack.js"></script>
@@ -104,7 +102,7 @@
         })(jQuery);
     </script>
     <script src="js/docs.min.js"></script>
-    <script src="{{ path }}js/theme.bundle.min.js"></script>
+    <script src="../dist/js/theme.bundle.min.js"></script>
     {% if block("js") is defined %}
         {% block js %}{% endblock %}
     {% endif %}

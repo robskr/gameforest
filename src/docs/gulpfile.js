@@ -1,16 +1,14 @@
 /**
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
- * Licensed under The GPLv3 License
- * For full copyright and license information, please see the LICENSE.md
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
- * @link      https://yakuthemes.com
- * @since     5.0.0
+ * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
+ * @version   5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
+ * ---------------------------------------------------------------------------------------
  */
+
 const gulp            = require('gulp');
 const browserSync     = require('browser-sync');
 const stylelint       = require('gulp-stylelint');
@@ -32,6 +30,12 @@ const prettify        = require('gulp-jsbeautifier');
 const merge           = require('gulp-merge-json');
 const changed         = require('gulp-changed');
 
+/**
+ * ------------------------------------------------------------------------
+ * CONFIGURATION
+ * ------------------------------------------------------------------------
+ */
+
 const config = {
     env: 'dev',
     prettify: {
@@ -45,6 +49,12 @@ const config = {
         webroot: '../../'
     }
 }
+
+/**
+ * ------------------------------------------------------------------------
+ * PATHS
+ * ------------------------------------------------------------------------
+ */
 
 const paths = {
     css: {
@@ -347,7 +357,6 @@ gulp.task('js', build.js)
 gulp.task('image', build.image)
 gulp.task('plugins', build.plugins)
 gulp.task('default', build.dev)
-
 gulp.task('docs:css', docs.css)
 gulp.task('docs:html', docs.html.single)
 gulp.task('docs:html:all', docs.html.all)
