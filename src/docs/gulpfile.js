@@ -101,7 +101,7 @@ function javascript() {
  */
 
 function json() {
-    return gulp.src(['../../src/twig/json/src/**/*.json', '../../src/docs/json/src/**/*.json'])
+    return gulp.src(['../../src/json/src/**/*.json', '../../src/docs/json/src/**/*.json'])
         .pipe(merge({ fileName: 'docs.json' }))
         .pipe(gulp.dest(path.dist.json))
 }

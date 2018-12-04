@@ -56,7 +56,7 @@ const path = {
         scss:    './src/scss/**/*.scss',
         js:      './src/js/**/*.js',
         svg:     './src/svg/*.svg',
-        json:    './src/twig/json/src/**/*.json',
+        json:    './src/json/src/**/*.json',
         img:     './src/img/*',
         twig:    './src/twig/*.twig',
         views:   './src/twig/views/*.twig'
@@ -65,7 +65,7 @@ const path = {
         css:     './dist/css',
         js:      './dist/js',
         svg:     './dist/fonts',
-        json:    './src/twig/json/dist',
+        json:    './src/json/dist',
         img:     './dist/img',
         html:    './dist',
         plugins: './dist/plugins/*'
@@ -172,7 +172,7 @@ function html() {
         }))
         .pipe(twig({
             base: './src/twig/views',
-            data: JSON.parse(fs.readFileSync('./src/twig/json/dist/theme.json'))
+            data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
         }))
         .pipe(prettify({
             unformatted: ['span', 'i'],
@@ -187,7 +187,7 @@ function html_all() {
     return gulp.src(path.src.twig)
         .pipe(twig({
             base: './src/twig/views',
-            data: JSON.parse(fs.readFileSync('./src/twig/json/dist/theme.json'))
+            data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
         }))
         .pipe(prettify({
             unformatted: ['span', 'i'],
