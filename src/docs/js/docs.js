@@ -13,4 +13,29 @@
         }
     });
 
+    Holder.addTheme('ya', {bg: '#ededed', fg: '#ededed'}).run();
+
+    hljs.initHighlightingOnLoad();
+
+    function setTooltip(btn, message) {
+        $(btn).attr('data-original-title', message).tooltip('show');
+    }
+
+    function hideTooltip(btn) {
+        setTimeout(function() {
+            $(btn).tooltip('hide');
+        }, 2000);
+    }
+
+    var clipboard = new ClipboardJS('.btn', {
+        text: function(trigger) {
+            return $(trigger.getAttribute('rel')).text();
+        }
+    });
+
+    clipboard.on('success', function(e) {
+        e.clearSelection();
+        setTooltip(e.trigger, 'Copied!');
+        hideTooltip(e.trigger);
+    });
 })(window.jQuery);

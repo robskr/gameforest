@@ -170,7 +170,7 @@ $primary: #6db124;</code></pre>
             <p class="mr-auto">Copyright &copy; 2018 by <a href="https://yakuthemes.com" target="_blank">@yakuthemes</a>. Thank you for using yakuthemes products.</p>
             <a href="index.html">Getting Started</a>
             <a href="changelog.html">Changelog</a>
-            <a href="">Preview</a>
+            <a href="../dist">Preview</a>
             <a href="#">Ratings</a>
             <a href="#">Support</a>
             <a href="#">Download</a>
@@ -186,36 +186,6 @@ $primary: #6db124;</code></pre>
     <script src="plugins/highlight/highlight.pack.js"></script>
     <script type="text/javascript">
         var path = '../dist/plugins';
-        (function($) {
-            Holder.addTheme('ya', {
-                bg: '#ededed',
-                fg: '#ededed'
-            }).run();
-
-            hljs.initHighlightingOnLoad();
-
-            function setTooltip(btn, message) {
-                $(btn).attr('data-original-title', message).tooltip('show');
-            }
-
-            function hideTooltip(btn) {
-                setTimeout(function() {
-                    $(btn).tooltip('hide');
-                }, 2000);
-            }
-
-            var clipboard = new ClipboardJS('.btn', {
-                text: function(trigger) {
-                    return $(trigger.getAttribute('rel')).text();
-                }
-            });
-
-            clipboard.on('success', function(e) {
-                e.clearSelection();
-                setTooltip(e.trigger, 'Copied!');
-                hideTooltip(e.trigger);
-            });
-        })(jQuery);
     </script>
     <script src="js/docs.min.js"></script>
     <script src="../dist/js/theme.bundle.min.js"></script>
