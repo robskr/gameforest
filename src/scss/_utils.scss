@@ -243,3 +243,15 @@ mark {
     padding: 0 8px;
   }
 }
+
+.icon {
+  border: 3px solid $primary;
+  color: $primary;
+  width: 64px;
+  height: 64px;
+  line-height: 58px;
+  border-radius: 50%;
+  font-size: 28px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
