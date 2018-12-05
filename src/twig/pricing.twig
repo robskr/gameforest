@@ -1,13 +1,13 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    <section class="py-6 bg-dark" ya-background="https://vimeo.com/300249379" ya-option="loop: true;mute: true;controls: 0;opacity: .15;quality: 4k" ya-style="background-color: #353434">
+    <section class="py-6 bg-dark" ya-background="https://vimeo.com/300249379" ya-option="loop: true;mute: true;controls: 0;opacity: .15;quality: 4k" ya-style="background-color: #383d40">
         <div class="container">
             <div class="row">
                 <div class="col-8 mx-auto">
                     <div class="heading">
-                        <h2 class="heading-title display-6 text-white">Join to Gaming Community</h2>
-                        <p class="heading-text text-lighten font-weight-light">Select from our pricing plans and enjoy the advantages of premium memberships. <br>We offer 14 days free trial period.</p>
+                        <h2 class="heading-title display-5 text-white">Join to Gaming Community</h2>
+                        <p class="lead text-lighten">Select from our pricing plans and enjoy the advantages of premium memberships. <br>We offer 14 days free trial period.</p>
                     </div>
                 </div>
             </div>
@@ -97,28 +97,21 @@
         </div>
     </section>
 
-    <section class="pt-5 pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 mx-auto">
-                    <div class="heading mb-0">
-                        <i class="ya ya-helmet"></i>
-                        <h2 class="heading-title h1">Frequently Asked Questions</h2>
-                        <p class="heading-text">Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put. Be it reserved contempt rendered smallest. Studied to passage it mention calling believe an.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="pb-5 mt-4">
         <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto text-center mb-4">
+                    <i class="ya ya-helmet icon"></i>
+                    <h2 class="font-weight-bold font-size-lg">Frequently Asked Questions</h2>
+                    <p>Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put be it reserved contempt rendered smallest.</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-11 mx-auto">
                     <div class="row">
                         {% for faq in faq %}
                             {% for faq in faq.Account %}
-                                {% if loop.index < 9 %}
+                                {% if loop.index < 7 %}
                                     <div class="col-6 card-group">
                                         <div class="card mb-4">
                                             <h6 class="card-header">{{ faq.title }}</h6>
@@ -132,6 +125,9 @@
                         {% endfor %}
                     </div>
                 </div>
+            </div>
+            <div class="text-center mt-3">
+                <a class="btn btn-outline btn-lg" href="faq.html" role="button">Learn more</a>
             </div>
         </div>
     </section>
