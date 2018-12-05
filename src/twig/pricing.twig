@@ -113,7 +113,7 @@
                             {% for faq in faq.Account %}
                                 {% if loop.index < 7 %}
                                     <div class="col-6 card-group">
-                                        <div class="card mb-4">
+                                        <div class="card card-default mb-4">
                                             <h6 class="card-header">{{ faq.title }}</h6>
                                             <div class="card-body">
                                                 <p class="card-text">{{ faq.text|slice(0, 160) }}...</p>
@@ -127,7 +127,7 @@
                 </div>
             </div>
             <div class="text-center mt-3">
-                <a class="btn btn-outline btn-lg" href="faq.html" role="button">Learn more</a>
+                <a class="btn btn-secondary btn-lg" href="faq.html" role="button">Learn more</a>
             </div>
         </div>
     </section>
