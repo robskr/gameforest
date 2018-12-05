@@ -138,12 +138,6 @@
 
 // Card shop
 .card-shop {
-  transition: .2s all;
-
-  &:hover {
-    border-color: rgba($black, .2);
-  }
-
   .card-img {
     height: 250px;
   }
