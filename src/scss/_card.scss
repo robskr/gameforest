@@ -212,14 +212,10 @@
     li {
       font-weight: 500;
       font-size: 14px;
-      padding: 11px 0;
+      padding: 5px 0;
 
       i {
         margin-right: 8px;
-      }
-
-      &:nth-child(odd) {
-        background-color: #f4f4f4;
       }
     }
   }
