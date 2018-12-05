@@ -289,14 +289,35 @@
         </header>
         <!-- end .site-header -->
         <div class="site-content" role="main">
-            <nav class="bg-white border-bottom" aria-label="breadcrumb">
+            <section class="bg-image text-white bg-dark py-7" ya-style="background-color: #343538">
+                <img class="background" src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
                 <div class="container">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Shop Sidebar</li>
-                    </ol>
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h1 class="font-weight-bold display-5">God of War</h1>
+                            <p>Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive, and teach his son to do the same.</p>
+                            <div class="mt-4 pt-2">
+                                <a class="btn btn-primary btn-shadow btn-rounded btn-lg" href="game-post.html" role="button">View Game</a>
+                                <a class="btn btn-outline-light btn-rounded btn-lg ml-2" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox role="button">Watch Trailer</a>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-end text-center">
+                            <div>
+                                <p class="font-weight-semibold text-white">Gameforest</p>
+                                <a class="easypiechart" href="review-post.html" data-percent="89" data-scale-color="#e3e3e3" data-bar-color="#5eb404"><span class="easypiechart-text">89%</span></a>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-weight-semibold text-white">MetaCritic</p>
+                                <a class="review-score" href="review-post.html">9.1</a>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-weight-semibold text-white">Users</p>
+                                <a class="review-score" href="review-post.html">9.4</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </nav>
+            </section>
             <section class="border-bottom-dashed py-3">
                 <div class="container">
                     <div class="row">
@@ -582,7 +603,6 @@
                                 <div class="col-4 card-group">
                                     <div class="card card-shop mb-4">
                                         <a class="card-img" href="shop-product.html">
-                                            <span class="badge badge-pill badge-dark">-4%</span>
                                             <img class="card-img-top" src="https://img.youtube.com/vi/MVTHYMkDvIs/maxresdefault.jpg" alt="Forza Horizon 4">
                                         </a>
                                         <div class="card-body d-flex align-items-start flex-column">
@@ -657,7 +677,6 @@
                                 <div class="col-4 card-group">
                                     <div class="card card-shop mb-4">
                                         <a class="card-img" href="shop-product.html">
-                                            <span class="badge badge-pill badge-dark">-4%</span>
                                             <img class="card-img-top" src="https://img.youtube.com/vi/IzltYVmocOM/maxresdefault.jpg" alt="Prey">
                                         </a>
                                         <div class="card-body d-flex align-items-start flex-column">
@@ -755,7 +774,6 @@
                                 <div class="col-4 card-group">
                                     <div class="card card-shop mb-4">
                                         <a class="card-img" href="shop-product.html">
-                                            <span class="badge badge-pill badge-dark">-4%</span>
                                             <img class="card-img-top" src="https://img.youtube.com/vi/kUKrStkG-hE/maxresdefault.jpg" alt="Far Cry 5">
                                         </a>
                                         <div class="card-body d-flex align-items-start flex-column">
@@ -921,6 +939,7 @@
     <script src="js/theme.bundle.min.js"></script>
     <!-- js: plugins -->
     <script src="plugins/nouislider/nouislider.min.js"></script>
+    <script src="plugins/easypiechart/jquery.easypiechart.min.js"></script>
     <script>
         $(function() {
             var html5Slider = document.getElementById('slider');
@@ -955,6 +974,7 @@
                 html5Slider.noUiSlider.set([null, this.value]);
             });
 
+            $('.easypiechart').easyPieChart();
             $('.form-control').keyup(function() {
                 var search = $(this).val().toLowerCase();
                 $.each($('.card-title'), function() {
