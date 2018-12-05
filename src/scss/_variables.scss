@@ -193,12 +193,12 @@ $custom-control-indicator-bg:  #dadada !default;
 // Alerts
 $alert-bg-level:               -10 !default;
 $alert-border-level:           -7 !default;
-$alert-color-level:            4 !default;
+$alert-color-level:            5 !default;
 $alert-link-font-weight:       500 !default;
 $alert-padding-y:              .7rem !default;
 
-$alert-darken-bg-level:        -1.3 !default;
-$alert-darken-border-level:    -1.3 !default;
+$alert-darken-bg-level:        -1.7 !default;
+$alert-darken-border-level:    -1.7 !default;
 $alert-darken-color-level:     -12.5 !default;
 
 $alert-light-color:            $body-color !default;
@@ -207,7 +207,7 @@ $alert-light-bg:               $white !default;
 
 $alert-dark-color:             rgba($dark, .85) !default;
 $alert-dark-border:            rgba($dark, .15) !default;
-$alert-dark-bg:                rgba($dark, .25) !default;
+$alert-dark-bg:                rgba($dark, .15) !default;
 
 $alert-secondary-color:        $body-color !default;
 $alert-secondary-border:       rgba($black, .15) !default;
