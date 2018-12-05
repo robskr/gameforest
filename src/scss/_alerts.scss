@@ -3,12 +3,12 @@
   @include alert-variant($alert-light-bg, $alert-light-border, $alert-light-color);
 }
 
-// Alert close
-.alert .close {
-  text-shadow: none;
+// Alert dark
+.alert-dark {
+  @include alert-variant($alert-dark-bg, $alert-dark-border, $alert-dark-color);
 }
 
-// Alert dismissible close
-.alert-dismissible .close {
-  color: initial;
+// Alert secondary
+.alert-secondary {
+  @include alert-variant($alert-secondary-bg, $alert-secondary-border, $alert-secondary-color);
 }

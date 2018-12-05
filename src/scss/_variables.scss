@@ -191,9 +191,9 @@ $form-group-margin-bottom:     1.5rem !default;
 $custom-control-indicator-bg:  #dadada !default;
 
 // Alerts
-$alert-bg-level:               -1.7 !default;
-$alert-border-level:           -1.7 !default;
-$alert-color-level:            -12.5 !default;
+$alert-bg-level:               -10 !default;
+$alert-border-level:           -7 !default;
+$alert-color-level:            4 !default;
 $alert-link-font-weight:       500 !default;
 $alert-padding-y:              .7rem !default;
 
@@ -204,6 +204,10 @@ $alert-light-bg:               $white !default;
 $alert-dark-color:             $white !default;
 $alert-dark-border:            $dark !default;
 $alert-dark-bg:                $dark !default;
+
+$alert-secondary-color:        $body-color !default;
+$alert-secondary-border:       rgba($black, .15) !default;
+$alert-secondary-bg:           $body-bg !default;
 
 // Lightbox
 $lightbox-bg:                  rgba(37,37,37, .8) !default;
