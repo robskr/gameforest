@@ -1318,8 +1318,8 @@ function (_Helpers) {
     }
 
     if (this.options.alert) {
-      alert.classList.remove('alert-primary');
-      alert.classList.add("alert-" + this.options.alert);
+      alert.classList.remove('alert-darken-primary');
+      alert.classList.add("alert-darken-" + this.options.alert);
     }
   };
 
@@ -1329,7 +1329,7 @@ function (_Helpers) {
     var alert = document.createElement('div');
     var text = document.createTextNode(this._title);
     notify.classList.add('notify', 'animated', 'fadeInDown', 'fast');
-    alert.classList.add('alert', 'alert-primary');
+    alert.classList.add('alert', 'alert-darken-primary');
     document.body.appendChild(notify);
     notify.appendChild(alert);
     alert.appendChild(text); // set notify options

@@ -72,8 +72,8 @@ class Notify extends Helpers {
         }
 
         if (this.options.alert) {
-            alert.classList.remove('alert-primary')
-            alert.classList.add(`alert-${this.options.alert}`)
+            alert.classList.remove('alert-darken-primary')
+            alert.classList.add(`alert-darken-${this.options.alert}`)
         }
     }
 
@@ -84,7 +84,7 @@ class Notify extends Helpers {
         const text = document.createTextNode(this._title)
 
         notify.classList.add('notify', 'animated', 'fadeInDown', 'fast')
-        alert.classList.add('alert', 'alert-primary')
+        alert.classList.add('alert', 'alert-darken-primary')
 
         document.body.appendChild(notify)
         notify.appendChild(alert)

@@ -12,3 +12,10 @@
 .alert-secondary {
   @include alert-variant($alert-secondary-bg, $alert-secondary-border, $alert-secondary-color);
 }
+
+// Alert darken
+@each $color, $value in $theme-colors {
+  .alert-darken-#{$color} {
+    @include alert-variant(theme-color-level($color, $alert-darken-bg-level), theme-color-level($color, $alert-darken-border-level), theme-color-level($color, $alert-darken-color-level));
+  }
+}
