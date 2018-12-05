@@ -46,10 +46,10 @@
     <script>
         $(function() {
             var d = new Date(),
-                month = d.getMonth() + 2,
+                month = d.getMonth() + 1,
                 year = d.getFullYear();
 
-            $('.countdown').countdown(year + '/' + month + '/25', function(event) {
+            $('.countdown').countdown(year + '/' + month + '/30', function(event) {
                 var $this = $(this).html(event.strftime('' +
                     '<div><span>%D</span> days </div> ' +
                     '<div><span>%H</span> hours </div> ' +
