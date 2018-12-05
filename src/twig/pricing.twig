@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto text-center">
-                    <h2 class="display-6">Join to gameforest community!</h2>
+                    <h2 class="display-6 font-weight-bold">Join to gameforest community!</h2>
                     <p class="mb-0">Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil.</p>
                 </div>
             </div>
@@ -28,69 +28,27 @@
     <section class="py-6 bg-dark" ya-background="https://vimeo.com/300249379" ya-option="loop: true;mute: true;controls: 0;opacity: .15;quality: 4k" ya-style="background-color: #383d40">
         <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <div class="card card-price border-0">
-                        <div class="card-body pb-3">
-                            <h6 class="mb-4">Free Member</h6>
-                            <div class="display-4 font-weight-bold">$0</div>
-                            <span class="text-light border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
-                            <ul class="list-unstyled">
-                                <li><i class="ya ya-check text-success"></i> 10 GB storage</li>
-                                <li><i class="ya ya-check text-success"></i> Allowed 1 groups</li>
-                                <li><i class="ya ya-times-circle text-danger"></i> Allowed to upload videos</li>
-                                <li><i class="ya ya-times-circle text-danger"></i> Access to premium contents</li>
-                                <li><i class="ya ya-times-circle text-danger"></i> Access to premium area</li>
-                            </ul>
-                            <small class="text-muted">View fine me gone this name an rank.</small>
+                {% for price in pricing %}
+                    <div class="col-4">
+                        <div class="card card-price border-0">
+                            <div class="card-body pb-3">
+                                <h6 class="mb-4">{{ price.title }}</h6>
+                                <div class="display-4 font-weight-bold{% if loop.index == 2 %} text-primary{% endif %}">{{ price.price }}</div>
+                                <span class="text-light border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
+                                <ul class="list-unstyled">
+                                    {% for list in price.plan %}
+                                        <li><i class="ya {% if list.access %}ya-check text-success{% else %}ya-times-circle text-danger{% endif %}"></i> {{ list.title }}</li>
+                                    {% endfor %}
+                                </ul>
+                                <small class="text-muted">View fine me gone this name an rank.</small>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn {% if loop.index == 2 %}btn-primary{% else %}btn-outline{% endif %} btn-block">Sign up</button>
+                            </div>
                         </div>
-                        <div class="card-footer">
-                            <button type="button" class="btn btn-outline btn-block">Sign up</button>
-                        </div>
+                        <!-- end .card -->
                     </div>
-                    <!-- end .card -->
-                </div>
-                <div class="col-4">
-                    <div class="card card-price border-0">
-                        <div class="card-body pb-3">
-                            <h6 class="mb-4">Pro Member</h6>
-                            <div class="display-4 text-primary font-weight-bold">$19</div>
-                            <span class="text-light border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
-                            <ul class="list-unstyled">
-                                <li><i class="ya ya-check text-success"></i> 50 GB storage</li>
-                                <li><i class="ya ya-check text-success"></i> Allowed 5 groups</li>
-                                <li><i class="ya ya-check text-success"></i> Allowed to upload videos</li>
-                                <li><i class="ya ya-check text-success"></i> Access to premium contents</li>
-                                <li><i class="ya ya-check text-success"></i> Access to premium area</li>
-                            </ul>
-                            <small class="text-muted">View fine me gone this name an rank.</small>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button" class="btn btn-primary btn-block">Sign up</button>
-                        </div>
-                    </div>
-                    <!-- end .card -->
-                </div>
-                <div class="col-4">
-                    <div class="card card-price border-0">
-                        <div class="card-body pb-3">
-                            <h6 class="mb-4">Elite Member</h6>
-                            <div class="display-4 text-primary font-weight-bold">$29</div>
-                            <span class="text-light border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
-                            <ul class="list-unstyled">
-                                <li><i class="ya ya-check text-success"></i> 150 GB storage</li>
-                                <li><i class="ya ya-check text-success"></i> Unlimited groups</li>
-                                <li><i class="ya ya-check text-success"></i> Allowed to upload videos</li>
-                                <li><i class="ya ya-check text-success"></i> Access to premium contents</li>
-                                <li><i class="ya ya-check text-success"></i> Access to premium area</li>
-                            </ul>
-                            <small class="text-muted">View fine me gone this name an rank.</small>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button" class="btn btn-outline btn-block">Sign up</button>
-                        </div>
-                    </div>
-                    <!-- end .card -->
-                </div>
+                {% endfor %}
             </div>
             <div class="row">
                 <div class="col text-center">

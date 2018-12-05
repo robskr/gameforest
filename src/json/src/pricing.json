@@ -1,0 +1,37 @@
+{
+    "pricing": [
+        {
+            "title": "Free Member",
+            "price": "$0",
+            "plan": [
+                { "title": "10 GB storage", "access": true },
+                { "title": "Allowed 1 groups", "access": true },
+                { "title": "Allowed to upload videos" },
+                { "title": "Access to premium contents" },
+                { "title": "Access to premium area" }
+            ]
+        },
+        {
+            "title": "Pro Member",
+            "price": "$19",
+            "plan": [
+                { "title": "50 GB storage", "access": true },
+                { "title": "Allowed 5 groups", "access": true },
+                { "title": "Allowed to upload videos", "access": true },
+                { "title": "Access to premium contents", "access": true },
+                { "title": "Access to premium area", "access": true }
+            ]
+        },
+        {
+            "title": "Elite Member",
+            "price": "$29",
+            "plan": [
+                { "title": "150 GB storage", "access": true },
+                { "title": "Unlimited groups", "access": true },
+                { "title": "Allowed to upload videos", "access": true },
+                { "title": "Access to premium contents", "access": true },
+                { "title": "Access to premium area", "access": true }
+            ]
+        }
+    ]
+}
