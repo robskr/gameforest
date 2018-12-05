@@ -19,6 +19,15 @@
       font-weight: 500;
     }
   }
+
+
+  .dropdown-toggle::after {
+    content: $ya-bold-down;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 5px;
+  }
 }
 
 .nav-tabs {

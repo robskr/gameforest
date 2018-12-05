@@ -291,9 +291,16 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <div class="heading heading-sm align-items-center py-2">
-                                <h2 class="heading-title h3 text-white font-weight-semibold mb-0 mr-auto">Profile Settings</h2>
-                                <a class="btn btn-lighten" href="profile.html">Back to profile</a>
+                            <div class="d-flex align-items-center py-3">
+                                <div class="avatar-badge mr-3">
+                                    <img src="img/user-5.jpg" alt="">
+                                    <span class="badge badge-warning shadow-none"></span>
+                                </div>
+                                <div>
+                                    <h1 class="h3 text-white font-weight-semibold mb-1">Welcome, Nathan!</h1>
+                                    <span class="d-block text-lighten font-weight-light">@nathandrake</span>
+                                </div>
+                                <a class="btn btn-lighten ml-auto" href="profile.html">View profile</a>
                             </div>
                         </div>
                     </div>
@@ -304,19 +311,40 @@
                     <div class="row">
                         <div class="col d-flex align-items-center">
                             <div class="nav nav-list">
-                                <a class="nav-item nav-link active" href="#">Profile Information</a>
-                                <a class="nav-item nav-link" href="#">Images</a>
-                                <a class="nav-item nav-link" href="#">Videos</a>
-                                <a class="nav-item nav-link" href="#">Security</a>
+                                <div class="dropdown">
+                                    <a class="nav-item nav-link active dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account settings</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item active" href="#">Profile</a>
+                                        <a class="dropdown-item" href="#">Games</a>
+                                        <a class="dropdown-item" href="#">Credits</a>
+                                        <a class="dropdown-item" href="#">Downloads</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="nav-item nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Security</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Change password</a>
+                                        <a class="dropdown-item" href="#">Email</a>
+                                        <a class="dropdown-item" href="#">Notifications</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="nav-item nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Access</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Invite friends</a>
+                                        <a class="dropdown-item" href="#">Api token</a>
+                                        <a class="dropdown-item" href="#">Documentation</a>
+                                    </div>
+                                </div>
                                 <a class="nav-item nav-link" href="#">History</a>
                                 <a class="nav-item nav-link" href="#">Billings</a>
                                 <a class="nav-item nav-link" href="#">Premium</a>
                             </div>
                             <div class="btn-group ml-auto mr-2">
-                                <a class="btn btn-default btn-icon btn-sm" href=""><i class="ya ya-small-left"></i></a>
-                                <a class="btn btn-default btn-icon btn-sm" href=""><i class="ya ya-small-right"></i></a>
+                                <a class="btn btn-default btn-icon" href=""><i class="ya ya-bell"></i></a>
+                                <a class="btn btn-default btn-icon" href=""><i class="ya ya-credit-card"></i></a>
                             </div>
-                            <a class="btn btn-default btn-icon btn-sm" href=""><i class="ya ya-gear"></i></a>
+                            <a class="btn btn-default btn-icon" href=""><i class="ya ya-save"></i></a>
                         </div>
                     </div>
                 </div>
@@ -324,51 +352,81 @@
             <section class="py-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-9">
+                        <div class="col">
                             <form>
-                                <div class="form-group">
-                                    <label for="username">Username</label>
-                                    <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter Username">
-                                    <small id="usernameHelp" class="form-text text-muted">This given name will be visible on community pages.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <div class="input-group">
-                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Add Email">
-                                        <div class="input-group-append">
-                                            <button type="button" class="btn btn-light btn-icon border-left-0" data-toggle="tooltip" title="Enter a valid email address."><i class="ya ya-help-circle"></i></button>
+                                <div class="card card-default">
+                                    <h6 class="card-header">Profile Information</h6>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" value="Nathan Drake" placeholder="Enter Username">
+                                                <small id="usernameHelp" class="form-text text-muted">The name what will be visible on community pages.</small>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="name">Name</label>
+                                                <input type="text" class="form-control" id="name" value="nathan" placeholder="Enter your name">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label for="email">Email</label>
+                                                <div class="input-group">
+                                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="nathan@drake.com" placeholder="Enter your email address">
+                                                    <div class="input-group-append">
+                                                        <button type="button" class="btn btn-light btn-icon border-left-0" data-toggle="tooltip" title="Enter a valid email address."><i class="ya ya-help-circle"></i></button>
+                                                    </div>
+                                                </div>
+                                                <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="url">Profile URL</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">yakuthemes.com/</span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="url" placeholder="username" aria-describedby="basic-addon3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="birthday">Birthday</label>
+                                                    <select class="custom-select">
+                                                        <option selected>Open this select menu</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="aboutMe">About me</label>
+                                            <textarea class="form-control" id="aboutMe" aria-describedby="aboutMeHelp" rows="5" placeholder="A description about me"></textarea>
+                                            <small id="aboutMeHelp" class="form-text text-muted">A short description about yourself and your duty. You can @mention other users and organizations to link to them.</small>
                                         </div>
                                     </div>
-                                    <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="url">URL</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">https://yakuthemes.com/</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="url" placeholder="username" aria-describedby="basic-addon3">
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary disabled">Update profile</button>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="aboutMe">About me</label>
-                                    <textarea class="form-control" id="aboutMe" aria-describedby="aboutMeHelp" rows="3" placeholder="Short description"></textarea>
-                                    <small id="aboutMeHelp" class="form-text text-muted">A short description about yourself and your duty. You can @mention other users and organizations to link to them.</small>
-                                </div>
-                                <button type="button" class="btn btn-secondary disabled">Update profile</button>
                             </form>
                             <!-- end form -->
                             <form class="mt-5">
-                                <div class="card card-default mb-4">
+                                <div class="card card-default mb-0">
                                     <h6 class="card-header"><i class="ya ya-lock mr-1"></i> Change Password</h6>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="password">Current Password</label>
-                                                    <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter Password">
-                                                    <small id="passwordHelp" class="form-text text-muted">Enter your current password into the input area.</small>
-                                                </div>
+                                            <div class="form-group col-8">
+                                                <label for="password">Current Password</label>
+                                                <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter Password">
+                                                <small id="passwordHelp" class="form-text text-muted">Enter your current password into the input area.</small>
                                             </div>
                                         </div>
                                         <div class="row">

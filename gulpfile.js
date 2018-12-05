@@ -56,7 +56,7 @@ const path = {
         scss:    './src/scss/**/*.scss',
         js:      './src/js/**/*.js',
         svg:     './src/svg/*.svg',
-        json:    './src/json/src/**/*.json',
+        json:    './src/json/src/*.json',
         img:     './src/img/*',
         twig:    './src/twig/*.twig',
         views:   './src/twig/views/*.twig'
