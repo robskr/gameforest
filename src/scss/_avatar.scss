@@ -154,6 +154,20 @@
   }
 }
 
+// Avatar circle
+.avatar-upload {
+  border: 1px dashed rgba($white, .5);
+  border-radius: 50%;
+  padding: 5px;
+  width: 5.625rem;
+  height: 5.625rem;
+
+  .badge:empty {
+    box-shadow: 0 0 0 3px $primary;
+    bottom: 5px;
+  }
+}
+
 // Avatar size
 .avatar-xl {
   @include avatar-size($avatar-size-xl);
