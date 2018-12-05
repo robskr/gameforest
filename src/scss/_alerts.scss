@@ -3,12 +3,6 @@
   @include alert-variant($alert-light-bg, $alert-light-border, $alert-light-color);
 }
 
-// Alert dark
-.alert-dark {
-  @include alert-variant($alert-dark-bg, $alert-dark-border, $alert-dark-color);
-}
-
-// Alert secondary
-.alert-secondary {
-  @include alert-variant($alert-secondary-bg, $alert-secondary-border, $alert-secondary-color);
+.alert .close {
+  text-shadow: none;
 }
