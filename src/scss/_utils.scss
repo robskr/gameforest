@@ -254,8 +254,13 @@ mark {
   font-size: 28px;
   display: inline-block;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .relative {
   position: relative;
+}
+
+.img-cover {
+  @include img-cover;
 }
