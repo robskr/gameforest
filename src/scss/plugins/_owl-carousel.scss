@@ -23,10 +23,28 @@
   }
 
   .owl-text {
-    color: rgba(255,255,255, .7);
+    color: rgba($white, .7);
     margin: 10px 0 50px 0;
     font-size: 18px;
     font-weight: 400;
+  }
+
+  &-bottom {
+    top: auto;
+    bottom: 0;
+    text-align: left;
+    height: auto;
+    justify-content: start;
+    padding: 0 25px 0 0;
+
+    .owl-title {
+      font-size: 1.5rem;
+      color: darken($headings-color, 10%);
+      font-weight: $font-weight-bold;
+      background-color: $body-bg;
+      margin: 0;
+      padding: 15px;
+    }
   }
 }
 
@@ -71,7 +89,7 @@
     .owl-dot {
       width: 16px;
       height: 16px;
-      background-color: #fff;
+      background-color: $white;
       opacity: .5;
       display: inline-block;
       margin: 0 5px;

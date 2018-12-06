@@ -27,13 +27,16 @@
             ],
             "magazine": [
                 {
+                    "title": "Dead Island 2 Is Still Coming, Publisher Deep Silver Confirms",
+                    "img": "https://static.giantbomb.com/uploads/original/8/81005/2644135-14384067381_83a6e6c758_b.jpg"
+                },
+                {
+                    "title": "Cyberpunk 2077 Dev CD Projekt Red Enlists Multiplayer Studio To Help In Some Way",
                     "img": "https://static.giantbomb.com/uploads/original/13/135472/3043863-2132118041-xuYesStF"
                 },
                 {
-                    "img": "https://static.giantbomb.com/uploads/original/13/135472/3043860-3941938953-k1N1Ul48"
-                },
-                {
-                    "img": "https://static.giantbomb.com/uploads/original/13/135472/3043862-2380673707-IwuKTRWp"
+                    "title": "Play The Division 2 Before It Launches At PAX Aus This Month",
+                    "img": "https://static.giantbomb.com/uploads/original/13/135472/3043941-5881871274-IsUman1n"
                 }
             ]
         }
