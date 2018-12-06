@@ -1,9 +1,5 @@
 {% extends "base.twig" %}
 
-{% set page = {
-    class: 'page-lg'
-}%}
-
 {% block js %}
     <script src="plugins/lazysizes/lazysizes.min.js"></script>
 {% endblock %}
@@ -33,8 +29,8 @@
             <h6 class="subtitle">Recent news</h6>
             <div class="row row-sm">
                 {% for blog in blogs %}
-                    {% if (loop.index > 1) and (loop.index < 6) %}
-                        <div class="col-3">
+                    {% if (loop.index > 2) and (loop.index < 6) %}
+                        <div class="col-4">
                             <div class="card card-post bg-transparent border-0 shadow-none mb-0">
                                 <a class="card-img mt-0 mx-0" href="{{ blog.url }}">
                                     <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
@@ -45,7 +41,7 @@
                                         <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date("M d, Y") }}</span>
                                         <a class="card-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
                                     </div>
-                                    <p class="card-text">{{ blog.text|slice(0, 70) ~ '...' }}</p>
+                                    <p class="card-text">{{ blog.text|slice(0, 90) ~ '...' }}</p>
                                 </div>
                             </div>
                             <!-- end .card-post -->
