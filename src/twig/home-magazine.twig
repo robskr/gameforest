@@ -1,6 +1,10 @@
 {% extends "base.twig" %}
 
 {% block js %}
+    <script>
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        lazySizesConfig.preloadAfterLoad = true;
+    </script>
     <script src="plugins/lazysizes/lazysizes.min.js"></script>
 {% endblock %}
 
