@@ -9,9 +9,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-11 mx-auto">
-                    <div class="owl-carousel owl-height-md" ya-carousel="center: true;dots: false;margin:10;items: 2">
+                    <div class="owl-carousel owl-height-md" ya-carousel="center: true;autowidth: true;dots: false;margin:10;items: 2">
                         {% for carousel in home.carousel.magazine %}
-                            <div class="owl-img lazyload">
+                            <div class="owl-img lazyload" style="width: 1100px;">
                                 <img class="lazyload" data-src="{{ carousel.img }}" alt="">
                                 <div class="owl-caption owl-caption-bottom">
                                     <h1 class="owl-title"><a href="">{{ carousel.title }}</a></h1>
@@ -24,7 +24,7 @@
         </div>
     </section>
 
-    <section class="py-0">
+    <section class="pt-2">
         <div class="container">
             <h6 class="subtitle">Recent news</h6>
             <div class="row row-sm">

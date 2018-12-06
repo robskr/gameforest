@@ -403,6 +403,7 @@ function (_Helpers) {
       items: this.options.items ? Number(this.options.items) : 1,
       margin: this.options.margin ? Number(this.options.margin) : 0,
       center: this.options.center ? true : 0,
+      autoWidth: this.options.autowidth ? true : 0,
       slideBy: this.options.slideItem ? Number(this.options.slideItem) : 1
     });
   }; // private
