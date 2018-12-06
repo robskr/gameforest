@@ -77,18 +77,6 @@
             { "title": "Streams", "icon": "ya ya-camera", "count": 23 },
             { "title": "Forums", "icon": "ya ya-comments", "count": false },
             { "title": "Shop", "icon": "ya ya-shopping-cart", "count": false }
-        ],
-        "settings": [
-            { "title": "Profile" },
-            { "title": "Account" },
-            { "title": "Emails" },
-            { "title": "Notifications" },
-            { "title": "Billings" },
-            { "title": "Security" },
-            { "title": "Blocks" },
-            { "title": "Sessions" },
-            { "title": "History" },
-            { "title": "Applications" }
         ]
     }
 }

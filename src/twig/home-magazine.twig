@@ -9,12 +9,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-10 mx-auto">
-                    <div class="owl-carousel owl-height-md" ya-carousel="center: true;margin:10;items: 2">
+                    <div class="owl-carousel owl-height-md" ya-carousel="center: true;dots: false;margin:10;items: 2">
                         {% for carousel in home.carousel.magazine %}
                             <div class="owl-img lazyload">
                                 <img class="lazyload" data-src="{{ carousel.img }}" alt="">
                                 <div class="owl-caption owl-caption-bottom">
-                                    <h1 class="owl-title">{{ carousel.title }}</h1>
+                                    <h1 class="owl-title"><a href="">{{ carousel.title }}</a></h1>
                                 </div>
                             </div>
                         {% endfor %}

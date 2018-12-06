@@ -109,7 +109,7 @@
                     <!-- end .widget -->
                 </div>
                 <div class="col-4">
-                    <div class="widget widget-game bg-dark" ya-style="background-color: #343538">
+                    <div class="widget widget-game text-white" ya-style="background-color: #343538">
                         <img src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
                         <div class="widget-body">
                             <h3 class="widget-title">God of War</h3>
@@ -148,17 +148,6 @@
                             <a class="embed-icon" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox>
                                 <i class="ya ya-play"></i>
                             </a>
-                        </div>
-                    </div>
-                    <!-- end .widget -->
-                    <div class="widget widget-secondary">
-                        <div class="widget-header">Personal settings</div>
-                        <div class="widget-body p-0">
-                            <div class="list-group list-group-nav list-group-navs">
-                                {% for nav in profile.settings %}
-                                    <a class="list-group-item{% if loop.index == 1 %} active{% endif %}" href="#">{{ nav.title }}</a>
-                                {% endfor %}
-                            </div>
                         </div>
                     </div>
                     <!-- end .widget -->
