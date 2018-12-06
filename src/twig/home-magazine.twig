@@ -28,6 +28,33 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="row row-sm">
+                {% for blog in blogs %}
+                    {% if (loop.index > 1) and (loop.index < 6) %}
+                        <div class="col-3">
+                            <div class="card card-post bg-transparent border-0 shadow-none mb-0">
+                                <a class="card-img mt-0 mx-0" href="{{ blog.url }}">
+                                    <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
+                                </a>
+                                <div class="card-body px-0">
+                                    <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
+                                    <div class="card-meta">
+                                        <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date("M d, Y") }}</span>
+                                        <a class="card-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
+                                    </div>
+                                    <p class="card-text">{{ blog.text|slice(0, 100) ~ '...' }}</p>
+                                </div>
+                            </div>
+                            <!-- end .card-post -->
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
     <section class="pt-0">
         <div class="container">
             <div class="row">
@@ -69,28 +96,6 @@
                             <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
                             <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
                         </div>
-                    </div>
-                    <div class="row row-xs mb-4">
-                        {% for blog in blogs %}
-                            {% if (loop.index > 2) and (loop.index < 6) %}
-                                <div class="col-4">
-                                    <div class="card card-post bg-transparent border-0 shadow-none mb-0">
-                                        <a class="card-img mt-0 mx-0" href="{{ blog.url }}">
-                                            <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
-                                        </a>
-                                        <div class="card-body px-0">
-                                            <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
-                                            <div class="card-meta">
-                                                <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date("M d, Y") }}</span>
-                                                <a class="card-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
-                                            </div>
-                                            <p class="card-text">{{ blog.text|slice(0, 100) ~ '...' }}</p>
-                                        </div>
-                                    </div>
-                                    <!-- end .card-post -->
-                                </div>
-                            {% endif %}
-                        {% endfor %}
                     </div>
                     {% for blog in blogs_medium %}
                         <div class="post post-medium">
