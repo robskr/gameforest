@@ -10,9 +10,10 @@ $font-weight-black:            900 !default;
 $font-weight-base:             $font-weight-normal !default;
 
 $font-size-base:               1rem !default;
-$font-size-lg:                 ($font-size-base * 1.25) !default;
+$font-size-lg:                 ($font-size-base * 1.625) !default;
 $font-size-md:                 ($font-size-base * .9375) !default;
 $font-size-sm:                 ($font-size-base * .875) !default;
+$font-size-xs:                 ($font-size-base * .75) !default;
 
 $h1-font-size:                 1.75rem !default;
 $h2-font-size:                 1.525rem !default;
@@ -221,6 +222,11 @@ $lightbox-bg:                  rgba(37,37,37, .8) !default;
 $progress-height:              10px !default;
 $progress-bg:                  #ebedef !default;
 
+// Text color
+$text-dark:                    #434548 !default;
+$text-light:                   rgba($white, .7) !default;
+$mark-color:                   #56523c !default;
+
 // Promo
 $promo-padding:                1.875rem !default;
 $promo-title-color:            $white !default;
@@ -284,6 +290,10 @@ $breadcrumb-padding-x:         0 !default;
 $breadcrumb-item-padding:      5px !default;
 $breadcrumb-item-color:        #616161 !default;
 $breadcrumb-content-size:      11px !default;
+
+// Row
+$row-padding-sm:               10px !default;
+$row-padding-md:               5px !default;
 
 // Spacing
 $spacer: 1rem !default;

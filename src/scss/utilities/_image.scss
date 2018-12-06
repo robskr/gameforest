@@ -1,0 +1,25 @@
+// Figure
+.figure {
+  position: relative;
+  background-color: $white;
+  border: 1px solid rgba(0,0,0, 0.13);
+  padding: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: .1s ease-in-out;
+  margin: 0 0 5px 0;
+
+  img {
+    border-radius: 3px;
+    margin: 0;
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+}
+
+// Img cover
+.img-cover {
+  @include img-cover;
+}

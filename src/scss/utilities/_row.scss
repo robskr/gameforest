@@ -1,0 +1,12 @@
+// Row
+.row-md { @include row($row-padding-md); }
+.row-sm { @include row($row-padding-sm); }
+
+// Large container
+.page-lg {
+  .container {
+    @include media-breakpoint-up(md) {
+      max-width: 1240px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// stylelint-disable declaration-no-important
+
+// Font weight
+.font-weight-semibold  { font-weight: $font-weight-semibold !important; }
+.font-weight-black     { font-weight: $font-weight-black !important; }
+
+// Font size
+.font-size-lg { font-size: $font-size-lg !important; }
+.font-size-md { font-size: $font-size-md !important; }
+.font-size-sm { font-size: $font-size-sm !important; }
+.font-size-xs { font-size: $font-size-xs !important; }
+
+// Text decoration
+.text-underline { text-decoration: underline; }
+
+// Text color
+.text-dark  { color: $text-dark !important; }
+.text-light { color: $text-light !important; }
+// .text-lighten { color: $text-light !important; }
+// .text-white { @include text-section($white, rgba($white, .7)); }

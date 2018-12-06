@@ -1,0 +1,52 @@
+// Display title
+.display-title {
+  margin-bottom: 35px;
+  text-shadow: 3px 1px 0 $primary;
+}
+
+// Pagination
+.page-item.gap {
+  .page-link {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+// Blockquote
+.blockquote {
+  color: #545454;
+  padding: 25px 30px;
+  background-color: #efefef;
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+  }
+}
+
+// Cursor pointer
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Link
+.link {
+  color: $primary;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Mark
+mark {
+  color: $mark-color;
+}
+
+// Height
+.h-calc-100 {
+  height: calc(100vh);
+}

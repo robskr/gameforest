@@ -140,6 +140,12 @@
   background-repeat: no-repeat;
   background-position: 100%;
   background-size: cover;
+  color: rgba($white, .7);
+
+  .widget-title,
+  h6 {
+    color: $white;
+  }
 
   .badge {
     border-radius: 30px;

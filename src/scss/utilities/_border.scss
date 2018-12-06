@@ -1,0 +1,15 @@
+// stylelint-disable declaration-no-important
+
+// Border dashed
+.border-dashed {
+  border-style: dashed;
+  border-width: 1px;
+}
+
+.border-bottom-dashed {
+  border-bottom: 1px dashed rgba($black, .14);
+}
+
+.border-top-dashed {
+  border-top: 1px dashed rgba($black, .14);
+}

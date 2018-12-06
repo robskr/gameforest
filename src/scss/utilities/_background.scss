@@ -1,0 +1,13 @@
+// stylelint-disable declaration-no-important
+
+.bg-darken {
+  background-color: darken($dark, 3%) !important;
+}
+
+.bg-light {
+  background-color: #f3f3f3 !important;
+}
+
+.bg-default {
+  background-color: #f3f3f3;
+}

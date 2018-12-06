@@ -1,0 +1,51 @@
+// Docs badge
+.docs-badge,
+.docs-btn {
+  .btn,
+  .badge {
+    margin-bottom: 5px;
+  }
+}
+
+// Docs icons
+.docs-icons {
+  margin: 0 -15px;
+
+  i {
+    font-size: 24px;
+    margin: 15px;
+    color: darken($body-color, 5%);
+  }
+}
+
+// Bootstrap select
+.bootstrap-select .dropdown-toggle:focus {
+  outline: 0 !important;
+}
+
+// Icon sizes
+.ya-md { font-size: 24px; }
+.ya-lg { font-size: 32px; }
+.ya-xl { font-size: 48px; }
+
+// Social icons
+.social-links {
+  a {
+    color: lighten($white, 40%);
+    padding: 0 8px;
+  }
+}
+
+// Icon
+.icon {
+  border: 3px solid $primary;
+  color: $primary;
+  width: 64px;
+  height: 64px;
+  line-height: 58px;
+  border-radius: 50%;
+  font-size: 28px;
+  display: inline-block;
+  margin-bottom: 20px;
+  text-align: center;
+}
