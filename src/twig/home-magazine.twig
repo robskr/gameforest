@@ -66,6 +66,24 @@
                             <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
                         </div>
                     </div>
+                    <div class="row row-sm mb-4">
+                        {% for blog in blogs %}
+                            {% if (loop.index > 2) and (loop.index < 5) %}
+                                <div class="col-6">
+                                    <div class="card card-post bg-transparent border-0 shadow-none mb-0">
+                                        <a class="card-img mt-0 mx-0" href="{{ blog.url }}">
+                                            <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
+                                        </a>
+                                        <div class="card-body px-0">
+                                            <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
+                                            <p class="card-text">{{ blog.text|slice(0, 115) ~ '...' }}</p>
+                                        </div>
+                                    </div>
+                                    <!-- end .card-post -->
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                     {% for blog in blogs_medium %}
                         <div class="post post-medium">
                             <div class="post-thumbnail">

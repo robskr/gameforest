@@ -173,6 +173,11 @@
 }
 
 // Card post
+.card-secondary {
+  background-color: darken($body-bg, 2%);
+  border-color: rgba($black, 0.11);
+}
+
 .card-post {
   background-color: darken($body-bg, 2%);
   border-color: rgba($black, 0.11);
