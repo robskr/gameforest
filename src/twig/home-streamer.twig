@@ -4,6 +4,10 @@
     class: 'page-lg'
 }%}
 
+{% block js %}
+    <script src="plugins/parallax/parallax.min.js"></script>
+{% endblock %}
+
 {% block body %}
     <section class="bg-purple py-0">
         <div class="container">
@@ -77,7 +81,7 @@
                 <div class="col-8 mx-auto text-center mb-4">
                     <i class="ya ya-player icon"></i>
                     <h2 class="font-weight-bold font-size-lg">Recently Uploaded Gameplays</h2>
-                    <p class="lead">Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. <br>His boy middleton sir nor engrossed affection excellent.</p>
+                    <p class="lead">Months on ye at by esteem desire warmth former. Sure that that way gave any <br>fond now his boy middleton.</p>
                 </div>
             </div>
             <div class="row">
@@ -168,12 +172,89 @@
         </div>
     </section>
 
-    <section class="bg-white border-top">
+    {# <section class="bg-white border-top">
         <div class="container">
             <div class="row">
                 <div class="col">
                 </div>
             </div>
         </div>
+    </section> #}
+
+    <section class="text-white py-7 overflow-hidden" data-parallax="scroll" data-image-src="https://static.giantbomb.com/uploads/original/0/2840/2495885-the-division_2013_06-10-13_001.jpg">
+        <div class="overlay" ya-style="background-color: #36373a;opacity: .95"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="text-center mb-5">
+                        <h1 class="font-weight-bold display-6 text-white mb-3">Don’t wait, sign up now for a 30 day trial.</h1>
+                        <p class="text-lighten">To sure calm much most long me mean. Able rent long in do we. Uncommonly no it announcing melancholy an in.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 mx-auto">
+                            <form>
+                                <div class="row row-xs">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control shadow-none border-0" placeholder="Enter username">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control shadow-none border-0" placeholder="Enter email">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-outline-light btn-block">Sign up for streams</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    {# <section class="bg-darken text-lighten py-7">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col mx-auto">
+                    <h3 class="h1 mb-4 text-center">Don’t wait, sign up now for a 30 day trial.</h3>
+                    <form>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input id="username" type="text" class="form-control shadow-none border-0" placeholder="Enter username">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input id="email" type="email" class="form-control shadow-none border-0" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="form-control shadow-none border-0" placeholder="Choose a password">
+                                    <small class="form-text">At least seven letters with one numeral</small>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label for="button">&nbsp;</label>
+                                    <button id="button" type="submit" class="btn btn-block btn-success">Sign up for streams</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end of row-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> #}
 {% endblock %}
