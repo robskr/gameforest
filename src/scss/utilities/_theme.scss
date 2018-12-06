@@ -49,3 +49,21 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
+// Subtitle
+.subtitle {
+  border-left: 3px solid $primary;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: lighten($dark, 10%);
+
+  span {
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 5px;
+    color: lighten($body-color, 14%);
+  }
+}
