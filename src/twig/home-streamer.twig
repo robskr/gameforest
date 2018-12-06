@@ -77,7 +77,7 @@
                 <div class="col-8 mx-auto text-center mb-4">
                     <i class="ya ya-player icon"></i>
                     <h2 class="font-weight-bold font-size-lg">Recently Uploaded Gameplays</h2>
-                    <p>Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. <br>His boy middleton sir nor engrossed affection excellent.</p>
+                    <p class="lead">Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. <br>His boy middleton sir nor engrossed affection excellent.</p>
                 </div>
             </div>
             <div class="row row-sm">
@@ -144,8 +144,34 @@
     <section class="py-6">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-8 mx-auto text-center mb-4">
+                    <i class="ya ya-helmet icon"></i>
+                    <h2 class="font-weight-bold font-size-lg">Frequently Asked Questions</h2>
+                    <p class="lead">Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put be it reserved contempt rendered smallest.</p>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-11 mx-auto">
+                    <div class="row">
+                        {% for faq in faq %}
+                            {% for faq in faq.Account %}
+                                {% if loop.index < 5 %}
+                                    <div class="col-6 card-group">
+                                        <div class="card mb-4">
+                                            <h6 class="card-header">{{ faq.title }}</h6>
+                                            <div class="card-body">
+                                                <p class="card-text">{{ faq.text|slice(0, 160) }}...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a class="btn btn-dark btn-lg" href="faq.html" role="button">Learn more</a>
             </div>
         </div>
     </section>
