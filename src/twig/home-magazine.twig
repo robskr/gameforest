@@ -30,7 +30,10 @@
 
     <section class="pt-2">
         <div class="container">
-            <h6 class="subtitle">Recent news</h6>
+            <div class="d-flex mb-4">
+                <h6 class="subtitle mr-auto mb-0">Recent news</h6>
+                <a class="btn btn-link btn-icon btn-sm" href="#" role="button"><i class="ya ya-menu"></i></a>
+            </div>
             <div class="row row-sm">
                 {% for blog in blogs %}
                     {% if (loop.index > 2) and (loop.index < 6) %}
