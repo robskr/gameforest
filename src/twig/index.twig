@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col">
                     <div class="owl-carousel" ya-carousel="autoplay: true;height: true">
-                        {% for carousel in home.carousel.landing %}
+                        {% for carousel in carousel.landing %}
                             <div class="h-100"{% if carousel.color %} ya-style="background-color: {{ carousel.color|default('transparent') }}"{% endif %}>
                                 <img src="{{ carousel.img }}" ya-style="opacity: {{ carousel.opacity|default('0.25') }}" alt="">
                                 <div class="owl-caption">
