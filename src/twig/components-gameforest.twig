@@ -1,0 +1,90 @@
+{% extends "base.twig" %}
+
+{% block js %}
+    <script>
+        $(function() {
+            $('.nav-link').on('click', function (event) {
+                var target = $(this.getAttribute('href'));
+                var num = 500;
+
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, num);
+                }
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <nav class="bg-primary pt-1" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gameforest Components</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="bg-primary d-flex align-items-center py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col mb-5">
+                    <h6 class="display-6 font-weight-bold text-white">Gameforest components</h6>
+                    <p class="text-light">Find out what's included in your Bootstrap theme and how to compile source files. Includes live <br>examples and code snippets for every new component.</p>
+                </div>
+            </div>
+        </div>
+        <div class="shape" ya-svg="divider"></div>
+    </section>
+
+    {% for nav in docs[2] %}
+        {% for component in nav %}
+            {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
+            {% if page %}
+                <section class="pt-6 {% if loop.last %}pb-6{% else %}pb-0{% endif %}">
+                    <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="h4">{{ page.title }}</h5>
+                                <p>{{ page.text }}</p>
+                                <div class="mt-4">
+                                    {% for blocks in page.blocks %}
+                                        <div class="card card-docs bg-light card-default mb-0 mt-3">
+                                            <div class="card-body p-4">
+                                                <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
+                                                <div class="example">
+                                                    {{ blocks.code }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    <div class="nav-bottom">
+        <ul class="nav flex-column sticky">
+            {% for nav in docs[1] %}
+                {% for component in nav %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
+                    </li>
+                {% endfor %}
+            {% endfor %}
+            <li class="nav-item float-right">
+                <a class="nav-link" href="#">Changelog <span class="badge badge-purple">5.0</span></a>
+            </li>
+            <li class="nav-item float-right">
+                <a class="nav-link" href="#">Documentation</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
