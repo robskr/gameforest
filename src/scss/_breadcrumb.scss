@@ -12,7 +12,7 @@
 
 // Variations
 @each $color, $value in $theme-colors {
-  @if $color != 'default' {
+  @if $color != 'default' and $color != 'light' {
     .bg-#{$color} {
       .breadcrumb-item a,
       .breadcrumb-item a:hover,

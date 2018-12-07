@@ -43,28 +43,30 @@
     {% for nav in docs[1] %}
         {% for component in nav %}
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
-            <section class="pt-6 pb-0">
-                <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="h4">{{ page.title }}</h5>
-                            <p>{{ page.text }}</p>
-                            <div class="mt-4">
-                                {% for blocks in page.blocks %}
-                                    <div class="card card-docs bg-light card-default mb-0 mt-3">
-                                        <div class="card-body p-4">
-                                            <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
-                                            <div class="example">
-                                                {{ blocks.code }}
+            {% if page %}
+                <section class="pt-6 pb-0">
+                    <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="h4">{{ page.title }}</h5>
+                                <p>{{ page.text }}</p>
+                                <div class="mt-4">
+                                    {% for blocks in page.blocks %}
+                                        <div class="card card-docs bg-light card-default mb-0 mt-3">
+                                            <div class="card-body p-4">
+                                                <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
+                                                <div class="example">
+                                                    {{ blocks.code }}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                {% endfor %}
+                                    {% endfor %}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            {% endif %}
         {% endfor %}
     {% endfor %}
 
