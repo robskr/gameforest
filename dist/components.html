@@ -1100,8 +1100,8 @@
                                         <div class="example">
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                                    <label for="exampleInputEmail">Email address</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter email">
                                                     <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
                                                 </div>
                                             </form>
@@ -2405,6 +2405,22 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- js: theme -->
     <script src="js/theme.bundle.min.js"></script>
+    <!-- js: plugins -->
+    <script>
+        $(function() {
+            $('.nav-link').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                var num = 500;
+
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, num);
+                }
+            });
+        });
+    </script>
     <!-- js: theme settings -->
     <script>
         var gameforest = {

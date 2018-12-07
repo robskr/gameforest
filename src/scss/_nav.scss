@@ -128,10 +128,10 @@
   .badge {
     margin-top: 1px;
     margin-left: 10px;
-    padding: 2px 5px;
-    line-height: 1.3;
+    padding: 4px 5px;
     float: right;
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: $font-weight-semibold;
   }
 
   .nav-divider {
