@@ -154,8 +154,9 @@
                                 {% if loop.index < 5 %}
                                     <div class="col-6 card-group">
                                         <div class="card mb-4">
-                                            <h6 class="card-header">{{ faq.title }}</h6>
-                                            <div class="card-body">
+                                            <div class="card-body p-4">
+                                                <h6 class="card-title">{{ faq.title }}</h6>
+                                                <hr class="my-3">
                                                 <p class="card-text">{{ faq.text|slice(0, 160) }}...</p>
                                             </div>
                                         </div>
