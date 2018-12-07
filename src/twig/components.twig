@@ -25,7 +25,7 @@
     {% for nav in docs[1] %}
         {% for component in nav %}
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
-            <section id="{{ page.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="py-5">
+            <section id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="py-5">
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -49,4 +49,22 @@
             </section>
         {% endfor %}
     {% endfor %}
+
+    <div class="nav-bottom">
+        <ul class="nav flex-column sticky">
+            {% for nav in docs[1] %}
+                {% for component in nav %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
+                    </li>
+                {% endfor %}
+            {% endfor %}
+            <li class="nav-item float-right">
+                <a class="nav-link" href="#">Changelog <span class="badge badge-purple">5.0</span></a>
+            </li>
+            <li class="nav-item float-right">
+                <a class="nav-link" href="#">Documentation</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
