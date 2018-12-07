@@ -44,7 +44,7 @@
         {% for component in nav %}
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
             {% if (page) and (component.preview != false) %}
-                <section class="py-6{% if loop.last %}{% else %} border-bottom-dashed{% endif %}">
+                <section class="{% if loop.first %}pt-5 pb-6{% else %}py-6{% endif %}{% if loop.last %}{% else %} border-bottom-dashed{% endif %}">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
                             <div class="col">
@@ -58,6 +58,7 @@
                                                     <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
                                                     <div class="example">
                                                         {{ blocks.code }}
+                                                        {{ blocks.custom }}
                                                     </div>
                                                 </div>
                                             </div>
