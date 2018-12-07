@@ -302,13 +302,13 @@ const build = {
  */
 
 function watch() {
-    gulp.watch(path.src.twig,  {events: ['change', 'link']}, build.html)
+    gulp.watch(path.src.twig,  {events: ['change', 'add']}, build.html)
     gulp.watch(path.src.views, {events: 'change'}, build.html_all)
-    gulp.watch(path.src.json,  {events: ['change', 'link']}, build.html_all)
-    gulp.watch(path.src.scss,  {events: ['change', 'link']}, build.css)
-    gulp.watch(path.src.js,    {events: ['change', 'link']}, build.js)
-    gulp.watch(path.src.img,   {events: ['change', 'link']}, build.image)
-    gulp.watch(path.src.svg,   {events: ['change', 'link']}, build.icon)
+    gulp.watch(path.src.json,  {events: ['change', 'add']}, build.html_all)
+    gulp.watch(path.src.scss,  {events: ['change', 'add']}, build.css)
+    gulp.watch(path.src.js,    {events: ['change', 'add']}, build.js)
+    gulp.watch(path.src.img,   {events: ['change', 'add']}, build.image)
+    gulp.watch(path.src.svg,   {events: ['change', 'add']}, build.icon)
 }
 
 /**
