@@ -1,40 +1,23 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    <section class="py-5">
+    <section class="py-6">
         <div class="container">
             <div class="row">
-                <div class="col-10 mx-auto text-center">
-                    <h2 class="display-6 font-weight-bold">Join to gameforest community!</h2>
+                <div class="col-10 mx-auto text-center mb-5">
+                    <i class="ya ya-users icon"></i>
+                    <h2 class="display-6 mb-3">Join to gameforest community!</h2>
                     <p class="mb-0">Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="bg-dark py-0">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="promo py-3">
-                        <h2 class="promo-title h6">Subscribe to upload and watch premium videos at gameforest!</h2>
-                        <a class="btn btn-outline-light btn-sm ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Subscribe Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-dark py-6" ya-background="https://vimeo.com/300249379" ya-option="loop: true;mute: true;controls: 0;opacity: .22;quality: 4k" ya-style="background-color: #383d40">
-        <div class="container">
             <div class="row">
                 {% for price in pricing %}
                     <div class="col-4">
-                        <div class="card card-price border-0">
+                        <div class="card card-price">
                             <div class="card-body pb-3">
                                 <h6 class="mb-4">{{ price.title }}</h6>
                                 <div class="display-4 font-weight-bold{% if loop.index == 2 %} text-primary{% endif %}">{{ price.price }}</div>
-                                <span class="text-light border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
+                                <span class="border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
                                 <ul class="list-unstyled">
                                     {% for list in price.plan %}
                                         <li><i class="ya {% if list.access %}ya-check text-success{% else %}ya-times-circle text-danger{% endif %}"></i> {{ list.title }}</li>
@@ -42,7 +25,7 @@
                                 </ul>
                                 <small class="text-muted">View fine me gone this name an rank.</small>
                             </div>
-                            <div class="card-footer border-">
+                            <div class="card-footer">
                                 <button type="button" class="btn {% if loop.index == 2 %}btn-primary{% else %}btn-outline{% endif %} btn-block">Sign up</button>
                             </div>
                         </div>
@@ -52,13 +35,13 @@
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <p class="mt-5 text-lighten font-size-md font-weight-light">Do you need extra space and more premium content? <a class="link" href="#">Sign up for one of our free plans</a> <br>for unlimited public and open source projects.</p>
+                    <p class="mt-5 text-muted font-size-md">Do you need extra space and more premium content? <a class="link" href="#">Sign up for one of our free plans</a> <br>for unlimited public and open source projects.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="pb-5 mt-4">
+    <section class="bg-white border-top py-5">
         <div class="container">
             <div class="row">
                 <div class="col-8 mx-auto text-center mb-4">
@@ -71,7 +54,7 @@
                 <div class="col-11 mx-auto">
                     <div class="row">
                         {% for faq in faq %}
-                            {% for faq in faq.Account %}
+                            {% for faq in faq['Account Settings'] %}
                                 {% if loop.index < 7 %}
                                     <div class="col-6 card-group">
                                         <div class="card card-default mb-4">
@@ -93,13 +76,13 @@
         </div>
     </section>
 
-    <section class="bg-white border-top py-0">
+    <section class="bg-primary py-0">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="promo py-4">
-                        <h2 class="promo-title text-dark h5 mr-5">Learn more about why we recommend to upgrade your account to pro or elite!</h2>
-                        <a class="btn btn-outline btn-lg" href="#" role="button">Read more</a>
+                        <h2 class="promo-title h5 mr-4">Learn more about why we recommend to upgrade your account to pro or elite!</h2>
+                        <a class="btn btn-outline-light" href="#" role="button">Read more</a>
                     </div>
                 </div>
             </div>
