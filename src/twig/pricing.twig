@@ -15,18 +15,16 @@
                     <div class="col-4">
                         <div class="card card-price">
                             <div class="card-body pb-3">
-                                <h6 class="mb-4">{{ price.title }}</h6>
-                                <div class="display-4 font-weight-bold{% if loop.index == 2 %} text-primary{% endif %}">{{ price.price }}</div>
-                                <span class="border-bottom-dashed pb-3 mt-2 mb-4 d-inline-block">per user / month</span>
+                                <h5 class="font-weight-normal">{{ price.title }}</h5>
+                                <div class="display-3 font-weight-semibold{% if loop.index == 2 %} text-primary{% endif %} my-4">{{ price.price }}</div>
+                                <span class="border-bottom-dashed pb-3 mb-4 d-inline-block">per user / month</span>
                                 <ul class="list-unstyled">
                                     {% for list in price.plan %}
                                         <li><i class="ya {% if list.access %}ya-check text-success{% else %}ya-times-circle text-danger{% endif %}"></i> {{ list.title }}</li>
                                     {% endfor %}
                                 </ul>
                                 <small class="text-muted">View fine me gone this name an rank.</small>
-                            </div>
-                            <div class="card-footer">
-                                <button type="button" class="btn {% if loop.index == 2 %}btn-primary{% else %}btn-outline{% endif %} btn-block">Sign up</button>
+                                <button type="button" class="btn {% if loop.index == 2 %}btn-primary{% else %}btn-outline{% endif %} btn-block btn-lg mt-4">Sign up</button>
                             </div>
                         </div>
                         <!-- end .card -->
