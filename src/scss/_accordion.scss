@@ -94,6 +94,10 @@
   border-radius: 0;
   box-shadow: none;
 
+  .accordion-header {
+    background-color: $white;
+  }
+
   .accordion-item {
     background-color: transparent;
   }

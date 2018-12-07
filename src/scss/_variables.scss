@@ -230,11 +230,13 @@ $mark-color:                   #56523c !default;
 
 // List groups
 $list-group-border-color:            rgba($black, .08) !default;
-$list-group-active-color:            darken($primary, 30%) !default;
-$list-group-active-bg:               lighten($primary, 45%) !default;
-$list-group-active-border-color:     lighten($primary, 40%) !default;
+$list-group-active-color:            darken($body-color, 7%) !default;
+$list-group-active-bg:               #fafafa !default;
+$list-group-active-border-color:     rgba($black, .05) !default;
 $list-group-item-padding-y:          10px !default;
 $list-group-item-padding-x:          15px !default;
+$list-group-item-lg-padding-y:       15px !default;
+
 
 // Promo
 $promo-padding:                1.875rem !default;
