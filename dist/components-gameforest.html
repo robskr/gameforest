@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gameforest Bootstrap Gaming Theme</title>
+    <!-- css: plugins -->
+    <link rel="stylesheet" href="plugins/morris/morris.css">
     <!-- css: theme -->
     <link rel="stylesheet" href="css/theme.min.css">
 </head>
@@ -310,7 +312,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Accordions</h5>
-                            <p>The Gameforest collapse plugin allows you to toggle content on your pages with a few classes thanks to some helpful JavaScript.</p>
+                            <p class="pb-2">The Gameforest collapse plugin allows you to toggle content on your pages with a few classes thanks to some helpful JavaScript.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -432,7 +434,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Avatars</h5>
-                            <p>Avatars are images that users can set as their profile picture. They can be custom photos, uploaded by users, or generated as Identicons as a placeholder.</p>
+                            <p class="pb-2">Avatars are images that users can set as their profile picture. They can be custom photos, uploaded by users, or generated as Identicons as a placeholder.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -554,7 +556,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Background</h5>
-                            <p>Similar for embed plugin but use the gameforest background component for add videos to the custom section or block.</p>
+                            <p class="pb-2">Similar for embed plugin but use the gameforest background component for add videos to the custom section or block.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -582,7 +584,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Blog</h5>
-                            <p>Display posts on your page with the built in blog component. It is possible to list multiple or single post as a blog component.</p>
+                            <p class="pb-2">Display posts on your page with the built in blog component. It is possible to list multiple or single post as a blog component.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -669,7 +671,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Carousel</h5>
-                            <p>Touch enabled javascript plugin that lets you create a beautiful responsive carousel slider. For more examples check the <a href="https://owlcarousel2.github.io/OwlCarousel2/" target="blank">official</a> plugin documentation.</p>
+                            <p class="pb-2">Touch enabled javascript plugin that lets you create a beautiful responsive carousel slider. For more examples check the <a href="https://owlcarousel2.github.io/OwlCarousel2/" target="blank">official</a> plugin documentation.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -719,46 +721,13 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Charts</h5>
-                            <p>Morris.js is the library that powers the graphs on gameforest. It is a very simple API for drawing line, bar, area and donut charts.</p>
+                            <p class="pb-2">Morris.js is the library that powers the graphs on gameforest. It is a very simple API for drawing line, bar, area and donut charts.</p>
                             <div class="mt-4">
-                                <div class="card card-docs bg-light card-default mb-0 mt-3">
-                                    <div class="card-body p-4">
-                                        <h6 class="text-muted mb-2 pb-1">Introduction</h6>
-                                        <div class="example">
-                                            <!-- Stylesheet -->
-                                            <link rel="stylesheet" href="plugins/morris/morris.css">
-                                            <!-- Javascript -->
-                                            <script src="plugins/raphael/raphael.min.js"></script>
-                                            <script src="plugins/morris/morris.min.js"></script>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
                                         <h6 class="text-muted mb-2 pb-1">Line Chart</h6>
                                         <div class="example">
                                             <div id="morris-line-chart"></div>
-                                            <script>
-                                                var area = new Morris.Line({
-        element: 'morris-line-chart',
-        resize: true,
-        data: [
-            { y: '2011', a: 30, b: 13 },
-            { y: '2012', a: 75, b: 45 },
-            { y: '2013', a: 50, b: 40 },
-            { y: '2014', a: 75, b: 63 },
-            { y: '2015', a: 50, b: 40 },
-            { y: '2016', a: 75, b: 65 },
-            { y: '2017', a: 100, b: 30 }
-        ],
-        pointSize: 6,
-        xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['Item 1', 'Item 2'],
-        lineColors: ['#2575dc', '#7fad4a'],
-        hideHover: 'auto'
-    });
-</script>
                                         </div>
                                     </div>
                                 </div>
@@ -767,26 +736,6 @@
                                         <h6 class="text-muted mb-2 pb-1">Bar Chart</h6>
                                         <div class="example">
                                             <div id="morris-bar-chart"></div>
-                                            <script>
-                                                var bar = new Morris.Bar({
-        element: 'morris-bar-chart',
-        resize: true,
-        data: [
-            {y: '2008', a: 100, b: 90},
-            {y: '2009', a: 73, b: 45},
-            {y: '2010', a: 55, b: 42},
-            {y: '2010', a: 75, b: 65},
-            {y: '2011', a: 20, b: 40},
-            {y: '2013', a: 75, b: 65},
-            {y: '2014', a: 100, b: 90}
-        ],
-        barColors: ['#7fad4a', '#e45454'],
-        xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['CPU', 'DISK'],
-        hideHover: 'auto'
-  });
-</script>
                                         </div>
                                     </div>
                                 </div>
@@ -795,29 +744,6 @@
                                         <h6 class="text-muted mb-2 pb-1">Area Chart</h6>
                                         <div class="example">
                                             <div id="morris-area-chart"></div>
-                                            <script>
-                                                var area = new Morris.Area({
-        element: 'morris-area-chart',
-        resize: true,
-        data: [
-            {y: '2011 Q1', item1: 2666, item2: 2666},
-            {y: '2011 Q2', item1: 2778, item2: 2294},
-            {y: '2011 Q3', item1: 4912, item2: 1969},
-            {y: '2011 Q4', item1: 3767, item2: 3597},
-            {y: '2012 Q1', item1: 6810, item2: 1914},
-            {y: '2012 Q2', item1: 5670, item2: 4293},
-            {y: '2012 Q3', item1: 4820, item2: 3795},
-            {y: '2012 Q4', item1: 15073, item2: 5967},
-            {y: '2013 Q1', item1: 10687, item2: 4460},
-            {y: '2013 Q2', item1: 8432, item2: 5713}
-        ],
-        xkey: 'y',
-        ykeys: ['item1', 'item2'],
-        labels: ['Item 1', 'Item 2'],
-        lineColors: ['#2575dc', '#7fad4a'],
-        hideHover: 'auto'
-    });
-</script>
                                         </div>
                                     </div>
                                 </div>
@@ -826,19 +752,6 @@
                                         <h6 class="text-muted mb-2 pb-1">Donut Chart</h6>
                                         <div class="example">
                                             <div id="morris-donut-chart"></div>
-                                            <script>
-                                                var donut = new Morris.Donut({
-        element: 'morris-donut-chart',
-        resize: true,
-        colors: ['#e45454', '#2575dc', '#7fad4a'],
-        data: [
-            {label: 'Download Sales', value: 12},
-            {label: 'In-Store Sales', value: 30},
-            {label: 'Mail-Order Sales', value: 20}
-        ],
-        hideHover: 'auto'
-    })
-</script>
                                         </div>
                                     </div>
                                 </div>
@@ -852,7 +765,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Comments</h5>
-                            <p>Display user feedbacks under blog posts, videos or gaming reviews. Comments are perfect solution to start to build a great community for your website.</p>
+                            <p class="pb-2">Display user feedbacks under blog posts, videos or gaming reviews. Comments are perfect solution to start to build a great community for your website.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -1020,15 +933,8 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">DataTables</h5>
-                            <p>DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, build upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.</p>
+                            <p class="pb-2">DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, build upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.</p>
                             <div class="mt-4">
-                                <div class="card card-docs bg-light card-default mb-0 mt-3">
-                                    <div class="card-body p-4">
-                                        <h6 class="text-muted mb-2 pb-1">Introduction</h6>
-                                        <div class="example">
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
                                         <h6 class="text-muted mb-2 pb-1">Example</h6>
@@ -1113,15 +1019,8 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">DatePicker</h5>
-                            <p>Flatpickr is a lightweight and powerful datetime picker. Lean, UX-driven, and extensible, yet it doesn’t depend on any libraries.</p>
+                            <p class="pb-2">Flatpickr is a lightweight and powerful datetime picker. Lean, UX-driven, and extensible, yet it doesn’t depend on any libraries.</p>
                             <div class="mt-4">
-                                <div class="card card-docs bg-light card-default mb-0 mt-3">
-                                    <div class="card-body p-4">
-                                        <h6 class="text-muted mb-2 pb-1">Introduction</h6>
-                                        <div class="example">
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
                                         <h6 class="text-muted mb-2 pb-1">Example</h6>
@@ -1177,7 +1076,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Embed</h5>
-                            <p>Allow browsers to determine video or slideshow dimensions based on the width of their containing block by creating an intrinsic ratio that will properly scale on any device.</p>
+                            <p class="pb-2">Allow browsers to determine video or slideshow dimensions based on the width of their containing block by creating an intrinsic ratio that will properly scale on any device.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -1229,7 +1128,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Icons</h5>
-                            <p>Documentation and examples for icons, nucleo premium icon library. Add the chosen icon to custom components like button or cards etc.</p>
+                            <p class="pb-2">Documentation and examples for icons, nucleo premium icon library. Add the chosen icon to custom components like button or cards etc.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -1361,14 +1260,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card card-docs bg-light card-default mb-0 mt-3">
-                                    <div class="card-body p-4">
-                                        <h6 class="text-muted mb-2 pb-1">FontAwesome 5</h6>
-                                        <div class="example">
-                                            <a class="btn btn-primary" href="https://fontawesome.com/icons?d=gallery&amp;m=free" target="_blank">Open Fontawesome icons</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1379,7 +1270,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Lightbox</h5>
-                            <p>Add image to the current page in a popup box by using gameforest lightweight lightbox component. Easy to use and can be customized in several ways.</p>
+                            <p class="pb-2">Add image to the current page in a popup box by using gameforest lightweight lightbox component. Easy to use and can be customized in several ways.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -1429,7 +1320,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Notification</h5>
-                            <p>Documentation for built in notificiation with bootstrap alert component. Easy to use just check the available examples below.</p>
+                            <p class="pb-2">Documentation for built in notificiation with bootstrap alert component. Easy to use just check the available examples below.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -1476,7 +1367,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Promo</h5>
-                            <p>Documentation for built in promo component. Add promo section to the page with custom heading and button element.</p>
+                            <p class="pb-2">Documentation for built in promo component. Add promo section to the page with custom heading and button element.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -1569,7 +1460,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Select</h5>
-                            <p>The jQuery plugin that brings select elements into the 21st century with intuitive multiselection, searching, and much more. Now with Bootstrap 4 support.</p>
+                            <p class="pb-2">The jQuery plugin that brings select elements into the 21st century with intuitive multiselection, searching, and much more. Now with Bootstrap 4 support.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -1665,7 +1556,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Social</h5>
-                            <p>Use social buttons to display a button for login or register forms. It' easy to use just copy to selected code from below.</p>
+                            <p class="pb-2">Use social buttons to display a button for login or register forms. It' easy to use just copy to selected code from below.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -1854,15 +1745,8 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Text Editor</h5>
-                            <p>A set of ready to use rich text editors created with a powerful framework. CKEditor 5 Builds are the fastest and easiest way to use CKEditor 5 in your application.</p>
+                            <p class="pb-2">A set of ready to use rich text editors created with a powerful framework. CKEditor 5 Builds are the fastest and easiest way to use CKEditor 5 in your application.</p>
                             <div class="mt-4">
-                                <div class="card card-docs bg-light card-default mb-0 mt-3">
-                                    <div class="card-body p-4">
-                                        <h6 class="text-muted mb-2 pb-1">Introduction</h6>
-                                        <div class="example">
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
                                         <h6 class="text-muted mb-2 pb-1">Example</h6>
@@ -1885,7 +1769,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">Typography</h5>
-                            <p>Documentation and examples for Gameforest typography, including global settings, headings, body text, lists, and more.</p>
+                            <p class="pb-2">Documentation and examples for Gameforest typography, including global settings, headings, body text, lists, and more.</p>
                             <div class="mt-4">
                                 <div class="card card-docs bg-light card-default mb-0 mt-3">
                                     <div class="card-body p-4">
@@ -2130,8 +2014,184 @@
     <!-- js: theme -->
     <script src="js/theme.bundle.min.js"></script>
     <!-- js: plugins -->
+    <script src="plugins/raphael/raphael.min.js"></script>
+    <script src="plugins/morris/morris.min.js"></script>
     <script>
         $(function() {
+            var area = new Morris.Line({
+                element: 'morris-line-chart',
+                resize: true,
+                data: [{
+                        y: '2011',
+                        a: 30,
+                        b: 13
+                    },
+                    {
+                        y: '2012',
+                        a: 75,
+                        b: 45
+                    },
+                    {
+                        y: '2013',
+                        a: 50,
+                        b: 40
+                    },
+                    {
+                        y: '2014',
+                        a: 75,
+                        b: 63
+                    },
+                    {
+                        y: '2015',
+                        a: 50,
+                        b: 40
+                    },
+                    {
+                        y: '2016',
+                        a: 75,
+                        b: 65
+                    },
+                    {
+                        y: '2017',
+                        a: 100,
+                        b: 30
+                    }
+                ],
+                pointSize: 6,
+                xkey: 'y',
+                ykeys: ['a', 'b'],
+                labels: ['Item 1', 'Item 2'],
+                lineColors: ['#2575dc', '#7fad4a'],
+                hideHover: 'auto'
+            });
+
+            var bar = new Morris.Bar({
+                element: 'morris-bar-chart',
+                resize: true,
+                data: [{
+                        y: '2008',
+                        a: 100,
+                        b: 90
+                    },
+                    {
+                        y: '2009',
+                        a: 73,
+                        b: 45
+                    },
+                    {
+                        y: '2010',
+                        a: 55,
+                        b: 42
+                    },
+                    {
+                        y: '2010',
+                        a: 75,
+                        b: 65
+                    },
+                    {
+                        y: '2011',
+                        a: 20,
+                        b: 40
+                    },
+                    {
+                        y: '2013',
+                        a: 75,
+                        b: 65
+                    },
+                    {
+                        y: '2014',
+                        a: 100,
+                        b: 90
+                    }
+                ],
+                barColors: ['#7fad4a', '#e45454'],
+                xkey: 'y',
+                ykeys: ['a', 'b'],
+                labels: ['CPU', 'DISK'],
+                hideHover: 'auto'
+            });
+
+            var area = new Morris.Area({
+                element: 'morris-area-chart',
+                resize: true,
+                data: [{
+                        y: '2011 Q1',
+                        item1: 2666,
+                        item2: 2666
+                    },
+                    {
+                        y: '2011 Q2',
+                        item1: 2778,
+                        item2: 2294
+                    },
+                    {
+                        y: '2011 Q3',
+                        item1: 4912,
+                        item2: 1969
+                    },
+                    {
+                        y: '2011 Q4',
+                        item1: 3767,
+                        item2: 3597
+                    },
+                    {
+                        y: '2012 Q1',
+                        item1: 6810,
+                        item2: 1914
+                    },
+                    {
+                        y: '2012 Q2',
+                        item1: 5670,
+                        item2: 4293
+                    },
+                    {
+                        y: '2012 Q3',
+                        item1: 4820,
+                        item2: 3795
+                    },
+                    {
+                        y: '2012 Q4',
+                        item1: 15073,
+                        item2: 5967
+                    },
+                    {
+                        y: '2013 Q1',
+                        item1: 10687,
+                        item2: 4460
+                    },
+                    {
+                        y: '2013 Q2',
+                        item1: 8432,
+                        item2: 5713
+                    }
+                ],
+                xkey: 'y',
+                ykeys: ['item1', 'item2'],
+                labels: ['Item 1', 'Item 2'],
+                lineColors: ['#2575dc', '#7fad4a'],
+                hideHover: 'auto'
+            });
+
+            var donut = new Morris.Donut({
+                element: 'morris-donut-chart',
+                resize: true,
+                colors: ['#e45454', '#2575dc', '#7fad4a'],
+                data: [{
+                        label: 'Download Sales',
+                        value: 12
+                    },
+                    {
+                        label: 'In-Store Sales',
+                        value: 30
+                    },
+                    {
+                        label: 'Mail-Order Sales',
+                        value: 20
+                    }
+                ],
+                hideHover: 'auto'
+            })
+
             $('.nav-link').on('click', function(event) {
                 var target = $(this.getAttribute('href'));
                 var num = 500;

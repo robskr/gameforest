@@ -1,8 +1,87 @@
 {% extends "base.twig" %}
 
+{% block css %}
+    <link rel="stylesheet" href="plugins/morris/morris.css">
+{% endblock %}
+
 {% block js %}
+    <script src="plugins/raphael/raphael.min.js"></script>
+    <script src="plugins/morris/morris.min.js"></script>
     <script>
         $(function() {
+            var area = new Morris.Line({
+                element: 'morris-line-chart',
+                resize: true,
+                data: [
+                    { y: '2011', a: 30, b: 13 },
+                    { y: '2012', a: 75, b: 45 },
+                    { y: '2013', a: 50, b: 40 },
+                    { y: '2014', a: 75, b: 63 },
+                    { y: '2015', a: 50, b: 40 },
+                    { y: '2016', a: 75, b: 65 },
+                    { y: '2017', a: 100, b: 30 }
+                ],
+                pointSize: 6,
+                xkey: 'y',
+                ykeys: ['a', 'b'],
+                labels: ['Item 1', 'Item 2'],
+                lineColors: ['#2575dc', '#7fad4a'],
+                hideHover: 'auto'
+            });
+
+            var bar = new Morris.Bar({
+                element: 'morris-bar-chart',
+                resize: true,
+                data: [
+                    {y: '2008', a: 100, b: 90},
+                    {y: '2009', a: 73, b: 45},
+                    {y: '2010', a: 55, b: 42},
+                    {y: '2010', a: 75, b: 65},
+                    {y: '2011', a: 20, b: 40},
+                    {y: '2013', a: 75, b: 65},
+                    {y: '2014', a: 100, b: 90}
+                ],
+                barColors: ['#7fad4a', '#e45454'],
+                xkey: 'y',
+                ykeys: ['a', 'b'],
+                labels: ['CPU', 'DISK'],
+                hideHover: 'auto'
+            });
+
+            var area = new Morris.Area({
+                element: 'morris-area-chart',
+                resize: true,
+                data: [
+                    {y: '2011 Q1', item1: 2666, item2: 2666},
+                    {y: '2011 Q2', item1: 2778, item2: 2294},
+                    {y: '2011 Q3', item1: 4912, item2: 1969},
+                    {y: '2011 Q4', item1: 3767, item2: 3597},
+                    {y: '2012 Q1', item1: 6810, item2: 1914},
+                    {y: '2012 Q2', item1: 5670, item2: 4293},
+                    {y: '2012 Q3', item1: 4820, item2: 3795},
+                    {y: '2012 Q4', item1: 15073, item2: 5967},
+                    {y: '2013 Q1', item1: 10687, item2: 4460},
+                    {y: '2013 Q2', item1: 8432, item2: 5713}
+                ],
+                xkey: 'y',
+                ykeys: ['item1', 'item2'],
+                labels: ['Item 1', 'Item 2'],
+                lineColors: ['#2575dc', '#7fad4a'],
+                hideHover: 'auto'
+            });
+
+            var donut = new Morris.Donut({
+                element: 'morris-donut-chart',
+                resize: true,
+                colors: ['#e45454', '#2575dc', '#7fad4a'],
+                data: [
+                    {label: 'Download Sales', value: 12},
+                    {label: 'In-Store Sales', value: 30},
+                    {label: 'Mail-Order Sales', value: 20}
+                ],
+                hideHover: 'auto'
+            })
+
             $('.nav-link').on('click', function (event) {
                 var target = $(this.getAttribute('href'));
                 var num = 500;
@@ -49,10 +128,10 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="h4">{{ page.title }}</h5>
-                                <p>{{ page.text }}</p>
+                                <p class="pb-2">{{ page.text }}</p>
                                 <div class="mt-4">
                                     {% for blocks in page.blocks %}
-                                        {% if blocks.table is empty %}
+                                        {% if (blocks.table is empty) and (blocks.code) %}
                                             <div class="card card-docs bg-light card-default mb-0 mt-3">
                                                 <div class="card-body p-4">
                                                     <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>

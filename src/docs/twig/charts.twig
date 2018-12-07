@@ -92,7 +92,7 @@
         {
             title: 'Introduction',
             text: 'To getting started we need to add the required stylesheet and javascript files to our page. You can find an example below but for more examples check the <a href="http://morrisjs.github.io/morris.js" target="_blank">morris</a> website.',
-            code: '<!-- Stylesheet -->
+            pre: '<!-- Stylesheet -->
 <link rel="stylesheet" href="plugins/morris/morris.css">
 
 <!-- Javascript -->
@@ -102,7 +102,8 @@
         {
             title: 'Line Chart',
             text: 'The public API is terribly simple. It is just one function: Morris.Line(options), where options is an object containing some of the following configuration options.',
-            code: "<div id=\"morris-line-chart" ~ "\"></div>
+            code: "<div id=\"morris-line-chart" ~ "\"></div>",
+            pre: "<div id=\"morris-line-chart" ~ "\"></div>
 <script>
     var area = new Morris.Line({
         element: 'morris-line-chart',
@@ -128,7 +129,8 @@
         {
             title: 'Bar Chart',
             text: 'Create bar charts using Morris.Bar(options), where options is an object containing the following configuration options.',
-            code: "<div id=\"morris-bar-chart" ~ "\"></div>
+            code: "<div id=\"morris-bar-chart" ~ "\"></div>",
+            pre: "<div id=\"morris-bar-chart" ~ "\"></div>
 <script>
     var bar = new Morris.Bar({
         element: 'morris-bar-chart',
@@ -153,7 +155,8 @@
         {
             title: 'Area Chart',
             text: 'Add area chart by using the following markup.',
-            code: "<div id=\"morris-area-chart" ~ "\"></div>
+            code: "<div id=\"morris-area-chart" ~ "\"></div>",
+            pre: "<div id=\"morris-area-chart" ~ "\"></div>
 <script>
     var area = new Morris.Area({
         element: 'morris-area-chart',
@@ -181,7 +184,8 @@
         {
             title: 'Donut Chart',
             text: 'Create a Donut chart using Morris.Donut(options), with the following options.',
-            code: "<div id=\"morris-donut-chart" ~ "\"></div>
+            code: "<div id=\"morris-donut-chart" ~ "\"></div>",
+            pre: "<div id=\"morris-donut-chart" ~ "\"></div>
 <script>
     var donut = new Morris.Donut({
         element: 'morris-donut-chart',
