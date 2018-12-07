@@ -10,30 +10,51 @@
         </div>
     </nav>
 
-    <section class="py-6">
+    <section class="border-bottom py-5">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto text-center mb-5">
+                <div class="col-8 mx-auto text-center">
                     <i class="ya ya-question icon"></i>
                     <h2 class="display-6 mb-3">Questions &amp; Answers</h2>
                     <p>Resolution possession discovered surrounded advantages has but few add. Yet walls <br>times spoil put be it reserved contempt rendered smallest.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-bottom py-0" ya-sticky>
+        <div class="container">
             <div class="row">
-                <div class="col-3">
-                    <div class="widget widget-secondary">
-                        <div class="widget-header">Faq</div>
-                        <div class="widget-body p-0">
-                            <div class="list-group list-group-lg list-group-flush">
-                                <a class="list-group-item" href="#"><i class="ya ya-content"></i> Introduction</a>
-                                <a class="list-group-item active" href="#"><i class="ya ya-gear"></i> Account Settings <span class="badge badge-secondary badge-pill">25</span></a>
-                                <a class="list-group-item" href="#"><i class="ya ya-users"></i> Subscriptions</a>
-                                <a class="list-group-item" href="#"><i class="ya ya-credit-card"></i> Payment Methods</a>
-                            </div>
-                        </div>
+                <div class="col d-flex align-items-center">
+                    <div class="nav nav-list">
+                        <a class="nav-item nav-link active" href="game-post.html">God of War</a>
+                        <a class="nav-item nav-link" href="review-post.html">Reviews (14)</a>
+                        <a class="nav-item nav-link" href="gallery.html">Images</a>
+                        <a class="nav-item nav-link" href="#">Videos (8)</a>
+                        <a class="nav-item nav-link" href="#">Streams</a>
+                        <a class="nav-item nav-link" href="#">Forums</a>
+                        <a class="nav-item nav-link" href="#">Shop</a>
                     </div>
-                    <!-- end .widget -->
+                    <div class="btn-group ml-auto mr-2">
+                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-left"></i></a>
+                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-right"></i></a>
+                    </div>
+                    <a class="btn btn-default btn-icon" href=""><i class="ya ya-gear"></i></a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            {# <div class="row">
+                <div class="col-8 mx-auto text-center mb-5">
+                    <i class="ya ya-question icon"></i>
+                    <h2 class="display-6 mb-3">Questions &amp; Answers</h2>
+                    <p>Resolution possession discovered surrounded advantages has but few add. Yet walls <br>times spoil put be it reserved contempt rendered smallest.</p>
+                </div>
+            </div> #}
+            <div class="row">
                 <div class="col-9 pl-4">
                     {% for  faq in faq %}
                         {% set index = loop.index %}
@@ -59,9 +80,21 @@
                         {% endif %}
                     {% endfor %}
                 </div>
+                <div class="col-3">
+                    <div class="widget widget-secondary">
+                        <div class="widget-header">Faq</div>
+                        <div class="widget-body p-0">
+                            <div class="list-group list-group-lg list-group-flush">
+                                <a class="list-group-item" href="#"><i class="ya ya-content"></i> Introduction</a>
+                                <a class="list-group-item active" href="#"><i class="ya ya-gear"></i> Account Settings <span class="badge badge-secondary badge-pill">25</span></a>
+                                <a class="list-group-item" href="#"><i class="ya ya-users"></i> Subscriptions</a>
+                                <a class="list-group-item" href="#"><i class="ya ya-credit-card"></i> Payment Methods</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .widget -->
+                </div>
             </div>
         </div>
     </section>
-
-
 {% endblock %}
