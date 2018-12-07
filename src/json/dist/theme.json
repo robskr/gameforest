@@ -431,6 +431,208 @@
 			669
 		]
 	],
+	"docs": [
+		{
+			"Getting Started": [
+				{
+					"title": "Introduction",
+					"url": "index.html",
+					"ready": true
+				},
+				{
+					"title": "File Structure",
+					"ready": true
+				},
+				{
+					"title": "Gulp",
+					"ready": true
+				},
+				{
+					"title": "Sass",
+					"ready": true
+				},
+				{
+					"title": "Twig",
+					"ready": true
+				},
+				{
+					"title": "Javascript",
+					"ready": true
+				},
+				{
+					"title": "Plugins",
+					"ready": true
+				},
+				{
+					"title": "Github",
+					"ready": true
+				},
+				{
+					"title": "Support"
+				},
+				{
+					"title": "Changelog",
+					"ready": true
+				}
+			]
+		},
+		{
+			"Bootstrap Components": [
+				{
+					"title": "Alerts",
+					"ready": true
+				},
+				{
+					"title": "Badges",
+					"ready": true
+				},
+				{
+					"title": "Breadcrumb",
+					"ready": true
+				},
+				{
+					"title": "Buttons",
+					"ready": true
+				},
+				{
+					"title": "Cards",
+					"ready": true
+				},
+				{
+					"title": "Columns",
+					"ready": true
+				},
+				{
+					"title": "Dropdowns",
+					"ready": true
+				},
+				{
+					"title": "Forms",
+					"ready": true
+				},
+				{
+					"title": "Input Groups",
+					"ready": true
+				},
+				{
+					"title": "Modal",
+					"ready": true
+				},
+				{
+					"title": "Navbar"
+				},
+				{
+					"title": "Pagination",
+					"ready": true
+				},
+				{
+					"title": "Popovers",
+					"ready": true
+				},
+				{
+					"title": "Progress",
+					"ready": true
+				},
+				{
+					"title": "Tables",
+					"ready": true
+				},
+				{
+					"title": "Tabs"
+				},
+				{
+					"title": "Tooltips",
+					"ready": true
+				}
+			]
+		},
+		{
+			"Gameforest Components": [
+				{
+					"title": "Accordions",
+					"ready": true
+				},
+				{
+					"title": "Avatars",
+					"ready": true
+				},
+				{
+					"title": "Background",
+					"ready": true
+				},
+				{
+					"title": "Blog",
+					"ready": true
+				},
+				{
+					"title": "Carousel",
+					"ready": true
+				},
+				{
+					"title": "Charts",
+					"ready": true
+				},
+				{
+					"title": "Comments",
+					"ready": true
+				},
+				{
+					"title": "DataTables",
+					"ready": true
+				},
+				{
+					"title": "DatePicker",
+					"ready": true
+				},
+				{
+					"title": "Embed",
+					"ready": true
+				},
+				{
+					"title": "Icons",
+					"ready": true
+				},
+				{
+					"title": "Lightbox",
+					"ready": true
+				},
+				{
+					"title": "Notification",
+					"ready": true
+				},
+				{
+					"title": "Promo",
+					"ready": true
+				},
+				{
+					"title": "Select",
+					"ready": true
+				},
+				{
+					"title": "Social",
+					"ready": true
+				},
+				{
+					"title": "Sticky",
+					"ready": true
+				},
+				{
+					"title": "Style"
+				},
+				{
+					"title": "Text Editor",
+					"ready": true
+				},
+				{
+					"title": "Typography",
+					"ready": true
+				},
+				{
+					"title": "Widgets"
+				}
+			]
+		}
+	],
 	"faq": [
 		{
 			"Account": [

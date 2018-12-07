@@ -1,9 +1,5 @@
 {% extends "base.twig" %}
 
-{% set components = [
-    'alerts', 'badges'
-] %}
-
 {% block body %}
     <nav class="bg-primary pt-1" aria-label="breadcrumb">
         <div class="container">
@@ -26,23 +22,40 @@
         <div class="shape" ya-svg="divider"></div>
     </section>
 
-    {% for component in components %}
-        {% extends '../docs/twig/' ~ component ~ '.twig' %}
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h5 class="h4">{{ page.title }}</h5>
-                        <p>{{ page.text }}</p>
-                        {% for blocks in page.blocks %}
-                            <h5 class="mt-5 mb-4">{{ blocks.title }}</h5>
-                            <div class="example">
-                                {{ blocks.code }}
-                            </div>
-                        {% endfor %}
+    {% for nav in docs[1] %}
+        {% for component in nav %}
+            {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
+            <section id="{{ page.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="h4">{{ page.title }}</h5>
+                            <p>{{ page.text }}</p>
+                            {% if (component == 'badges') and (component == 'buttons') %}
+                                <div class="mt-4 pt-1">
+                                    {% for blocks in page.blocks %}
+                                        <div class="card card-docs bg-light card-default mb-0 mt-3">
+                                            <div class="card-body p-4">
+                                                <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
+                                                <div class="example">
+                                                    {{ blocks.code }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {% for blocks in page.blocks %}
+                                    <h5 class="mt-5 mb-4">{{ blocks.title }}</h5>
+                                    <div class="example">
+                                        {{ blocks.code }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        {% endfor %}
     {% endfor %}
 {% endblock %}

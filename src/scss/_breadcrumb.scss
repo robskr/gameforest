@@ -18,6 +18,7 @@
       .breadcrumb-item a:hover,
       .breadcrumb-item::before {
         color: $white !important;
+        font-weight: $font-weight-semibold;
       }
 
       .breadcrumb-item.active {

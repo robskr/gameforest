@@ -44,14 +44,14 @@ const path = {
     src: {
         scss:    '../../src/docs/scss/**/*.scss',
         js:      '../../src/docs/js/docs.js',
-        json:    '../../src/docs/json/src/**/*.json',
+        json:    '../../src/json/src/**/*.json',
         twig:    '../../src/docs/twig/*.twig',
         views:   '../../src/docs/twig/views/*.twig'
     },
     dist: {
         css:     '../../docs/css',
         js:      '../../docs/js',
-        json:    '../../src/docs/json/dist',
+        json:    '../../src/json/dist',
         html:    '../../docs'
     }
 }
@@ -101,8 +101,8 @@ function javascript() {
  */
 
 function json() {
-    return gulp.src(['../../src/json/src/**/*.json', '../../src/docs/json/src/**/*.json'])
-        .pipe(merge({ fileName: 'docs.json' }))
+    return gulp.src(path.src.json)
+        .pipe(merge({ fileName: 'theme.json' }))
         .pipe(gulp.dest(path.dist.json))
 }
 
@@ -113,7 +113,7 @@ function html() {
         }))
         .pipe(twig({
             base: '../../src/docs/twig/views',
-            data: JSON.parse(fs.readFileSync('../../src/docs/json/dist/docs.json'))
+            data: JSON.parse(fs.readFileSync('../../src/json/dist/theme.json'))
         }))
         .pipe(prettify({
             unformatted: ['span', 'i'],
@@ -128,7 +128,7 @@ function html_all() {
     return gulp.src(path.src.twig)
         .pipe(twig({
             base: '../../src/docs/twig/views',
-            data: JSON.parse(fs.readFileSync('../../src/docs/json/dist/docs.json'))
+            data: JSON.parse(fs.readFileSync('../../src/json/dist/theme.json'))
         }))
         .pipe(prettify({
             unformatted: ['span', 'i'],
@@ -186,11 +186,11 @@ const build = {
  */
 
 function watch() {
-    gulp.watch(path.src.json,  {events: 'change'}, build.html_all)
-    gulp.watch(path.src.js,    {events: 'change'}, build.js)
-    gulp.watch(path.src.twig,  {events: 'change'}, build.html)
+    gulp.watch(path.src.json,  {events: ['change', 'add']}, build.html_all)
+    gulp.watch(path.src.js,    {events: ['change', 'add']}, build.js)
+    gulp.watch(path.src.twig,  {events: ['change', 'add']}, build.html)
     gulp.watch(path.src.views, {events: 'change'}, build.html_all)
-    gulp.watch(path.src.scss,  {events: 'change'}, build.css)
+    gulp.watch(path.src.scss,  {events: ['change', 'add']}, build.css)
 }
 
 /**

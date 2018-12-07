@@ -1,9 +1,15 @@
+// stylelint-disable declaration-no-important
+
 // Example
 .example {
   .btn,
   .badge {
     margin-bottom: 5px;
   }
+}
+
+.card-docs .text-muted {
+  color: #98979a !important;
 }
 
 // Docs icons
