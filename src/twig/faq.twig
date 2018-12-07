@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-8 mx-auto text-center mb-6">
                     <i class="ya ya-question icon"></i>
-                    <h2 class="display-6 mb-3">Questions &amp; Answers</h2>
+                    <h2 class="h1 mb-3">Questions &amp; Answers</h2>
                     <p class="mb-0">Resolution possession discovered surrounded advantages has but few add. Yet walls <br>times spoil put be it reserved contempt rendered smallest.</p>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                         {% set index = loop.index %}
                         {% for title, items in faq %}
                             <div class="accordion accordion-transparent mb-4" id="{{ title|lower }}">
-                                <h5 class="h4">{{ title }}</h5>
+                                <h5>{{ title }}</h5>
                                 <hr class="mt-3 mb-2">
                                 {% for item in items %}
                                     <div class="accordion-item">
