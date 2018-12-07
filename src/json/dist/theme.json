@@ -573,10 +573,12 @@
 					"title": "Social"
 				},
 				{
-					"title": "Sticky"
+					"title": "Sticky",
+					"preview": false
 				},
 				{
-					"title": "Style"
+					"title": "Style",
+					"preview": false
 				},
 				{
 					"title": "Text Editor"

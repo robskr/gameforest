@@ -42,8 +42,10 @@
 
     {% for nav in docs[2] %}
         {% for component in nav %}
-            {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
-            {% if page %}
+            {% set blocks %}
+                {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
+            {% endset %}
+            {% if (page) and (component.preview != false) %}
                 <section class="pt-6 {% if loop.last %}pb-6{% else %}pb-0{% endif %}">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
@@ -72,11 +74,13 @@
 
     <div class="nav-bottom">
         <ul class="nav flex-column sticky">
-            {% for nav in docs[1] %}
+            {% for nav in docs[2] %}
                 {% for component in nav %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
-                    </li>
+                    {% if component.preview != false %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             {% endfor %}
             <li class="nav-item float-right">

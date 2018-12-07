@@ -51,10 +51,10 @@
                 { "title": "Lightbox" },
                 { "title": "Notification" },
                 { "title": "Promo" },
-                { "title": "Select"  },
+                { "title": "Select" },
                 { "title": "Social" },
-                { "title": "Sticky" },
-                { "title": "Style" },
+                { "title": "Sticky", "preview": false },
+                { "title": "Style", "preview": false },
                 { "title": "Text Editor" },
                 { "title": "Typography" },
                 { "title": "Widgets" }
