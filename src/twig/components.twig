@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    <nav class="bg-primary pt-1" aria-label="breadcrumb">
+    <nav class="bg-purple pt-1" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -10,11 +10,11 @@
         </div>
     </nav>
 
-    <section class="bg-primary d-flex align-items-center py-6">
+    <section class="bg-purple d-flex align-items-center py-6">
         <div class="container">
             <div class="row">
                 <div class="col mb-5">
-                    <h6 class="display-6 font-weight-bold text-white mb-3">Gameforest components</h6>
+                    <h6 class="display-6 font-weight-bold text-white mb-3">Bootstrap components</h6>
                     <p class="text-light">Find out what's included in your Bootstrap theme and how to compile source files. Includes live <br>examples and code snippets for every new component.</p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                         <div class="col">
                             <h5 class="h4">{{ page.title }}</h5>
                             <p>{{ page.text }}</p>
-                            {% if (component == 'badges') and (component == 'buttons') %}
+                            {% if (component.card) %}
                                 <div class="mt-4 pt-1">
                                     {% for blocks in page.blocks %}
                                         <div class="card card-docs bg-light card-default mb-0 mt-3">

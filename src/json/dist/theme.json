@@ -436,196 +436,155 @@
 			"Getting Started": [
 				{
 					"title": "Introduction",
-					"url": "index.html",
-					"ready": true
+					"url": "index.html"
 				},
 				{
-					"title": "File Structure",
-					"ready": true
+					"title": "File Structure"
 				},
 				{
-					"title": "Gulp",
-					"ready": true
+					"title": "Gulp"
 				},
 				{
-					"title": "Sass",
-					"ready": true
+					"title": "Sass"
 				},
 				{
-					"title": "Twig",
-					"ready": true
+					"title": "Twig"
 				},
 				{
-					"title": "Javascript",
-					"ready": true
+					"title": "Javascript"
 				},
 				{
-					"title": "Plugins",
-					"ready": true
+					"title": "Plugins"
 				},
 				{
-					"title": "Github",
-					"ready": true
+					"title": "Github"
 				},
 				{
 					"title": "Support"
 				},
 				{
-					"title": "Changelog",
-					"ready": true
+					"title": "Changelog"
 				}
 			]
 		},
 		{
 			"Bootstrap Components": [
 				{
-					"title": "Alerts",
-					"ready": true
+					"title": "Alerts"
 				},
 				{
 					"title": "Badges",
-					"ready": true
+					"card": true
 				},
 				{
-					"title": "Breadcrumb",
-					"ready": true
+					"title": "Breadcrumb"
 				},
 				{
 					"title": "Buttons",
-					"ready": true
+					"card": true
 				},
 				{
-					"title": "Cards",
-					"ready": true
+					"title": "Cards"
 				},
 				{
-					"title": "Columns",
-					"ready": true
+					"title": "Columns"
 				},
 				{
-					"title": "Dropdowns",
-					"ready": true
+					"title": "Dropdowns"
 				},
 				{
-					"title": "Forms",
-					"ready": true
+					"title": "Forms"
 				},
 				{
-					"title": "Input Groups",
-					"ready": true
+					"title": "Input Groups"
 				},
 				{
-					"title": "Modal",
-					"ready": true
+					"title": "Modal"
 				},
 				{
 					"title": "Navbar"
 				},
 				{
-					"title": "Pagination",
-					"ready": true
+					"title": "Pagination"
 				},
 				{
-					"title": "Popovers",
-					"ready": true
+					"title": "Popovers"
 				},
 				{
-					"title": "Progress",
-					"ready": true
+					"title": "Progress"
 				},
 				{
-					"title": "Tables",
-					"ready": true
+					"title": "Tables"
 				},
 				{
 					"title": "Tabs"
 				},
 				{
-					"title": "Tooltips",
-					"ready": true
+					"title": "Tooltips"
 				}
 			]
 		},
 		{
 			"Gameforest Components": [
 				{
-					"title": "Accordions",
-					"ready": true
+					"title": "Accordions"
 				},
 				{
-					"title": "Avatars",
-					"ready": true
+					"title": "Avatars"
 				},
 				{
-					"title": "Background",
-					"ready": true
+					"title": "Background"
 				},
 				{
-					"title": "Blog",
-					"ready": true
+					"title": "Blog"
 				},
 				{
-					"title": "Carousel",
-					"ready": true
+					"title": "Carousel"
 				},
 				{
-					"title": "Charts",
-					"ready": true
+					"title": "Charts"
 				},
 				{
-					"title": "Comments",
-					"ready": true
+					"title": "Comments"
 				},
 				{
-					"title": "DataTables",
-					"ready": true
+					"title": "DataTables"
 				},
 				{
-					"title": "DatePicker",
-					"ready": true
+					"title": "DatePicker"
 				},
 				{
-					"title": "Embed",
-					"ready": true
+					"title": "Embed"
 				},
 				{
-					"title": "Icons",
-					"ready": true
+					"title": "Icons"
 				},
 				{
-					"title": "Lightbox",
-					"ready": true
+					"title": "Lightbox"
 				},
 				{
-					"title": "Notification",
-					"ready": true
+					"title": "Notification"
 				},
 				{
-					"title": "Promo",
-					"ready": true
+					"title": "Promo"
 				},
 				{
-					"title": "Select",
-					"ready": true
+					"title": "Select"
 				},
 				{
-					"title": "Social",
-					"ready": true
+					"title": "Social"
 				},
 				{
-					"title": "Sticky",
-					"ready": true
+					"title": "Sticky"
 				},
 				{
 					"title": "Style"
 				},
 				{
-					"title": "Text Editor",
-					"ready": true
+					"title": "Text Editor"
 				},
 				{
-					"title": "Typography",
-					"ready": true
+					"title": "Typography"
 				},
 				{
 					"title": "Widgets"
