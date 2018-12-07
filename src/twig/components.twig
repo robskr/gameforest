@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% set components = [
+    'alerts', 'badges'
+] %}
+
+{% block body %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    {% for component in components %}
+                        <div class="">
+                            {% extends '../docs/twig/' ~ component ~ '.twig' %}
+                            <h6>{{ page.title }}</h6>
+                            <p>{{ page.text }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
