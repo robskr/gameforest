@@ -172,29 +172,10 @@
   }
 }
 
-// Card post
+// Card secondary
 .card-secondary {
   background-color: darken($body-bg, 2%);
   border-color: rgba($black, 0.11);
-}
-
-.card-post {
-  background-color: darken($body-bg, 2%);
-  border-color: rgba($black, 0.11);
-
-  .card-body {
-    padding: 15px 10px;
-  }
-
-  .card-text {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-
-  .card-footer {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
 
 // Card price

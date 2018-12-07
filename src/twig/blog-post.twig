@@ -84,24 +84,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto">
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
-                        <div class="dropdown ml-auto">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Sort by date
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item active" href="#">Latest</a>
-                                <a class="dropdown-item" href="#">Oldest</a>
-                                <a class="dropdown-item" href="#">Best</a>
-                                <a class="dropdown-item" href="#">Random</a>
+                    <div id="comments" class="anchor comments">
+                        <div class="d-flex align-items-center mb-3">
+                            <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
+                            <div class="dropdown ml-auto">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sort by date
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item active" href="#">Latest</a>
+                                    <a class="dropdown-item" href="#">Oldest</a>
+                                    <a class="dropdown-item" href="#">Best</a>
+                                    <a class="dropdown-item" href="#">Random</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="alert alert-primary">
-                        Please login to submit a comment under this post!
-                    </div>
-                    <div id="comments" class="anchor comments">
+                        <div class="alert alert-primary">
+                            Please login to submit a comment under this post!
+                        </div>
                         {% for comment in comments %}
                             <div class="media">
                                 {% for user in users %}
@@ -195,19 +195,17 @@
     <section class="py-5 border-top-dashed">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto">
-                    <div class="heading">
-                        <i class="ya ya-time-alarm"></i>
-                        <h2 class="heading-title">Maybe you would like to read about it</h2>
-                        <p class="heading-lead">May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring.</p>
-                    </div>
+                <div class="col-8 mx-auto text-center mb-4">
+                    <i class="ya ya-time-alarm icon"></i>
+                    <h2 class="font-weight-bold">Maybe you would like to read about it</h2>
+                    <p class="lead">May indulgence difficulty ham can put especially. Bringing remember for <br>supplied her why was confined.</p>
                 </div>
             </div>
             <div class="row">
                 {% for blog in blogs %}
                     {% if loop.index < 4 %}
                         <div class="col-4">
-                            <div class="card card-post mb-0">
+                            <div class="card card-default bg-light">
                                 <a class="card-img" href="{{ blog.url }}">
                                     <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
                                 </a>
