@@ -14,11 +14,14 @@
 @each $color, $value in $theme-colors {
   @if $color != 'default' {
     .bg-#{$color} {
-      .breadcrumb-item,
+      .breadcrumb-item a,
       .breadcrumb-item a:hover,
-      .breadcrumb-item::before,
-      .breadcrumb {
+      .breadcrumb-item::before {
         color: $white !important;
+      }
+
+      .breadcrumb-item.active {
+        color: rgba($white, .8);
       }
     }
   }
