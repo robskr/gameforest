@@ -470,7 +470,8 @@
 		{
 			"Bootstrap Components": [
 				{
-					"title": "Alerts"
+					"title": "Alerts",
+					"card": true
 				},
 				{
 					"title": "Badges",
@@ -490,37 +491,46 @@
 					"title": "Columns"
 				},
 				{
-					"title": "Dropdowns"
+					"title": "Dropdowns",
+					"card": true
 				},
 				{
-					"title": "Forms"
+					"title": "Forms",
+					"card": true
 				},
 				{
-					"title": "Input Groups"
+					"title": "Input Groups",
+					"card": true
 				},
 				{
-					"title": "Modal"
+					"title": "Modal",
+					"card": true
 				},
 				{
 					"title": "Navbar"
 				},
 				{
-					"title": "Pagination"
+					"title": "Pagination",
+					"card": true
 				},
 				{
-					"title": "Popovers"
+					"title": "Popovers",
+					"card": true
 				},
 				{
-					"title": "Progress"
+					"title": "Progress",
+					"card": true
 				},
 				{
-					"title": "Tables"
+					"title": "Tables",
+					"card": true
 				},
 				{
 					"title": "Tabs"
 				},
 				{
-					"title": "Tooltips"
+					"title": "Tooltips",
+					"card": true
 				}
 			]
 		},

@@ -5,7 +5,7 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Components</li>
+                <li class="breadcrumb-item active" aria-current="page">Bootstrap Components</li>
             </ol>
         </div>
     </nav>
@@ -31,27 +31,18 @@
                         <div class="col">
                             <h5 class="h4">{{ page.title }}</h5>
                             <p>{{ page.text }}</p>
-                            {% if (component.card) %}
-                                <div class="mt-4 pt-1">
-                                    {% for blocks in page.blocks %}
-                                        <div class="card card-docs bg-light card-default mb-0 mt-3">
-                                            <div class="card-body p-4">
-                                                <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
-                                                <div class="example">
-                                                    {{ blocks.code }}
-                                                </div>
+                            <div class="mt-4">
+                                {% for blocks in page.blocks %}
+                                    <div class="card card-docs bg-light card-default mb-0 mt-3">
+                                        <div class="card-body p-4">
+                                            <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
+                                            <div class="example">
+                                                {{ blocks.code }}
                                             </div>
                                         </div>
-                                    {% endfor %}
-                                </div>
-                            {% else %}
-                                {% for blocks in page.blocks %}
-                                    <h5 class="mt-5 mb-4">{{ blocks.title }}</h5>
-                                    <div class="example">
-                                        {{ blocks.code }}
                                     </div>
                                 {% endfor %}
-                            {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>

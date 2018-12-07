@@ -17,9 +17,9 @@
         {
             "Bootstrap Components": [
                 { "title": "Alerts" },
-                { "title": "Badges", "card": true },
+                { "title": "Badges", },
                 { "title": "Breadcrumb" },
-                { "title": "Buttons", "card": true },
+                { "title": "Buttons" },
                 { "title": "Cards" },
                 { "title": "Columns" },
                 { "title": "Dropdowns" },
