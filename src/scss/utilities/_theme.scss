@@ -6,10 +6,18 @@
   .badge {
     margin-bottom: 5px;
   }
+
+  .pagination,
+  table {
+    margin-bottom: 0;
+  }
 }
 
-.card-docs .text-muted {
-  color: #98979a !important;
+.card-docs {
+  .text-muted {
+    color: #98979a !important;
+    margin-bottom: 15px !important;
+  }
 }
 
 // Docs icons
