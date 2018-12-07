@@ -3,13 +3,26 @@ section {
   padding: 1.5rem 0;
   position: relative;
 
-  &.separated:before {
-    content: "";
+  .shape {
+    transform: rotate(180deg);
+    overflow: hidden;
     position: absolute;
+    left: 0;
     bottom: 0;
-    background-image: url('../img/section-separator.png');
-    height: 100px;
     width: 100%;
+    line-height: 0;
+
+    svg {
+      position: relative;
+      width: calc(100% + 200px);
+      left: 50%;
+      height: 100px;
+      transform: translateX(-50%) rotateY(180deg);
+
+      path {
+        fill: $body-bg;
+      }
+    }
   }
 }
 

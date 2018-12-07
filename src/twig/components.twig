@@ -5,19 +5,38 @@
 ] %}
 
 {% block body %}
-    <section>
+    <nav class="bg-primary" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Components</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="bg-primary d-flex align-items-center py-6">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    {% for component in components %}
-                        <div class="">
-                            {% extends '../docs/twig/' ~ component ~ '.twig' %}
-                            <h6>{{ page.title }}</h6>
-                            <p>{{ page.text }}</p>
-                        </div>
-                    {% endfor %}
+                <div class="col mb-5">
+                    <h6 class="display-6 font-weight-bold text-white mb-3">Gameforest components</h6>
+                    <p class="text-light">Find out what's included in your Bootstrap theme and how to compile source files. Includes live <br>examples and code snippets for every new component.</p>
                 </div>
             </div>
         </div>
+        <div class="shape" ya-svg="divider"></div>
     </section>
+
+    {% for component in components %}
+        {% extends '../docs/twig/' ~ component ~ '.twig' %}
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="h4">{{ page.title }}</h5>
+                        <p>{{ page.text }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
 {% endblock %}
