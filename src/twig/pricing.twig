@@ -41,11 +41,11 @@
         </div>
     </section>
 
-    <section class="bg-white border-top py-5">
+    <section class="border-top-dashed py-6">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto text-center mb-4">
-                    <i class="ya ya-helmet icon"></i>
+                <div class="col-8 mx-auto text-center mb-5">
+                    <i class="ya ya-question icon"></i>
                     <h2 class="font-weight-bold font-size-lg">Frequently asked questions</h2>
                     <p>Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put be it reserved contempt rendered smallest.</p>
                 </div>
@@ -57,9 +57,10 @@
                             {% for faq in faq['Account Settings'] %}
                                 {% if loop.index < 7 %}
                                     <div class="col-6 card-group">
-                                        <div class="card card-default mb-4">
-                                            <h6 class="card-header">{{ faq.title }}</h6>
-                                            <div class="card-body">
+                                        <div class="card mb-4">
+                                            <div class="card-body p-4">
+                                                <h6 class="card-title">{{ faq.title }}</h6>
+                                                <hr class="my-3">
                                                 <p class="card-text">{{ faq.text|slice(0, 160) }}...</p>
                                             </div>
                                         </div>
@@ -70,13 +71,10 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-3">
-                <a class="btn btn-secondary btn-lg" href="faq.html" role="button">Learn more</a>
-            </div>
         </div>
     </section>
 
-    <section class="bg-primary py-0">
+    {# <section class="bg-primary py-0">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -87,5 +85,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> #}
 {% endblock %}
