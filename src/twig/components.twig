@@ -43,8 +43,8 @@
     {% for nav in docs[1] %}
         {% for component in nav %}
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
-            <section id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="py-5">
-                <div class="container">
+            <section class="pt-6 pb-0">
+                <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                     <div class="row">
                         <div class="col">
                             <h5 class="h4">{{ page.title }}</h5>
