@@ -13,6 +13,7 @@
   }
 }
 
+// Card docs
 .card-docs {
   .text-muted {
     color: #98979a !important;
@@ -55,7 +56,7 @@
   color: $primary;
   width: 64px;
   height: 64px;
-  line-height: 58px;
+  line-height: 58px !important;
   border-radius: 50%;
   font-size: 28px;
   display: inline-block;
