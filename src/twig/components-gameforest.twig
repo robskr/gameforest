@@ -42,11 +42,9 @@
 
     {% for nav in docs[2] %}
         {% for component in nav %}
-            {% set blocks %}
-                {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
-            {% endset %}
+            {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
             {% if (page) and (component.preview != false) %}
-                <section class="pt-6 {% if loop.last %}pb-6{% else %}pb-0{% endif %}">
+                <section class="py-6{% if loop.last %}{% else %} border-bottom-dashed{% endif %}">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
                             <div class="col">
@@ -54,14 +52,16 @@
                                 <p>{{ page.text }}</p>
                                 <div class="mt-4">
                                     {% for blocks in page.blocks %}
-                                        <div class="card card-docs bg-light card-default mb-0 mt-3">
-                                            <div class="card-body p-4">
-                                                <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
-                                                <div class="example">
-                                                    {{ blocks.code }}
+                                        {% if blocks.table is empty %}
+                                            <div class="card card-docs bg-light card-default mb-0 mt-3">
+                                                <div class="card-body p-4">
+                                                    <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
+                                                    <div class="example">
+                                                        {{ blocks.code }}
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        {% endif %}
                                     {% endfor %}
                                 </div>
                             </div>
