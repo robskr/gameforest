@@ -5,7 +5,7 @@
 ] %}
 
 {% block body %}
-    <nav class="bg-primary" aria-label="breadcrumb">
+    <nav class="bg-primary pt-1" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -34,6 +34,12 @@
                     <div class="col">
                         <h5 class="h4">{{ page.title }}</h5>
                         <p>{{ page.text }}</p>
+                        {% for blocks in page.blocks %}
+                            <h5 class="mt-5 mb-4">{{ blocks.title }}</h5>
+                            <div class="example">
+                                {{ blocks.code }}
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
