@@ -1,6 +1,11 @@
 {% extends "base.twig" %}
 
+{% block css %}
+
+{% endblock %}
+
 {% block js %}
+    <script src="../docs/plugins/holder/holder.min.js"></script>
     <script>
         $(function() {
             $('.nav-link').on('click', function (event) {
