@@ -16,20 +16,18 @@
                 <div class="col-8 mx-auto text-center mb-5">
                     <i class="ya ya-question icon"></i>
                     <h2 class="display-6 mb-3">Questions &amp; Answers</h2>
-                    <p>Resolution possession discovered surrounded advantages has but few add. Yet walls <br>times spoil put be it reserved contempt rendered smallest.</p>
+                    <p class="mb-0">Resolution possession discovered surrounded advantages has but few add. Yet walls <br>times spoil put be it reserved contempt rendered smallest.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <div class="widget widget-secondary">
-                        <div class="widget-header">Faq</div>
-                        <div class="widget-body p-0">
-                            <div class="list-group list-group-lg list-group-flush">
-                                <a class="list-group-item" href="#"><i class="ya ya-content"></i> Introduction</a>
-                                <a class="list-group-item active" href="#"><i class="ya ya-gear"></i> Account Settings <span class="badge badge-secondary badge-pill">25</span></a>
-                                <a class="list-group-item" href="#"><i class="ya ya-users"></i> Subscriptions</a>
-                                <a class="list-group-item" href="#"><i class="ya ya-credit-card"></i> Payment Methods</a>
-                            </div>
+                    <div class="card">
+                        <div class="card-header">Faq</div>
+                        <div class="list-group list-group-lg list-group-flush">
+                            <a class="list-group-item" href="#"><i class="ya ya-content"></i> Introduction</a>
+                            <a class="list-group-item active" href="#"><i class="ya ya-gear"></i> Account Settings <span class="badge badge-secondary badge-pill">25</span></a>
+                            <a class="list-group-item" href="#"><i class="ya ya-users"></i> Subscriptions</a>
+                            <a class="list-group-item" href="#"><i class="ya ya-credit-card"></i> Payment Methods</a>
                         </div>
                     </div>
                     <!-- end .widget -->
@@ -40,7 +38,7 @@
                         {% for title, items in faq %}
                             <div class="accordion accordion-transparent mb-4" id="{{ title|lower }}">
                                 <h5 class="h3">{{ title }}</h5>
-                                <hr class="my-3">
+                                <hr class="mt-3 mb-2">
                                 {% for item in items %}
                                     <div class="accordion-item">
                                         <a class="accordion-link{% if (index == 1) and (loop.index == 1) %}{% else %} collapsed{% endif %}" href="#collapse{{ title ~ loop.index }}" data-toggle="collapse" aria-expanded="{% if (index == 1) and (loop.index == 1) %}true{% else %}false{% endif %}" data-target="#collapse{{ title ~ loop.index }}" aria-controls="collapse{{ title ~ loop.index }}">{{ item.title }}</a>
@@ -62,6 +60,4 @@
             </div>
         </div>
     </section>
-
-
 {% endblock %}
