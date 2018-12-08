@@ -602,7 +602,8 @@
 	],
 	"faq": [
 		{
-			"Account Settings": [
+			"category": "Account Settings",
+			"answer": [
 				{
 					"title": "Can I upgrade my account from yearly to unlimited?",
 					"text": "Left till here away at to whom past. Feelings laughing at no wondered repeated provided finished. It acceptance thoroughly my advantages everything as. Are projecting inquietude affronting preference saw who. Shy celebrated met sentiments she reasonably but. Proposal its disposed eat advanced marriage sociable. Drawings led greatest add subjects endeavor gay remember. Principles one yet assistance you met impossible."
@@ -638,7 +639,8 @@
 			]
 		},
 		{
-			"Payment Methods": [
+			"category": "Payment Methods",
+			"answer": [
 				{
 					"title": "Are you planning to release more updates?",
 					"text": "Feet evil to hold long he open knew an no. Apartments occasional boisterous as solicitude to introduced. Or fifteen covered we enjoyed demesne is in prepare. In stimulated my everything it literature. Greatly explain attempt perhaps in feeling he. House men taste bed not drawn joy. Through enquire however do equally herself at. Greatly way old may you present improve. Wishing the feeling village him musical."

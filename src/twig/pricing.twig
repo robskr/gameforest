@@ -52,20 +52,18 @@
             <div class="row">
                 <div class="col-11 mx-auto">
                     <div class="row">
-                        {% for faq in faq %}
-                            {% for faq in faq['Account Settings'] %}
-                                {% if loop.index < 7 %}
-                                    <div class="col-6 card-group">
-                                        <div class="card mb-4">
-                                            <div class="card-body p-4">
-                                                <h6 class="card-title">{{ faq.title }}</h6>
-                                                <hr class="my-3">
-                                                <p class="card-text">{{ faq.text|slice(0, 160) }}...</p>
-                                            </div>
+                        {% for faq in faq[0]['answer'] %}
+                            {% if loop.index < 7 %}
+                                <div class="col-6 card-group">
+                                    <div class="card mb-4">
+                                        <div class="card-body p-4">
+                                            <h6 class="card-title">{{ faq.title }}</h6>
+                                            <hr class="my-3">
+                                            <p class="card-text">{{ faq.text|slice(0, 160) }}...</p>
                                         </div>
                                     </div>
-                                {% endif %}
-                            {% endfor %}
+                                </div>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>
