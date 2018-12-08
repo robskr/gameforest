@@ -18,7 +18,7 @@
                     <h1 class="text-white font-weight-bold display-5">God of War</h1>
                     <p class="text-light">Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive, and teach his son to do the same.</p>
                     <div class="mt-4 pt-2">
-                        <a class="btn btn-primary btn-shadow btn-rounded btn-lg" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox role="button">Watch Trailer <i class="ya ya-play"></i></a>
+                        <a class="btn btn-primary btn-icon-left btn-shadow btn-rounded btn-lg" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox role="button"><i class="ya ya-play"></i> Watch Trailer</a>
                         <a class="btn btn-outline-light btn-rounded ml-2 btn-lg" href="shop-product.html" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
                     </div>
                 </div>
@@ -172,11 +172,11 @@
                     <div class="widget widget-secondary">
                         <div class="widget-header">Navigation</div>
                         <div class="widget-body p-0">
-                            <div class="list-group list-group-nav">
+                            <div class="list-group list-group-flush">
                                 {% for nav in game.nav %}
                                     <a class="list-group-item list-group-item-action{% if loop.index == 1 %} active{% endif %}" href="#">
                                         <i class="{{ nav.icon }}"></i> {{ nav.title }}
-                                        {% if nav.count %}<span class="badge badge-dark badge-pill">{{ nav.count }}</span>{% endif %}
+                                        {% if nav.count %}<span class="badge badge-secondary badge-pill">{{ nav.count }}</span>{% endif %}
                                     </a>
                                 {% endfor %}
                             </div>
