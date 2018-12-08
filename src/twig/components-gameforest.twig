@@ -123,7 +123,7 @@
         {% for component in nav %}
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
             {% if (page) and (component.preview != false) %}
-                <section class="{% if loop.first %}pt-5 pb-6{% else %}py-6{% endif %}">
+                <section class="{% if loop.first %}pt-5 pb-5{% else %}py-5{% endif %}">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
                             <div class="col">
@@ -132,9 +132,9 @@
                                 <div class="mt-4">
                                     {% for blocks in page.blocks %}
                                         {% if (blocks.table is empty) and (blocks.code) %}
-                                            <div class="card card-docs bg-light card-default mb-0 mt-3">
+                                            <div class="card card-docs card-default mb-0 mt-3">
+                                                <h6 class="card-header">{{ blocks.title }}</h6>
                                                 <div class="card-body p-4">
-                                                    <h6 class="text-muted mb-2 pb-1">{{ blocks.title }}</h6>
                                                     <div class="example">
                                                         {{ blocks.code }}
                                                         {{ blocks.custom }}
