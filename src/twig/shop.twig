@@ -103,11 +103,11 @@
                                         <a href="game-post.html">{{ game.title }}</a>
                                     </h5>
                                     <ul class="list-inline d-flex font-size-md mr-2 mt-1 mb-0">
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-muted"></i></li>
+                                        <li><i class="ya ya-star text-warning"></i></li>
+                                        <li><i class="ya ya-star text-warning"></i></li>
+                                        <li><i class="ya ya-star text-warning"></i></li>
+                                        <li><i class="ya ya-star text-warning"></i></li>
+                                        <li><i class="ya ya-star text-muted"></i></li>
                                     </ul>
                                     <ul class="list-unstyled font-size-sm mt-3">
                                         <li>Platform: Xbox One</li>
@@ -121,7 +121,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center">
-                                        <div class="font-weight-bold h4 mb-0 mr-2 {% if game.price.discount %}text-danger{% endif %}">${{ game.price.original }}</div>
+                                        <div class="h3 font-weight-normal mb-0 mr-2 {% if game.price.discount %}text-danger{% endif %}">${{ game.price.original }}</div>
                                         {% if game.price.discount %}<div class="h6 mb-0 font-weight-light text-light"><s>${{ game.price.original + game.price.discount }}</s></div>{% endif %}
                                     </div>
                                     <button type="button" class="btn btn-outline btn-sm ml-auto">Add to cart <i class="ya ya-shopping-cart"></i></button>
