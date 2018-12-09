@@ -28,7 +28,7 @@
         </div>
     </section>
 
-    <section class="pt-2">
+    <section class="py-2">
         <div class="container">
             <div class="d-flex mb-4">
                 <h6 class="subtitle mr-auto mb-0">Recent news</h6>
@@ -42,13 +42,8 @@
                                 <a class="card-img mt-0 mx-0" href="{{ blog.url }}">
                                     <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
                                 </a>
-                                <div class="card-body px-0">
+                                <div class="card-body pb-0 px-0">
                                     <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
-                                    <div class="card-meta">
-                                        <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date("M d, Y") }}</span>
-                                        <a class="card-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
-                                    </div>
-                                    <p class="card-text">{{ blog.text|slice(0, 90) ~ '...' }}</p>
                                 </div>
                             </div>
                             <!-- end .card-post -->
