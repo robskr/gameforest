@@ -116,7 +116,7 @@
                 {% for blog in blogs %}
                     {% if loop.index < 4 %}
                         <div class="col-4">
-                            <div class="card card-default bg-light">
+                            <div class="card bg-light">
                                 <a class="card-img" href="{{ blog.url }}">
                                     <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
                                 </a>
