@@ -50,7 +50,7 @@
         </div>
     </section>
 
-    <section class="pt-4 pb-2">
+    <section class="bg-white border-bottom py-3">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -85,7 +85,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="py-5">
         <div class="container">
             <div class="row row-sm">
                 {% for game in games %}
@@ -102,7 +102,7 @@
                                         {% endif %}
                                         <a href="game-post.html">{{ game.title }}</a>
                                     </h5>
-                                    <ul class="list-inline d-flex font-size-md mr-2 mt-1 mb-0">
+                                    <ul class="d-flex justify-content-between list-star list-inline font-size-md mr-2 mt-1 mb-0">
                                         <li><i class="ya ya-star text-warning"></i></li>
                                         <li><i class="ya ya-star text-warning"></i></li>
                                         <li><i class="ya ya-star text-warning"></i></li>
@@ -114,14 +114,14 @@
                                         <li>Genre: action</li>
                                         <li>Publisher: Rockstar Games</li>
                                     </ul>
-                                    <ul class="list-unstyled d-flex mb-0">
+                                    <ul class="d-flex list-unstyled mb-0">
                                         <li class="border-right mr-2 pr-2"><i class="ya ya-stock text-success mr-1"></i> in stock</li>
                                         <li><i class="ya ya-delivery text-success mr-1"></i> free delivery</li>
                                     </ul>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center">
-                                        <div class="h3 font-weight-normal mb-0 mr-2 {% if game.price.discount %}text-danger{% endif %}">${{ game.price.original }}</div>
+                                        <div class="h3 font-weight-normal mb-0 mr-2{% if game.price.discount %} text-danger{% endif %}">${{ game.price.original }}</div>
                                         {% if game.price.discount %}<div class="h6 mb-0 font-weight-light text-light"><s>${{ game.price.original + game.price.discount }}</s></div>{% endif %}
                                     </div>
                                     <button type="button" class="btn btn-outline btn-sm ml-auto">Add to cart <i class="ya ya-shopping-cart"></i></button>

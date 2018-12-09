@@ -27,6 +27,12 @@
   padding-bottom: $list-group-item-lg-padding-y;
 }
 
+.list-star {
+  i {
+    margin-right: 2px;
+  }
+}
+
 .list-group-posts {
   .list-group-item {
     background-color: transparent;
