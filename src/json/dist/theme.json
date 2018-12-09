@@ -1100,6 +1100,8 @@
 			"platforms": [
 				1
 			],
+			"genre": 3,
+			"publisher": 1,
 			"released": true,
 			"date": 1524520018,
 			"comments": 675,
@@ -1110,13 +1112,15 @@
 			}
 		},
 		{
-			"title": "Spider-Man PS4",
+			"title": "Marvel's Spider-Man",
 			"text": "This isn’t the Spider-Man you’ve met or ever seen before. After eight years behind the mask, Peter Parker is more experienced, confident, and masterful with his dynamic powers and abilities than ever before.",
 			"img": "reAPorQHxNQ",
 			"platforms": [
 				3,
 				1
 			],
+			"genre": 2,
+			"publisher": 2,
 			"released": true,
 			"new": true,
 			"date": 1536788818,
@@ -1136,6 +1140,8 @@
 				1,
 				2
 			],
+			"genre": 15,
+			"publisher": 5,
 			"released": true,
 			"date": 1538776018,
 			"comments": 89,
@@ -1155,6 +1161,8 @@
 				4,
 				2
 			],
+			"genre": 6,
+			"publisher": 6,
 			"released": true,
 			"date": 1445636818,
 			"comments": 99,
@@ -1172,6 +1180,8 @@
 				3,
 				1
 			],
+			"genre": 8,
+			"publisher": 5,
 			"date": 1556833618,
 			"comments": 22,
 			"like": 85,
@@ -1189,6 +1199,8 @@
 				2,
 				3
 			],
+			"genre": 9,
+			"publisher": 7,
 			"released": true,
 			"date": 1489614418,
 			"comments": 25,
@@ -1205,6 +1217,8 @@
 			"platforms": [
 				1
 			],
+			"genre": 1,
+			"publisher": 3,
 			"date": 1595368018,
 			"comments": 62,
 			"like": 49,
@@ -1222,6 +1236,8 @@
 				1,
 				2
 			],
+			"genre": 11,
+			"publisher": 6,
 			"date": 3393265618,
 			"comments": 19,
 			"like": 564,
@@ -1237,6 +1253,8 @@
 				2,
 				3
 			],
+			"genre": 14,
+			"publisher": 8,
 			"released": true,
 			"date": 1390945618,
 			"comments": 20,
@@ -1254,6 +1272,8 @@
 				1,
 				3
 			],
+			"genre": 15,
+			"publisher": 3,
 			"date": 1521064018,
 			"comments": 34,
 			"like": 98,
@@ -1271,6 +1291,8 @@
 				1,
 				2
 			],
+			"genre": 4,
+			"publisher": 4,
 			"released": true,
 			"date": 1538257618,
 			"comments": 9,
@@ -1288,6 +1310,8 @@
 				1,
 				2
 			],
+			"genre": 1,
+			"publisher": 1,
 			"date": 1544651218,
 			"comments": 182,
 			"like": 88,
@@ -1297,6 +1321,27 @@
 			}
 		}
 	],
+	"genre": [
+		"All",
+		"Action & Shooter",
+		"Action",
+		"Adventure",
+		"Arcade & Platform",
+		"Casual",
+		"Early Access",
+		"Economy",
+		"Fighting",
+		"Horror",
+		"Indie",
+		"Massively Multiplayer",
+		"Puzzle",
+		"Racing",
+		"RPG",
+		"Simulation",
+		"Sports",
+		"Stealth",
+		"Strategy"
+	],
 	"icons": {
 		"awesome": "<svg data-toggle=\"tooltip\" title=\"Awesome\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" width=\"48\" height=\"48\"><g><path d=\"M24,46A22,22,0,1,1,46,24,22.025,22.025,0,0,1,24,46Z\" fill=\"#ffd764\"/> <path d=\"M12,25a1,1,0,0,1-.707-1.707l6-6a1,1,0,0,1,1.414,1.414l-6,6A1,1,0,0,1,12,25Z\" fill=\"#444\"/> <path d=\"M18,25a1,1,0,0,1-.707-.293l-6-6a1,1,0,0,1,1.414-1.414l6,6A1,1,0,0,1,18,25Z\" fill=\"#444\"/> <path d=\"M36,25a1,1,0,0,0,.707-1.707l-6-6a1,1,0,0,0-1.414,1.414l6,6A1,1,0,0,0,36,25Z\" fill=\"#444\"/> <path d=\"M30,25a1,1,0,0,0,.707-.293l6-6a1,1,0,0,0-1.414-1.414l-6,6A1,1,0,0,0,30,25Z\" fill=\"#444\"/> <path d=\"M24,39a5,5,0,1,1,5-5A5.006,5.006,0,0,1,24,39Z\" fill=\"#ae453e\"/> <ellipse cx=\"24\" cy=\"37\" rx=\"3.974\" ry=\"2\" fill=\"#fa645a\"/></g></svg>",
 		"like": "<svg data-toggle=\"tooltip\" title=\"Like\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" width=\"48\" height=\"48\"><g><path d=\"M24,46A22,22,0,1,1,46,24,22.025,22.025,0,0,1,24,46Z\" fill=\"#ffd764\"/> <circle cx=\"38\" cy=\"28\" r=\"3\" fill=\"#e86c60\" opacity=\"0.5\"/> <circle cx=\"10\" cy=\"28\" r=\"3\" fill=\"#e86c60\" opacity=\"0.5\"/> <path d=\"M19,24a1,1,0,0,1-1-1,2,2,0,0,0-4,0,1,1,0,0,1-2,0,4,4,0,0,1,8,0A1,1,0,0,1,19,24Z\" fill=\"#444\"/> <path d=\"M35,24a1,1,0,0,1-1-1,2,2,0,0,0-4,0,1,1,0,0,1-2,0,4,4,0,0,1,8,0A1,1,0,0,1,35,24Z\" fill=\"#444\"/> <path d=\"M24.059,39a9.025,9.025,0,0,1-7.81-4.537,1,1,0,0,1,1.736-.994,6.989,6.989,0,0,0,12.147,0,1,1,0,0,1,1.736.994A9.024,9.024,0,0,1,24.059,39Z\" fill=\"#444\"/></g></svg>",
@@ -1304,21 +1349,18 @@
 		"angry": "<svg data-toggle=\"tooltip\" title=\"Angry\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" width=\"48\" height=\"48\"><g><path d=\"M24,46A22,22,0,1,1,46,24,22.025,22.025,0,0,1,24,46Z\" fill=\"#e86c60\"/> <circle cx=\"33\" cy=\"25\" r=\"3\" fill=\"#444\"/> <circle cx=\"15\" cy=\"25\" r=\"3\" fill=\"#444\"/> <path d=\"M17.292,37a1,1,0,0,1-.745-1.667,10,10,0,0,1,14.906,0,1,1,0,1,1-1.49,1.334,8,8,0,0,0-11.926,0A1,1,0,0,1,17.292,37Z\" fill=\"#444\"/> <path d=\"M30,21a1,1,0,0,1-.516-1.857l5-3a1,1,0,0,1,1.03,1.714l-5,3A.994.994,0,0,1,30,21Z\" fill=\"#444\"/> <path d=\"M18,21a.994.994,0,0,1-.514-.143l-5-3a1,1,0,0,1,1.03-1.714l5,3A1,1,0,0,1,18,21Z\" fill=\"#444\"/></g></svg>"
 	},
 	"platforms": [
-		{
-			"title": "PS4"
-		},
-		{
-			"title": "Xbox One"
-		},
-		{
-			"title": "PC"
-		},
-		{
-			"title": "Steam"
-		},
-		{
-			"title": "Vita"
-		}
+		"PS4",
+		"Xbox One",
+		"PC",
+		"Steam",
+		"PSN",
+		"Vita",
+		"Origin",
+		"UPlay",
+		"Blizzard",
+		"GOG",
+		"Apple",
+		"Gameforge"
 	],
 	"plugins": {
 		"bootstrap": {
@@ -1516,6 +1558,17 @@
 			}
 		]
 	},
+	"publishers": [
+		"Rockstar Games",
+		"Sony Interactive",
+		"Square Enix",
+		"Ubisoft",
+		"Activision",
+		"Microsoft Studios",
+		"CD Projekt Red",
+		"Bethesda Softworks",
+		"Bandai Namco"
+	],
 	"review": {
 		"gallery": [
 			{

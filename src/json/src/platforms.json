@@ -1,9 +1,16 @@
 {
     "platforms": [
-        { "title": "PS4" },
-        { "title": "Xbox One" },
-        { "title": "PC" },
-        { "title": "Steam" },
-        { "title": "Vita" }
+        "PS4",
+        "Xbox One",
+        "PC",
+        "Steam",
+        "PSN",
+        "Vita",
+        "Origin",
+        "UPlay",
+        "Blizzard",
+        "GOG",
+        "Apple",
+        "Gameforge"
     ]
 }

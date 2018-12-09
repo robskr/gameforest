@@ -15,6 +15,11 @@
     margin-bottom: 8px;
     font-size: $font-size-base;
     line-height: 1.4;
+
+    i {
+      font-size: 17px;
+      margin-right: 3px;
+    }
   }
 
   &-body {
@@ -115,12 +120,6 @@
 
 // Card game
 .card-game {
-  .card-title > i {
-    font-size: 19px;
-    float: left;
-    margin-right: 8px;
-  }
-
   .card-img {
     height: 300px;
   }
@@ -144,14 +143,6 @@
 .card-shop {
   .card-img {
     height: 250px;
-  }
-
-  .card-title {
-    i {
-      font-size: 19px;
-      float: left;
-      margin-right: 8px;
-    }
   }
 
   .card-body {
