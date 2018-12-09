@@ -38,7 +38,7 @@
                 {% for blog in blogs %}
                     {% if (loop.index > 2) and (loop.index < 6) %}
                         <div class="col-4">
-                            <div class="card card-post bg-transparent border-0 shadow-none mb-0">
+                            <div class="card bg-transparent border-0 shadow-none mb-0">
                                 <a class="card-img mt-0 mx-0" href="{{ blog.url }}">
                                     <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
                                 </a>
