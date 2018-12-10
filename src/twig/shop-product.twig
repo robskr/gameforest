@@ -40,13 +40,11 @@
                             <h1 class="font-weight-bold">{{ product.title }}</h1>
                             <div class="d-flex align-items-center">
                                 <ul class="d-flex justify-content-between list-star list-inline mr-2 mb-0">
-                                    <li><i class="ya ya-star text-warning"></i></li>
-                                    <li><i class="ya ya-star text-warning"></i></li>
-                                    <li><i class="ya ya-star text-warning"></i></li>
-                                    <li><i class="ya ya-star text-warning"></i></li>
-                                    <li><i class="ya ya-star text-muted"></i></li>
+                                    {% for i in 0..4 %}
+                                        <li><i class="ya ya-star {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
+                                    {% endfor %}
                                 </ul>
-                                <span class="text-muted">25 Reviews</span>
+                                <span class="text-muted font-weight-semibold">25 Reviews</span>
                             </div>
                         </div>
                         <p class="lead mb-4">{{ product.text|slice(0, 230) }}...</p>
@@ -130,6 +128,7 @@
                             </tbody>
                         </table>
                     {% endfor %}
+                    <button class="btn btn-outline mt-4" type="button">Compare with build</button>
                 </div>
             </div>
         </div>
@@ -137,6 +136,16 @@
 
     <section class="bg-white border-top border-bottom py-5">
         <div class="container">
+            <div class="row mb-5">
+                <div class="col">
+                    <h5>25 customer reviews:</h5>
+                    <ul class="d-flex list-star list-inline mt-3 mb-0">
+                        {% for i in 0..4 %}
+                            <li><i class="ya ya-star ya-lg mr-1 {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
             <div class="row">
                 <div class="col">
                     <div id="comments" class="anchor comments">
