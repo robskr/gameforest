@@ -1072,13 +1072,15 @@ var PATH = window.path ? window.path : 'plugins';
 var Font = {
   SOLID: '.fas',
   REGULAR: '.far',
-  BRAND: '.fab'
+  BRAND: '.fab',
+  LIGHT: '.fal'
 };
 var FontAwesome = {
   CSS: PATH + "/fontawesome/css/fontawesome.min.css",
   REGULAR: PATH + "/fontawesome/css/regular.min.css",
   BRAND: PATH + "/fontawesome/css/brands.min.css",
-  SOLID: PATH + "/fontawesome/css/solid.min.css"
+  SOLID: PATH + "/fontawesome/css/solid.min.css",
+  LIGHT: PATH + "/fontawesome/css/light.min.css"
   /**
    * ------------------------------------------------------------------------
    * Class Definition
@@ -1124,6 +1126,19 @@ function () {
     return true;
   };
 
+  _proto._light = function _light() {
+    if (document.querySelector(Font.LIGHT)) {
+      // create stylesheet
+      var fal = document.createElement('link');
+      fal.rel = 'stylesheet';
+      fal.href = FontAwesome.REGULAR; // append stylesheet
+
+      document.head.appendChild(fal);
+    }
+
+    return true;
+  };
+
   _proto._regular = function _regular() {
     if (document.querySelector(Font.REGULAR)) {
       // create stylesheet
@@ -1144,6 +1159,8 @@ function () {
     this._solid();
 
     this._brand();
+
+    this._light();
 
     this._regular();
   }; // static
@@ -1172,7 +1189,7 @@ function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  if (document.querySelector(Font.SOLID) || document.querySelector(Font.BRAND) || document.querySelector(Font.REGULAR)) {
+  if (document.querySelector(Font.SOLID) || document.querySelector(Font.BRAND) || document.querySelector(Font.REGULAR) || document.querySelector(Font.LIGHT)) {
     Icons._init.call();
   }
 });
