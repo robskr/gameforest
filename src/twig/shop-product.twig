@@ -44,7 +44,7 @@
                                         <li><i class="ya ya-star {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
                                     {% endfor %}
                                 </ul>
-                                <span class="text-muted font-weight-semibold">25 Reviews</span>
+                                <span class="text-muted">25 Reviews</span>
                             </div>
                         </div>
                         <p class="lead mb-4">{{ product.text|slice(0, 230) }}...</p>
@@ -210,7 +210,7 @@
             <div class="row">
                 <div class="col">
                     <div id="comments" class="comments">
-                        <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center">
                             <h5 class="subtitle h6 mb-0">25 Reviews</h5>
                             <div class="dropdown ml-auto">
                                 <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

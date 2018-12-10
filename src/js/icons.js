@@ -83,7 +83,7 @@ class Icons {
             // create stylesheet
             const fal = document.createElement('link')
             fal.rel = 'stylesheet'
-            fal.href = FontAwesome.REGULAR
+            fal.href = FontAwesome.LIGHT
 
             // append stylesheet
             document.head.appendChild(fal)

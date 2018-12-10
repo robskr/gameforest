@@ -1131,7 +1131,7 @@ function () {
       // create stylesheet
       var fal = document.createElement('link');
       fal.rel = 'stylesheet';
-      fal.href = FontAwesome.REGULAR; // append stylesheet
+      fal.href = FontAwesome.LIGHT; // append stylesheet
 
       document.head.appendChild(fal);
     }
