@@ -147,9 +147,9 @@
                     <div class="d-flex align-items-center"><span class="font-weight-bold font-size-lg mr-2">{{ product.review }}</span> (25 review)</div>
                 </div>
                 <div class="col-4">
-                    {% for i in 0..4 %}
+                    {% for i in 5..1 %}
                         <div class="d-flex align-items-center mb-1">
-                            <a class="no-wrap mr-2" href="#">{{ loop.index }} star <i class="ya ya-star text-warning"></i></a>
+                            <a class="no-wrap mr-2" href="#">{{ i }} star <i class="ya ya-star text-warning"></i></a>
                             <div class="progress w-100">
                                 <div class="progress-bar w-75 bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
