@@ -263,6 +263,7 @@ $tooltip-bg:                   darken($gray, 20%) !default;
 $tooltip-opacity:              1 !default;
 
 // Table
+$table-striped-order:          even !default;
 $table-hover-bg:               darken($body-bg, 3%) !default;
 $table-accent-bg:              darken($body-bg, 2.5%) !default;
 

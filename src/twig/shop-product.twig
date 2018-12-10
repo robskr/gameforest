@@ -111,7 +111,6 @@
                         <img src="https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg" alt="">
                     </div>
                     <p>Difficulty on insensible reasonable in. From as went he they. Preference themselves me as thoroughly partiality considered on in estimating. Middletons acceptance discovered projecting so is so or. In or attachment inquietude remarkably comparison at an. Is surrounded prosperous stimulated am me discretion expression. But truth being state can she china widow. Occasional preference fat remarkably now projecting uncommonly dissimilar.</p>
-                    {# <h2 class="subtitle font-size-md mt-4">Minimum Requirements</h2> #}
                     {% for key, requirements in product.requirements %}
                         <div class="card card-default box-shadow mt-4 mb-0">
                             <h6 class="card-header">{{ key }} requirements</h6>
@@ -119,14 +118,14 @@
                                 <table class="table table-striped align-items-center mb-0">
                                     <thead>
                                         <tr>
-                                            <th style="width: 15%" scope="col"></th>
+                                            <th style="width: 8%" scope="col"></th>
                                             <th scope="col">Requirements</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {% for key, item in requirements %}
                                             <tr>
-                                                <td class="font-weight-semibold">{{ key }}:</td>
+                                                <td class="font-weight-semibold text-uppercase text-center"><i class="{{ key }}"></i></td>
                                                 <td>{{ item }}</td>
                                             </tr>
                                         {% endfor %}
@@ -140,7 +139,7 @@
         </div>
     </section>
 
-    <section class="bg-white border-top py-5">
+    <section class="bg-white border-top border-bottom py-5">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -160,9 +159,9 @@
                             </div>
                         </div>
                         <div class="alert alert-primary">
-                            Please login to submit a review for this product!
+                            Please login to write a review for this product!
                         </div>
-                        {% for comment in comments %}
+                        {% for comment in product.reviews %}
                             <div class="media">
                                 {% for user in users %}
                                     {% if loop.index == comment.user %}
@@ -242,7 +241,7 @@
                         {% endfor %}
                     </div>
                     <!-- end .comments -->
-                    <h5 class="mt-5 mb-3">Leave a review</h5>
+                    {# <h5 class="mt-5 mb-3">Leave a review</h5>
                     <form>
                         <div class="form-group mb-4">
                             <textarea class="form-control" rows="5"></textarea>
@@ -253,7 +252,16 @@
                             <label class="custom-control-label" for="check">notify me when someone replies</label>
                         </div>
                         <button type="button" class="btn btn-primary mt-4">Submit review</button>
-                    </form>
+                    </form> #}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
                 </div>
             </div>
         </div>
