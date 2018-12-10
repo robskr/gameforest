@@ -159,6 +159,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="alert alert-primary">
+                            Please login to submit a review for this product!
+                        </div>
                         {% for comment in comments %}
                             <div class="media">
                                 {% for user in users %}
@@ -239,7 +242,7 @@
                         {% endfor %}
                     </div>
                     <!-- end .comments -->
-                    <h5 class="mt-5 mb-3">Leave a comment</h5>
+                    <h5 class="mt-5 mb-3">Leave a review</h5>
                     <form>
                         <div class="form-group mb-4">
                             <textarea class="form-control" rows="5"></textarea>
@@ -249,7 +252,7 @@
                             <input type="checkbox" class="custom-control-input" id="check">
                             <label class="custom-control-label" for="check">notify me when someone replies</label>
                         </div>
-                        <button type="button" class="btn btn-primary mt-4">Submit comment</button>
+                        <button type="button" class="btn btn-primary mt-4">Submit review</button>
                     </form>
                 </div>
             </div>
