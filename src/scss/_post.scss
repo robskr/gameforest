@@ -121,7 +121,8 @@
   a {
     color: darken($primary, 5%);
     font-weight: $font-weight-semibold;
-    border: 1px dashed rgba($black, .2);
+    border: 1px solid rgba($black, .12);
+    background-color: rgba($white, .5);
     padding: 5px 8px;
     font-size: 14px;
     display: inline-block;
