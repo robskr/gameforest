@@ -11,7 +11,7 @@
     border-color: $list-group-active-border-color;
   }
 
-  i {
+  > i {
     margin-right: 10px;
   }
 
@@ -71,19 +71,16 @@
     border-style: dashed;
     padding: 12px 0;
     display: flex;
+    align-items: start;
 
     &:first-child {
       padding-top: 0;
     }
 
-    &-title {
-      font-size: 15px;
-    }
-
     &-meta {
       font-size: 14px;
       font-weight: 500;
-      color: rgba($black, .5);
+      color: rgba($black, .58);
     }
 
     &-img {

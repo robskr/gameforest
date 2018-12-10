@@ -45,9 +45,9 @@
             <div class="row">
                 <div class="col d-flex align-items-center">
                     <div class="nav nav-list">
-                        <a class="nav-item nav-link active" href="game-post.html">God of War</a>
-                        <a class="nav-item nav-link" href="review-post.html">Reviews (14)</a>
-                        <a class="nav-item nav-link" href="gallery.html">Images</a>
+                        <a class="nav-item nav-link active" href="#">God of War</a>
+                        <a class="nav-item nav-link" href="#">Reviews (14)</a>
+                        <a class="nav-item nav-link" href="#">Images</a>
                         <a class="nav-item nav-link" href="#">Videos (8)</a>
                         <a class="nav-item nav-link" href="#">Streams</a>
                         <a class="nav-item nav-link" href="#">Forums</a>
@@ -73,7 +73,7 @@
                             <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 All platform
                             </button>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu dropdown-height">
                                 <a class="dropdown-item active" href="#">All platform</a>
                                 {% for platform in platforms %}
                                     <a class="dropdown-item text-lowercase" href="#">{{ platform }}</a>
@@ -117,7 +117,7 @@
                             <div class="post-body">
                                 <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
                                 <div class="post-meta">
-                                    <span class="post-meta-item"><i class="ya ya-calendar"></i>  {{ post.date|date(config.dateformat) }}</span>
+                                    <span class="post-meta-item"><i class="ya ya-calendar"></i> {{ post.date|date(config.dateformat) }}</span>
                                     <a class="post-meta-item" href="{{ post.url }}"><i class="ya ya-comment"></i> {{ post.comments }} comments</a>
                                 </div>
                                 <p>{{ post.text }}</p>
@@ -149,14 +149,24 @@
                             <h6>Platforms:</h6>
                             <a class="badge badge-primary" href="#">PS4</a>
                             <h6>Developer</h6>
-                            <p class="widget-text"><a href="#">SCE Santa Monica</a></p>
+                            <p class="widget-text">
+                                <a href="#">SCE Santa Monica</a>
+                            </p>
                             <h6>Publisher</h6>
-                            <p class="widget-text"><a href="#">Sony Interactive Entertainment</a></p>
+                            <p class="widget-text">
+                                <a href="#">Sony Interactive Entertainment</a>
+                            </p>
+                            <h6>Genre</h6>
+                            <p class="widget-text">
+                                <a href="#">Action</a>,
+                                <a href="#">Adventure</a>
+                            </p>
                             <p class="widget-text mt-4">The gods of Olympus believe their brother Ares to be insane, but they are commanded to take no action against him. The contemptuous Lord of War's siblings are bound by their father Zeus' law to not clash with one another directly.</p>
                             <a class="btn btn-outline-light btn-block mt-4" href="" role="button">Add to favourites <i class="ya ya-heart-o"></i></a>
                         </div>
                     </div>
                     <!-- end .widget -->
+
                     <div class="widget widget-post">
                         <div class="widget-header">Recommends</div>
                         <a class="widget-img" href="blog-post.html">
@@ -164,11 +174,12 @@
                         </a>
                         <div class="widget-body">
                             <h5 class="widget-title"><a href="blog-post.html">God of War Director Clarifies Comments on Future of Franchise</a></h5>
-                            <div class="widget-meta"><i class="ya ya-calendar"></i> {{ "now"|date_modify("-"~ random(20) ~" day")|date("M d, Y") }}</div>
+                            <div class="widget-meta"><i class="ya ya-calendar"></i> November 28, 2018</div>
                             <p class="widget-text">Timed voice share led his widen noisy young. On weddings believed laughing although material do exercis.</p>
                         </div>
                     </div>
                     <!-- end .widget -->
+
                     <div class="widget widget-secondary">
                         <div class="widget-header">Navigation</div>
                         <div class="widget-body p-0">
@@ -183,6 +194,7 @@
                         </div>
                     </div>
                     <!-- end .widget -->
+
                     <div class="widget widget-gallery">
                         <div class="widget-header">Images</div>
                         <div class="widget-body">
@@ -199,6 +211,7 @@
                         </div>
                     </div>
                     <!-- end .widget -->
+
                     <div class="widget widget-video">
                         <div class="widget-header">Recent Video</div>
                         <div class="widget-img embed-player">
@@ -210,19 +223,20 @@
                         </div>
                     </div>
                     <!-- end .widget -->
+
                     <div class="widget mb-3">
                         <div class="widget-header">Popular posts</div>
                         <div class="list-group list-group-posts">
-                            {% for video in game.videos %}
+                            {% for post in game.popular %}
                                 <div class="list-group-item">
                                     <div>
                                         <a class="list-group-item-img" href="#">
-                                            <img src="{{ video.img }}" alt="">
+                                            <img src="{{ post.img }}" alt="">
                                         </a>
                                     </div>
                                     <div>
-                                        <h6 class="list-group-item-title"><a href="#">{{ video.title }}</a></h6>
-                                        <div class="list-group-item-meta"><i class="ya ya-clock"></i> {{ "now"|date_modify("-"~ loop.index ~" day")|date("M d, Y") }}</div>
+                                        <h6 class="list-group-item-title"><a href="#">{{ post.title }}</a></h6>
+                                        <div class="list-group-item-meta">{{ post.date|date(config.dateformat) }}</div>
                                     </div>
                                 </div>
                             {% endfor %}

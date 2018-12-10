@@ -39,6 +39,14 @@
                 "img": "https://img.youtube.com/vi/SYtff7AyBLM/maxresdefault.jpg",
                 "comments": 316,
                 "date": 1535223919
+            },
+            {
+                "title": "God Of War PS4 Director's Next Project Teased At A Very High Level",
+                "url": "blog-post.html",
+                "text": "Perhaps far exposed age effects. Now distrusts you her delivered applauded affection out sincerity. As tolerably recommend shameless unfeeling he objection consisted. She although cheerful perceive screened throwing met not eat distance. Viewing hastily or written dearest elderly up weather it as. So direction so sweetness or extremity at daughters. Provided put unpacked now but bringing.",
+                "img": "https://static.giantbomb.com/uploads/original/0/329/3015838-god+of+war_20180420144406.png",
+                "comments": 316,
+                "date": 1535223919
             }
         ],
         "topics": [
@@ -73,12 +81,12 @@
                 "original": "https://static.giantbomb.com/uploads/original/0/329/3015850-god+of+war_20180420174106.png"
             }
         ],
-        "videos": [
-            { "img": "https://i.ytimg.com/vi/i8zcYj71CUs/mqdefault.jpg", "title": "God of War All Boss Death Scenes Gods Kratos Brutal Kills" },
-            { "img": "https://i.ytimg.com/vi/LiSm4G01IEY/mqdefault.jpg", "title": "God of War Atreus Gets Angry Awakens Spartan Rage" },
-            { "img": "https://i.ytimg.com/vi/tsSgKIQmEg0/mqdefault.jpg", "title": "The World Serpent Jormungandr Story All Cutscenes" },
-            { "img": "https://i.ytimg.com/vi/qRvZ2mcO7zA/mqdefault.jpg", "title": "God of War All Bosses, Boss Fights Gods, Dragons and Ending" },
-            { "img": "https://i.ytimg.com/vi/6LOD-pwJY6E/mqdefault.jpg", "title": "God of War 15 Minutes of Gameplay Demo PS4" }
+        "popular": [
+            { "img": "https://static.giantbomb.com/uploads/square_medium/0/329/3015841-god+of+war_20180420165310.jpg", "title": "God of War All Boss Death Scenes Gods Kratos Brutal Kills", "date": 1544650748 },
+            { "img": "https://static.giantbomb.com/uploads/square_medium/0/329/3015846-god+of+war_20180420171302.jpg", "title": "God of War Atreus Gets Angry Awakens Spartan Rage", "date": 1542922748 },
+            { "img": "https://i.ytimg.com/vi/tsSgKIQmEg0/mqdefault.jpg", "title": "The World Serpent Jormungandr Story All Cutscenes", "date": 1542836348 },
+            { "img": "https://static.giantbomb.com/uploads/square_medium/0/329/3015848-god+of+war_20180420173459.jpg", "title": "God of War All Bosses, Boss Fights Gods, Dragons and Ending", "date": 1542317948 },
+            { "img": "https://static.giantbomb.com/uploads/square_medium/0/329/3015844-god+of+war_20180420170849.jpg", "title": "God of War 15 Minutes of Gameplay Demo PS4", "date": 1542058748 }
         ],
         "nav": [
             { "title": "Articles", "icon": "ya ya-content", "count": false },
