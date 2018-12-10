@@ -302,13 +302,13 @@ const build = {
  */
 
 function watch() {
-    gulp.watch(path.src.views, build.html_all)
-    gulp.watch(path.src.json, build.html_all)
-    gulp.watch(path.src.scss, build.css)
-    gulp.watch(path.src.js, build.js)
-    gulp.watch(path.src.img, build.image)
-    gulp.watch(path.src.svg, build.icon)
-    gulp.watch(path.src.twig, build.html)
+    gulp.watch(path.src.views, { events: ['change', 'unlink'] }, build.html_all)
+    gulp.watch(path.src.json,  { events: ['change', 'unlink'] }, build.html_all)
+    gulp.watch(path.src.scss,  { events: ['change', 'unlink'] }, build.css)
+    gulp.watch(path.src.js,    { events: ['change', 'unlink'] }, build.js)
+    gulp.watch(path.src.img,   { events: ['change', 'unlink'] }, build.image)
+    gulp.watch(path.src.svg,   { events: ['change', 'unlink'] }, build.icon)
+    gulp.watch(path.src.twig,  { events: ['change', 'unlink'] }, build.html)
 }
 
 /**
@@ -317,11 +317,11 @@ function watch() {
  * ------------------------------------------------------------------------
  */
 
-gulp.task('icon',     build.icon)
-gulp.task('html',     build.html)
-gulp.task('html:all', build.html_all)
-gulp.task('css',      build.css)
-gulp.task('js',       build.js)
-gulp.task('image',    build.image)
-gulp.task('plugins',  build.plugins)
-gulp.task('default',  build.dev)
+gulp.task('icon',       build.icon)
+gulp.task('html',       build.html)
+gulp.task('html:all',   build.html_all)
+gulp.task('css',        build.css)
+gulp.task('js',         build.js)
+gulp.task('image',      build.image)
+gulp.task('plugins',    build.plugins)
+gulp.task('default',    build.dev)
