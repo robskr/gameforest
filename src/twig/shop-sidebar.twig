@@ -163,7 +163,7 @@
                         <div class="widget-body overflow-auto" style="max-height: 380px">
                             <form>
                                 <div class="form-group">
-                                    {% for genre in shop.genre %}
+                                    {% for genre in genre %}
                                         <div class="custom-control custom-radio mb-2">
                                             <input type="radio" id="genreRadio{{ loop.index }}" name="customRadio" class="custom-control-input"{% if loop.index == 1 %} checked{% endif %}>
                                             <label class="custom-control-label" for="genreRadio{{ loop.index }}">{{ genre }}</label>
@@ -179,7 +179,7 @@
                         <div class="widget-body overflow-auto" style="max-height: 380px">
                             <form>
                                 <div class="form-group">
-                                    {% for platform in shop.platforms %}
+                                    {% for platform in platforms %}
                                         <div class="custom-control custom-checkbox mb-2">
                                             <input type="checkbox" id="platform{{ loop.index }}" name="customCheck" class="custom-control-input"{% if loop.index == 1 %} checked{% endif %}>
                                             <label class="custom-control-label" for="platform{{ loop.index }}">{{ platform }}</label>
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                     <!-- end widget -->
-                    <button type="button" class="btn btn-outline-primary btn-sm btn-block">Accept filters</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-block">Accept filters</button>
                 </div>
                 <div class="col-9">
                     <div class="row row-sm">
@@ -230,18 +230,29 @@
                                                 {% endif %}
                                                 <a href="game-post.html">{{ game.title }}</a>
                                             </h5>
-                                            <ul class="list-unstyled font-size-md mt-2 mb-0">
-                                                {% if game.preorder %}<li><u class="font-weight-bold">Preorder now</u></li>{% endif %}
-                                                <li><i class="ya ya-stock text-success mr-1"></i> Available in stock</li>
-                                                <li><i class="ya ya-delivery text-success mr-1"></i> Free home delivery</li>
+                                            <ul class="d-flex justify-content-between list-star list-inline font-size-md mr-2 mt-1 mb-0">
+                                                <li><i class="ya ya-star text-warning"></i></li>
+                                                <li><i class="ya ya-star text-warning"></i></li>
+                                                <li><i class="ya ya-star text-warning"></i></li>
+                                                <li><i class="ya ya-star text-warning"></i></li>
+                                                <li><i class="ya ya-star text-muted"></i></li>
+                                            </ul>
+                                            <ul class="list-unstyled font-size-sm mt-3">
+                                                <li>Platform: {% for platform in platforms %}{% if loop.index == game.platforms[0] %}{{ platform }}{% endif %}{% endfor %}</li>
+                                                <li>Genre: {{ genre[game.genre] }}</li>
+                                                <li>Publisher: {{ publishers[game.publisher] }}</li>
+                                            </ul>
+                                            <ul class="d-flex list-unstyled mb-0">
+                                                <li class="border-right mr-2 pr-2"><i class="ya ya-stock text-success mr-1"></i> in stock</li>
+                                                <li><i class="ya ya-delivery text-success mr-1"></i> free delivery</li>
                                             </ul>
                                         </div>
                                         <div class="card-footer">
                                             <div class="d-flex align-items-center">
-                                                <div class="font-weight-bold h4 mb-0 mr-2 {% if game.price.discount %}text-danger{% endif %}">${{ game.price.original }}</div>
+                                                <div class="h3 font-weight-normal mb-0 mr-2{% if game.price.discount %} text-danger{% else %} text-dark{% endif %}">${{ game.price.original }}</div>
                                                 {% if game.price.discount %}<div class="h6 mb-0 font-weight-light text-light"><s>${{ game.price.original + game.price.discount }}</s></div>{% endif %}
                                             </div>
-                                            <button type="button" class="btn btn-outline btn-sm ml-auto font-weight-semibold">Add to cart <i class="ya ya-shopping-cart"></i></button>
+                                            <button type="button" class="btn btn-outline btn-sm ml-auto">Add to cart <i class="ya ya-shopping-cart"></i></button>
                                         </div>
                                     </div>
                                     <!-- end .card-game -->
@@ -252,7 +263,7 @@
                 </div>
             </div>
             <nav aria-label="Page navigation example">
-                <ul class="pagination mt-2 justify-content-end">
+                <ul class="pagination mt-3 justify-content-end">
                     <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>

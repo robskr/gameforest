@@ -23,52 +23,50 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                {% for product in shop.product %}
-                    <div class="col-6">
-                        <div class="product">
-                            <div class="owl-carousel product-carousel" ya-carousel="nav: false">
-                                {% for img in product.img %}
-                                    <div class="product-img">
-                                        <img src="{{ img }}" alt="">
-                                    </div>
-                                {% endfor %}
-                            </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="owl-carousel product-carousel" ya-carousel="nav: false">
+                            {% for img in product.img %}
+                                <div class="product-img">
+                                    <img src="{{ img }}" alt="">
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
-                    <div class="col-6">
-                        <form action="shop-cart.html">
-                            <div class="mb-4 pb-4 border-bottom-dashed">
-                                <h1 class="font-weight-bold">{{ product.title }}</h1>
-                                <div class="d-flex align-items-center">
-                                    <ul class="list-inline mr-2 mb-0">
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-warning"></i></li>
-                                        <li class="list-inline-item mr-0"><i class="ya ya-star text-muted"></i></li>
-                                    </ul>
-                                    <span class="text-light font-weight-semibold"><strong>25</strong> Reviews</span>
-                                </div>
+                </div>
+                <div class="col-6">
+                    <form action="shop-cart.html">
+                        <div class="mb-4 pb-4 border-bottom-dashed">
+                            <h1 class="font-weight-bold">{{ product.title }}</h1>
+                            <div class="d-flex align-items-center">
+                                <ul class="d-flex justify-content-between list-star list-inline mr-2 mb-0">
+                                    <li><i class="ya ya-star text-warning"></i></li>
+                                    <li><i class="ya ya-star text-warning"></i></li>
+                                    <li><i class="ya ya-star text-warning"></i></li>
+                                    <li><i class="ya ya-star text-warning"></i></li>
+                                    <li><i class="ya ya-star text-muted"></i></li>
+                                </ul>
+                                <span class="text-muted"><strong>25</strong> Reviews</span>
                             </div>
-                            <p class="lead mb-4">{{ product.text|slice(0, 240) }}...</p>
-                            <ul class="list-inline mb-4 d-flex align-items-start">
-                                <li class="list-inline-item display-5 font-weight-bold mb-0">$65.00</li>
-                                <li class="list-inline-item text-muted font-weight-light"><del>$90.00</del></li>
-                            </ul>
-                            <div class="tags mb-4">
-                                {% for tag in product.tags %}
-                                    <a href="#">#{{ tag }}</a>
-                                {% endfor %}
+                        </div>
+                        <p class="mb-4">{{ product.text|slice(0, 280) }}...</p>
+                        <ul class="list-inline mb-4 d-flex align-items-start">
+                            <li class="list-inline-item display-5 font-weight-bold mb-0">$65.16</li>
+                            <li class="list-inline-item text-muted font-weight-light"><del>$90.00</del></li>
+                        </ul>
+                        <div class="tags mb-4">
+                            {% for tag in product.tags %}
+                                <a href="#">#{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <button type="submit" class="btn btn-primary btn-block font-weight-semibold btn-lg mb-2">Add to cart <i class="ya ya-shopping-cart ml-2"></i></button>
+                                <button type="button" class="btn btn-outline btn-block">Add to wishlist <i class="ya ya-heart-add"></i></button>
                             </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <button type="submit" class="btn btn-primary btn-block font-weight-semibold btn-lg mb-2">Add to cart <i class="ya ya-shopping-cart ml-2"></i></button>
-                                    <button type="button" class="btn btn-outline btn-block">Add to wishlist <i class="ya ya-heart-add"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                {% endfor %}
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -106,13 +104,146 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="subtitle subtitle-sm">Description</h2>
-                    <p class="lead"><strong><u>Red Dead Redemption 2</u></strong> is an epic tale of life in America’s unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience. <strong>America, 1899.</strong> </p>
+                    <h2 class="subtitle font-size-md">Description</h2>
+                    <p><strong><u>Red Dead Redemption 2</u></strong> is an epic tale of life in America’s unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience. <strong>America, 1899.</strong> </p>
                     <p>The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. Those who will not surrender or succumb are killed. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and the best bounty hunters in the nation <b><u>massing on their heels</u></b>, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him.</p>
                     <div class="my-4" ya-embed="https://www.youtube.com/watch?v=Dw_oH5oiUSE">
                         <img src="https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg" alt="">
                     </div>
                     <p>Difficulty on insensible reasonable in. From as went he they. Preference themselves me as thoroughly partiality considered on in estimating. Middletons acceptance discovered projecting so is so or. In or attachment inquietude remarkably comparison at an. Is surrounded prosperous stimulated am me discretion expression. But truth being state can she china widow. Occasional preference fat remarkably now projecting uncommonly dissimilar.</p>
+                    {# <h2 class="subtitle font-size-md mt-4">Minimum Requirements</h2> #}
+                    {% for key, requirements in product.requirements %}
+                        <div class="card card-default mt-4 mb-0">
+                            <h6 class="card-header">{{ key }} requirements</h6>
+                            <div class="card-body">
+                                <table class="table table-striped align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 15%" scope="col"></th>
+                                            <th scope="col">Requirements</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for key, item in requirements %}
+                                            <tr>
+                                                <td class="font-weight-semibold">{{ key }}:</td>
+                                                <td>{{ item }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-top py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="comments" class="anchor comments">
+                        <div class="d-flex align-items-center mb-3">
+                            <h5 class="mb-0"><i class="ya ya-star-o mr-1"></i> 5 Reviews</h5>
+                            <div class="dropdown ml-auto">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sort by date
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item active" href="#">Latest</a>
+                                    <a class="dropdown-item" href="#">Oldest</a>
+                                    <a class="dropdown-item" href="#">Best</a>
+                                    <a class="dropdown-item" href="#">Random</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% for comment in comments %}
+                            <div class="media">
+                                {% for user in users %}
+                                    {% if loop.index == comment.user %}
+                                        <div class="avatar{% if comment.friend %} avatar-badge{% endif %}">
+                                            <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                            {% if comment.friend %}
+                                                <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="media-body">
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            {% for user in users %}
+                                                {% if loop.index == comment.user %}
+                                                    <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-meta">{{ comment.date|date('G') }} hours ago</div>
+                                        </div>
+                                        <div class="media-tools">
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                        </div>
+                                    </div>
+                                    <p>{{ comment.text }}</p>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                        <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ comment.like }})</button>
+                                    </div>
+                                    {% for reply in comment.reply %}
+                                        <div class="media">
+                                            {% for user in users %}
+                                                {% if loop.index == reply.user %}
+                                                    <div class="avatar{% if reply.friend %} avatar-badge{% endif %}">
+                                                        <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                        {% if reply.friend %}
+                                                            <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-body">
+                                                <div class="d-flex">
+                                                    <div class="d-flex">
+                                                        {% for user in users %}
+                                                            {% if loop.index == reply.user %}
+                                                                <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <div class="media-meta">{{ reply.date|date('G') }} hours ago</div>
+                                                    </div>
+                                                    <div class="media-tools">
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                                    </div>
+                                                </div>
+                                                <p>{{ reply.text }}</p>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                                    <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ reply.like }})</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <!-- end .media -->
+                        {% endfor %}
+                    </div>
+                    <!-- end .comments -->
+                    <h5 class="mt-5 mb-3">Leave a comment</h5>
+                    <form>
+                        <div class="form-group mb-4">
+                            <textarea class="form-control" rows="5"></textarea>
+                            <small class="form-text text-muted">Enter your comment in the textarea. Maximum 250 characters.</small>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="check">
+                            <label class="custom-control-label" for="check">notify me when someone replies</label>
+                        </div>
+                        <button type="button" class="btn btn-primary mt-4">Submit comment</button>
+                    </form>
                 </div>
             </div>
         </div>

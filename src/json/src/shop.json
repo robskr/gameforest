@@ -1,55 +1,36 @@
 {
-    "shop": {
-        "genre": [
-            "All",
-            "Action & Shooter",
-            "Action",
-            "Adventure",
-            "Arcade & Platform",
-            "Casual",
-            "Early Access",
-            "Economy",
-            "Fighting",
-            "Horror",
-            "Indie",
-            "Massively Multiplayer",
-            "Puzzle",
-            "Racing",
-            "RPG",
-            "Simulation",
-            "Sports",
-            "Stealth",
-            "Strategy"
+    "product": {
+        "title": "Red Dead Redemption 2",
+        "text": "Red Dead Redemption 2 is an epic tale of life in America’s unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience. America, 1899. The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. Those who will not surrender or succumb are killed. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee.",
+        "tags": [ "red", "redemption2", "large", "released", "xbox" ],
+        "img": [
+            "https://img.youtube.com/vi/SG4hoev5uaI/maxresdefault.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058984-4450753062-rdr2-.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058944-7481166741-rdr2-.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058974-3631271585-rdr2-.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058973-6072516909-rdr2-.jpg"
         ],
-        "platforms": [
-            "All",
-            "Steam",
-            "Xbox",
-            "PSN",
-            "Origin",
-            "UPlay",
-            "Blizzard",
-            "GOG",
-            "Apple",
-            "Gameforge"
-        ],
-        "product": [
-            {
-                "title": "Red Dead Redemption 2",
-                "text": "Red Dead Redemption 2 is an epic tale of life in America’s unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience. America, 1899. The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. Those who will not surrender or succumb are killed. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee.",
-                "tags": [ "red", "redemption2", "large", "released", "xbox" ],
-                "img": [
-                    "https://img.youtube.com/vi/SG4hoev5uaI/maxresdefault.jpg",
-                    "https://static.giantbomb.com/uploads/original/5/56742/3058984-4450753062-rdr2-.jpg",
-                    "https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg",
-                    "https://static.giantbomb.com/uploads/original/5/56742/3058944-7481166741-rdr2-.jpg",
-                    "https://static.giantbomb.com/uploads/original/5/56742/3058974-3631271585-rdr2-.jpg",
-                    "https://static.giantbomb.com/uploads/original/5/56742/3058973-6072516909-rdr2-.jpg"
-                ],
-                "price": {
-                    "original": "$69"
-                }
+        "price": {
+            "original": "$69"
+        },
+        "requirements": {
+            "Minimum": {
+                "OS": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1",
+                "Processor": "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz",
+                "Memory": "4 GB RAM",
+                "Graphics": "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)",
+                "Storage": "72 GB available space",
+                "Sound Card": "100% DirectX 10 compatible"
+            },
+            "Recommended": {
+                "OS": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1",
+                "Processor": "Intel Core i5 3470 @ 3.2GHz (4 CPUs) / AMD X8 FX-8350 @ 4GHz (8 CPUs)",
+                "Memory": "8 GB RAM",
+                "Graphics": "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
+                "Storage": "72 GB available space",
+                "Sound Card": "100% DirectX 10 compatible"
             }
-        ]
-    }
+        }
+}
 }
