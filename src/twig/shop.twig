@@ -110,7 +110,7 @@
                                         <li><i class="ya ya-star text-muted"></i></li>
                                     </ul>
                                     <ul class="list-unstyled font-size-sm mt-3">
-                                        <li>Platform: {% for platform in game.platforms %}{{ platform }}{% endfor %}</li>
+                                        <li>Platform: {% for platform in platforms %}{% if loop.index == game.platforms[0] %}{{ platform }}{% endif %}{% endfor %}</li>
                                         <li>Genre: {{ genre[game.genre] }}</li>
                                         <li>Publisher: {{ publishers[game.publisher] }}</li>
                                     </ul>
@@ -121,7 +121,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center">
-                                        <div class="h3 font-weight-normal mb-0 mr-2{% if game.price.discount %} text-danger{% endif %}">${{ game.price.original }}</div>
+                                        <div class="h3 font-weight-normal mb-0 mr-2{% if game.price.discount %} text-danger{% else %} text-dark{% endif %}">${{ game.price.original }}</div>
                                         {% if game.price.discount %}<div class="h6 mb-0 font-weight-light text-light"><s>${{ game.price.original + game.price.discount }}</s></div>{% endif %}
                                     </div>
                                     <button type="button" class="btn btn-outline btn-sm ml-auto">Add to cart <i class="ya ya-shopping-cart"></i></button>

@@ -17,8 +17,7 @@
     line-height: 1.4;
 
     i {
-      font-size: 17px;
-      margin-right: 3px;
+      margin-right: 2px;
     }
   }
 
@@ -228,10 +227,6 @@
     position: relative;
     background-color: #fafafa;
     border-bottom-color: rgba($black, .08);
-
-    .card-title {
-      font-weight: $font-weight-bold;
-    }
 
     .card-avatar {
       margin-right: 15px;
