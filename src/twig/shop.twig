@@ -103,11 +103,9 @@
                                         <a href="game-post.html">{{ game.title }}</a>
                                     </h5>
                                     <ul class="d-flex justify-content-between list-star list-inline font-size-md mr-2 mt-1 mb-0">
-                                        <li><i class="ya ya-star text-warning"></i></li>
-                                        <li><i class="ya ya-star text-warning"></i></li>
-                                        <li><i class="ya ya-star text-warning"></i></li>
-                                        <li><i class="ya ya-star text-warning"></i></li>
-                                        <li><i class="ya ya-star text-muted"></i></li>
+                                        {% for i in 0..4 %}
+                                            <li><i class="ya ya-star {% if loop.index <= game.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
+                                        {% endfor %}
                                     </ul>
                                     <ul class="list-unstyled font-size-sm mt-3">
                                         <li>Platform: {% for platform in platforms %}{% if loop.index == game.platforms[0] %}{{ platform }}{% endif %}{% endfor %}</li>

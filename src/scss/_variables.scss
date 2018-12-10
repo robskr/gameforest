@@ -107,7 +107,7 @@ $lead-font-weight:             400 !default;
 // Body
 $body-bg:                      #fafafa !default;
 $body-color:                   #59595f !default;
-$box-shadow:                   0 2px 3px 0px rgba(0,0,0, .05) !default;
+$box-shadow:                   0 2px 0px 0 rgba($black, 0.05) !default;
 
 // Navbar
 $navbar-dark-color:            rgba($white, .8) !default;

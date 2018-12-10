@@ -76,3 +76,8 @@
     color: lighten($body-color, 14%);
   }
 }
+
+// Shadow
+.box-shadow {
+  box-shadow: $box-shadow;
+}
