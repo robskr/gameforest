@@ -108,24 +108,28 @@
                     </div>
                     <p>Difficulty on insensible reasonable in. From as went he they. Preference themselves me as thoroughly partiality considered on in estimating. Middletons acceptance discovered projecting so is so or. In or attachment inquietude remarkably comparison at an. Is surrounded prosperous stimulated am me discretion expression. But truth being state can she china widow. Occasional preference fat remarkably now projecting uncommonly dissimilar.</p>
                     <h2 class="subtitle font-size-md mt-5">Requirements</h2>
-                    {% for key, requirements in product.requirements %}
-                        <table class="table table-striped table-bordered align-items-center mt-4 mb-0">
-                            <thead>
-                                <tr>
-                                    <th style="width: 8%" scope="col"></th>
-                                    <th scope="col">{{ key }}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for key, item in requirements %}
+                    <div class="row">
+                        {% for key, requirements in product.requirements %}
+                            <div class="col-6">
+                                <table class="table table-striped table-bordered align-items-center mb-0">
+                                <thead>
                                     <tr>
-                                        <td class="text-center"><i class="{{ key }}"></i></td>
-                                        <td>{{ item }}</td>
+                                        <th style="width: 10%" scope="col"></th>
+                                        <th scope="col">{{ key }}</th>
                                     </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    {% endfor %}
+                                </thead>
+                                <tbody>
+                                    {% for key, item in requirements %}
+                                        <tr>
+                                            <td class="text-center"><i class="{{ key }}"></i></td>
+                                            <td>{{ item }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            </div>
+                        {% endfor %}
+                    </div>
                     <button class="btn btn-outline mt-4" type="button">Compare with Build</button>
                 </div>
             </div>
@@ -185,7 +189,7 @@
         </div>
     </section>
 
-    <section class="border-bottom-dashed py-5 collapse" id="collapseExample">
+    <section class="bg-lighten border-bottom-dashed py-5 collapse" id="collapseExample">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -193,7 +197,7 @@
                     <form>
                         <div class="form-group mb-4">
                             <textarea class="form-control" rows="5"></textarea>
-                            <small class="form-text text-muted">Enter your comment in the textarea. Maximum 250 characters.</small>
+                            <small class="form-text text-muted">Enter your review into the textarea. Maximum 250 characters.</small>
                         </div>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="check">

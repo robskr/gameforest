@@ -1480,16 +1480,16 @@
 		},
 		"requirements": {
 			"Minimum": {
-				"fab fa-windows": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1",
-				"fas fa-microchip": "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz",
+				"fab fa-windows": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit",
+				"fas fa-microchip": "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs)",
 				"fas fa-memory": "4 GB RAM",
 				"fas fa-desktop": "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)",
 				"fas fa-hdd": "72 GB available space",
 				"fas fa-microphone": "100% DirectX 10 compatible"
 			},
 			"Recommended": {
-				"fab fa-windows": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1",
-				"fas fa-microchip": "Intel Core i5 3470 @ 3.2GHz (4 CPUs) / AMD X8 FX-8350 @ 4GHz (8 CPUs)",
+				"fab fa-windows": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit",
+				"fas fa-microchip": "Intel Core i5 3470 @ 3.2GHz (4 CPUs)",
 				"fas fa-memory": "8 GB RAM",
 				"fas fa-desktop": "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
 				"fas fa-hdd": "72 GB available space",
