@@ -21,39 +21,11 @@
     <section class="border-bottom-dashed">
         <div class="container">
             <div class="row">
-                <div class="col-10 mx-auto">
-                    <div class="heading heading-sm align-items-center">
-                        <div class="avatar-status">
-                            <img src="img/user-5.jpg" alt="">
-                            <span class="badge badge-success"></span>
-                        </div>
-                        <div class="ml-3">
-                            <h2 class="heading-title h4 mb-0">Clark Kent</h2>
-                            <p class="heading-text">A short description about the forum topic goes here.</p>
-                        </div>
-                        <div class="ml-auto">
-                            <div class="btn-group mr-1">
-                                <a class="btn btn-default btn-xs btn-count" href="#" role="button"><i class="ya ya-eye"></i> Watch</a>
-                                <a class="btn btn-light btn-xs" href="#" role="button">{{ random(99) }}</a>
-                            </div>
-                            <div class="btn-group">
-                                <a class="btn btn-default btn-xs btn-count" href="#" role="button"><i class="ya ya-heart-add"></i> Like</a>
-                                <a class="btn btn-light btn-xs" href="#" role="button">{{ random(99) }}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="border-bottom-dashed">
-        <div class="container">
-            <div class="row">
-                <div class="col-10 mx-auto">
+                <div class="col-10">
                     <div class="card">
-                        <h6 class="card-header">Red Dead 2 Fishing Tips: Guide To Legendaries, How To Fish, And More</h6>
                         <div class="card-body">
+                            <h6 class="card-title">Red Dead 2 Fishing Tips: Guide To Legendaries, How To Fish, And More</h6>
+                            <hr class="my-3">
                             <h6 class="mb-3">Hi Gamers!</h6>
                             <p>Apartments simplicity or understood do it we. Song such eyes had and off. Removed winding ask explain delight out few behaved lasting. Letters old hastily ham sending not sex chamber because present. Oh is indeed twenty entire figure. Occasional diminution announcing new now literature terminated. Really regard excuse off ten pulled. Lady am room head so lady four or eyes an. He do of consulted sometimes concluded mr. An household behaviour if pretended.</p>
                             <div class="embed-image mb-4">
@@ -65,19 +37,19 @@
                             </div>
                             <p>And produce say the ten moments parties. Simple innate summer fat appear basket his desire joy. Outward clothes promise at gravity do excited. Sufficient particular impossible by reasonable oh expression is. Yet preference connection unpleasant yet melancholy but end appearance. And excellence partiality estimating terminated day everything.
                             <p>Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell. Nor themselves age introduced frequently use unsatiable devonshire get. They why quit gay cold rose deal park. One same they four did ask busy. Reserved opinions fat him nay position. Breakfast as zealously incommode do agreeable furniture. One too nay led fanny allow plate.</p>
-                            <div class="alert alert-warning mt-2 mb-0">
+                            <div class="alert alert-info my-2">
                                 <a class="alert-link d-block" href="#"><i class="ya ya-attachment mr-1"></i> gameforest-bootstrap-gaming-theme.zip</a>
                                 <small>Zip File Document, 859Kb (Downloaded: 1314x times)</small>
                             </div>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer py-3">
                             <div class="avatar-stack">
                                 <img class="avatar" src="img/user-1.jpg" alt="">
                                 <img class="avatar" src="img/user-2.jpg" alt="">
                                 <img class="avatar" src="img/user-3.jpg" alt="">
                                 <img class="avatar" src="img/user-4.jpg" alt="">
                                 <img class="avatar" src="img/user-5.jpg" alt="">
-                                <span class="avatar-stack-text"><a href="profile.html">Elizabeth</a>,<a href="profile.html">Venom</a> and more 45 people like it.</span>
+                                <span class="avatar-text"><a href="profile.html">Elizabeth</a>,<a href="profile.html">Venom</a> and more 45 people like it.</span>
                             </div>
                             <div class="ml-auto">
                                 <button class="btn btn-default btn-icon btn-xs mr-1"><i class="ya ya-like"></i> 45</button>
@@ -93,72 +65,79 @@
     <section class="border-bottom-dashed py-5">
         <div class="container">
             <div class="row">
-                <div class="col-10 mx-auto">
-                    <div class="d-flex align-items-center">
-                        <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Replies</h5>
-                        <div class="dropdown ml-auto">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Sort by date
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item active" href="#">Latest</a>
-                                <a class="dropdown-item" href="#">Oldest</a>
-                                <a class="dropdown-item" href="#">Best</a>
-                                <a class="dropdown-item" href="#">Random</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="alert alert-primary mt-4 mb-0">
-                        Don't forget to login to post a reply to this forum!
-                    </div>
-                    <div class="comments replies mb-4 pb-2 mt-5">
-                        {% for reply in replies %}
-                            <div class="media">
-                                {% for user in users %}
-                                    {% if loop.index == reply.user %}
-                                        <img class="avatar" src="img/{{ user.img }}" alt="{{ user.name }}">
-                                        {% if user.status %}
-                                            <span class="badge badge-{{ user.status }} badge-status"></span>
-                                        {% endif %}
-                                    {% endif %}
-                                {% endfor %}
-                                <div class="media-body">
-                                    <div class="d-flex">
-                                        <div class="d-flex">
-                                            {% for user in users %}
-                                                {% if loop.index == reply.user %}
-                                                    <a class="h6" href="profile.html">{{ user.name }}</a>
-                                                {% endif %}
-                                            {% endfor %}
-                                            <div class="media-meta">{{ reply.date|date('G') }} hours ago</div>
-                                        </div>
-                                        <div class="media-tools">
-                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-minus"></i></a>
-                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
-                                        </div>
-                                    </div>
-                                    <p class="mb-0">{{ reply.text }}</p>
-                                </div>
-                            </div>
-                            <!-- end .media -->
-                        {% endfor %}
-                    </div>
-                    <a class="btn btn-outline btn-block mt-4 mb-3" href="#" role="button">Load More <i class="ya ya-caret-down m-0"></i></a>
-                    <h5 class="mb-4 mt-5">Leave a reply</h5>
+                <div class="col">
+                    <h5 class="mb-4">Leave a reply</h5>
                     <form>
                         <div class="form-group ckeditor">
                             <textarea name="content" id="editor">
                                 &lt;p&gt;Here goes the initial content of the editor.&lt;/p&gt;
                             </textarea>
                         </div>
-                        <div class="d-flex">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check" checked>
-                                <label class="custom-control-label" for="check">notify me when someone replies</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary ml-auto">Submit reply</button>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="check">
+                            <label class="custom-control-label" for="check">notify me when someone replies</label>
                         </div>
+                        <button type="submit" class="btn btn-primary mt-4" disabled>Submit reply</button>
                     </form>
+
+                    <div class="comments mt-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Replies</h5>
+                            <div class="dropdown ml-auto">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sort by date
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item active" href="#">Latest</a>
+                                    <a class="dropdown-item" href="#">Oldest</a>
+                                    <a class="dropdown-item" href="#">Best</a>
+                                    <a class="dropdown-item" href="#">Random</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% for reply in replies %}
+                            <div class="card mb-3">
+                                {% for user in users %}
+                                    {% if loop.index == reply.user %}
+                                        <h6 class="card-header">{{ user.name }}</h6>
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="card-body p-4">
+                                    <div class="media mt-0">
+                                        {% for user in users %}
+                                            {% if loop.index == reply.user %}
+                                                <div class="avatar avatar-badge">
+                                                    <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                    {% if user.status %}<a class="badge badge-{{ user.status }}" href="#"></a>{% endif %}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                        <div class="media-body">
+                                            <p class="mb-0">{{ reply.text }}</p>
+                                        </div>
+                                    </div>
+                                    <!-- end .media -->
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                    <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> (25)</button>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end mt-4 pt-1 mb-0">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item gap"><span class="page-link">...</span></li>
+                            <li class="page-item"><a class="page-link" href="#">25</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
