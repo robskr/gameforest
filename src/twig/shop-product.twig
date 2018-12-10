@@ -128,7 +128,7 @@
                             </tbody>
                         </table>
                     {% endfor %}
-                    <button class="btn btn-outline mt-4" type="button">Compare with build</button>
+                    <button class="btn btn-outline mt-4" type="button">Compare with Build</button>
                 </div>
             </div>
         </div>
@@ -137,18 +137,29 @@
     <section class="bg-white border-top border-bottom py-5">
         <div class="container">
             <div class="row mb-5">
-                <div class="col">
+                <div class="col-3">
                     <h5>25 customer reviews:</h5>
-                    <ul class="d-flex list-star list-inline mt-3 mb-0">
+                    <ul class="d-flex list-star list-inline mt-3 mb-3">
                         {% for i in 0..4 %}
                             <li><i class="ya ya-star ya-lg mr-1 {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
                         {% endfor %}
                     </ul>
+                    <div class="d-flex align-items-center"><span class="font-weight-bold font-size-lg mr-2">{{ product.review }}</span> (25 review)</div>
+                </div>
+                <div class="col-4">
+                    {% for i in 0..4 %}
+                        <div class="d-flex align-items-center mb-1">
+                            <a class="no-wrap mr-2" href="#">{{ loop.index }} star <i class="ya ya-star text-warning"></i></a>
+                            <div class="progress w-100">
+                                <div class="progress-bar w-75 bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <div id="comments" class="anchor comments">
+                    <div id="comments" class="comments">
                         <div class="d-flex align-items-center mb-3">
                             <h5 class="mb-0"><i class="ya ya-star-o mr-1"></i> 5 Reviews</h5>
                             <div class="dropdown ml-auto">
