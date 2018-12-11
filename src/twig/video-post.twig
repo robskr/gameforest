@@ -6,17 +6,15 @@
 
 {% block body %}
     <nav class="bg-white" aria-label="breadcrumb">
-        <div class="container">
-            <div class="d-flex align-items-center">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item"><a href="videos.html">Videos</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Video Post</li>
-                </ol>
-                <div class="btn-group ml-auto">
-                    <a class="btn btn-default btn-icon btn-xs" href=""><i class="ya ya-small-left"></i></a>
-                    <a class="btn btn-default btn-icon btn-xs" href=""><i class="ya ya-small-right"></i></a>
-                </div>
+        <div class="container d-flex align-items-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="videos.html">Videos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Video Post</li>
+            </ol>
+            <div class="btn-group ml-auto">
+                <a class="btn btn-default btn-icon btn-xs" href=""><i class="ya ya-small-left"></i></a>
+                <a class="btn btn-default btn-icon btn-xs" href=""><i class="ya ya-small-right"></i></a>
             </div>
         </div>
     </nav>
@@ -24,12 +22,8 @@
     <section class="bg-image py-5">
         <img class="background" src="https://img.youtube.com/vi/LDzYR5_TR2o/maxresdefault.jpg" alt="">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.youtube.com/embed/stUSvDY7uVU?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/stUSvDY7uVU?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -44,8 +38,8 @@
                             <div>
                                 <h1 class="post-title">Battlefield 5 Official Multiplayer Trailer</h1>
                                 <div class="post-meta">
-                                    <span class="post-meta-item"><i class="ya ya-calendar"></i>  {{ '1536931549'|date(config.dateformat) }}</span>
-                                    <span class="post-meta-item"><i class="ya ya-eye"></i>  {{ count[1][2] }} views</span>
+                                    <span class="post-meta-item"><i class="ya ya-calendar"></i> {{ '1536931549'|date(config.dateformat) }}</span>
+                                    <span class="post-meta-item"><i class="ya ya-eye"></i> {{ count[1][2] }} views</span>
                                     <a class="post-meta-item" href="#comments"><i class="ya ya-comment"></i> 5 comments</a>
                                 </div>
                             </div>
@@ -56,7 +50,7 @@
                         </div>
                     </div>
                     <!-- end .post-single -->
-                    <div id="comments" class="anchor comments">
+                    <div id="comments" class="comments">
                         <div class="d-flex align-items-center mb-3">
                             <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
                             <div class="dropdown ml-auto">
@@ -171,7 +165,7 @@
                                         </div>
                                         <div>
                                             <h6 class="list-group-item-title"><a href="#">{{ video.title }}</a></h6>
-                                            <div class="list-group-item-meta"><i class="ya ya-clock"></i> {{ video.date|date("M d, Y") }}</div>
+                                            <div class="list-group-item-meta"><i class="ya ya-clock mr-1"></i> {{ video.date|date(config.dateformat) }}</div>
                                         </div>
                                     </div>
                                 {% endif %}

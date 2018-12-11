@@ -161,7 +161,7 @@
                                 <div class="d-flex align-items-center">
                                     {% for user in users %}
                                         {% if loop.index == post.author %}
-                                            <div class="card-avatar">
+                                            <div class="avatar-badge avatar-sm">
                                                 <img src="img/{{ user.img }}" alt="">
                                                 {% if user.status %}<span class="badge badge-{{ user.status }}"></span>{% endif %}
                                             </div>

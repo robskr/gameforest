@@ -138,7 +138,7 @@
   }
 
   &-secondary a {
-    background-color: transparent;
+    background-color: $body-bg;
     border: 1px solid rgba($black, .1);
     color: inherit;
   }

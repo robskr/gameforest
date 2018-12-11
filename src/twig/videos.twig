@@ -65,6 +65,7 @@
                             <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
                         </div>
                     </form>
+                    <!-- .end .form -->
                 </div>
             </div>
         </div>
@@ -72,9 +73,9 @@
 
     <section>
         <div class="container">
-            <div class="d-flex align-items-center mb-4">
-                <h5 class="subtitle border-0 pl-1 mb-0"><i class="ya ya-player mr-2"></i> Recent videos</h5>
-                <a class="btn btn-primary ml-auto" href="#" role="button">Upload video</a>
+            <div class="d-flex justify-content-between align-items-center mb-4 pb-1">
+                <h5 class="h6 text-uppercase font-weight-bold pl-1 mb-0"><i class="ya ya-player mr-2"></i> Recent videos</h5>
+                <a class="btn btn-primary" href="#" role="button">Upload video</a>
             </div>
             <div class="row row-md">
                 {% for video in videos %}
@@ -100,7 +101,7 @@
                 {% endfor %}
             </div>
             <nav aria-label="Page navigation example">
-                <ul class="pagination mt-2 justify-content-end">
+                <ul class="pagination mt-3 justify-content-end">
                     <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
