@@ -98,18 +98,17 @@
                 </div>
                 <div class="col-md-3">
                     <div class="widget">
-                        <div class="widget-body">
-                            <form action="search.html">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for blog...">
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
-                                    </div>
+                        <form action="search.html">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for blog...">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-post">
                         <div class="widget-header">Recommends</div>
                         {% for blog in blogs %}
@@ -126,6 +125,7 @@
                         {% endfor %}
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-secondary">
                         <div class="widget-header">Categories</div>
                         <div class="widget-body p-0">
@@ -137,6 +137,7 @@
                         </div>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-post mb-4">
                         <div class="widget-header">Popular on Gameforest</div>
                         {% for blog in blogs %}
@@ -153,6 +154,7 @@
                         {% endfor %}
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-post">
                         <div class="widget-body">
                             <div class="list-group list-group-posts list-group-sm mt-3">
@@ -174,6 +176,7 @@
                         </div>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-tags">
                         <div class="widget-header">Popular Tags</div>
                         <div class="widget-body">

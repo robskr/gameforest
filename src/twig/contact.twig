@@ -1,88 +1,78 @@
 {% extends "base.twig" %}
 
-{% block css %}
-    <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
-{% endblock %}
-
 {% block js %}
-    <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="plugins/parallax/parallax.min.js"></script>
 {% endblock %}
 
 {% block body %}
-    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+    <section class="overflow-hidden py-8" data-parallax="scroll" data-image-src="https://static.giantbomb.com/uploads/original/0/5370/2791736-7947254676-Star_.jpg">
+        <div class="overlay" ya-style="background-color: #36373a;opacity: .9"></div>
         <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact</li>
-            </ol>
+            <div class="row mb-5">
+                <div class="col">
+                    <h2 class="display-3 text-white mb-3">Get in touch with us</h2>
+                    <p class="h5 font-weight-light text-light">We’ll get back to you as soon as possible.</p>
+                </div>
+            </div>
         </div>
-    </nav>
+        <div class="shape" ya-svg="divider"></div>
+    </section>
 
     <section class="py-6">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto text-center mb-6">
-                    <i class="ya ya-email icon"></i>
-                    <h2 class="h1 mb-3">Get in touch with us</h2>
-                    <p class="mb-0">Prepared do an dissuade be so whatever steepest. Yet her beyond looked either day <br>wished nay. By doubtful disposed do juvenile an</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-10 mx-auto">
-                    <div class="alert alert-success fade show mb-4" role="alert">
-                        <strong>Success!</strong> We received your message and will be get in touch with you soon!
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                <div class="col-3">
+                    <div class="widget widget-secondary">
+                        <h6 class="widget-header border-0">Navigation</h6>
+                        <div class="list-group list-group-lg list-group-flush">
+                            <a class="list-group-item active" href="#"><i class="ya ya-question"></i> Faq</a>
+                            <a class="list-group-item" href="#"><i class="ya ya-content"></i> Forum <span class="badge badge-secondary badge-pill">25</span></a>
+                            <a class="list-group-item" href="#"><i class="ya ya-search"></i> Search</a>
+                            <a class="list-group-item" href="#"><i class="ya ya-users"></i> Premium</a>
+                        </div>
                     </div>
+                    <!-- end .widget -->
+                </div>
+                <div class="col-9">
                     <form>
-                        <div class="card card-default mb-4">
-                            <h6 class="card-header">Contact Us</h6>
-                            <div class="card-body">
+                        <h5 class="font-weight-bold font-size-md text-uppercase mb-4 pb-1">Contact Us</h5>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control form-control-lg" id="email" placeholder="Enter email">
+                            <small class="form-text text-muted">We’ll never share your email with anyone else.</small>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
                                 <div class="form-group">
-                                    <label for="email">Email address</label>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ya ya-user"></i></span>
-                                        </div>
-                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                                    </div>
-                                    <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="name" placeholder="Enter your name">
                                 </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="name">Name</label>
-                                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="subject">Subject</label>
-                                            <select id="subject" class="selectpicker w-100" data-live-search="true">
-                                                <option>Select</option>
-                                                <option>General</option>
-                                                <option>Partnership</option>
-                                                <option>Report Bug</option>
-                                                <option>Support</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="col-6">
                                 <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea class="form-control" id="message" aria-describedby="messageHelp" rows="5"></textarea>
-                                    <small id="messageHelp" class="form-text text-muted">Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. </small>
-                                </div>
-                                <div class="form-group mb-2">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1">Accept terms of services.</label>
-                                    </div>
+                                    <label for="subject">Subject</label>
+                                    <select class="form-control form-control-lg" id="subject">
+                                        <option>Select</option>
+                                        <option>General</option>
+                                        <option>Partnership</option>
+                                        <option>Report Bug</option>
+                                        <option>Support</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary">Send message</button>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control form-control-lg" id="message" rows="5"></textarea>
+                            <small class="form-text text-muted">Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret.</small>
+                        </div>
+                        <div class="form-group mb-2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">Accept terms of services.</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline btn-lg mt-4">Send message</button>
                     </form>
                 </div>
             </div>
@@ -93,7 +83,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="promo py-4">
+                    <div class="promo">
                         <h2 class="promo-title h5 mr-4">Build your professional gaming website with Gameforest</h2>
                         <a class="btn btn-outline-light btn-sm" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
                     </div>

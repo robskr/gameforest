@@ -291,7 +291,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h2 class="text-white mb-0 py-7 mt-3">Profile Settings</h2>
+                            <h2 class="text-white py-7 mb-0 mt-3">Profile Settings</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -314,31 +314,31 @@
                     <div class="row">
                         <div class="col-9">
                             <div class="card mb-5">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-badge avatar-change transparent mr-4">
-                                            <img src="img/user-1.jpg" alt="">
-                                            <span class="badge badge-success"></span>
-                                        </div>
-                                        <form>
-                                            <div class="custom-file custom-file-btn d-block mb-1">
-                                                <input type="file" class="custom-file-input d-none" id="avatar-file">
-                                                <label class="custom-file-label position-relative" for="avatar-file">
-                                                    <span class="btn btn-primary">Change avatar</span>
-                                                </label>
-                                            </div>
-                                            <small class="d-block mt-3 text-muted">For best results, use an image at least 180px by 180px in either .jpg or .png format</small>
-                                        </form>
+                                <div class="card-body d-flex align-items-center">
+                                    <div class="avatar-badge avatar-change transparent mr-4">
+                                        <img src="img/user-1.jpg" alt="">
+                                        <span class="badge badge-success"></span>
                                     </div>
+                                    <form>
+                                        <div class="custom-file custom-file-btn d-block mb-1">
+                                            <input type="file" class="custom-file-input d-none" id="avatar">
+                                            <label class="custom-file-label position-relative" for="avatar">
+                                                <span class="btn btn-primary">Change avatar</span>
+                                            </label>
+                                        </div>
+                                        <small class="d-block mt-3 text-muted">For best results, use an image at least 180px by 180px in either .jpg or .png format</small>
+                                    </form>
+                                    <!-- end form -->
                                 </div>
                             </div>
+                            <!-- end .card -->
                             <form>
                                 <h5 class="font-weight-bold font-size-md text-uppercase mb-4 pb-1">Profile Information</h5>
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" value="Nathan Drake" placeholder="Enter Username">
-                                        <small id="usernameHelp" class="form-text text-muted">The name what will be visible on community pages.</small>
+                                        <input type="text" class="form-control" id="username" value="Nathan Drake" placeholder="Enter Username">
+                                        <small class="form-text text-muted">The name what will be visible on community pages.</small>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="name">Name</label>
@@ -349,12 +349,12 @@
                                     <div class="form-group col-md-6">
                                         <label for="email">Email</label>
                                         <div class="input-group">
-                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="nathan@drake.com" placeholder="Enter your email address">
+                                            <input type="email" class="form-control" id="email" value="nathan@drake.com" placeholder="Enter your email address">
                                             <div class="input-group-append">
                                                 <button type="button" class="btn btn-light btn-icon border-left-0" data-toggle="tooltip" title="Enter a valid email address."><i class="ya ya-help-circle"></i></button>
                                             </div>
                                         </div>
-                                        <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone else.</small>
+                                        <small class="form-text text-muted">We’ll never share your email with anyone else.</small>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="url">Profile URL</label>
@@ -370,7 +370,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="birthday">Birthday</label>
-                                            <select class="custom-select">
+                                            <select class="custom-select" id="birthday">
                                                 <option selected>Open this select menu</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -384,9 +384,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group mb-0">
-                                    <label for="aboutMe">About me</label>
-                                    <textarea class="form-control" id="aboutMe" aria-describedby="aboutMeHelp" rows="5"></textarea>
-                                    <small id="aboutMeHelp" class="form-text text-muted">A short description about yourself and your duty. You can @mention other users and organizations to link to them.</small>
+                                    <label for="about-me">About me</label>
+                                    <textarea class="form-control" id="about-me" rows="5"></textarea>
+                                    <small class="form-text text-muted">A short description about yourself and your duty. You can @mention other users and organizations to link to them.</small>
                                 </div>
                                 <button type="submit" class="btn btn-primary disabled mt-4" disabled>Update profile</button>
                             </form>
@@ -398,22 +398,22 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="password">Current Password</label>
-                                            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter Password">
-                                            <small id="passwordHelp" class="form-text text-muted">Enter your current password into the input area.</small>
+                                            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                                            <small class="form-text text-muted">Enter your current password into the input area.</small>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group mb-2">
-                                            <label for="password1">New Password</label>
-                                            <input type="password" class="form-control" id="password1" aria-describedby="password1Help" placeholder="Enter New Password">
+                                            <label for="new-password">New Password</label>
+                                            <input type="password" class="form-control" id="new-password" placeholder="Enter New Password">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group mb-2">
-                                            <label for="password2">Confirm Password</label>
-                                            <input type="password" class="form-control" id="password2" aria-describedby="password2Help" placeholder="Confirm Password">
+                                            <label for="confirm-password">Confirm Password</label>
+                                            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
                                         </div>
                                     </div>
                                 </div>
@@ -422,8 +422,8 @@
                             <!-- end form -->
                         </div>
                         <div class="col-3">
-                            <div class="card card-fluid">
-                                <h6 class="card-header">Navigation</h6>
+                            <div class="widget widget-secondary">
+                                <h6 class="widget-header border-0">Navigation</h6>
                                 <div class="list-group list-group-lg list-group-flush">
                                     <a class="list-group-item active" href="#"><i class="ya ya-user"></i> Profile</a>
                                     <a class="list-group-item" href="#"><i class="ya ya-bell"></i> Inbox <span class="badge badge-secondary badge-pill">25</span></a>
@@ -431,6 +431,7 @@
                                     <a class="list-group-item" href="#"><i class="ya ya-content"></i> History</a>
                                 </div>
                             </div>
+                            <!-- end .widget -->
                         </div>
                     </div>
                 </div>
