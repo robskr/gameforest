@@ -181,8 +181,8 @@
                                             </a>
                                         </div>
                                         <div>
-                                            <h6 class="list-group-item-title"><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 40) }}</a></h6>
-                                            <div class="list-group-item-meta"><i class="ya ya-clock"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
+                                            <h6 class="list-group-item-title"><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 40) }}...</a></h6>
+                                            <div class="list-group-item-meta">{{ blog.meta.date|date(config.dateformat) }}</div>
                                         </div>
                                     </div>
                                 {% endfor %}
@@ -194,7 +194,7 @@
                     <div class="widget widget-tags">
                         <div class="widget-header">Popular Tags</div>
                         <div class="widget-body">
-                            <div class="tags tags-secondary">
+                            <div class="tags">
                                 <a href="#">#playstation4</a>
                                 <a href="#">#anthem</a>
                                 <a href="#">#fps</a>
