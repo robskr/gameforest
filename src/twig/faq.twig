@@ -1,25 +1,33 @@
 {% extends "base.twig" %}
 
+{% block js %}
+    <script src="plugins/parallax/parallax.min.js"></script>
+{% endblock %}
 
 {% block body %}
-    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+    <section class="overflow-hidden py-8" data-parallax="scroll" data-image-src="https://static.giantbomb.com/uploads/original/0/5370/2791736-7947254676-Star_.jpg">
+        <div class="overlay" ya-style="background-color: #36373a;opacity: .9"></div>
         <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Faq</li>
-            </ol>
+            <div class="row mb-5">
+                <div class="col-8">
+                    <h2 class="display-4 text-white">Questions &amp; Answers</h2>
+                    <p class="h5 font-weight-light text-light">Improve ashamed married expense bed her comfort pursuit four time took ye your as.</p>
+                    <form class="mt-5 mb-3" action="search.html">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg form-control-inline border-0 shadow-none" placeholder="Search answer...">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-light btn-lg px-3 border-0"><i class="ya ya-search m-0"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </nav>
+        <div class="shape" ya-svg="divider"></div>
+    </section>
 
     <section class="pt-6 pb-5">
         <div class="container">
-            {# <div class="row">
-                <div class="col-8 mx-auto text-center mb-6">
-                    <i class="ya ya-question icon"></i>
-                    <h2 class="h1 mb-3">Questions &amp; Answers</h2>
-                    <p class="mb-0">Resolution possession discovered surrounded advantages has but few add. Yet walls <br>times spoil put be it reserved contempt rendered smallest.</p>
-                </div>
-            </div> #}
             <div class="row">
                 <div class="col-3">
                     <div class="widget widget-secondary">
