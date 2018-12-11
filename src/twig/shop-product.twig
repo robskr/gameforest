@@ -52,6 +52,10 @@
                             <li class="list-inline-item display-5 font-weight-bold">$65.16</li>
                             <li class="list-inline-item text-muted font-weight-light"><del>$90.00</del></li>
                         </ul>
+                        <ul class="list-unstyled mb-4">
+                            <li>Genre: Action, Adventure</li>
+                            <li>Publisher: Sony Interactive</li>
+                        </ul>
                         <div class="d-flex align-items-center">
                             <h6 class="mb-0 mr-3">Platform:</h6>
                             <div>
@@ -74,7 +78,7 @@
                                 <a href="#">#{{ tag }}</a>
                             {% endfor %}
                         </div>
-                        <div class="card">
+                        <div class="card mb-0">
                             <div class="card-body">
                                 <button type="submit" class="btn btn-primary btn-block font-weight-semibold btn-lg mb-2">Add to cart <i class="ya ya-shopping-cart ml-2"></i></button>
                                 <button type="button" class="btn btn-outline btn-block">Add to wishlist <i class="ya ya-heart-add"></i></button>
@@ -124,7 +128,10 @@
                         <img src="https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg" alt="">
                     </div>
                     <p>Difficulty on insensible reasonable in. From as went he they. Preference themselves me as thoroughly partiality considered on in estimating. Middletons acceptance discovered projecting so is so or. In or attachment inquietude remarkably comparison at an. Is surrounded prosperous stimulated am me discretion expression. But truth being state can she china widow. Occasional preference fat remarkably now projecting uncommonly dissimilar.</p>
-                    <h2 class="subtitle font-size-md mt-4">Requirements</h2>
+                    <div class="d-flex align-items-center mt-4 mb-3">
+                        <h2 class="subtitle font-size-md mb-0 mr-auto">Requirements</h2>
+                        <button class="btn btn-outline" type="button">Compare with Build</button>
+                    </div>
                     <div class="row">
                         {% for key, requirements in product.requirements %}
                             <div class="col-6">
@@ -147,7 +154,6 @@
                             </div>
                         {% endfor %}
                     </div>
-                    <button class="btn btn-outline mt-2" type="button">Compare with Build</button>
                 </div>
             </div>
         </div>
