@@ -304,7 +304,7 @@
                                 <a class="nav-item nav-link" href="#">Billings</a>
                                 <a class="nav-item nav-link" href="#">Premium</a>
                             </div>
-                            <a class="btn btn-outline-light btn-icon ml-auto" href="profile.html">View my profile</a>
+                            <a class="btn btn-outline-light btn-icon ml-auto mb-3" href="profile.html">View my profile</a>
                         </div>
                     </div>
                 </div>
@@ -321,10 +321,12 @@
                                             <span class="badge badge-success"></span>
                                         </div>
                                         <form>
-                                            <label class="custom-file" for="file2">
-                                                <input type="file" id="file2" class="custom-file-input d-flex h-0">
-                                                <span class="btn btn-primary">Upload</span>
-                                            </label>
+                                            <div class="custom-file custom-file-btn d-block mb-1">
+                                                <input type="file" class="custom-file-input d-none" id="avatar-file">
+                                                <label class="custom-file-label position-relative" for="avatar-file">
+                                                    <span class="btn btn-primary">Change avatar</span>
+                                                </label>
+                                            </div>
                                             <small class="d-block mt-3 text-muted">For best results, use an image at least 180px by 180px in either .jpg or .png format</small>
                                         </form>
                                     </div>
@@ -418,6 +420,15 @@
                             <!-- end form -->
                         </div>
                         <div class="col-3">
+                            <div class="card card-fluid">
+                                <h6 class="card-header">Navigation</h6>
+                                <div class="list-group list-group-lg list-group-flush">
+                                    <a class="list-group-item active" href="#"><i class="ya ya-user"></i> Profile</a>
+                                    <a class="list-group-item" href="#"><i class="ya ya-bell"></i> Inbox <span class="badge badge-secondary badge-pill">25</span></a>
+                                    <a class="list-group-item" href="#"><i class="ya ya-lock"></i> Security</a>
+                                    <a class="list-group-item" href="#"><i class="ya ya-content"></i> History</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

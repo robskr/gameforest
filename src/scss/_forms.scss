@@ -29,6 +29,31 @@
   border-color: $primary;
 }
 
+.custom-file-btn {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+
+  .custom-file-input {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .custom-file-label {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    cursor: pointer;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
 .form-footer {
   border-top: 1px solid rgba($black, .05);
   border-bottom: 1px solid rgba($black, .05);
