@@ -186,7 +186,7 @@ $input-btn-focus-color:        lighten($primary, 40%) !default;
 $input-group-addon-bg:         #f7f7f7 !default;
 $input-group-addon-color:      #5d5d5d !default;
 $input-disabled-bg:            darken($body-bg, 1%) !default;
-$input-color:                  #37393c !default;
+$input-color:                  #55585d !default;
 
 $form-text-margin-top:         .725rem !default;
 $form-group-margin-bottom:     1.5rem !default;
@@ -305,8 +305,8 @@ $breadcrumb-item-color:        #616161 !default;
 $breadcrumb-content-size:      11px !default;
 
 // Row
-$row-padding-sm:               10px !default;
-$row-padding-md:               5px !default;
+$row-padding-sm:               5px !default;
+$row-padding-md:               10px !default;
 
 // Spacing
 $spacer: 1rem !default;

@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="bg-primary py-1" aria-label="breadcrumb">
+    <nav class="bg-white border-bottom" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -29,22 +29,6 @@
             </ol>
         </div>
     </nav>
-
-    <section class="bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="d-flex align-items-center py-3">
-                        <h2 class="text-white font-weight-semibold mb-0">Add topic</h2>
-                        <div class="ml-auto">
-                            <button type="button" class="btn btn-outline-light mr-1">Cancel</button>
-                            <button type="button" class="btn btn-dark" ya-notify="alert: success" ya-title="You have successfully added a new topic!">Publish <i class="ya ya-save ml-2"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="py-5">
         <div class="container">
@@ -61,11 +45,18 @@
                         <small id="topicHelp" class="form-text text-muted">Short Description about your topic content.</small>
                     </div>
                     <div class="form-group ckeditor ckeditor-lg">
-                        <label for="editor">Content</label>
                         <textarea name="content" id="editor"></textarea>
                     </div>
                 </div>
                 <div class="col-3">
+                    <div class="row row-sm mb-3">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-outline btn-block">Preview</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-primary btn-block" ya-notify="alert: success;align: bottom-right" ya-title="You have successfully added a new topic!">Publish...</button>
+                        </div>
+                    </div>
                     <div class="form-group mb-3">
                         <label>Image</label>
                         <div class="dropload">

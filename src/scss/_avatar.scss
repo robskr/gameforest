@@ -144,6 +144,10 @@
     }
   }
 
+  &.transparent .badge {
+    box-shadow: 0 0 0 2px $body-bg;
+  }
+
   &.avatar-sm {
     .badge {
       &:empty {
@@ -152,38 +156,14 @@
       }
     }
   }
-}
 
-// Avatar transition
-.avatar-transition {
-  img {
-    transition: .15s ease-in-out all;
-  }
-
-  &:hover img {
-    transform: rotate(360deg);
-  }
-}
-
-// Avatar circle
-.avatar-upload {
-  width: 5.625rem;
-  height: 5.625rem;
-  transition: .2s ease-in-out all;
-  cursor: pointer;
-
-  img {
-    border: 1px dashed rgba($white, .5);
-    padding: 5px;
-  }
-
-  .badge:empty {
-    box-shadow: 0 0 0 3px $primary;
-    bottom: 8px;
-  }
-
-  &:hover img {
-    border-color: rgba($white, .8);
+  &.avatar-inherit {
+    .badge {
+      &:empty {
+        bottom: 5px;
+        right: 10px;
+      }
+    }
   }
 }
 
@@ -206,4 +186,8 @@
 
 .avatar-xs {
   @include avatar-size($avatar-size-xs);
+}
+
+.avatar-inherit {
+  @include avatar-size(inherit);
 }

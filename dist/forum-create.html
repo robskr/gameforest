@@ -5,10 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gameforest Bootstrap Gaming Theme</title>
+    <!-- css: plugins -->
+    <link rel="stylesheet" href="plugins/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
     <!-- css: theme -->
     <link rel="stylesheet" href="css/theme.min.css">
 </head>
-<body class="fixed-navbar sticky-footer">
+<body class="fixed-navbar">
     <div class="site">
         <header class="site-header">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -286,24 +289,125 @@
         </header>
         <!-- end .site-header -->
         <div class="site-content" role="main">
-            <section class="bg-image error-404" ya-style="background-color: #252525">
-                <img class="background" src="https://img.youtube.com/vi/y3Cpetu4ke4/maxresdefault.jpg" alt="">
+            <nav class="bg-white border-bottom" aria-label="breadcrumb">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="forums.html">Forums</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add topic</li>
+                    </ol>
+                </div>
+            </nav>
+            <section class="py-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6 mx-auto">
-                            <div class="error-content">
-                                <h1 class="error-title">404</h1>
-                                <p class="error-text mb-4">We're sorry, but the page you requested cannot be found.</p>
-                                <form class="mb-5" action="search.html">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control form-control-inline border-0 shadow-none" placeholder="Search page...">
-                                        <div class="input-group-append">
-                                            <button type="button" class="btn btn-light border-0"><i class="ya ya-search m-0"></i></button>
+                        <div class="col-9">
+                            <div class="form-group">
+                                <label for="exampleInputTitle">Topic Title</label>
+                                <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="topicHelp" placeholder="Enter title" required>
+                                <small id="topicHelp" class="form-text text-muted">Title of the topic what will be visible in forum (max 50 character).</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDesc">Short Description</label>
+                                <input type="text" class="form-control" id="exampleInputDesc" aria-describedby="topicHelp" placeholder="Enter description">
+                                <small id="topicHelp" class="form-text text-muted">Short Description about your topic content.</small>
+                            </div>
+                            <div class="form-group ckeditor ckeditor-lg">
+                                <textarea name="content" id="editor"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row row-sm mb-3">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-outline btn-block">Preview</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-primary btn-block" ya-notify="alert: success;align: bottom-right" ya-title="You have successfully added a new topic!">Publish...</button>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Image</label>
+                                <div class="dropload">
+                                    <div>
+                                        <i class="ya ya-image-add"></i>
+                                        <p class="dropload-text">Add image</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="exampleInputSlug">Slug</label>
+                                <input type="text" class="form-control" id="exampleInputSlug">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="exampleFormControlSelect1">Forum</label>
+                                <select id="exampleFormControlSelect1" class="form-control selectpicker w-100">
+                                    <option>Select forum</option>
+                                    <option>General</option>
+                                    <option>Platforms</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="exampleFormControlSelect2">Author</label>
+                                <select id="exampleFormControlSelect2" class="form-control selectpicker" data-size="5">
+                                    <option>admin</option>
+                                    <option>Nathan Drake</option>
+                                    <option>Venom</option>
+                                    <option>Elizabeth</option>
+                                    <option>Trevor</option>
+                                    <option>Clark Kent</option>
+                                    <option>Aragorn</option>
+                                    <option>Michael</option>
+                                    <option>Max Payne</option>
+                                    <option>Shroud</option>
+                                    <option>Lara Croft</option>
+                                    <option>punisher</option>
+                                    <option>celebro</option>
+                                    <option>Hitman</option>
+                                    <option>Enigma</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="exampleFormControlSelect3">Publish On</label>
+                                <div class="row row-xs">
+                                    <div class="col-6">
+                                        <div class="input-group datepicker">
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-light border-right-0" data-toggle><i class="ya ya-calendar m-0"></i></button>
+                                            </div>
+                                            <input type="text" class="form-control" id="exampleSelect3" data-input>
                                         </div>
                                     </div>
-                                </form>
-                                <a class="btn btn-primary btn-rounded btn-lg" href="/">Back to home</a>
-                                <a class="btn btn-outline-light btn-rounded btn-lg ml-2" href="/">Get in touch</a>
+                                    <div class="col-6">
+                                        <div class="input-group timepicker">
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-light border-right-0" data-toggle><i class="ya ya-clock m-0"></i></button>
+                                            </div>
+                                            <input type="text" class="form-control" id="exampleSelect4" data-input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Access</label>
+                                <div class="form-group form-check custom-control custom-checkbox mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Registered</label>
+                                </div>
+                                <div class="form-group form-check custom-control custom-checkbox mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2">Subscriber</label>
+                                </div>
+                                <div class="form-group form-check custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                    <label class="custom-control-label" for="customCheck3">Administrator</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Options</label>
+                                <div class="form-group form-check custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
+                                    <label class="custom-control-label" for="customCheck4">Enable replies</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -384,6 +488,27 @@
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- js: theme -->
     <script src="js/theme.bundle.min.js"></script>
+    <!-- js: plugins -->
+    <script src="plugins/flatpickr/flatpickr.min.js"></script>
+    <script src="plugins/ckeditor/ckeditor.js"></script>
+    <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script>
+        $(function() {
+            ClassicEditor.create(document.querySelector('#editor'));
+            $('.selectpicker').selectpicker();
+            $(".datepicker").flatpickr({
+                allowInput: true,
+                wrap: true
+            });
+            $(".timepicker").flatpickr({
+                noCalendar: true,
+                enableTime: true,
+                dateFormat: "H:i",
+                allowInput: true,
+                wrap: true
+            });
+        });
+    </script>
     <!-- js: theme settings -->
     <script>
         var gameforest = {

@@ -13,13 +13,13 @@
 
     <section class="pt-6 pb-5">
         <div class="container">
-            <div class="row">
+            {# <div class="row">
                 <div class="col-8 mx-auto text-center mb-6">
                     <i class="ya ya-question icon"></i>
                     <h2 class="h1 mb-3">Questions &amp; Answers</h2>
                     <p class="mb-0">Resolution possession discovered surrounded advantages has but few add. Yet walls <br>times spoil put be it reserved contempt rendered smallest.</p>
                 </div>
-            </div>
+            </div> #}
             <div class="row">
                 <div class="col-3">
                     <div class="widget widget-secondary">
@@ -36,25 +36,22 @@
                     <!-- end .widget -->
                 </div>
                 <div class="col-9 pl-4">
-                    {% for  faq in faq %}
+                    {% for faq in faq %}
                         {% set index = loop.index %}
-                        {% for title, items in faq %}
-                            <div class="accordion accordion-transparent mb-4" id="{{ title|lower|replace({' ': "-", ':': "", '.': ""}) }}">
-                                <h5>{{ title }}</h5>
-                                <hr class="mt-3 mb-2">
-                                {% for item in items %}
-                                    <div class="accordion-item">
-                                        <a class="accordion-link{% if (index == 1) and (loop.index == 1) %}{% else %} collapsed{% endif %}" href="#collapse{{ title|lower|replace({' ': "-", ':': "", '.': ""}) ~ loop.index }}" data-toggle="collapse" aria-expanded="{% if (index == 1) and (loop.index == 1) %}true{% else %}false{% endif %}" data-target="#collapse{{ title|lower|replace({' ': "-", ':': "", '.': ""}) ~ loop.index }}" aria-controls="collapse{{ title|lower|replace({' ': "-", ':': "", '.': ""}) ~ loop.index }}">{{ item.title }}</a>
-                                        <div class="collapse{% if (index == 1) and (loop.index == 1) %} show{% endif %}" id="collapse{{ title|lower|replace({' ': "-", ':': "", '.': ""}) ~ loop.index }}">
-                                            <p class="accordion-text">{{ item.text }}</p>
-                                        </div>
+                        <div id="{{ faq.category|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="accordion mb-4">
+                            <div class="accordion-header">{{ faq.category }}</div>
+                            {% for item in faq.answer %}
+                                <div class="accordion-item">
+                                    <a class="accordion-link{% if (index == 1) and (loop.index == 1) %}{% else %} collapsed{% endif %}" href="#collapse{{ faq.category|lower|replace({' ': "-", ':': "", '.': ""}) ~ loop.index }}" data-toggle="collapse" aria-expanded="{% if (index == 1) and (loop.index == 1) %}true{% else %}false{% endif %}" data-target="#collapse{{ faq.category|lower|replace({' ': "-", ':': "", '.': ""}) ~ loop.index }}" aria-controls="collapse{{ faq.category|lower|replace({' ': "-", ':': "", '.': ""}) ~ loop.index }}">{{ item.title }}</a>
+                                    <div class="collapse{% if (index == 1) and (loop.index == 1) %} show{% endif %}" id="collapse{{ faq.category|lower|replace({' ': "-", ':': "", '.': ""}) ~ loop.index }}">
+                                        <p class="accordion-text">{{ item.text }}</p>
                                     </div>
-                                {% endfor %}
-                            </div>
-                        {% endfor %}
+                                </div>
+                            {% endfor %}
+                        </div>
                         <!-- end list-group -->
                         {% if loop.index == 1 %}
-                            <div class="alert alert-primary mb-5">
+                            <div class="alert alert-primary mb-4">
                                 <i class="ya ya-user-add mr-1"></i> Join to our <a class="alert-link" href="register.html">community</a>, submit feature requests and feedbacks!
                             </div>
                         {% endif %}

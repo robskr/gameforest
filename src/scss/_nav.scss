@@ -28,15 +28,16 @@
     margin-right: 5px;
   }
 
-  &-light {
-    .nav-link {
-      color: $white;
+  &.nav-lighten {
+    color: rgba($white, .8);
 
+    .nav-link {
       &:hover,
       &:active,
       &:focus,
       &.active {
         color: $white;
+        box-shadow: none;
       }
     }
   }
