@@ -20,12 +20,22 @@
 {% endblock %}
 
 {% block body %}
+    <nav class="bg-primary py-1" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="forums.html">Forums</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add topic</li>
+            </ol>
+        </div>
+    </nav>
+
     <section class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="heading heading-sm align-items-center py-2">
-                        <h2 class="heading-title h4 text-white mb-0 font-weight-semibold">Add topic</h2>
+                    <div class="d-flex align-items-center py-3">
+                        <h2 class="text-white font-weight-semibold mb-0">Add topic</h2>
                         <div class="ml-auto">
                             <button type="button" class="btn btn-outline-light mr-1">Cancel</button>
                             <button type="button" class="btn btn-dark" ya-notify="alert: success" ya-title="You have successfully added a new topic!">Publish <i class="ya ya-save ml-2"></i></button>
@@ -35,16 +45,6 @@
             </div>
         </div>
     </section>
-
-    <nav class="bg-white border-bottom" aria-label="breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="forums.html">Forums</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Add topic</li>
-            </ol>
-        </div>
-    </nav>
 
     <section class="py-5">
         <div class="container">

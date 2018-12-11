@@ -20,13 +20,25 @@
     }
   }
 
-
   .dropdown-toggle::after {
     content: $ya-bold-down;
     font-size: 10px;
     margin-top: 5px;
     margin-left: 8px;
     margin-right: 5px;
+  }
+
+  &-light {
+    .nav-link {
+      color: $white;
+
+      &:hover,
+      &:active,
+      &:focus,
+      &.active {
+        color: $white;
+      }
+    }
   }
 }
 

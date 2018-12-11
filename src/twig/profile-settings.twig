@@ -1,31 +1,37 @@
 {% extends "base.twig" %}
 
 {% block body %}
+    <nav class="bg-primary py-1" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="profile.html">Profile</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Settings</li>
+            </ol>
+        </div>
+    </nav>
+
     <section class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="d-flex align-items-center py-3">
-                        <div class="avatar-badge avatar-upload avatar-transition mr-3">
-                            <img src="img/user.jpg" alt="">
-                            <span class="badge badge-success"></span>
+                        <h2 class="text-white font-weight-semibold mb-0">Profile Settings</h2>
+                        <div class="ml-auto">
+                            <button type="button" class="btn btn-outline-light mr-1">Cancel</button>
+                            <button type="button" class="btn btn-dark" ya-notify="alert: success" ya-title="You have successfully added a new topic!">Save <i class="ya ya-save ml-2"></i></button>
                         </div>
-                        <div>
-                            <h1 class="h3 text-white font-weight-semibold mb-2">Welcome, Nathan!</h1>
-                            <a class="btn btn-outline-light btn-rounded font-size-sm font-weight-semibold px-3 py-1" href="#">@nathandrake</a>
-                        </div>
-                        <a class="btn btn-lighten ml-auto" href="profile.html">View profile</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-white border-bottom py-0" ya-sticky>
+    <section class="bg-primary py-0" ya-sticky>
         <div class="container">
             <div class="row">
                 <div class="col d-flex align-items-center">
-                    <div class="nav nav-list">
+                    <div class="nav nav-list nav-list-light">
                         <div class="dropdown">
                             <a class="nav-item nav-link active dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account settings</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -68,7 +74,7 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-10">
                     <form>
                         <div class="card card-default">
                             <h6 class="card-header">Profile Information</h6>
