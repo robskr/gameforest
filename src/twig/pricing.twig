@@ -1,13 +1,26 @@
 {% extends "base.twig" %}
 
+{% block js %}
+    <script src="plugins/parallax/parallax.min.js"></script>
+{% endblock %}
+
 {% block body %}
+    <nav class="bg-lighten border-bottom" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+            </ol>
+        </div>
+    </nav>
+
     <section class="py-6">
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto text-center mb-5">
                     <i class="ya ya-users icon"></i>
-                    <h2 class="display-6 mb-3">Join to gameforest community!</h2>
-                    <p class="lead">Comfort produce husband boy her had hearing. Law others theirs passed but wishes you day <br>real less till dear read use dispatched.</p>
+                    <h2 class="h1 mb-3">Join to gameforest community!</h2>
+                    <p class="mb-0">Comfort produce husband boy her had hearing. Law others theirs passed but wishes you day <br>real less till dear read use dispatched.</p>
                 </div>
             </div>
             <div class="row">
@@ -40,7 +53,7 @@
         </div>
     </section>
 
-    <section class="border-top-dashed py-6">
+    <section class="border-top py-6">
         <div class="container">
             <div class="row">
                 <div class="col-8 mx-auto text-center mb-5">
@@ -74,11 +87,12 @@
         </div>
     </section>
 
-    <section class="bg-darken py-6">
+    <section class="py-7 overflow-hidden" data-parallax="scroll" data-image-src="https://static.giantbomb.com/uploads/original/0/5370/2791736-7947254676-Star_.jpg">
+        <div class="overlay" ya-style="background-color: #36373a;opacity: .95"></div>
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h2 class="display-4 text-white font-weight-light mb-5">Ready to get started?</h2>
+                    <h2 class="display-4 text-white mb-5">Ready to get started?</h2>
                     <a class="btn btn-purple btn-lg" href="#" role="button">Contact Sales</a>
                 </div>
             </div>
