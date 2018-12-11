@@ -188,7 +188,7 @@
                                 <div class="widget-body">
                                     <h5 class="widget-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
                                     <div class="widget-meta"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
-                                    <p class="widget-text">{{ blog.text|slice(0, 100) }}...</p>
+                                    <p class="widget-text">{{ blog.text|slice(0, 90) }}...</p>
                                 </div>
                             {% endif %}
                         {% endfor %}
@@ -205,8 +205,8 @@
                                             </a>
                                         </div>
                                         <div>
-                                            <h6 class="list-group-item-title"><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 40) }}</a></h6>
-                                            <div class="list-group-item-meta"><i class="ya ya-clock"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
+                                            <h6 class="list-group-item-title"><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 35) }}...</a></h6>
+                                            <div class="list-group-item-meta">{{ blog.meta.date|date(config.dateformat) }}</div>
                                         </div>
                                     </div>
                                 {% endfor %}
