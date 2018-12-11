@@ -47,12 +47,29 @@
                                 <span class="text-muted">25 Reviews</span>
                             </div>
                         </div>
-                        <p class="lead mb-4">{{ product.text|slice(0, 230) }}...</p>
-                        <ul class="list-inline mb-4 d-flex align-items-start">
-                            <li class="list-inline-item display-5 font-weight-bold mb-0">$65.16</li>
+                        <p class="mb-4">{{ product.text|slice(0, 230) }}...</p>
+                        <ul class="list-inline mb-4 d-flex align-items-center">
+                            <li class="list-inline-item display-5 font-weight-bold">$65.16</li>
                             <li class="list-inline-item text-muted font-weight-light"><del>$90.00</del></li>
                         </ul>
-                        <div class="tags mb-4">
+                        <div class="d-flex align-items-center">
+                            <h6 class="mb-0 mr-3">Platform:</h6>
+                            <div>
+                                <div class="custom-control custom-radio custom-control-inline mr-2">
+                                    <input type="radio" id="platform1" name="platform" class="custom-control-input" checked>
+                                    <label class="custom-control-label" for="platform1">PS4</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline mr-2">
+                                    <input type="radio" id="platform2" name="platform" class="custom-control-input">
+                                    <label class="custom-control-label" for="platform2">Xbox one</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="platform3" name="platform" class="custom-control-input">
+                                    <label class="custom-control-label" for="platform3">Steam</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tags mt-4 mb-4">
                             {% for tag in product.tags %}
                                 <a href="#">#{{ tag }}</a>
                             {% endfor %}
@@ -145,7 +162,7 @@
                             <h5>25 customer reviews:</h5>
                             <ul class="d-flex list-star list-inline mt-3 mb-3">
                                 {% for i in 0..4 %}
-                                    <li><i class="ya ya-star ya-lg mr-1 {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
+                                    <li><i class="ya ya-star ya-md mr-1 {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
                                 {% endfor %}
                             </ul>
                             <div class="d-flex align-items-center"><span class="font-weight-bold font-size-lg mr-2">{{ product.review }}</span> (25 review)</div>
