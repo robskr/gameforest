@@ -2,28 +2,6 @@
 section {
   padding: 1.5rem 0;
   position: relative;
-
-  .shape {
-    transform: rotate(180deg);
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    line-height: 0;
-
-    svg {
-      position: relative;
-      width: calc(100% + 400px);
-      left: 50%;
-      height: 100px;
-      transform: translateX(-50%) rotateY(180deg);
-
-      path {
-        fill: $body-bg;
-      }
-    }
-  }
 }
 
 .bg-image {
