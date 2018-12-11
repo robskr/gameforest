@@ -63,62 +63,57 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="card card-default mb-3">
-                        <h6 class="card-header">Cart Overview</h6>
-                        <div class="card-body p-2">
-                            <table class="table table-striped align-items-center mb-0 cart">
-                                <thead>
+                    <table class="table table-striped border align-items-center cart">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 15%;text-align: center">Product</th>
+                                <th scope="col" style="width: 40%;">Title</th>
+                                <th scope="col" class="text-center" style="width: 8%;">Price</th>
+                                <th scope="col" class="text-center" style="width: 15%;">Quantity</th>
+                                <th scope="col" class="text-center" style="width: 8%;">Total</th>
+                                <th scope="col" style="width: 8%;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for game in games %}
+                                {% if loop.index < 4 %}
                                     <tr>
-                                        <th scope="col" style="width: 15%;text-align: center">Product</th>
-                                        <th scope="col" style="width: 40%;">Title</th>
-                                        <th scope="col" class="text-center" style="width: 8%;">Price</th>
-                                        <th scope="col" class="text-center" style="width: 15%;">Quantity</th>
-                                        <th scope="col" class="text-center" style="width: 8%;">Total</th>
-                                        <th scope="col" style="width: 8%;"></th>
+                                        <td class="text-center">
+                                            <div class="cart-img">
+                                                <img src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h6><a href="shop-product.html">{{ game.title }}</a></h6>
+                                            {% for plat in game.platforms %}
+                                                {% for platform in platforms %}
+                                                    {% if loop.index == plat %}
+                                                        <a class="btn btn-light btn-xs" href="#">{{ platform }}</a>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endfor %}
+                                        </td>
+                                        <td class="text-center">${{ game.price.original - '23' }}</td>
+                                        <td class="text-center">
+                                            <div class="input-group quantity">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-link minus" type="button"><i class="ya ya-minus m-0"></i></button>
+                                                </div>
+                                                <input type="number" class="form-control text" value="1" min="1">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-link plus" type="button"><i class="ya ya-plus m-0"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">${{ game.price.original }}</td>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn-link p-0" data-toggle="tooltip" title="Remove from cart"><i class="ya ya-trash"></i></button>
+                                        </td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    {% for game in games %}
-                                        {% if loop.index < 4 %}
-                                            <tr>
-                                                <td class="text-center">
-                                                    <div class="cart-img">
-                                                        <img src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <h6><a href="shop-product.html">{{ game.title }}</a></h6>
-                                                    {% for plat in game.platforms %}
-                                                        {% for platform in platforms %}
-                                                            {% if loop.index == plat %}
-                                                                <a class="btn btn-light btn-xs" href="#">{{ platform }}</a>
-                                                            {% endif %}
-                                                        {% endfor %}
-                                                    {% endfor %}
-                                                </td>
-                                                <td class="text-center">${{ game.price.original - '23' }}</td>
-                                                <td class="text-center">
-                                                    <div class="input-group quantity">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-link minus" type="button"><i class="ya ya-minus m-0"></i></button>
-                                                        </div>
-                                                        <input type="number" class="form-control text" value="1" min="1">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-link plus" type="button"><i class="ya ya-plus m-0"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">${{ game.price.original }}</td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn btn-link p-0" data-toggle="tooltip" title="Remove from cart"><i class="ya ya-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                        {% endif %}
-                                    {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="mt-2 mb-5 d-flex align-items-start">
