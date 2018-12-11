@@ -157,7 +157,10 @@
     }
   }
 
-  &.avatar-inherit {
+  &.avatar-change {
+    width: 5.5rem;
+    height: 5.5rem;
+
     .badge {
       &:empty {
         bottom: 5px;
@@ -186,8 +189,4 @@
 
 .avatar-xs {
   @include avatar-size($avatar-size-xs);
-}
-
-.avatar-inherit {
-  @include avatar-size(inherit);
 }
