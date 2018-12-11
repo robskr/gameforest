@@ -11,7 +11,7 @@
     &:focus,
     &.active {
       color: $primary;
-      font-weight: 500;
+      font-weight: $font-weight-semibold;
       box-shadow: 0 3px 0 0 $primary;
     }
 
@@ -30,6 +30,7 @@
 
   &.nav-lighten {
     color: rgba($white, .8);
+    font-weight: $font-weight-light;
 
     .nav-link {
       &:hover,
