@@ -1,5 +1,10 @@
 {% extends "base.twig" %}
 
+{% set page = {
+    navbar: 'fluid',
+    class: 'fixed-nav-bottom'
+} %}
+
 {% block js %}
     <script src="../docs/plugins/holder/holder.min.js"></script>
     <script>
@@ -24,7 +29,8 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Bootstrap Components</li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Bootstrap</li>
             </ol>
         </div>
     </nav>
@@ -33,52 +39,65 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h6 class="display-6 font-weight-bold text-white">Bootstrap components</h6>
-                    <p class="text-light">Find out what's included in your Bootstrap theme and how to compile source files. Includes live <br>examples and code snippets for every new component.</p>
+                    <h6 class="display-6 font-weight-bold text-white mb-3">Bootstrap components</h6>
+                    <p class="lead text-light mb-7">Find out what's included in your Bootstrap theme and how to compile source files. Includes live <br>examples and code snippets for every new component.</p>
                 </div>
             </div>
         </div>
+        <div class="divider" ya-svg="divider"></div>
     </section>
 
-    {% for nav in docs[1] %}
+    {% for nav in nav[1] %}
         {% for component in nav %}
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
-            {% if page %}
-                <section class="{% if loop.first %}pt-5 pb-5{% else %}py-5{% endif %}">
+
+            {% if (docs) and (component.preview != false) %}
+                <section class="{% if loop.first %}pt-6 pb-5{% else %}py-5{% endif %}">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
                             <div class="col">
-                                <h5 class="h4">{{ page.title }}</h5>
-                                <p class="pb-2">{{ page.text }}</p>
-                                <div class="mt-4">
-                                    {% for blocks in page.blocks %}
-                                        {% if blocks.table is empty %}
-                                            <div class="card card-docs card-default mb-0 mt-3">
-                                                <h6 class="card-header">{{ blocks.title }}</h6>
-                                                <div class="card-body p-4">
-                                                    <div class="example">
-                                                        {{ blocks.code }}
-                                                    </div>
+                                <h5 class="h3">{{ docs.title }}</h5>
+                                <p>{{ docs.text }}</p>
+                                <div class="mt-5">
+                                    {% if custom %}
+                                        {{ custom }}
+                                    {% else %}
+                                        {% for blocks in docs.blocks %}
+                                            {% if (blocks.table is empty) and (blocks.code) %}
+                                                <div class="example{% if loop.index != 1 %} mt-5{% endif %}">
+                                                    {{ blocks.code }}
+                                                    {{ blocks.custom }}
                                                 </div>
-                                            </div>
-                                        {% endif %}
-                                    {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                {% if loop.last %}
+                {% else %}
+                    <section>
+                        <div class="container">
+                            <div class="border-bottom-dashed"></div>
+                        </div>
+                    </section>
+                {% endif %}
             {% endif %}
         {% endfor %}
     {% endfor %}
 
     <div class="nav-bottom">
         <ul class="nav flex-column sticky">
-            {% for nav in docs[1] %}
+            {% for nav in nav[1] %}
                 {% for component in nav %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
-                    </li>
+                    {% if component.preview != false %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             {% endfor %}
             <li class="nav-item float-right">

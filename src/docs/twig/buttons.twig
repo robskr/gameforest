@@ -173,3 +173,84 @@
         }
     ]
 } %}
+
+{% set custom %}
+    <div class="card card-default mb-4">
+        <h6 class="card-header">{{ docs.blocks[0]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[0]['code'] }}
+        </div>
+    </div>
+    <div class="card card-default mb-4">
+        <h6 class="card-header">{{ docs.blocks[1]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[1]['code'] }}
+        </div>
+    </div>
+    <div class="card card-default mb-4">
+        <h6 class="card-header">{{ docs.blocks[5]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[5]['code'] }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5 card-group">
+            <div class="card card-default mb-4">
+                <h6 class="card-header">{{ docs.blocks[2]['title'] }}</h6>
+                <div class="card-body">
+                    {{ docs.blocks[2]['code'] }}
+                </div>
+            </div>
+        </div>
+        <div class="col-7 card-group">
+            <div class="card card-default mb-4">
+                <h6 class="card-header">{{ docs.blocks[3]['title'] }}</h6>
+                <div class="card-body">
+                    {{ docs.blocks[3]['code'] }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5 card-group">
+            <div class="card card-default mb-4">
+                <h6 class="card-header">{{ docs.blocks[6]['title'] }}</h6>
+                <div class="card-body">
+                    {{ docs.blocks[6]['code'] }}
+                </div>
+            </div>
+        </div>
+        <div class="col-7 card-group">
+            <div class="card card-default mb-4">
+                <h6 class="card-header">{{ docs.blocks[4]['title'] }}</h6>
+                <div class="card-body">
+                    {{ docs.blocks[4]['code'] }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5 card-group">
+            <div class="card card-default mb-4 example">
+                <h6 class="card-header">{{ docs.blocks[7]['title'] }}</h6>
+                <div class="card-body">
+                    {{ docs.blocks[7]['code'] }}
+                </div>
+            </div>
+        </div>
+        <div class="col-7 card-group">
+            <div class="card card-default mb-4">
+                <h6 class="card-header">{{ docs.blocks[8]['title'] }}</h6>
+                <div class="card-body">
+                    {{ docs.blocks[8]['code'] }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card card-default mb-0 example">
+        <h6 class="card-header">{{ docs.blocks[9]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[9]['code'] }}
+        </div>
+    </div>
+{% endset %}
