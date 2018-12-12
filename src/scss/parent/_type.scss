@@ -4,14 +4,12 @@ body {
 }
 
 img {
-  // stylelint-disable-next-line value-no-vendor-prefix
-  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-optimize-contrast; // stylelint-disable-line value-no-vendor-prefix
   max-width: 100%;
 }
 
 button {
-  // stylelint-disable-next-linedeclaration-no-important
-  outline: none !important;
+  outline: none !important; // stylelint-disable-line declaration-no-important
 }
 
 .site {

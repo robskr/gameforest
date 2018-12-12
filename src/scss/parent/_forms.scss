@@ -1,5 +1,7 @@
 // Custom label
 .custom-control-label {
+  display: block;
+
   &::before {
     top: 1.5px;
     left: -30px;
@@ -7,7 +9,7 @@
     height: 20px;
     background-color: $white;
     border: 1px solid #d4d4d4;
-    @include box-shadow(none);
+    box-shadow: none !important; // stylelint-disable-line declaration-no-important
     @include transition(none);
   }
 
