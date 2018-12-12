@@ -2,6 +2,27 @@
 section {
   position: relative;
   padding: 1.5rem 0;
+
+  > .divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    transform: rotate(180deg);
+
+    svg {
+      position: relative;
+      left: 50%;
+      width: calc(100% + 1.3px);
+      height: 140px;
+      transform: translateX(-50%) rotateY(180deg);
+    }
+
+    path {
+      fill: $body-bg;
+    }
+  }
 }
 
 .bg-image {

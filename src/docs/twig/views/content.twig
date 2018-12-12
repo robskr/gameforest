@@ -1,7 +1,7 @@
-<h1 class="mb-4">{{ page.title }}</h1>
-<p class="lead">{{ page.text }}</p>
+<h1 class="mb-4">{{ docs.title }}</h1>
+<p class="lead">{{ docs.text }}</p>
 <hr class="docs-separator my-5">
-{% for docs in page.blocks %}
+{% for docs in docs.blocks %}
     {% if docs.card %}
         <div id="{{ docs.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="anchor">
             <div class="card card-default">

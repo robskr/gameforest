@@ -1,5 +1,10 @@
 {% extends "base.twig" %}
 
+{% set page = {
+    navbar: 'fluid',
+    class: 'fixed-nav-bottom'
+} %}
+
 {% block css %}
     <link rel="stylesheet" href="plugins/morris/morris.css">
 {% endblock %}
@@ -112,24 +117,35 @@
             <div class="row">
                 <div class="col">
                     <h6 class="display-6 font-weight-bold text-white mb-3">Gameforest components</h6>
-                    <p class="text-light">Find out what's included in your Bootstrap theme and how to compile source files. Includes live <br>examples and code snippets for every new component.</p>
+                    <p class="lead text-light mb-7">Find out what's included in your Bootstrap theme and how to compile source files. Includes live <br>examples and code snippets for every new component.</p>
                 </div>
             </div>
         </div>
+        <div class="divider" ya-svg="divider"></div>
     </section>
 
-    {% for nav in docs[2] %}
+    {% for nav in nav[2] %}
         {% for component in nav %}
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
-            {% if (page) and (component.preview != false) %}
-                <section class="{% if loop.first %}pt-5 pb-5{% else %}py-5{% endif %}">
+
+            {% if (docs) and (component.preview != false) %}
+                <section class="{% if loop.first %}pt-6 pb-5{% else %}py-5{% endif %} border-bottom-dashed">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
                             <div class="col">
-                                <h5 class="h4">{{ page.title }}</h5>
-                                <p class="pb-2">{{ page.text }}</p>
-                                <div class="mt-4">
-                                    {% for blocks in page.blocks %}
+                                <h5 class="h3">{{ docs.title }}</h5>
+                                <p class="pb-2">{{ docs.text }}</p>
+                                <div class="mt-5">
+                                    {% for blocks in docs.blocks %}
+                                        {% if (blocks.table is empty) and (blocks.code) %}
+                                            {# <h6 class="mb-4">{{ blocks.title }}</h6> #}
+                                            <div class="example mb-5">
+                                                {{ blocks.code }}
+                                                {{ blocks.custom }}
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    {# {% for blocks in page.blocks %}
                                         {% if (blocks.table is empty) and (blocks.code) %}
                                             <div class="card card-docs card-default mb-0 mt-3">
                                                 <h6 class="card-header">{{ blocks.title }}</h6>
@@ -141,7 +157,7 @@
                                                 </div>
                                             </div>
                                         {% endif %}
-                                    {% endfor %}
+                                    {% endfor %} #}
                                 </div>
                             </div>
                         </div>
@@ -153,7 +169,7 @@
 
     <div class="nav-bottom">
         <ul class="nav flex-column sticky">
-            {% for nav in docs[2] %}
+            {% for nav in nav[2] %}
                 {% for component in nav %}
                     {% if component.preview != false %}
                         <li class="nav-item">

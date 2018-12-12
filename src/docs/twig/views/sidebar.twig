@@ -1,10 +1,10 @@
 <div class="sidebar">
     <div class="sidebar-title">Documentation</div>
-    {% for sidebar in docs %}
+    {% for sidebar in nav %}
         {% for title, sidebar in sidebar %}
             <div class="sidebar-subtitle">{{ title }}</div>
             {% for item in sidebar %}
-                <a class="sidebar-link{% if page.title == item.title %} active{% endif %}" href="{% if item.url %}{{ item.url }}{% else %}{{ item.title|lower|replace({' ': "-"}) }}.html{% endif %}"><span>{{ item.title }}</span></a>
+                <a class="sidebar-link{% if docs.title == item.title %} active{% endif %}" href="{% if item.url %}{{ item.url }}{% else %}{{ item.title|lower|replace({' ': "-"}) }}.html{% endif %}"><span>{{ item.title }}</span></a>
             {% endfor %}
         {% endfor %}
     {% endfor %}

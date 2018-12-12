@@ -1,6 +1,6 @@
 {% extends "base.twig" %}
 
-{% set page = {
+{% set docs = {
     title: 'Twig',
     text: 'Gameforest includes several html templates and source code that compiled by twig. Twig.js is a pure JavaScript implementation of the Twig PHP templating language.',
     blocks: [
@@ -79,7 +79,7 @@
         {
             title: 'Variable',
             text: 'A variable can be set on every page like in the example below. In this case we would like to set a sticky footer for our page so we define page variable and the footer key.',
-            pre: '{% set page = {
+            pre: '{% set docs = {
     footer: \'sticky' ~ '\'
 } %}',
             table: {

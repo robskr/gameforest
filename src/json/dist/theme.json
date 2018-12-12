@@ -395,7 +395,6 @@
 		"navbar": "fixed",
 		"footer": "static",
 		"dateformat": "F d, Y",
-		"docs": "local",
 		"disqus": "gameforest",
 		"facebook": {
 			"lang": "en_US",
@@ -431,7 +430,7 @@
 			669
 		]
 	],
-	"docs": [
+	"nav": [
 		{
 			"Getting Started": [
 				{

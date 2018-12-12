@@ -8,7 +8,7 @@
         <meta name="description" content="{{ page.description }}">
     {% endif %}
 
-    <title>{% if page.sitetitle %}{{ page.sitetitle ~ ' - ' }}{% endif %}{{ config.title }}</title>
+    <title>{% if page.title %}{{ page.title ~ ' - ' }}{% endif %}{{ config.title }}</title>
 
     {% if block("css") is defined %}
         <!-- css: plugins -->
