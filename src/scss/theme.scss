@@ -1,7 +1,7 @@
 // Vendor
 @import "variables";
 @import "mixins";
-@import "custom";
+@import "child/variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/owl.carousel/src/scss/owl.carousel";
 
@@ -60,3 +60,6 @@
 @import "plugins/countdown";
 @import "plugins/noui-slider";
 @import "plugins/lazyload";
+
+// Child theme
+@import "child/theme"
