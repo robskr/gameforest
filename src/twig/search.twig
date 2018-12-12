@@ -78,8 +78,8 @@
                     {% for blog in blogs_medium %}
                         <div class="card mb-3">
                             <div class="card-body p-2">
-                                <div class="post post-medium">
-                                    <div class="post-thumbnail">
+                                <div class="post post-medium border-0 p-0 m-0">
+                                    <div class="post-thumbnail w-25 m-0">
                                         {% if blog.url == 'blog-post-video.html' %}
                                             <div class="embed-player">
                                                 <img class="post-img" src="{{ blog.thumb }}" alt="">
@@ -91,8 +91,8 @@
                                             <img class="post-img" src="{{ blog.thumb }}" alt="{{ blog.title }}">
                                         {% endif %}
                                     </div>
-                                    <div class="post-body">
-                                        <h2 class="post-title h4"><a href="{{ blog.url }}">{{ blog.title }}</a></h2>
+                                    <div class="post-body pt-1">
+                                        <h2 class="post-title h4 mb-1"><a href="{{ blog.url }}">{{ blog.title }}</a></h2>
                                         <div class="post-meta">
                                             <span class="post-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</span>
                                             <a class="post-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>

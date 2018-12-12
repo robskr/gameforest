@@ -92,29 +92,6 @@
       margin-right: 3px;
     }
   }
-
-  .post {
-    border: 0;
-    margin-bottom: 0;
-    padding-bottom: 5px;
-
-    &-medium {
-      padding: 0;
-
-      .post-title {
-        margin-bottom: 5px;
-      }
-
-      .post-thumbnail {
-        width: 25%;
-        margin: 0;
-      }
-
-      .post-body {
-        padding-top: 5px;
-      }
-    }
-  }
 }
 
 // Card game
