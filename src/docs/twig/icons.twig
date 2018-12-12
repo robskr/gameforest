@@ -141,3 +141,14 @@
         }
     ]
 } %}
+
+
+{% set custom %}
+    {{ docs.blocks[0]['code'] }}
+    <div class="d-flex mt-5">
+        <div class="mr-4">
+            {{ docs.blocks[1]['code'] }}
+        </div>
+        {{ docs.blocks[2]['code'] }}
+    </div>
+{% endset %}

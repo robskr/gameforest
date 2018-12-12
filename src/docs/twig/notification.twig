@@ -58,3 +58,11 @@
         }
     ]
 } %}
+
+{% set custom %}
+    {{ docs.blocks[0]['code'] }}
+    {{ docs.blocks[1]['code'] }}
+    <div class="mt-5">
+        {{ docs.blocks[2]['code'] }}
+    </div>
+{% endset %}

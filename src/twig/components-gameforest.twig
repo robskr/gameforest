@@ -107,7 +107,8 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Gameforest Components</li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gameforest</li>
             </ol>
         </div>
     </nav>
@@ -129,40 +130,39 @@
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
 
             {% if (docs) and (component.preview != false) %}
-                <section class="{% if loop.first %}pt-6 pb-5{% else %}py-5{% endif %} border-bottom-dashed">
+                <section class="{% if loop.first %}pt-6 pb-5{% else %}py-5{% endif %}">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
                             <div class="col">
                                 <h5 class="h3">{{ docs.title }}</h5>
-                                <p class="pb-2">{{ docs.text }}</p>
+                                <p>{{ docs.text }}</p>
                                 <div class="mt-5">
-                                    {% for blocks in docs.blocks %}
-                                        {% if (blocks.table is empty) and (blocks.code) %}
-                                            {# <h6 class="mb-4">{{ blocks.title }}</h6> #}
-                                            <div class="example mb-5">
-                                                {{ blocks.code }}
-                                                {{ blocks.custom }}
-                                            </div>
-                                        {% endif %}
-                                    {% endfor %}
-                                    {# {% for blocks in page.blocks %}
-                                        {% if (blocks.table is empty) and (blocks.code) %}
-                                            <div class="card card-docs card-default mb-0 mt-3">
-                                                <h6 class="card-header">{{ blocks.title }}</h6>
-                                                <div class="card-body p-4">
-                                                    <div class="example">
-                                                        {{ blocks.code }}
-                                                        {{ blocks.custom }}
-                                                    </div>
+                                    {% if custom %}
+                                        {{ custom }}
+                                    {% else %}
+                                        {% for blocks in docs.blocks %}
+                                            {% if (blocks.table is empty) and (blocks.code) %}
+                                                <div class="example{% if loop.index != 1 %} mt-5{% endif %}">
+                                                    {{ blocks.code }}
+                                                    {{ blocks.custom }}
                                                 </div>
-                                            </div>
-                                        {% endif %}
-                                    {% endfor %} #}
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                {% if loop.last %}
+                {% else %}
+                    <section>
+                        <div class="container">
+                            <div class="border-bottom-dashed"></div>
+                        </div>
+                    </section>
+                {% endif %}
             {% endif %}
         {% endfor %}
     {% endfor %}

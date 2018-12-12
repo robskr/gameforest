@@ -269,6 +269,11 @@
 // Fixed nav bottom
 .fixed-nav-bottom {
   padding-top: 108px;
+
+  .anchor {
+    padding-top: 150px;
+    margin-top: -150px;
+  }
 }
 
 // Navbar lg
