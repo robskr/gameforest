@@ -1,10 +1,10 @@
 // Product
 .product {
   &-carousel {
-    border-radius: 6px;
+    padding: 10px;
     background-color: $white;
     border: 1px solid rgba($black, .15);
-    padding: 10px;
+    border-radius: 6px;
   }
 
   &-img {

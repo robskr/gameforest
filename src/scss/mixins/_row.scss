@@ -1,5 +1,5 @@
 @mixin row($padding) {
-  margin: 0 -$padding;
+  margin: 0 -#{$padding};
 
   > div {
     padding: 0 $padding;

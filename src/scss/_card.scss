@@ -28,39 +28,40 @@
   &-img {
     width: auto;
     height: 280px;
-    margin: 10px 10px 0 10px;
+    margin: 10px 10px 0;
     @include img-cover();
 
     &-top {
+      // stylelint-disable-next-linedeclaration-no-important
       border-radius: 0 !important;
     }
 
     .badge {
       position: absolute;
-      bottom: 15px;
       right: 15px;
-      padding: 7px 10px;
+      bottom: 15px;
       z-index: 2;
+      padding: 7px 10px;
     }
 
     .card-meta span {
       position: absolute;
-      bottom: 10px;
       right: 10px;
+      bottom: 10px;
       left: auto;
       display: inline-block;
-      background-color: rgba(25,25,25, 1);
-      font-weight: 400;
       padding: 3px 6px;
-      color: #fff;
       font-size: 12px;
+      font-weight: $font-weight-normal;
+      color: $white;
+      background-color: rgba(25, 25, 25, 1);
       border-radius: 4px;
     }
   }
 
   &-meta {
-    font-size: 15px;
     margin-bottom: 15px;
+    font-size: 15px;
     font-weight: 500;
 
     &-item {
@@ -70,25 +71,25 @@
         margin-right: 3px;
       }
 
-      &:after {
-        content: "\2022";
-        margin: 0 6px;
+      &::after {
         display: inline-block;
+        margin: 0 6px;
+        content: "\2022";
       }
 
-      &:last-child:after {
+      &:last-child::after {
         display: none;
       }
     }
   }
 
   &-footer {
-    background-color: transparent;
-    border-color: rgba($black, .08);
+    display: flex;
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
     color: #6d6c6e;
-    display: flex;
+    background-color: transparent;
+    border-color: rgba($black, .08);
 
     a {
       margin-left: 8px;
@@ -109,11 +110,11 @@
 // Default
 .card-default {
   background-color: $body-bg;
-  box-shadow: none;
   border-color: #e0e0e0;
+  box-shadow: none;
 
   .card-header {
-    background-color: rgba(0,0,0,0.02);
+    background-color: rgba($black, .02);
     border-color: #e0e0e0;
   }
 
@@ -132,7 +133,7 @@
   }
 
   &-lg {
-   height: 18.75rem;
+    height: 18.75rem;
   }
 
   &-md {
@@ -151,7 +152,7 @@
   }
 
   .card-footer {
-    padding-left: 10px;
     padding-right: 10px;
+    padding-left: 10px;
   }
 }

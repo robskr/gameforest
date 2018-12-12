@@ -1,14 +1,15 @@
+// Countdown
 .countdown {
   font-size: 30px;
 
   div {
     display: inline-block;
-    background-color: darken($dark, 3%);
     padding: 16px;
-    font-size: 20px;
     margin: 0 5px;
+    font-size: 20px;
     font-weight: $font-weight-light;
     color: rgba($white, .55);
+    background-color: darken($dark, 3%);
 
     span {
       display: block;

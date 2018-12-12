@@ -4,14 +4,14 @@
   .nav-link {
     padding: 19px 7px;
     margin: 0 6px;
-    transition: .2s ease-in-out;
+    @include transition($transition-base);
 
     &:hover,
     &:active,
     &:focus,
     &.active {
-      color: $primary;
       font-weight: $font-weight-semibold;
+      color: $primary;
       box-shadow: 0 3px 0 0 $primary;
     }
 
@@ -21,16 +21,16 @@
   }
 
   .dropdown-toggle::after {
-    content: $ya-bold-down;
-    font-size: 10px;
     margin-top: 5px;
-    margin-left: 8px;
     margin-right: 5px;
+    margin-left: 8px;
+    font-size: 10px;
+    content: $ya-bold-down;
   }
 
   &.nav-lighten {
-    color: rgba($white, .8);
     font-weight: $font-weight-light;
+    color: rgba($white, .8);
 
     .nav-link {
       &:hover,
@@ -47,10 +47,10 @@
 .nav-tabs {
   .nav-link {
     border-top: 0;
-    border-bottom: 0;
-    border-radius: 0;
-    border-left: 0;
     border-right: 1px solid rgba($black, .07);
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
 
     &:hover {
       color: inherit;
@@ -67,9 +67,9 @@
     &:active,
     &:focus,
     &.active {
+      font-weight: $font-weight-semibold;
       background-color: $white;
       border-left-color: transparent;
-      font-weight: 500;
     }
   }
 }
@@ -80,10 +80,10 @@
 
 .nav-profile {
   .avatar-fixed {
-    height: 100%;
     position: relative;
-    overflow: hidden;
     width: 200px;
+    height: 100%;
+    overflow: hidden;
   }
 
   .avatar-tile {
@@ -104,23 +104,23 @@
 
 .nav-bottom {
   position: fixed;
-  width: 100%;
-  z-index: 3;
-  left: 0;
   bottom: 0;
-  background-color: #333;
+  left: 0;
+  z-index: 3;
+  width: 100%;
   padding: 0;
-  border-top: 1px solid rgba(255,255,255, .05);
+  background-color: #333;
+  border-top: 1px solid rgba($white, .05);
 
   .nav {
-    border-right: 1px solid rgba(0,0,0, .05);
     display: block;
+    border-right: 1px solid rgba($white, .05);
   }
 
   .nav-item {
-    border-right: 1px solid rgba(255,255,255, .05);
     float: left;
     padding: 0;
+    border-right: 1px solid rgba($white, .05);
 
     &:last-child {
       border-bottom: 0;
@@ -128,28 +128,28 @@
   }
 
   .nav-link {
+    float: left;
     padding: 13px 12px;
     font-size: 14px;
     color: #d2d2d2;
-    float: left;
 
     &:hover {
-      color: #FFF;
-      background-color: rgba(255,255,255, .03);
+      color: $white;
+      background-color: rgba($white, .03);
     }
   }
 
   .badge {
+    float: right;
+    padding: 4px 5px;
     margin-top: 1px;
     margin-left: 10px;
-    padding: 4px 5px;
-    float: right;
     font-size: 11px;
     font-weight: $font-weight-semibold;
   }
 
   .nav-divider {
-    margin-bottom: 20px;
     margin-top: 10px;
+    margin-bottom: 20px;
   }
 }

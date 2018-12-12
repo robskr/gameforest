@@ -18,31 +18,31 @@
 
 // Video background
 .bg-video {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   background-color: $dark;
 
   &-item {
     position: absolute;
     top: 0;
     left: 0;
-    border: 0;
-    opacity: 0.5;
     z-index: 0;
+    border: 0;
+    opacity: .5;
   }
 
   .container {
-    z-index: 3;
     position: relative;
+    z-index: 3;
   }
 
   .container-fluid {
-    z-index: 1;
     position: absolute;
-    height: 100%;
-    width: 100%;
     top: 0;
-    padding: 0;
+    z-index: 1;
     display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0;
   }
 }

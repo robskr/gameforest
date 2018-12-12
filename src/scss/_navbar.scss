@@ -4,21 +4,21 @@
     padding-right: 0;
 
     &::after {
-      content: $ya-bold-down;
+      float: none;
       width: auto;
       height: auto;
+      margin-left: 5px;
       font-family: $font-family-icon;
-      border: 0;
       font-size: 8px;
       vertical-align: 2px;
-      margin-left: 5px;
-      float: none;
+      content: $ya-bold-down;
+      border: 0;
     }
   }
 
   .nav-link {
-    font-weight: 500;
     position: relative;
+    font-weight: $font-weight-semibold;
 
     .badge {
       position: absolute;
@@ -42,16 +42,16 @@
   .dropdown-menu {
     min-width: 170px;
     background-color: $dark;
-    border-radius: 0;
-    box-shadow: 0 3px 3px rgba($black, 0.1);
     border: 0;
+    border-radius: 0;
+    box-shadow: 0 3px 3px rgba($black, .1);
 
     .dropdown-menu {
       top: 0;
       left: 100%;
+      margin-top: -9px;
       margin-left: -1px;
       border-radius: 0;
-      margin-top: -9px;
     }
 
     > li {
@@ -71,11 +71,11 @@
 
     .owl-carousel .dropdown-item {
       position: relative;
+      display: block;
+      height: 200px;
       background-repeat: no-repeat;
       background-position: 100%;
       background-size: cover;
-      height: 200px;
-      display: block;
 
       img {
         object-fit: cover;

@@ -86,8 +86,8 @@
   align-items: center;
 
   .avatar {
-    border-radius: 50%;
     position: relative;
+    border-radius: 50%;
     z-index: 2;
     margin-left: -16px;
     cursor: pointer;
@@ -101,10 +101,10 @@
       margin-left: 10px;
 
       a {
+        display: inline-block;
         float: none;
         margin: 0;
-        font-weight: bold;
-        display: inline-block;
+        font-weight: $font-weight-bold;
         color: rgba($black, .65);
 
         &:hover {
@@ -125,8 +125,8 @@
   }
 
   .badge {
-    display: inline-block;
     position: absolute;
+    display: inline-block;
     width: 24px;
     height: 24px;
     right: 0;

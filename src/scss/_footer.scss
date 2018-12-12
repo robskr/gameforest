@@ -1,9 +1,9 @@
 // Site footer
 .site-footer {
   position: relative;
-  width: 100%;
   z-index: 2;
-  padding: 55px 0 0 0;
+  width: 100%;
+  padding: 55px 0 0;
   font-size: $font-size-md;
   font-weight: $font-weight-light;
   color: rgba($white, .45);
@@ -26,10 +26,10 @@
   }
 
   .footer-title {
-    color: $white;
     margin-bottom: 20px;
-    font-weight: $font-weight-semibold;
     font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $white;
     text-transform: uppercase;
   }
 }
@@ -37,16 +37,16 @@
 // Footer tags
 .footer-tags {
   a {
-    border: 1px solid rgba($white, .1);
-    margin: 0 2px 8px 0;
-    padding: 5px 10px;
-    border-radius: 3px;
     display: inline-block;
+    padding: 5px 10px;
+    margin: 0 2px 8px 0;
     font-size: $font-size-md;
+    border: 1px solid rgba($white, .1);
+    border-radius: 3px;
 
     &:hover {
+      text-decoration: none;
       background-color: rgba($white, .02);
-      text-decoration: none !important;
     }
   }
 }
@@ -56,34 +56,32 @@
   margin: 0 -.45rem;
 
   a {
-    font-size: $font-size-base;
-    color: rgba($white, 0.8);
-    padding: 0 .45rem;
     display: inline-block;
+    padding: 0 .45rem;
+    font-size: $font-size-base;
+    color: rgba($white, .8);
     text-align: center;
   }
 }
 
 // Footer bottom
 .footer-bottom {
-  border-top: 1px solid rgba($white, .05);
-  margin-top: 55px;
   padding-top: 30px;
   padding-bottom: 10px;
+  margin-top: 55px;
+  border-top: 1px solid rgba($white, .05);
 
-  ul {
-    li:last-child {
-      padding-right: 0 !important;
-    }
+  ul > li:last-child {
+    padding-right: 0;
   }
 }
 
 // Footer links
 .footer-links {
   > a {
-    color: $white;
-    margin: 0 15px 13px 0;
     display: inline-block;
+    margin: 0 15px 13px 0;
+    color: $white;
 
     &:hover {
       text-decoration: underline;
@@ -98,9 +96,9 @@
   }
 
   .site-footer {
-    height: 415px;
     position: absolute;
     bottom: 0;
     left: 0;
+    height: 415px;
   }
 }

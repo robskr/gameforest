@@ -2,11 +2,11 @@
 .notify {
   position: fixed;
   top: 6px;
-  width: 100%;
-  padding: 0 20px;
   z-index: 10;
   display: flex;
   justify-content: center;
+  width: 100%;
+  padding: 0 20px;
 
   .alert {
     display: inline-block;
@@ -23,18 +23,18 @@
 }
 
 .notify-bottom {
-  bottom: 10px;
   top: auto;
+  bottom: 10px;
 
   &-left {
-    bottom: 10px;
     top: auto;
+    bottom: 10px;
     justify-content: flex-start;
   }
 
   &-right {
-    bottom: 10px;
     top: auto;
+    bottom: 10px;
     justify-content: flex-end;
   }
 }

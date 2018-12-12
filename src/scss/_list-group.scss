@@ -30,42 +30,28 @@
 // List group posts
 .list-group-posts {
   .list-group-item {
-    background-color: transparent;
-    border-width: 0 0 1px 0;
-    border-style: dashed;
-    padding: 12px 0;
     display: flex;
     align-items: start;
+    padding: 12px 0;
+    background-color: transparent;
+    border-style: dashed;
+    border-width: 0 0 1px;
 
     &:first-child {
       padding-top: 0;
     }
 
     &-meta {
-      font-size: 14px;
-      font-weight: 500;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
       color: rgba($black, .58);
     }
 
     &-img {
-      position: relative;
-      background-repeat: no-repeat;
-      background-position: 100%;
-      background-size: cover;
       width: 150px;
       height: 100px;
       margin-right: 10px;
-      display: block;
-
-      img {
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-      }
+      @include img-cover;
     }
   }
 

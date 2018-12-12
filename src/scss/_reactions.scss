@@ -2,47 +2,47 @@
 .reaction {
   display: flex;
   align-items: center;
-  margin-left: -10px;
   margin-top: 15px;
+  margin-left: -10px;
 
   svg {
-    transition: transform .28s ease-in-out;
     width: 34px;
     height: 34px;
+    @include transition(transform .28s ease-in-out);
   }
 
   &-count {
-    background-color: $white;
+    position: relative;
     display: inline-block;
-    border: 1px solid rgba($black, .2);
     padding: 4px 8px;
-    text-align: center;
     margin-left: 5px;
     font-size: 14px;
-    position: relative;
+    text-align: center;
+    background-color: $white;
+    border: 1px solid rgba($black, .2);
     border-radius: 3px;
 
-    &:after, &:before {
-      right: 100%;
-      top: 12px;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
+    &::after,
+    &::before {
       position: absolute;
-      pointer-events: none;
+      top: 12px;
+      right: 100%;
+      width: 0;
+      height: 0;
+      content: " ";
+      border: solid transparent;
     }
 
-    &:after {
-      border-right-color: $white;
-      border-width: 5px;
+    &::after {
       margin-top: -5px;
+      border-width: 5px;
+      border-right-color: $white;
     }
 
-    &:before {
-      border-right-color: rgb(175, 175, 175);
-      border-width: 6px;
+    &::before {
       margin-top: -6px;
+      border-width: 6px;
+      border-right-color: rgb(175, 175, 175);
     }
   }
 
@@ -59,7 +59,7 @@
       .reaction-count {
         border: 1px solid rgba($black, .3);
 
-        &:before {
+        &::before {
           border-right-color: rgb(124, 124, 124);
         }
       }

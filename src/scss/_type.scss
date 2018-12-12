@@ -1,20 +1,20 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
 img {
+  // stylelint-disable-next-line value-no-vendor-prefix
   image-rendering: -webkit-optimize-contrast;
-}
-
-button {
-  outline: none !important;
-}
-
-img {
   max-width: 100%;
 }
 
+button {
+  // stylelint-disable-next-linedeclaration-no-important
+  outline: none !important;
+}
+
 .site {
-  min-height: 100%;
   position: relative;
+  min-height: 100%;
 }

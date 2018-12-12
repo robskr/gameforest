@@ -1,6 +1,6 @@
 // Dropdown menu
 .dropdown-menu {
-  box-shadow: 0 2px 12px rgba(27,31,35, .1);
+  box-shadow: 0 2px 12px rgba(27, 31, 35, .1);
 
   .dropdown-item > i {
     margin-right: 5px;
@@ -12,10 +12,10 @@
   padding-right: 25px;
 
   &::after {
-    content: $ya-caret-down;
-    font-family: $font-family-icon;
-    border: 0;
     float: right;
+    font-family: $font-family-icon;
+    content: $ya-caret-down;
+    border: 0;
   }
 }
 
@@ -43,16 +43,16 @@
 
 // Dropdown header
 div.dropdown-header {
-  font-weight: $font-weight-semibold;
-  font-size: $font-size-md;
-  border-bottom: 1px solid rgba($black, .08);
-  background-color: rgba($black, .03);
-  margin-top: -9px;
-  border-top-right-radius: $dropdown-border-radius;
-  border-top-left-radius: $dropdown-border-radius;
-  color: darken($primary, 5%);
   padding: 10px 15px;
+  margin-top: -9px;
   margin-bottom: 5px;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: darken($primary, 5%);
+  background-color: rgba($black, .03);
+  border-bottom: 1px solid rgba($black, .08);
+  border-top-left-radius: $dropdown-border-radius;
+  border-top-right-radius: $dropdown-border-radius;
 
   i {
     margin-right: 6px;
@@ -61,22 +61,22 @@ div.dropdown-header {
 
 // Dropdown footer
 .dropdown-footer {
-  border-top: 1px solid rgba($black, .08);
   padding: 5px 10px;
   margin-bottom: -9px;
+  border-top: 1px solid rgba($black, .08);
 }
 
 // Dropdown list
 .dropdown-list {
-  list-style-type: none;
-  padding: 0;
   display: block;
+  padding: 0;
+  list-style-type: none;
 
   &-item {
-    border-bottom: 1px dashed rgba($black, .1);
-    padding: 15px;
     display: flex;
     align-items: flex-start;
+    padding: 15px;
+    border-bottom: 1px dashed rgba($black, .1);
   }
 
   &-body {
@@ -85,11 +85,11 @@ div.dropdown-header {
   }
 
   &-text {
-    background-color: darken($body-bg, 5%);
     padding: 7px 9px;
     margin-top: 3px;
     margin-right: 17px;
     font-size: 16px;
+    background-color: darken($body-bg, 5%);
   }
 }
 
@@ -115,14 +115,14 @@ div.dropdown-header {
         }
 
         a {
-          border-right: 1px solid rgba($black, .15);
-          padding: 0 5px;
           display: none;
-          font-size: 15px;
+          padding: 0 5px;
+          font-size: $font-size-md;
+          border-right: 1px solid rgba($black, .15);
 
           &:last-child {
-            border: 0;
             padding-right: 0;
+            border: 0;
           }
         }
       }
@@ -137,8 +137,8 @@ div.dropdown-header {
         }
 
         a {
-          color: lighten($body-color, 1%);
           font-weight: $font-weight-semibold;
+          color: lighten($body-color, 1%);
 
           &:hover {
             color: $link-hover-color;

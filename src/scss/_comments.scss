@@ -1,8 +1,8 @@
 // Comments
 .comments {
   .media {
-    margin-top: 35px;
     padding-bottom: 30px;
+    margin-top: 35px;
     border-bottom: 1px solid rgba($black, .08);
 
     &:first-child {
@@ -10,8 +10,8 @@
     }
 
     &:last-child {
-      border-bottom: 0;
       padding-bottom: 0;
+      border-bottom: 0;
     }
 
     .media:last-child {
@@ -34,20 +34,20 @@
     }
 
     &-meta {
-      color: lighten($body-color, 10%);
-      font-size: 14px;
       display: inline-block;
+      font-size: $font-size-sm;
+      color: lighten($body-color, 10%);
 
-      &:before {
-        content: "\2022";
-        margin: 0 6px;
+      &::before {
         display: inline-block;
+        margin: 0 6px;
+        content: "\2022";
       }
 
       i {
-        margin-right: 2px;
-        top: 1px;
         position: relative;
+        top: 1px;
+        margin-right: 2px;
       }
     }
 
@@ -56,9 +56,11 @@
       margin-left: auto;
 
       a {
-        border-right: 1px solid rgba($black, .1);
+        // stylelint-disable-next-linedeclaration-no-important
         padding-top: 0 !important;
+        // stylelint-disable-next-linedeclaration-no-important
         padding-bottom: 0 !important;
+        border-right: 1px solid rgba($black, .1);
 
         &:focus,
         &:hover {

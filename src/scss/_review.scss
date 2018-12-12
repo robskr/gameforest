@@ -1,14 +1,15 @@
+// Review
 .review {
   &-score {
-    background-color: rgba($white, .05);
-    border: 1px dashed rgba($white, .4);
+    display: inline-block;
     width: 60px;
     height: 60px;
     line-height: 60px;
-    border-radius: 50%;
-    display: inline-block;
     color: $white;
     text-align: center;
+    background-color: rgba($white, .05);
+    border: 1px dashed rgba($white, .4);
+    border-radius: 50%;
 
     &:hover {
       color: $white;
@@ -22,41 +23,41 @@
     }
 
     ul {
-      list-style-type: none;
-      padding: 0 0 0 25px;
       position: relative;
+      padding: 0 0 0 25px;
       color: $text-light;
+      list-style-type: none;
 
       li {
         margin-bottom: 5px;
 
-        &:before {
-          font-family: $font-family-icon;
+        &::before {
           position: absolute;
           left: 0;
+          font-family: $font-family-icon;
         }
       }
     }
   }
 
   &-positive {
-    li:before,
+    li::before,
     h5 {
-      color: $success !important;
+      color: $success;
     }
 
-    li:before {
+    li::before {
       content: $ya-check;
     }
   }
 
   &-negative {
-    li:before,
+    li::before,
     h5 {
-      color: $danger !important;
+      color: $danger;
     }
 
-    li:before {
+    li::before {
       content: $ya-minus;
     }
   }

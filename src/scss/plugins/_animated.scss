@@ -1,13 +1,14 @@
+// stylelint-disable selector-class-pattern
+
 // Animated
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
 
   &.fast {
-    animation-duration: .5s !important;
+    animation-duration: .5s;
   }
 }
-
 
 // FadeIn
 @keyframes fadeIn {
@@ -23,7 +24,6 @@
 .fadeIn {
   animation-name: fadeIn;
 }
-
 
 // FadeOut
 @keyframes fadeOut {
@@ -46,7 +46,8 @@
   }
 
   100%{
-    opacity: 0; transform: scale(1.5);
+    opacity: 0;
+    transform: scale(1.5);
   }
 }
 
@@ -71,7 +72,6 @@
   animation-name: fadeInDown;
 }
 
-
 // FadeOutUp
 @keyframes fadeOutUp {
   from {
@@ -87,7 +87,6 @@
 .fadeOutUp {
   animation-name: fadeOutUp;
 }
-
 
 // Animation Delays
 @each $size, $value in $animation-delay {

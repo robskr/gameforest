@@ -1,64 +1,57 @@
 .table {
   thead th {
-    border-bottom-width: 1px;
+    font-weight: $font-weight-semibold;
     background-color: rgba($black, .03);
-    font-weight: 500;
+    border-bottom-width: 1px;
   }
 
   tbody th {
-    font-weight: 500;
+    font-weight: $font-weight-semibold;
   }
 }
 
+// stylelint-disable selector-class-pattern
 .dataTable thead th {
-  border-bottom-width: 0px;
+  border-bottom-width: 0;
 }
 
 .table-dashed {
-  background-color: #f7f7f7;
-  border-color: #dddddd;
   margin-bottom: 50px;
+  background-color: #f7f7f7;
+  border-color: #ddd;
 
   tfoot,
   thead {
     th {
-      font-weight: 500;
       padding: 13px 20px;
+      font-weight: $font-weight-semibold;
+      background-color: rgba($black, .03);
+      border-color: #ddd;
       border-top: 0;
       border-bottom: 0;
-      background-color: rgba($black, .03);
-      border-color: #dddddd;
     }
   }
 
-  tbody {
-    tr {
-      td {
-        padding: 17px 20px;
-        border-color: #d4d4d4;
-        border-style: dashed;
-        vertical-align: middle;
-        background-color: transparent;
-      }
+  tbody td {
+    padding: 17px 20px;
+    vertical-align: middle;
+    background-color: transparent;
+    border-color: #d4d4d4;
+    border-style: dashed;
+  }
 
-      &:first-child {
-        td {
-          border-top-style: solid;
-          border-top-color: #dddddd;
-        }
-      }
+  tr:first-child td {
+    border-top-color: #ddd;
+    border-top-style: solid;
+  }
 
-      &:last-child {
-        td {
-          border-bottom-style: solid;
-          border-bottom-color: #dddddd;
-        }
-      }
-    }
+  tr:last-child td {
+    border-top-color: #ddd;
+    border-bottom-style: solid;
   }
 
   .table-meta {
-    font-size: 15px;
+    font-size: $font-size-md;
   }
 
   .table-icon {
@@ -72,9 +65,9 @@
 
     .badge {
       position: absolute;
-      padding: 3px 4px;
       top: 10px;
       right: 5px;
+      padding: 3px 4px;
     }
   }
 
@@ -84,25 +77,26 @@
   }
 
   .table-text {
-    font-size: 15px;
     margin: 0;
+    font-size: $font-size-md;
     color: lighten($body-color, 8%);
   }
 
   .table-title {
-    font-size: 16px;
     margin-bottom: 0;
+    font-size: 16px;
     color: #5d5d5d;
   }
 
   .table-subtitle {
-    font-size: 16px;
     display: block;
+    font-size: 16px;
   }
 }
 
 .table.align-items-center {
-  th, td {
+  th,
+  td {
     vertical-align: middle;
   }
 }

@@ -13,7 +13,8 @@
         "html": "gulp html",
         "plugins": "gulp plugins",
         "docs": "browser-sync start --server --startPath docs --no-notify",
-        "docs:dev": "cd src/docs && gulp"
+        "docs:dev": "cd src/docs && gulp",
+        "lint": "prettier-stylelint src/scss/utilities/_theme.scss"
     },
     "homepage": "https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730",
     "author": "https://yakuthemes.com",

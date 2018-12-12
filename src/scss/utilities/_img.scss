@@ -1,17 +1,17 @@
 // Figure
 .figure {
   position: relative;
-  background-color: $white;
-  border: 1px solid rgba(0,0,0, 0.13);
   padding: 8px;
-  border-radius: 6px;
+  margin: 0 0 5px;
   overflow: hidden;
-  transition: .1s ease-in-out;
-  margin: 0 0 5px 0;
+  background-color: $white;
+  border: 1px solid rgba($black, .13);
+  border-radius: 6px;
+  @include transition($transition-base);
 
   img {
-    border-radius: 3px;
     margin: 0;
+    border-radius: 3px;
   }
 
   &:hover {

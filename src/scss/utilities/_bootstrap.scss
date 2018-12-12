@@ -1,7 +1,7 @@
 // Display title
 .display-title {
-  font-size: 70px;
   margin-bottom: 35px;
+  font-size: 70px;
   text-shadow: 3px 1px 0 $primary;
 }
 
@@ -15,15 +15,15 @@
 
 // Blockquote
 .blockquote {
-  color: #545454;
   padding: 25px 30px;
+  color: #545454;
   background-color: #efefef;
 
   p {
+    position: relative;
+    margin-bottom: 10px;
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 10px;
-    position: relative;
   }
 }
 

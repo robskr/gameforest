@@ -1,3 +1,5 @@
+// stylelint-disable declaration-no-important
+
 @mixin button-hover() {
   .show > &.dropdown-toggle,
   &:not(:disabled):not(.disabled):active,
@@ -11,8 +13,8 @@
 
 @mixin button-variant-theme($color, $border, $background) {
   color: $color;
-  border-color: $border;
   background-color: $background;
+  border-color: $border;
 
   @include button-hover() {
     color: $color;
@@ -28,30 +30,30 @@
 }
 
 @mixin button-social() {
-	color: #fff;
-	font-weight: 500;
+  font-weight: $font-weight-semibold;
+  color: $white;
   box-shadow: none !important;
 
   &.btn-icon {
     width: 40px;
     height: 40px;
+    padding: 0;
     line-height: 40px;
     text-align: center;
-    padding: 0;
   }
 
   &.btn-link {
-    background-color: transparent;
+    width: auto;
     padding: 0 5px;
     margin: 0;
-    width: auto;
-		border: 0;
     color: #333;
+    background-color: transparent;
+    border: 0;
 
-		&:focus,
-		&:hover {
-			background-color: transparent;
-		}
+    &:focus,
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   &.btn-effect {
@@ -59,9 +61,9 @@
     overflow: hidden;
 
     i {
-			line-height: inherit;
-      transition: .2s ease-in-out;
-			display: block;
+      display: block;
+      line-height: inherit;
+      @include transition($transition-base);
     }
 
     @include button-hover() {
@@ -75,8 +77,8 @@
     text-align: left;
 
     i {
-      margin-left: 0;
       margin-right: 5px;
+      margin-left: 0;
     }
   }
 }
