@@ -8,8 +8,8 @@
 // Button icon left
 .btn-icon-left {
   > i {
-    margin-left: 0;
     margin-right: $btn-icon-margin;
+    margin-left: 0;
   }
 }
 
@@ -25,11 +25,11 @@
 
 // Button count
 .btn-count {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 
   > i {
-    margin-left: 0;
     margin-right: $btn-icon-margin;
+    margin-left: 0;
   }
 }
 
@@ -57,13 +57,13 @@
 
 // Button social
 .btn-social {
-	@include button-social;
+  @include button-social;
 }
 
 // Button darken
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
-    font-weight: 500;
+    font-weight: $font-weight-semibold;
   }
 }
 
@@ -82,8 +82,8 @@
   @include button-outline-theme($btn-outline-light-color, $btn-outline-light-border, $btn-outline-light-bg);
   @include button-hover() {
     color: $white;
-    border-color: $btn-outline-light-border;
     background-color: rgba($white, .03);
+    border-color: $btn-outline-light-border;
   }
 }
 
@@ -107,6 +107,6 @@
 
 // Button wide
 .btn-wide {
-  padding-left: $btn-padding-wide;
   padding-right: $btn-padding-wide;
+  padding-left: $btn-padding-wide;
 }

@@ -1,5 +1,24 @@
 // Navbar nav
 .navbar-nav {
+  .nav-link {
+    position: relative;
+    font-weight: $font-weight-semibold;
+
+    .badge {
+      position: absolute;
+      top: 1px;
+      right: 0;
+
+      &:empty {
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        padding: 0;
+        border-radius: 50%;
+      }
+    }
+  }
+
   .dropdown-toggle {
     padding-right: 0;
 
@@ -16,31 +35,8 @@
     }
   }
 
-  .nav-link {
-    position: relative;
-    font-weight: $font-weight-semibold;
-
-    .badge {
-      position: absolute;
-      top: 1px;
-      right: 0;
-      width: 11px;
-      height: 11px;
-      padding: 0;
-      border-radius: 50%;
-
-      &:empty {
-        display: inline-block;
-      }
-    }
-  }
-
-  .nav-item {
-    z-index: 4;
-  }
-
   .dropdown-menu {
-    min-width: 170px;
+    min-width: 10.625rem;
     background-color: $dark;
     border: 0;
     border-radius: 0;
@@ -52,6 +48,10 @@
       margin-top: -9px;
       margin-left: -1px;
       border-radius: 0;
+    }
+
+    > .dropdown:hover > .dropdown-menu {
+      display: inline-block;
     }
 
     > li {
@@ -69,53 +69,15 @@
       }
     }
 
-    .owl-carousel .dropdown-item {
-      position: relative;
-      display: block;
-      height: 200px;
-      background-repeat: no-repeat;
-      background-position: 100%;
-      background-size: cover;
-
-      img {
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-      }
-
-      .dropdown-title {
-        font-size: 16px;
-        background-color: $dark;
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        float: left;
-        z-index: 3;
-        padding: 8px 12px 5px 0px;
-        margin-bottom: 0;
-        font-weight: 500;
-
-        a:hover {
-          color: rgba($white, .8);
-        }
-      }
-    }
-
-    .dropdown.show {
-      > .dropdown-item {
-        color: rgba($white, .9);
-        background-color: rgba($black, .2);
-      }
+    .show > .dropdown-item {
+      color: rgba($white, .9);
+      background-color: rgba($black, .2);
     }
 
     .dropdown-item {
       font-size: 15px;
-      color: rgba($white, .6);
       font-weight: 400;
+      color: rgba($white, .6);
 
       &:focus,
       &:active,
@@ -137,46 +99,18 @@
       overflow: hidden;
     }
 
-    .dropdown-promo {
-      position: absolute;
-      right: 0;
-      top: 0;
-      overflow: hidden;
-      width: 500px;
-
-      .btn {
-        position: absolute;
-        right: 135px;
-        bottom: 50px;
-      }
-
-      svg {
-        position: absolute;
-
-        path {
-          fill: $dark;
-        }
-      }
-
-      img {
-        width: 700px;
-        margin: 0 0 0 -70px;
-        max-width: inherit;
-      }
-    }
-
     .dropdown-title {
-      text-transform: uppercase;
-      font-weight: 500;
-      color: $white;
-      font-size: 13px;
       display: block;
       margin-bottom: 10px;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      color: $white;
+      text-transform: uppercase;
     }
 
     .dropdown-item {
-      padding-left: 0;
       padding-right: 0;
+      padding-left: 0;
 
       i {
         width: 20px;
@@ -191,6 +125,34 @@
     }
   }
 
+  .dropdown-promo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 31.25rem;
+    overflow: hidden;
+
+    .btn {
+      position: absolute;
+      right: 135px;
+      bottom: 50px;
+    }
+
+    svg {
+      position: absolute;
+
+      path {
+        fill: $dark;
+      }
+    }
+
+    img {
+      width: 700px;
+      max-width: inherit;
+      margin: 0 0 0 -70px;
+    }
+  }
+
   .dropdown-carousel {
     .dropdown-menu {
       padding-top: 0;
@@ -199,46 +161,60 @@
     }
 
     .dropdown-title {
-      font-weight: 400;
-      text-transform: inherit;
       margin: 0;
+      font-weight: $font-weight-normal;
+      text-transform: inherit;
     }
-  }
 
-  .dropdown {
-    > .dropdown-menu {
-      > .dropdown:hover {
-        > .dropdown-menu {
-          display: inline-block;
-        }
+    .dropdown-item {
+      position: relative;
+      display: block;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-position: 100%;
+      background-size: cover;
+
+      img {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .dropdown-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        float: left;
+        padding: 8px 12px 5px 0;
+        margin-bottom: 0;
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        background-color: $dark;
       }
     }
   }
 }
 
-.navbar {
-  > .container-fluid {
-    padding: 0;
-  }
-}
-
 // Navbar brand
 .navbar-brand {
-  z-index: 4;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 }
-
 
 // Navbar search
 .navbar-search {
   position: fixed;
-  left: 0;
   top: -60px;
+  left: 0;
   z-index: -1;
-  background-color: $dark;
   width: 100%;
   padding-bottom: 10px;
-  transition: .2s all;
+  background-color: $dark;
+  @include transition($transition-base);
 
   .container {
     position: relative;
@@ -252,8 +228,8 @@
     border-color: transparent;
 
     &:focus {
-      box-shadow: none;
       border-color: transparent;
+      box-shadow: none;
     }
   }
 
@@ -261,8 +237,8 @@
     position: absolute;
     top: 0;
     right: 15px;
-    height: 38px;
     width: 38px;
+    height: 38px;
     line-height: 38px;
     text-align: center;
     cursor: pointer;
@@ -279,9 +255,9 @@
 
   .site-header {
     position: fixed;
-    width: 100%;
     top: 0;
     z-index: 8;
+    width: 100%;
   }
 
   .anchor {
@@ -290,28 +266,29 @@
   }
 }
 
-.navbar-expand-lg .navbar-nav .dropdown-lg {
+// Navbar lg
+.navbar-expand-lg .dropdown-lg {
   position: static;
 
   .container-fluid {
-    padding-left: 8px;
     padding-right: 8px;
+    padding-left: 8px;
   }
 
   .dropdown-menu {
+    display: block;
     width: 100%;
     margin: 0;
-    border: 0;
-    display: block;
     visibility: hidden;
-
-    .owl-hide .owl-stage {
-      transition: none !important;
-    }
+    border: 0;
 
     &.show {
       height: auto;
       visibility: visible;
     }
+  }
+
+  .owl-hide .owl-stage {
+    @include transition(none !important);
   }
 }

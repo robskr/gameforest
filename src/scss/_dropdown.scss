@@ -42,7 +42,7 @@
 }
 
 // Dropdown header
-div.dropdown-header {
+.dropdown-header {
   padding: 10px 15px;
   margin-top: -9px;
   margin-bottom: 5px;
@@ -102,48 +102,46 @@ div.dropdown-header {
   .dropdown-menu {
     max-width: 330px;
 
-    .dropdown-list {
-      &-meta {
-        display: flex;
-        align-items: center;
-        margin-top: 5px;
-        font-size: 15px;
-        color: #7b7b7b;
+    .dropdown-list-meta {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      font-size: 15px;
+      color: #7b7b7b;
 
-        i {
-          margin-right: 6px;
+      i {
+        margin-right: 6px;
+      }
+
+      a {
+        display: none;
+        padding: 0 5px;
+        font-size: $font-size-md;
+        border-right: 1px solid rgba($black, .15);
+
+        &:last-child {
+          padding-right: 0;
+          border: 0;
         }
+      }
+    }
 
-        a {
-          display: none;
-          padding: 0 5px;
-          font-size: $font-size-md;
-          border-right: 1px solid rgba($black, .15);
+    .dropdown-list-item {
+      &:last-child {
+        border: 0;
+      }
 
-          &:last-child {
-            padding-right: 0;
-            border: 0;
-          }
+      a {
+        font-weight: $font-weight-semibold;
+        color: lighten($body-color, 1%);
+
+        &:hover {
+          color: $link-hover-color;
         }
       }
 
-      &-item {
-        &:hover .dropdown-list-meta a {
-          display: inline-block;
-        }
-
-        &:last-child {
-          border: 0;
-        }
-
-        a {
-          font-weight: $font-weight-semibold;
-          color: lighten($body-color, 1%);
-
-          &:hover {
-            color: $link-hover-color;
-          }
-        }
+      &:hover a {
+        display: inline-block;
       }
     }
   }

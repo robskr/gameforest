@@ -4,21 +4,21 @@
   color: $breadcrumb-item-color;
 
   + .breadcrumb-item::before {
-    content: $ya-small-right;
     font-family: $font-family-icon;
     font-size: $breadcrumb-content-size;
+    content: $ya-small-right;
   }
 }
 
 // Variations
 @each $color, $value in $theme-colors {
-  @if $color != 'default' and $color != 'light' {
+  @if $color != "default" and $color != "light" {
     .bg-#{$color} {
       .breadcrumb-item a,
       .breadcrumb-item a:hover,
       .breadcrumb-item::before {
-        color: $white !important;
         font-weight: $font-weight-semibold;
+        color: $white;
       }
 
       .breadcrumb-item.active {

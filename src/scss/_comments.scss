@@ -19,7 +19,17 @@
     }
 
     &:hover {
-      > div > div > .media-tools {
+      .media-tools {
+        display: block;
+      }
+
+      .media .media-tools {
+        display: none;
+      }
+    }
+
+    .media:hover {
+      .media-tools {
         display: block;
       }
     }
@@ -56,10 +66,8 @@
       margin-left: auto;
 
       a {
-        // stylelint-disable-next-linedeclaration-no-important
-        padding-top: 0 !important;
-        // stylelint-disable-next-linedeclaration-no-important
-        padding-bottom: 0 !important;
+        padding-top: 0 !important; // stylelint-disable-line declaration-no-important
+        padding-bottom: 0 !important; // stylelint-disable-line declaration-no-important
         border-right: 1px solid rgba($black, .1);
 
         &:focus,

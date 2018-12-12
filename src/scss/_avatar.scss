@@ -11,11 +11,11 @@
   border: $thumbnail-border-width solid $thumbnail-border-color;
   @include border-radius($thumbnail-border-radius);
   @include box-shadow($thumbnail-box-shadow);
-  transition: all .15s ease-in-out;
+  @include transition(all .15s ease-in-out);
 
   &.position-absolute {
-    margin-top: -30px;
     z-index: 1;
+    margin-top: -30px;
   }
 
   &.avatar-md,
@@ -30,11 +30,11 @@
   display: flex;
   align-items: center;
   line-height: 1.4;
-  transition: all .2s;
+  @include transition($transition-base);
 
   img {
-    border-radius: 4px;
     margin-right: 13px;
+    border-radius: 4px;
     @include avatar-size($avatar-size-sm);
   }
 
@@ -47,23 +47,23 @@
 .avatar-card {
   display: flex;
   align-items: center;
-  border-radius: 50px;
   min-width: 15rem;
-  border: 1px dashed rgba($black, .2);
   padding: 5px 5px 5px 25px;
   background-color: $white;
+  border: 1px dashed rgba($black, .2);
   border-left: 3px solid $primary;
+  border-radius: 50px;
 
   img {
     margin-left: auto;
     border-radius: 50%;
-    transition: .2s ease-in-out;
+    @include transition($transition-base);
     @include avatar-size($avatar-size-md);
   }
 
   .avatar-title {
-    font-weight: $font-weight-semibold;
     font-size: 17px;
+    font-weight: $font-weight-semibold;
   }
 
   .avatar-text {
@@ -87,10 +87,10 @@
 
   .avatar {
     position: relative;
-    border-radius: 50%;
     z-index: 2;
     margin-left: -16px;
     cursor: pointer;
+    border-radius: 50%;
     @include avatar-size($avatar-size-stack);
 
     &:first-child {
@@ -126,21 +126,21 @@
 
   .badge {
     position: absolute;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
     right: 0;
     bottom: -3px;
     z-index: 1;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding: 6px;
     border-radius: 50%;
     box-shadow: 0 0 0 2px $white;
-    padding: 6px;
 
     &:empty {
-      width: auto;
-      height: auto;
       right: 5px;
       bottom: 2px;
+      width: auto;
+      height: auto;
     }
   }
 
@@ -149,11 +149,9 @@
   }
 
   &.avatar-sm {
-    .badge {
-      &:empty {
-        bottom: 0px;
-        right: 4px;
-      }
+    .badge:empty {
+      right: 4px;
+      bottom: 0;
     }
   }
 
@@ -161,11 +159,9 @@
     width: 5.5rem;
     height: 5.5rem;
 
-    .badge {
-      &:empty {
-        bottom: 5px;
-        right: 10px;
-      }
+    .badge:empty {
+      right: 10px;
+      bottom: 5px;
     }
   }
 }
