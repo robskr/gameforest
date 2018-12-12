@@ -94,6 +94,8 @@ $link-hover-decoration:        none !default;
 // Dropdown
 $dropdown-border-color:        rgba(27,31,35, .1) !default;
 $dropdown-link-color:          #414242 !default;
+$dropdown-min-width:           180px !default;
+$dropdown-item-padding-x:      15px !default;
 $zindex-dropdown:              7 !default;
 
 // Heading
@@ -173,9 +175,6 @@ $btn-default-color:            #565458 !default;
 $btn-default-border:           #d4d4d4 !default;
 $btn-default-bg:               $body-bg !default;
 
-// Code
-$code-color:                   $primary !default;
-
 // Forms
 $input-border-color:           #d9d8de !default;
 $input-btn-focus-color:        lighten($primary, 40%) !default;
@@ -188,6 +187,7 @@ $form-text-margin-top:         .725rem !default;
 $form-group-margin-bottom:     1.5rem !default;
 
 $custom-control-indicator-bg:  #dadada !default;
+$custom-control-gutter:        30px !default;
 
 // Alerts
 $alert-bg-level:               -10 !default;
@@ -223,7 +223,9 @@ $progress-bg:                  #e6e6e6 !default;
 $text-dark:                    #434548 !default;
 $text-light:                   rgba($white, .7) !default;
 $text-lighten:                 #929498 !default;
+
 $mark-color:                   #56523c !default;
+$code-color:                   $primary !default;
 
 // List groups
 $list-group-border-color:            rgba($black, .08) !default;
@@ -234,10 +236,8 @@ $list-group-item-padding-y:          10px !default;
 $list-group-item-padding-x:          15px !default;
 $list-group-item-lg-padding-y:       15px !default;
 
-
 // Promo
 $promo-padding:                1.875rem !default;
-$promo-title-color:            $white !default;
 
 // Badges
 $badge-font-size:              70% !default;
@@ -274,8 +274,6 @@ $dot-margin: 	            		 5px 3px !default;
 $dot-background:	           	 rgba(0,0,0, .15) !default;
 $dot-background-active:	       rgba(0,0,0, .5) !default;
 
-$small-font-size:              14px !default;
-
 // Modal
 $modal-sm:                     380px !default;
 
@@ -287,11 +285,6 @@ $pagination-disabled-border-color:      #d5d9de !default;
 $pagination-border-color:               #d5d9de !default;
 $pagination-hover-border-color:         #d5d9de !default;
 
-// Dropdown
-$dropdown-min-width:           180px !default;
-$dropdown-link-color:          #232323 !default;
-$dropdown-item-padding-x:      15px !default;
-
 // Breadcrumb
 $breadcrumb-bg:                transparent !default;
 $breadcrumb-margin-bottom:     0 !default;
@@ -299,6 +292,12 @@ $breadcrumb-padding-x:         0 !default;
 $breadcrumb-item-padding:      5px !default;
 $breadcrumb-item-color:        #616161 !default;
 $breadcrumb-content-size:      11px !default;
+
+// Embed
+$embed-icon-width:             5.625rem !default;
+$embed-icon-height:            $embed-icon-width !default;
+$embed-icon-bg:                $white !default;
+$embed-icon-color:             darken($gray, 20%) !default;
 
 // Row
 $row-padding-sm:               5px !default;

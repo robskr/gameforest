@@ -12,38 +12,36 @@
     border: 0;
   }
 
+  &-icon i,
   &:after {
     content: $ya-play;
     font-family: $font-family-icon;
-    background-color: $white;
+    background-color: $embed-icon-bg;
     display: inline-block;
-    color: darken($gray, 20%);
     font-size: 28px;
     position: relative;
     z-index: 3;
-    width: 90px;
-    height: 90px;
-    line-height: 90px;
+    color: $embed-icon-color;
+    width: $embed-icon-width;
+    height: $embed-icon-height;
+    line-height: $embed-icon-height;
     text-align: center;
-    cursor: pointer;
     transition: .1s ease-in-out;
     border-radius: 50%;
-    box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 25px 0 rgba($black, .2);
+    cursor: pointer;
   }
 
-  &:hover {
-    &:after {
-      opacity: .85;
-      box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
-    }
+  &-icon:hover i,
+  &:hover:after {
+    opacity: .85;
+    box-shadow: 0 1px 25px 0 rgba($black, .2);
   }
 
-  &.play {
-    &:after {
-      animation-duration: 0.5s;
-      animation-fill-mode: both;
-      animation-name: zoomOut;
-    }
+  &.play:after {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: zoomOut;
   }
 
   &-title {
@@ -93,26 +91,8 @@
     text-align: center;
 
     i {
-      background-color: $white;
-      display: inline-block;
-      color: darken($gray, 20%);
-      font-size: 28px;
-      width: 90px;
-      height: 90px;
-      line-height: 90px;
-      text-align: center;
-      cursor: pointer;
-      transition: .1s ease-in-out;
-      border-radius: 50%;
-      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
-
       &:before {
         margin-right: -2px;
-      }
-
-      &:hover {
-        opacity: .85;
-        box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
       }
 
       &-dark i {
@@ -156,7 +136,7 @@
       cursor: pointer;
       transition: .1s ease-in-out;
       border-radius: 50%;
-      box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 25px 0 rgba($black, 0.2);
 
       &:before {
         margin-right: -2px;
@@ -164,7 +144,7 @@
 
       &:hover {
         opacity: .85;
-        box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 25px 0 rgba($black, 0.2);
       }
     }
 
@@ -195,11 +175,6 @@
       }
     }
   }
-}
-
-// Embed image
-.embed-image {
-  position: relative;
 }
 
 // Embed action

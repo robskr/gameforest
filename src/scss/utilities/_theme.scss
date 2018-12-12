@@ -81,3 +81,28 @@
 .box-shadow {
   box-shadow: $box-shadow;
 }
+
+// Separator
+.separator {
+  margin: 15px 0;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+
+  span {
+    background-color: $body-bg;
+    display: inline-block;
+    padding: 0 12px;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: #ececec;
+    }
+  }
+}
