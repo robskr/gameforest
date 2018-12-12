@@ -183,7 +183,7 @@ function html() {
         .pipe(browserSync.stream())
 }
 
-function html_all() {
+function compile() {
     return gulp.src(path.src.twig)
         .pipe(twig({
             base: './src/twig/views',
@@ -290,7 +290,8 @@ const build = {
     image:       image,
     js:          gulp.series(babel, minify, script, lint),
     html:        html,
-    html_all:    gulp.series(json, html_all),
+    compile:     compile,
+    json:        gulp.series(json, compile),
     icon:        gulp.series(svg, svg_copy),
     plugins:     gulp.series(clear, bootstrap, jquery, popper, fontawesome, ckeditor, easypiechart, bootstrap_select, flatpickr, sticky, datatables, morris, raphael, parallax, countdown, nouislider, lazysizes)
 }
@@ -302,13 +303,13 @@ const build = {
  */
 
 function watch() {
-    gulp.watch(path.src.views, { events: ['change', 'unlink'] }, build.html_all)
-    gulp.watch(path.src.json,  { events: ['change', 'unlink'] }, build.html_all)
+    gulp.watch(path.src.twig,  { events: ['change', 'unlink'] }, build.html)
+    gulp.watch(path.src.views, { events: ['change', 'unlink'] }, build.compile)
+    gulp.watch(path.src.json,  { events: ['change', 'unlink'] }, build.json)
     gulp.watch(path.src.scss,  { events: ['change', 'unlink'] }, build.css)
     gulp.watch(path.src.js,    { events: ['change', 'unlink'] }, build.js)
     gulp.watch(path.src.img,   { events: ['change', 'unlink'] }, build.image)
     gulp.watch(path.src.svg,   { events: ['change', 'unlink'] }, build.icon)
-    gulp.watch(path.src.twig,  { events: ['change', 'unlink'] }, build.html)
 }
 
 /**
@@ -319,7 +320,7 @@ function watch() {
 
 gulp.task('icon',       build.icon)
 gulp.task('html',       build.html)
-gulp.task('html:all',   build.html_all)
+gulp.task('compile',    build.compile)
 gulp.task('css',        build.css)
 gulp.task('js',         build.js)
 gulp.task('image',      build.image)
