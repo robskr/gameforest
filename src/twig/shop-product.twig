@@ -39,12 +39,12 @@
                         <div class="mb-4 pb-4 border-bottom-dashed">
                             <h1 class="font-weight-bold">{{ product.title }}</h1>
                             <div class="d-flex align-items-center">
-                                <ul class="d-flex justify-content-between list-star list-inline mr-2 mb-0">
+                                <div class="star d-flex font-size-md mr-2">
                                     {% for i in 0..4 %}
-                                        <li><i class="ya ya-star {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
+                                        <i class="ya ya-star {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i>
                                     {% endfor %}
-                                </ul>
-                                <span class="text-muted">25 Reviews</span>
+                                </div>
+                                <div class="text-muted"><span class="font-weight-semibold">25</span> Reviews</div>
                             </div>
                         </div>
                         <p class="mb-4">{{ product.text|slice(0, 230) }}...</p>
@@ -166,11 +166,11 @@
                     <div class="row">
                         <div class="col-4">
                             <h5>25 customer reviews:</h5>
-                            <ul class="d-flex list-star list-inline mt-3 mb-3">
+                            <div class="star d-flex mb-2">
                                 {% for i in 0..4 %}
-                                    <li><i class="ya ya-star ya-md mr-1 {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
+                                    <i class="ya ya-star ya-md {% if loop.index <= product.review %}text-warning{% else %}text-muted{% endif %}"></i>
                                 {% endfor %}
-                            </ul>
+                            </div>
                             <div class="d-flex align-items-center"><span class="font-weight-bold font-size-lg mr-2">{{ product.review }}</span> (25 review)</div>
                         </div>
                         <div class="col-8">
@@ -198,7 +198,7 @@
                             <h5>How do you rate this product?</h5>
                             <p class="mb-2">Click to the choosen stars</p>
                             <div class="clearfix">
-                                <div class="list-star-group mb-4">
+                                <div class="star-group mb-4">
                                     {% for i in 0..4 %}
                                         <button class="btn btn-link" type="button"><i class="ya ya-star ya-lg"></i></button>
                                     {% endfor %}
@@ -274,13 +274,11 @@
                                             <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
                                         </div>
                                     </div>
-                                    <ul class="d-flex list-star list-inline mb-3">
-                                        <li><i class="ya ya-star text-warning"></i></li>
-                                        <li><i class="ya ya-star text-warning"></i></li>
-                                        <li><i class="ya ya-star text-warning"></i></li>
-                                        <li><i class="ya ya-star text-warning"></i></li>
-                                        <li><i class="ya ya-star text-muted"></i></li>
-                                    </ul>
+                                    <div class="star d-flex font-size-md mb-3">
+                                        {% for i in 0..4 %}
+                                            <i class="ya ya-star {% if loop.index <= 4 %}text-warning{% else %}text-muted{% endif %}"></i>
+                                        {% endfor %}
+                                    </div>
                                     <p>{{ comment.text }}</p>
                                     <div class="d-flex align-items-center">
                                         <button class="btn btn-default btn-xs mr-2">Reply</button>

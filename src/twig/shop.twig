@@ -102,11 +102,11 @@
                                         {% endif %}
                                         <a href="game-post.html">{{ game.title }}</a>
                                     </h5>
-                                    <ul class="d-flex justify-content-between list-star list-inline font-size-md mr-2 mt-1 mb-0">
+                                    <div class="star d-flex font-size-md mt-1 mr-2">
                                         {% for i in 0..4 %}
-                                            <li><i class="ya ya-star {% if loop.index <= game.review %}text-warning{% else %}text-muted{% endif %}"></i></li>
+                                            <i class="ya ya-star {% if loop.index <= game.review %}text-warning{% else %}text-muted{% endif %}"></i>
                                         {% endfor %}
-                                    </ul>
+                                    </div>
                                     <ul class="list-unstyled font-size-sm mt-3">
                                         <li>Platform: {% for platform in platforms %}{% if loop.index == game.platforms[0] %}{{ platform }}{% endif %}{% endfor %}</li>
                                         <li>Genre: {{ genre[game.genre] }}</li>

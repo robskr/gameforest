@@ -27,43 +27,6 @@
   padding-bottom: $list-group-item-lg-padding-y;
 }
 
-.list-star {
-  i {
-    margin-right: 2px;
-  }
-
-  .text-muted {
-    color: #d0d0d0 !important;
-  }
-}
-
-.list-star-group {
-  @include clearfix;
-  float: left;
-
-  .btn {
-    float: right;
-    color: #d0d0d0;
-    padding: 0;
-    transition: none;
-
-    i {
-      margin: 0;
-    }
-
-    &:active,
-    &.active,
-    &:focus,
-    &:hover {
-      color: $warning;
-
-      ~ .btn {
-        color: $warning;
-      }
-    }
-  }
-}
-
 .list-group-posts {
   .list-group-item {
     background-color: transparent;
