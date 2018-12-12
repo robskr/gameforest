@@ -299,10 +299,16 @@ $embed-icon-height:            $embed-icon-width !default;
 $embed-icon-bg:                $white !default;
 $embed-icon-color:             darken($gray, 20%) !default;
 
+// Icon
+$icon-width:                   3.75rem !default;
+$icon-height:                  $icon-width !default;
+$icon-line-height:             3.625rem !default;
+$icon-font-size:               1.75rem !default;
+
 // Row
-$row-padding-xs:               3px !default;
-$row-padding-sm:               5px !default;
-$row-padding-md:               10px !default;
+$row-padding-xs:               .1875rem !default;
+$row-padding-sm:               .3125rem !default;
+$row-padding-md:               .625rem !default;
 
 // Spacing
 $spacer: 1rem !default;

@@ -22,8 +22,8 @@
   margin: 0 -15px;
 
   i {
-    font-size: 24px;
     margin: 15px;
+    font-size: 24px;
     color: darken($body-color, 5%);
   }
 }
@@ -41,23 +41,23 @@
 // Social icons
 .social-links {
   a {
-    color: lighten($white, 40%);
     padding: 0 8px;
+    color: lighten($white, 40%);
   }
 }
 
 // Icon
 .icon {
-  border: 3px solid $primary;
-  color: $primary;
-  width: 64px;
-  height: 64px;
-  line-height: 58px !important;
-  border-radius: 50%;
-  font-size: 28px;
   display: inline-block;
+  width: $icon-width;
+  height: $icon-height;
   margin-bottom: 20px;
+  font-size: $icon-font-size;
+  line-height: $icon-line-height !important;
+  color: $primary;
+  border: 3px solid $primary;
   text-align: center;
+  border-radius: 50%;
 }
 
 // Subtitle

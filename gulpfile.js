@@ -80,13 +80,13 @@ const path = {
 
 function scss() {
     return gulp.src(path.src.scss)
-        // .pipe(stylelint({
-        //     failAfterError: false,
-        //     reporters: [
-        //         {formatter: 'string', console: true}
-        //     ],
-        //     debug: true
-        // }))
+        .pipe(stylelint({
+            failAfterError: false,
+            reporters: [
+                {formatter: 'string', console: true}
+            ],
+            debug: true
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(postcss())
