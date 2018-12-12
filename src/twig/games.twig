@@ -95,8 +95,8 @@
                 {% for game in games %}
                     {% if loop.index < 13 %}
                         <div class="col-4">
-                            <div class="card card-game card-sm mb-4">
-                                <a class="card-img" href="game-post.html">
+                            <div class="card card-sm mb-4">
+                                <a class="card-img" href="game-post.html" style="height: 300px;">
                                     {% if game.new %}
                                         <span class="badge badge-danger">new</span>
                                     {% endif %}
@@ -109,7 +109,7 @@
                                         {% endif %}
                                         <a href="game-post.html">{{ game.title }}</a>
                                     </h5>
-                                    <p class="card-text">{{ game.text|slice(0, 120) }}...</p>
+                                    <p class="card-text font-size-md">{{ game.text|slice(0, 120) }}...</p>
                                     <div class="btn-group">
                                         {% for plat in game.platforms %}
                                             {% for platform in platforms %}
@@ -128,7 +128,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end .card-game -->
+                            <!-- end .card -->
                         </div>
                     {% endif %}
                 {% endfor %}

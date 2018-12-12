@@ -94,29 +94,11 @@
   }
 }
 
-// Card game
-.card-game {
-  .card-img {
-    height: 300px;
-  }
-
-  .card-text {
-    font-size: 15px;
-    line-height: 1.4;
-  }
-}
-
 // Card shop
 .card-shop {
   .card-img {
     height: 250px;
   }
-}
-
-// Card secondary
-.card-secondary {
-  background-color: darken($body-bg, 2%);
-  border-color: #e0e0e0;
 }
 
 // Card price
@@ -205,59 +187,10 @@
   }
 
   .embed-image {
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    background-size: cover;
     height: 425px;
     display: block;
 
-    img {
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-  }
-
-  .card-body {
-    a {
-      color: $primary;
-      font-weight: 500;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .embed-gallery {
-    @include clearfix();
-
-    .embed-image {
-      float: left;
-
-      &:first-child {
-        width: 40%;
-      }
-
-      &:nth-child(2) {
-        width: 60%;
-
-        img {
-          padding-left: 10px;
-        }
-      }
-
-      &:last-child {
-        width: 100%;
-        margin-top: 10px;
-        height: 370px;
-      }
-    }
+    @include img-cover();
   }
 
   .comments {
@@ -300,6 +233,13 @@
   }
 }
 
+// Secondary
+.card-secondary {
+  background-color: darken($body-bg, 2%);
+  border-color: #e0e0e0;
+}
+
+// Default
 .card-default {
   background-color: $body-bg;
   box-shadow: none;
@@ -317,12 +257,14 @@
   }
 }
 
+// Card md
 .card-md {
   .card-img {
     height: 240px;
   }
 }
 
+// Card sm
 .card-sm {
   .card-body {
     padding: 15px 10px;

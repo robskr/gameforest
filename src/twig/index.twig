@@ -49,8 +49,8 @@
                 {% for game in games %}
                     {% if loop.index < 4 %}
                         <div class="col-md-4">
-                            <div class="card card-game card-sm">
-                                <a class="card-img" href="game-post.html">
+                            <div class="card card-sm">
+                                <a class="card-img" href="game-post.html" style="height: 300px;">
                                     {% if game.new %}
                                         <span class="badge badge-danger">new</span>
                                     {% endif %}
@@ -63,7 +63,7 @@
                                         {% endif %}
                                         <a href="game-post.html">{{ game.title }}</a>
                                     </h5>
-                                    <p class="card-text">{{ game.text|slice(0, 120) }}...</p>
+                                    <p class="card-tex font-size-md">{{ game.text|slice(0, 120) }}...</p>
                                 </div>
                                 <div class="card-footer">
                                     <span><i class="ya ya-calendar"></i> {{ game.date|date("M d, Y") }}</span>
