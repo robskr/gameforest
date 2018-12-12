@@ -147,7 +147,7 @@
                     <!-- end .card -->
 
                     {% for post in profile.posts %}
-                        <div class="card card-timeline">
+                        <div class="card">
                             <div class="card-header d-flex align-items-center bg-lighten">
                                 {% for user in users %}
                                     {% if loop.index == post.author %}
@@ -182,14 +182,14 @@
                                     </div>
                                 {% endif %}
                                 {% if post.img %}
-                                    <a class="embed-image" href="{{ post.img }}" ya-lightbox="disqus: gameforest">
+                                    <a class="embed-image img-cover img-xl" href="{{ post.img }}" ya-lightbox="disqus: gameforest">
                                         <img src="{{ post.img }}" alt="">
                                     </a>
                                 {% endif %}
                                 {% if post.gallery %}
                                     <div class="embed-gallery">
                                         {% for gallery in post.gallery %}
-                                            <a class="embed-image" href="{{ gallery.img }}" ya-lightbox rel="gallery">
+                                            <a class="embed-image img-cover img-xl" href="{{ gallery.img }}" ya-lightbox rel="gallery">
                                                 <img src="{{ gallery.img }}" alt="">
                                             </a>
                                         {% endfor %}

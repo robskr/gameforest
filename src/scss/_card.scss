@@ -21,14 +21,8 @@
     }
   }
 
-  &-body {
-    .separator span {
-      background-color: $white;
-    }
-  }
-
-  &-img-top {
-    border-radius: 0 !important;
+  &-body .separator span {
+    background-color: $white;
   }
 
   &-img {
@@ -36,6 +30,10 @@
     height: 280px;
     margin: 10px 10px 0 10px;
     @include img-cover();
+
+    &-top {
+      border-radius: 0 !important;
+    }
 
     .badge {
       position: absolute;
@@ -102,16 +100,6 @@
   }
 }
 
-// Card timeline
-.card-timeline {
-  .embed-image {
-    height: 425px;
-    display: block;
-
-    @include img-cover();
-  }
-}
-
 // Secondary
 .card-secondary {
   background-color: darken($body-bg, 2%);
@@ -137,7 +125,12 @@
 }
 
 // Card img sizes
+.img,
 .card-img {
+  &-xl {
+    height: 26.5625rem;
+  }
+
   &-lg {
    height: 18.75rem;
   }
