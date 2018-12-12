@@ -209,7 +209,7 @@ function svg() {
         .pipe(iconfontcss({
             fontName: config.font.name,
             path: './src/fonts/icons.sass',
-            targetPath: '../scss/_icons.scss',
+            targetPath: '../scss/parent/_icons.scss',
             fontPath: '../fonts/',
             cssClass: config.font.class
         }))

@@ -74,25 +74,25 @@
                     {% endfor %}
 
                     <div class="card card-secondary mb-5">
-                        <h6 class="card-header">Login to the account</h6>
+                        <h6 class="card-header bg-lighten">Login to the account</h6>
                         <div class="card-body">
                             <form class="form-inline">
                                 <div class="input-group mr-sm-2">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="ya ya-user"></i></div>
+                                        <button type="button" class="btn btn-light btn-icon border-right-0 pr-1"><i class="ya ya-user"></i></button>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Username">
                                 </div>
                                 <div class="input-group mr-sm-3">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="ya ya-unlock"></i></div>
+                                        <button type="button" class="btn btn-light btn-icon border-right-0 pr-1"><i class="ya ya-unlock"></i></button>
                                     </div>
                                     <input type="password" class="form-control" placeholder="Password">
                                 </div>
-                                <a class="border-right pr-3 mr-3" href="lost-password-html">I forgot my password</a>
+                                <a class="border-right pr-3 mr-3" href="lost-password.html">I forgot my password</a>
                                 <div class="custom-control custom-checkbox mr-3">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Remember me</label>
+                                    <input type="checkbox" class="custom-control-input" id="check">
+                                    <label class="custom-control-label" for="check">Remember me</label>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Login</button>
                             </form>
@@ -101,11 +101,11 @@
                     <!-- end .card -->
 
                     <div class="card card-secondary">
-                        <h6 class="card-header">Who is online <span class="text-success ml-1">&#9679;</span></h6>
+                        <h6 class="card-header bg-lighten">Who is online <span class="text-success ml-1">&#9679;</span></h6>
                         <div class="card-body">
                             <p>In total there is <strong>151</strong> user online :: 88 registered, 0 hidden and 63 guest (based on users active over the past 5 minutes)<br>Most users ever online was <strong>355</strong> on {{ "1535222745"|date("F d, Y g:ia") }}</p>
                             <hr>
-                            <h6 class="card-subtitle mt-1 mb-3">Online Users: <span class="font-weight-normal">151</span></h6>
+                            <h6 class="mt-1 mb-3">Online Users: <span class="font-weight-normal">151</span></h6>
                             {% for user in users %}
                                 {% if loop.index < 6 %}
                                     <a href="profile.html"><img class="avatar avatar-xs" src="img/{{ user.img }}" alt="" data-toggle="tooltip" title="{{ user.name }}"></a>
