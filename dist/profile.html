@@ -349,41 +349,30 @@
                                 <div class="widget-header">About me</div>
                                 <div class="widget-body">
                                     <p>I am a frontend developer &amp; web designer. I love to work on creative and standalone projects like gameforest.</p>
-                                    <ul class="list-group list-group-items mb-4">
-                                        <li class="list-group-item"><i class="ya ya-pin"></i> Budapest</li>
-                                        <li class="list-group-item"><i class="ya ya-twitter"></i> <a href="https://twitter.com/yakuthemes" target="_blank">yakuthemes</a></li>
-                                        <li class="list-group-item"><i class="ya ya-calendar"></i> Joined December 2009</li>
-                                    </ul>
-                                    <a class="btn btn-outline btn-sm btn-block" href="#" role="button">Send message</a>
+                                    <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-pin mr-1"></i> Budapest</p>
+                                    <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-twitter mr-1"></i> <a href="https://twitter.com/yakuthemes" target="_blank">yakuthemes</a></p>
+                                    <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-calendar mr-1"></i> Joined December 2009</p>
+                                    <a class="btn btn-outline btn-sm btn-block mt-3" href="#" role="button">Send message</a>
                                 </div>
                             </div>
                             <!-- end .widget -->
                             <div class="widget widget-secondary">
-                                <div class="widget-header">Navigation</div>
-                                <div class="widget-body p-0">
-                                    <div class="list-group list-group-flush">
-                                        <a class="list-group-item" href="#">
-                                            <i class="ya ya-content"></i> Timeline
-                                        </a>
-                                        <a class="list-group-item" href="#">
-                                            <i class="ya ya-users"></i> Friends
-                                            <span class="badge badge-secondary badge-pill">14</span> </a>
-                                        <a class="list-group-item" href="#">
-                                            <i class="ya ya-image"></i> Images
-                                            <span class="badge badge-secondary badge-pill">42</span> </a>
-                                        <a class="list-group-item" href="#">
-                                            <i class="ya ya-player"></i> Videos
-                                        </a>
-                                        <a class="list-group-item" href="#">
-                                            <i class="ya ya-camera"></i> Streams
-                                            <span class="badge badge-secondary badge-pill">23</span> </a>
-                                        <a class="list-group-item" href="#">
-                                            <i class="ya ya-comments"></i> Forums
-                                        </a>
-                                        <a class="list-group-item" href="#">
-                                            <i class="ya ya-shopping-cart"></i> Shop
-                                        </a>
-                                    </div>
+                                <div class="widget-header border-0">Navigation</div>
+                                <div class="list-group list-group-flush">
+                                    <a class="list-group-item" href="#">
+                                        <i class="ya ya-content"></i> Timeline </a>
+                                    <a class="list-group-item" href="#">
+                                        <i class="ya ya-users"></i> Friends <span class="badge badge-secondary badge-pill">14</span> </a>
+                                    <a class="list-group-item" href="#">
+                                        <i class="ya ya-image"></i> Images <span class="badge badge-secondary badge-pill">42</span> </a>
+                                    <a class="list-group-item" href="#">
+                                        <i class="ya ya-player"></i> Videos </a>
+                                    <a class="list-group-item" href="#">
+                                        <i class="ya ya-camera"></i> Streams <span class="badge badge-secondary badge-pill">23</span> </a>
+                                    <a class="list-group-item" href="#">
+                                        <i class="ya ya-comments"></i> Forums </a>
+                                    <a class="list-group-item" href="#">
+                                        <i class="ya ya-shopping-cart"></i> Shop </a>
                                 </div>
                             </div>
                             <!-- end .widget -->
@@ -443,8 +432,8 @@
                         <div class="col-7">
                             <div class="card">
                                 <div class="card-header transparent p-0 border-0">
-                                    <div class="nav nav-tabs" id="shareTab" role="tablist">
-                                        <a class="nav-item nav-link active" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status" aria-selected="true"><i class="ya ya-plus-content"></i> Status</a>
+                                    <div class="nav nav-tabs" id="tab" role="tablist">
+                                        <a class="nav-item nav-link active" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status" aria-selected="true">Status</a>
                                         <a class="nav-item nav-link" id="multimedia-tab" data-toggle="tab" href="#multimedia" role="tab" aria-controls="multimedia" aria-selected="false"><i class="ya ya-image"></i> Multimedia</a>
                                         <a class="nav-item nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false"><i class="ya ya-player"></i> Video</a>
                                         <a class="nav-item nav-link" id="stream-tab" data-toggle="tab" href="#stream" role="tab" aria-controls="stream" aria-selected="false"><i class="ya ya-camera"></i> Stream</a>
@@ -452,7 +441,7 @@
                                 </div>
                                 <form>
                                     <div class="card-body">
-                                        <div class="tab-content" id="shareTabContent">
+                                        <div class="tab-content" id="tabContent">
                                             <div class="tab-pane fade show active" id="status" role="tabpanel" aria-labelledby="status-tab">
                                                 <div class="d-flex">
                                                     <img class="avatar avatar-sm rounded-circle" src="img/user-1.jpg" alt="">
@@ -478,17 +467,15 @@
                             </div>
                             <!-- end .card -->
                             <div class="card card-timeline">
-                                <div class="card-header">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-badge avatar-sm mr-3">
-                                            <img src="img/user-1.jpg" alt="">
-                                            <span class="badge badge-success"></span> </div>
-                                        <div>
-                                            <h5 class="card-title">
-                                                <a href="#">Nathan Drake</a>
-                                            </h5>
-                                            <div class="card-meta"><span class="card-meta-item">9 hours ago</span></div>
-                                        </div>
+                                <div class="card-header d-flex align-items-center bg-lighten">
+                                    <div class="avatar-badge avatar-sm mr-3">
+                                        <img src="img/user-1.jpg" alt="">
+                                        <span class="badge badge-success"></span> </div>
+                                    <div>
+                                        <h5 class="card-title">
+                                            <a href="#">Nathan Drake</a>
+                                        </h5>
+                                        <span class="text-muted font-size-sm">9 hours ago</span>
                                     </div>
                                     <div class="dropdown ml-auto">
                                         <button class="btn btn-link btn-block btn-icon" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-menu"></i></button>
@@ -523,17 +510,15 @@
                                 </div>
                             </div>
                             <div class="card card-timeline">
-                                <div class="card-header">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-badge avatar-sm mr-3">
-                                            <img src="img/user-1.jpg" alt="">
-                                            <span class="badge badge-success"></span> </div>
-                                        <div>
-                                            <h5 class="card-title">
-                                                <a href="#">Nathan Drake</a>
-                                            </h5>
-                                            <div class="card-meta"><span class="card-meta-item">10 hours ago</span></div>
-                                        </div>
+                                <div class="card-header d-flex align-items-center bg-lighten">
+                                    <div class="avatar-badge avatar-sm mr-3">
+                                        <img src="img/user-1.jpg" alt="">
+                                        <span class="badge badge-success"></span> </div>
+                                    <div>
+                                        <h5 class="card-title">
+                                            <a href="#">Nathan Drake</a>
+                                        </h5>
+                                        <span class="text-muted font-size-sm">10 hours ago</span>
                                     </div>
                                     <div class="dropdown ml-auto">
                                         <button class="btn btn-link btn-block btn-icon" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-menu"></i></button>
@@ -563,7 +548,7 @@
                                         <button class="btn btn-default btn-icon btn-xs"><i class="ya ya-comment"></i> comments (5)</button>
                                     </div>
                                 </div>
-                                <div class="comments">
+                                <div class="comments bg-lighten border-top py-4">
                                     <form class="px-3 border-bottom-dashed pb-4">
                                         <div class="form-group">
                                             <textarea class="form-control" rows="4"></textarea>
@@ -572,7 +557,7 @@
                                         <button type="button" class="btn btn-outline">Submit comment</button>
                                     </form>
                                     <!-- end form -->
-                                    <div class="media">
+                                    <div class="media px-4">
                                         <div class="avatar avatar-badge">
                                             <img src="img/user-3.jpg" alt="Elizabeth">
                                             <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
@@ -596,7 +581,7 @@
                                         </div>
                                     </div>
                                     <!-- end .media -->
-                                    <div class="media">
+                                    <div class="media px-4">
                                         <div class="avatar">
                                             <img src="img/user-1.jpg" alt="Nathan Drake">
                                         </div>
@@ -641,7 +626,7 @@
                                         </div>
                                     </div>
                                     <!-- end .media -->
-                                    <div class="media">
+                                    <div class="media px-4">
                                         <div class="avatar">
                                             <img src="img/user-2.jpg" alt="Venom">
                                         </div>
@@ -668,17 +653,15 @@
                                 <!-- end .comments -->
                             </div>
                             <div class="card card-timeline">
-                                <div class="card-header">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-badge avatar-sm mr-3">
-                                            <img src="img/user-3.jpg" alt="">
-                                            <span class="badge badge-warning"></span> </div>
-                                        <div>
-                                            <h5 class="card-title">
-                                                <a href="#">Elizabeth</a>
-                                            </h5>
-                                            <div class="card-meta"><span class="card-meta-item">10 hours ago</span></div>
-                                        </div>
+                                <div class="card-header d-flex align-items-center bg-lighten">
+                                    <div class="avatar-badge avatar-sm mr-3">
+                                        <img src="img/user-3.jpg" alt="">
+                                        <span class="badge badge-warning"></span> </div>
+                                    <div>
+                                        <h5 class="card-title">
+                                            <a href="#">Elizabeth</a>
+                                        </h5>
+                                        <span class="text-muted font-size-sm">10 hours ago</span>
                                     </div>
                                     <div class="dropdown ml-auto">
                                         <button class="btn btn-link btn-block btn-icon" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-menu"></i></button>
@@ -713,17 +696,15 @@
                                 </div>
                             </div>
                             <div class="card card-timeline">
-                                <div class="card-header">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-badge avatar-sm mr-3">
-                                            <img src="img/user-1.jpg" alt="">
-                                            <span class="badge badge-success"></span> </div>
-                                        <div>
-                                            <h5 class="card-title">
-                                                <a href="#">Nathan Drake</a>
-                                            </h5>
-                                            <div class="card-meta"><span class="card-meta-item">15 hours ago</span></div>
-                                        </div>
+                                <div class="card-header d-flex align-items-center bg-lighten">
+                                    <div class="avatar-badge avatar-sm mr-3">
+                                        <img src="img/user-1.jpg" alt="">
+                                        <span class="badge badge-success"></span> </div>
+                                    <div>
+                                        <h5 class="card-title">
+                                            <a href="#">Nathan Drake</a>
+                                        </h5>
+                                        <span class="text-muted font-size-sm">15 hours ago</span>
                                     </div>
                                     <div class="dropdown ml-auto">
                                         <button class="btn btn-link btn-block btn-icon" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-menu"></i></button>

@@ -26,14 +26,14 @@
             <div class="row">
                 {% for price in pricing %}
                     <div class="col-4">
-                        <div class="card{% if loop.index != 2 %} card-default{% endif %} card-price text-center mb-0">
-                            <div class="card-body pb-3">
+                        <div class="card{% if loop.index != 2 %} card-default{% endif %} text-center mb-0">
+                            <div class="card-body pt-4 pb-3">
                                 <h5 class="h6 text-uppercase text-muted">{{ price.title }}</h5>
                                 <div class="display-3 font-weight-semibold{% if loop.index == 2 %} text-primary{% endif %} my-4">{{ price.price }}</div>
                                 <span class="border-bottom-dashed pb-3 mb-4 d-inline-block">per user / month</span>
                                 <ul class="list-unstyled">
                                     {% for list in price.plan %}
-                                        <li><i class="ya {% if list.access %}ya-check text-success{% else %}ya-times-circle text-danger{% endif %}"></i> {{ list.title }}</li>
+                                        <li class="font-weight-semibold font-size-md py-1"><i class="ya {% if list.access %}ya-check text-success{% else %}ya-times-circle text-danger{% endif %} mr-1"></i> {{ list.title }}</li>
                                     {% endfor %}
                                 </ul>
                                 <small class="text-muted">View fine me gone this name an rank.</small>

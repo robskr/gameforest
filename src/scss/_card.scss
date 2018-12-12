@@ -102,75 +102,13 @@
   }
 }
 
-// Card price
-.card-price {
-  .card-body {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  ul {
-    li {
-      font-weight: 500;
-      font-size: 14px;
-      padding: 5px 0;
-
-      i {
-        margin-right: 8px;
-      }
-    }
-  }
-}
-
 // Card timeline
 .card-timeline {
-  .card-header {
-    display: flex;
-    position: relative;
-    background-color: #fafafa;
-    border-bottom-color: rgba($black, .08);
-
-    .card-meta {
-      font-weight: 400;
-      font-size: 14px;
-      margin: 0;
-
-      &-item {
-        color: lighten($black, 55%);
-
-        i {
-          float: left;
-          margin-top: 3px;
-          margin-right: 5px;
-        }
-      }
-    }
-  }
-
   .embed-image {
     height: 425px;
     display: block;
 
     @include img-cover();
-  }
-
-  .comments {
-    border-top: 1px solid rgba($black, .08);
-    padding-top: 15px;
-    padding-bottom: 20px;
-    background-color: #fafafa;
-
-    .media {
-      padding-left: 15px;
-      padding-right: 15px;
-      border-bottom-style: dashed;
-      border-color: rgba($black, .1);
-    }
-  }
-
-  .card-footer {
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
 

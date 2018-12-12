@@ -7,6 +7,12 @@
   &-title {
     font-weight: bold;
   }
+
+  .modal-body .separator {
+    span {
+      background-color: $white;
+    }
+  }
 }
 
 // Variations
