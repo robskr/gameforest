@@ -26,7 +26,7 @@
             <div class="row">
                 {% for price in pricing %}
                     <div class="col-4">
-                        <div class="card{% if loop.index != 2 %} card-default{% endif %} card-price">
+                        <div class="card{% if loop.index != 2 %} card-default{% endif %} card-price text-center mb-0">
                             <div class="card-body pb-3">
                                 <h5 class="h6 text-uppercase text-muted">{{ price.title }}</h5>
                                 <div class="display-3 font-weight-semibold{% if loop.index == 2 %} text-primary{% endif %} my-4">{{ price.price }}</div>
