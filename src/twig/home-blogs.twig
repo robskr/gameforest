@@ -125,6 +125,7 @@
                         </form>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-post">
                         <div class="widget-header">Recommends</div>
                         {% for blog in blogs %}
@@ -141,17 +142,17 @@
                         {% endfor %}
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-secondary">
-                        <div class="widget-header">Categories</div>
-                        <div class="widget-body p-0">
-                            <div class="list-group list-group-flush">
-                                {% for cat in categories %}
-                                    <a class="list-group-item{% if loop.index == 2 %} active{% endif %}" href="#">{{ cat.title }}{% if cat.posts %} <span class="badge badge-secondary badge-pill">{{ cat.posts }}</span>{% endif %}</a>
-                                {% endfor %}
-                            </div>
+                        <div class="widget-header border-0">Categories</div>
+                        <div class="list-group list-group-flush">
+                            {% for cat in categories %}
+                                <a class="list-group-item{% if loop.index == 2 %} active{% endif %}" href="#">{{ cat.title }}{% if cat.posts %} <span class="badge badge-secondary badge-pill">{{ cat.posts }}</span>{% endif %}</a>
+                            {% endfor %}
                         </div>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-post mb-4">
                         <div class="widget-header">Popular on Gameforest</div>
                         {% for blog in blogs %}
@@ -168,6 +169,7 @@
                         {% endfor %}
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-post">
                         <div class="widget-body">
                             <div class="list-group list-group-posts list-group-sm mt-3">
@@ -189,6 +191,7 @@
                         </div>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget widget-tags">
                         <div class="widget-header">Popular Tags</div>
                         <div class="widget-body">

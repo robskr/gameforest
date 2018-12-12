@@ -1,5 +1,6 @@
 // Row
 .row-md { @include row($row-padding-md); }
+.row-xs { @include row($row-padding-xs); }
 .row-sm { @include row($row-padding-sm); }
 
 // Large container

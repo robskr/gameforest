@@ -297,7 +297,7 @@
                             {% endif %}
                         </div>
                     {% endfor %}
-                    <!-- end .card-item -->
+                    <!-- end .card -->
                     <a class="btn btn-outline btn-block btn-sm" href="#" role="button">Load More</a>
                 </div>
                 <div class="col-2">
@@ -307,22 +307,19 @@
                             {% for user in users %}
                                 {% if loop.index < 7 %}
                                     {% if loop.index != 1 %}
-                                        <div class="widget-user">
-                                            <div class="d-flex align-items-start">
-                                                <img src="img/{{ user.img }}" alt="{{ user.name }}">
-                                                <div>
-                                                    <a class="widget-user-title" href="#">{{ user.name }}</a>
-                                                    <a class="btn btn-outline btn-xs btn-icon-left text-center" href="#"><i class="ya ya-user-add"></i> Add</a>
-                                                </div>
+                                        <div class="widget-user d-flex align-items-start">
+                                            <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                            <div>
+                                                <a class="font-size-md font-weight-semibold" href="#">{{ user.name }}</a>
+                                                <a class="btn btn-outline btn-icon-left btn-xs text-center mt-2" href="#"><i class="ya ya-user-add"></i> Add</a>
                                             </div>
                                         </div>
-                                        <!-- end .widget-user -->
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
                         </div>
                     </div>
-                    <!-- end .widget-users -->
+                    <!-- end .widget -->
                 </div>
             </div>
         </div>
