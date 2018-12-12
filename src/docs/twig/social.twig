@@ -165,3 +165,42 @@
         }
     ]
 } %}
+
+{% set custom %}
+    <div class="card card-default example mb-4">
+        <h6 class="card-header">{{ docs.blocks[0]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[0]['code'] }}
+        </div>
+    </div>
+    <div class="card card-default example mb-4">
+        <h6 class="card-header">{{ docs.blocks[1]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[1]['code'] }}
+        </div>
+    </div>
+    <div class="card card-default example mb-4">
+        <h6 class="card-header">{{ docs.blocks[2]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[2]['code'] }}
+        </div>
+    </div>
+    <div class="card card-default example mb-4">
+        <h6 class="card-header">{{ docs.blocks[3]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[3]['code'] }}
+        </div>
+    </div>
+    <div class="card card-default example mb-4">
+        <h6 class="card-header">{{ docs.blocks[4]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[4]['code'] }}
+        </div>
+    </div>
+    <div class="card card-default mb-0">
+        <h6 class="card-header">{{ docs.blocks[5]['title'] }}</h6>
+        <div class="card-body">
+            {{ docs.blocks[5]['code'] }}
+        </div>
+    </div>
+{% endset %}
