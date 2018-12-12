@@ -100,18 +100,9 @@
     height: 300px;
   }
 
-  .card-body {
-    padding: 15px 10px;
-  }
-
   .card-text {
     font-size: 15px;
     line-height: 1.4;
-  }
-
-  .card-footer {
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
 
@@ -195,10 +186,6 @@
     position: relative;
     background-color: #fafafa;
     border-bottom-color: rgba($black, .08);
-
-    .avatar-badge {
-      margin-right: 15px;
-    }
 
     .card-meta {
       font-weight: 400;
@@ -293,12 +280,6 @@
   }
 }
 
-.card-md {
-  .card-img {
-    height: 240px;
-  }
-}
-
 .card-embed {
   background-color: darken($dark, 13%);
   border: 0;
@@ -336,51 +317,9 @@
   }
 }
 
-.card-form {
-  .card-header {
-    background-color: $body-bg;
-    padding: 0;
-    border: 0;
-  }
-
-  .card-avatar {
-    img {
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-    }
-  }
-
-  .card-body {
-    padding: 15px;
-  }
-}
-
-.card-forum {
-  .card-header {
-    display: flex;
-    position: relative;
-
-    img {
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-    }
-
-    .badge {
-      display: inline-block;
-      position: absolute;
-      left: 57px;
-      bottom: 13px;
-      z-index: 1;
-      border-radius: 50%;
-      box-shadow: 0 0 0 2px $white;
-      padding: 6px;
-    }
-  }
-
-  .card-title {
-    font-weight: bold;
+.card-md {
+  .card-img {
+    height: 240px;
   }
 }
 
