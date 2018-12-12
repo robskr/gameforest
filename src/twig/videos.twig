@@ -80,23 +80,23 @@
             <div class="row row-md">
                 {% for video in videos %}
                     <div class="col-3 card-group mb-4">
-                        <div class="card card-video">
-                            <a class="card-img" href="video-post.html">
-                                <img class="card-img-top" src="https://i1.ytimg.com/vi/{{ video.id }}/mqdefault.jpg" alt="{{ video.title }}">
+                        <div class="card card-sm">
+                            <a class="card-img card-img-sm" href="video-post.html">
+                                <img src="https://i1.ytimg.com/vi/{{ video.id }}/mqdefault.jpg" alt="{{ video.title }}">
                                 <div class="card-meta">
                                     <span>{{ video.length }}</span>
                                 </div>
                             </a>
                             <div class="card-body">
                                 <h6 class="card-title"><a href="video-post.html">{{ video.title }}</a></h6>
-                                <p class="card-text">{{ video.text|slice(0, 80) ~ '...' }}</p>
+                                <p class="card-text font-size-md">{{ video.text|slice(0, 80) ~ '...' }}</p>
                             </div>
                             <div class="card-footer">
                                 <span><i class="ya ya-clock"></i> {{ video.date|date("M d, Y") }}</span>
                                 <span class="ml-auto"><i class="ya ya-eye"></i> {{ video.views }} views</span>
                             </div>
                         </div>
-                        <!-- end .card-video -->
+                        <!-- end .card -->
                     </div>
                 {% endfor %}
             </div>

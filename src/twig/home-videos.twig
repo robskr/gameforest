@@ -48,25 +48,23 @@
                 {% for video in videos %}
                     {% if loop.index < 5 %}
                         <div class="col-3 card-group mb-4">
-                            <div class="card card-video card-md">
-                                <div class="card-img">
-                                    <a href="video-post.html">
-                                        <img src="https://i1.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
-                                    </a>
+                            <div class="card card-sm">
+                                <a class="card-img card-img-md" href="video-post.html">
+                                    <img src="https://i1.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
                                     <div class="card-meta">
                                         <span>{{ video.length }}</span>
                                     </div>
-                                </div>
+                                </a>
                                 <div class="card-body">
                                     <h6 class="card-title"><a href="video-post.html">{{ video.title|slice(0, 38) }}</a></h6>
-                                    <p class="card-text">{{ video.text|slice(0, 80) ~ '...' }}</p>
+                                    <p class="card-text font-size-md">{{ video.text|slice(0, 80) ~ '...' }}</p>
                                 </div>
                                 <div class="card-footer">
                                     <span><i class="ya ya-clock"></i> {{ video.date|date("M d, Y") }}</span>
                                     <span class="ml-auto"><i class="ya ya-eye"></i> {{ video.views }} views</span>
                                 </div>
                             </div>
-                            <!-- end .card-video -->
+                            <!-- end .card -->
                         </div>
                     {% endif %}
                 {% endfor %}
