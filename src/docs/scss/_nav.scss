@@ -6,8 +6,8 @@
 
     i {
       float: left;
-      margin-right: 8px;
       margin-top: 3px;
+      margin-right: 8px;
     }
 
     &:hover {
@@ -16,7 +16,7 @@
   }
 
   .divider {
-    border-bottom: 1px solid rgba($black, .09);
     margin: 10px 0;
+    border-bottom: 1px solid rgba($black, .09);
   }
 }

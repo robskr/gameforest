@@ -13,17 +13,16 @@ p > a {
 }
 
 .version {
-  display: inline-block;
   position: fixed;
-  z-index: 3;
-  bottom: 0;
   right: 0;
-  color: #FFF;
-  background-color: lighten($dark, 5%);
+  bottom: 0;
+  z-index: 3;
+  display: inline-block;
   padding: 6px 10px;
-  border-top-left-radius: 4px;
   font-size: 15px;
   color: $white;
+  background-color: lighten($dark, 5%);
+  border-top-left-radius: 4px;
 
   &:hover {
     color: $white;
@@ -32,6 +31,6 @@ p > a {
 }
 
 code {
-  background-color: lighten($primary, 45%);
   padding: 5px;
+  background-color: lighten($primary, 45%);
 }

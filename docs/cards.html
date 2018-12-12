@@ -103,15 +103,13 @@
                                     Example
                                 </h4>
                                 <p>Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization.</p>
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="card mb-0">
-                                            <img class="card-img-top" data-src="holder.js/323px250?theme=ya" alt="Card image cap">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <p class="card-text">Do greatest at in learning steepest. Breakfast extremity suffering one who all otherwise suspected.</p>
-                                                <a href="#" class="btn btn-outline">Read more</a>
-                                            </div>
+                                <div style="width: 330px">
+                                    <div class="card mb-0">
+                                        <img class="card-img-top" data-src="holder.js/323px300?theme=ya" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Do greatest at in learning steepest. Breakfast extremity suffering one who all otherwise suspected.</p>
+                                            <a href="#" class="btn btn-outline">Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,34 +148,32 @@
                                 <h4 id="card-game" class="mb-3 anchor">
                                     Card game
                                 </h4>
-                                <p>List games with card game component by adding <code>.card-game</code> class to the .card element with customized metas like in the example.</p>
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="card card-game mb-0">
-                                            <a class="card-img img-cover" href="game-post.html">
-                                                <img class="card-img-top" src="https://img.youtube.com/vi/HYrcX8QIIAs/maxresdefault.jpg" alt="God of War">
-                                            </a>
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    <i class="ya ya-check-circle text-success" data-toggle="tooltip" data-placement="bottom" data-title="Available"></i>
-                                                    <a href="game-post.html">God of War</a>
-                                                </h5>
-                                                <p class="card-text">His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and mon...</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <span><i class="ya ya-calendar"></i> Apr 23, 2018</span>
-                                                <div class="ml-auto">
-                                                    <a href="#"><i class="ya ya-comment"></i> 675</a>
-                                                    <a href="#"><i class="ya ya-heart-o"></i> 49</a>
-                                                </div>
+                                <p>List games with card game component by adding <code>.card-sm</code> class to the .card element with customized metas like in the example.</p>
+                                <div style="width: 330px">
+                                    <div class="card card-sm mb-0">
+                                        <a class="card-img card-img-lg" href="game-post.html">
+                                            <img class="card-img-top" src="https://img.youtube.com/vi/HYrcX8QIIAs/maxresdefault.jpg" alt="God of War">
+                                        </a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <i class="ya ya-check-circle text-success" data-toggle="tooltip" data-placement="bottom" data-title="Available"></i>
+                                                <a href="game-post.html">God of War</a>
+                                            </h5>
+                                            <p class="card-text font-size-md">His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and mon...</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span><i class="ya ya-calendar"></i> Apr 23, 2018</span>
+                                            <div class="ml-auto">
+                                                <a href="#"><i class="ya ya-comment"></i> 675</a>
+                                                <a href="#"><i class="ya ya-heart-o"></i> 49</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#card-game_code"><i class="ya ya-save"></i></button>
-                                    <pre class="pre"><code id="card-game_code" class="twig">&lt;div class=&quot;card card-game&quot;&gt;
-    &lt;a class=&quot;card-img img-cover&quot; href=&quot;game-post.html&quot;&gt;
+                                    <pre class="pre"><code id="card-game_code" class="twig">&lt;div class=&quot;card card-sm&quot;&gt;
+    &lt;a class=&quot;card-img card-img-lg&quot; href=&quot;game-post.html&gt;
         &lt;img class=&quot;card-img-top&quot; src=&quot;...&quot; alt=&quot;card title&quot;&gt;
     &lt;/a&gt;
     &lt;div class=&quot;card-body&quot;&gt;
@@ -185,7 +181,7 @@
             &lt;i class=&quot;ya ya-check-circle text-success&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; data-title=&quot;Available&quot;&gt;&lt;/i&gt;
             &lt;a href=&quot;game-post.html&quot;&gt;God of War&lt;/a&gt;
         &lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and mon...&lt;/p&gt;
+        &lt;p class=&quot;card-text font-size-md&quot;&gt;His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and mon...&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card-footer&quot;&gt;
         &lt;span&gt;&lt;i class=&quot;ya ya-calendar&quot;&gt;&lt;/i&gt; Apr 23, 2018&lt;/span&gt;
@@ -201,47 +197,37 @@
                                 <h4 id="card-video" class="mb-3 anchor">
                                     Card video
                                 </h4>
-                                <p>It is also possible to use custom cards for listing videos by adding <code>.card-video</code> to the card component.</p>
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="card card-video">
-                                            <div class="card-img">
-                                                <a href="video-post.html">
-                                                    <img src="https://i1.ytimg.com/vi/N9fTYUj8pLE/mqdefault.jpg" alt="Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo">
-                                                </a>
-                                                <div class="card-meta">
-                                                    <span>4:32</span>
-                                                </div>
+                                <p>It is also possible to use custom cards for listing videos by adding <code>.card-sm</code> to the card component.</p>
+                                <div style="width: 330px">
+                                    <div class="card card-sm">
+                                        <a class="card-img card-img-sm" href="video-post.html">
+                                            <img class="card-img-top" src="https://i1.ytimg.com/vi/N9fTYUj8pLE/mqdefault.jpg" alt="Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo">
+                                            <div class="card-meta">
+                                                <span>4:32</span>
                                             </div>
-                                            <div class="card-body">
-                                                <h6 class="card-title">
-                                                    <a href="video-post.html">Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo</a>
-                                                </h6>
-                                                <p class="card-text">We take an in-depth look at some of the traditional, and outright insane, vehicl...</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <span><i class="ya ya-clock"></i> Sep 11, 2018</span>
-                                                <span class="ml-auto"><i class="ya ya-eye"></i> 437 views</span>
-                                            </div>
+                                        </a>
+                                        <div class="card-body">
+                                            <h6 class="card-title"><a href="video-post.html">Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo</a></h6>
+                                            <p class="card-text font-size-md">We take an in-depth look at some of the traditional, and outright insane, vehicl...</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span><i class="ya ya-clock"></i> Sep 11, 2018</span>
+                                            <span class="ml-auto"><i class="ya ya-eye"></i> 437 views</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#card-video_code"><i class="ya ya-save"></i></button>
-                                    <pre class="pre"><code id="card-video_code" class="twig">&lt;div class=&quot;card card-video&quot;&gt;
-    &lt;div class=&quot;card-img&quot;&gt;
-        &lt;a href=&quot;video-post.html&quot;&gt;
-            &lt;img src=&quot;...&quot; alt=&quot;card title&quot;&gt;
-        &lt;/a&gt;
+                                    <pre class="pre"><code id="card-video_code" class="twig">&lt;div class=&quot;card card-sm&quot;&gt;
+    &lt;a class=&quot;card-img card-img-sm&quot; href=&quot;video-post.html&quot;&gt;
+        &lt;img class=&quot;card-img-top&quot; src=&quot;https://i1.ytimg.com/vi/N9fTYUj8pLE/mqdefault.jpg&quot; alt=&quot;Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo&quot;&gt;
         &lt;div class=&quot;card-meta&quot;&gt;
             &lt;span&gt;4:32&lt;/span&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;/a&gt;
     &lt;div class=&quot;card-body&quot;&gt;
-        &lt;h6 class=&quot;card-title&quot;&gt;
-            &lt;a href=&quot;video-post.html&quot;&gt;Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo&lt;/a&gt;
-        &lt;/h6&gt;
-        &lt;p class=&quot;card-text&quot;&gt;We take an in-depth look at some of the traditional, and outright insane, vehicl...&lt;/p&gt;
+        &lt;h6 class=&quot;card-title&quot;&gt;&lt;a href=&quot;video-post.html&quot;&gt;Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo&lt;/a&gt;&lt;/h6&gt;
+        &lt;p class=&quot;card-text font-size-md&quot;&gt;We take an in-depth look at some of the traditional, and outright insane, vehicl...&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card-footer&quot;&gt;
         &lt;span&gt;&lt;i class=&quot;ya ya-clock&quot;&gt;&lt;/i&gt; Sep 11, 2018&lt;/span&gt;

@@ -64,13 +64,13 @@ const path = {
 
 function scss() {
     return gulp.src(path.src.scss)
-        // .pipe(stylelint({
-        //     failAfterError: false,
-        //     reporters: [
-        //         {formatter: 'string', console: true}
-        //     ],
-        //     debug: true
-        // }))
+        .pipe(stylelint({
+            failAfterError: false,
+            reporters: [
+                {formatter: 'string', console: true}
+            ],
+            debug: true
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(postcss())
@@ -124,7 +124,7 @@ function html() {
         .pipe(browserSync.stream())
 }
 
-function html_all() {
+function compile() {
     return gulp.src(path.src.twig)
         .pipe(twig({
             base: '../../src/docs/twig/views',
@@ -175,8 +175,9 @@ const build = {
     dev:         gulp.parallel(watch, browser),
     css:         scss,
     js:          javascript,
+    json:        gulp.series(json, compile),
     html:        html,
-    html_all:    gulp.series(json, html_all)
+    compile:     compile
 }
 
 /**
@@ -186,11 +187,11 @@ const build = {
  */
 
 function watch() {
-    gulp.watch(path.src.json,  {events: ['change', 'add']}, build.html_all)
-    gulp.watch(path.src.js,    {events: ['change', 'add']}, build.js)
-    gulp.watch(path.src.twig,  {events: ['change', 'add']}, build.html)
-    gulp.watch(path.src.views, {events: 'change'}, build.html_all)
-    gulp.watch(path.src.scss,  {events: ['change', 'add']}, build.css)
+    gulp.watch(path.src.json,  build.json)
+    gulp.watch(path.src.js,    build.js)
+    gulp.watch(path.src.twig,  build.html)
+    gulp.watch(path.src.views, build.compile)
+    gulp.watch(path.src.scss,  build.css)
 }
 
 /**
@@ -200,7 +201,7 @@ function watch() {
  */
 
 gulp.task('html', build.html)
-gulp.task('html:all', build.html_all)
+gulp.task('compile', build.compile)
 gulp.task('css', build.css)
 gulp.task('js', build.js)
 gulp.task('default', build.dev)

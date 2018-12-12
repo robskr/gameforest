@@ -104,11 +104,6 @@
                                     Introduction
                                 </h4>
                                 <p>To getting started we need to add the required stylesheet and javascript files to our page. You can find an example below but for more examples check the <a href="http://morrisjs.github.io/morris.js" target="_blank">morris</a> website.</p>
-                                <!-- Stylesheet -->
-                                <link rel="stylesheet" href="plugins/morris/morris.css">
-                                <!-- Javascript -->
-                                <script src="plugins/raphael/raphael.min.js"></script>
-                                <script src="plugins/morris/morris.min.js"></script>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#introduction_code"><i class="ya ya-save"></i></button>
                                     <pre class="pre"><code id="introduction_code" class="twig">&lt;!-- Stylesheet --&gt;
@@ -125,54 +120,6 @@
                                 </h4>
                                 <p>The public API is terribly simple. It is just one function: Morris.Line(options), where options is an object containing some of the following configuration options.</p>
                                 <div id="morris-line-chart"></div>
-                                <script>
-                                    var area = new Morris.Line({
-                                        element: 'morris-line-chart',
-                                        resize: true,
-                                        data: [{
-                                                y: '2011',
-                                                a: 30,
-                                                b: 13
-                                            },
-                                            {
-                                                y: '2012',
-                                                a: 75,
-                                                b: 45
-                                            },
-                                            {
-                                                y: '2013',
-                                                a: 50,
-                                                b: 40
-                                            },
-                                            {
-                                                y: '2014',
-                                                a: 75,
-                                                b: 63
-                                            },
-                                            {
-                                                y: '2015',
-                                                a: 50,
-                                                b: 40
-                                            },
-                                            {
-                                                y: '2016',
-                                                a: 75,
-                                                b: 65
-                                            },
-                                            {
-                                                y: '2017',
-                                                a: 100,
-                                                b: 30
-                                            }
-                                        ],
-                                        pointSize: 6,
-                                        xkey: 'y',
-                                        ykeys: ['a', 'b'],
-                                        labels: ['Item 1', 'Item 2'],
-                                        lineColors: ['#2575dc', '#7fad4a'],
-                                        hideHover: 'auto'
-                                    });
-                                </script>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#line-chart_code"><i class="ya ya-save"></i></button>
                                     <pre class="pre"><code id="line-chart_code" class="twig">&lt;div id=&quot;morris-line-chart&quot;&gt;&lt;/div&gt;
@@ -205,53 +152,6 @@
                                 </h4>
                                 <p>Create bar charts using Morris.Bar(options), where options is an object containing the following configuration options.</p>
                                 <div id="morris-bar-chart"></div>
-                                <script>
-                                    var bar = new Morris.Bar({
-                                        element: 'morris-bar-chart',
-                                        resize: true,
-                                        data: [{
-                                                y: '2008',
-                                                a: 100,
-                                                b: 90
-                                            },
-                                            {
-                                                y: '2009',
-                                                a: 73,
-                                                b: 45
-                                            },
-                                            {
-                                                y: '2010',
-                                                a: 55,
-                                                b: 42
-                                            },
-                                            {
-                                                y: '2010',
-                                                a: 75,
-                                                b: 65
-                                            },
-                                            {
-                                                y: '2011',
-                                                a: 20,
-                                                b: 40
-                                            },
-                                            {
-                                                y: '2013',
-                                                a: 75,
-                                                b: 65
-                                            },
-                                            {
-                                                y: '2014',
-                                                a: 100,
-                                                b: 90
-                                            }
-                                        ],
-                                        barColors: ['#7fad4a', '#e45454'],
-                                        xkey: 'y',
-                                        ykeys: ['a', 'b'],
-                                        labels: ['CPU', 'DISK'],
-                                        hideHover: 'auto'
-                                    });
-                                </script>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#bar-chart_code"><i class="ya ya-save"></i></button>
                                     <pre class="pre"><code id="bar-chart_code" class="twig">&lt;div id=&quot;morris-bar-chart&quot;&gt;&lt;/div&gt;
@@ -283,68 +183,6 @@
                                 </h4>
                                 <p>Add area chart by using the following markup.</p>
                                 <div id="morris-area-chart"></div>
-                                <script>
-                                    var area = new Morris.Area({
-                                        element: 'morris-area-chart',
-                                        resize: true,
-                                        data: [{
-                                                y: '2011 Q1',
-                                                item1: 2666,
-                                                item2: 2666
-                                            },
-                                            {
-                                                y: '2011 Q2',
-                                                item1: 2778,
-                                                item2: 2294
-                                            },
-                                            {
-                                                y: '2011 Q3',
-                                                item1: 4912,
-                                                item2: 1969
-                                            },
-                                            {
-                                                y: '2011 Q4',
-                                                item1: 3767,
-                                                item2: 3597
-                                            },
-                                            {
-                                                y: '2012 Q1',
-                                                item1: 6810,
-                                                item2: 1914
-                                            },
-                                            {
-                                                y: '2012 Q2',
-                                                item1: 5670,
-                                                item2: 4293
-                                            },
-                                            {
-                                                y: '2012 Q3',
-                                                item1: 4820,
-                                                item2: 3795
-                                            },
-                                            {
-                                                y: '2012 Q4',
-                                                item1: 15073,
-                                                item2: 5967
-                                            },
-                                            {
-                                                y: '2013 Q1',
-                                                item1: 10687,
-                                                item2: 4460
-                                            },
-                                            {
-                                                y: '2013 Q2',
-                                                item1: 8432,
-                                                item2: 5713
-                                            }
-                                        ],
-                                        xkey: 'y',
-                                        ykeys: ['item1', 'item2'],
-                                        labels: ['Item 1', 'Item 2'],
-                                        lineColors: ['#2575dc', '#7fad4a'],
-                                        hideHover: 'auto'
-                                    });
-                                </script>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#area-chart_code"><i class="ya ya-save"></i></button>
                                     <pre class="pre"><code id="area-chart_code" class="twig">&lt;div id=&quot;morris-area-chart&quot;&gt;&lt;/div&gt;
@@ -379,27 +217,6 @@
                                 </h4>
                                 <p>Create a Donut chart using Morris.Donut(options), with the following options.</p>
                                 <div id="morris-donut-chart"></div>
-                                <script>
-                                    var donut = new Morris.Donut({
-                                        element: 'morris-donut-chart',
-                                        resize: true,
-                                        colors: ['#e45454', '#2575dc', '#7fad4a'],
-                                        data: [{
-                                                label: 'Download Sales',
-                                                value: 12
-                                            },
-                                            {
-                                                label: 'In-Store Sales',
-                                                value: 30
-                                            },
-                                            {
-                                                label: 'Mail-Order Sales',
-                                                value: 20
-                                            }
-                                        ],
-                                        hideHover: 'auto'
-                                    })
-                                </script>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#donut-chart_code"><i class="ya ya-save"></i></button>
                                     <pre class="pre"><code id="donut-chart_code" class="twig">&lt;div id=&quot;morris-donut-chart&quot;&gt;&lt;/div&gt;

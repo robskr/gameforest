@@ -1,8 +1,8 @@
 .site-content {
-  padding-left: 290px;
+  min-height: 100%;
   padding-top: 40px;
   padding-bottom: 60px;
-  min-height: 100%;
+  padding-left: 290px;
 
   .comments {
     .media:last-child {
@@ -25,6 +25,11 @@
   .docs-code + table {
     margin-top: 40px;
   }
+
+  pre code {
+    padding: 30px;
+    background-color: rgba($black, .05);
+  }
 }
 
 .fixed-navbar {
@@ -32,8 +37,8 @@
 }
 
 .docs-separator {
-  border-style: dashed;
   border-color: rgba($black, .15);
+  border-style: dashed;
 }
 
 .docs-example {
@@ -46,8 +51,8 @@
   margin: 0 -15px;
 
   i {
-    font-size: 32px;
     margin: 15px;
+    font-size: 32px;
     color: darken($body-color, 5%);
   }
 }
@@ -69,32 +74,25 @@
   }
 }
 
-.docs-block {
-  pre code {
-    background-color: rgba($black, .05);
-    padding: 30px;
-  }
-}
-
 .docs-code {
-  margin-top: 35px;
   position: relative;
+  margin-top: 35px;
 
   .btn-clipboard {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
+    padding: 5px 9px;
+    border-color: rgba($black, .1);
     border-top-width: 0;
     border-right-width: 0;
     border-radius: 0;
-    padding: 5px 9px;
-    border-color: rgba($black, .1);
 
     &:not(:disabled):not(.disabled):active,
     &:focus,
     &:hover {
-      background-color: $body-bg;
       color: $primary;
+      background-color: $body-bg;
       box-shadow: none;
     }
   }
