@@ -94,10 +94,14 @@
   }
 }
 
-// Card shop
-.card-shop {
-  .card-img {
-    height: 250px;
+// Card img sizes
+.card-img {
+  &.-lg {
+   height: 18.75rem;
+  }
+
+  &.-md {
+    height: 15.625rem;
   }
 }
 
