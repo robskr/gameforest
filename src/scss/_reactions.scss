@@ -1,12 +1,9 @@
+// Reaction
 .reaction {
   display: flex;
   align-items: center;
   margin-left: -10px;
   margin-top: 15px;
-
-  .btn-link {
-    padding: 0 5px;
-  }
 
   svg {
     transition: transform .28s ease-in-out;
@@ -15,9 +12,9 @@
   }
 
   &-count {
-    background-color: #FFF;
+    background-color: $white;
     display: inline-block;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba($black, .2);
     padding: 4px 8px;
     text-align: center;
     margin-left: 5px;
@@ -37,7 +34,7 @@
     }
 
     &:after {
-      border-right-color: #fff;
+      border-right-color: $white;
       border-width: 5px;
       margin-top: -5px;
     }
@@ -49,18 +46,22 @@
     }
   }
 
-  .btn-link:hover {
-    color: $body-color;
+  .btn-link {
+    padding: 0 5px;
 
-    svg {
-      transform: rotate(360deg);
-    }
+    &:hover {
+      color: $body-color;
 
-    .reaction-count {
-      border: 1px solid rgba(0,0,0,0.3);
+      svg {
+        transform: rotate(360deg);
+      }
 
-      &:before {
-        border-right-color: rgb(124, 124, 124);
+      .reaction-count {
+        border: 1px solid rgba($black, .3);
+
+        &:before {
+          border-right-color: rgb(124, 124, 124);
+        }
       }
     }
   }

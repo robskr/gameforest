@@ -1,7 +1,7 @@
 .review {
   &-score {
-    background-color: rgba(255,255,255,0.05);
-    border: 1px dashed rgba(255,255,255,0.4);
+    background-color: rgba($white, .05);
+    border: 1px dashed rgba($white, .4);
     width: 60px;
     height: 60px;
     line-height: 60px;
