@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gameforest Bootstrap Gaming Theme</title>
     <!-- css: plugins -->
+    <link rel="stylesheet" href="plugins/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="plugins/morris/morris.css">
     <!-- css: theme -->
     <link rel="stylesheet" href="css/theme.min.css">
@@ -422,79 +424,96 @@
                             <h5 class="h3">Avatars</h5>
                             <p>Avatars are images that users can set as their profile picture. They can be custom photos, uploaded by users, or generated as Identicons as a placeholder.</p>
                             <div class="mt-5">
-                                <div class="example">
-                                    <div class="d-flex align-items-end">
-                                        <img class="avatar avatar-xl mr-3" src="img/user.jpg" alt="">
-                                        <img class="avatar avatar-lg mr-3" src="img/user.jpg" alt="">
-                                        <img class="avatar mr-3" src="img/user-1.jpg" alt="">
-                                        <img class="avatar avatar-md mr-3" src="img/user-1.jpg" alt="">
-                                        <img class="avatar avatar-sm mr-3" src="img/user-1.jpg" alt="">
-                                        <img class="avatar avatar-xs mr-3" src="img/user-1.jpg" alt="">
-                                    </div>
+                                <div class="d-flex align-items-end">
+                                    <img class="avatar avatar-xl mr-3" src="img/user.jpg" alt="">
+                                    <img class="avatar avatar-lg mr-3" src="img/user.jpg" alt="">
+                                    <img class="avatar mr-3" src="img/user-1.jpg" alt="">
+                                    <img class="avatar avatar-md mr-3" src="img/user-1.jpg" alt="">
+                                    <img class="avatar avatar-sm mr-3" src="img/user-1.jpg" alt="">
+                                    <img class="avatar avatar-xs mr-3" src="img/user-1.jpg" alt="">
                                 </div>
-                                <div class="example mt-5">
-                                    <a class="avatar-tile" href="#">
-                                        <img src="img/user-1.jpg" alt="">
-                                        <div>
-                                            <strong>Nathan Drake</strong>
-                                            <span class="d-block">@nathan</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="example mt-5">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <a class="avatar-card" href="#">
-                                                <div>
-                                                    <div class="avatar-title">Smallville</div>
-                                                    <p class="avatar-text">gameforest author</p>
+                                <div class="row mt-5">
+                                    <div class="col card-group">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Card</h6>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <a class="avatar-card" href="#">
+                                                            <div>
+                                                                <div class="avatar-title">Smallville</div>
+                                                                <p class="avatar-text">gameforest author</p>
+                                                            </div>
+                                                            <img src="img/user-5.jpg" alt="">
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <img src="img/user-5.jpg" alt="">
-                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col card-group">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Tile</h6>
+                                            <div class="card-body">
+                                                <a class="avatar-tile" href="#">
+                                                    <img src="img/user-1.jpg" alt="">
+                                                    <div>
+                                                        <strong>Nathan Drake</strong>
+                                                        <span class="d-block">@nathan</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col card-group">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Badge</h6>
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="avatar-badge mr-3">
+                                                        <img src="img/user-5.jpg" alt="">
+                                                        <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                                    </div>
+                                                    <div class="avatar-badge">
+                                                        <img src="img/user-5.jpg" alt="">
+                                                        <span class="badge badge-success"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="example mt-5">
-                                    <div class="d-flex align-items-end">
-                                        <img class="avatar-thumbnail avatar-xl mr-3" src="img/user.jpg" alt="">
-                                        <img class="avatar-thumbnail avatar-lg mr-3" src="img/user.jpg" alt="">
-                                        <img class="avatar-thumbnail mr-3" src="img/user-1.jpg" alt="">
-                                        <img class="avatar-thumbnail avatar-md mr-3" src="img/user-1.jpg" alt="">
-                                        <img class="avatar-thumbnail avatar-sm mr-3" src="img/user-1.jpg" alt="">
-                                        <img class="avatar-thumbnail avatar-xs mr-3" src="img/user-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="example mt-5">
-                                    <div class="d-flex">
-                                        <div class="avatar-badge mr-3">
-                                            <img src="img/user-5.jpg" alt="">
-                                            <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
-                                        </div>
-                                        <div class="avatar-badge">
-                                            <img src="img/user-5.jpg" alt="">
-                                            <span class="badge badge-success"></span>
+                                <div class="row mt-5">
+                                    <div class="col">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Stack</h6>
+                                            <div class="card-body">
+                                                <div class="avatar-stack">
+                                                    <img class="avatar" src="img/user-1.jpg" alt="">
+                                                    <img class="avatar" src="img/user-2.jpg" alt="">
+                                                    <img class="avatar" src="img/user-3.jpg" alt="">
+                                                    <img class="avatar" src="img/user-4.jpg" alt="">
+                                                    <img class="avatar" src="img/user-5.jpg" alt="">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="example mt-5">
-                                    <div class="avatar-stack">
-                                        <img class="avatar" src="img/user-1.jpg" alt="">
-                                        <img class="avatar" src="img/user-2.jpg" alt="">
-                                        <img class="avatar" src="img/user-3.jpg" alt="">
-                                        <img class="avatar" src="img/user-4.jpg" alt="">
-                                        <img class="avatar" src="img/user-5.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="example mt-5">
-                                    <div class="avatar-stack">
-                                        <img class="avatar" src="img/user-1.jpg" alt="">
-                                        <img class="avatar" src="img/user-2.jpg" alt="">
-                                        <img class="avatar" src="img/user-3.jpg" alt="">
-                                        <img class="avatar" src="img/user-4.jpg" alt="">
-                                        <img class="avatar" src="img/user-5.jpg" alt="">
-                                        <span class="avatar-text">
+                                    <div class="col">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Stack with text</h6>
+                                            <div class="card-body">
+                                                <div class="avatar-stack">
+                                                    <img class="avatar" src="img/user-1.jpg" alt="">
+                                                    <img class="avatar" src="img/user-2.jpg" alt="">
+                                                    <img class="avatar" src="img/user-3.jpg" alt="">
+                                                    <img class="avatar" src="img/user-4.jpg" alt="">
+                                                    <img class="avatar" src="img/user-5.jpg" alt="">
+                                                    <span class="avatar-text">
         <a href="profile.html">Elizabeth</a>,<a href="profile.html">Venom</a> and more 45 people like it.
     </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -916,24 +935,34 @@
                             <h5 class="h3">DatePicker</h5>
                             <p>Flatpickr is a lightweight and powerful datetime picker. Lean, UX-driven, and extensible, yet it doesn’t depend on any libraries.</p>
                             <div class="mt-5">
-                                <div class="example mt-5">
-                                    <input type="text" class="form-control datepicker">
-                                </div>
-                                <div class="example mt-5">
-                                    <input type="text" class="form-control datetimepicker">
-                                </div>
-                                <div class="example mt-5">
-                                    <input type="text" class="form-control inlinepicker">
-                                </div>
-                                <div class="example mt-5">
-                                    <input type="text" class="form-control timepicker">
-                                </div>
-                                <div class="example mt-5">
-                                    <div class="input-group custompicker">
-                                        <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-light btn-icon border-right-0" data-toggle><i class="ya ya-calendar"></i></button>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Inline calendar</h6>
+                                            <div class="card-body">
+                                                <input type="text" class="form-control inlinepicker">
+                                            </div>
                                         </div>
-                                        <input type="text" class="form-control" id="exampleSelect3" data-input>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card card-default">
+                                            <h6 class="card-header">Example</h6>
+                                            <div class="card-body">
+                                                <input type="text" class="form-control datepicker">
+                                            </div>
+                                        </div>
+                                        <div class="card card-default">
+                                            <h6 class="card-header">DateTime</h6>
+                                            <div class="card-body">
+                                                <input type="text" class="form-control datetimepicker">
+                                            </div>
+                                        </div>
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Time Picker</h6>
+                                            <div class="card-body">
+                                                <input type="text" class="form-control timepicker">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1088,20 +1117,32 @@
                                     <i class="ya ya-discord" data-toggle="tooltip" title="ya-discord"></i>
                                     <i class="ya ya-youtube" data-toggle="tooltip" title="ya-youtube"></i>
                                 </div>
-                                <div class="d-flex mt-5">
-                                    <div class="mr-4">
-                                        <div class="docs-icon-sizes">
-                                            <i class="ya ya-helmet"></i>
-                                            <i class="ya ya-helmet ya-md"></i>
-                                            <i class="ya ya-helmet ya-lg"></i>
-                                            <i class="ya ya-helmet ya-xl"></i>
+                                <div class="row mt-5">
+                                    <div class="col">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Sizes</h6>
+                                            <div class="card-body">
+                                                <div class="docs-icon-sizes">
+                                                    <i class="ya ya-helmet"></i>
+                                                    <i class="ya ya-helmet ya-md"></i>
+                                                    <i class="ya ya-helmet ya-lg"></i>
+                                                    <i class="ya ya-helmet ya-xl"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="docs-svg">
-                                        <span ya-svg="awesome"></span>
-                                        <span ya-svg="like"></span>
-                                        <span ya-svg="sick"></span>
-                                        <span ya-svg="angry"></span></div>
+                                    <div class="col">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">SVG Icon</h6>
+                                            <div class="card-body">
+                                                <div class="docs-svg">
+                                                    <span ya-svg="awesome"></span>
+                                                    <span ya-svg="like"></span>
+                                                    <span ya-svg="sick"></span>
+                                                    <span ya-svg="angry"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1249,64 +1290,75 @@
                             <h5 class="h3">Select</h5>
                             <p>The jQuery plugin that brings select elements into the 21st century with intuitive multiselection, searching, and much more. Now with Bootstrap 4 support.</p>
                             <div class="mt-5">
-                                <div class="example">
-                                    <!-- Stylesheet -->
-                                    <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
-                                    <!-- Javascript -->
-                                    <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
-                                    <script>
-                                        $(function() {
-        $(".selectpicker").selectpicker();
-    });
-</script>
-                                </div>
-                                <div class="example mt-5">
-                                    <select class="selectpicker">
-                                        <option>Playstation 4</option>
-                                        <option>Xbox One</option>
-                                        <option>Steam</option>
-                                    </select>
-                                </div>
-                                <div class="example mt-5">
-                                    <select class="selectpicker" multiple>
-                                        <option>Playstation 4</option>
-                                        <option>Xbox One</option>
-                                        <option>Steam</option>
-                                    </select>
-                                </div>
-                                <div class="example mt-5">
-                                    <select class="selectpicker" data-live-search="true">
-                                        <option data-tokens="car sport">Forza Horizon 4</option>
-                                        <option>Tom Cancy's The Division 2</option>
-                                        <option>God of War</option>
-                                        <option>Spider-Man PS4</option>
-                                        <option>The Witcher 3: Wild Hunt</option>
-                                        <option>Anthem</option>
-                                        <option>Prey</option>
-                                        <option>Dark Souls Remastered</option>
-                                        <option>Far Cry 5</option>
-                                        <option>Call of Duty: Black Ops 4</option>
-                                        <option>Red Dead Redemption 2</option>
-                                    </select>
-                                </div>
-                                <div class="example mt-5">
-                                    <select class="selectpicker" data-size="10">
-                                        <option>admin</option>
-                                        <option>Nathan Drake</option>
-                                        <option>Venom</option>
-                                        <option>Elizabeth</option>
-                                        <option>Trevor</option>
-                                        <option>Clark Kent</option>
-                                        <option>Aragorn</option>
-                                        <option>Michael</option>
-                                        <option>Max Payne</option>
-                                        <option>Shroud</option>
-                                        <option>Lara Croft</option>
-                                        <option>punisher</option>
-                                        <option>celebro</option>
-                                        <option>Hitman</option>
-                                        <option>Enigma</option>
-                                    </select>
+                                <div class="row mt-5">
+                                    <div class="col">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Example</h6>
+                                            <div class="card-body">
+                                                <select class="selectpicker">
+                                                    <option>Playstation 4</option>
+                                                    <option>Xbox One</option>
+                                                    <option>Steam</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Multiple</h6>
+                                            <div class="card-body">
+                                                <select class="selectpicker" multiple>
+                                                    <option>Playstation 4</option>
+                                                    <option>Xbox One</option>
+                                                    <option>Steam</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Live search</h6>
+                                            <div class="card-body">
+                                                <select class="selectpicker" data-live-search="true">
+                                                    <option data-tokens="car sport">Forza Horizon 4</option>
+                                                    <option>Tom Cancy's The Division 2</option>
+                                                    <option>God of War</option>
+                                                    <option>Spider-Man PS4</option>
+                                                    <option>The Witcher 3: Wild Hunt</option>
+                                                    <option>Anthem</option>
+                                                    <option>Prey</option>
+                                                    <option>Dark Souls Remastered</option>
+                                                    <option>Far Cry 5</option>
+                                                    <option>Call of Duty: Black Ops 4</option>
+                                                    <option>Red Dead Redemption 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card card-default mb-0">
+                                            <h6 class="card-header">Height</h6>
+                                            <div class="card-body">
+                                                <select class="selectpicker" data-size="10">
+                                                    <option>admin</option>
+                                                    <option>Nathan Drake</option>
+                                                    <option>Venom</option>
+                                                    <option>Elizabeth</option>
+                                                    <option>Trevor</option>
+                                                    <option>Clark Kent</option>
+                                                    <option>Aragorn</option>
+                                                    <option>Michael</option>
+                                                    <option>Max Payne</option>
+                                                    <option>Shroud</option>
+                                                    <option>Lara Croft</option>
+                                                    <option>punisher</option>
+                                                    <option>celebro</option>
+                                                    <option>Hitman</option>
+                                                    <option>Enigma</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1513,35 +1565,62 @@
                             <h5 class="h3">Typography</h5>
                             <p>Documentation and examples for Gameforest typography, including global settings, headings, body text, lists, and more.</p>
                             <div class="mt-5">
-                                <div class="example">
-                                    <h1 class="mb-3">h1. Heading One</h1>
-                                    <h2 class="mb-3">h2. Heading Two</h2>
-                                    <h3 class="mb-3">h3. Heading Three</h3>
-                                    <h4 class="mb-3">h4. Heading Four</h4>
-                                    <h5 class="mb-3">h5. Heading Five</h5>
-                                    <h6>h6. Heading Six</h6>
-                                </div>
-                                <div class="example mt-5">
-                                    <h1 class="display-1">Display 1</h1>
-                                    <h1 class="display-2">Display 2</h1>
-                                    <h1 class="display-3">Display 3</h1>
-                                    <h1 class="display-4 mb-3">Display 4</h1>
-                                    <h1 class="display-5">Display 5</h1>
+                                <div class="row">
+                                    <div class="col">
+                                        <h1 class="display-1">Display 1</h1>
+                                        <h1 class="display-2">Display 2</h1>
+                                        <h1 class="display-3">Display 3</h1>
+                                        <h1 class="display-4 mb-3">Display 4</h1>
+                                        <h1 class="display-5">Display 5</h1>
+                                    </div>
+                                    <div class="col">
+                                        <h1 class="mb-3">h1. Heading One</h1>
+                                        <h2 class="mb-3">h2. Heading Two</h2>
+                                        <h3 class="mb-3">h3. Heading Three</h3>
+                                        <h4 class="mb-3">h4. Heading Four</h4>
+                                        <h5 class="mb-3">h5. Heading Five</h5>
+                                        <h6>h6. Heading Six</h6>
+                                    </div>
                                 </div>
                                 <div class="example mt-5">
                                     <p class="lead">
                                         Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
                                     </p>
                                 </div>
-                                <div class="example mt-5">
-                                    <p class="mb-3">You can use the mark tag to <mark>highlight</mark> text.</p>
-                                    <p class="mb-3"><del>This line of text is meant to be treated as deleted text.</del></p>
-                                    <p class="mb-3"><s>This line of text is meant to be treated as no longer accurate.</s></p>
-                                    <p class="mb-3"><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-                                    <p class="mb-3"><u>This line of text will render as underlined</u></p>
-                                    <p class="mb-3"><small>This line of text is meant to be treated as fine print.</small></p>
-                                    <p class="mb-3"><strong>This line rendered as bold text.</strong></p>
-                                    <p><em>This line rendered as italicized text.</em></p>
+                                <div class="row mt-5">
+                                    <div class="col">
+                                        <div class="example">
+                                            <p class="mb-3">You can use the mark tag to <mark>highlight</mark> text.</p>
+                                            <p class="mb-3"><del>This line of text is meant to be treated as deleted text.</del></p>
+                                            <p class="mb-3"><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                                            <p class="mb-3"><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                                            <p class="mb-3"><u>This line of text will render as underlined</u></p>
+                                            <p class="mb-3"><small>This line of text is meant to be treated as fine print.</small></p>
+                                            <p class="mb-3"><strong>This line rendered as bold text.</strong></p>
+                                            <p><em>This line rendered as italicized text.</em></p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="example">
+                                            <ul class="list-unstyled">
+                                                <li>Lorem ipsum dolor sit amet</li>
+                                                <li>Consectetur adipiscing elit</li>
+                                                <li>Integer molestie lorem at massa</li>
+                                                <li>Facilisis in pretium nisl aliquet</li>
+                                                <li>Nulla volutpat aliquam velit
+                                                    <ul>
+                                                        <li>Phasellus iaculis neque</li>
+                                                        <li>Purus sodales ultricies</li>
+                                                        <li>Vestibulum laoreet porttitor sem</li>
+                                                        <li>Ac tristique libero volutpat at</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Faucibus porta lacus fringilla vel</li>
+                                                <li>Aenean sit amet erat nunc</li>
+                                                <li>Eget porttitor lorem</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="example mt-5">
                                     <blockquote class="blockquote">
@@ -1553,25 +1632,6 @@
                                         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                                         <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                                     </blockquote>
-                                </div>
-                                <div class="example mt-5">
-                                    <ul class="list-unstyled">
-                                        <li>Lorem ipsum dolor sit amet</li>
-                                        <li>Consectetur adipiscing elit</li>
-                                        <li>Integer molestie lorem at massa</li>
-                                        <li>Facilisis in pretium nisl aliquet</li>
-                                        <li>Nulla volutpat aliquam velit
-                                            <ul>
-                                                <li>Phasellus iaculis neque</li>
-                                                <li>Purus sodales ultricies</li>
-                                                <li>Vestibulum laoreet porttitor sem</li>
-                                                <li>Ac tristique libero volutpat at</li>
-                                            </ul>
-                                        </li>
-                                        <li>Faucibus porta lacus fringilla vel</li>
-                                        <li>Aenean sit amet erat nunc</li>
-                                        <li>Eget porttitor lorem</li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -1726,10 +1786,40 @@
     <!-- js: theme -->
     <script src="js/theme.bundle.min.js"></script>
     <!-- js: plugins -->
+    <script src="plugins/flatpickr/flatpickr.min.js"></script>
+    <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="plugins/ckeditor/ckeditor.js"></script>
     <script src="plugins/raphael/raphael.min.js"></script>
     <script src="plugins/morris/morris.min.js"></script>
     <script>
         $(function() {
+            $(".datepicker").flatpickr({
+                allowInput: true
+            });
+            $(".datetimepicker").flatpickr({
+                allowInput: true,
+                enableTime: true,
+                dateFormat: "Y-m-d H:i"
+            });
+            $(".inlinepicker").flatpickr({
+                allowInput: true,
+                inline: true
+            });
+            $(".timepicker").flatpickr({
+                allowInput: true,
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i"
+            });
+            $(".custompicker").flatpickr({
+                allowInput: true,
+                wrap: true
+            });
+
+            $('.selectpicker').selectpicker();
+
+            ClassicEditor.create(document.querySelector('#editor'));
+
             var area = new Morris.Line({
                 element: 'morris-line-chart',
                 resize: true,

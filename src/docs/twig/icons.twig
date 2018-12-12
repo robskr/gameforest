@@ -142,13 +142,24 @@
     ]
 } %}
 
-
 {% set custom %}
     {{ docs.blocks[0]['code'] }}
-    <div class="d-flex mt-5">
-        <div class="mr-4">
-            {{ docs.blocks[1]['code'] }}
+    <div class="row mt-5">
+        <div class="col">
+            <div class="card card-default mb-0">
+                <h6 class="card-header">{{ docs.blocks[1]['title'] }}</h6>
+                <div class="card-body">
+                    {{ docs.blocks[1]['code'] }}
+                </div>
+            </div>
         </div>
-        {{ docs.blocks[2]['code'] }}
+        <div class="col">
+            <div class="card card-default mb-0">
+                <h6 class="card-header">{{ docs.blocks[2]['title'] }}</h6>
+                <div class="card-body">
+                    {{ docs.blocks[2]['code'] }}
+                </div>
+            </div>
+        </div>
     </div>
 {% endset %}
