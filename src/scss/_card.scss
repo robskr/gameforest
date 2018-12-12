@@ -143,15 +143,6 @@
   .card-img {
     height: 250px;
   }
-
-  .card-body {
-    padding: 15px 10px;
-  }
-
-  .card-footer {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
 
 // Card secondary
@@ -413,5 +404,16 @@
 
   .card-title {
     font-weight: bold;
+  }
+}
+
+.card-sm {
+  .card-body {
+    padding: 15px 10px;
+  }
+
+  .card-footer {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

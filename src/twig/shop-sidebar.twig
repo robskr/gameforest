@@ -42,6 +42,7 @@
             });
 
             $('.easypiechart').easyPieChart();
+
             $('.form-control').keyup(function() {
                 var search = $(this).val().toLowerCase();
                 $.each($('.card-title'), function() {
@@ -158,6 +159,7 @@
                         </div>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget">
                         <div class="widget-header">Gaming genre</div>
                         <div class="widget-body overflow-auto" style="max-height: 380px">
@@ -174,6 +176,7 @@
                         </div>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget">
                         <div class="widget-header">Platforms</div>
                         <div class="widget-body overflow-auto" style="max-height: 380px">
@@ -190,6 +193,7 @@
                         </div>
                     </div>
                     <!-- end widget -->
+
                     <div class="widget mb-0">
                         <div class="widget-header">Type</div>
                         <div class="widget-body">
@@ -219,7 +223,7 @@
                         {% for game in games %}
                             {% if loop.index < 13 %}
                                 <div class="col-4 card-group">
-                                    <div class="card card-shop mb-4">
+                                    <div class="card card-shop card-sm mb-4">
                                         <a class="card-img" href="shop-product.html">
                                             <img class="card-img-top" src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg" alt="{{ game.title }}">
                                         </a>
