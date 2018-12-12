@@ -1,3 +1,13 @@
+/**
+ * Gameforest Bootstrap Gaming Theme
+ * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
+ *
+ * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
+ * @link      https://yakuthemes.com
+ * @since     5.0.0
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
+ */
+
 // Vendor
 @import "variables";
 @import "mixins";
@@ -5,22 +15,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/owl.carousel/src/scss/owl.carousel";
 
-/**
- * Gameforest Bootstrap Gaming Theme
- * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
- *
- * Licensed under The GPLv3 License
- * For full copyright and license information, please see the LICENSE.md
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright (c) yakuthemes.com (https://yakuthemes.com)
- * @link      https://yakuthemes.com
- * @since     5.0.0
- * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- */
+// Components
 @import "type";
 @import "icons";
-@import "background";
 @import "badges";
 @import "breadcrumb";
 @import "buttons";
@@ -29,7 +26,6 @@
 @import "comments";
 @import "lightbox";
 @import "card";
-@import "cart";
 @import "accordion";
 @import "alerts";
 @import "avatar";
@@ -52,7 +48,7 @@
 @import "widget";
 @import "utils";
 
-// 3rd Plugins
+// Plugins
 @import "plugins/animated";
 @import "plugins/owl-carousel";
 @import "plugins/ckeditor";
