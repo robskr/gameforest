@@ -49,15 +49,21 @@
 }
 
 // Button social
-@each $color, $value in $social-colors {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
-  }
+.btn-social {
+  @include button-social;
 }
 
 // Button social
-.btn-social {
-  @include button-social;
+@each $color, $value in $social-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+
+    &.btn-link {
+      @include button-hover() {
+        color: $value;
+      }
+    }
+  }
 }
 
 // Button darken
