@@ -18,26 +18,24 @@
         </div>
     </nav>
 
-    <section class="border-bottom-dashed">
+    <section class="pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-10">
-                    <div class="card">
+                <div class="col-11 mx-auto">
+                    <div class="card card-secondary">
+                        <h6 class="card-header py-3 px-4">Red Dead 2 Fishing Tips: Guide To Legendaries, How To Fish, And More</h6>
                         <div class="card-body p-4">
-                            <h6 class="card-title">Red Dead 2 Fishing Tips: Guide To Legendaries, How To Fish, And More</h6>
-                            <hr class="my-3">
                             <h6 class="mb-3">Hi Gamers!</h6>
                             <p>Apartments simplicity or understood do it we. Song such eyes had and off. Removed winding ask explain delight out few behaved lasting. Letters old hastily ham sending not sex chamber because present. Oh is indeed twenty entire figure. Occasional diminution announcing new now literature terminated. Really regard excuse off ten pulled. Lady am room head so lady four or eyes an. He do of consulted sometimes concluded mr. An household behaviour if pretended.</p>
-                            <div class="embed-image mb-4">
-                                <img src="https://img.youtube.com/vi/47zwwT1hxKA/maxresdefault.jpg" alt="">
+                            <div class="embed-image position-relative mb-4 img-cover" style="height: 550px;">
+                                <img src="https://static.giantbomb.com/uploads/original/8/85316/2851801-uncharted+4_+a+thief%E2%80%99s+end%E2%84%A2_20160514162238.png" alt="">
                                 <div class="embed-action">
-                                    <a class="embed-action-item" href="#"><i class="ya ya-like"></i></a>
-                                    <a class="embed-action-item" href="https://img.youtube.com/vi/47zwwT1hxKA/maxresdefault.jpg" ya-lightbox><i class="ya ya-resize"></i></a>
+                                    <a class="embed-action-item" href="https://static.giantbomb.com/uploads/original/8/85316/2851801-uncharted+4_+a+thief%E2%80%99s+end%E2%84%A2_20160514162238.png" ya-lightbox><i class="ya ya-resize"></i></a>
                                 </div>
                             </div>
                             <p>And produce say the ten moments parties. Simple innate summer fat appear basket his desire joy. Outward clothes promise at gravity do excited. Sufficient particular impossible by reasonable oh expression is. Yet preference connection unpleasant yet melancholy but end appearance. And excellence partiality estimating terminated day everything.
                             <p>Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell. Nor themselves age introduced frequently use unsatiable devonshire get. They why quit gay cold rose deal park. One same they four did ask busy. Reserved opinions fat him nay position. Breakfast as zealously incommode do agreeable furniture. One too nay led fanny allow plate.</p>
-                            <div class="alert alert-info my-2">
+                            <div class="alert alert-primary mt-4 mb-2">
                                 <a class="alert-link d-block" href="#"><i class="ya ya-attachment mr-1"></i> gameforest-bootstrap-gaming-theme.zip</a>
                                 <small>Zip File Document, 859Kb (Downloaded: 1314x times)</small>
                             </div>
@@ -57,17 +55,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="border-bottom-dashed py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h5 class="mb-4">Leave a reply</h5>
-                    <form>
+                    <h5 class="mt-5 mb-4">Leave a reply</h5>
+                    <form class="mb-4">
                         <div class="form-group ckeditor">
                             <textarea name="content" id="editor">
                                 &lt;p&gt;Here goes the initial content of the editor.&lt;/p&gt;
@@ -77,12 +66,20 @@
                             <input type="checkbox" class="custom-control-input" id="check">
                             <label class="custom-control-label" for="check">notify me when someone replies</label>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-4" disabled>Submit reply</button>
+                        <button type="submit" class="btn btn-primary mt-4">Submit reply</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="comments mt-5">
+    <section class="bg-lighten border-top-dashed py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-11 mx-auto">
+                    <div id="comments" class="comments">
                         <div class="d-flex align-items-center mb-3">
-                            <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Replies</h5>
+                            <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
                             <div class="dropdown ml-auto">
                                 <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Sort by date
@@ -95,38 +92,82 @@
                                 </div>
                             </div>
                         </div>
-                        {% for reply in replies %}
-                            <div class="card mb-3">
+                        <div class="alert alert-primary">
+                            Please login to submit a reply under this post!
+                        </div>
+                        {% for comment in replies %}
+                            <div class="media">
                                 {% for user in users %}
-                                    {% if loop.index == reply.user %}
-                                        <h6 class="card-header">{{ user.name }}</h6>
+                                    {% if loop.index == comment.user %}
+                                        <div class="avatar avatar-badge">
+                                            <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                            {% if user.status %}<a class="badge badge-{{ user.status }}" href="#"></a>{% endif %}
+                                        </div>
                                     {% endif %}
                                 {% endfor %}
-                                <div class="card-body p-4">
-                                    <div class="media mt-0">
-                                        {% for user in users %}
-                                            {% if loop.index == reply.user %}
-                                                <div class="avatar avatar-badge">
-                                                    <img src="img/{{ user.img }}" alt="{{ user.name }}">
-                                                    {% if user.status %}<a class="badge badge-{{ user.status }}" href="#"></a>{% endif %}
-                                                </div>
-                                            {% endif %}
-                                        {% endfor %}
-                                        <div class="media-body">
-                                            <p class="mb-0">{{ reply.text }}</p>
+                                <div class="media-body">
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            {% for user in users %}
+                                                {% if loop.index == comment.user %}
+                                                    <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-meta">{{ comment.date|date('G') }} hours ago</div>
+                                        </div>
+                                        <div class="media-tools">
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                            <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
                                         </div>
                                     </div>
-                                    <!-- end .media -->
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn btn-default btn-xs mr-2">Reply</button>
-                                    <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> (25)</button>
+                                    <p>{{ comment.text }}</p>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                        <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ comment.like }})</button>
+                                    </div>
+                                    {% for reply in comment.reply %}
+                                        <div class="media">
+                                            {% for user in users %}
+                                                {% if loop.index == reply.user %}
+                                                    <div class="avatar{% if reply.friend %} avatar-badge{% endif %}">
+                                                        <img src="img/{{ user.img }}" alt="{{ user.name }}">
+                                                        {% if reply.friend %}
+                                                            <a class="badge badge-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add friend"><i class="ya ya-user-add"></i></a>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="media-body">
+                                                <div class="d-flex">
+                                                    <div class="d-flex">
+                                                        {% for user in users %}
+                                                            {% if loop.index == reply.user %}
+                                                                <a class="h6" href="profile.html">{{ user.name }}</a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <div class="media-meta">{{ reply.date|date('G') }} hours ago</div>
+                                                    </div>
+                                                    <div class="media-tools">
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="hide"><i class="ya ya-hide"></i></a>
+                                                        <a class="btn btn-link btn-icon btn-xs" href="#" data-toggle="tooltip" title="report"><i class="ya ya-flag"></i></a>
+                                                    </div>
+                                                </div>
+                                                <p>{{ reply.text }}</p>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-default btn-xs mr-2">Reply</button>
+                                                    <button class="btn btn-default btn-xs"><i class="ya ya-like ml-0"></i> ({{ reply.like }})</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
                                 </div>
                             </div>
+                            <!-- end .media -->
                         {% endfor %}
                     </div>
+                    <!-- end .comments -->
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-end mt-4 pt-1 mb-0">
+                        <ul class="pagination mt-5">
                             <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
                             <li class="page-item active"><a class="page-link" href="#">1</a></li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>
