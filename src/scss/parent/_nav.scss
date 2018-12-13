@@ -110,7 +110,6 @@
   width: 100%;
   padding: 0;
   background-color: #333;
-  border-top: 1px solid rgba($white, .05);
 
   .nav {
     display: block;
@@ -120,7 +119,6 @@
   .nav-item {
     float: left;
     padding: 0;
-    border-right: 1px solid rgba($white, .05);
 
     &:last-child {
       border-bottom: 0;
@@ -129,13 +127,12 @@
 
   .nav-link {
     float: left;
-    padding: 13px 12px;
+    padding: 15px 12px;
     font-size: 14px;
     color: #d2d2d2;
 
-    &:hover {
+    @include hover-focus {
       color: $white;
-      background-color: rgba($white, .01);
     }
   }
 
