@@ -83,7 +83,7 @@
         {
             title: 'Card video',
             text: 'It is also possible to use custom cards for listing videos by adding <code>.card-sm</code> to the card component.',
-            code: '<div style="width: 330px">
+            code: '<div style="width: 290px">
     <div class="card card-sm">
         <a class="card-img card-img-sm" href="video-post.html">
             <img class="card-img-top" src="https://i1.ytimg.com/vi/N9fTYUj8pLE/mqdefault.jpg" alt="Cyberpunk 2077 Gameplay Walkthrough 50 Minutes Demo">
@@ -120,3 +120,12 @@
         }
     ]
 } %}
+
+{% set custom %}
+    <div class="d-flex align-items-start">
+        <div class="mr-4">{{ docs.blocks[0]['code'] }}</div>
+        <div class="mr-4">{{ docs.blocks[2]['code'] }}</div>
+        <div class="mr-4">{{ docs.blocks[3]['code'] }}</div>
+        <div>{{ docs.blocks[4]['code'] }}</div>
+    </div>
+{% endset %}

@@ -57,21 +57,19 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="h3">{{ docs.title }}</h5>
-                                <p>{{ docs.text }}</p>
-                                <div class="mt-5">
-                                    {% if custom %}
-                                        {{ custom }}
-                                    {% else %}
-                                        {% for blocks in docs.blocks %}
-                                            {% if (blocks.table is empty) and (blocks.code) %}
-                                                <div class="example{% if loop.index != 1 %} mt-5{% endif %}">
-                                                    {{ blocks.code }}
-                                                    {{ blocks.custom }}
-                                                </div>
-                                            {% endif %}
-                                        {% endfor %}
-                                    {% endif %}
-                                </div>
+                                <p class="mb-4 pb-3">{{ docs.text }}</p>
+                                {% if custom %}
+                                    {{ custom }}
+                                {% else %}
+                                    {% for blocks in docs.blocks %}
+                                        {% if (blocks.table is empty) and (blocks.code) %}
+                                            <div class="example{% if loop.index != 1 %} mt-5{% endif %}">
+                                                {{ blocks.code }}
+                                                {{ blocks.custom }}
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
