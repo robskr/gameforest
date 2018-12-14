@@ -118,7 +118,7 @@
     width: 10%;
     height: 100%;
     font-size: 0;
-    color: $white;
+    color: $white !important;  // stylelint-disable-line declaration-no-important
     opacity: .2;
 
     &:hover {

@@ -173,9 +173,9 @@
                     <div class="widget widget-list">
                         {% for blog in blogs %}
                             <div class="media">
-                                    <a class="img-cover" href="#">
-                                        <img src="{{ blog.thumb }}" alt="">
-                                    </a>
+                                <a class="img-cover" href="#">
+                                    <img src="{{ blog.thumb }}" alt="">
+                                </a>
                                 <div class="media-body">
                                     <h6><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 40) }}...</a></h6>
                                     <div class="font-size-sm font-weight-semibold text-muted">{{ blog.meta.date|date(config.dateformat) }}</div>

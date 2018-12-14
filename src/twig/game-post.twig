@@ -197,18 +197,16 @@
 
                     <div class="widget widget-gallery">
                         <div class="widget-header">Images</div>
-                        <div class="widget-body">
-                            <div class="row row-xs">
-                                {% for img in game.images %}
-                                    <div class="col-6">
-                                        <a class="widget-img" href="{{ img.original }}" ya-lightbox="disqus: gameforest" rel="gallery">
-                                            <img src="{{ img.thumb }}" alt="">
-                                        </a>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            <a class="btn btn-outline btn-block btn-sm mt-2" href="games.html" role="button">View Galleries</a>
+                        <div class="row row-xs">
+                            {% for img in game.images %}
+                                <div class="col-6">
+                                    <a class="widget-img" href="{{ img.original }}" ya-lightbox rel="gallery">
+                                        <img src="{{ img.thumb }}" alt="">
+                                    </a>
+                                </div>
+                            {% endfor %}
                         </div>
+                        <a class="btn btn-outline btn-block btn-sm mt-2" href="games.html" role="button">View Galleries</a>
                     </div>
                     <!-- end .widget -->
 

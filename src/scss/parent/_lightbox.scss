@@ -39,6 +39,24 @@
     margin: 0 auto;
     box-shadow: 0 3px 10px 0 rgba($black, .1);
   }
+
+  .ya-lightbox-comment {
+    overflow: hidden;
+
+    &.ya-lightbox-gallery {
+      padding: 0 60px;
+    }
+
+    .owl-carousel {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .embed-responsive {
+      width: 90%;
+      height: 90%;
+    }
+  }
 }
 
 // Lightbox body
@@ -89,22 +107,4 @@
   margin-left: auto;
   overflow: auto;
   background-color: $white;
-
-  .ya-lightbox-comment {
-    overflow: hidden;
-
-    &.ya-lightbox-gallery {
-      padding: 0 60px;
-    }
-
-    .owl-carousel {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .embed-responsive {
-      width: 90%;
-      height: 90%;
-    }
-  }
 }
