@@ -122,7 +122,7 @@
                         </div>
                         <!-- end .post -->
                     {% endfor %}
-                    <nav aria-label="Page navigation example">
+                    <nav>
                         <ul class="pagination">
                             <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
                             <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -154,13 +154,13 @@
                         <div class="widget-header">Recommends</div>
                         {% for blog in blogs %}
                             {% if loop.index == 1 %}
-                                <a class="widget-img" href="{{ blog.url }}">
+                                <a class="img-cover img-sm mb-3" href="{{ blog.url }}">
                                     <img src="{{ blog.thumb }}" alt="">
                                 </a>
                                 <div class="widget-body">
-                                    <h5 class="widget-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
+                                    <h5 class="h6"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
                                     <div class="widget-meta"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
-                                    <p class="widget-text">{{ blog.text|slice(0, 120) }}...</p>
+                                    <p>{{ blog.text|slice(0, 120) }}...</p>
                                 </div>
                             {% endif %}
                         {% endfor %}
@@ -177,58 +177,50 @@
                     </div>
                     <!-- end widget -->
 
-                    <div class="widget widget-post mb-4">
+                    <div class="widget widget-post mb-0">
                         <div class="widget-header">Popular on Gameforest</div>
                         {% for blog in blogs %}
                             {% if loop.index == 4 %}
-                                <a class="widget-img" href="{{ blog.url }}">
+                                <a class="img-cover img-sm mb-3" href="{{ blog.url }}">
                                     <img src="{{ blog.thumb }}" alt="">
                                 </a>
                                 <div class="widget-body">
-                                    <h5 class="widget-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
+                                    <h5 class="h6"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
                                     <div class="widget-meta"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
-                                    <p class="widget-text">{{ blog.text|slice(0, 90) }}...</p>
+                                    <p class="mb-2">{{ blog.text|slice(0, 90) }}...</p>
                                 </div>
                             {% endif %}
                         {% endfor %}
                     </div>
                     <!-- end widget -->
 
-                    <div class="widget widget-post">
-                        <div class="widget-body">
-                            <div class="list-group list-group-posts list-group-sm mt-3">
-                                {% for blog in blogs %}
-                                    <div class="list-group-item">
-                                        <div>
-                                            <a class="list-group-item-img" href="#">
-                                                <img src="{{ blog.thumb }}" alt="">
-                                            </a>
-                                        </div>
-                                        <div>
-                                            <h6 class="list-group-item-title"><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 35) }}...</a></h6>
-                                            <div class="list-group-item-meta">{{ blog.meta.date|date(config.dateformat) }}</div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
+                    <div class="widget widget-list">
+                        {% for blog in blogs %}
+                            <div class="media">
+                                    <a class="img-cover" href="#">
+                                        <img src="{{ blog.thumb }}" alt="">
+                                    </a>
+                                <div class="media-body">
+                                    <h6><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 40) }}...</a></h6>
+                                    <div class="font-size-sm font-weight-semibold text-muted">{{ blog.meta.date|date(config.dateformat) }}</div>
+                                </div>
                             </div>
-                            <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">Load More</a>
-                        </div>
+                        {% endfor %}
+                        <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">Load More</a>
                     </div>
                     <!-- end widget -->
 
                     <div class="widget widget-tags">
                         <div class="widget-header">Popular Tags</div>
-                        <div class="widget-body">
-                            <div class="tags">
-                                <a href="#">#playstation4</a>
-                                <a href="#">#anthem</a>
-                                <a href="#">#fps</a>
-                                <a href="#">#upcoming</a>
-                                <a href="#">#gameforest</a>
-                                <a href="#">#xbox</a>
-                                <a href="#">#gameplay</a>
-                                <a href="#">#red-dead</a>
-                            </div>
+                        <div class="tags">
+                            <a href="#">#playstation4</a>
+                            <a href="#">#anthem</a>
+                            <a href="#">#fps</a>
+                            <a href="#">#upcoming</a>
+                            <a href="#">#gameforest</a>
+                            <a href="#">#xbox</a>
+                            <a href="#">#gameplay</a>
+                            <a href="#">#red-dead</a>
                         </div>
                     </div>
                     <!-- end widget -->

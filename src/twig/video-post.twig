@@ -28,7 +28,7 @@
         </div>
     </section>
 
-    <section class="pt-5 pb-2">
+    <section class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-8">
@@ -152,25 +152,21 @@
                     </form>
                 </div>
                 <div class="col-4">
-                    <div class="widget widget-video">
-                        <h5 class="widget-header">Recent Videos</h5>
-                        <div class="list-group list-group-posts list-group-lg">
-                            {% for video in videos %}
-                                {% if loop.index < 14 %}
-                                    <div class="list-group-item">
-                                        <div>
-                                            <a class="list-group-item-img" href="#">
-                                                <img src="https://i.ytimg.com/vi/{{ video.id }}/mqdefault.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div>
-                                            <h6 class="list-group-item-title"><a href="#">{{ video.title }}</a></h6>
-                                            <div class="list-group-item-meta"><i class="ya ya-clock mr-1"></i> {{ video.date|date(config.dateformat) }}</div>
-                                        </div>
+                    <div class="widget widget-list">
+                        <h5 class="widget-header mb-1">Recent Videos</h5>
+                        {% for video in videos %}
+                            {% if loop.index < 12 %}
+                                <div class="media">
+                                    <a class="img-cover img-lg" href="#">
+                                        <img src="https://i.ytimg.com/vi/{{ video.id }}/mqdefault.jpg" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h6><a href="#">{{ video.title }}</a></h6>
+                                        <div class="font-size-sm font-weight-semibold text-muted"><i class="ya ya-clock mr-1"></i> {{ video.date|date(config.dateformat) }}</div>
                                     </div>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                         <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">More Videos</a>
                     </div>
                     <!-- end .widget-video -->

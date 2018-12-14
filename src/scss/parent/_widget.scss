@@ -19,30 +19,6 @@
 
 // Widget post
 .widget-post {
-  .widget-title {
-    font-size: 17px;
-  }
-
-  .widget-img {
-    position: relative;
-    display: block;
-    height: 210px;
-    margin-bottom: 15px;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    background-size: cover;
-
-    img {
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
   .widget-meta {
     margin-bottom: 15px;
     font-size: $font-size-md;
@@ -51,6 +27,30 @@
 
     i {
       margin-right: 3px;
+    }
+  }
+}
+
+// Widget list
+.widget-list {
+  .media {
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba($black, .08);
+  }
+
+  .img-cover {
+    width: 100px;
+    height: 80px;
+    margin-right: 10px;
+
+    &.img-md {
+      width: 150px;
+      height: 100px;
+    }
+
+    &.img-lg {
+      width: 200px;
+      height: 110px;
     }
   }
 }
