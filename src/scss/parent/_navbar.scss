@@ -208,7 +208,7 @@
 // Navbar search
 .navbar-search {
   position: fixed;
-  top: -60px;
+  top: -#{$navbar-padding-fixed};
   left: 0;
   z-index: -1;
   width: 100%;
@@ -221,7 +221,7 @@
   }
 
   &.active {
-    top: 60px;
+    top: $navbar-padding-fixed;
   }
 
   .form-control {
@@ -251,7 +251,7 @@
 
 // Fixed navbar
 .fixed-navbar {
-  padding-top: 60px;
+  padding-top: $navbar-padding-fixed;
 
   .site-header {
     position: fixed;
@@ -261,14 +261,14 @@
   }
 
   .anchor {
-    padding-top: 100px;
-    margin-top: -100px;
+    padding-top: $navbar-padding-fixed + 40px;
+    margin-top: -#{$navbar-padding-fixed} + 40px;
   }
 }
 
 // Fixed nav bottom
 .fixed-nav-bottom {
-  padding-top: 111px;
+  padding-top: $navbar-padding-fixed + 46px;
 
   .anchor {
     padding-top: 150px;

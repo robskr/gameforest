@@ -117,10 +117,10 @@ $box-shadow:                   0 2px 0 0 rgba($black, .05) !default;
 $navbar-dark-color:            rgba($white, .8) !default;
 $navbar-dark-hover-color:      $white !default;
 $navbar-dark-active-color:     $navbar-dark-hover-color !default;
-
 $navbar-nav-link-padding-x:    10px !default;
 $nav-link-padding-y:           .625rem !default;
 $navbar-brand-font-size:       1.25rem !default;
+$navbar-padding-fixed:         60px !default;
 
 // Avatar
 $avatar-radius:                4px !default;
