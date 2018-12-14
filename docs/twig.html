@@ -167,7 +167,7 @@
                                 <h4 id="twig-markup" class="mb-3 anchor">
                                     Twig markup
                                 </h4>
-                                <p>Basic example to get start to build your own twig page.</p>
+                                <p>Basic example to build your custom twig page.</p>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#twig-markup_code"><i class="ya ya-save"></i></button>
                                     <pre class="pre"><code id="twig-markup_code" class="twig">{% extends &quot;base.twig&quot; %}
@@ -196,10 +196,16 @@
     &quot;config&quot;: {
         &quot;title&quot;: &quot;Gameforest Bootstrap Gaming Theme&quot;,
         &quot;brand&quot;: &quot;Gameforest&quot;,
-        &quot;version&quot;: &quot;1.0&quot;,
+        &quot;version&quot;: &quot;5.0&quot;,
         &quot;navbar&quot;: &quot;fixed&quot;,
         &quot;footer&quot;: &quot;static&quot;,
-        &quot;dateformat&quot;: &quot;F d, Y&quot;
+        &quot;dateformat&quot;: &quot;F d, Y&quot;,
+        &quot;disqus&quot;: &quot;gameforest&quot;,
+        &quot;facebook&quot;: {
+            &quot;lang&quot;: &quot;en_US&quot;,
+            &quot;version&quot;: &quot;v3.2&quot;,
+            &quot;appID&quot;: &quot;&quot;
+        }
     }
 }</code></pre>
                                 </div>
@@ -211,7 +217,7 @@
                                 <p>A variable can be set on every page like in the example below. In this case we would like to set a sticky footer for our page so we define page variable and the footer key.</p>
                                 <div class="docs-code">
                                     <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#variable_code"><i class="ya ya-save"></i></button>
-                                    <pre class="pre"><code id="variable_code" class="twig">{% set docs = {
+                                    <pre class="pre"><code id="variable_code" class="twig">{% set page = {
     footer: &#039;sticky&#039;
 } %}</code></pre>
                                 </div>

@@ -75,7 +75,7 @@
 
 // Button outline
 .btn-outline {
-  font-weight: 500;
+  font-weight: $font-weight-semibold;
   @include button-outline-theme($btn-outline-color, $btn-outline-border, $btn-outline-bg);
   @include button-hover() {
     border-color: $btn-outline-color;
@@ -84,7 +84,7 @@
 
 // Button outline light
 .btn-outline-light {
-  font-weight: 400;
+  font-weight: $font-weight-normal;
   @include button-outline-theme($btn-outline-light-color, $btn-outline-light-border, $btn-outline-light-bg);
   @include button-hover() {
     color: $white;

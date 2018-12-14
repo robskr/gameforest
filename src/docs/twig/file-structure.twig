@@ -7,7 +7,7 @@
         {
             icon: 'ya ya-folder',
             title: 'Root',
-            text: 'We can find a dist, src and docs folder with the necessary packages, linters and config files in the root for our project but it is not recommended to touch core files because of the upcoming updates in future.',
+            text: 'We can find a dist, src and docs folder with the necessary packages, linters and config files in the root for our project but it is not recommended to touch core files because of the upcoming updates in the future.',
             copy: false,
             pre: 'gameforest/
 └── dist/
@@ -20,10 +20,10 @@
                     <strong><code>./dist</code></strong> contains all of files what was compiled from src folder and it is required to use for our project. We can upload files from dist folder to our webspace via ftp client.
                 </li>
                 <li class="mb-3">
-                    <strong><code>./src</code></strong> folder includes the source code and files for our theme. We should never share the included source files with 3rd person on our webspace.
+                    <strong><code>./src</code></strong> folder includes the source code and files of our theme. We should never share the included source files with 3rd person on our webspace.
                 </li>
                 <li>
-                    <strong><code>./docs</code></strong> folder includes the documentation for theme with important instructions to get start your project.
+                    <strong><code>./docs</code></strong> folder includes the documentation of theme with important instructions to getting started with your project.
                 </li>
             </ul>'
         },
@@ -35,7 +35,7 @@
             pre: 'gameforest/
 └── dist/
     └── *.html',
-            custom: '<p class="mt-4">Included more than 70 html files in this directory and easy to modify them. For more information please check the twig section.</p>'
+            custom: '<p class="mt-4">Included more than 50 html files in this directory and easy to modify them. For more information please check the twig section.</p>'
         },
         {
             icon: 'ya ya-folder',
@@ -44,17 +44,17 @@
             copy: false,
             pre: 'gameforest/
 └── src/
+    ├── json
     └── twig
-        ├── json
         ├── views
         └── *.twig',
             custom: '
             <ul class="mt-5">
                 <li class="mb-3">
-                    <strong><code>./src/twig</code></strong> contains all of twig files what is important to compile single html files into dist folder. It is also possible to watch these files with npm tasks.
+                    <strong><code>./src/json</code></strong> contains all of files with data and examples what was required to build our theme. Just an example for our blogs, the text and data like comments or dates are coming from blogs.json
                 </li>
                 <li class="mb-3">
-                    <strong><code>./src/twig/json</code></strong> contains all of files with data and examples what was required to build our theme. Just an example for our blogs, the text and data like comments or date are coming from blogs.json
+                    <strong><code>./src/twig</code></strong> contains all of twig files what is important to compile single html files into dist folder. It is also possible to watch these files with npm tasks.
                 </li>
                 <li>
                     <strong><code>./src/twig/views</code></strong> folder includes the basic twig files for html attributes like header and footer.
@@ -69,13 +69,26 @@
             pre: 'gameforest/
 └── src/
     └── scss
-        └── mixins
-        └── plugins
-        └── *.scss',
+        └── child
+            └── _theme.scss
+            └── _variables.scss
+        └── parent
+            └── mixins
+            └── plugins
+            └── utilites
+            └── *.scss
+        └── theme.scss',
             custom: '
             <ul class="mt-5">
                 <li class="mb-3">
                     <strong><code>./src/scss</code></strong> contains all of scss files what is required to build our theme css file. Compiled and minifed css files are available in <strong><code>./dist/css</code></strong> folder.
+                </li>
+                <li class="mb-3">
+                    <strong><code>./src/scss/child</code></strong> contains all of custom scss files for customization and theme modifications.
+                    <ul class="mt-3 mb-4">
+                        <li class="mb-3">./src/scss/child/_theme.scss import custom scss files and add extra classes to the theme in this file.</li>
+                        <li>./src/scss/child/_variables.scss overwrite the theme variables by adding custom theme variables without !default tag.</li>
+                    </ul>
                 </li>
                 <li class="mb-3">
                     <strong><code>./src/scss/mixins</code></strong> contains all of mixins for our scss files.
@@ -88,13 +101,13 @@
         {
             icon: 'ya ya-folder',
             title: 'Javascript',
-            text: 'Javascript files can be found in the dist and src folder. In <code>./dist/js</code> folder we\'ve compiled and minifed versions of es6 js files.',
+            text: 'Javascript files can be found in the dist and src folder. In <code>./dist/js</code> folder we\'ve compiled and minified versions of es6 js files.',
             copy: false,
             pre: 'gameforest/
 └── src/
     └── js
         └── *.js',
-            custom: '<p class="mt-4">Javascript files are built with es6 and for more information click to the javascript section.</p>
+            custom: '<p class="mt-4">Javascript files are built with es6 and for more information check the javascript section.</p>
             <ul>
                 <li class="mb-3">
                     <strong><code>theme.js</code></strong> contains all of javascript files from src folder what was translated with rollup plugin.

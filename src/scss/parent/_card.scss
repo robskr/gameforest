@@ -61,8 +61,8 @@
 
   &-meta {
     margin-bottom: 15px;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
 
     &-item {
       color: rgba($black, .55);

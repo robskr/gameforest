@@ -75,8 +75,8 @@
     }
 
     .dropdown-item {
-      font-size: 15px;
-      font-weight: 400;
+      font-size: $font-size-md;
+      font-weight: $font-weight-normal;
       color: rgba($white, .6);
 
       &:focus,

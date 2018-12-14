@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    font-weight: 500;
+    font-weight: $font-weight-semibold;
     background-color: #fbfbfb;
     border-bottom: 1px solid rgba($black, .08);
     border-top-left-radius: 4px;
@@ -38,7 +38,7 @@
     display: block;
     padding: 15px 20px;
     margin: 0;
-    font-weight: 500;
+    font-weight: $font-weight-semibold;
     color: darken($body-color, 5%);
 
     &::before {

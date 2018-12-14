@@ -16,7 +16,7 @@
     }
 
     &.active {
-      font-weight: 500;
+      font-weight: $font-weight-semibold;
     }
   }
 
@@ -128,7 +128,7 @@
   .nav-link {
     float: left;
     padding: 15px 12px;
-    font-size: 14px;
+    font-size: $font-size-sm;
     color: #d2d2d2;
 
     @include hover-focus {

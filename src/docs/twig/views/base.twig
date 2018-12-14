@@ -34,22 +34,24 @@
             <section>
                 <div class="container">
                     <div class="row">
-                        <div class="col-9">
+                        <div class="col{% if docs.blocks %}-9{% endif %}">
                             {% include 'content.twig' %}
                         </div>
-                        <div class="col-3">
-                            <nav class="nav nav-docs flex-column" ya-sticky="top: 100">
-                                {% for nav in docs.blocks %}
-                                    <a class="nav-link" href="#{{ nav.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ nav.title }}</a>
-                                {% endfor %}
-                                {% if docs.bootstrap %}
-                                    <a class="nav-link" href="https://getbootstrap.com/docs/4.1/{{ docs.bootstrap }}/" target="_blank">Bootstrap</a>
-                                {% endif %}
-                                <div class="divider"></div>
-                                <a class="nav-link" href="https://github.com/yakuthemes/gameforest/issues" target="_blank"><i class="ya ya-help"></i> Report issue</a>
-                                <a class="nav-link" href="support.html"><i class="ya ya-link"></i> Get help</a>
-                            </nav>
-                        </div>
+                        {% if docs.blocks %}
+                            <div class="col-3">
+                                <nav class="nav nav-docs flex-column" ya-sticky="top: 100">
+                                    {% for nav in docs.blocks %}
+                                        <a class="nav-link" href="#{{ nav.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ nav.title }}</a>
+                                    {% endfor %}
+                                    {% if docs.bootstrap %}
+                                        <a class="nav-link" href="https://getbootstrap.com/docs/4.1/{{ docs.bootstrap }}/" target="_blank">Bootstrap</a>
+                                    {% endif %}
+                                    <div class="divider"></div>
+                                    <a class="nav-link" href="https://github.com/yakuthemes/gameforest/issues" target="_blank"><i class="ya ya-help"></i> Report issue</a>
+                                    <a class="nav-link" href="support.html"><i class="ya ya-link"></i> Get help</a>
+                                </nav>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </section>

@@ -7,7 +7,7 @@
     blocks: [
         {
             title: 'Introduction',
-            text: 'If you have never used SCSS before, check out the language features and <a href="http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html" target="_blank">documentation</a>. Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. When working with the Gameforest SCSS sources, We have a few recommendations.',
+            text: 'If you have never used SCSS before, check out the language features and <a href="https://sass-lang.com/guide" target="_blank">documentation</a>. Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. When working with the Gameforest SCSS sources, We have a few recommendations.',
         },
         {
             title: 'Customization',
@@ -16,18 +16,22 @@
             pre: 'gameforest/
 └── src/
     └── scss
-        └── _custom.scss',
-            custom: '<p class="mt-4">Add your custom variables and plugins etc to the <code>_custom.scss</code> file and when a new update comes out then don\'t overwrite this file.</p>'
+        └── child
+            └── _theme.scss
+            └── _variables.scss',
+            custom: '<p class="mt-4">Add your custom variables to the <code>child/_variables.scss</code> file and custom classes or imports from <code>child/_theme.scss</code> file. When a new update has been released then don\'t overwrite these files.</p>'
         },
         {
             title: 'Variables',
-            text: 'A lot of customization is possible by simply overwriting the values of already declared variables. You can find all variables for each component inside their SCSS files of the variables.scss file and override them in your theme. You can also add your own custom variables by adding it to _custom.scss',
+            text: 'A lot of customization is possible by simply overwriting the values of already declared variables. You can find all variables for each component inside their SCSS files of the variables.scss file and override them in your theme. You can also add your own custom variables by adding it to child/_variables.scss',
             copy: false,
             pre: 'gameforest/
 └── src/
     └── scss
-        └── _custom.scss
-        └── _variables.scss',
+        └── child
+            └── _variables.scss
+        └── parent
+            └── _variables.scss',
             custom: '<p class="my-4 pt-2">We can find pre defined variables in the _variables.scss just like below.</p>
             <pre><code class="scss">// Primary Color
 $primary: #2575dc !default;</code></pre>
@@ -35,7 +39,7 @@ $primary: #2575dc !default;</code></pre>
             <pre><code class="scss">// Primary Color
 $primary: #6db124;</code></pre>
             <p class="mt-4 mb-3">After save we are ready to run the gulp task and css files will be modified.</p><br>
-            <div class="alert alert-warning p-4"><strong>Notice:</strong> in order to see the result of modification what you have made before, it\'s required to run gulp task. Learn more about gulp go the dedicated page that can be found in the sidebar.</div>
+            <div class="alert alert-warning p-3"><strong>Notice:</strong> in order to see the result of modification what you have made before, it\'s required to run gulp task. Learn more about gulp go the dedicated page that can be found in the sidebar.</div>
             '
         },
         {

@@ -46,7 +46,7 @@
         },
         {
             title: 'Twig markup',
-            text: 'Basic example to get start to build your own twig page.',
+            text: 'Basic example to build your custom twig page.',
             pre: '{% extends "base.twig" %}
 
 {% block body %}
@@ -69,17 +69,23 @@
     "config": {
         "title": "Gameforest Bootstrap Gaming Theme",
         "brand": "Gameforest",
-        "version": "1.0",
+        "version": "5.0",
         "navbar": "fixed",
         "footer": "static",
-        "dateformat": "F d, Y"
+        "dateformat": "F d, Y",
+        "disqus": "gameforest",
+        "facebook": {
+            "lang": "en_US",
+            "version": "v3.2",
+            "appID": ""
+        }
     }
 }',
         },
         {
             title: 'Variable',
             text: 'A variable can be set on every page like in the example below. In this case we would like to set a sticky footer for our page so we define page variable and the footer key.',
-            pre: '{% set docs = {
+            pre: '{% set page = {
     footer: \'sticky' ~ '\'
 } %}',
             table: {
