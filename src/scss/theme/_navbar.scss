@@ -262,7 +262,7 @@
 
   .anchor {
     padding-top: $navbar-padding-fixed + 40px;
-    margin-top: -#{$navbar-padding-fixed} + 40px;
+    margin-top: - $navbar-padding-fixed - 40px;
   }
 }
 
