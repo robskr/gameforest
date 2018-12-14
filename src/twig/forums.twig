@@ -1,12 +1,8 @@
 {% extends "base.twig" %}
 
-{% set page = {
-    navbar: 'fluid'
-} %}
-
 {% block body %}
     <nav class="bg-white border-bottom" aria-label="breadcrumb">
-        <div class="container-fluid">
+        <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Forums</li>
@@ -15,9 +11,9 @@
     </nav>
 
     <section class="py-5">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-9">
+                <div class="col">
                     {% for forums in forums %}
                         {% for title, forums in forums %}
                             <h6 class="subtitle font-size-md">{{ title }} Forums</h6>
