@@ -55,10 +55,10 @@
                     {% for blog in blogs %}
                         <div class="card">
                             <div class="card-header">
-                                <h6 class="font-size-md mb-0 text-uppercase font-weight-bold">{{ blog.title }}</h6>
+                                <h6 class="font-weight-bold mb-0">{{ blog.title }}</h6>
                             </div>
                             <div class="card-body">
-                                <div class="post">
+                                <div class="post border-0 mb-0 pb-0">
                                     <div class="post-thumbnail">
                                         {% if blog.carousel %}
                                             <div class="owl-carousel" ya-carousel>
@@ -81,7 +81,7 @@
                                 <!-- end .post -->
                             </div>
                             <div class="card-footer align-items-center">
-                                <a class="btn btn-outline" href="{{ blog.url }}" role="button">Read more</a>
+                                <a class="btn btn-outline ml-0" href="{{ blog.url }}" role="button">Read more</a>
                                 <div class="ml-auto">
                                     <button class="btn btn-default btn-icon btn-sm mr-1"><i class="ya ya-like"></i> Like ({{ blog.meta.like }})</button>
                                     <button class="btn btn-default btn-icon btn-sm"><i class="ya ya-comment"></i> Comments ({{ blog.meta.comments }})</button>
