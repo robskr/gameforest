@@ -1,0 +1,10 @@
+// Opacity
+
+$i: 0 !default;
+
+@for $i from 1 through 10 {
+  $opacity: ($i / 10);
+  .opacity-#{$i} {
+    opacity: $opacity;
+  }
+}
