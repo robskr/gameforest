@@ -42,19 +42,18 @@
     });
 
     $('#search').keyup(function(){
-        var field = $('#search').val();
-        var regex = new RegExp(field, "i");
+        var search = $(this).val().toLowerCase();
+        var output = '';
 
-        if(field === '')  {
+        if(search === '')  {
             $('#results').removeClass('d-block').html('');
             return;
         }
 
-        var output = '';
         $.getJSON('json/components.json', function(data) {
             $.each(data, function(key, value){
-                if (value.category.search(regex) != -1) {
-                    output += '<a class="list-group-item" href="'+value.url+'">'+value.category+'</a>';
+                if (value.title.toLowerCase().indexOf(search) != -1) {
+                    output += '<a class="list-group-item" href="'+value.url+'">'+value.title+'</a>';
                 }
             });
             $('#results').addClass('d-block').html(output);

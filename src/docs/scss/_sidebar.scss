@@ -10,8 +10,8 @@
 
   &-search {
     position: relative;
-    padding: 5px 15px 20px;
-    margin: 0 -20px -10px;
+    padding: 5px 0 20px;
+    margin: 0 0 -10px;
     border-bottom: 1px solid rgba($black, .1);
   }
 
@@ -29,6 +29,7 @@
 
     .list-group-item {
       padding: 5px 15px;
+      font-weight: $font-weight-normal;
       border: 0;
     }
   }
