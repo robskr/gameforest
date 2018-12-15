@@ -1,11 +1,11 @@
 {% extends "base.twig" %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ path }}plugins/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../plugins/flatpickr/flatpickr.min.css">
 {% endblock %}
 
 {% block js %}
-    <script src="{{ path }}plugins/flatpickr/flatpickr.min.js"></script>
+    <script src="../plugins/flatpickr/flatpickr.min.js"></script>
     <script>
         $(function() {
             $(".datepicker").flatpickr({allowInput:true});

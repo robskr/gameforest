@@ -1,12 +1,12 @@
 {% extends "base.twig" %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ path }}plugins/datatables/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../plugins/datatables/css/dataTables.bootstrap4.min.css">
 {% endblock %}
 
 {% block js %}
-    <script src="{{ path }}plugins/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="{{ path }}plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
     <script>
         $(function() {
             $('#table_id').DataTable();

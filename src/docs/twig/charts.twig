@@ -1,12 +1,12 @@
 {% extends "base.twig" %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ path }}plugins/morris/morris.css">
+    <link rel="stylesheet" href="../plugins/morris/morris.css">
 {% endblock %}
 
 {% block js %}
-    <script src="{{ path }}plugins/raphael/raphael.min.js"></script>
-    <script src="{{ path }}plugins/morris/morris.min.js"></script>
+    <script src="../plugins/raphael/raphael.min.js"></script>
+    <script src="../plugins/morris/morris.min.js"></script>
     <script>
         $(function() {
             var area = new Morris.Line({
