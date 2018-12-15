@@ -44,14 +44,14 @@ const path = {
     src: {
         scss:    '../../src/docs/scss/**/*.scss',
         js:      '../../src/docs/js/docs.js',
-        json:    '../../src/json/src/**/*.json',
+        json:    '../../src/docs/json/components.json',
         twig:    '../../src/docs/twig/*.twig',
         views:   '../../src/docs/twig/views/*.twig'
     },
     dist: {
         css:     '../../docs/css',
         js:      '../../docs/js',
-        json:    '../../src/json/dist',
+        json:    '../../docs/json',
         html:    '../../docs'
     }
 }
@@ -96,15 +96,20 @@ function javascript() {
 
 /**
  * ------------------------------------------------------------------------
- * BUILD HTML
+ * JSON DATA
  * ------------------------------------------------------------------------
  */
 
 function json() {
     return gulp.src(path.src.json)
-        .pipe(merge({ fileName: 'theme.json' }))
         .pipe(gulp.dest(path.dist.json))
 }
+
+/**
+ * ------------------------------------------------------------------------
+ * BUILD HTML
+ * ------------------------------------------------------------------------
+ */
 
 function html() {
     return gulp.src(path.src.twig)
@@ -202,6 +207,7 @@ function watch() {
 
 gulp.task('html', build.html)
 gulp.task('compile', build.compile)
+gulp.task('json', build.json)
 gulp.task('css', build.css)
 gulp.task('js', build.js)
 gulp.task('default', build.dev)

@@ -40,4 +40,24 @@
         setTooltip(e.trigger, 'Copied!');
         hideTooltip(e.trigger);
     });
+
+    $('#search').keyup(function(){
+        var field = $('#search').val();
+        var regex = new RegExp(field, "i");
+
+        if(field === '')  {
+            $('#results').removeClass('d-block').html('');
+            return;
+        }
+
+        var output = '';
+        $.getJSON('json/components.json', function(data) {
+            $.each(data, function(key, value){
+                if (value.category.search(regex) != -1) {
+                    output += '<a class="list-group-item" href="'+value.url+'">'+value.category+'</a>';
+                }
+            });
+            $('#results').addClass('d-block').html(output);
+        });
+    });
 })(window.jQuery);

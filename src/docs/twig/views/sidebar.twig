@@ -1,5 +1,8 @@
 <div class="sidebar">
-    <div class="sidebar-title">Documentation</div>
+    <div class="sidebar-search">
+        <input type="text" class="form-control" id="search" placeholder="Search..." autocomplete="off">
+        <div class="list-group sidebar-results" id="results"></div>
+    </div>
     {% for sidebar in nav %}
         {% for title, sidebar in sidebar %}
             <div class="sidebar-subtitle">{{ title }}</div>

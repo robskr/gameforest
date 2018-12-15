@@ -3,8 +3,8 @@
 }
 
 p > a {
-  text-decoration: underline;
   color: $link-hover-color;
+  text-decoration: underline;
 
   &:hover {
     color: darken($link-hover-color, 5%);

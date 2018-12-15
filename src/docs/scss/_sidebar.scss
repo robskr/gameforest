@@ -4,12 +4,37 @@
   bottom: 0;
   z-index: 4;
   width: 290px;
-  padding: 30px;
+  padding: 15px 30px;
   overflow: auto;
   background-color: $white;
 
+  &-search {
+    position: relative;
+    padding: 5px 15px 20px;
+    margin: 0 -20px -10px;
+    border-bottom: 1px solid rgba($black, .1);
+  }
+
+  &-results {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+    width: 100%;
+    padding: 5px 0;
+    background-color: $white;
+    border: 1px solid rgba($black, .15);
+    border-radius: 4px;
+    box-shadow: 0 2px 1px 0 rgba($black, .08);
+
+    .list-group-item {
+      padding: 5px 15px;
+      border: 0;
+    }
+  }
+
   &-title {
-    margin-bottom: 0;
+    margin-bottom: -10px;
     font-size: 22px;
     font-weight: 300;
   }
