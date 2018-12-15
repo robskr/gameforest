@@ -5,7 +5,7 @@
     "private": true,
     "scripts": {
         "start": "gulp",
-        "build": "yarn css && yarn js",
+        "build": "gulp css && gulp js",
         "css": "gulp css",
         "js": "gulp js",
         "icon": "gulp icon",
@@ -13,8 +13,7 @@
         "html": "gulp html",
         "plugins": "gulp plugins",
         "docs": "browser-sync start --server --startPath docs --no-notify",
-        "docs:dev": "cd src/docs && gulp",
-        "lint": "prettier-stylelint src/scss/utilities/_theme.scss"
+        "docs:dev": "cd src/docs && gulp"
     },
     "homepage": "https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730",
     "author": "https://yakuthemes.com",
