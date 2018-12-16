@@ -65,6 +65,7 @@ const path = {
         css:     './dist/css',
         js:      './dist/js',
         svg:     './dist/fonts',
+        icon:    './src/fonts',
         json:    './src/json/dist',
         img:     './dist/img',
         html:    './dist',
@@ -155,7 +156,7 @@ function image() {
 
 /**
  * ------------------------------------------------------------------------
- * BUILD HTML
+ * MERGE JSON
  * ------------------------------------------------------------------------
  */
 
@@ -164,6 +165,12 @@ function json() {
         .pipe(merge({ fileName: 'theme.json' }))
         .pipe(gulp.dest(path.dist.json))
 }
+
+/**
+ * ------------------------------------------------------------------------
+ * BUILD HTML
+ * ------------------------------------------------------------------------
+ */
 
 function html() {
     return gulp.src(path.src.twig)
@@ -200,7 +207,7 @@ function compile() {
 
 /**
  * ------------------------------------------------------------------------
- * ICONS
+ * GENERATE ICON
  * ------------------------------------------------------------------------
  */
 
@@ -221,7 +228,7 @@ function svg() {
             descent: 127,
             formats: ['ttf', 'eot', 'woff', 'svg']
         }))
-        .pipe(gulp.dest('./src/fonts'))
+        .pipe(gulp.dest(path.dist.icon))
 }
 
 function svg_copy() {
@@ -303,12 +310,12 @@ const build = {
  */
 
 function watch() {
-    gulp.watch(path.src.twig,  build.html)
-    gulp.watch(path.src.views, build.compile)
-    gulp.watch(path.src.json,  build.json)
-    gulp.watch(path.src.scss,  build.css)
-    gulp.watch(path.src.js,    build.js)
-    gulp.watch(path.src.img,   build.image)
+    gulp.watch(path.src.twig,  {events: ['change', 'unlink']}, build.html)
+    gulp.watch(path.src.views, {events: ['change', 'unlink']}, build.compile)
+    gulp.watch(path.src.json,  {events: ['change', 'unlink']}, build.json)
+    gulp.watch(path.src.scss,  {events: ['change', 'unlink']}, build.css)
+    gulp.watch(path.src.js,    {events: ['change', 'unlink']}, build.js)
+    gulp.watch(path.src.img,   {events: ['change', 'unlink']}, build.image)
     gulp.watch(path.src.svg,   build.icon)
 }
 

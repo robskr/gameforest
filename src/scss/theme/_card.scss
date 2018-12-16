@@ -29,6 +29,7 @@
     width: auto;
     height: 280px;
     margin: 10px 10px 0;
+    overflow: hidden;
     @include img-cover();
 
     &-top {

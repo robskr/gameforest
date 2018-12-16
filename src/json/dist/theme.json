@@ -301,7 +301,11 @@
 			},
 			{
 				"title": "Play The Division 2 Before It Launches At PAX Aus This Month",
-				"img": "https://static.giantbomb.com/uploads/original/13/135472/3043941-5881871274-IsUman1n"
+				"img": "https://static.giantbomb.com/uploads/original/0/7772/3028596-image_tom_clancy_s_the_division_2-38412-4034_0003.jpg"
+			},
+			{
+				"title": "Former Dragon Age Director Joins Assassin's Creed Odyssey Studio",
+				"img": "https://static.giantbomb.com/uploads/original/13/135472/3031131-assassins+creed+odyssey+screen+4.jpg"
 			},
 			{
 				"title": "God Of War PS4: Watch Conan And Bill Hader Play New Game",
@@ -1372,6 +1376,44 @@
 		"Stealth",
 		"Strategy"
 	],
+	"home": {
+		"magazine": {
+			"recent": [
+				{
+					"title": "Spider-Man PS4: Silver Lining DLC Release Date, New Suits Revealed",
+					"url": "blog-post.html",
+					"text": "Debating me breeding be answered an he. Spoil event was words her off cause any. Tears woman which no is world miles woody. Wished be do mutual except in effect answer. Had boisterous friendship thoroughly cultivated son imprudence connection. Windows because concern sex its. Law allow saved views hills day ten. Examine waiting his evening day passage proceed.",
+					"img": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010682-spider-man+ps4+screen+1.jpg"
+				},
+				{
+					"title": "Forza Horizon 4: Fortune Island - Official Trailer The Game Awards 2018",
+					"url": "blog-post-carousel.html",
+					"text": "Promotion an ourselves up otherwise my. High what each snug rich far yet easy. In companions inhabiting mr principles at insensible do. Heard their sex hoped enjoy vexed child for. Prosperous so occasional assistance it discovered especially no. Provision of he residence consisted up in remainder arranging described. Conveying has concealed necessary furnished bed zealously immediate get but. Terminated as middletons or by instrument.",
+					"img": "https://static.giantbomb.com/uploads/square_medium/13/135472/3028732-6507909144-5xCgDFY6"
+				},
+				{
+					"title": "Assassin's Creed Odyssey Delays Epic Mercenary Events Due To Bugs",
+					"url": "blog-post-video.html",
+					"text": "Ever man are put down his very. And marry may table him avoid. Hard sell it were into it upon. He forbade affixed parties of assured to me windows. Happiness him nor she disposing provision. Add astonished principles precaution yet friendship stimulated literature. State thing might stand one his plate. Offending or extremity therefore so difficult he on provision. Tended depart turned not are.",
+					"img": "https://static.giantbomb.com/uploads/square_medium/25/257148/3029233-acodyssey-dualmonitor5.jpg"
+				}
+			],
+			"recommends": [
+				{
+					"title": "Battle royale games explained what could be the next big hit",
+					"url": "blog-post.html",
+					"text": "Debating me breeding be answered an he. Spoil event was words her off cause any. Tears woman which no is world miles woody. Wished be do mutual except in effect answer. Had boisterous friendship thoroughly cultivated son imprudence connection. Windows because concern sex its. Law allow saved views hills day ten. Examine waiting his evening day passage proceed.",
+					"img": "https://static.giantbomb.com/uploads/square_medium/13/135472/3031127-assassins+creed+odyssey+banner.jpg",
+					"meta": {
+						"time": 5,
+						"comments": 20,
+						"like": 30,
+						"date": 1536537600
+					}
+				}
+			]
+		}
+	},
 	"icons": {
 		"awesome": "<svg data-toggle=\"tooltip\" title=\"Awesome\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" width=\"48\" height=\"48\"><g><path d=\"M24,46A22,22,0,1,1,46,24,22.025,22.025,0,0,1,24,46Z\" fill=\"#ffd764\"/> <path d=\"M12,25a1,1,0,0,1-.707-1.707l6-6a1,1,0,0,1,1.414,1.414l-6,6A1,1,0,0,1,12,25Z\" fill=\"#444\"/> <path d=\"M18,25a1,1,0,0,1-.707-.293l-6-6a1,1,0,0,1,1.414-1.414l6,6A1,1,0,0,1,18,25Z\" fill=\"#444\"/> <path d=\"M36,25a1,1,0,0,0,.707-1.707l-6-6a1,1,0,0,0-1.414,1.414l6,6A1,1,0,0,0,36,25Z\" fill=\"#444\"/> <path d=\"M30,25a1,1,0,0,0,.707-.293l6-6a1,1,0,0,0-1.414-1.414l-6,6A1,1,0,0,0,30,25Z\" fill=\"#444\"/> <path d=\"M24,39a5,5,0,1,1,5-5A5.006,5.006,0,0,1,24,39Z\" fill=\"#ae453e\"/> <ellipse cx=\"24\" cy=\"37\" rx=\"3.974\" ry=\"2\" fill=\"#fa645a\"/></g></svg>",
 		"like": "<svg data-toggle=\"tooltip\" title=\"Like\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" width=\"48\" height=\"48\"><g><path d=\"M24,46A22,22,0,1,1,46,24,22.025,22.025,0,0,1,24,46Z\" fill=\"#ffd764\"/> <circle cx=\"38\" cy=\"28\" r=\"3\" fill=\"#e86c60\" opacity=\"0.5\"/> <circle cx=\"10\" cy=\"28\" r=\"3\" fill=\"#e86c60\" opacity=\"0.5\"/> <path d=\"M19,24a1,1,0,0,1-1-1,2,2,0,0,0-4,0,1,1,0,0,1-2,0,4,4,0,0,1,8,0A1,1,0,0,1,19,24Z\" fill=\"#444\"/> <path d=\"M35,24a1,1,0,0,1-1-1,2,2,0,0,0-4,0,1,1,0,0,1-2,0,4,4,0,0,1,8,0A1,1,0,0,1,35,24Z\" fill=\"#444\"/> <path d=\"M24.059,39a9.025,9.025,0,0,1-7.81-4.537,1,1,0,0,1,1.736-.994,6.989,6.989,0,0,0,12.147,0,1,1,0,0,1,1.736.994A9.024,9.024,0,0,1,24.059,39Z\" fill=\"#444\"/></g></svg>",

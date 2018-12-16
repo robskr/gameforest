@@ -10,37 +10,39 @@
 
 {% block body %}
     <section class="pt-2 px-2">
-        <div class="container-fluid px-0">
-            <div class="owl-carousel owl-height-md" ya-carousel="autowidth: true;dots: false;margin: 8;items: 2">
-            {% for carousel in carousel.magazine %}
-                <div class="owl-img lazyload" style="width: 800px;">
-                    <img class="lazyload" data-src="{{ carousel.img }}" alt="">
-                    <div class="owl-caption owl-caption-bottom">
-                        <h1 class="owl-title"><a href="">{{ carousel.title }}</a></h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-11 mx-auto">
+                    <div class="owl-carousel" ya-carousel="autowidth: true;dots: false;margin: 8;items: 2">
+                        {% for carousel in carousel.magazine %}
+                            <div class="owl-img owl-img-md lazyload" style="width: 800px;">
+                                <img class="lazyload" data-src="{{ carousel.img }}" alt="">
+                                <div class="owl-caption owl-caption-bottom">
+                                    <h1 class="owl-title"><a href="">{{ carousel.title }}</a></h1>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
-            {% endfor %}
-           </div>
+            </div>
         </div>
     </section>
 
     <section class="bg-light py-3 border-top border-bottom">
         <div class="container">
             <div class="row row-md">
-                {% for blog in blogs %}
-                    {% if (loop.index > 2) and (loop.index < 6) %}
-                        <div class="col-4">
-                            <div class="card bg-transparent border-0 shadow-none mb-0">
-                                <a class="card-img mt-0 mx-0" href="{{ blog.url }}">
-                                    <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
-                                </a>
-                                <div class="card-body pb-0 px-0">
-                                    <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
-                                </div>
+                {% for post in home.magazine.recent %}
+                    <div class="col-4">
+                        <div class="card bg-transparent border-0 shadow-none mb-0">
+                            <a class="card-img img-md mt-0 mx-0" href="{{ post.url }}">
+                                <img src="{{ post.img }}" alt="">
+                            </a>
+                            <div class="card-body pb-0 px-0">
+                                <h6 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h6>
                             </div>
-                            <!-- end .card-post -->
                         </div>
-                    {% endif %}
+                        <!-- end .card-post -->
+                    </div>
                 {% endfor %}
             </div>
         </div>
@@ -53,7 +55,7 @@
                     <div class="d-flex mb-4">
                         <div class="dropdown mr-2">
                             <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="ya ya-tag"></i> All categories
+                                <i class="ya ya-tag"></i> All
                             </button>
                             <div class="dropdown-menu dropdown-height">
                                 <a class="dropdown-item active" href="#">All categories</a>
@@ -133,7 +135,7 @@
                     <div class="widget">
                         <form action="search.html">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for blog...">
+                                <input type="text" class="form-control" placeholder="Search...">
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
                                 </div>
@@ -144,10 +146,10 @@
 
                     <div class="widget">
                         <div class="widget-header">Recommends</div>
-                        {% for blog in blogs %}
+                        {% for blog in home.magazine.recommends %}
                             {% if loop.index == 1 %}
                                 <a class="img-cover img-sm mb-3" href="{{ blog.url }}">
-                                    <img src="{{ blog.thumb }}" alt="">
+                                    <img src="{{ blog.img }}" alt="">
                                 </a>
                                 <div class="widget-body">
                                     <h5 class="h6"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
