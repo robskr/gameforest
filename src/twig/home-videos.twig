@@ -9,19 +9,6 @@
 {% endblock %}
 
 {% block body %}
-    <section class="bg-primary py-0">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="promo py-3">
-                        <h2 class="promo-title h6">Subscribe to upload and watch premium videos at gameforest!</h2>
-                        <a class="btn btn-outline-light btn-sm ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Subscribe Now <i class="ya ya-share"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="bg-image py-5" ya-style="background-color: #282a2b">
         <img class="background" src="https://static.giantbomb.com/uploads/original/5/56742/3053495-0981309717-rdr2-.jpg" alt="" ya-style="opacity: .3">
         <div class="container">
@@ -35,13 +22,26 @@
         </div>
     </section>
 
+    <section class="bg-primary py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="promo py-0">
+                        <h2 class="promo-title h6">Subscribe to upload and watch premium videos at gameforest!</h2>
+                        <a class="btn btn-outline-light btn-sm ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Subscribe Now <i class="ya ya-share"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-6">
         <div class="container">
             <div class="row">
                 <div class="col-8 mx-auto text-center mb-4">
                     <i class="ya ya-player icon"></i>
-                    <h2 class="font-weight-bold font-size-lg">Premium Videos on Gameforest</h2>
-                    <p class="lead">Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. His boy middleton sir nor engrossed affection excellent.</p>
+                    <h2 class="font-size-lg">Premium videos on gameforest</h2>
+                    <p>Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. His boy middleton sir nor engrossed affection excellent.</p>
                 </div>
             </div>
             <div class="row row-md">
@@ -57,7 +57,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="card-title"><a href="video-post.html">{{ video.title|slice(0, 38) }}</a></h6>
-                                    <p class="card-text font-size-md">{{ video.text|slice(0, 80) ~ '...' }}</p>
+                                    <p class="card-text font-size-md">{{ video.text|slice(0, 100) ~ '...' }}</p>
                                 </div>
                                 <div class="card-footer">
                                     <span><i class="ya ya-clock"></i> {{ video.date|date("M d, Y") }}</span>
@@ -69,36 +69,29 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <div class="text-center my-3">
-                <a class="btn btn-dark btn-lg" href="videos.html" role="button">More Videos</a>
-            </div>
         </div>
     </section>
 
-    <section class="bg-white border-bottom border-top py-6">
+    <section class="bg-white border-top border-bottom px-3">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-11 mx-auto">
-                    <div class="row justify-content-around align-items-center">
-                        <div class="col-6">
-                            <div class="embed-player embed-player-lg">
-                                <div class="embed-img">
-                                    <img src="https://static.giantbomb.com/uploads/original/20/200066/2880853-9.jpg" alt="">
-                                </div>
-                                <div class="embed-icon">
-                                    <a href="https://www.youtube.com/watch?v=Dw_oH5oiUSE" ya-lightbox>
-                                        <i class="ya ya-play"></i>
-                                    </a>
-                                </div>
-                            </div>
+            <div class="row justify-content-around align-items-center">
+                <div class="col-6">
+                    <div class="embed-player embed-player-lg">
+                        <div class="embed-img">
+                            <img src="https://static.giantbomb.com/uploads/original/0/8169/3028105-screenshot+%2862%29.png" alt="">
                         </div>
-                        <div class="col-6 pl-4">
-                            <h2 class="h1 text-dark font-weight-bold mb-3">Quality Videos for Gameforest Members</h2>
-                            <p class="lead mb-5">Received the likewise law graceful his. Nor might set along charm now equal green. <br>Pleased yet equally correct colonel not one. Say anxious carried compact conduct <br>ps4 general nay certain.</p>
-                            <a class="btn btn-primary btn-lg font-weight-semibold mr-1" href="pricing.html" role="button">View our plans <i class="ya ya-share"></i></a>
-                            <a class="btn btn-outline btn-lg" href="register.html" role="button">Create an account <i class="ya ya-user-add"></i></a>
+                        <div class="embed-icon">
+                            <a href="https://www.youtube.com/watch?v=Dw_oH5oiUSE" ya-lightbox>
+                                <i class="ya ya-play"></i>
+                            </a>
                         </div>
                     </div>
+                </div>
+                <div class="col-5 pl-5 mr-auto">
+                    <h2 class="h1 font-weight-semibold text-dark mb-3">Premium Videos for Our Members</h2>
+                    <p class="mb-4 pb-2">Received the likewise law graceful his. Nor might set along charm now equal green. <br>Pleased yet equally correct colonel not one. Say anxious carried compact conduct <br>ps4 general nay certain.</p>
+                    <a class="btn btn-primary btn-lg mr-1" href="pricing.html" role="button">View our plans</a>
+                    <a class="btn btn-outline btn-lg" href="register.html" role="button">Create an account <i class="ya ya-user-add"></i></a>
                 </div>
             </div>
         </div>
@@ -108,9 +101,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-8 mx-auto text-center mb-4">
-                    <i class="ya ya-helmet icon"></i>
-                    <h2 class="font-weight-bold font-size-lg">Frequently Asked Questions</h2>
-                    <p class="lead">Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put be it reserved contempt rendered smallest.</p>
+                    <i class="ya ya-question icon"></i>
+                    <h2 class="font-size-lg">Frequently asked questions</h2>
+                    <p>Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put be it reserved contempt rendered smallest.</p>
                 </div>
             </div>
             <div class="row">
@@ -132,7 +125,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a class="btn btn-dark btn-lg" href="faq.html" role="button">Learn more</a>
+                <a class="btn btn-outline btn-lg" href="faq.html" role="button">Learn more</a>
             </div>
         </div>
     </section>
