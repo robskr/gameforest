@@ -153,8 +153,15 @@
 } %}
 
 {% set custom %}
-    <div class="mb-5">{{ docs.blocks[0]['code'] }}</div>
-    <div class="mb-4">{{ docs.blocks[3]['code'] }}</div>
+    <div class="border-bottom-dashed mb-5 pb-5">
+        <h6 class="mb-4">{{ docs.blocks[0]['title'] }}</h6>
+        {{ docs.blocks[0]['code'] }}
+    </div>
+    <div class="border-bottom-dashed mb-5 pb-5">
+        <h6 class="mb-4">{{ docs.blocks[3]['title'] }}</h6>
+        {{ docs.blocks[3]['code'] }}
+    </div>
+    <h6 class="mb-4">{{ docs.blocks[4]['title'] }}</h6>
     {{ docs.blocks[4]['code'] }}
 {% endset %}
 

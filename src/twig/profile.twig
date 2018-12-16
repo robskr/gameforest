@@ -189,7 +189,7 @@
                                 {% if post.gallery %}
                                     <div class="embed-gallery">
                                         {% for gallery in post.gallery %}
-                                            <a class="embed-image img-cover img-xl" href="{{ gallery.img }}" ya-lightbox="disqus: gameforest" rel="gallery">
+                                            <a class="embed-image img-cover img-xl" href="{{ gallery.img }}" ya-lightbox="disqus: true" rel="gallery">
                                                 <img src="{{ gallery.img }}" alt="">
                                             </a>
                                         {% endfor %}

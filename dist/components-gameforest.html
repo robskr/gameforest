@@ -422,13 +422,22 @@
                     <div class="col">
                         <h5 class="h3">Avatars</h5>
                         <p class="mb-4 pb-3">Avatars are images that users can set as their profile picture. They can be custom photos, uploaded by users, or generated as Identicons as a placeholder.</p>
-                        <div class="d-flex align-items-end">
-                            <img class="avatar avatar-xl mr-3" src="img/user.jpg" alt="">
-                            <img class="avatar avatar-lg mr-3" src="img/user.jpg" alt="">
-                            <img class="avatar mr-3" src="img/user-1.jpg" alt="">
-                            <img class="avatar avatar-md mr-3" src="img/user-1.jpg" alt="">
-                            <img class="avatar avatar-sm mr-3" src="img/user-1.jpg" alt="">
-                            <img class="avatar avatar-xs mr-3" src="img/user-1.jpg" alt="">
+                        <div class="row">
+                            <div class="col card-group">
+                                <div class="card card-default mb-0">
+                                    <h6 class="card-header">Example</h6>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-end">
+                                            <img class="avatar avatar-xl mr-3" src="img/user.jpg" alt="">
+                                            <img class="avatar avatar-lg mr-3" src="img/user.jpg" alt="">
+                                            <img class="avatar mr-3" src="img/user-1.jpg" alt="">
+                                            <img class="avatar avatar-md mr-3" src="img/user-1.jpg" alt="">
+                                            <img class="avatar avatar-sm mr-3" src="img/user-1.jpg" alt="">
+                                            <img class="avatar avatar-xs mr-3" src="img/user-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col card-group">
@@ -707,7 +716,8 @@
                 <div class="col">
                     <h5 class="h3">Comments</h5>
                     <p class="mb-4 pb-3">Display user feedbacks under blog posts, videos or gaming reviews. Comments are perfect solution to start to build a great community for your website.</p>
-                    <div class="mb-5">
+                    <div class="border-bottom-dashed mb-5 pb-5">
+                        <h6 class="mb-4">Example</h6>
                         <div class="comments">
                             <div class="media">
                                 <div class="avatar avatar-badge">
@@ -734,11 +744,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-4">
+                    <div class="border-bottom-dashed mb-5 pb-5">
+                        <h6 class="mb-4">Disqus</h6>
                         <div class="comments">
                             <div ya-disqus></div>
                         </div>
                     </div>
+                    <h6 class="mb-4">Facebook</h6>
                     <div class="comments">
                         <div ya-facebook></div>
                     </div>
@@ -1008,31 +1020,23 @@
                         <i class="ya ya-discord" data-toggle="tooltip" title="ya-discord"></i>
                         <i class="ya ya-youtube" data-toggle="tooltip" title="ya-youtube"></i>
                     </div>
-                    <div class="row mt-5">
-                        <div class="col">
-                            <div class="card card-default mb-0">
-                                <h6 class="card-header">Sizes</h6>
-                                <div class="card-body">
-                                    <div class="docs-icon-sizes">
-                                        <i class="ya ya-helmet"></i>
-                                        <i class="ya ya-helmet ya-md"></i>
-                                        <i class="ya ya-helmet ya-lg"></i>
-                                        <i class="ya ya-helmet ya-xl"></i>
-                                    </div>
-                                </div>
+                    <div class="d-flex mt-5">
+                        <div class="mr-5">
+                            <h6 class="mb-3">Sizes</h6>
+                            <div class="docs-icon-sizes">
+                                <i class="ya ya-helmet"></i>
+                                <i class="ya ya-helmet ya-md"></i>
+                                <i class="ya ya-helmet ya-lg"></i>
+                                <i class="ya ya-helmet ya-xl"></i>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card card-default mb-0">
-                                <h6 class="card-header">SVG Icon</h6>
-                                <div class="card-body">
-                                    <div class="docs-svg">
-                                        <span ya-svg="awesome"></span>
-                                        <span ya-svg="like"></span>
-                                        <span ya-svg="sick"></span>
-                                        <span ya-svg="angry"></span></div>
-                                </div>
-                            </div>
+                        <div>
+                            <h6 class="mb-3">SVG Icon</h6>
+                            <div class="docs-svg">
+                                <span ya-svg="awesome"></span>
+                                <span ya-svg="like"></span>
+                                <span ya-svg="sick"></span>
+                                <span ya-svg="angry"></span></div>
                         </div>
                     </div>
                 </div>
