@@ -147,7 +147,7 @@
                         <div class="widget-header border-0">Categories</div>
                         <div class="list-group list-group-flush">
                             {% for cat in categories %}
-                                <a class="list-group-item{% if loop.index == 2 %} active{% endif %}" href="#">{{ cat.title }}{% if cat.posts %} <span class="badge badge-secondary badge-pill">{{ cat.posts }}</span>{% endif %}</a>
+                                <a class="list-group-item{{ loop.index == 2 ? ' active' : '' }}" href="#">{{ cat.title }}{% if cat.posts %} <span class="badge badge-secondary badge-pill">{{ cat.posts }}</span>{% endif %}</a>
                             {% endfor %}
                         </div>
                     </div>

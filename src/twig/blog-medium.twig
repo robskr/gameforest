@@ -98,7 +98,7 @@
                     <div class="widget">
                         <form action="search.html">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for blog...">
+                                <input type="text" class="form-control" placeholder="Search blog...">
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
                                 </div>
@@ -128,7 +128,7 @@
                         <div class="widget-header border-0">Categories</div>
                         <div class="list-group list-group-flush">
                             {% for cat in categories %}
-                                <a class="list-group-item{% if loop.index == 2 %} active{% endif %}" href="#">{{ cat.title }}{% if cat.posts %} <span class="badge badge-secondary badge-pill">{{ cat.posts }}</span>{% endif %}</a>
+                                <a class="list-group-item{{ loop.index == 2 ? ' active' : '' }}" href="#">{{ cat.title }}{% if cat.posts %} <span class="badge badge-secondary badge-pill">{{ cat.posts }}</span>{% endif %}</a>
                             {% endfor %}
                         </div>
                     </div>
