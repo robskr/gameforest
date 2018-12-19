@@ -299,45 +299,35 @@
                     </div>
                 </div>
             </section>
-            <section class="border-bottom-dashed">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <form class="form-inline">
-                                <button class="btn btn-light mr-2" type="button" name="button" data-toggle="tooltip" title="refresh" data-placement="bottom"><i class="ya ya-refresh ml-0"></i></button>
-                                <div class="input-group">
-                                    <input type="text" class="form-control form-control-inline" placeholder="Search in videos...">
-                                    <div class="input-group-append">
-                                        <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
-                                    </div>
-                                </div>
-                                <div class="dropdown ml-auto">
-                                    <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Recent Videos
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item active" href="#">Recent</a>
-                                        <a class="dropdown-item" href="#">Oldest</a>
-                                        <a class="dropdown-item" href="#">Popular</a>
-                                        <a class="dropdown-item" href="#">Random</a>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-light ml-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random m-0"></i></button>
-                                <div class="btn-group ml-2" role="group">
-                                    <button type="button" class="btn btn-light"><i class="ya ya-list m-0"></i></button>
-                                    <button type="button" class="btn btn-light"><i class="ya ya-table m-0"></i></button>
-                                </div>
-                            </form>
-                            <!-- .end .form -->
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section>
                 <div class="container">
-                    <div class="d-flex justify-content-between align-items-center mb-4 pb-1">
-                        <h5 class="h6 text-uppercase font-weight-bold pl-1 mb-0"><i class="ya ya-player mr-2"></i> Recent videos</h5>
-                        <a class="btn btn-primary" href="#" role="button">Upload video</a>
+                    <div class="d-flex justify-content-between align-items-center mt-2 mb-4">
+                        <form class="form-inline w-100">
+                            <h5 class="h6 text-uppercase font-weight-bold mb-0 pl-1"><i class="ya ya-player mr-2"></i> Recent Videos <span class="font-weight-normal">(429)</span></h5>
+                            <div class="input-group mr-auto ml-4">
+                                <input type="text" class="form-control form-control-inline" placeholder="Search videos...">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Recent videos
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item active" href="#">Recent</a>
+                                    <a class="dropdown-item" href="#">Oldest</a>
+                                    <a class="dropdown-item" href="#">Popular</a>
+                                    <a class="dropdown-item" href="#">Random</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-light btn-icon ml-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random"></i></button>
+                            <div class="btn-group ml-2" role="group">
+                                <button type="button" class="btn btn-light btn-icon"><i class="ya ya-list"></i></button>
+                                <button type="button" class="btn btn-light btn-icon"><i class="ya ya-table"></i></button>
+                            </div>
+                        </form>
+                        <!-- end form -->
                     </div>
                     <div class="row row-md">
                         <div class="col-3 card-group mb-4">
@@ -798,7 +788,7 @@
                         </div>
                     </div>
                     <nav aria-label="Page navigation">
-                        <ul class="pagination justify-content-end mt-3">
+                        <ul class="pagination justify-content-end mt-2">
                             <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
                             <li class="page-item active"><a class="page-link" href="#">1</a></li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>
