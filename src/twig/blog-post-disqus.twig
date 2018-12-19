@@ -116,12 +116,12 @@
                         <div class="col-4">
                             <div class="card bg-light">
                                 <a class="card-img" href="{{ blog.url }}">
-                                    <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
+                                    <img src="{{ blog.thumb }}" alt="">
                                 </a>
                                 <div class="card-body">
                                     <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
                                     <div class="card-meta">
-                                        <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date("M d, Y") }}</span>
+                                        <span class="card-meta-item"><i class="ya ya-calendar"></i> {{ blog.meta.date|date(config.dateformat) }}</span>
                                         <a class="card-meta-item" href="{{ blog.url }}"><i class="ya ya-comment"></i> {{ blog.meta.comments }} comments</a>
                                     </div>
                                     <p class="card-text">{{ blog.text|slice(0, 105) ~ '...' }}</p>

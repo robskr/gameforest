@@ -52,7 +52,7 @@
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
 
             {% if (docs) and (component.preview != false) %}
-                <section class="{% if loop.first %}pt-6 pb-5{% else %}py-5{% endif %}">
+                <section class="{{ loop.first ? 'pt-6 pb-5' : 'py-5' }}">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
                             <div class="col">
