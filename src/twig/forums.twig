@@ -17,7 +17,7 @@
                     {% for forums in forums %}
                         {% for title, forums in forums %}
                             <h6 class="subtitle font-size-md">{{ title }} Forums</h6>
-                            <table class="table table-bordered table-dashed">
+                            <table class="table table-bordered table-dashed mb-5">
                                 <thead>
                                     <tr>
                                         <th style="width: 5%;" scope="col"></th>
@@ -73,7 +73,7 @@
                         {% endfor %}
                     {% endfor %}
 
-                    <div class="card card-secondary mb-5">
+                    <div class="card card-secondary shadow-none mb-5 rounded-0">
                         <h6 class="card-header bg-lighten">Login to the account</h6>
                         <div class="card-body">
                             <form class="form-inline">
@@ -94,13 +94,13 @@
                                     <input type="checkbox" class="custom-control-input" id="check">
                                     <label class="custom-control-label" for="check">Remember me</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Login</button>
+                                <button type="submit" class="btn btn-outline">Login</button>
                             </form>
                         </div>
                     </div>
                     <!-- end .card -->
 
-                    <div class="card card-secondary">
+                    <div class="card card-secondary shadow-none rounded-0">
                         <h6 class="card-header bg-lighten">Who is online <span class="text-success ml-1">&#9679;</span></h6>
                         <div class="card-body">
                             <p>In total there is <strong>151</strong> user online :: 88 registered, 0 hidden and 63 guest (based on users active over the past 5 minutes)<br>Most users ever online was <strong>355</strong> on {{ "1535222745"|date("F d, Y g:ia") }}</p>
