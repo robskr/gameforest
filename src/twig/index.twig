@@ -137,7 +137,7 @@
                         <div class="col-4">
                             <div class="card card-post">
                                 <a class="card-img" href="{{ blog.url }}">
-                                    <img class="card-img-top" src="{% if blog.thumb %}{{ blog.thumb }}{% else %}{{ blog.img }}{% endif %}" alt="">
+                                    <img class="card-img-top" src="{{ blog.thumb ? blog.thumb : blog.img }}" alt="">
                                 </a>
                                 <div class="card-body">
                                     <h6 class="card-title"><a href="{{ blog.url }}">{{ blog.title }}</a></h6>
