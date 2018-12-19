@@ -141,7 +141,6 @@
                         {% endfor %}
                     </div>
                     <!-- end .comments -->
-
                     <h5 class="mt-5 mb-3">Leave a comment</h5>
                     <form>
                         <div class="form-group">
@@ -162,7 +161,7 @@
                                     </a>
                                     <div class="media-body">
                                         <h6><a href="#">{{ video.title }}</a></h6>
-                                        <div class="font-size-sm font-weight-semibold text-muted"><i class="ya ya-clock mr-1"></i> {{ video.date|date(config.dateformat) }}</div>
+                                        <div class="font-size-sm font-weight-semibold text-muted">{{ video.date|date(config.dateformat) }}</div>
                                     </div>
                                 </div>
                             {% endif %}
