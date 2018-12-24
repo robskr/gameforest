@@ -8,15 +8,11 @@
 }
 
 // Dropdown toggle
-.dropdown-toggle {
-  padding-right: 25px;
-
-  &::after {
-    float: right;
-    font-family: $font-family-icon;
-    content: $ya-caret-down;
-    border: 0;
-  }
+.dropdown-toggle::after {
+  float: right;
+  font-family: $font-family-icon;
+  content: $ya-caret-down;
+  border: 0;
 }
 
 // Drop fix
