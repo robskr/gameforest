@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="d-flex align-items-center py-2">
+                    <div class="d-flex align-items-center py-3">
                         <h2 class="h3 font-weight-semibold text-white mb-0 mr-auto">Shopping Cart <div class="font-weight-light d-inline">(5)</div></h2>
                         <a class="btn btn-outline-light" href="shop.html" role="button">Back to shop</a>
                     </div>
@@ -79,8 +79,8 @@
                                 {% if loop.index < 4 %}
                                     <tr>
                                         <td class="text-center">
-                                            <div class="cart-img">
-                                                <img src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg">
+                                            <div class="img-cover mx-auto" style="width: 100px; height: 100px">
+                                                <img class="img-thumbnail p-1" src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg">
                                             </div>
                                         </td>
                                         <td>
@@ -124,7 +124,7 @@
                     <button type="button" class="btn btn-secondary">Apply Coupon</button>
                 </form>
                 <div class="ml-auto">
-                    <button type="button" class="btn btn-outline">Update Cart</button>
+                    <button class="btn btn-outline mr-1" type="button">Update Cart</button>
                     <a class="btn btn-primary" href="shop-checkout.html" role="button">Proceed to Checkout</a>
                 </div>
             </div>

@@ -236,7 +236,7 @@
                                             </h5>
                                             <div class="star d-flex font-size-md mt-1 mr-2">
                                                 {% for i in 0..4 %}
-                                                    <i class="ya {{ loop.index <= game.review ? 'ya-star text-warning' : 'ya-star-o text-warning' }}"></i>
+                                                    <i class="ya ya-star {{ loop.index <= game.review ? 'text-warning' : 'text-muted' }}"></i>
                                                 {% endfor %}
                                             </div>
                                             <ul class="list-unstyled font-size-sm mt-3">
