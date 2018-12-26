@@ -108,10 +108,10 @@
                         <a class="nav-item nav-link" href="#">Streams (24)</a>
                     </div>
                     <div class="btn-group ml-auto mr-2">
-                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-left"></i></a>
-                        <a class="btn btn-default btn-icon" href=""><i class="ya ya-small-right"></i></a>
+                        <a class="btn btn-default btn-icon" href="#"><i class="ya ya-small-left"></i></a>
+                        <a class="btn btn-default btn-icon" href="#"><i class="ya ya-small-right"></i></a>
                     </div>
-                    <a class="btn btn-default btn-icon" href=""><i class="ya ya-gear"></i></a>
+                    <a class="btn btn-default btn-icon" href="#"><i class="ya ya-gear"></i></a>
                 </div>
             </div>
         </div>
@@ -344,12 +344,48 @@
         </div>
     </section>
 
-    <section>
+    <section class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col">
-
-                </div>
+            <h6 class="subtitle mb-4">You should also like</h6>
+            <div class="row row-md">
+                {% for game in games %}
+                    {% if loop.index < 5 %}
+                        <div class="col-3 card-group">
+                            <div class="card card-sm mb-4">
+                                <a class="card-img card-img-md" href="shop-product.html">
+                                    <img class="card-img-top" src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg" alt="{{ game.title }}">
+                                </a>
+                                <div class="card-body d-flex align-items-start flex-column">
+                                    <h5 class="card-title mb-auto">
+                                        {% if game.released %}
+                                            <i class="ya ya-check-circle text-success" data-toggle="tooltip" data-placement="bottom" data-title="Available"></i>
+                                        {% endif %}
+                                        <a href="game-post.html">{{ game.title }}</a>
+                                    </h5>
+                                    <div class="star d-flex font-size-md mt-1 mr-2">
+                                        {% for i in 0..4 %}
+                                            <i class="ya ya-star {{ loop.index <= game.review ? 'text-warning' : 'text-muted' }}"></i>
+                                        {% endfor %}
+                                    </div>
+                                    <ul class="list-unstyled font-size-sm mt-3">
+                                        <li>Platform: {% for platform in platforms %}{{ loop.index == game.platforms[0] ? platform : '' }}{% endfor %}</li>
+                                        <li>Genre: {{ genre[game.genre] }}</li>
+                                        <li>Publisher: {{ publishers[game.publisher] }}</li>
+                                    </ul>
+                                    <ul class="d-flex list-unstyled mb-0">
+                                        <li class="border-right mr-2 pr-2"><i class="ya ya-stock text-success mr-1"></i> in stock</li>
+                                        <li><i class="ya ya-delivery text-success mr-1"></i> free delivery</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer d-flex align-items-center">
+                                    <div class="h3 font-weight-normal {{ game.price.discount ? 'text-danger' : 'text-dark' }} mb-0 mr-2">${{ game.price.original }}</div>
+                                    <button type="button" class="btn btn-outline btn-sm ml-auto">Add to cart <i class="ya ya-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                            <!-- end .card -->
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </section>
