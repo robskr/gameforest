@@ -66,8 +66,8 @@
         "vinyl-source-stream": "^2.0.0"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^11.1.1",
-        "@fortawesome/fontawesome-free": "^5.5.0",
+        "@ckeditor/ckeditor5-build-classic": "^11.2.0",
+        "@fortawesome/fontawesome-free": "^5.6.3",
         "bootstrap": "^4.2.1",
         "bootstrap-select": "^1.13.3",
         "datatables.net-bs4": "^1.10.19",
