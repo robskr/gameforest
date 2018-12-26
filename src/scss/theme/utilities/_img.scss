@@ -23,3 +23,12 @@
 .img-cover {
   @include img-cover;
 }
+
+.grayscale {
+  filter: grayscale(100%);
+  @include transition($transition-base);
+
+  @include hover {
+    filter: grayscale(0);
+  }
+}

@@ -159,3 +159,10 @@
   background-color: $dark;
   @include img-cover;
 }
+
+.owl-carousel-centered {
+  .owl-stage {
+    display: flex;
+    align-items: center;
+  }
+}

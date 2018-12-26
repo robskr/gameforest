@@ -315,8 +315,8 @@ function watch() {
     gulp.watch(path.src.json,  {events: ['change', 'unlink']}, build.json)
     gulp.watch(path.src.scss,  {events: ['change', 'unlink']}, build.css)
     gulp.watch(path.src.js,    {events: ['change', 'unlink']}, build.js)
-    gulp.watch(path.src.img,   {events: ['change', 'unlink']}, build.image)
-    gulp.watch(path.src.svg,   build.icon)
+    gulp.watch(path.src.img, build.image)
+    gulp.watch(path.src.svg, build.icon)
 }
 
 /**
