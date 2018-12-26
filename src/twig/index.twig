@@ -12,28 +12,22 @@
 
 {% block body %}
     <section class="p-0 overflow-hidden">
-        <div class="container-fluid p-0">
-            <div class="row">
-                <div class="col">
-                    <div class="owl-carousel" ya-carousel="autoplay: true;height: true">
-                        {% for carousel in carousel.landing %}
-                            <div class="h-100"{% if carousel.color %} ya-style="background-color: {{ carousel.color|default('transparent') }}"{% endif %}>
-                                <img src="{{ carousel.img }}" ya-style="opacity: {{ carousel.opacity|default('0.25') }}" alt="">
-                                <div class="owl-caption">
-                                    <div class="w-50">
-                                        <h1 class="owl-title">{{ carousel.title }}</h1>
-                                        <p class="owl-text">{{ carousel.text }}</p>
-                                        <a class="btn btn-primary btn-lg btn-rounded" href="game-post.html" role="button">View Game</a>
-                                        <a class="btn btn-outline-light btn-lg btn-rounded ml-2" href="{{ carousel.url }}" ya-lightbox role="button">Watch Trailer</a>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
+        <div class="owl-carousel" ya-carousel="autoplay: true;height: true">
+            {% for carousel in carousel.landing %}
+                <div class="h-100"{{ carousel.color ? ' ya-style="background-color: ' ~ carousel.color : '' }}>
+                    <img src="{{ carousel.img }}" ya-style="opacity: {{ carousel.opacity|default('0.25') }}" alt="">
+                    <div class="owl-caption">
+                        <div class="w-50">
+                            <h1 class="owl-title">{{ carousel.title }}</h1>
+                            <p class="owl-text">{{ carousel.text }}</p>
+                            <a class="btn btn-primary btn-lg btn-rounded" href="game-post.html" role="button">View Game</a>
+                            <a class="btn btn-outline-light btn-lg btn-rounded ml-2" href="{{ carousel.url }}" ya-lightbox role="button">Watch Trailer</a>
+                        </div>
                     </div>
-                    <!-- end .owl-carousel -->
                 </div>
-            </div>
+            {% endfor %}
         </div>
+        <!-- end .owl-carousel -->
     </section>
 
     <section class="py-6">
@@ -135,7 +129,7 @@
                 {% for blog in blogs %}
                     {% if loop.index < 4 %}
                         <div class="col-4">
-                            <div class="card card-post">
+                            <div class="card card-sm">
                                 <a class="card-img" href="{{ blog.url }}">
                                     <img src="{{ blog.thumb }}" alt="">
                                 </a>
@@ -174,13 +168,9 @@
 
     <section class="bg-primary py-0">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="promo">
-                        <h2 class="promo-title h4">Build your professional gaming website with Gameforest</h2>
-                        <a class="btn btn-outline-light ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
-                    </div>
-                </div>
+            <div class="promo">
+                <h2 class="promo-title h4">Build your professional gaming website with Gameforest</h2>
+                <a class="btn btn-outline-light ml-4" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Purchase Now <i class="ya ya-shopping-cart"></i></a>
             </div>
         </div>
     </section>

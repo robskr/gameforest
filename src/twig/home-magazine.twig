@@ -154,7 +154,7 @@
                             <div class="widget-body">
                                 <h5 class="h6"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
                                 <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
-                                <p class="mb-0">{{ blog.text|slice(0, 60) }}...</p>
+                                <p class="mb-0">{{ blog.text|slice(0, 90) }}...</p>
                             </div>
                         {% endfor %}
                     </div>
@@ -180,7 +180,7 @@
                                 <div class="widget-body">
                                     <h5 class="h6"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
                                     <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
-                                    <p class="mb-2">{{ blog.text|slice(0, 60) }}...</p>
+                                    <p class="mb-2">{{ blog.text|slice(0, 90) }}...</p>
                                 </div>
                             {% endif %}
                         {% endfor %}
