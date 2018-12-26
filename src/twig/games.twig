@@ -115,7 +115,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <span><i class="ya ya-calendar"></i> {{ game.date|date("M d, Y") }}</span>
+                                    <span><i class="ya ya-calendar"></i> {{ game.date|date(config.dateformat) }}</span>
                                     <div class="ml-auto">
                                         <a href="#"><i class="ya ya-comment"></i> {{ game.comments }}</a>
                                         <a href="#"><i class="ya ya-heart-o"></i> {{ game.like }}</a>
