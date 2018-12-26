@@ -289,7 +289,7 @@
         </header>
         <!-- end .site-header -->
         <div class="site-content" role="main">
-            <nav class="bg-primary" aria-label="breadcrumb">
+            <nav class="bg-white border-bottom" aria-label="breadcrumb">
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -298,45 +298,18 @@
                     </ol>
                 </div>
             </nav>
-            <section class="bg-primary py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h2 class="text-white mb-0">Create Topic</h2>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="bg-primary border-bottom py-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col d-flex align-items-center">
-                            <div class="nav nav-list nav-light">
-                                <a class="nav-item nav-link active pl-0" href="#">Account settings</a>
-                                <a class="nav-item nav-link" href="#">Security</a>
-                                <a class="nav-item nav-link" href="#">Access</a>
-                                <a class="nav-item nav-link" href="#">History</a>
-                                <a class="nav-item nav-link" href="#">Billings</a>
-                                <a class="nav-item nav-link" href="#">Premium</a>
-                            </div>
-                            <a class="btn btn-outline-light btn-icon ml-auto" href="profile.html">View my profile</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section class="py-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-9">
-                            <div class="form-group">
+                            <div class="form-group pb-1">
                                 <label for="title">Topic Title</label>
                                 <input type="text" class="form-control" id="title" placeholder="Enter title" required>
                                 <small class="form-text text-muted">Title of the topic what will be visible in forum (max 50 character).</small>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group pb-1">
                                 <label for="description">Short Description</label>
-                                <input type="text" class="form-control" id="descripition" placeholder="Enter description">
-                                <small class="form-text">Short Description about your topic content.</small>
+                                <input type="text" class="form-control" id="description" placeholder="Enter description">
                             </div>
                             <div class="form-group ckeditor ckeditor-lg">
                                 <textarea name="content" id="editor"></textarea>
@@ -359,10 +332,6 @@
                                         <p class="dropload-text">Add image</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="exampleInputSlug">Slug</label>
-                                <input type="text" class="form-control" id="exampleInputSlug">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="exampleFormControlSelect1">Forum</label>
