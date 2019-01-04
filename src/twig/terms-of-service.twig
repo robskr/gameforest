@@ -1,40 +1,31 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    <nav class="bg-white border-bottom" aria-label="breadcrumb">
+    <nav class="bg-purple pt-1" aria-label="breadcrumb">
         <div class="container">
-            <div class="d-flex align-items-center">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Terms of service</li>
-                </ol>
-                <div class="btn-group ml-auto">
-                    <a class="btn btn-default btn-icon btn-xs" href=""><i class="ya ya-small-left"></i></a>
-                    <a class="btn btn-default btn-icon btn-xs" href=""><i class="ya ya-small-right"></i></a>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Terms of service</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="bg-purple d-flex align-items-center py-8">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6 class="display-6 font-weight-bold text-white mb-3">Terms of service</h6>
+                    <p class="lead text-light mb-7">Find out what's included in your Bootstrap theme and how to compile source files. Includes live <br>examples and code snippets for every new component.</p>
                 </div>
             </div>
         </div>
-    </nav>
+        <div class="divider" ya-svg="divider"></div>
+    </section>
 
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-3">
-                    <div class="widget widget-secondary">
-                        <div class="widget-header">Faq</div>
-                        <div class="widget-body p-0">
-                            <div class="list-group list-group-lg list-group-flush">
-                                <a class="list-group-item" href="#"><i class="ya ya-content"></i> Introduction</a>
-                                <a class="list-group-item active" href="#"><i class="ya ya-gear"></i> Account Settings <span class="badge badge-secondary badge-pill">25</span></a>
-                                <a class="list-group-item" href="#"><i class="ya ya-users"></i> Subscriptions</a>
-                                <a class="list-group-item" href="#"><i class="ya ya-credit-card"></i> Payment Methods</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end .widget -->
-                </div>
-                <div class="col-9 text-justify">
-                    <h2 class="h4 mb-4"><i class="ya ya-content mr-2"></i> Terms of Service</h2>
+                <div class="col text-justify">
                     <p class="lead">She travelling acceptance men unpleasant her especially entreaties law. Law forth but end any arise chief arose. Old her say learn these large. Joy fond many ham high seen this. Few preferred continual sir led incommode neglected.</p>
                     <p>Extended kindness trifling remember he confined outlived if. Assistance sentiments yet unpleasing say. Open they an busy they my such high. An active dinner wishes at unable hardly no talked on. Immediate him her resolving his favourite. Wished denote abroad at branch at.</p>
                     <ol>
@@ -62,12 +53,15 @@
                     </ul>
                     <p>Drawings me opinions returned absolute in. Otherwise therefore sex did are unfeeling something. Certain be ye amiable by exposed so. To celebrated estimating excellence do. Coming either suffer living her gay theirs. Furnished do otherwise daughters contented conveying attempted no. Was yet general visitor present hundred too brother fat arrival. Friend are day own either lively new.</p>
                     <p>Ignorant saw her her drawings marriage laughter. Case oh an that or away sigh do here upon. Acuteness you exquisite ourselves now end forfeited. Enquire ye without it garrets up himself. Interest our nor received followed was. Cultivated an up solicitude mr unpleasant.</p>
-                    <div class="mt-4 pt-1">
-                        <button type="button" class="btn btn-outline mr-2">Print this site <i class="ya ya-print"></i></button>
-                        <button type="button" class="btn btn-outline">Download <i class="ya ya-download"></i></button>
-                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-top">
+        <div class="container d-flex">
+            <button type="button" class="btn btn-primary mr-2">Print this site <i class="ya ya-print"></i></button>
+            <button type="button" class="btn btn-secondary">Download <i class="ya ya-download"></i></button>
         </div>
     </section>
 {% endblock %}
