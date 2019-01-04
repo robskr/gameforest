@@ -1,10 +1,5 @@
 {% extends "base.twig" %}
 
-{% set page = {
-    navbar: 'fluid',
-    class: 'fixed-nav-bottom'
-} %}
-
 {% block js %}
     <script src="../docs/plugins/holder/holder.min.js"></script>
     <script>
@@ -98,11 +93,11 @@
                     {% endif %}
                 {% endfor %}
             {% endfor %}
-            <li class="nav-item float-right">
-                <a class="nav-link" href="#">Changelog <span class="badge badge-purple">5.0</span></a>
-            </li>
-            <li class="nav-item float-right">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Changelog <span class="badge badge-purple">5.0</span></a>
             </li>
         </ul>
     </div>

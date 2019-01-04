@@ -89,7 +89,10 @@ function scss() {
             debug: true
         }))
         .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(sass({
+            includePaths: ['./node_modules/', './src/scss/theme'],
+            outputStyle: 'compressed'
+        }))
         .pipe(postcss())
         .pipe(rename({
             suffix: '.min'

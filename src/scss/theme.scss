@@ -2,59 +2,65 @@
  * Gameforest Bootstrap Gaming Theme
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
- * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
+ * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-5007730
  * @since     5.0.0
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  */
 
-// Vendor
-@import "theme/variables";
-@import "theme/mixins";
+// Theme
+@import "variables";
+@import "mixins";
+
+// Customization
 @import "custom/variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/owl.carousel/src/scss/owl.carousel";
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Owl carousel
+@import "owl.carousel/src/scss/owl.carousel";
 
 // Components
-@import "theme/type";
-@import "theme/icons";
-@import "theme/badges";
-@import "theme/breadcrumb";
-@import "theme/buttons";
-@import "theme/dropdown";
-@import "theme/section";
-@import "theme/comments";
-@import "theme/lightbox";
-@import "theme/card";
-@import "theme/accordion";
-@import "theme/alerts";
-@import "theme/avatar";
-@import "theme/nav";
-@import "theme/navbar";
-@import "theme/notify";
-@import "theme/footer";
-@import "theme/forms";
-@import "theme/post";
-@import "theme/list-group";
-@import "theme/stars";
-@import "theme/modal";
-@import "theme/product";
-@import "theme/promo";
-@import "theme/progress";
-@import "theme/embed";
-@import "theme/reactions";
-@import "theme/tables";
-@import "theme/review";
-@import "theme/widget";
-@import "theme/utils";
+@import "type";
+@import "icons";
+@import "badges";
+@import "breadcrumb";
+@import "buttons";
+@import "dropdown";
+@import "section";
+@import "comments";
+@import "lightbox";
+@import "card";
+@import "accordion";
+@import "alerts";
+@import "avatar";
+@import "nav";
+@import "navbar";
+@import "notify";
+@import "footer";
+@import "forms";
+@import "post";
+@import "list-group";
+@import "stars";
+@import "modal";
+@import "product";
+@import "promo";
+@import "progress";
+@import "embed";
+@import "reactions";
+@import "tables";
+@import "review";
+@import "widget";
+@import "utils";
 
 // Plugins
-@import "theme/plugins/animated";
-@import "theme/plugins/owl-carousel";
-@import "theme/plugins/ckeditor";
-@import "theme/plugins/easypiechart";
-@import "theme/plugins/countdown";
-@import "theme/plugins/noui-slider";
-@import "theme/plugins/lazyload";
+@import "plugins/animated";
+@import "plugins/owl-carousel";
+@import "plugins/ckeditor";
+@import "plugins/easypiechart";
+@import "plugins/countdown";
+@import "plugins/noui-slider";
+@import "plugins/lazyload";
 
 // Child theme
 @import "custom/theme"
