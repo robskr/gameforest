@@ -104,11 +104,11 @@
 
 .nav-bottom {
   position: fixed;
-  right: 20px;
   bottom: 0;
   z-index: 3;
-  width: 250px;
-  padding: 5px;
+  display: block;
+  width: 100%;
+  padding: 0;
   background-color: $dark;
   box-shadow: 0 1px 3px rgba($black, .3);
 
@@ -117,7 +117,7 @@
   }
 
   .nav-item {
-    display: block;
+    display: inline-block;
     padding: 0;
 
     &:last-child .nav-link {
@@ -126,10 +126,10 @@
   }
 
   .nav-link {
-    padding: 10px 12px;
+    padding: 12px 13px;
     font-size: $font-size-sm;
     color: #d2d2d2;
-    border-bottom: 1px solid rgba($white, .05);
+    border-right: 1px solid rgba($white, .05);
 
     @include hover-focus {
       color: $white;
