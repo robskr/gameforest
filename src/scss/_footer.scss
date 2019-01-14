@@ -8,6 +8,10 @@
   font-weight: $font-weight-light;
   color: rgba($white, .45);
 
+  @include media-breakpoint-down(xs) {
+    padding: 35px 0 0;
+  }
+
   &.bg-dark {
     label,
     p,

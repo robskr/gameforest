@@ -14,6 +14,10 @@
     font-weight: $font-weight-normal;
     color: $white;
   }
+
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
 }
 
 // Promo left
