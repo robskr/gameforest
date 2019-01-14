@@ -80,7 +80,6 @@
         "nouislider": "^12.1.0",
         "owl.carousel": "^2.3.4",
         "popper.js": "^1.14.6",
-        "raphael": "^2.2.7",
-        "webfontloader": "^1.6.28"
+        "raphael": "^2.2.7"
     }
 }

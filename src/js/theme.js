@@ -10,15 +10,6 @@
  */
 
 import $ from 'jquery'
-import WebFont from 'webfontloader'
-
-/**
- * ------------------------------------------------------------------------
- * Constants
- * ------------------------------------------------------------------------
- */
-
-const FONTS  = 'Roboto:300,400,500,700,900'
 
 /**
  * ------------------------------------------------------------------------
@@ -32,18 +23,9 @@ class Theme {
         $('[data-toggle="popover"]').popover()
     }
 
-    _webfont() {
-        return WebFont.load({
-            google: {
-                families: [FONTS]
-            }
-        })
-    }
-
     // private
     _load() {
         this._bootstrap()
-        this._webfont()
     }
 
     // static

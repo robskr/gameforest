@@ -130,7 +130,6 @@ function minify() {
 
 function script() {
     return gulp.src([
-            'node_modules/webfontloader/webfontloader.js',
             'node_modules/owl.carousel/dist/owl.carousel.min.js',
             'node_modules/jquery-sticky/jquery.sticky.js',
             './dist/js/theme.js'

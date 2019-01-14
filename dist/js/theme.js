@@ -1,11 +1,10 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('webfontloader')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'webfontloader'], factory) :
-	(factory((global.gameforest = {}),global.jQuery,global.WebFont));
-}(this, (function (exports,$,WebFont) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'jquery'], factory) :
+	(factory((global.gameforest = {}),global.jQuery));
+}(this, (function (exports,$) { 'use strict';
 
 $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-WebFont = WebFont && WebFont.hasOwnProperty('default') ? WebFont['default'] : WebFont;
 
 function _defineProperties(target, props) {
   for (var i = 0; i < props.length; i++) {
@@ -1763,13 +1762,6 @@ document.addEventListener('DOMContentLoaded', function () {
  */
 /**
  * ------------------------------------------------------------------------
- * Constants
- * ------------------------------------------------------------------------
- */
-
-var FONTS = 'Roboto:300,400,500,700,900';
-/**
- * ------------------------------------------------------------------------
  * Class Definition
  * ------------------------------------------------------------------------
  */
@@ -1784,21 +1776,11 @@ function () {
   _proto._bootstrap = function _bootstrap() {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
-  };
-
-  _proto._webfont = function _webfont() {
-    return WebFont.load({
-      google: {
-        families: [FONTS]
-      }
-    });
   }; // private
 
 
   _proto._load = function _load() {
     this._bootstrap();
-
-    this._webfont();
   }; // static
 
 

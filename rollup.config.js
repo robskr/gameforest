@@ -8,8 +8,7 @@ export default {
     file: 'theme.js',
     name: 'gameforest',
     globals: {
-        jquery: 'jQuery',
-        webfontloader: 'WebFont'
+        jquery: 'jQuery'
     },
     plugins: [
         babel({
@@ -26,7 +25,6 @@ export default {
         })
     ],
     external: [
-        'jquery',
-        'webfontloader'
+        'jquery'
     ]
 }
