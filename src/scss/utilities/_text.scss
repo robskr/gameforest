@@ -5,7 +5,14 @@
 .font-weight-black     { font-weight: $font-weight-black !important; }
 
 // Font size
-.font-size-lg { font-size: 1.625rem !important; }
+.font-size-lg {
+  font-size: 1.625rem !important;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 1.5rem !important;
+  }
+}
+
 .font-size-md { font-size: $font-size-md !important; }
 .font-size-sm { font-size: $font-size-sm !important; }
 .font-size-xs { font-size: $font-size-xs !important; }

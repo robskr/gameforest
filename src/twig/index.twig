@@ -17,7 +17,7 @@
                 <div class="h-100"{{ carousel.color ? ' ya-style="background-color: ' ~ carousel.color : '' }}>
                     <img src="{{ carousel.img }}" ya-style="opacity: {{ carousel.opacity|default('0.25') }}" alt="">
                     <div class="owl-caption">
-                        <div class="w-50">
+                        <div class="owl-caption-container">
                             <h1 class="owl-title">{{ carousel.title }}</h1>
                             <p class="owl-text">{{ carousel.text }}</p>
                             <a class="btn btn-primary btn-lg btn-rounded" href="game-post.html" role="button">View Game</a>
@@ -30,7 +30,7 @@
         <!-- end .owl-carousel -->
     </section>
 
-    <section class="py-6">
+    <section class="py-5 py-md-6">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 text-center mx-auto mb-4">

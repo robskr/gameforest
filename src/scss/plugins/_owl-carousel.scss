@@ -18,16 +18,24 @@
   text-align: center;
 
   .owl-title {
-    font-size: 45px;
+    font-size: 2.8125rem;
     font-weight: $font-weight-black;
     color: $white;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 2.325rem;
+    }
   }
 
   .owl-text {
     margin: 10px 0 50px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: $font-weight-normal;
     color: rgba($white, .7);
+
+    @include media-breakpoint-down(xs) {
+      font-size: $font-size-base;
+    }
   }
 
   &-bottom {
@@ -52,6 +60,14 @@
 .owl-height-100 {
   height: calc(100vh - 60px);
   background-color: #313133;
+
+  .owl-caption-container {
+    width: 50%;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
 
   .owl,
   .owl-stage,
@@ -151,6 +167,10 @@
     &::after {
       content: $ya-bold-right;
     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 }
 

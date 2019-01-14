@@ -3,6 +3,10 @@
   margin-bottom: $card-margin;
   box-shadow: $card-box-shadow;
 
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 20px;
+  }
+
   &-header {
     border-color: rgba($black, .1);
 

@@ -16,3 +16,9 @@ button {
   position: relative;
   min-height: 100%;
 }
+
+.lead {
+  @include media-breakpoint-down(xs) {
+    font-size: $font-size-base;
+  }
+}
