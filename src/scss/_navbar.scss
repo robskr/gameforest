@@ -302,3 +302,9 @@
     @include transition(none !important);
   }
 }
+
+.navbar {
+  @include media-breakpoint-down(xs) {
+    padding-left: 0;
+  }
+}
