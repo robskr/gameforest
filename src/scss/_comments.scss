@@ -39,7 +39,7 @@
       @include avatar-size($avatar-size-md);
 
       img {
-        border-radius: 50%;
+        @include border-radius(50%);
       }
     }
 

@@ -4,7 +4,7 @@
     padding: 10px;
     background-color: $white;
     border: 1px solid rgba($black, .15);
-    border-radius: 6px;
+    @include border-radius(6px);
   }
 
   &-img {
@@ -12,7 +12,7 @@
     @include img-cover();
 
     img {
-      border-radius: 6px;
+      @include border-radius(6px);
     }
   }
 }

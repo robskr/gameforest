@@ -32,6 +32,12 @@ section {
   background-repeat: no-repeat;
   background-position: 100%;
   background-size: cover;
+
+  @include media-breakpoint-down(xs) {
+    .container-fluid {
+      padding: 0;
+    }
+  }
 }
 
 .background {

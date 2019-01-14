@@ -5,15 +5,15 @@
   &-handle {
     background-color: $white;
     border: 8px solid $primary;
-    border-radius: 50%;
     box-shadow: none;
+    @include border-radius(50%);
   }
 
   &-target {
     background-color: #e0e0e0;
     border: 0;
-    border-radius: 30px;
     box-shadow: none;
+    @include border-radius(30px);
   }
 
   &-connect {

@@ -20,7 +20,7 @@
     text-align: center;
     background-color: $white;
     border: 1px solid rgba($black, .2);
-    border-radius: 3px;
+    @include border-radius(3px);
 
     &::after,
     &::before {

@@ -46,7 +46,7 @@
     margin: 0 2px 8px 0;
     font-size: $font-size-md;
     border: 1px solid rgba($white, .1);
-    border-radius: 3px;
+    @include border-radius(3px);
 
     &:hover {
       text-decoration: none;

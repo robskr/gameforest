@@ -93,8 +93,8 @@
       height: 16px;
       margin: 0 5px;
       background-color: $white;
-      border-radius: 50%;
       opacity: .5;
+      @include border-radius(50%);
       @include transition($transition-base);
 
       &.active {

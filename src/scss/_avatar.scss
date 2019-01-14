@@ -1,6 +1,6 @@
 // Avatar
 .avatar {
-  border-radius: $avatar-radius;
+  @include border-radius($avatar-radius);
   @include avatar-size($avatar-size);
 }
 
@@ -34,7 +34,7 @@
 
   img {
     margin-right: 13px;
-    border-radius: 4px;
+    @include border-radius(4px);
     @include avatar-size($avatar-size-sm);
   }
 
@@ -52,11 +52,11 @@
   background-color: $white;
   border: 1px dashed rgba($black, .2);
   border-left: 3px solid $primary;
-  border-radius: 50px;
+  @include border-radius(50px);
 
   img {
     margin-left: auto;
-    border-radius: 50%;
+    @include border-radius(50%);
     @include transition($transition-base);
     @include avatar-size($avatar-size-md);
   }
@@ -90,7 +90,7 @@
     z-index: 2;
     margin-left: -16px;
     cursor: pointer;
-    border-radius: 50%;
+    @include border-radius(50%);
     @include avatar-size($avatar-size-stack);
 
     &:first-child {
@@ -121,7 +121,7 @@
   @include avatar-size($avatar-size-md);
 
   img {
-    border-radius: 50%;
+    @include border-radius(50%);
   }
 
   .badge {
@@ -133,7 +133,7 @@
     width: 24px;
     height: 24px;
     padding: 6px;
-    border-radius: 50%;
+    @include border-radius(50%);
     box-shadow: 0 0 0 2px $white;
 
     &:empty {

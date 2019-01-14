@@ -46,8 +46,7 @@
   color: darken($primary, 5%);
   background-color: rgba($black, .03);
   border-bottom: 1px solid rgba($black, .08);
-  border-top-left-radius: $dropdown-border-radius;
-  border-top-right-radius: $dropdown-border-radius;
+  @include border-top-radius($dropdown-border-radius);
 
   i {
     margin-right: 6px;

@@ -81,7 +81,7 @@
 
 @mixin button-rounded($btn-rounded, $btn-rounded-xs, $btn-rounded-sm, $btn-rounded-lg) {
   padding: $btn-rounded;
-  border-radius: 30px;
+  @include border-radius(30px);
 
   &.btn-lg {
     padding: $btn-rounded-lg;

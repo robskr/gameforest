@@ -27,9 +27,16 @@
     cursor: pointer;
     content: $ya-play;
     background-color: $embed-icon-bg;
-    border-radius: 50%;
     box-shadow: 0 1px 25px 0 rgba($black, .2);
+    @include border-radius(50%);
     @include transition($transition-base);
+
+    @include media-breakpoint-down(xs) {
+      width: $embed-icon-width / 1.1;
+      height: $embed-icon-height / 1.1;
+      font-size: 25px;
+      line-height: $embed-icon-height / 1.1;
+    }
   }
 
   &-icon:hover i,
@@ -55,7 +62,11 @@
     color: $white;
     background-color: $dark;
     border-left: 3px solid $primary;
-    border-radius: 30px;
+    @include border-radius(30px);
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
 
   &-responsive {
@@ -74,7 +85,7 @@
     font-size: $font-size-md;
     color: $white;
     background-color: $dark;
-    border-radius: 30px;
+    @include border-radius(30px);
   }
 
   &-icon {
@@ -134,8 +145,8 @@
       cursor: pointer;
       background-color: $white;
       @include transition($transition-base);
-      border-radius: 50%;
       box-shadow: 0 1px 25px 0 rgba($black, .2);
+      @include border-radius(50%);
 
       &::before {
         margin-right: -2px;

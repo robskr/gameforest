@@ -34,7 +34,7 @@
 
     &-top {
       // stylelint-disable-next-linedeclaration-no-important
-      border-radius: 0 !important;
+      @include border-radius(0 !important);
     }
 
     .badge {
@@ -56,7 +56,7 @@
       font-weight: $font-weight-normal;
       color: $white;
       background-color: rgba(25, 25, 25, 1);
-      border-radius: 4px;
+      @include border-radius(4px);
     }
   }
 

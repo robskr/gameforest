@@ -6,12 +6,12 @@
   overflow: hidden;
   background-color: $white;
   border: 1px solid rgba($black, .13);
-  border-radius: 6px;
+  @include border-radius(6px);
   @include transition($transition-base);
 
   img {
     margin: 0;
-    border-radius: 3px;
+    @include border-radius(3px);
   }
 
   &:hover {

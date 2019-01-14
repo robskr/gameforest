@@ -50,7 +50,7 @@
     border-right: 1px solid rgba($black, .07);
     border-bottom: 0;
     border-left: 0;
-    border-radius: 0;
+    @include border-radius(0);
 
     &:hover {
       color: inherit;
