@@ -30,6 +30,7 @@ const prettify        = require('gulp-jsbeautifier')
 const merge           = require('gulp-merge-json')
 const changed         = require('gulp-changed')
 const clean           = require('gulp-clean')
+const sizereport      = require('gulp-sizereport')
 
 /**
  * ------------------------------------------------------------------------
@@ -262,6 +263,27 @@ function browser() {
 
 /**
  * ------------------------------------------------------------------------
+ * REPORT
+ * ------------------------------------------------------------------------
+ */
+
+function report() {
+    return gulp.src(['./dist/css/*', './dist/js/*'])
+        .pipe(sizereport());
+}
+
+function report_css() {
+    return gulp.src('./dist/css/*')
+        .pipe(sizereport());
+}
+
+function report_js() {
+    return gulp.src('./dist/js/*')
+        .pipe(sizereport());
+}
+
+/**
+ * ------------------------------------------------------------------------
  * PLUGINS
  * ------------------------------------------------------------------------
  */
@@ -296,11 +318,12 @@ function lazysizes()        { return gulp.src(['./node_modules/lazysizes/lazysiz
 
 const build = {
     dev:         gulp.parallel(watch, browser),
-    css:         scss,
+    css:         gulp.series(scss, report_css),
     image:       image,
-    js:          gulp.series(babel, minify, script, lint),
+    js:          gulp.series(babel, minify, script, lint, report_js),
     html:        html,
     compile:     compile,
+    report:      report,
     json:        gulp.series(json, compile),
     icon:        gulp.series(svg, svg_copy),
     plugins:     gulp.series(clear, bootstrap, jquery, popper, fontawesome, ckeditor, easypiechart, bootstrap_select, flatpickr, sticky, datatables, morris, raphael, parallax, countdown, nouislider, lazysizes)
@@ -330,6 +353,7 @@ function watch() {
 
 gulp.task('icon',       build.icon)
 gulp.task('html',       build.html)
+gulp.task('report',     build.report)
 gulp.task('compile',    build.compile)
 gulp.task('css',        build.css)
 gulp.task('js',         build.js)

@@ -52,6 +52,7 @@
         "gulp-rename": "^1.4.0",
         "gulp-rollup-stream": "^0.2.0",
         "gulp-sass": "^4.0.2",
+        "gulp-sizereport": "^1.2.1",
         "gulp-sourcemaps": "^2.6.4",
         "gulp-stylelint": "^8.0.0",
         "gulp-twig": "^1.2.0",
