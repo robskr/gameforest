@@ -304,7 +304,7 @@
 }
 
 .navbar {
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(md) {
     padding-left: 0;
 
     .navbar-toggler {
