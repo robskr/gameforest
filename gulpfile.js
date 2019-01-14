@@ -91,7 +91,7 @@ function scss() {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({
-            includePaths: ['./node_modules/', './src/scss/theme'],
+            includePaths: ['./node_modules/'],
             outputStyle: 'compressed'
         }))
         .pipe(postcss())
