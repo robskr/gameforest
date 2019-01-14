@@ -236,7 +236,12 @@
                     <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-bell"></i></a>
                 </li>
             {% else %}
-                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        <span class="d-none d-md-inline-block">Login</span>
+                        <span class="d-inline-block d-md-none"><i class="ya ya-user"></i></span>
+                    </a>
+                </li>
             {% endif %}
             <li class="nav-item">
                 <a class="nav-link" href="#">

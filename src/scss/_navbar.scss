@@ -306,5 +306,22 @@
 .navbar {
   @include media-breakpoint-down(xs) {
     padding-left: 0;
+
+    .navbar-toggler {
+      z-index: 2;
+    }
+
+    .navbar-brand {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      font-size: 1.375rem;
+      text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+      padding-left: 13px;
+    }
   }
 }
