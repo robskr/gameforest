@@ -305,13 +305,14 @@
 
 .navbar {
   @include media-breakpoint-down(md) {
+    padding-right: 0;
     padding-left: 0;
 
-    .navbar-toggler {
+    &-toggler {
       z-index: 2;
     }
 
-    .navbar-brand {
+    &-brand {
       position: absolute;
       width: 100%;
       padding: 0;
@@ -321,7 +322,11 @@
     }
 
     .navbar-nav .nav-link {
-      padding-left: 13px;
+      padding-right: 13px;
+    }
+
+    &-search .container {
+      padding: 0 10px;
     }
   }
 }
