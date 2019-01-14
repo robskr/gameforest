@@ -274,12 +274,23 @@ function report() {
 
 function report_css() {
     return gulp.src('./dist/css/*')
-        .pipe(sizereport());
+        .pipe(sizereport({
+            'theme.min.css': {
+                'maxSize': 266240
+            }
+        }));
 }
 
 function report_js() {
     return gulp.src('./dist/js/*')
-        .pipe(sizereport());
+        .pipe(sizereport({
+            'theme.bundle.min.js': {
+                'maxSize': 89088
+            },
+            'theme.bundle.js': {
+                'maxSize': 126976
+            }
+        }));
 }
 
 /**
