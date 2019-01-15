@@ -319,6 +319,7 @@
 
   .navbar-toggler {
     z-index: 2;
+    border-right: 1px solid rgba($white, .03);
   }
 
   .navbar-brand {
@@ -348,6 +349,7 @@
       &.show .nav-link,
       .show {
         background-color: rgba($black, .08);
+        box-shadow: -3px 0 0 0 $primary;
       }
 
       &-toggle::after {
@@ -355,23 +357,27 @@
       }
     }
 
+    .dropdown-item {
+      padding-right: .75rem;
+      padding-left: .75rem;
+    }
+
     .dropdown-menu {
       padding-top: 0;
+      padding-bottom: 16px;
       margin: 0;
       box-shadow: none;
-
-      &-item {
-        padding: 6px 13px;
-
-        &:hover {
-          background-color: transparent;
-        }
-      }
     }
   }
 
-  .navbar-search .container {
-    padding: 0 10px;
+  .navbar-search {
+    .container {
+      padding: 0 10px;
+    }
+
+    .search-close {
+      right: 10px;
+    }
   }
 
   .navbar-expand-lg .dropdown-lg .dropdown-menu {
@@ -387,9 +393,9 @@
     background-color: $dark;
     box-shadow: 0 3px 3px rgba($black, .1);
 
-    .nav-link {
+    .nav-item .nav-link {
       padding: 12px 17px 12px 13px;
-      border-top: 1px solid rgba($white, .025);
+      border-top: 1px solid rgba($white, .03);
     }
   }
 }

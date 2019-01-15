@@ -78,6 +78,10 @@
   ul > li:last-child {
     padding-right: 0;
   }
+
+  @include media-breakpoint-down(md) {
+    margin-top: 35px;
+  }
 }
 
 // Footer links
