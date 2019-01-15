@@ -222,6 +222,10 @@
 
   &.active {
     top: $navbar-padding-fixed;
+
+    @include media-breakpoint-down(md) {
+      top: $navbar-padding-fixed - 8;
+    }
   }
 
   .form-control {
@@ -266,7 +270,7 @@
   }
 
   @include media-breakpoint-down(md) {
-    padding-top: 52px;
+    padding-top: $navbar-padding-fixed - 8;
   }
 }
 
@@ -327,10 +331,17 @@
   }
 
   .navbar-nav {
-    .nav-link {
-      display: flex;
-      align-items: center;
-      padding-right: 13px;
+    .nav-item {
+      .nav-link {
+        display: flex;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 8px;
+      }
+
+      &:last-child .nav-link {
+        padding-right: .75rem;
+      }
     }
 
     .dropdown {
@@ -339,17 +350,22 @@
         background-color: rgba($black, .08);
       }
 
-      &-menu {
-        margin: 0;
-        box-shadow: none;
-      }
-
       &-toggle::after {
         margin-left: auto;
       }
+    }
+
+    .dropdown-menu {
+      padding-top: 0;
+      margin: 0;
+      box-shadow: none;
 
       &-item {
         padding: 6px 13px;
+
+        &:hover {
+          background-color: transparent;
+        }
       }
     }
   }
@@ -365,14 +381,15 @@
 
   .navbar-collapse {
     position: absolute;
-    top: 52px;
+    top: $navbar-padding-fixed - 8;
     display: block;
     width: 100%;
     background-color: $dark;
+    box-shadow: 0 3px 3px rgba($black, .1);
 
     .nav-link {
-      padding: 10px 13px;
-      border-top: 1px solid rgba($white, .03);
+      padding: 12px 17px 12px 13px;
+      border-top: 1px solid rgba($white, .025);
     }
   }
 }
