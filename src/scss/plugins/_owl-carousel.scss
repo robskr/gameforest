@@ -58,7 +58,7 @@
 }
 
 .owl-height-100 {
-  height: calc(100vh - 60px);
+  height: 100%;
   background-color: #313133;
 
   .owl-caption-container {
@@ -67,12 +67,6 @@
     @include media-breakpoint-down(md) {
       width: 100%;
     }
-  }
-
-  .owl,
-  .owl-stage,
-  .owl-item {
-    height: calc(100vh - 60px);
   }
 
   img {

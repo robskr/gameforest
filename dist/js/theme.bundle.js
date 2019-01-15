@@ -2058,11 +2058,20 @@ function () {
   _proto._bootstrap = function _bootstrap() {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
+  };
+
+  _proto._fixHeight = function _fixHeight() {
+    var height = window.innerHeight - document.querySelector('.site-header').offsetHeight;
+    document.querySelectorAll('.owl-carousel-item').forEach(function (el) {
+      el.style.height = height + "px";
+    });
   }; // private
 
 
   _proto._load = function _load() {
     this._bootstrap();
+
+    this._fixHeight();
   }; // static
 
 

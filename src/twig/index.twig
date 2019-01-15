@@ -14,7 +14,7 @@
     <section class="p-0 overflow-hidden">
         <div class="owl-carousel" ya-carousel="autoplay: true;height: true">
             {% for carousel in carousel.landing %}
-                <div class="h-100"{{ carousel.color ? ' ya-style="background-color: ' ~ carousel.color : '' }}>
+                <div class="owl-carousel-item"{{ carousel.color ? ' ya-style="background-color: ' ~ carousel.color : '' }}>
                     <img src="{{ carousel.img }}" ya-style="opacity: {{ carousel.opacity|default('0.25') }}" alt="">
                     <div class="owl-caption">
                         <div class="owl-caption-container">
