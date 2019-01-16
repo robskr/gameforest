@@ -205,7 +205,6 @@ function compile() {
             max_preserve_newlines: 0
         }))
         .pipe(gulp.dest(path.dist.html))
-        .pipe(browserSync.stream())
 }
 
 /**
@@ -248,7 +247,8 @@ function browser() {
     return browserSync.init({
         files : [
             path.dist.css    + '/theme.min.css',
-            path.dist.js     + '/theme.bundle.min.js'
+            path.dist.js     + '/theme.bundle.min.js',
+            path.dist.html   + '/*.html'
         ],
         notify: false,
         server: {
