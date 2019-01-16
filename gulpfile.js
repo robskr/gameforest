@@ -91,7 +91,7 @@ function scss() {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({
-            includePaths: ['./node_modules/'],
+            includePaths: ['./node_modules/', './src/scss/theme/'],
             outputStyle: 'compressed'
         }))
         .pipe(postcss())
@@ -218,7 +218,7 @@ function svg() {
         .pipe(iconfontcss({
             fontName: config.font.name,
             path: './src/fonts/icons.sass',
-            targetPath: '../scss/_icons.scss',
+            targetPath: '../scss/theme/_icons.scss',
             fontPath: '../fonts/',
             cssClass: config.font.class
         }))

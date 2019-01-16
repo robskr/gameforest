@@ -340,3 +340,9 @@ $animation-delay: map-merge(
   ),
   $animation-delay
 );
+
+// Grid containers
+$container-max-widths: (
+  sm: 100%,
+  md: 100%
+) !default;
