@@ -37,7 +37,7 @@
     text-transform: uppercase;
 
     @include media-breakpoint-down(xs) {
-      margin-bottom: 10px;
+      margin-bottom: 13px;
     }
   }
 }
@@ -55,6 +55,10 @@
     &:hover {
       text-decoration: none;
       background-color: rgba($white, .02);
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin: 8px 2px 0 0;
     }
   }
 }
