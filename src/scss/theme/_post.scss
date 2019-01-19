@@ -116,6 +116,21 @@
     width: 75%;
     padding-left: 20px;
   }
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+
+    .post-thumbnail {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .post-body {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
 }
 
 // Tags
