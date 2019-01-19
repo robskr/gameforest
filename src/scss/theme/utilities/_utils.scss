@@ -110,3 +110,8 @@
     }
   }
 }
+
+// Fix pagination
+.pagination {
+  flex: wrap;
+}
