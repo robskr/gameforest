@@ -36,6 +36,8 @@
     color: #717275;
 
     &-item {
+      white-space: nowrap;
+
       &::after {
         display: inline-block;
         margin: 0 6px;
