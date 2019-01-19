@@ -65,4 +65,8 @@
       }
     }
   }
+
+  @include media-breakpoint-down(xs) {
+    flex-wrap: wrap;
+  }
 }
