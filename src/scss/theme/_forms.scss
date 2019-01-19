@@ -69,6 +69,10 @@
 // Form inline
 .form-control-inline {
   min-width: 25rem;
+
+  @include media-breakpoint-down(md) {
+    min-width: auto;
+  }
 }
 
 // Dropload
