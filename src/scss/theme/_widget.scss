@@ -15,6 +15,18 @@
     height: 240px;
     @include img-cover;
   }
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 25px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
 // Widget list
