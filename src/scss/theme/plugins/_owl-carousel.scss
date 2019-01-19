@@ -36,6 +36,12 @@
     @include media-breakpoint-down(xs) {
       font-size: $font-size-base;
     }
+
+    @include media-breakpoint-down(md) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &-bottom {
