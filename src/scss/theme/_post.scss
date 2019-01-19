@@ -101,6 +101,11 @@
       }
     }
   }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
 }
 
 // Post medium
