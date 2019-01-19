@@ -52,6 +52,16 @@
       margin-top: -9px;
       margin-left: -1px;
       @include border-radius(0);
+
+      @include media-breakpoint-down(md) {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        background-color: transparent;
+      }
     }
 
     > .dropdown:hover > .dropdown-menu {
@@ -158,6 +168,10 @@
       width: 700px;
       max-width: inherit;
       margin: 0 0 0 -70px;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
     }
   }
 
@@ -390,7 +404,14 @@
 
   .navbar-expand-lg .dropdown-lg .dropdown-menu {
     display: none;
+    height: 100vh;
+    overflow: auto;
     visibility: hidden;
+
+    &.show {
+      display: block;
+      visibility: visible;
+    }
   }
 
   .navbar-collapse {
