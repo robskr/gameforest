@@ -75,7 +75,7 @@
     text-align: center;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     padding-top: 25px;
     padding-bottom: 15px;
     border-top: 1px solid rgba($white, .08);
@@ -94,7 +94,7 @@
   margin-top: 55px;
   border-top: 1px solid rgba($white, .05);
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     margin-top: 0;
     border: 0;
   }
