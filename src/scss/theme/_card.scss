@@ -108,6 +108,10 @@
     i {
       margin-right: 3px;
     }
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
   }
 }
 

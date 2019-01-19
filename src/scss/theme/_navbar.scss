@@ -404,12 +404,12 @@
 
   .navbar-expand-lg .dropdown-lg .dropdown-menu {
     display: none;
-    height: 100vh;
-    overflow: auto;
     visibility: hidden;
 
     &.show {
       display: block;
+      height: 100vh;
+      overflow: auto;
       visibility: visible;
     }
   }
