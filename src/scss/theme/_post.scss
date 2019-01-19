@@ -68,6 +68,10 @@
   .blockquote {
     margin-right: -95px;
     margin-left: -95px;
+
+    @include media-breakpoint-down(md) {
+      margin: 0 -15px;
+    }
   }
 
   .post-thumbnail {
@@ -151,6 +155,10 @@
       background-color: $white;
       border: 1px solid rgba($black, .2);
       box-shadow: 0 1px 3px 0 rgba($black, .08);
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 8px;
     }
   }
 

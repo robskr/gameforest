@@ -41,6 +41,11 @@
       img {
         @include border-radius(50%);
       }
+
+      @include media-breakpoint-down(md) {
+        margin-right: 13px;
+        @include avatar-size($avatar-size-md / 1.25);
+      }
     }
 
     &-meta {
@@ -78,6 +83,12 @@
         &:last-child {
           border: 0;
         }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .media {
+        margin-left: -35px;
       }
     }
   }

@@ -15,10 +15,10 @@
         </div>
     </nav>
 
-    <section class="py-5 border-bottom-dashed">
+    <section class="py-lg-5 border-bottom-dashed">
         <div class="container">
             <div class="row">
-                <div class="col-10 mx-auto">
+                <div class="col-lg-10 mx-auto">
                     {% for blog in blogs %}
                         {% if (blog.url == 'blog-post.html') and (loop.index == 1) %}
                             <div class="post post-single">
@@ -51,8 +51,8 @@
                             <!-- end .post-single -->
                         {% endif %}
                     {% endfor %}
-                    <div class="d-flex align-items-center">
-                        <div class="mr-auto">
+                    <div class="d-md-flex align-items-center">
+                        <div class="mb-4 mb-md-0 mr-auto">
                             <p>send us your feedback</p>
                             <div class="reaction">
                                 <button class="btn btn-link" type="button"><span class="d-inline-block" ya-svg="awesome" data-toggle="tooltip" title="Awesome"></span> <span class="reaction-count">{{ count[0][3] }}</span></button>
@@ -76,10 +76,10 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-lg-5">
         <div class="container">
             <div class="row">
-                <div class="col-10 mx-auto">
+                <div class="col-lg-10 mx-auto">
                     <div id="comments" class="anchor comments">
                         <div class="d-flex align-items-center mb-3">
                             <h5 class="mb-0"><i class="ya ya-comment mr-1"></i> 5 Comments</h5>
@@ -188,10 +188,10 @@
         </div>
     </section>
 
-    <section class="py-5 border-top-dashed">
+    <section class="py-lg-5 border-top-dashed">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto text-center mb-4">
+                <div class="col-11 col-md-8 text-center mx-auto mb-4">
                     <i class="ya ya-time-alarm icon"></i>
                     <h2 class="font-weight-bold">Maybe you would like to read about it</h2>
                     <p class="lead">May indulgence difficulty ham can put especially. Bringing remember for <br>supplied her why was confined.</p>
@@ -200,7 +200,7 @@
             <div class="row">
                 {% for blog in blogs %}
                     {% if loop.index < 4 %}
-                        <div class="col-4">
+                        <div class="col-md-4">
                             <div class="card bg-light">
                                 <a class="card-img" href="{{ blog.url }}">
                                     <img src="{{ blog.thumb }}" alt="">

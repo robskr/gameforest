@@ -21,4 +21,10 @@ button {
   @include media-breakpoint-down(xs) {
     font-size: $font-size-base;
   }
+
+  @include media-breakpoint-down(lg) {
+    br {
+      display: none;
+    }
+  }
 }
