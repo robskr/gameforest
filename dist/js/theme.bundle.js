@@ -685,7 +685,21 @@ function (_Helpers) {
       margin: this.options.margin ? Number(this.options.margin) : 0,
       center: this.options.center ? true : 0,
       autoWidth: this.options.autowidth ? true : 0,
-      slideBy: this.options.slideItem ? Number(this.options.slideItem) : 1
+      slideBy: this.options.slideItem ? Number(this.options.slideItem) : 1,
+      responsive: {
+        0: {
+          items: this.options.xs ? Number(this.options.xs) : 1
+        },
+        720: {
+          items: this.options.sm ? Number(this.options.sm) : 1
+        },
+        991: {
+          items: this.options.md ? Number(this.options.md) : 1
+        },
+        1140: {
+          items: this.options.items ? Number(this.options.items) : 1
+        }
+      }
     });
   }; // private
 
