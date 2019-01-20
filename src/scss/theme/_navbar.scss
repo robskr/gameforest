@@ -438,7 +438,8 @@
     box-shadow: 0 3px 3px rgba($black, .1);
 
     .nav-item .nav-link {
-      padding: 12px 17px 12px 13px;
+      /* stylelint-disable declaration-no-important */
+      padding: 12px 17px 12px 13px !important;
       border-top: 1px solid rgba($white, .03);
     }
   }
