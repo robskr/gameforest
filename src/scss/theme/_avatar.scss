@@ -189,7 +189,8 @@
 
 .is-sticky {
   .avatar-tile {
-    bottom: 6px;
+    /* stylelint-disable-next-line declaration-no-important */
+    bottom: 6px !important;
   }
 
   .avatar-thumbnail {
