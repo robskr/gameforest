@@ -148,6 +148,10 @@
 
   &-sm {
     height: 11.25rem;
+
+    @include media-breakpoint-down(xs) {
+      height: 13rem;
+    }
   }
 }
 
