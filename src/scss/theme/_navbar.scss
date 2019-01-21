@@ -454,3 +454,12 @@
     }
   }
 }
+
+@media (max-width: 380px) {
+  .navbar-brand {
+    width: auto;
+    padding-left: 50px;
+    font-size: 1.325rem;
+    text-align: left;
+  }
+}
