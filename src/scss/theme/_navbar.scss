@@ -130,7 +130,9 @@
 
     .dropdown-title {
       display: block;
+      max-width: 100%;
       margin-bottom: 10px;
+      overflow: hidden;
       font-size: $font-size-xs;
       font-weight: $font-weight-semibold;
       color: $white;

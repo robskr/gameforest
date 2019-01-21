@@ -17,5 +17,10 @@
       font-weight: $font-weight-bold;
       color: rgba($white, .95);
     }
+
+    @include media-breakpoint-down(md) {
+      padding: 10px;
+      margin: 0;
+    }
   }
 }
