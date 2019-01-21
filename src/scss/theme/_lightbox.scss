@@ -13,6 +13,10 @@
   .embed-responsive {
     width: 80%;
     margin: 0 auto;
+
+    @include media-breakpoint-down(md) {
+      width: 90%;
+    }
   }
 
   .owl-carousel {
