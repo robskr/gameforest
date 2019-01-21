@@ -1,6 +1,13 @@
 // Fix Dropdown
 .dropdown {
   display: inline-block;
+
+  .dropdown-item {
+    &:first-child,
+    &:last-child {
+      @include border-radius(0);
+    }
+  }
 }
 
 // Dropdown menu
