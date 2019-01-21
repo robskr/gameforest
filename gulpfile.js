@@ -274,9 +274,9 @@ function report() {
 function report_css() {
     return gulp.src('./dist/css/*')
         .pipe(sizereport({
-            'theme.min.css': {
-                'maxSize': 266240
-            }
+            // 'theme.min.css': {
+            //     'maxSize': 266240
+            // }
         }));
 }
 

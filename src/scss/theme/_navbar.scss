@@ -449,3 +449,17 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .navbar-brand {
+    width: auto;
+    padding-left: 50px;
+    font-size: 1.325rem;
+    text-align: left;
+  }
+
+  .navbar .avatar-xs {
+    width: 2.125rem;
+    height: 2.125rem;
+  }
+}
