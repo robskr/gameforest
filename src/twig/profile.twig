@@ -9,9 +9,12 @@
         <img class="background" src="https://img.youtube.com/vi/715r-8JJhpM/maxresdefault.jpg" alt="" ya-style="opacity: .25">
         <div class="container position-relative">
             <div class="row">
-                <div class="col d-flex align-items-center text-center position-absolute bottom left pl-8">
-                    <h2 class="h4 text-white mb-0 ml-2 pl-8"><i class="ya ya-check bg-primary float-left font-size-xs rounded-circle p-2 mr-2"  data-toggle="tooltip" title="verified user"></i> Nathan Drake</h2>
-                    <div class="ml-auto">
+                <div class="col d-flex flex-column flex-lg-row align-items-center text-center position-absolute bottom left pl-lg-8">
+                    <a class="avatar-thumbnail avatar-lg d-lg-none mb-3 mb-lg-0 border-0" href="#">
+                        <img src="img/user-profile.jpg" alt="">
+                    </a>
+                    <h2 class="h4 text-white mb-0 ml-2 pl-lg-8"><i class="ya ya-check bg-primary float-left font-size-xs rounded-circle p-2 mr-2"  data-toggle="tooltip" title="verified user"></i> Nathan Drake</h2>
+                    <div class="ml-lg-auto my-3 my-lg-0">
                         <a class="btn btn-primary btn-sm btn-icon-left font-weight-semibold" href="#"><i class="ya ya-user-add"></i> Add friend</a>
                         <a class="btn btn-outline-light btn-sm btn-icon-left font-weight-semibold ml-2" href="#"><i class="ya ya-email"></i> Send message</a>
                     </div>
@@ -24,10 +27,10 @@
         <div class="container">
             <div class="row">
                 <div class="col d-flex align-items-center">
-                    <a class="avatar-thumbnail avatar-xl position-absolute" href="#">
+                    <a class="avatar-thumbnail avatar-xl position-absolute d-none d-lg-block" href="#">
                         <img src="img/user-profile.jpg" alt="">
                     </a>
-                    <div class="avatar-fixed">
+                    <div class="avatar-fixed d-none d-lg-block">
                         <a class="avatar-tile" href="#">
                             <img src="img/user-1.jpg" alt="">
                             <div>
@@ -36,17 +39,19 @@
                             </div>
                         </a>
                     </div>
-                    <div class="nav nav-list nav-list-profile">
-                        <a class="nav-item nav-link active" href="#">Timeline</a>
-                        <a class="nav-item nav-link" href="#">Friends (679)</a>
-                        <a class="nav-item nav-link" href="#">Groups</a>
-                        <a class="nav-item nav-link" href="#">Games (38)</a>
-                        <a class="nav-item nav-link" href="#">Images</a>
-                        <a class="nav-item nav-link" href="#">Videos</a>
-                        <a class="nav-item nav-link" href="#">Streams</a>
-                        <a class="nav-item nav-link" href="#">Forums</a>
+                    <div class="nav-scroll">
+                        <div class="nav nav-list nav-list-profile">
+                            <a class="nav-item nav-link active" href="#">Timeline</a>
+                            <a class="nav-item nav-link" href="#">Friends (679)</a>
+                            <a class="nav-item nav-link" href="#">Groups</a>
+                            <a class="nav-item nav-link" href="#">Games (38)</a>
+                            <a class="nav-item nav-link" href="#">Images</a>
+                            <a class="nav-item nav-link" href="#">Videos</a>
+                            <a class="nav-item nav-link" href="#">Streams</a>
+                            <a class="nav-item nav-link" href="#">Forums</a>
+                        </div>
                     </div>
-                    <div class="dropdown ml-auto">
+                    <div class="dropdown d-none d-xl-inline-block ml-auto">
                         <button class="btn btn-default btn-icon" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-gear"></i></button>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="profile-settings.html">Settings</a>
@@ -62,10 +67,10 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-lg-5">
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="col-lg-3 order-2 order-lg-1">
                     <div class="widget mt-4">
                         <div class="widget-header">About me</div>
                         <div class="widget-body">
@@ -112,14 +117,16 @@
                     </div>
                     <!-- end .widget -->
                 </div>
-                <div class="col-7">
+                <div class="col-lg-7 order-1 order-lg-2">
                     <div class="card">
                         <div class="card-header transparent p-0 border-0">
-                            <div class="nav nav-tabs" id="tab" role="tablist">
-                                <a class="nav-item nav-link active" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status" aria-selected="true">Status</a>
-                                <a class="nav-item nav-link" id="multimedia-tab" data-toggle="tab" href="#multimedia" role="tab" aria-controls="multimedia" aria-selected="false"><i class="ya ya-image"></i> Multimedia</a>
-                                <a class="nav-item nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false"><i class="ya ya-player"></i> Video</a>
-                                <a class="nav-item nav-link" id="stream-tab" data-toggle="tab" href="#stream" role="tab" aria-controls="stream" aria-selected="false"><i class="ya ya-camera"></i> Stream</a>
+                            <div class="nav-tab-scroll">
+                                <div class="nav nav-tabs" id="tab" role="tablist">
+                                    <a class="nav-item nav-link active" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status" aria-selected="true">Status</a>
+                                    <a class="nav-item nav-link" id="multimedia-tab" data-toggle="tab" href="#multimedia" role="tab" aria-controls="multimedia" aria-selected="false"><i class="ya ya-image"></i> Multimedia</a>
+                                    <a class="nav-item nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false"><i class="ya ya-player"></i> Video</a>
+                                    <a class="nav-item nav-link" id="stream-tab" data-toggle="tab" href="#stream" role="tab" aria-controls="stream" aria-selected="false"><i class="ya ya-camera"></i> Stream</a>
+                                </div>
                             </div>
                         </div>
                         <form>
@@ -200,7 +207,7 @@
                                     </div>
                                 {% endif %}
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer d-block d-md-flex">
                                 <div class="avatar-stack">
                                     {% for user in users %}
                                         {% if loop.index < 6 %}
@@ -209,7 +216,7 @@
                                     {% endfor %}
                                     <span class="avatar-text"><a href="profile.html">Elizabeth</a>,<a href="profile.html">Venom</a> and more {{post.like }} people like it.</span>
                                 </div>
-                                <div class="ml-auto">
+                                <div class="d-flex d-md-block ml-md-auto mt-3 mt-md-0">
                                     <button class="btn btn-default btn-icon btn-xs mr-1"><i class="ya ya-like"></i> {{ post.like }}</button>
                                     <button class="btn btn-default btn-icon btn-xs"><i class="ya ya-comment"></i> comments ({{ post.comment }})</button>
                                 </div>
@@ -304,8 +311,8 @@
                     <!-- end .card -->
                     <a class="btn btn-outline btn-block btn-sm" href="#" role="button">Load More</a>
                 </div>
-                <div class="col-2">
-                    <div class="widget widget-secondary widget-recommends">
+                <div class="col-lg-2 order-3">
+                    <div class="widget widget-secondary widget-recommends mt-4 mt-lg-0">
                         <div class="widget-header">Recommends</div>
                         <div class="widget-body pb-0">
                             {% for user in users %}
