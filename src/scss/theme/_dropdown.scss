@@ -145,3 +145,10 @@
     }
   }
 }
+
+@include media-breakpoint-down(lg) {
+  .dropdown-toggle-none::after {
+    display: none;
+  }
+}
+

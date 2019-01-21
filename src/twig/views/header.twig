@@ -219,8 +219,8 @@
         <ul class="navbar-nav flex-row d-flex align-items-center">
             {% if page.logged %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle py-0" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="avatar avatar-xs rounded-circle mr-2" src="img/user-1.jpg" alt="">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-none py-0" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="avatar avatar-xs rounded-circle mr-xl-2" src="img/user-1.jpg" alt="">
                         <span class="d-none d-xl-inline-block">Nathan Drake</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -233,7 +233,7 @@
                         <a class="dropdown-item" href="#"><i class="ya ya-logout"></i> Logout</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown d-none d-lg-inline-block">
                     <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ya ya-bell"></i></a>
                 </li>
             {% else %}
