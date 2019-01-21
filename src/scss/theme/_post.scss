@@ -139,7 +139,7 @@
 
     .post-thumbnail {
       display: block;
-      width: 100%;
+      width: 100% !important; /* stylelint-disable-line */
       margin-bottom: 20px;
     }
 
