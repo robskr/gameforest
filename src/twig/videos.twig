@@ -22,7 +22,7 @@
 {% endblock %}
 
 {% block body %}
-    <section class="bg-image py-5" ya-style="background-color: #2e2f2f">
+    <section class="bg-image py-0 py-lg-5" ya-style="background-color: #2e2f2f">
         <img class="background" src="https://img.youtube.com/vi/reAPorQHxNQ/maxresdefault.jpg" alt="">
         <div class="container">
             <div class="row">
@@ -41,7 +41,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <form class="form-inline w-100">
                     <h5 class="h6 text-uppercase font-weight-bold mb-0 pl-1"><i class="ya ya-player mr-2"></i> Recent Videos <span class="font-weight-normal">(429)</span></h5>
-                    <div class="input-group mr-auto ml-4">
+                    <div class="input-group mr-auto ml-md-4 mb-2 mb-md-0 mt-3 mt-md-0">
                         <input type="text" class="form-control form-control-inline" placeholder="Search videos...">
                         <div class="input-group-append">
                             <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
@@ -58,8 +58,8 @@
                             <a class="dropdown-item" href="#">Random</a>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-light btn-icon ml-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random"></i></button>
-                    <div class="btn-group ml-2" role="group">
+                    <button type="button" class="btn btn-light btn-icon ml-1 ml-md-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random"></i></button>
+                    <div class="btn-group ml-auto ml-md-2" role="group">
                         <button type="button" class="btn btn-light btn-icon"><i class="ya ya-list"></i></button>
                         <button type="button" class="btn btn-light btn-icon"><i class="ya ya-table"></i></button>
                     </div>
@@ -73,7 +73,7 @@
         <div class="container">
             <div class="row row-md">
                 {% for video in videos %}
-                    <div class="col-3 card-group mb-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3 card-group mb-sm-4">
                         <div class="card card-sm">
                             <a class="card-img card-img-sm" href="video-post.html">
                                 <img src="https://i1.ytimg.com/vi/{{ video.id }}/mqdefault.jpg" alt="{{ video.title }}">
@@ -95,7 +95,7 @@
                 {% endfor %}
             </div>
             <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-end mt-2">
+                <ul class="pagination justify-content-md-end mt-2">
                     <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
