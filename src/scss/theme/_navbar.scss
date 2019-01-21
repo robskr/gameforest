@@ -371,6 +371,11 @@
   .navbar {
     height: 52px;
     padding: .25rem 0;
+
+    .avatar-xs {
+      width: 2.125rem;
+      height: 2.125rem;
+    }
   }
 
   .navbar-toggler {
@@ -447,19 +452,5 @@
       padding: 12px 17px 12px 13px !important;
       border-top: 1px solid rgba($white, .03);
     }
-  }
-}
-
-@media (max-width: 500px) {
-  .navbar-brand {
-    width: auto;
-    padding-left: 50px;
-    font-size: 1.325rem;
-    text-align: left;
-  }
-
-  .navbar .avatar-xs {
-    width: 2.125rem;
-    height: 2.125rem;
   }
 }
