@@ -49,6 +49,10 @@
     &.img-lg {
       width: 200px;
       height: 110px;
+
+      @include media-breakpoint-down(xs) {
+        width: 150px;
+      }
     }
   }
 }

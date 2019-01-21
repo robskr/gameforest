@@ -34,6 +34,7 @@ section {
   background-size: cover;
 
   @include media-breakpoint-down(md) {
+    .container,
     .container-fluid {
       padding: 0;
     }
