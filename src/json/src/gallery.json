@@ -1,22 +1,76 @@
 {
     "gallery": [
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058988-9196685815-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058985-7361054697-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058984-4450753062-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058982-9922783702-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058980-7283848050-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058977-2775630231-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058974-3631271585-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058973-6072516909-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058972-9299670752-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058966-9319391859-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058948-0519851302-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058947-0120515415-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058944-7481166741-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058942-6140391192-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058940-2720422141-rdr2-.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058778-1019771101-c04a9.jpg" },
-        { "image": "https://static.giantbomb.com/uploads/original/5/56742/3058777-0424853695-5e40a.jpg" }
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/2862190-27046534534_059ff73a97_o.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/0/1992/2862190-27046534534_059ff73a97_o.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/2862191-27379838530_ccef720520_o.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/0/1992/2862191-27379838530_ccef720520_o.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010682-spider-man+ps4+screen+1.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3010682-spider-man+ps4+screen+1.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010683-spider-man+ps4+screen+2.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3010683-spider-man+ps4+screen+2.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010684-spider-man+ps4+screen+3.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3010684-spider-man+ps4+screen+3.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015260-1933084277-KT8quWcf",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015260-1933084277-KT8quWcf"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015261-4155852020-p7vzWmWK",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015261-4155852020-p7vzWmWK"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015262-1249798788-Hah9zjpb",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015262-1249798788-Hah9zjpb"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015263-3838970909-ARoDlvct",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015263-3838970909-ARoDlvct"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015266-1745908185-HeWpIRUO",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015266-1745908185-HeWpIRUO"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028605-nibellion_2018-jun-12+1.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/0/7772/3028605-nibellion_2018-jun-12+1.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028606-nibellion_2018-jun-12+2.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/0/7772/3028606-nibellion_2018-jun-12+2.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028607-nibellion_2018-jun-12+3.jpg",
+            "gallery": "https://static.giantbomb.com/uploads/original/0/7772/3028607-nibellion_2018-jun-12+3.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028608-nibellion_2018-jun-12.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/0/7772/3028608-nibellion_2018-jun-12.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/3029308-spiderman-1.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/0/1992/3029308-spiderman-1.jpg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3031605-4775784493-9HTTFa3F",
+            "large": "https://static.giantbomb.com/uploads/original/13/135472/3031605-4775784493-9HTTFa3F"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/3/39162/3066787-5bf3e6498882b.jpeg",
+            "large": "https://static.giantbomb.com/uploads/original/3/39162/3066787-5bf3e6498882b.jpeg"
+        },
+        {
+            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/3070093-marvel%27s+spider-man_20180912182728.jpg",
+            "large": "https://static.giantbomb.com/uploads/original/0/1992/3070093-marvel%27s+spider-man_20180912182728.png"
+        }
     ]
 }
