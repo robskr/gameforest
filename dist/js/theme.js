@@ -1214,6 +1214,10 @@ function () {
     $('.dropdown > .dropdown-menu > .dropdown').hover(function () {
       $(this).toggleClass('show');
     });
+    $('.dropdown > .dropdown-menu > .dropdown').click(function (e) {
+      e.preventDefault();
+      return false;
+    });
   }; // private
 
 
