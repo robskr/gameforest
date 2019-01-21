@@ -58,7 +58,7 @@ class Navbar {
             $(this).toggleClass('show')
         })
 
-        $('.dropdown > .dropdown-menu > .dropdown').click((e) => {
+        $('.dropdown > .dropdown-menu > .dropdown > .dropdown-item').click((e) => {
             e.preventDefault()
 
             return false

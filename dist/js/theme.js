@@ -1214,7 +1214,7 @@ function () {
     $('.dropdown > .dropdown-menu > .dropdown').hover(function () {
       $(this).toggleClass('show');
     });
-    $('.dropdown > .dropdown-menu > .dropdown').click(function (e) {
+    $('.dropdown > .dropdown-menu > .dropdown > .dropdown-item').click(function (e) {
       e.preventDefault();
       return false;
     });
