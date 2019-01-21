@@ -694,7 +694,7 @@ function (_Helpers) {
           items: this.options.sm ? Number(this.options.sm) : 1
         },
         991: {
-          items: this.options.md ? Number(this.options.md) : 1
+          items: this.options.md ? Number(this.options.md) : this.options.items
         },
         1140: {
           items: this.options.items ? Number(this.options.items) : 1
