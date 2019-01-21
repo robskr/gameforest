@@ -1531,7 +1531,7 @@ function (_Helpers) {
     _this = _Helpers.call(this) || this;
     _this._element = element;
     _this._attr = element.getAttribute(DATA$8);
-    _this._top = 60;
+    _this._top = document.querySelector('.site-header').offsetHeight;
     _this._zindex = 7;
     return _this;
   }

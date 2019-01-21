@@ -18,6 +18,12 @@
     &.active {
       font-weight: $font-weight-semibold;
     }
+
+    @include media-breakpoint-down(md) {
+      padding: 15px 6px;
+      margin: 0;
+      font-size: $font-size-md;
+    }
   }
 
   .dropdown-toggle::after {
@@ -92,16 +98,6 @@
   }
 }
 
-.is-sticky {
-  .avatar-tile {
-    bottom: 6px;
-  }
-
-  .avatar-thumbnail {
-    margin-top: -200px;
-  }
-}
-
 .nav-bottom {
   position: fixed;
   bottom: 0;
@@ -148,5 +144,20 @@
   .nav-divider {
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .nav-scroll {
+    max-width: 100%;
+    height: 54px;
+    overflow: hidden;
+
+    .nav-list {
+      flex-wrap: nowrap;
+      padding-bottom: 2rem;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
   }
 }

@@ -33,7 +33,7 @@ class Sticky extends Helpers {
         super()
         this._element       = element
         this._attr          = element.getAttribute(DATA)
-        this._top           = 60
+        this._top           = document.querySelector('.site-header').offsetHeight
         this._zindex        = 7
     }
 

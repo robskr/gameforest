@@ -186,3 +186,13 @@
 .avatar-xs {
   @include avatar-size($avatar-size-xs);
 }
+
+.is-sticky {
+  .avatar-tile {
+    bottom: 6px;
+  }
+
+  .avatar-thumbnail {
+    margin-top: -200px;
+  }
+}

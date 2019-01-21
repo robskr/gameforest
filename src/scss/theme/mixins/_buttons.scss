@@ -85,6 +85,10 @@
 
   &.btn-lg {
     padding: $btn-rounded-lg;
+
+    @include media-breakpoint-down(md) {
+      padding: 13px 20px;
+    }
   }
 
   &.btn-sm {
