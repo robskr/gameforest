@@ -70,6 +70,10 @@
 .form-control-inline {
   min-width: 25rem;
 
+  @include media-breakpoint-down(lg) {
+    min-width: 2rem;
+  }
+
   @include media-breakpoint-down(md) {
     min-width: auto;
   }
