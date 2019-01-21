@@ -14,10 +14,10 @@
         </div>
     </nav>
 
-    <section class="py-6">
+    <section class="py-lg-6">
         <div class="container">
             <div class="row">
-                <div class="col-10 mx-auto text-center mb-5">
+                <div class="col-11 col-lg-10 mx-auto text-center mb-5">
                     <i class="ya ya-users icon"></i>
                     <h2 class="h1 mb-3">Join to gameforest community!</h2>
                     <p class="mb-0">Comfort produce husband boy her had hearing. Law others theirs passed but wishes you day <br>real less till dear read use dispatched.</p>
@@ -25,8 +25,8 @@
             </div>
             <div class="row">
                 {% for price in pricing %}
-                    <div class="col-4">
-                        <div class="card{% if loop.index != 2 %} card-default{% endif %} text-center mb-0">
+                    <div class="col-md-4">
+                        <div class="card{% if loop.index != 2 %} card-default{% endif %} text-center mb-4 mb-md-0">
                             <div class="card-body pt-4 pb-3">
                                 <h5 class="h6 text-uppercase text-muted">{{ price.title }}</h5>
                                 <div class="display-3 font-weight-semibold{% if loop.index == 2 %} text-primary{% endif %} my-4">{{ price.price }}</div>
@@ -56,18 +56,18 @@
     <section class="border-top py-6">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto text-center mb-5">
+                <div class="col-11 col-lg-8 mx-auto text-center mb-5">
                     <i class="ya ya-question icon"></i>
                     <h2 class="h1 mb-3">Frequently asked questions</h2>
                     <p class="mb-0">Resolution possession discovered surrounded advantages has but few add. Yet walls times <br>spoil put be it reserved contempt rendered smallest.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-11 mx-auto">
+                <div class="col-lg-11 mx-auto">
                     <div class="row">
                         {% for faq in faq[0]['answer'] %}
                             {% if loop.index < 7 %}
-                                <div class="col-6 card-group">
+                                <div class="col-md-6 card-group">
                                     <div class="card mb-4">
                                         <div class="card-body p-4">
                                             <h6 class="card-title">{{ faq.title }}</h6>
