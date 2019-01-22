@@ -689,7 +689,8 @@ function (_Helpers) {
       responsive: {
         0: {
           items: this.options.xs ? Number(this.options.xs) : 1,
-          autoWidth: false
+          autoWidth: false,
+          margin: 0
         },
         720: {
           items: this.options.sm ? Number(this.options.sm) : 1

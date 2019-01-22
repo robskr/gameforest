@@ -61,7 +61,7 @@
       background-color: $body-bg;
 
       @include media-breakpoint-down(md) {
-        padding-left: 20px;
+        padding-left: 15px;
         font-size: 1.275rem;
       }
     }
@@ -183,13 +183,18 @@
   height: 650px;
   background-color: $dark;
   @include img-cover;
+
+  @include media-breakpoint-down(sm) {
+    height: 500px;
+  }
 }
 
 .owl-width-md {
   width: 800px;
 
   @include media-breakpoint-down(sm) {
-    width: auto;
+    width: 100%;
+    margin-left: -1px;
   }
 }
 
