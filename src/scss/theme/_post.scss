@@ -6,6 +6,10 @@
 
   &-title {
     font-weight: $font-weight-bold;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.5rem;
+    }
   }
 
   &-thumbnail {
