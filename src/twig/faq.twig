@@ -1,14 +1,14 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    <section class="bg-image bg-dark py-8" ya-style="background-color: #343538">
+    <section class="bg-image bg-dark py-8 px-4 px-lg-0" ya-style="background-color: #343538">
         <img class="background" src="https://img.youtube.com/vi/K5tRSwd-Sc0/maxresdefault.jpg" alt="">
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div class="col-lg-8">
                     <h2 class="h1 font-weight-bold text-white mb-2">Questions &amp; Answers</h2>
                     <p class="text-light">Improve ashamed married expense bed her comfort pursuit four time took ye your as.</p>
-                    <form class="mt-4 mb-7 pt-2 w-75" action="search.html">
+                    <form class="mt-4 mb-lg-7 pt-2 w-75" action="search.html">
                         <div class="input-group">
                             <input type="text" class="form-control form-control-lg form-control-inline border-0 shadow-none" placeholder="Search for answer...">
                             <div class="input-group-append">
@@ -25,7 +25,7 @@
     <section class="pt-4 pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="col-lg-3 order-2 order-lg-1">
                     <div class="widget widget-secondary">
                         <div class="widget-header">Faq</div>
                         <div class="widget-body p-0">
@@ -39,7 +39,7 @@
                     </div>
                     <!-- end .widget -->
                 </div>
-                <div class="col-9 pl-4">
+                <div class="col-lg-9 order-1 order-lg-2 pl-lg-4">
                     {% for faq in faq %}
                         {% set index = loop.index %}
                         <div id="{{ faq.category|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="accordion mb-4">

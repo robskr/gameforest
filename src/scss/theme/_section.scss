@@ -22,6 +22,10 @@ section {
     path {
       fill: $body-bg;
     }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 }
 
