@@ -31,8 +31,8 @@
                                     </div>
                                 </div>
                                 <div class="post-thumbnail">
-                                   <img class="mb-2 mb-md-3" src="{{ blog.img }}" alt="">
-                                    <div class="owl-carousel" ya-carousel="autoplay: true;margin: 10;dots: false;nav: false;loop: false;items: 3;xs: 2;lg: 3">
+                                   <img class="mb-2" src="{{ blog.img }}" alt="">
+                                    <div class="owl-carousel" ya-carousel="autoplay: true;margin: 8;dots: false;nav: false;loop: false;items: 3;xs: 2;lg: 3">
                                         {% for carousel in blog.gallery %}
                                             <a href="{{ carousel }}" ya-lightbox rel="gallery">
                                                 <img src="{{ carousel }}" alt="{{ blog.title }}">
