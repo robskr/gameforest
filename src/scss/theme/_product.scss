@@ -5,6 +5,13 @@
     background-color: $white;
     border: 1px solid rgba($black, .15);
     @include border-radius(6px);
+
+    @include media-breakpoint-down(md) {
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+      @include border-radius(0);
+    }
   }
 
   &-img {
@@ -14,5 +21,17 @@
     img {
       @include border-radius(6px);
     }
+
+    @include media-breakpoint-down(md) {
+      min-height: 400px;
+
+      img {
+        @include border-radius(0);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin: 0 -15px;
   }
 }
