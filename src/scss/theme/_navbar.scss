@@ -242,7 +242,7 @@
       }
 
       @include media-breakpoint-down(md) {
-        height: 260px;
+        height: 270px;
       }
     }
 
@@ -370,7 +370,7 @@
 
       &.show {
         display: block;
-        height: 100vh;
+        max-height: 400px;
         overflow: auto;
         visibility: visible;
       }
@@ -465,12 +465,20 @@
     top: $navbar-padding-fixed - 8;
     display: block;
     width: 100%;
-    background-color: $dark;
-    box-shadow: 0 3px 3px rgba($black, .1);
+    overflow: auto;
+
+    &.collapse.show {
+      height: 100vh;
+      padding-bottom: $navbar-padding-fixed - 8;
+    }
+
+    .navbar-nav {
+      background-color: $dark;
+      box-shadow: 0 3px 3px rgba($black, .1);
+    }
 
     .nav-item .nav-link {
-      /* stylelint-disable declaration-no-important */
-      padding: 12px 17px 12px 13px !important;
+      padding: 12px 17px 12px 13px !important; /* stylelint-disable-line */
       border-top: 1px solid rgba($white, .03);
     }
   }
