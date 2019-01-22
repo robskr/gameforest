@@ -160,6 +160,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    display: none;
     width: 31.25rem;
     overflow: hidden;
 
@@ -183,8 +184,8 @@
       margin: 0 0 0 -70px;
     }
 
-    @include media-breakpoint-down(md) {
-      display: none;
+    @media (min-width: 1700px) {
+      display: block;
     }
   }
 
