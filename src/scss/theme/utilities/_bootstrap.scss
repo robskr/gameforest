@@ -24,6 +24,10 @@
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: $font-weight-semibold;
+
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-base;
+    }
   }
 }
 

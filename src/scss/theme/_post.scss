@@ -55,6 +55,10 @@
       i {
         margin-right: 5px;
       }
+
+      @include media-breakpoint-down(md) {
+        font-size: $font-size-md;
+      }
     }
   }
 }
@@ -82,7 +86,7 @@
     margin-bottom: 30px;
 
     @include media-breakpoint-down(md) {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
   }
 
@@ -109,6 +113,19 @@
   @include media-breakpoint-down(md) {
     padding-bottom: 20px;
     margin-bottom: 0;
+
+    .post-title {
+      font-size: 1.5rem;
+    }
+
+    .post-body,
+    .post-header {
+      padding: 0 .25rem;
+    }
+
+    .blockquote {
+      margin: 0 -19px;
+    }
   }
 }
 

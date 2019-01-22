@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gameforest Bootstrap Gaming Theme</title>
     <!-- css: plugins -->
+    <link rel="stylesheet" href="plugins/datatables/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/flatpickr/flatpickr.min.css">
     <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="plugins/morris/morris.css">
@@ -1739,6 +1740,8 @@
     <!-- js: theme -->
     <script src="js/theme.bundle.min.js"></script>
     <!-- js: plugins -->
+    <script src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
     <script src="plugins/flatpickr/flatpickr.min.js"></script>
     <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
     <script src="plugins/ckeditor/ckeditor.js"></script>
@@ -1746,6 +1749,8 @@
     <script src="plugins/morris/morris.min.js"></script>
     <script>
         $(function() {
+            $('#table_id').DataTable();
+
             $(".datepicker").flatpickr({
                 allowInput: true
             });
