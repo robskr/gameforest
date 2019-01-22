@@ -49,3 +49,10 @@
   font-size: 85%;
   color: #666c77 !important;
 }
+
+@include media-breakpoint-down(xs) {
+  .h1,
+  h1 {
+    font-size: 1.5rem;
+  }
+}
