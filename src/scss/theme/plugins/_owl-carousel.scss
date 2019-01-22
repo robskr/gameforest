@@ -59,6 +59,11 @@
       font-weight: $font-weight-bold;
       color: darken($headings-color, 10%);
       background-color: $body-bg;
+
+      @include media-breakpoint-down(md) {
+        padding-left: 20px;
+        font-size: 1.275rem;
+      }
     }
   }
 }
@@ -178,6 +183,14 @@
   height: 650px;
   background-color: $dark;
   @include img-cover;
+}
+
+.owl-width-md {
+  width: 800px;
+
+  @include media-breakpoint-down(sm) {
+    width: auto;
+  }
 }
 
 .owl-carousel-centered {

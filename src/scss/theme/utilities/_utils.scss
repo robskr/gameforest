@@ -119,3 +119,10 @@
 .index-2 {
   z-index: 2;
 }
+
+@include media-breakpoint-down(xs) {
+  .px-xs-0 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

@@ -688,7 +688,8 @@ function (_Helpers) {
       slideBy: this.options.slideItem ? Number(this.options.slideItem) : 1,
       responsive: {
         0: {
-          items: this.options.xs ? Number(this.options.xs) : 1
+          items: this.options.xs ? Number(this.options.xs) : 1,
+          autoWidth: false
         },
         720: {
           items: this.options.sm ? Number(this.options.sm) : 1
