@@ -63,7 +63,7 @@
                 <div class="col">
                     <form class="form-inline">
                         <button class="btn btn-light mr-2 d-none d-md-inline-block" type="button" name="button" data-toggle="tooltip" title="refresh" data-placement="bottom"><i class="ya ya-refresh ml-0"></i></button>
-                        <div class="input-group mb-2 mb-md-0">
+                        <div class="input-group d-none d-md-flex mb-2 mb-md-0">
                             <input type="text" class="form-control form-control-inline" placeholder="Search in shop...">
                             <div class="input-group-append">
                                 <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
@@ -119,7 +119,7 @@
                                         <li>Genre: {{ genre[game.genre] }}</li>
                                         <li>Publisher: {{ publishers[game.publisher] }}</li>
                                     </ul>
-                                    <ul class="d-flex list-unstyled mb-0">
+                                    <ul class="d-flex list-unstyled mb-0 text-nowrap">
                                         <li class="border-right mr-2 pr-2"><i class="ya ya-stock text-success mr-1"></i> in stock</li>
                                         <li><i class="ya ya-delivery text-success mr-1"></i> free delivery</li>
                                     </ul>

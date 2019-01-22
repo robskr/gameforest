@@ -150,6 +150,15 @@
   }
 }
 
+.nav-bottom-scroll {
+  height: auto;
+
+  .nav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
 @include media-breakpoint-down(md) {
   .nav-scroll {
     height: 54px;

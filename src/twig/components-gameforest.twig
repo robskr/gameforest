@@ -182,22 +182,24 @@
     {% endfor %}
 
     <div class="nav-bottom">
-        <ul class="nav flex-column sticky">
-            {% for nav in nav[2] %}
-                {% for component in nav %}
-                    {% if component.preview != false %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
-                        </li>
-                    {% endif %}
+        <div class="nav-bottom-scroll">
+            <ul class="nav flex-column">
+                {% for nav in nav[2] %}
+                    {% for component in nav %}
+                        {% if component.preview != false %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
-            <li class="nav-item">
-                <a class="nav-link" href="#">Documentation</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Changelog <span class="badge badge-purple">5.0</span></a>
-            </li>
-        </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Changelog <span class="badge badge-purple">5.0</span></a>
+                </li>
+            </ul>
+        </div>
     </div>
 {% endblock %}
