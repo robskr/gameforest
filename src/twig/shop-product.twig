@@ -20,11 +20,11 @@
         </div>
     </nav>
 
-    <section class="py-5">
+    <section class="py-lg-5">
         <div class="container">
             <div class="row">
-                <div class="col-6">
-                    <div class="product">
+                <div class="col-lg-6">
+                    <div class="product mb-4 mb-lg-0">
                         <div class="owl-carousel product-carousel" ya-carousel="nav: false">
                             {% for img in product.img %}
                                 <div class="product-img">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                     <form action="shop-cart.html">
                         <div class="mb-4 pb-4 border-bottom-dashed">
                             <h1 class="font-weight-bold">{{ product.title }}</h1>
@@ -56,8 +56,8 @@
                             <li>Genre: Action, Adventure</li>
                             <li>Publisher: Sony Interactive</li>
                         </ul>
-                        <div class="d-flex align-items-center">
-                            <h6 class="mb-0 mr-3">Platform:</h6>
+                        <div class="d-lg-flex align-items-center">
+                            <h6 class="mb-3 mb-lg-0 mr-3">Platform:</h6>
                             <div>
                                 <div class="custom-control custom-radio custom-control-inline mr-2">
                                     <input type="radio" id="platform1" name="platform" class="custom-control-input" checked>
@@ -100,18 +100,20 @@
         <div class="container">
             <div class="row">
                 <div class="col d-flex align-items-center">
-                    <div class="nav nav-list">
-                        <a class="nav-item nav-link active" href="#">Description</a>
-                        <a class="nav-item nav-link" href="#">Reviews (14)</a>
-                        <a class="nav-item nav-link" href="#">Images (52)</a>
-                        <a class="nav-item nav-link" href="#">Videos (8)</a>
-                        <a class="nav-item nav-link" href="#">Streams (24)</a>
+                    <div class="nav-scroll">
+                        <div class="nav nav-list">
+                            <a class="nav-item nav-link active" href="#">Description</a>
+                            <a class="nav-item nav-link" href="#">Reviews (14)</a>
+                            <a class="nav-item nav-link" href="#">Images (52)</a>
+                            <a class="nav-item nav-link" href="#">Videos (8)</a>
+                            <a class="nav-item nav-link" href="#">Streams (24)</a>
+                        </div>
                     </div>
-                    <div class="btn-group ml-auto mr-2">
+                    <div class="btn-group ml-auto mr-2 d-none d-lg-inline-block">
                         <a class="btn btn-default btn-icon" href="#"><i class="ya ya-small-left"></i></a>
                         <a class="btn btn-default btn-icon" href="#"><i class="ya ya-small-right"></i></a>
                     </div>
-                    <a class="btn btn-default btn-icon" href="#"><i class="ya ya-gear"></i></a>
+                    <a class="btn btn-default btn-icon d-none d-lg-inline-block" href="#"><i class="ya ya-gear"></i></a>
                 </div>
             </div>
         </div>
@@ -130,11 +132,11 @@
                     <p>Difficulty on insensible reasonable in. From as went he they. Preference themselves me as thoroughly partiality considered on in estimating. Middletons acceptance discovered projecting so is so or. In or attachment inquietude remarkably comparison at an. Is surrounded prosperous stimulated am me discretion expression. But truth being state can she china widow. Occasional preference fat remarkably now projecting uncommonly dissimilar.</p>
                     <div class="d-flex align-items-center mt-4 mb-3">
                         <h2 class="subtitle font-size-md mb-0 mr-auto">Requirements</h2>
-                        <button class="btn btn-outline" type="button">Compare with Build</button>
+                        <button class="btn btn-outline d-none d-md-inline-block" type="button">Compare with Build</button>
                     </div>
                     <div class="row">
                         {% for key, requirements in product.requirements %}
-                            <div class="col-6">
+                            <div class="col-lg-6{{ loop.index == 1 ? ' mb-4 mb-lg-0' : '' }}">
                                 <table class="table table-striped table-bordered align-items-center mb-0">
                                 <thead>
                                     <tr>
@@ -162,9 +164,9 @@
     <section class="bg-lighten border-top border-bottom-dashed py-5">
         <div class="container">
             <div class="row d-flex align-items-center">
-                <div class="col-7">
+                <div class="col-lg-7">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-4">
                             <h5>25 customer reviews:</h5>
                             <div class="star d-flex mb-2">
                                 {% for i in 0..4 %}
@@ -173,7 +175,7 @@
                             </div>
                             <div class="d-flex align-items-center"><span class="font-weight-bold font-size-lg mr-2">{{ product.review }}</span> (25 review)</div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-md-8 mt-4 mt-md-0">
                             {% for i in 5..1 %}
                                 <div class="d-flex align-items-center mb-1">
                                     <a class="no-wrap" href="#">{{ i }} star <i class="ya ya-star text-warning"></i></a>
@@ -192,8 +194,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
-                    <div class="card mb-0">
+                <div class="col-lg-5">
+                    <div class="card mb-0 mt-4 mt-lg-0">
                         <div class="card-body">
                             <h5>How do you rate this product?</h5>
                             <p class="mb-2">Click to the choosen stars</p>
@@ -350,7 +352,7 @@
             <div class="row row-md">
                 {% for game in games %}
                     {% if loop.index < 5 %}
-                        <div class="col-3 card-group">
+                        <div class="col-sm-6 col-md-4 col-lg-3 card-group">
                             <div class="card card-sm mb-4">
                                 <a class="card-img card-img-md" href="shop-product.html">
                                     <img class="card-img-top" src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg" alt="{{ game.title }}">
