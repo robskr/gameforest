@@ -11,15 +11,15 @@
 {% block body %}
     <section class="bg-purple py-0">
         <div class="container">
-            <div class="promo promo-left py-3">
-                <h2 class="promo-title h6 mr-auto"><i class="ya ya-camera mr-2"></i> I am live now and you can help me to earn some new <b><u>trophies</u></b>!</h2>
+            <div class="promo promo-left py-3 text-center text-md-left">
+                <h2 class="promo-title h6 mr-auto mb-3 mb-lg-0"><i class="ya ya-camera mr-2"></i> I am live now and you can help me to earn some new <b><u>trophies</u></b>!</h2>
                 <a class="btn btn-outline-light mr-2" href="#" role="button">Donate me <i class="ya ya-paypal"></i></a>
                 <a class="btn btn-outline-light" href="#" role="button">Subscribe <i class="ya ya-heart"></i></a>
             </div>
         </div>
     </section>
 
-    <section class="bg-image py-5">
+    <section class="bg-image py-0 py-lg-5">
         <img class="background" src="https://img.youtube.com/vi/LDzYR5_TR2o/maxresdefault.jpg" alt="">
         <div class="container">
             <div class="row">
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body pt-0 px-2 pb-2">
+                        <div class="card-body pt-0 px-0 px-md-2 pb-0 pb-md-2">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe src="https://player.twitch.tv/?t=01h10m06s&amp;video=v335875299" frameborder="0" allowfullscreen></iframe>
                             </div>
@@ -52,17 +52,17 @@
     <section class="bg-white border-bottom">
         <div class="container">
             <div class="row">
-                <div class="col text-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
                     <div ya-svg="monkey"></div>
                     <h3 class="h5 font-weight-bold mt-3">Professional Gameplay</h3>
                     <p class="mb-0">Agreement offending commanded my an. Change wholly say why eldest period.</p>
                 </div>
-                <div class="col text-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
                     <div ya-svg="article"></div>
                     <h3 class="h5 font-weight-bold mt-3">Premium Content</h3>
                     <p class="mb-0">Forbade him but savings sending ham general. So play do in near park that pain.</p>
                 </div>
-                <div class="col text-center">
+                <div class="col-md-4 text-center">
                     <div ya-svg="chat"></div>
                     <h3 class="h5 font-weight-bold mt-3">Friendly Community</h3>
                     <p class="mb-0">Parties all clothes removal cheered calling prudent her and residence.</p>
@@ -71,21 +71,21 @@
         </div>
     </section>
 
-    <section class="py-7">
+    <section class="py-5 py-lg-7">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto text-center mb-5">
+                <div class="col-11 col-md-8 mx-auto text-center mb-5">
                     <i class="ya ya-player icon"></i>
                     <h2 class="font-size-lg">Recently Uploaded Gameplays</h2>
                     <p class="mb-0">Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. His boy middleton sir nor engrossed affection excellent.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-11 mx-auto">
+                <div class="col-md-11 mx-auto">
                     <div class="row row-md">
                         {% for video in videos %}
                             {% if loop.index < 4 %}
-                                <div class="col-4 card-group mb-0">
+                                <div class="col-md-4 card-group mb-4 mb-md-0">
                                     <div class="card">
                                         <a class="card-img card-img-lg" href="video-post.html">
                                             <img src="https://i1.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" alt="{{ video.title }}">
@@ -109,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5">
+            <div class="text-center mt-md-5">
                 <a class="btn btn-secondary btn-lg" href="videos.html" role="button">More Videos</a>
             </div>
         </div>
@@ -118,39 +118,41 @@
     <section class="bg-white border-bottom border-top py-0">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4 py-5 m-auto text-left">
-                    <svg viewBox="0 0 48 48" width="48" height="48" style="opacity: .5"><g fill="#111111"><g class="nc-loop_mouse-48"> <path fill="#111111" d="M28,47h-8c-6.1,0-11-4.9-11-11V12C9,5.9,13.9,1,20,1h8c6.1,0,11,4.9,11,11v24C39,42.1,34.1,47,28,47z M20,3 c-5,0-9,4-9,9v24c0,5,4,9,9,9h8c5,0,9-4,9-9V12c0-5-4-9-9-9H20z"></path> <path data-color="color-2" d="M24,22L24,22c-1.1,0-2-0.9-2-2v-6c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v6C26,21.1,25.1,22,24,22 z" transform="translate(0 0)"></path> </g><script>!function(){function t(t){this.element=t,this.wheel=this.element.querySelectorAll("*")[1],this.animationId,this.start=null,this.init()}if(!window.requestAnimationFrame){var i=null;window.requestAnimationFrame=function(t,n){var e=(new Date).getTime();i||(i=e);var a=Math.max(0,16-(e-i)),o=window.setTimeout(function(){t(e+a)},a);return i=e+a,o}}t.prototype.init=function(){var t=this;this.animationId=window.requestAnimationFrame(t.triggerAnimation.bind(t))},t.prototype.reset=function(){var t=this;window.cancelAnimationFrame(t.animationId)},t.prototype.triggerAnimation=function(t){var i=this;this.start||(this.start=t);var n=t-this.start,e=Math.min(n/62.5,12),a=e>6?12-e:e;750>n||(this.start=this.start+750),this.wheel.setAttribute("transform","translate(0 "+a+")");if(document.documentElement.contains(this.element))window.requestAnimationFrame(i.triggerAnimation.bind(i))};var n=document.getElementsByClassName("nc-loop_mouse-48"),e=[];if(n)for(var a=0;n.length>a;a++)!function(i){e.push(new t(n[i]))}(a);document.addEventListener("visibilitychange",function(){"hidden"==document.visibilityState?e.forEach(function(t){t.reset()}):e.forEach(function(t){t.init()})})}();</script></g></svg>
-                    <h2 class="display-5 font-weight-normal text-dark mb-5 mt-4">“I've always loved to play multiplayer fps games.”</h2>
-                    <p class="mb-4">Received the likewise law graceful his. Nor might set along charm now equal green. Pleased yet equally correct colonel not one. Say anxious carried compact conduct ps4 general nay certain.</p>
-                    <hr class="my-5">
-                    <p class="mb-5">Although moreover mistaken kindness me feelings do be marianne. Son over own nay with tell they cold upon are.</p>
-                    <a class="mr-2" href="#"><i class="ya ya-facebook"></i></a>
-                    <a class="mr-2" href="#"><i class="ya ya-twitter"></i></a>
-                    <a class="mr-2" href="#"><i class="ya ya-twitch"></i></a>
-                    <a class="mr-2" href="#"><i class="ya ya-instagram"></i></a>
+                <div class="col-md-4 py-5 m-auto text-left">
+                    <div class="px-1 px-md-0">
+                        <svg viewBox="0 0 48 48" width="48" height="48" style="opacity: .5"><g fill="#111111"><g class="nc-loop_mouse-48"> <path fill="#111111" d="M28,47h-8c-6.1,0-11-4.9-11-11V12C9,5.9,13.9,1,20,1h8c6.1,0,11,4.9,11,11v24C39,42.1,34.1,47,28,47z M20,3 c-5,0-9,4-9,9v24c0,5,4,9,9,9h8c5,0,9-4,9-9V12c0-5-4-9-9-9H20z"></path> <path data-color="color-2" d="M24,22L24,22c-1.1,0-2-0.9-2-2v-6c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v6C26,21.1,25.1,22,24,22 z" transform="translate(0 0)"></path> </g><script>!function(){function t(t){this.element=t,this.wheel=this.element.querySelectorAll("*")[1],this.animationId,this.start=null,this.init()}if(!window.requestAnimationFrame){var i=null;window.requestAnimationFrame=function(t,n){var e=(new Date).getTime();i||(i=e);var a=Math.max(0,16-(e-i)),o=window.setTimeout(function(){t(e+a)},a);return i=e+a,o}}t.prototype.init=function(){var t=this;this.animationId=window.requestAnimationFrame(t.triggerAnimation.bind(t))},t.prototype.reset=function(){var t=this;window.cancelAnimationFrame(t.animationId)},t.prototype.triggerAnimation=function(t){var i=this;this.start||(this.start=t);var n=t-this.start,e=Math.min(n/62.5,12),a=e>6?12-e:e;750>n||(this.start=this.start+750),this.wheel.setAttribute("transform","translate(0 "+a+")");if(document.documentElement.contains(this.element))window.requestAnimationFrame(i.triggerAnimation.bind(i))};var n=document.getElementsByClassName("nc-loop_mouse-48"),e=[];if(n)for(var a=0;n.length>a;a++)!function(i){e.push(new t(n[i]))}(a);document.addEventListener("visibilitychange",function(){"hidden"==document.visibilityState?e.forEach(function(t){t.reset()}):e.forEach(function(t){t.init()})})}();</script></g></svg>
+                        <h2 class="display-5 font-weight-normal text-dark mb-5 mt-4">“I've always loved to play multiplayer fps games.”</h2>
+                        <p class="mb-4">Received the likewise law graceful his. Nor might set along charm now equal green. Pleased yet equally correct colonel not one. Say anxious carried compact conduct ps4 general nay certain.</p>
+                        <hr class="my-5">
+                        <p class="mb-5">Although moreover mistaken kindness me feelings do be marianne. Son over own nay with tell they cold upon are.</p>
+                        <a class="mr-2" href="#"><i class="ya ya-facebook"></i></a>
+                        <a class="mr-2" href="#"><i class="ya ya-twitter"></i></a>
+                        <a class="mr-2" href="#"><i class="ya ya-twitch"></i></a>
+                        <a class="mr-2" href="#"><i class="ya ya-instagram"></i></a>
+                    </div>
                 </div>
-                <div class="col-6 img-cover py-7" style="min-height: 700px;">
+                <div class="col-md-6 img-cover py-7" style="min-height: 700px;">
                     <img src="img/streamer-1.jpg" alt="">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-7">
+    <section class="py-5 py-lg-7">
         <div class="container">
             <div class="row">
-                <div class="col-8 mx-auto text-center mb-5">
+                <div class="col-11 col-md-8 mx-auto text-center mb-5">
                     <i class="ya ya-question icon"></i>
                     <h2 class="font-size-lg">Frequently Asked Questions</h2>
                     <p class="mb-0">Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put be it reserved contempt rendered smallest.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-11 mx-auto">
+                <div class="col-lg-11 mx-auto">
                     <div class="row">
                         {% for faq in faq[0]['answer'] %}
                             {% if loop.index < 5 %}
-                                <div class="col-6 card-group">
+                                <div class="col-md-6 card-group">
                                     <div class="card mb-4">
                                         <div class="card-body p-4">
                                             <h6 class="card-title">{{ faq.title }}</h6>
@@ -182,7 +184,7 @@
         </div>
     </section>
 
-    <section class="text-white py-7 overflow-hidden" data-parallax="scroll" data-image-src="https://static.giantbomb.com/uploads/original/10/103881/2968481-829e977c-3309-4003-b2a7-37bf58110252.png">
+    <section class="text-white py-5 py-lg-7 overflow-hidden" data-parallax="scroll" data-image-src="https://static.giantbomb.com/uploads/original/10/103881/2968481-829e977c-3309-4003-b2a7-37bf58110252.png">
         <div class="overlay" ya-style="background-color: #36373a;opacity: .9"></div>
         <div class="container">
             <div class="row align-items-center">
@@ -192,15 +194,15 @@
                         <p class="font-weight-light text-light">To sure calm much most long me mean. Able rent long in do we. Uncommonly no it announcing melancholy an in.</p>
                     </div>
                     <div class="row">
-                        <div class="col-10 mx-auto">
+                        <div class="col-lg-10 mx-auto">
                             <form class="row row-xs">
-                                <div class="form-group col">
+                                <div class="form-group col-sm-4">
                                     <input type="text" class="form-control form-control-lg shadow-none border-0" placeholder="Enter username">
                                 </div>
-                                <div class="form-group col">
+                                <div class="form-group col-sm-4">
                                     <input type="email" class="form-control form-control-lg shadow-none border-0" placeholder="Enter email">
                                 </div>
-                                <div class="form-group col">
+                                <div class="form-group col-sm-4">
                                     <button type="submit" class="btn btn-outline-light btn-lg btn-block">Sign up for Streams</button>
                                 </div>
                             </form>
