@@ -86,6 +86,10 @@
     .show > .dropdown-item {
       color: rgba($white, .9);
       background-color: rgba($black, .2);
+
+      @include media-breakpoint-down(md) {
+        background-color: transparent;
+      }
     }
 
     .dropdown-item {
@@ -435,6 +439,10 @@
 
       &-toggle::after {
         margin-left: auto;
+      }
+
+      .dropdown.show {
+        background-color: rgba($white, .01) !important; /* stylelint-disable-line */
       }
     }
 

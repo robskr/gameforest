@@ -123,6 +123,10 @@
         transform: scale(1.4);
       }
     }
+
+    @include media-breakpoint-down(sm) {
+      bottom: 25px;
+    }
   }
 }
 
