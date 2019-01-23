@@ -30,12 +30,12 @@
         </div>
     </nav>
 
-    <section class="bg-purple d-flex align-items-center py-8">
+    <section class="bg-purple d-flex align-items-center py-5 py-lg-8">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <h6 class="display-6 font-weight-bold text-white mb-3">Bootstrap components</h6>
-                    <p class="lead text-white opacity-8 mb-7">Built in components for the most popular front-end framework with <br>examples and code snippets for every new component.</p>
+                    <p class="lead text-white opacity-8 mb-3 mb-lg-7">Built in components for the most popular front-end framework with <br>examples and code snippets for every new component.</p>
                 </div>
             </div>
         </div>
@@ -47,18 +47,18 @@
             {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
 
             {% if (docs) and (component.preview != false) %}
-                <section class="{{ loop.first ? 'pt-6 pb-5' : 'py-5' }}">
+                <section class="{{ loop.first ? 'pt-5 pt-lg-6 pb-5' : 'py-lg-5' }}">
                     <div id="{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}" class="container anchor">
                         <div class="row">
                             <div class="col">
-                                <h5 class="h3">{{ docs.title }}</h5>
-                                <p class="mb-4 pb-3">{{ docs.text }}</p>
+                                <h5 class="h3 mb-4 mb-lg-2">{{ docs.title }}</h5>
+                                <p class="mb-4 pb-3 d-none d-lg-block">{{ docs.text }}</p>
                                 {% if custom %}
                                     {{ custom }}
                                 {% else %}
                                     {% for blocks in docs.blocks %}
                                         {% if (blocks.table is empty) and (blocks.code) %}
-                                            <div class="example{% if loop.index != 1 %} mt-5{% endif %}">
+                                            <div class="example{% if loop.index != 1 %} mt-2 mt-lg-5{% endif %}">
                                                 {{ blocks.code }}
                                                 {{ blocks.custom }}
                                             </div>
@@ -83,22 +83,24 @@
     {% endfor %}
 
     <div class="nav-bottom">
-        <ul class="nav flex-column sticky">
-            {% for nav in nav[1] %}
-                {% for component in nav %}
-                    {% if component.preview != false %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
-                        </li>
-                    {% endif %}
+        <div class="nav-bottom-scroll">
+            <ul class="nav flex-column sticky">
+                {% for nav in nav[1] %}
+                    {% for component in nav %}
+                        {% if component.preview != false %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="#{{ component.title|lower|replace({' ': "-", ':': "", '.': ""}) }}">{{ component.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
-            <li class="nav-item">
-                <a class="nav-link" href="#">Documentation</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Changelog <span class="badge badge-purple">5.0</span></a>
-            </li>
-        </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Changelog <span class="badge badge-purple">5.0</span></a>
+                </li>
+            </ul>
+        </div>
     </div>
 {% endblock %}
