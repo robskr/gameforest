@@ -101,12 +101,14 @@
 
 // Dropdown notification
 .dropdown-notification {
+  display: block;
+
   .dropdown-header {
     margin-bottom: 0;
   }
 
   .dropdown-menu {
-    max-width: 330px;
+    width: 330px;
 
     .dropdown-list-meta {
       display: flex;
@@ -149,6 +151,12 @@
       &:hover a {
         display: inline-block;
       }
+    }
+  }
+
+  &.bg-dark {
+    .dropdown-list-text {
+      background-color: #191b1d;
     }
   }
 }
