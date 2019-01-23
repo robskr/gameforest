@@ -53,6 +53,15 @@
                     }
                 });
             });
+
+            $('#product-filter').click(function() {
+                $('body').toggleClass('toggle-filter');
+                $('body').append('<div class="toggle-backdrop"></div>');
+            });
+
+            $(document).on('click', '.toggle-backdrop', function() {
+                $('body').removeClass('toggle-filter');
+            });
         });
     </script>
 {% endblock %}
@@ -92,9 +101,10 @@
         <div class="container">
             <div class="row">
                 <div class="col">
+                    <button id="product-filter" type="button" class="btn btn-outline btn-block d-lg-none mb-3">Filter</button>
                     <form class="form-inline">
                         <button class="btn btn-light mr-2 d-none d-lg-inline-block" type="button" name="button" data-toggle="tooltip" title="refresh" data-placement="bottom"><i class="ya ya-refresh ml-0"></i></button>
-                        <div class="input-group mb-2 mb-md-0">
+                        <div class="input-group d-none d-md-flex mb-2 mb-md-0">
                             <input type="text" class="form-control form-control-inline" placeholder="Search in shop...">
                             <div class="input-group-append">
                                 <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
@@ -126,7 +136,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 d-none d-lg-block">
+                <div class="col-lg-3 d-none d-lg-block product-filter">
                     <div class="widget">
                         <div class="widget-header">Price</div>
                         <div class="widget-body">
