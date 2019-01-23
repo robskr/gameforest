@@ -18,4 +18,8 @@
       min-height: 380px;
     }
   }
+
+  @include media-breakpoint-down(md) {
+    overflow: hidden;
+  }
 }
