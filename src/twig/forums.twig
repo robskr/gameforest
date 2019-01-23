@@ -10,7 +10,7 @@
         </div>
     </nav>
 
-    <section class="py-5">
+    <section class="py-lg-5">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -20,17 +20,17 @@
                             <table class="table table-bordered table-dashed mb-5">
                                 <thead>
                                     <tr>
-                                        <th style="width: 5%;" scope="col"></th>
+                                        <th class="d-none d-md-table-cell" style="width: 5%;" scope="col"></th>
                                         <th scope="col">Forum</th>
                                         <th class="text-center" style="width: 5%" scope="col">Topics</th>
-                                        <th class="text-center" style="width: 5%" scope="col">Replies</th>
-                                        <th style="width: 25%" scope="col">Latest Topic</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 5%" scope="col">Replies</th>
+                                        <th class="d-none d-lg-table-cell" style="width: 25%" scope="col">Latest Topic</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {% for forum in forums %}
                                         <tr{% if forum.locked %} class="table-locked"{% endif %}>
-                                            <td class="table-icon">
+                                            <td class="d-none d-md-table-cell table-icon">
                                                 <i class="{{ forum.icon }}"></i>
                                                 {% if forum.badge %}
                                                     <span class="badge badge-{{ forum.badge.color }}">{{ forum.badge.title }}</span>
@@ -41,8 +41,8 @@
                                                 <p class="table-text">{{ forum.description }}</p>
                                             </td>
                                             <td class="text-center">{{ forum.topics }}</td>
-                                            <td class="text-center">{{ forum.replies }}</td>
-                                            <td>
+                                            <td class="d-none d-sm-table-cell text-center">{{ forum.replies }}</td>
+                                            <td class="d-none d-lg-table-cell">
                                                 {% for topic in topics %}
                                                     {% if loop.index == forum.latest %}
                                                         <a class="table-subtitle" href="forum-post.html">{{ topic.title }}</a>
@@ -61,11 +61,11 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th scope="col"></th>
+                                        <th class="d-none d-md-table-cell" scope="col"></th>
                                         <th scope="col">Forum</th>
                                         <th class="text-center" scope="col">Topics</th>
-                                        <th class="text-center" scope="col">Replies</th>
-                                        <th scope="col">Latest Topic</th>
+                                        <th class="d-none d-sm-table-cell text-center" scope="col">Replies</th>
+                                        <th class="d-none d-lg-table-cell" scope="col">Latest Topic</th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -77,24 +77,24 @@
                         <h6 class="card-header bg-lighten">Login to the account</h6>
                         <div class="card-body">
                             <form class="form-inline">
-                                <div class="input-group mr-sm-2">
+                                <div class="input-group mr-md-2 mb-2 mb-md-0">
                                     <div class="input-group-prepend">
                                         <button type="button" class="btn btn-light btn-icon border-right-0 pr-1"><i class="ya ya-user"></i></button>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Username">
                                 </div>
-                                <div class="input-group mr-sm-3">
+                                <div class="input-group mr-md-3 mb-2 mb-md-0">
                                     <div class="input-group-prepend">
                                         <button type="button" class="btn btn-light btn-icon border-right-0 pr-1"><i class="ya ya-unlock"></i></button>
                                     </div>
                                     <input type="password" class="form-control" placeholder="Password">
                                 </div>
-                                <a class="border-right pr-3 mr-3" href="lost-password.html">I forgot my password</a>
-                                <div class="custom-control custom-checkbox mr-3">
+                                <a class="border-right pr-3 mr-3 d-none d-lg-inline" href="lost-password.html">I forgot my password</a>
+                                <div class="custom-control custom-checkbox mr-md-3">
                                     <input type="checkbox" class="custom-control-input" id="check">
                                     <label class="custom-control-label" for="check">Remember me</label>
                                 </div>
-                                <button type="submit" class="btn btn-outline">Login</button>
+                                <button type="submit" class="btn btn-outline ml-3 ml-md-0">Login</button>
                             </form>
                         </div>
                     </div>
