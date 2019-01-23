@@ -63,15 +63,16 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <table class="table table-striped border align-items-center">
+                    <div class="table-responsive">
+                    <table class="table table-striped border align-items-center table-layout-fixed">
                         <thead>
                             <tr>
-                                <th class="d-none d-lg-table-cell" scope="col" style="width: 15%;text-align: center">Product</th>
-                                <th scope="col" style="width: 40%;">Title</th>
-                                <th scope="col" class="text-center" style="width: 8%;">Price</th>
-                                <th scope="col" class="text-center" style="width: 15%;">Quantity</th>
-                                <th scope="col" class="text-center" style="width: 8%;">Total</th>
-                                <th scope="col" style="width: 8%;"></th>
+                                <th class="d-none d-lg-table-cell text-center" scope="col" style="width: 150px;">Product</th>
+                                <th scope="col" style="width: 450px;">Title</th>
+                                <th scope="col" class="text-center" style="width: 80px;">Price</th>
+                                <th scope="col" class="text-center text-nowrap" style="width: 160px;">Quantity</th>
+                                <th scope="col" class="text-center" style="width: 80px;">Total</th>
+                                <th scope="col" style="width: 80px;"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,8 +80,8 @@
                                 {% if loop.index < 4 %}
                                     <tr>
                                         <td class="d-none d-lg-table-cell text-center">
-                                            <div class="img-cover mx-auto" style="width: 100px; height: 100px">
-                                                <img class="img-thumbnail p-1" src="https://img.youtube.com/vi/{{ game.img }}/maxresdefault.jpg">
+                                            <div class="img-thumbnail rounded d-inline-block">
+                                                <img class="rounded" style="height: 120px" src="{{ game.product }}">
                                             </div>
                                         </td>
                                         <td>
@@ -114,6 +115,7 @@
                             {% endfor %}
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
             <div class="d-md-flex align-items-start mt-2 mb-4 mb-md-4">

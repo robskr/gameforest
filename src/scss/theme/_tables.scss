@@ -10,6 +10,11 @@
   }
 }
 
+// Table fixed layout
+.table-layout-fixed {
+  table-layout: fixed;
+}
+
 // stylelint-disable selector-class-pattern
 .dataTable thead th {
   border-bottom-width: 0;
