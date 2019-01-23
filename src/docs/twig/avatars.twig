@@ -7,13 +7,13 @@
         {
             title: 'Example',
             text: 'Add <code>.avatar</code> to any <code>img</code> element to make it an avatar. For different sizes you can add <code>.avatar-sm</code> or <code>.avatar-md</code> class to the avatar.',
-            code: '<div class="d-flex align-items-end">
+            code: '<div class="d-block d-lg-flex align-items-end">
     <img class="avatar avatar-xl mr-3" src="img/user.jpg" alt="">
-    <img class="avatar avatar-lg mr-3" src="img/user.jpg" alt="">
-    <img class="avatar mr-3" src="img/user-1.jpg" alt="">
-    <img class="avatar avatar-md mr-3" src="img/user-1.jpg" alt="">
-    <img class="avatar avatar-sm mr-3" src="img/user-1.jpg" alt="">
-    <img class="avatar avatar-xs mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar avatar-lg d-none d-md-inline-block mr-3" src="img/user.jpg" alt="">
+    <img class="avatar d-none d-md-inline-block mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar avatar-md d-none d-md-inline-block mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar avatar-sm d-none d-md-inline-block mr-3" src="img/user-1.jpg" alt="">
+    <img class="avatar avatar-xs d-none d-md-inline-block mr-3" src="img/user-1.jpg" alt="">
 </div>',
             pre: '<img class="avatar avatar-xl" src="img/user.jpg" alt="">
 <img class="avatar avatar-lg" src="img/user.jpg" alt="">
@@ -135,24 +135,24 @@
             </div>
         </div>
     </div>
-    <div class="row mt-5">
-        <div class="col card-group">
-            <div class="card card-default mb-0">
+    <div class="row mt-3 mt-lg-5">
+        <div class="col-lg-4 card-group">
+            <div class="card card-default mb-3 mb-lg-0">
                 <h6 class="card-header">{{ docs.blocks[2]['title'] }}</h6>
                 <div class="card-body">
                     {{ docs.blocks[2]['code'] }}
                 </div>
             </div>
         </div>
-        <div class="col card-group">
-            <div class="card card-default mb-0">
+        <div class="col-lg-4 card-group">
+            <div class="card card-default mb-3 mb-lg-0">
                 <h6 class="card-header">{{ docs.blocks[1]['title'] }}</h6>
                 <div class="card-body">
                     {{ docs.blocks[1]['code'] }}
                 </div>
             </div>
         </div>
-        <div class="col card-group">
+        <div class="col-lg-4 card-group">
             <div class="card card-default mb-0">
                 <h6 class="card-header">{{ docs.blocks[4]['title'] }}</h6>
                 <div class="card-body">
@@ -161,16 +161,16 @@
             </div>
         </div>
     </div>
-    <div class="row mt-5">
-        <div class="col">
-            <div class="card card-default mb-0">
+    <div class="row mt-3 mt-lg-5">
+        <div class="col-lg-6">
+            <div class="card card-default mb-3 mb-lg-0">
                 <h6 class="card-header">{{ docs.blocks[5]['title'] }}</h6>
                 <div class="card-body">
                     {{ docs.blocks[5]['code'] }}
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-lg-6">
             <div class="card card-default mb-0">
                 <h6 class="card-header">{{ docs.blocks[6]['title'] }}</h6>
                 <div class="card-body">
