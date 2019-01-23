@@ -45,6 +45,10 @@
       @include media-breakpoint-down(md) {
         margin-right: 13px;
         @include avatar-size($avatar-size-md / 1.425);
+
+        .badge:empty {
+          bottom: -2px;
+        }
       }
     }
 

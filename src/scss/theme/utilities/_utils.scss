@@ -114,6 +114,12 @@
 // Fix pagination
 .pagination {
   flex-wrap: wrap;
+
+  @include media-breakpoint-down(xs) {
+    .page-link {
+      padding: .5rem .65rem;
+    }
+  }
 }
 
 .index-2 {
