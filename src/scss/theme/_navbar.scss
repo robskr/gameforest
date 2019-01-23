@@ -394,7 +394,7 @@
 // Responsive navbar
 @include media-breakpoint-down(md) {
   .navbar {
-    height: 52px;
+    height: $navbar-xs-height;
     padding: .25rem 0;
 
     .avatar-xs {
@@ -405,6 +405,7 @@
 
   .navbar-toggler {
     z-index: 2;
+    height: $navbar-xs-height;
     border-right: 1px solid rgba($white, .03);
   }
 
