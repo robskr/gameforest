@@ -16,6 +16,10 @@
         padding: 0;
         @include border-radius(50%);
       }
+
+      @include media-breakpoint-down(md) {
+        top: 5px;
+      }
     }
   }
 
@@ -418,13 +422,61 @@
     text-align: center;
   }
 
-  .navbar-nav {
+  .navbar-search {
+    .container {
+      padding: 0 10px;
+    }
+
+    .search-close {
+      right: 10px;
+    }
+  }
+
+  .navbar-expand-lg .dropdown-carousel .dropdown-menu.show {
+    height: inherit;
+  }
+
+  .navbar-right {
+    padding-right: .5rem;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      height: $navbar-xs-height;
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      padding: 0;
+      margin-top: 0;
+    }
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: $navbar-padding-fixed - 8;
+    display: block;
+    width: 100%;
+    overflow: auto;
+
+    &.collapse.show {
+      height: 100vh;
+      padding-bottom: $navbar-padding-fixed - 8;
+    }
+
+    .navbar-nav {
+      background-color: $dark;
+      box-shadow: 0 3px 3px rgba($black, .1);
+    }
+
     .nav-item {
       .nav-link {
         display: flex;
         align-items: center;
-        padding-right: 8px;
-        padding-left: 8px;
+        padding: 12px 17px 12px 13px !important; /* stylelint-disable-line */
+        border-top: 1px solid rgba($white, .03);
       }
 
       &:last-child .nav-link {
@@ -452,43 +504,6 @@
       padding-bottom: 10px;
       margin: 0;
       box-shadow: none;
-    }
-  }
-
-  .navbar-search {
-    .container {
-      padding: 0 10px;
-    }
-
-    .search-close {
-      right: 10px;
-    }
-  }
-
-  .navbar-expand-lg .dropdown-carousel .dropdown-menu.show {
-    height: inherit;
-  }
-
-  .navbar-collapse {
-    position: absolute;
-    top: $navbar-padding-fixed - 8;
-    display: block;
-    width: 100%;
-    overflow: auto;
-
-    &.collapse.show {
-      height: 100vh;
-      padding-bottom: $navbar-padding-fixed - 8;
-    }
-
-    .navbar-nav {
-      background-color: $dark;
-      box-shadow: 0 3px 3px rgba($black, .1);
-    }
-
-    .nav-item .nav-link {
-      padding: 12px 17px 12px 13px !important; /* stylelint-disable-line */
-      border-top: 1px solid rgba($white, .03);
     }
   }
 }
