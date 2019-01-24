@@ -378,7 +378,7 @@
                 &lt;li class=&quot;dropdown-list-item&quot;&gt;
                     &lt;span class=&quot;dropdown-list-text text-success&quot;&gt;&lt;i class=&quot;ya ya-calendar&quot;&gt;&lt;/i&gt;&lt;/span&gt;
                     &lt;div class=&quot;dropdown-list-body&quot;&gt;
-                        &lt;a href=&quot;../profile.html&quot;&gt;Nathan Drake&lt;/a&gt; invited you to find the lost chapter event.
+                        &lt;a href=&quot;profile.html&quot;&gt;Nathan Drake&lt;/a&gt; invited you to find the lost chapter event.
                         &lt;div class=&quot;dropdown-list-meta&quot;&gt;
                             &lt;i class=&quot;ya ya-clock&quot;&gt;&lt;/i&gt; 3 hours ago
                             &lt;div class=&quot;ml-auto&quot;&gt;
@@ -402,6 +402,87 @@
                                     Cart
                                 </h4>
                                 <p>Use dropdown cart to list shopping items in a dropdown list.</p>
+                                <div class="dropdown dropdown-cart">
+                                    <button class="btn btn-outline dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Cart
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-header mb-0"><i class="ya ya-shopping-cart"></i> Cart (3)</div>
+                                        <div class="dropdown-scrollable">
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-list-item">
+                                                    <img class="mr-1" src="https://static.giantbomb.com/uploads/scale_small/0/1992/3023135-screen+shot+2018-05-23+at+7.03.13+pm.png" alt="">
+                                                    <div class="pl-2">
+                                                        <a class="font-weight-semibold" href="shop-product.html">Battlefield V</a>
+                                                        <div class="font-size-md text-muted">Quantity: 1</div>
+                                                        <div class="font-size-md font-weight-bold mt-1">$75.00</div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-link cart-remove"><i class="ya ya-trash"></i></button>
+                                                </li>
+                                                <li class="dropdown-list-item">
+                                                    <img class="mr-1" src="https://static.giantbomb.com/uploads/scale_small/11/118833/2996375-91somf876vl._sl1500_.jpg" alt="">
+                                                    <div class="pl-2">
+                                                        <a class="font-weight-semibold" href="shop-product.html">God of War</a>
+                                                        <div class="font-size-md text-muted">Quantity: 1</div>
+                                                        <div class="font-size-md font-weight-bold text-danger mt-1">$49.35</div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-link cart-remove"><i class="ya ya-trash"></i></button>
+                                                </li>
+                                                <li class="dropdown-list-item">
+                                                    <img class="mr-1" src="https://static.giantbomb.com/uploads/scale_small/0/3699/2945734-the+witcher+3+-+wild+hunt.jpg" alt="">
+                                                    <div class="pl-2">
+                                                        <a class="font-weight-semibold" href="shop-product.html">The Witcher 3: Wild Hunt</a>
+                                                        <div class="font-size-md text-muted">Quantity: 1</div>
+                                                        <div class="font-size-md font-weight-bold mt-1">$28.15</div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-link cart-remove"><i class="ya ya-trash"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown-footer bg-lighten pt-0 pb-2 px-0">
+                                            <div class="d-flex border-bottom mb-2 px-3 py-2">
+                                                Total: <span class="ml-auto font-weight-bold text-danger">$149.55</span>
+                                            </div>
+                                            <div class="d-flex px-3">
+                                                <a class="btn btn-outline btn-sm" href="shop-cart.html">View Cart</a>
+                                                <a class="btn btn-primary btn-sm ml-auto" href="shop-checkout.html">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="docs-code">
+                                    <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#cart_code"><i class="ya ya-save"></i></button>
+                                    <pre class="pre"><code id="cart_code" class="twig">&lt;div class=&quot;dropdown dropdown-cart&quot;&gt;
+    &lt;button class=&quot;btn btn-outline dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+        Cart
+    &lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+        &lt;div class=&quot;dropdown-header mb-0&quot;&gt;&lt;i class=&quot;ya ya-shopping-cart&quot;&gt;&lt;/i&gt; Cart (3)&lt;/div&gt;
+        &lt;div class=&quot;dropdown-scrollable&quot;&gt;
+            &lt;ul class=&quot;dropdown-list&quot;&gt;
+                &lt;li class=&quot;dropdown-list-item&quot;&gt;
+                    &lt;img class=&quot;mr-1&quot; src=&quot;...&quot; alt=&quot;&quot;&gt;
+                    &lt;div class=&quot;pl-2&quot;&gt;
+                        &lt;a class=&quot;font-weight-semibold&quot; href=&quot;shop-product.html&quot;&gt;Battlefield V&lt;/a&gt;
+                        &lt;div class=&quot;font-size-md text-muted&quot;&gt;Quantity: 1&lt;/div&gt;
+                        &lt;div class=&quot;font-size-md font-weight-bold mt-1&quot;&gt;$75.00&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-link cart-remove&quot;&gt;&lt;i class=&quot;ya ya-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown-footer bg-lighten pt-0 pb-2 px-0&quot;&gt;
+            &lt;div class=&quot;d-flex border-bottom mb-2 px-3 py-2&quot;&gt;
+                Total: &lt;span class=&quot;ml-auto font-weight-bold text-danger&quot;&gt;$149.55&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;d-flex px-3&quot;&gt;
+                &lt;a class=&quot;btn btn-outline btn-sm&quot; href=&quot;shop-cart.html&quot;&gt;View Cart&lt;/a&gt;
+                &lt;a class=&quot;btn btn-primary btn-sm ml-auto&quot; href=&quot;shop-checkout.html&quot;&gt;Checkout&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
                             </div>
                         </div>
                         <div class="col-3">
