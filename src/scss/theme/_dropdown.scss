@@ -103,10 +103,6 @@
 .dropdown-notification {
   display: block;
 
-  .dropdown-header {
-    margin-bottom: 0;
-  }
-
   .dropdown-menu {
     width: 330px;
     border: $dropdown-border-width solid $dropdown-border-color !important; /* stylelint-disable-line */
@@ -158,12 +154,6 @@
 
 // Dropdown cart
 .dropdown-cart {
-  display: block;
-
-  .dropdown-header {
-    margin-bottom: 0;
-  }
-
   img {
     width: 60px;
   }
@@ -173,44 +163,10 @@
     padding: .5rem 0 !important; /* stylelint-disable-line */
     border: $dropdown-border-width solid $dropdown-border-color !important; /* stylelint-disable-line */
 
-    .dropdown-list-price {
-      margin-top: 5px;
-      font-size: $font-size-md;
-      font-weight: $font-weight-bold;
-    }
-
-    .dropdown-list-meta {
-      display: flex;
-      align-items: center;
-      font-size: $font-size-md;
-      font-style: italic;
-      color: #7b7b7b;
-
-      i {
-        margin-right: 6px;
-      }
-
-      a {
-        display: none;
-        padding: 0 5px;
-        font-size: $font-size-md;
-        border-right: 1px solid rgba($black, .15);
-
-        &:last-child {
-          padding-right: 0;
-          border: 0;
-        }
-      }
-    }
-
     .cart-remove {
       position: absolute;
       top: 8px;
       right: 5px;
-    }
-
-    .dropdown-list-body {
-      padding-left: 10px;
     }
 
     .dropdown-list-item {
@@ -218,19 +174,6 @@
 
       &:last-child {
         border: 0;
-      }
-
-      a {
-        font-weight: $font-weight-semibold;
-        color: lighten($body-color, 1%);
-
-        &:hover {
-          color: $link-hover-color;
-        }
-      }
-
-      &:hover a {
-        display: inline-block;
       }
     }
   }
