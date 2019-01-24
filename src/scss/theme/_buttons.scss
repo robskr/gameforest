@@ -111,9 +111,3 @@
 .btn-rounded {
   @include button-rounded($btn-rounded, $btn-rounded-xs, $btn-rounded-sm, $btn-rounded-lg);
 }
-
-// Button wide
-.btn-wide {
-  padding-right: $btn-padding-wide;
-  padding-left: $btn-padding-wide;
-}
