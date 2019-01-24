@@ -98,7 +98,21 @@
                     </div>
                 {% endfor %}
             </div>
-            <a class="btn btn-outline btn-block mt-2" href="#" role="button">Load More</a>
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination mt-3 mb-0">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item gap"><span class="page-link">...</span></li>
+                    <li class="page-item"><a class="page-link" href="#">25</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <!-- end pagination -->
         </div>
     </section>
 {% endblock %}
