@@ -100,9 +100,10 @@
                             <p class="lead">Documentation and examples for how to use Gameforest’s included navigation components.</p>
                             <hr class="docs-separator my-5">
                             <div class="docs-block">
-                                <h4 id="" class="mb-3 anchor">
+                                <h4 id="example" class="mb-3 anchor">
+                                    Example
                                 </h4>
-                                <p></p>
+                                <p>Add nav with customized tab component like in the example below.</p>
                                 <div class="card">
                                     <div class="card-header transparent p-0 border-0">
                                         <div class="nav-tab-scroll">
@@ -141,8 +142,8 @@
                                     </form>
                                 </div>
                                 <div class="docs-code">
-                                    <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#_code"><i class="ya ya-save"></i></button>
-                                    <pre class="pre"><code id="_code" class="twig">&lt;div class=&quot;card&quot;&gt;
+                                    <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#example_code"><i class="ya ya-save"></i></button>
+                                    <pre class="pre"><code id="example_code" class="twig">&lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-header transparent p-0 border-0&quot;&gt;
         &lt;div class=&quot;nav-tab-scroll&quot;&gt;
             &lt;div class=&quot;nav nav-tabs&quot; id=&quot;tab&quot; role=&quot;tablist&quot;&gt;
@@ -182,15 +183,57 @@
                                 </div>
                             </div>
                             <div class="docs-block">
-                                <h4 id="" class="mb-3 anchor">
+                                <h4 id="tab-section" class="mb-3 anchor">
+                                    Tab Section
                                 </h4>
-                                <p></p>
+                                <p>You are able to use nav tabs with customized section.</p>
+                                <section class="bg-white border-bottom py-0">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col d-flex align-items-center">
+                                                <div class="nav-scroll">
+                                                    <div class="nav nav-list">
+                                                        <a class="nav-item nav-link active" href="#">God of War</a>
+                                                        <a class="nav-item nav-link" href="#">Reviews (14)</a>
+                                                        <a class="nav-item nav-link" href="#">Images</a>
+                                                        <a class="nav-item nav-link" href="#">Videos (8)</a>
+                                                        <a class="nav-item nav-link" href="#">Streams</a>
+                                                        <a class="nav-item nav-link" href="#">Forums</a>
+                                                        <a class="nav-item nav-link" href="#">Shop</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="docs-code">
+                                    <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#tab-section_code"><i class="ya ya-save"></i></button>
+                                    <pre class="pre"><code id="tab-section_code" class="twig">&lt;section class=&quot;bg-white border-bottom py-0&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col d-flex align-items-center&quot;&gt;
+                &lt;div class=&quot;nav-scroll&quot;&gt;
+                    &lt;div class=&quot;nav nav-list&quot;&gt;
+                        &lt;a class=&quot;nav-item nav-link active&quot; href=&quot;#&quot;&gt;God of War&lt;/a&gt;
+                        &lt;a class=&quot;nav-item nav-link&quot; href=&quot;#&quot;&gt;Reviews (14)&lt;/a&gt;
+                        &lt;a class=&quot;nav-item nav-link&quot; href=&quot;#&quot;&gt;Images&lt;/a&gt;
+                        &lt;a class=&quot;nav-item nav-link&quot; href=&quot;#&quot;&gt;Videos (8)&lt;/a&gt;
+                        &lt;a class=&quot;nav-item nav-link&quot; href=&quot;#&quot;&gt;Streams&lt;/a&gt;
+                        &lt;a class=&quot;nav-item nav-link&quot; href=&quot;#&quot;&gt;Forums&lt;/a&gt;
+                        &lt;a class=&quot;nav-item nav-link&quot; href=&quot;#&quot;&gt;Shop&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                                </div>
                             </div>
                         </div>
                         <div class="col-3">
                             <nav class="nav nav-docs flex-column" ya-sticky="top: 100">
-                                <a class="nav-link" href="#"></a>
-                                <a class="nav-link" href="#"></a>
+                                <a class="nav-link" href="#example">Example</a>
+                                <a class="nav-link" href="#tab-section">Tab Section</a>
                                 <a class="nav-link" href="https://getbootstrap.com/docs/4.2/components/navs/" target="_blank">Bootstrap</a>
                                 <div class="divider"></div>
                                 <a class="nav-link" href="https://github.com/yakuthemes/gameforest/issues" target="_blank"><i class="ya ya-help"></i> Report issue</a>
