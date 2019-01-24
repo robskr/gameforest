@@ -1,3 +1,5 @@
+// stylelint-disable declaration-no-important
+
 // Figure
 .figure {
   position: relative;
@@ -30,5 +32,17 @@
 
   @include hover {
     filter: grayscale(0);
+  }
+}
+
+// Img reset
+.img-auto {
+  position: inherit !important;
+  object-fit: inherit !important;
+  height: auto !important;
+
+  img {
+    position: inherit !important;
+    object-fit: inherit !important;
   }
 }
