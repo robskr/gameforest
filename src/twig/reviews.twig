@@ -1,0 +1,243 @@
+{% extends "base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="plugins/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-select/css/bootstrap-select.min.css">
+{% endblock %}
+
+{% block js %}
+    <script src="plugins/flatpickr/flatpickr.min.js"></script>
+    <script src="plugins/easypiechart/jquery.easypiechart.min.js"></script>
+    <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script>
+        $(function() {
+            $('.easypiechart').easyPieChart();
+            $('.selectpicker').selectpicker();
+            $(".datepicker").flatpickr({ allowInput:true, wrap: true });
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <section class="bg-image bg-dark py-5 py-lg-7 px-4 px-lg-0" ya-style="background-color: #343538">
+        <img class="background" src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-md-8 mx-auto">
+                    <div class="easypiechart mx-auto mb-4" data-percent="89" data-scale-color="#e3e3e3" data-bar-color="#5eb404"><span class="easypiechart-text">89%</span></div>
+                    <h1 class="display-5 text-white font-weight-bold">God of War Review</h1>
+                    <p class="text-light">Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive, and teach his son to do the same.</p>
+                    <a class="btn btn-primary btn-shadow btn-rounded btn-lg mt-3 mt-sm-4" href="review-post.html" role="button">Read Review</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-bottom-dashed">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <form class="form-inline w-100">
+                    <h5 class="h6 text-uppercase font-weight-bold mb-0 pl-1 d-block"><i class="ya ya-star-add mr-2"></i> Recent Reviews <span class="font-weight-normal">(48)</span></h5>
+                    <div class="input-group mr-auto ml-md-4 mb-2 mb-md-0 mt-3 mt-md-0">
+                        <input type="text" class="form-control form-control-inline" placeholder="Search reviews...">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Recent reviews
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item active" href="#">Recent</a>
+                            <a class="dropdown-item" href="#">Oldest</a>
+                            <a class="dropdown-item" href="#">Popular</a>
+                            <a class="dropdown-item" href="#">Random</a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-light btn-icon ml-1 ml-md-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random"></i></button>
+                    <div class="btn-group ml-auto ml-md-2" role="group">
+                        <button type="button" class="btn btn-light btn-icon"><i class="ya ya-list"></i></button>
+                        <button type="button" class="btn btn-light btn-icon"><i class="ya ya-table"></i></button>
+                    </div>
+                </form>
+                <!-- end form -->
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="d-md-flex mb-4">
+                        <div class="dropdown mr-auto mb-2 mb-sm-0">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ya ya-tag"></i> All categories
+                            </button>
+                            <div class="dropdown-menu dropdown-height">
+                                <a class="dropdown-item active" href="#">All categories</a>
+                                {% for cat in categories %}
+                                    <a class="dropdown-item" href="#">{{ cat.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Descending
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item active" href="#">Descending</a>
+                                <a class="dropdown-item" href="#">Ascending</a>
+                                <a class="dropdown-item" href="#">Random</a>
+                            </div>
+                        </div>
+                        <div class="btn-group ml-2" role="group">
+                            <button type="button" class="btn btn-light btn-icon" data-toggle="tooltip" title="User reviews"><i class="ya ya-users"></i></button>
+                            <button type="button" class="btn btn-light btn-icon" data-toggle="tooltip" title="Gameforest reviews"><i class="ya ya-time-alarm"></i></button>
+                        </div>
+                    </div>
+                    {% for review in reviews %}
+                        <div class="post post-medium post-review">
+                            <div class="post-thumbnail img-thumbnail rounded">
+                                <img class="post-img rounded" src="{{ review.thumb }}" alt="{{ review.title }}">
+                            </div>
+                            <div class="post-body">
+                                <div class="d-flex align-items-start">
+                                    <h2 class="post-title h3"><a href="review-post.html">{{ review.title }}</a></h2>
+                                    <span class="badge badge-{% if review.score >= 8.0 %}success{% elseif review.score >= 5 %}primary{% elseif review.score >= 2.5 %}danger{% elseif review.score >= 0 %}secondary{% endif %} ml-2">{{ review.score }}</span>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-meta-item"><i class="ya ya-calendar"></i> {{ review.meta.date|date(config.dateformat) }}</span>
+                                    <span class="post-meta-item"><i class="ya ya-clock"></i> {{ review.meta.time }} min read</span>
+                                </div>
+                                <p>{{ review.text|slice(0, 260) }}...</p>
+                                <div class="btn-group">
+                                    {% for plat in review.platforms %}
+                                        {% for platform in platforms %}
+                                            {% if loop.index == plat %}
+                                                <a class="btn btn-light btn-xs" href="#">{{ platform }}</a>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .post -->
+                    {% endfor %}
+
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item gap"><span class="page-link">...</span></li>
+                            <li class="page-item"><a class="page-link" href="#">25</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                    <!-- end pagination -->
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <div class="widget-header">Find Reviews</div>
+                        <form action="search.html">
+                            <div class="form-group mb-3">
+                                <label for="exampleFormControlSelect">Genre:</label>
+                                <select id="exampleFormControlSelect" class="form-control selectpicker" data-size="5">
+                                    {% for genre in genre %}
+                                        <option>{{ genre }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="exampleFormControlSelect2">Platform:</label>
+                                <select id="exampleFormControlSelect2" class="form-control selectpicker" data-size="5">
+                                    <option>All platform</option>
+                                    {% for cat in categories %}
+                                        <option>{{ cat.title }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="exampleSelect">Release date:</label>
+                                <div class="input-group datepicker">
+                                    <div class="input-group-prepend">
+                                        <button type="button" class="btn btn-light border-right-0" data-toggle><i class="ya ya-calendar m-0"></i></button>
+                                    </div>
+                                    <input type="text" class="form-control" id="exampleSelect" data-input>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline btn-block">Advanced filter</button>
+                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        </form>
+                    </div>
+                    <!-- end widget -->
+
+                    <div class="widget">
+                        <div class="widget-header">Recommends</div>
+                        {% for blog in blogs %}
+                            {% if loop.index == 1 %}
+                                <a class="img-cover img-sm mb-3" href="{{ blog.url }}">
+                                    <img src="{{ blog.thumb }}" alt="">
+                                </a>
+                                <div class="widget-body">
+                                    <h5 class="h6"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
+                                    <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
+                                    <p>{{ blog.text|slice(0, 120) }}...</p>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <!-- end widget -->
+
+                    <div class="widget widget-secondary">
+                        <div class="widget-header border-0">Categories</div>
+                        <div class="list-group list-group-flush">
+                            {% for cat in categories %}
+                                <a class="list-group-item{{ loop.index == 2 ? ' active' : '' }}" href="#">{{ cat.title }}{% if cat.posts %} <span class="badge badge-secondary badge-pill">{{ cat.posts }}</span>{% endif %}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- end widget -->
+
+                    <div class="widget mb-0">
+                        <div class="widget-header">Popular on Gameforest</div>
+                        {% for blog in blogs %}
+                            {% if loop.index == 4 %}
+                                <a class="img-cover img-sm mb-3" href="{{ blog.url }}">
+                                    <img src="{{ blog.thumb }}" alt="">
+                                </a>
+                                <div class="widget-body">
+                                    <h5 class="h6"><a href="{{ blog.url }}">{{ blog.title }}</a></h5>
+                                    <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> {{ blog.meta.date|date(config.dateformat) }}</div>
+                                    <p class="mb-2">{{ blog.text|slice(0, 120) }}...</p>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <!-- end widget -->
+
+                    <div class="widget widget-list">
+                        {% for blog in blogs %}
+                            <div class="media">
+                                <a class="img-cover" href="#">
+                                    <img src="{{ blog.thumb }}" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h6><a href="#" title="{{ blog.title }}">{{ blog.title|slice(0, 40) }}...</a></h6>
+                                    <div class="font-size-sm font-weight-semibold text-muted">{{ blog.meta.date|date(config.dateformat) }}</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">Load More</a>
+                    </div>
+                    <!-- end widget -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

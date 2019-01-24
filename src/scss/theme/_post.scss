@@ -140,6 +140,7 @@
   }
 
   .post-thumbnail {
+    position: relative;
     width: 30%;
     min-height: 200px;
     margin-bottom: 0;
@@ -164,6 +165,27 @@
       width: 100%;
       padding-left: 0;
     }
+  }
+}
+
+// Review
+.post-review {
+  .post-thumbnail {
+    width: 22%;
+
+    img {
+      position: inherit;
+    }
+  }
+
+  .post-body {
+    width: 78%;
+  }
+
+  .badge {
+    padding: 5px 13px;
+    font-size: $font-size-sm;
+    @include border-radius(30px);
   }
 }
 

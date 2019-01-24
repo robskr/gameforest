@@ -294,133 +294,414 @@
         </header>
         <!-- end .site-header -->
         <div class="site-content" role="main">
-            <section class="bg-primary">
+            <section class="bg-image bg-dark py-5 py-lg-7 px-4 px-lg-0" ya-style="background-color: #343538">
+                <img class="background" src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
                 <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="d-flex align-items-center py-3">
-                                <h2 class="h3 text-white mb-0 mr-auto">Create topic</h2>
-                                <a class="btn btn-outline-light" href="forums.html" role="button">Back to forum</a>
-                            </div>
+                    <div class="row align-items-center text-center">
+                        <div class="col-md-8 mx-auto">
+                            <div class="easypiechart mx-auto mb-4" data-percent="89" data-scale-color="#e3e3e3" data-bar-color="#5eb404"><span class="easypiechart-text">89%</span></div>
+                            <h1 class="display-5 text-white font-weight-bold">God of War Review</h1>
+                            <p class="text-light">Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive, and teach his son to do the same.</p>
+                            <a class="btn btn-primary btn-shadow btn-rounded btn-lg mt-3 mt-sm-4" href="review-post.html" role="button">Read Review</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <nav class="bg-white border-bottom" aria-label="breadcrumb">
+            <section class="border-bottom-dashed">
                 <div class="container">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item"><a href="forums.html">Forums</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Create</li>
-                    </ol>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <form class="form-inline w-100">
+                            <h5 class="h6 text-uppercase font-weight-bold mb-0 pl-1 d-block"><i class="ya ya-star-add mr-2"></i> Recent Reviews <span class="font-weight-normal">(48)</span></h5>
+                            <div class="input-group mr-auto ml-md-4 mb-2 mb-md-0 mt-3 mt-md-0">
+                                <input type="text" class="form-control form-control-inline" placeholder="Search reviews...">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-light border-left-0"><i class="ya ya-search m-0"></i></button>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Recent reviews
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item active" href="#">Recent</a>
+                                    <a class="dropdown-item" href="#">Oldest</a>
+                                    <a class="dropdown-item" href="#">Popular</a>
+                                    <a class="dropdown-item" href="#">Random</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-light btn-icon ml-1 ml-md-2" data-toggle="tooltip" title="random" data-placement="bottom"><i class="ya ya-random"></i></button>
+                            <div class="btn-group ml-auto ml-md-2" role="group">
+                                <button type="button" class="btn btn-light btn-icon"><i class="ya ya-list"></i></button>
+                                <button type="button" class="btn btn-light btn-icon"><i class="ya ya-table"></i></button>
+                            </div>
+                        </form>
+                        <!-- end form -->
+                    </div>
                 </div>
-            </nav>
-            <section class="py-lg-5">
+            </section>
+            <section>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-9">
-                            <div class="form-group pb-1">
-                                <label for="title">Topic Title</label>
-                                <input type="text" class="form-control" id="title" placeholder="Enter title" required>
-                                <small class="form-text text-muted">Title of the topic what will be visible in forum (max 50 character).</small>
-                            </div>
-                            <div class="form-group pb-1">
-                                <label for="description">Short Description</label>
-                                <input type="text" class="form-control" id="description" placeholder="Enter description">
-                            </div>
-                            <div class="form-group ckeditor ckeditor-lg">
-                                <textarea name="content" id="editor"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="row row-md mb-3">
-                                <div class="col-6">
-                                    <button type="button" class="btn btn-outline btn-block">Preview</button>
+                            <div class="d-md-flex mb-4">
+                                <div class="dropdown mr-auto mb-2 mb-sm-0">
+                                    <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="ya ya-tag"></i> All categories
+                                    </button>
+                                    <div class="dropdown-menu dropdown-height">
+                                        <a class="dropdown-item active" href="#">All categories</a>
+                                        <a class="dropdown-item" href="#">Playstation 4</a>
+                                        <a class="dropdown-item" href="#">Xbox One</a>
+                                        <a class="dropdown-item" href="#">PC</a>
+                                        <a class="dropdown-item" href="#">Steam</a>
+                                        <a class="dropdown-item" href="#">Rockstar</a>
+                                        <a class="dropdown-item" href="#">CD Project</a>
+                                        <a class="dropdown-item" href="#">Activision</a>
+                                        <a class="dropdown-item" href="#">BioWare</a>
+                                    </div>
                                 </div>
-                                <div class="col-6">
-                                    <button type="button" class="btn btn-primary btn-block" ya-notify="alert: success;align: bottom-right" ya-title="You have successfully added a new topic!">Publish...</button>
+                                <div class="dropdown">
+                                    <button class="btn btn-light btn-icon-left dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Descending
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item active" href="#">Descending</a>
+                                        <a class="dropdown-item" href="#">Ascending</a>
+                                        <a class="dropdown-item" href="#">Random</a>
+                                    </div>
+                                </div>
+                                <div class="btn-group ml-2" role="group">
+                                    <button type="button" class="btn btn-light btn-icon" data-toggle="tooltip" title="User reviews"><i class="ya ya-users"></i></button>
+                                    <button type="button" class="btn btn-light btn-icon" data-toggle="tooltip" title="Gameforest reviews"><i class="ya ya-time-alarm"></i></button>
                                 </div>
                             </div>
-                            <div class="form-group mb-3">
-                                <label>Image</label>
-                                <div class="dropload">
-                                    <div>
-                                        <i class="ya ya-image-add"></i>
-                                        <p class="dropload-text">Add image</p>
+                            <div class="post post-medium post-review">
+                                <div class="post-thumbnail img-thumbnail rounded">
+                                    <img class="post-img rounded" src="https://static.giantbomb.com/uploads/original/11/118833/2996375-91somf876vl._sl1500_.jpg" alt="God of War">
+                                </div>
+                                <div class="post-body">
+                                    <div class="d-flex align-items-start">
+                                        <h2 class="post-title h3"><a href="review-post.html">God of War</a></h2>
+                                        <span class="badge badge-success ml-2">8.4</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> September 10, 2018</span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> 5 min read</span>
+                                    </div>
+                                    <p>Debating me breeding be answered an he. Spoil event was words her off cause any. Tears woman which no is world miles woody. Wished be do mutual except in effect answer. Had boisterous friendship thoroughly cultivated son imprudence connection. Windows because ...</p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-light btn-xs" href="#">PS4</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mb-3">
-                                <label for="exampleFormControlSelect1">Forum</label>
-                                <select id="exampleFormControlSelect1" class="form-control selectpicker w-100">
-                                    <option>Select forum</option>
-                                    <option>General</option>
-                                    <option>Platforms</option>
-                                </select>
+                            <!-- end .post -->
+                            <div class="post post-medium post-review">
+                                <div class="post-thumbnail img-thumbnail rounded">
+                                    <img class="post-img rounded" src="https://static.giantbomb.com/uploads/original/0/1992/3023135-screen+shot+2018-05-23+at+7.03.13+pm.png" alt="Battlefield V">
+                                </div>
+                                <div class="post-body">
+                                    <div class="d-flex align-items-start">
+                                        <h2 class="post-title h3"><a href="review-post.html">Battlefield V</a></h2>
+                                        <span class="badge badge-primary ml-2">7.6</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> September 05, 2018</span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> 30 min read</span>
+                                    </div>
+                                    <p>Promotion an ourselves up otherwise my. High what each snug rich far yet easy. In companions inhabiting mr principles at insensible do. Heard their sex hoped enjoy vexed child for. Prosperous so occasional assistance it discovered especially no. Provision of h...</p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-light btn-xs" href="#">PC</a>
+                                        <a class="btn btn-light btn-xs" href="#">PS4</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group mb-3">
-                                <label for="exampleFormControlSelect2">Author</label>
-                                <select id="exampleFormControlSelect2" class="form-control selectpicker" data-size="5">
-                                    <option>admin</option>
-                                    <option>Nathan Drake</option>
-                                    <option>Venom</option>
-                                    <option>Elizabeth</option>
-                                    <option>Trevor</option>
-                                    <option>Clark Kent</option>
-                                    <option>Aragorn</option>
-                                    <option>Michael</option>
-                                    <option>Max Payne</option>
-                                    <option>Shroud</option>
-                                    <option>Lara Croft</option>
-                                    <option>punisher</option>
-                                    <option>celebro</option>
-                                    <option>Hitman</option>
-                                    <option>Enigma</option>
-                                </select>
+                            <!-- end .post -->
+                            <div class="post post-medium post-review">
+                                <div class="post-thumbnail img-thumbnail rounded">
+                                    <img class="post-img rounded" src="https://static.giantbomb.com/uploads/scale_small/5/56742/3018545-3469813732-redde.jpg" alt="Red Dead Redemption 2">
+                                </div>
+                                <div class="post-body">
+                                    <div class="d-flex align-items-start">
+                                        <h2 class="post-title h3"><a href="review-post.html">Red Dead Redemption 2</a></h2>
+                                        <span class="badge badge-danger ml-2">4.5</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> September 10, 2018</span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> 17 min read</span>
+                                    </div>
+                                    <p>Ever man are put down his very. And marry may table him avoid. Hard sell it were into it upon. He forbade affixed parties of assured to me windows. Happiness him nor she disposing provision. Add astonished principles precaution yet friendship stimulated litera...</p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-light btn-xs" href="#">PSN</a>
+                                        <a class="btn btn-light btn-xs" href="#">PS4</a>
+                                        <a class="btn btn-light btn-xs" href="#">Xbox One</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group mb-3">
-                                <label for="exampleFormControlSelect3">Publish On</label>
-                                <div class="row row-xs">
-                                    <div class="col-6">
+                            <!-- end .post -->
+                            <div class="post post-medium post-review">
+                                <div class="post-thumbnail img-thumbnail rounded">
+                                    <img class="post-img rounded" src="https://static.giantbomb.com/uploads/original/0/3699/3027282-anthem+v1.jpg" alt="Anthem">
+                                </div>
+                                <div class="post-body">
+                                    <div class="d-flex align-items-start">
+                                        <h2 class="post-title h3"><a href="review-post.html">Anthem</a></h2>
+                                        <span class="badge badge-success ml-2">8.3</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> August 29, 2018</span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> 48 min read</span>
+                                    </div>
+                                    <p>Lose eyes get fat shew. Winter can indeed letter oppose way change tended now. So is improve my charmed picture exposed adapted demands. Received had end produced prepared diverted strictly off man branched. Known ye money so large decay voice there to. Preser...</p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-light btn-xs" href="#">PC</a>
+                                        <a class="btn btn-light btn-xs" href="#">Steam</a>
+                                        <a class="btn btn-light btn-xs" href="#">Xbox One</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .post -->
+                            <div class="post post-medium post-review">
+                                <div class="post-thumbnail img-thumbnail rounded">
+                                    <img class="post-img rounded" src="https://static.giantbomb.com/uploads/scale_small/0/3699/2945734-the+witcher+3+-+wild+hunt.jpg" alt="The Witcher 3: Wild Hunt">
+                                </div>
+                                <div class="post-body">
+                                    <div class="d-flex align-items-start">
+                                        <h2 class="post-title h3"><a href="review-post.html">The Witcher 3: Wild Hunt</a></h2>
+                                        <span class="badge badge-danger ml-2">3.3</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> August 23, 2018</span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> 32 min read</span>
+                                    </div>
+                                    <p>Affronting everything discretion men now own did. Still round match we to. Frankness pronounce daughters remainder extensive has but. Happiness cordially one determine concluded fat. Plenty season beyond by hardly giving of. Consulted or acuteness dejection an...</p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-light btn-xs" href="#">Xbox One</a>
+                                        <a class="btn btn-light btn-xs" href="#">PC</a>
+                                        <a class="btn btn-light btn-xs" href="#">PS4</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .post -->
+                            <div class="post post-medium post-review">
+                                <div class="post-thumbnail img-thumbnail rounded">
+                                    <img class="post-img rounded" src="https://static.giantbomb.com/uploads/scale_small/0/3699/2463980-grand+theft+auto+v.jpg" alt="Grand Theft Auto V">
+                                </div>
+                                <div class="post-body">
+                                    <div class="d-flex align-items-start">
+                                        <h2 class="post-title h3"><a href="review-post.html">Grand Theft Auto V</a></h2>
+                                        <span class="badge badge-primary ml-2">6.0</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> August 23, 2018</span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> 12 min read</span>
+                                    </div>
+                                    <p>Sussex result matter any end see. It speedily me addition weddings vicinity in pleasure. Happiness commanded an conveying breakfast in. Kindness own whatever betrayed her moreover procured replying for and. Proposal indulged no do do sociable he throwing settl...</p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-light btn-xs" href="#">Steam</a>
+                                        <a class="btn btn-light btn-xs" href="#">Xbox One</a>
+                                        <a class="btn btn-light btn-xs" href="#">PC</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .post -->
+                            <div class="post post-medium post-review">
+                                <div class="post-thumbnail img-thumbnail rounded">
+                                    <img class="post-img rounded" src="https://static.giantbomb.com/uploads/original/8/82063/2941053-img_4151ixywp.jpg" alt="Far Cry 5">
+                                </div>
+                                <div class="post-body">
+                                    <div class="d-flex align-items-start">
+                                        <h2 class="post-title h3"><a href="review-post.html">Far Cry 5</a></h2>
+                                        <span class="badge badge-primary ml-2">7.1</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> August 23, 2018</span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> 5 min read</span>
+                                    </div>
+                                    <p>Consulted he eagerness unfeeling deficient existence of. Calling nothing end fertile for venture way boy. Esteem spirit temper too say adieus who direct esteem. It esteems luckily mr or picture placing drawing no. Apartments frequently or motionless on reasona...</p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-light btn-xs" href="#">PS4</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .post -->
+                            <div class="post post-medium post-review">
+                                <div class="post-thumbnail img-thumbnail rounded">
+                                    <img class="post-img rounded" src="https://static.giantbomb.com/uploads/scale_small/8/87790/2955325-box_pubg.png" alt="PlayerUnknown's Battlegrounds">
+                                </div>
+                                <div class="post-body">
+                                    <div class="d-flex align-items-start">
+                                        <h2 class="post-title h3"><a href="review-post.html">PlayerUnknown's Battlegrounds</a></h2>
+                                        <span class="badge badge-primary ml-2">7.1</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="post-meta-item"><i class="ya ya-calendar"></i> August 23, 2018</span>
+                                        <span class="post-meta-item"><i class="ya ya-clock"></i> 5 min read</span>
+                                    </div>
+                                    <p>Sportsman delighted improving dashwoods gay instantly happiness six. Ham now amounted absolute not mistaken way pleasant whatever. At an these still no dried folly stood thing. Rapid it on hours hills it seven years. If polite he active county in spirit an....</p>
+                                    <div class="btn-group">
+                                        <a class="btn btn-light btn-xs" href="#">PS4</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .post -->
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item gap"><span class="page-link">...</span></li>
+                                    <li class="page-item"><a class="page-link" href="#">25</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                            <!-- end pagination -->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="widget">
+                                <div class="widget-header">Find Reviews</div>
+                                <form action="search.html">
+                                    <div class="form-group mb-3">
+                                        <label for="exampleFormControlSelect">Genre:</label>
+                                        <select id="exampleFormControlSelect" class="form-control selectpicker" data-size="5">
+                                            <option>All</option>
+                                            <option>Action & Shooter</option>
+                                            <option>Action</option>
+                                            <option>Adventure</option>
+                                            <option>Arcade & Platform</option>
+                                            <option>Casual</option>
+                                            <option>Early Access</option>
+                                            <option>Economy</option>
+                                            <option>Fighting</option>
+                                            <option>Horror</option>
+                                            <option>Indie</option>
+                                            <option>Massively Multiplayer</option>
+                                            <option>Puzzle</option>
+                                            <option>Racing</option>
+                                            <option>RPG</option>
+                                            <option>Simulation</option>
+                                            <option>Sports</option>
+                                            <option>Stealth</option>
+                                            <option>Strategy</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="exampleFormControlSelect2">Platform:</label>
+                                        <select id="exampleFormControlSelect2" class="form-control selectpicker" data-size="5">
+                                            <option>All platform</option>
+                                            <option>Playstation 4</option>
+                                            <option>Xbox One</option>
+                                            <option>PC</option>
+                                            <option>Steam</option>
+                                            <option>Rockstar</option>
+                                            <option>CD Project</option>
+                                            <option>Activision</option>
+                                            <option>BioWare</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="exampleSelect">Release date:</label>
                                         <div class="input-group datepicker">
                                             <div class="input-group-prepend">
                                                 <button type="button" class="btn btn-light border-right-0" data-toggle><i class="ya ya-calendar m-0"></i></button>
                                             </div>
-                                            <input type="text" class="form-control" id="exampleSelect3" data-input>
+                                            <input type="text" class="form-control" id="exampleSelect" data-input>
                                         </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="input-group timepicker">
-                                            <div class="input-group-prepend">
-                                                <button type="button" class="btn btn-light border-right-0" data-toggle><i class="ya ya-clock m-0"></i></button>
-                                            </div>
-                                            <input type="text" class="form-control" id="exampleSelect4" data-input>
-                                        </div>
+                                    <button type="button" class="btn btn-outline btn-block">Advanced filter</button>
+                                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                </form>
+                            </div>
+                            <!-- end widget -->
+                            <div class="widget">
+                                <div class="widget-header">Recommends</div>
+                                <a class="img-cover img-sm mb-3" href="blog-post.html">
+                                    <img src="https://img.youtube.com/vi/PfQ8cOyuE1A/maxresdefault.jpg" alt="">
+                                </a>
+                                <div class="widget-body">
+                                    <h5 class="h6"><a href="blog-post.html">Battle royale games explained what could be the next big hit</a></h5>
+                                    <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> September 10, 2018</div>
+                                    <p>Debating me breeding be answered an he. Spoil event was words her off cause any. Tears woman which no is world miles woo...</p>
+                                </div>
+                            </div>
+                            <!-- end widget -->
+                            <div class="widget widget-secondary">
+                                <div class="widget-header border-0">Categories</div>
+                                <div class="list-group list-group-flush">
+                                    <a class="list-group-item" href="#">Playstation 4 <span class="badge badge-secondary badge-pill">41</span></a>
+                                    <a class="list-group-item active" href="#">Xbox One</a>
+                                    <a class="list-group-item" href="#">PC <span class="badge badge-secondary badge-pill">12</span></a>
+                                    <a class="list-group-item" href="#">Steam <span class="badge badge-secondary badge-pill">25</span></a>
+                                    <a class="list-group-item" href="#">Rockstar</a>
+                                    <a class="list-group-item" href="#">CD Project</a>
+                                    <a class="list-group-item" href="#">Activision <span class="badge badge-secondary badge-pill">18</span></a>
+                                    <a class="list-group-item" href="#">BioWare</a>
+                                </div>
+                            </div>
+                            <!-- end widget -->
+                            <div class="widget mb-0">
+                                <div class="widget-header">Popular on Gameforest</div>
+                                <a class="img-cover img-sm mb-3" href="blog-post.html">
+                                    <img src="https://img.youtube.com/vi/v2YvZCjieR0/maxresdefault.jpg" alt="">
+                                </a>
+                                <div class="widget-body">
+                                    <h5 class="h6"><a href="blog-post.html">The Witcher 3: Don't Miss This Hidden Contract in Blood and Wine</a></h5>
+                                    <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> August 29, 2018</div>
+                                    <p class="mb-2">Lose eyes get fat shew. Winter can indeed letter oppose way change tended now. So is improve my charmed picture exposed ...</p>
+                                </div>
+                            </div>
+                            <!-- end widget -->
+                            <div class="widget widget-list">
+                                <div class="media">
+                                    <a class="img-cover" href="#">
+                                        <img src="https://img.youtube.com/vi/PfQ8cOyuE1A/maxresdefault.jpg" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h6><a href="#" title="Battle royale games explained what could be the next big hit">Battle royale games explained what could...</a></h6>
+                                        <div class="font-size-sm font-weight-semibold text-muted">September 10, 2018</div>
                                     </div>
                                 </div>
+                                <div class="media">
+                                    <a class="img-cover" href="#">
+                                        <img src="https://img.youtube.com/vi/gJ56BJ-Ba9E/maxresdefault.jpg" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h6><a href="#" title="BioWare's Anthem Shows An Exciting New Direction For The Studio">BioWare's Anthem Shows An Exciting New D...</a></h6>
+                                        <div class="font-size-sm font-weight-semibold text-muted">September 05, 2018</div>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="img-cover" href="#">
+                                        <img src="https://img.youtube.com/vi/SG4hoev5uaI/maxresdefault.jpg" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h6><a href="#" title="New Red Dead Redemption 2 Character Art Appears As Massive Billboards">New Red Dead Redemption 2 Character Art ...</a></h6>
+                                        <div class="font-size-sm font-weight-semibold text-muted">September 10, 2018</div>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="img-cover" href="#">
+                                        <img src="https://img.youtube.com/vi/v2YvZCjieR0/maxresdefault.jpg" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h6><a href="#" title="The Witcher 3: Don't Miss This Hidden Contract in Blood and Wine">The Witcher 3: Don't Miss This Hidden Co...</a></h6>
+                                        <div class="font-size-sm font-weight-semibold text-muted">August 29, 2018</div>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="img-cover" href="#">
+                                        <img src="https://img.youtube.com/vi/IzltYVmocOM/maxresdefault.jpg" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h6><a href="#" title="Prey Adds A Horrifying Take On Hide-And-Seek This Summer">Prey Adds A Horrifying Take On Hide-And-...</a></h6>
+                                        <div class="font-size-sm font-weight-semibold text-muted">August 23, 2018</div>
+                                    </div>
+                                </div>
+                                <a class="btn btn-outline btn-block btn-sm mt-2" href="#" role="button">Load More</a>
                             </div>
-                            <div class="form-group mb-3">
-                                <label>Access</label>
-                                <div class="form-group form-check custom-control custom-checkbox mb-1">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Registered</label>
-                                </div>
-                                <div class="form-group form-check custom-control custom-checkbox mb-1">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2">Subscriber</label>
-                                </div>
-                                <div class="form-group form-check custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                    <label class="custom-control-label" for="customCheck3">Administrator</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>Options</label>
-                                <div class="form-group form-check custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
-                                    <label class="custom-control-label" for="customCheck4">Enable replies</label>
-                                </div>
-                            </div>
+                            <!-- end widget -->
                         </div>
                     </div>
                 </div>
@@ -502,20 +783,13 @@
     <script src="js/theme.bundle.min.js"></script>
     <!-- js: plugins -->
     <script src="plugins/flatpickr/flatpickr.min.js"></script>
-    <script src="plugins/ckeditor/ckeditor.js"></script>
+    <script src="plugins/easypiechart/jquery.easypiechart.min.js"></script>
     <script src="plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
     <script>
         $(function() {
-            ClassicEditor.create(document.querySelector('#editor'));
+            $('.easypiechart').easyPieChart();
             $('.selectpicker').selectpicker();
             $(".datepicker").flatpickr({
-                allowInput: true,
-                wrap: true
-            });
-            $(".timepicker").flatpickr({
-                noCalendar: true,
-                enableTime: true,
-                dateFormat: "H:i",
                 allowInput: true,
                 wrap: true
             });
