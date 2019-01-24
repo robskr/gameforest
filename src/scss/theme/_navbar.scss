@@ -164,6 +164,11 @@
     }
   }
 
+  .dropdown-cart .dropdown-menu,
+  .dropdown-notification .dropdown-menu {
+    margin-top: 7px;
+  }
+
   .dropdown-promo {
     position: absolute;
     top: 0;

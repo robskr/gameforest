@@ -217,8 +217,8 @@
                                                 <a class="dropdown-item" href="components-bootstrap.html#pagination"><i class="fas fa-arrows-alt-h"></i> Pagination</a>
                                                 <a class="dropdown-item" href="components-bootstrap.html#modal"><i class="fas fa-folder"></i> Modal</a>
                                                 <a class="dropdown-item" href="components-gameforest.html#widgets"><i class="fas fa-th-large"></i> Widgets</a>
-                                                <a class="dropdown-item" href="components-gameforest.html#style"><i class="fas fa-brush"></i> Style</a>
                                                 <a class="dropdown-item" href="components-gameforest.html#cover"><i class="fas fa-laptop"></i> Cover</a>
+                                                <a class="dropdown-item" href="components-gameforest.html#select"><i class="fas fa-check"></i> Select</a>
                                             </div>
                                             <div class="col-6 col-lg-3">
                                                 <div class="dropdown-title mt-4 mt-lg-0">Elements</div>
@@ -230,20 +230,18 @@
                                                 <a class="dropdown-item" href="components-bootstrap.html#progress"><i class="fas fa-bug"></i> Progress</a>
                                                 <a class="dropdown-item" href="components-gameforest.html#accordions"><i class="fas fa-th-list"></i> Accordions</a>
                                                 <a class="dropdown-item" href="components-gameforest.html#charts"><i class="fas fa-chart-area"></i> Charts</a>
-                                                <a class="dropdown-item" href="components-gameforest.html#select"><i class="fas fa-check"></i> Select</a>
-                                                <a class="dropdown-item" href="components-gameforest.html#datepicker"><i class="fas fa-calendar"></i> Datepicker</a>
+                                                <a class="dropdown-item" href="components-gameforest.html#carousel"><i class="fas fa-image"></i> Carousel</a>
                                             </div>
                                             <div class="col-6 col-lg-3">
                                                 <div class="dropdown-title mt-4 mt-lg-0">Forms &amp; Info</div>
                                                 <a class="dropdown-item" href="components-gameforest.html#embed"><i class="fas fa-play"></i> Embed</a>
                                                 <a class="dropdown-item" href="components-bootstrap.html#forms"><i class="fas fa-pencil-alt"></i> Forms</a>
                                                 <a class="dropdown-item" href="components-bootstrap.html#input-groups"><i class="fas fa-paper-plane"></i> Input Groups</a>
+                                                <a class="dropdown-item" href="components-gameforest.html#text-editor"><i class="fas fa-keyboard"></i> Text Editor</a>
                                                 <a class="dropdown-item" href="components-gameforest.html#lightbox"><i class="fas fa-folder-open"></i> Lightbox</a>
                                                 <a class="dropdown-item" href="components-gameforest.html#promo"><i class="fas fa-paperclip"></i> Promo</a>
                                                 <a class="dropdown-item" href="components-gameforest.html#avatars"><i class="fas fa-user"></i> Avatars</a>
-                                                <a class="dropdown-item" href="components-gameforest.html#carousel"><i class="fas fa-image"></i> Carousel</a>
-                                                <a class="dropdown-item" href="components-gameforest.html#sticky"><i class="fas fa-map-pin"></i> Sticky</a>
-                                                <a class="dropdown-item" href="components-gameforest.html#text-editor"><i class="fas fa-keyboard"></i> Text Editor</a>
+                                                <a class="dropdown-item" href="components-gameforest.html#datepicker"><i class="fas fa-calendar"></i> Datepicker</a>
                                             </div>
                                         </div>
                                     </div>
@@ -277,11 +275,54 @@
                                 <span class="d-inline-block d-md-none"><i class="ya ya-user"></i></span>
                             </a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown dropdown-cart">
                             <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="ya ya-shopping-cart"></i>
                                 <span class="badge badge-warning"></span>
                             </a>
+                            <div class="dropdown-menu dropdown-menu-right bg-white">
+                                <div class="dropdown-header"><i class="ya ya-shopping-cart"></i> Cart (3)</div>
+                                <div class="dropdown-scrollable">
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list-item">
+                                            <img src="https://static.giantbomb.com/uploads/scale_small/0/1992/3023135-screen+shot+2018-05-23+at+7.03.13+pm.png" alt="">
+                                            <div class="dropdown-list-body">
+                                                <a href="shop-product.html">Battlefield V</a>
+                                                <div class="dropdown-list-meta">Quantity: 1</div>
+                                                <div class="dropdown-list-price">$75.00</div>
+                                            </div>
+                                            <button type="button" class="btn btn-link cart-remove"><i class="ya ya-trash"></i></button>
+                                        </li>
+                                        <li class="dropdown-list-item">
+                                            <img src="https://static.giantbomb.com/uploads/scale_small/11/118833/2996375-91somf876vl._sl1500_.jpg" alt="">
+                                            <div class="dropdown-list-body">
+                                                <a href="shop-product.html">God of War</a>
+                                                <div class="dropdown-list-meta">Quantity: 1</div>
+                                                <div class="dropdown-list-price text-danger">$49.35</div>
+                                            </div>
+                                            <button type="button" class="btn btn-link cart-remove"><i class="ya ya-trash"></i></button>
+                                        </li>
+                                        <li class="dropdown-list-item">
+                                            <img src="https://static.giantbomb.com/uploads/scale_small/0/3699/2945734-the+witcher+3+-+wild+hunt.jpg" alt="">
+                                            <div class="dropdown-list-body">
+                                                <a href="shop-product.html">The Witcher 3: Wild Hunt</a>
+                                                <div class="dropdown-list-meta">Quantity: 1</div>
+                                                <div class="dropdown-list-price">$28.15</div>
+                                            </div>
+                                            <button type="button" class="btn btn-link cart-remove"><i class="ya ya-trash"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-footer bg-lighten pt-0 pb-2 px-0">
+                                    <div class="d-flex border-bottom mb-2 px-3 py-2">
+                                        Total: <span class="ml-auto font-weight-bold text-danger">$149.55</span>
+                                    </div>
+                                    <div class="d-flex px-3">
+                                        <a class="btn btn-outline btn-sm" href="#">View Cart</a>
+                                        <a class="btn btn-primary btn-sm ml-auto" href="#">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item"><a class="nav-link toggle-search" href="#"><i class="ya ya-search"></i></a></li>
                     </ul>
