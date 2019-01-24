@@ -34,7 +34,7 @@
                     {% if loop.index < 4 %}
                         <div class="col-md-4">
                             <div class="card card-sm">
-                                <a class="card-img card-img-lg" href="game-post.html" style="height: 360px">
+                                <a class="card-img card-img-lg" href="game-post.html">
                                     {% if game.new %}
                                         <span class="badge badge-danger">new</span>
                                     {% endif %}
@@ -62,6 +62,9 @@
                     {% endif %}
                 {% endfor %}
             </div>
+            <div class="text-center">
+                <a class="btn btn-secondary btn-lg mt-3" href="games.html" role="button">More Games</a>
+            </div>
         </div>
     </section>
 
@@ -73,7 +76,7 @@
                         <img src="https://static.giantbomb.com/uploads/original/2/22934/2759159-image_horizon_zero_dawn-28643-3283_0009.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-lg-5 pl-md-5 pb-4 pb-md-0 mr-auto mb-2 mb-md-0">
+                <div class="col-lg-5 pl-md-5 pb-4 pb-md-0 mr-auto mt-4 mt-md-0 mb-2 mb-md-0">
                     <div class="px-2 px-md-0">
                         <h2 class="display-5 font-weight-normal text-dark mb-3">Horizon Zero Dawn</h2>
                         <p class="lead">Horizon Zero Dawn is an exhilarating action role playing game developed by the award winning Guerrilla Games, creators of PlayStation’s venerated Killzone franchise.</p>
