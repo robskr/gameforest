@@ -234,6 +234,15 @@
       }
     }
   }
+
+  @media (max-width: 380px) {
+    position: static;
+
+    .dropdown-menu {
+      width: 100%;
+      border: 0 !important; /* stylelint-disable-line */
+    }
+  }
 }
 
 @include media-breakpoint-down(lg) {
