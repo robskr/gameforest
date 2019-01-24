@@ -1,0 +1,298 @@
+{% extends "base.twig" %}
+
+{% set docs = {
+    title: 'Navbar',
+    text: 'Documentation and examples for Gameforest’s powerful, responsive navigation header, the navbar.',
+    bootstrap: 'components/navbar',
+    blocks: [
+        {
+            title: 'Base',
+            text: 'Includes support for branding, navigation, and more, including support for our collapse plugin.',
+            code: '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="ya ya-bar"></i>
+        </button>
+        <a class="navbar-brand" href="/">Gameforest</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="home-blogs.html">Blogs</a>
+                        <a class="dropdown-item" href="home-magazine.html">Magazine</a>
+                        <a class="dropdown-item" href="index.html">Landing</a>
+                        <a class="dropdown-item" href="home-games.html">Games</a>
+                        <a class="dropdown-item" href="home-streamer.html">Streamer</a>
+                        <a class="dropdown-item" href="home-videos.html">Videos</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="blog.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="blog.html">List</a>
+                        <a class="dropdown-item" href="blog-post.html">Single Post</a>
+                        <div class="dropdown">
+                            <a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comments</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="blog-post-disqus.html">Disqus</a>
+                                <a class="dropdown-item" href="blog-post-facebook.html">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="games.html">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages.html">Pages</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="shop.html">Products</a>
+                        <a class="dropdown-item" href="shop-product.html">Single Product</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="shop-checkout.html">Checkout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- end .navbar-collapse -->
+        <!-- end .navbar-search -->
+        <ul class="navbar-nav navbar-right flex-row d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <span class="d-none d-md-inline-block">Login</span>
+                    <span class="d-inline-block d-md-none"><i class="ya ya-user"></i></span>
+                </a>
+            </li>
+            <li class="nav-item d-block">
+                <a class="nav-link" href="#">
+                    <i class="ya ya-shopping-cart"></i> <span class="badge badge-warning"></span>
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link toggle-search" href="#"><i class="ya ya-search"></i></a></li>
+        </ul>
+        <!-- end .navbar-nav -->
+    </div>
+</nav>',
+        },
+        {
+            title: 'Color schemes',
+            text: 'Choose from <code>.navbar-light</code> for use with light background colors, or <code>.navbar-dark</code> for dark background colors. Then, customize with <code>.bg-*</code> utilities.',
+            code: '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="ya ya-bar"></i>
+        </button>
+        <a class="navbar-brand" href="/">Gameforest</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="home-blogs.html">Blogs</a>
+                        <a class="dropdown-item" href="home-magazine.html">Magazine</a>
+                        <a class="dropdown-item" href="index.html">Landing</a>
+                        <a class="dropdown-item" href="home-games.html">Games</a>
+                        <a class="dropdown-item" href="home-streamer.html">Streamer</a>
+                        <a class="dropdown-item" href="home-videos.html">Videos</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="blog.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="blog.html">List</a>
+                        <a class="dropdown-item" href="blog-post.html">Single Post</a>
+                        <div class="dropdown">
+                            <a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comments</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="blog-post-disqus.html">Disqus</a>
+                                <a class="dropdown-item" href="blog-post-facebook.html">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="games.html">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages.html">Pages</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="shop.html">Products</a>
+                        <a class="dropdown-item" href="shop-product.html">Single Product</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="shop-checkout.html">Checkout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- end .navbar-collapse -->
+        <!-- end .navbar-search -->
+        <ul class="navbar-nav navbar-right flex-row d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <span class="d-none d-md-inline-block">Login</span>
+                    <span class="d-inline-block d-md-none"><i class="ya ya-user"></i></span>
+                </a>
+            </li>
+            <li class="nav-item d-block">
+                <a class="nav-link" href="#">
+                    <i class="ya ya-shopping-cart"></i> <span class="badge badge-warning"></span>
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link toggle-search" href="#"><i class="ya ya-search"></i></a></li>
+        </ul>
+        <!-- end .navbar-nav -->
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-2">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="ya ya-bar"></i>
+        </button>
+        <a class="navbar-brand" href="/">Gameforest</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                    <div class="dropdown-menu bg-primary">
+                        <a class="dropdown-item" href="home-blogs.html">Blogs</a>
+                        <a class="dropdown-item" href="home-magazine.html">Magazine</a>
+                        <a class="dropdown-item" href="index.html">Landing</a>
+                        <a class="dropdown-item" href="home-games.html">Games</a>
+                        <a class="dropdown-item" href="home-streamer.html">Streamer</a>
+                        <a class="dropdown-item" href="home-videos.html">Videos</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="blog.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                    <div class="dropdown-menu bg-primary">
+                        <a class="dropdown-item" href="blog.html">List</a>
+                        <a class="dropdown-item" href="blog-post.html">Single Post</a>
+                        <div class="dropdown">
+                            <a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comments</a>
+                            <div class="dropdown-menu bg-primary">
+                                <a class="dropdown-item" href="blog-post-disqus.html">Disqus</a>
+                                <a class="dropdown-item" href="blog-post-facebook.html">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="games.html">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages.html">Pages</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                    <div class="dropdown-menu bg-primary">
+                        <a class="dropdown-item" href="shop.html">Products</a>
+                        <a class="dropdown-item" href="shop-product.html">Single Product</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="shop-checkout.html">Checkout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- end .navbar-collapse -->
+        <!-- end .navbar-search -->
+        <ul class="navbar-nav navbar-right flex-row d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <span class="d-none d-md-inline-block">Login</span>
+                    <span class="d-inline-block d-md-none"><i class="ya ya-user"></i></span>
+                </a>
+            </li>
+            <li class="nav-item d-block">
+                <a class="nav-link" href="#">
+                    <i class="ya ya-shopping-cart"></i> <span class="badge badge-warning"></span>
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link toggle-search" href="#"><i class="ya ya-search"></i></a></li>
+        </ul>
+        <!-- end .navbar-nav -->
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-purple mt-2">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="ya ya-bar"></i>
+        </button>
+        <a class="navbar-brand" href="/">Gameforest</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                    <div class="dropdown-menu bg-purple">
+                        <a class="dropdown-item" href="home-blogs.html">Blogs</a>
+                        <a class="dropdown-item" href="home-magazine.html">Magazine</a>
+                        <a class="dropdown-item" href="index.html">Landing</a>
+                        <a class="dropdown-item" href="home-games.html">Games</a>
+                        <a class="dropdown-item" href="home-streamer.html">Streamer</a>
+                        <a class="dropdown-item" href="home-videos.html">Videos</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="blog.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                    <div class="dropdown-menu bg-purple">
+                        <a class="dropdown-item" href="blog.html">List</a>
+                        <a class="dropdown-item" href="blog-post.html">Single Post</a>
+                        <div class="dropdown">
+                            <a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comments</a>
+                            <div class="dropdown-menu bg-purple">
+                                <a class="dropdown-item" href="blog-post-disqus.html">Disqus</a>
+                                <a class="dropdown-item" href="blog-post-facebook.html">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="games.html">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages.html">Pages</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                    <div class="dropdown-menu bg-purple">
+                        <a class="dropdown-item" href="shop.html">Products</a>
+                        <a class="dropdown-item" href="shop-product.html">Single Product</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="shop-checkout.html">Checkout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- end .navbar-collapse -->
+        <!-- end .navbar-search -->
+        <ul class="navbar-nav navbar-right flex-row d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <span class="d-none d-md-inline-block">Login</span>
+                    <span class="d-inline-block d-md-none"><i class="ya ya-user"></i></span>
+                </a>
+            </li>
+            <li class="nav-item d-block">
+                <a class="nav-link" href="#">
+                    <i class="ya ya-shopping-cart"></i> <span class="badge badge-warning"></span>
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link toggle-search" href="#"><i class="ya ya-search"></i></a></li>
+        </ul>
+        <!-- end .navbar-nav -->
+    </div>
+</nav>',
+    pre: '<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+</nav>',
+        }
+    ]
+} %}
