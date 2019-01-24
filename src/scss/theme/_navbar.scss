@@ -167,6 +167,10 @@
   .dropdown-cart .dropdown-menu,
   .dropdown-notification .dropdown-menu {
     margin-top: 7px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: -1px;
+    }
   }
 
   .dropdown-promo {

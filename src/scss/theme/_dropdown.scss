@@ -170,6 +170,7 @@
 
   .dropdown-menu {
     width: 330px;
+    padding: .5rem 0 !important; /* stylelint-disable-line */
     border: $dropdown-border-width solid $dropdown-border-color !important; /* stylelint-disable-line */
 
     .dropdown-list-price {
