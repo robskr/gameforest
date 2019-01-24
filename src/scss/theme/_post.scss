@@ -180,6 +180,10 @@
 
   .post-body {
     width: 78%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
   }
 
   .badge {

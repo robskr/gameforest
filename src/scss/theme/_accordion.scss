@@ -75,6 +75,11 @@
         background-color: rgba($black, .025);
       }
     }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
   }
 }
 
