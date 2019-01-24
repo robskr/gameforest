@@ -1,0 +1,55 @@
+{% extends "base.twig" %}
+
+{% set docs = {
+    title: 'Tabs',
+    text: 'Documentation and examples for how to use Gameforest’s included navigation components.',
+    bootstrap: 'components/navs',
+    blocks: [
+        {
+            title: '',
+            text: '',
+            code: '<div class="card">
+    <div class="card-header transparent p-0 border-0">
+        <div class="nav-tab-scroll">
+            <div class="nav nav-tabs" id="tab" role="tablist">
+                <a class="nav-item nav-link active" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status" aria-selected="true">Status</a>
+                <a class="nav-item nav-link" id="multimedia-tab" data-toggle="tab" href="#multimedia" role="tab" aria-controls="multimedia" aria-selected="false"><i class="ya ya-image"></i> Multimedia</a>
+                <a class="nav-item nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false"><i class="ya ya-player"></i> Video</a>
+                <a class="nav-item nav-link" id="stream-tab" data-toggle="tab" href="#stream" role="tab" aria-controls="stream" aria-selected="false"><i class="ya ya-camera"></i> Stream</a>
+            </div>
+        </div>
+    </div>
+    <form>
+        <div class="card-body">
+            <div class="tab-content" id="tabContent">
+                <div class="tab-pane fade show active" id="status" role="tabpanel" aria-labelledby="status-tab">
+                    <div class="d-flex">
+                        <img class="avatar avatar-sm rounded-circle" src="img/user-1.jpg" alt="">
+                        <div class="pl-2 flex-grow-1">
+                            <div class="form-group mb-0">
+                                <textarea class="form-control border-0 shadow-none" rows="5" placeholder="What\'s in your mind?"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-link px-0 ml-2" href="#" data-toggle="tooltip" title="Add images"><i class="ya ya-photo"></i></a>
+            <a class="btn btn-link px-0" href="#" data-toggle="tooltip" title="Add location"><i class="ya ya-pin-add"></i></a>
+            <a class="btn btn-link px-0" href="#" data-toggle="tooltip" title="Tag friend"><i class="ya ya-user-add"></i></a>
+            <div class="d-flex justify-content-end w-100">
+                <button class="btn btn-default mr-1" role="button">Cancel</button>
+                <button class="btn btn-primary" role="button">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>',
+        },
+        {
+            title: '',
+            text: '',
+            code: '',
+        }
+    ]
+} %}
