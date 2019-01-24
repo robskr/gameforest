@@ -314,8 +314,8 @@
 		],
 		"games": [
 			{
-				"title": "Cyberpunk 2077 Dev CD Projekt Red Enlists Multiplayer Studio To Help In Some Way",
-				"img": "https://static.giantbomb.com/uploads/original/13/135472/3043863-2132118041-xuYesStF"
+				"title": "God of War",
+				"img": "https://static.giantbomb.com/uploads/original/0/1992/2862202-27046828293_28e9c64a2b_o.jpg"
 			},
 			{
 				"title": "The Division 2",
@@ -324,6 +324,18 @@
 			{
 				"title": "Dead Island 2",
 				"img": "https://static.giantbomb.com/uploads/original/8/81005/2644135-14384067381_83a6e6c758_b.jpg"
+			},
+			{
+				"title": "Marvel's Spider-Man",
+				"img": "https://static.giantbomb.com/uploads/original/13/135472/3015262-1249798788-Hah9zjpb"
+			},
+			{
+				"title": "Uncharted 4",
+				"img": "https://static.giantbomb.com/uploads/original/9/95676/2644892-u4.jpg"
+			},
+			{
+				"title": "Ratchet and Clank",
+				"img": "https://static.giantbomb.com/uploads/original/0/3699/2757242-ratchet+%26+clank+v3.jpg"
 			}
 		]
 	},
