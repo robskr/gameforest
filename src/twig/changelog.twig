@@ -5,10 +5,36 @@
 } %}
 
 {% block body %}
-    <section>
+    <nav class="bg-primary pt-1" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Components</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gameforest</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="bg-primary d-flex align-items-center py-5 py-lg-7">
         <div class="container">
             <div class="row">
                 <div class="col">
+                    <h6 class="display-5 text-white mb-3">Changelog</h6>
+                    <p class="lead text-light mb-3 mb-lg-7">Description about recent modifications and list of modified files what need to <br>be replaced with current version. Gameforest is up to date with bootstrap 4 framework.</p>
+                </div>
+            </div>
+        </div>
+        <div class="divider" ya-svg="divider"></div>
+    </section>
+
+    <section class="py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="">5.0.0 - Initial release <span class="font-weight-light">(25 January 2019)</span></h3>
+                    <ul>
+                        <li><a href="https://yakuthemes.com" target="_blank">@yakuthemes</a> created gameforest again.</li>
+                    </ul>
                 </div>
             </div>
         </div>
