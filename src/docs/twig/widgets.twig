@@ -5,35 +5,22 @@
     text: 'Use custom widgets component to display well designed elements, posts etc...',
     blocks: [
         {
-            title: 'Post',
+            title: 'Posts Widget',
             text: 'Display recommended posts or a single post like in this example.',
-            code: '<div class="widget" style="width: 330px">
+            code: '<div class="d-flex">
+<div class="widget" style="width: 330px">
     <div class="widget-header">Recommends</div>
-    <a class="img-cover img-sm mb-3" href="blog-post.html">
-        <img src="https://img.youtube.com/vi/PfQ8cOyuE1A/maxresdefault.jpg" alt="">
+    <a class="img-cover img-md mb-3" href="blog-post.html">
+        <img src="https://i.ytimg.com/vi/eyEhO0P2_HU/maxresdefault.jpg" alt="">
     </a>
     <div class="widget-body">
-        <h5 class="h6"><a href="blog-post.html">Battle royale games explained what could be the next big hit</a></h5>
-        <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> September 10, 2018</div>
-        <p>Debating me breeding be answered an he. Spoil event was words her off cause any. Tears woman which no is world miles woo...</p>
+        <h5 class="h6"><a href="blog-post.html">God of War Director Clarifies Comments on Future of Franchise</a></h5>
+        <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> November 28, 2018</div>
+        <p>Timed voice share led his widen noisy young. On weddings believed laughing although material do exercis.</p>
     </div>
-</div>',
-        pre: '<div class="widget">
-    <div class="widget-header">Recommends</div>
-    <a class="img-cover img-sm mb-3" href="blog-post.html">
-        <img src="https://img.youtube.com/vi/PfQ8cOyuE1A/maxresdefault.jpg" alt="">
-    </a>
-    <div class="widget-body">
-        <h5 class="h6"><a href="blog-post.html">Battle royale games explained what could be the next big hit</a></h5>
-        <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> September 10, 2018</div>
-        <p>Debating me breeding be answered an he. Spoil event was words her off cause any. Tears woman which no is world miles woo...</p>
-    </div>
-</div>',
-        },
-        {
-            title: 'Post List',
-            text: 'Display recommended posts in a list like in this example.',
-            code: '<div class="widget widget-list" style="width: 330px">
+</div>
+
+<div class="widget widget-list ml-4 mb-0" style="width: 330px">
     <div class="media">
         <a class="img-cover" href="#">
             <img src="https://img.youtube.com/vi/PfQ8cOyuE1A/maxresdefault.jpg" alt="">
@@ -79,9 +66,20 @@
             <div class="font-size-sm font-weight-semibold text-muted">August 23, 2018</div>
         </div>
     </div>
+</div></div>',
+        pre: '<div class="widget">
+    <div class="widget-header">Recommends</div>
+    <a class="img-cover img-md mb-3" href="blog-post.html">
+        <img src="https://i.ytimg.com/vi/eyEhO0P2_HU/maxresdefault.jpg" alt="">
+    </a>
+    <div class="widget-body">
+        <h5 class="h6"><a href="blog-post.html">God of War Director Clarifies Comments on Future of Franchise</a></h5>
+        <div class="font-size-md font-weight-semibold text-muted mb-2"><i class="ya ya-calendar mr-1"></i> November 28, 2018</div>
+        <p>Timed voice share led his widen noisy young. On weddings believed laughing although material do exercis.</p>
+    </div>
 </div>
-<!-- end widget -->',
-        pre: '<div class="widget widget-list">
+
+<div class="widget widget-list">
     <div class="media">
         <a class="img-cover" href="#">
             <img src="https://img.youtube.com/vi/PfQ8cOyuE1A/maxresdefault.jpg" alt="">
@@ -91,7 +89,249 @@
             <div class="font-size-sm font-weight-semibold text-muted">September 10, 2018</div>
         </div>
     </div>
+</div>',
+        },
+        {
+            title: 'Media Widget',
+            text: 'Add images with to the current page by using <code>.widget-gallery</code> or use <code>.widget-video</code> to display recent videos in a sidebar.',
+            code: '<div class="d-flex">
+<div class="widget widget-gallery mb-0" style="width: 330px">
+    <div class="widget-header">Images</div>
+    <div class="row row-xs">
+        <div class="col-6">
+            <a class="widget-img" href="https://static.giantbomb.com/uploads/original/0/329/3015852-god+of+war_20180420174408.png" ya-lightbox rel="gallery">
+                <img src="https://static.giantbomb.com/uploads/square_medium/0/329/3015852-god+of+war_20180420174408.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="widget-img" href="https://static.giantbomb.com/uploads/original/0/329/3015848-god+of+war_20180420173459.png" ya-lightbox rel="gallery">
+                <img src="https://static.giantbomb.com/uploads/square_medium/0/329/3015848-god+of+war_20180420173459.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="widget-img" href="https://static.giantbomb.com/uploads/original/0/329/3015846-god+of+war_20180420171302.png" ya-lightbox rel="gallery">
+                <img src="https://static.giantbomb.com/uploads/square_medium/0/329/3015846-god+of+war_20180420171302.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="widget-img" href="https://static.giantbomb.com/uploads/original/0/329/3015844-god+of+war_20180420170849.png" ya-lightbox rel="gallery">
+                <img src="https://static.giantbomb.com/uploads/square_medium/0/329/3015844-god+of+war_20180420170849.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="widget-img" href="https://static.giantbomb.com/uploads/original/0/329/3015849-god+of+war_20180420173540.png" ya-lightbox rel="gallery">
+                <img src="https://static.giantbomb.com/uploads/square_medium/0/329/3015849-god+of+war_20180420173540.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="widget-img" href="https://static.giantbomb.com/uploads/original/0/329/3015850-god+of+war_20180420174106.png" ya-lightbox rel="gallery">
+                <img src="https://static.giantbomb.com/uploads/square_medium/0/329/3015850-god+of+war_20180420174106.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <a class="btn btn-outline btn-block btn-sm mt-2" href="games.html" role="button">View Galleries</a>
+</div>
+
+<div class="widget widget-video ml-4" style="width: 330px">
+    <div class="widget-header">Recent Video</div>
+    <div class="widget-img embed-player">
+        <img src="https://i.ytimg.com/vi/Yo1grWlmSAs/maxresdefault.jpg" alt="">
+        <div class="widget-meta">15:05</div>
+        <a class="embed-icon" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox>
+            <i class="ya ya-play"></i>
+        </a>
+    </div>
+</div>
+</div>',
+        pre: '<div class="widget widget-gallery">
+    <div class="widget-header">Images</div>
+    <div class="row row-xs">
+        <div class="col-6">
+            <a class="widget-img" href="https://static.giantbomb.com/uploads/original/0/329/3015852-god+of+war_20180420174408.png" ya-lightbox rel="gallery">
+                <img src="https://static.giantbomb.com/uploads/square_medium/0/329/3015852-god+of+war_20180420174408.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-6">
+            <a class="widget-img" href="https://static.giantbomb.com/uploads/original/0/329/3015848-god+of+war_20180420173459.png" ya-lightbox rel="gallery">
+                <img src="https://static.giantbomb.com/uploads/square_medium/0/329/3015848-god+of+war_20180420173459.jpg" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="widget widget-video">
+    <div class="widget-header">Recent Video</div>
+    <div class="widget-img embed-player">
+        <img src="https://i.ytimg.com/vi/Yo1grWlmSAs/maxresdefault.jpg" alt="">
+        <div class="widget-meta">15:05</div>
+        <a class="embed-icon" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" ya-lightbox>
+            <i class="ya ya-play"></i>
+        </a>
+    </div>
 </div>'
+        },
+        {
+            title: 'Game Widget',
+            text: 'Display game details and informations with <code>.widget-game</code> widget like in the example below. You can change the overlay color with the ya-style attribute.',
+            code: '<div class="widget widget-game" style="width: 380px;background-color: #343538">
+    <img src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+    <div class="widget-body">
+        <h3 class="widget-title text-white">God of War</h3>
+        <p class="font-weight-light font-size-md">Released April 20, 2018</p>
+        <h6>Platforms:</h6>
+        <a class="badge badge-primary" href="#">PS4</a>
+        <h6 class="mt-4">Developer</h6>
+        <a class="font-weight-light font-size-md" href="#">SCE Santa Monica</a>
+        <h6 class="mt-4">Publisher</h6>
+        <a class="font-weight-light font-size-md" href="#">Sony Interactive Entertainment</a>
+        <h6 class="mt-4">Genre</h6>
+        <a class="font-weight-light font-size-md" href="#">Action</a>,
+        <a class="font-weight-light font-size-md" href="#">Adventure</a>
+        <p class="font-weight-light font-size-md mt-4">The gods of Olympus believe their brother Ares to be insane, but they are commanded to take no action against him. The contemptuous Lord of War\'s siblings are bound by their father Zeus law to not clash with one another directly.</p>
+        <a class="btn btn-outline-light btn-block mt-4" href="" role="button">Add to favourites <i class="ya ya-heart-o"></i></a>
+    </div>
+</div>',
+        pre: '<div class="widget widget-game" ya-style="background-color: #343538">
+    <img src="https://img.youtube.com/vi/IZyJlfEVoQg/maxresdefault.jpg" alt="">
+    <div class="widget-body">
+        <h3 class="widget-title text-white">God of War</h3>
+        <p class="font-weight-light font-size-md">Released April 20, 2018</p>
+        <h6>Platforms:</h6>
+        <a class="badge badge-primary" href="#">PS4</a>
+        <h6 class="mt-4">Developer</h6>
+        <a class="font-weight-light font-size-md" href="#">SCE Santa Monica</a>
+        <h6 class="mt-4">Publisher</h6>
+        <a class="font-weight-light font-size-md" href="#">Sony Interactive Entertainment</a>
+        <h6 class="mt-4">Genre</h6>
+        <a class="font-weight-light font-size-md" href="#">Action</a>,
+        <a class="font-weight-light font-size-md" href="#">Adventure</a>
+        <p class="font-weight-light font-size-md mt-4">The gods of Olympus believe their brother Ares to be insane, but they are commanded to take no action against him. The contemptuous Lord of War\'s siblings are bound by their father Zeus law to not clash with one another directly.</p>
+        <a class="btn btn-outline-light btn-block mt-4" href="" role="button">Add to favourites <i class="ya ya-heart-o"></i></a>
+    </div>
+</div>',
+        },
+        {
+            title: 'Profile Widgets',
+            text: 'Add widgets to the profile page by using customized widgets like in this example below.',
+            code: '<div class="d-flex">
+<div class="widget" style="width: 250px">
+    <div class="widget-header">About me</div>
+    <div class="widget-body">
+        <p>I am a frontend developer &amp; web designer. I love to work on creative and standalone projects like gameforest.</p>
+        <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-pin mr-1"></i> Budapest</p>
+        <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-twitter mr-1"></i> <a href="https://twitter.com/yakuthemes" target="_blank">yakuthemes</a></p>
+        <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-calendar mr-1"></i> Joined December 2009</p>
+        <a class="btn btn-outline btn-sm btn-block mt-3" href="#" role="button">Send message</a>
+    </div>
+</div>
+
+<div class="widget widget-secondary ml-4 mb-0" style="width: 250px">
+    <div class="widget-header border-0">Navigation</div>
+    <div class="list-group list-group-flush">
+        <a class="list-group-item" href="#">
+            <i class="ya ya-content"></i> Timeline </a>
+        <a class="list-group-item" href="#">
+            <i class="ya ya-users"></i> Friends <span class="badge badge-secondary badge-pill">14</span> </a>
+        <a class="list-group-item" href="#">
+            <i class="ya ya-image"></i> Images <span class="badge badge-secondary badge-pill">42</span> </a>
+        <a class="list-group-item" href="#">
+            <i class="ya ya-player"></i> Videos </a>
+        <a class="list-group-item" href="#">
+            <i class="ya ya-camera"></i> Streams <span class="badge badge-secondary badge-pill">23</span> </a>
+        <a class="list-group-item" href="#">
+            <i class="ya ya-comments"></i> Forums </a>
+        <a class="list-group-item" href="#">
+            <i class="ya ya-shopping-cart"></i> Shop </a>
+    </div>
+</div>
+
+<div class="widget widget-users ml-4 mb-0" style="width: 270px">
+    <div class="widget-header">Friends (679)</div>
+    <div class="widget-body">
+        <a href="#" data-toggle="tooltip" title="Venom">
+            <img src="img/user-2.jpg" alt="Venom">
+        </a>
+        <a href="#" data-toggle="tooltip" title="Elizabeth">
+            <img src="img/user-3.jpg" alt="Elizabeth">
+            <span class="badge badge-warning"></span> </a>
+        <a href="#" data-toggle="tooltip" title="Trevor">
+            <img src="img/user-4.jpg" alt="Trevor">
+        </a>
+        <a href="#" data-toggle="tooltip" title="Clark Kent">
+            <img src="img/user-5.jpg" alt="Clark Kent">
+            <span class="badge badge-success"></span> </a>
+        <a href="#" data-toggle="tooltip" title="Aragorn">
+            <img src="img/user-default.jpg" alt="Aragorn">
+        </a>
+        <a href="#" data-toggle="tooltip" title="Michael">
+            <img src="img/user-6.jpg" alt="Michael">
+            <span class="badge badge-warning"></span> </a>
+        <a href="#" data-toggle="tooltip" title="Max Payne">
+            <img src="img/user-7.jpg" alt="Max Payne">
+            <span class="badge badge-danger"></span> </a>
+        <a href="#" data-toggle="tooltip" title="Shroud">
+            <img src="img/user-default.jpg" alt="Shroud">
+        </a>
+        <a href="#" data-toggle="tooltip" title="Lara Croft">
+            <img src="img/user-8.jpg" alt="Lara Croft">
+        </a>
+        <a href="#" data-toggle="tooltip" title="punisher">
+            <img src="img/user-9.jpg" alt="punisher">
+        </a>
+        <a href="#" data-toggle="tooltip" title="celebro">
+            <img src="img/user-10.jpg" alt="celebro">
+        </a>
+        <a href="#" data-toggle="tooltip" title="Hitman">
+            <img src="img/user-11.jpg" alt="Hitman">
+        </a>
+        <a href="#" data-toggle="tooltip" title="Enigma">
+            <img src="img/user-default.jpg" alt="Enigma">
+        </a>
+        <a class="widget-user widget-user-count" href="#">
+            <img src="img/user-default.jpg" alt="">
+            <span>+48</span>
+        </a>
+        <div>
+            <a class="btn btn-outline btn-block btn-sm mt-3" href="#">View all</a>
+        </div>
+    </div>
+</div>
+</div>',
+        pre: '<div class="widget">
+    <div class="widget-header">About me</div>
+    <div class="widget-body">
+        <p>I am a frontend developer &amp; web designer. I love to work on creative and standalone projects like gameforest.</p>
+        <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-pin mr-1"></i> Budapest</p>
+        <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-twitter mr-1"></i> <a href="https://twitter.com/yakuthemes" target="_blank">yakuthemes</a></p>
+        <p class="font-size-sm font-weight-semibold mb-1"><i class="ya ya-calendar mr-1"></i> Joined December 2009</p>
+        <a class="btn btn-outline btn-sm btn-block mt-3" href="#" role="button">Send message</a>
+    </div>
+</div>
+
+<div class="widget widget-secondary">
+    <div class="widget-header border-0">Navigation</div>
+    <div class="list-group list-group-flush">
+        <a class="list-group-item" href="#"><i class="ya ya-content"></i> Timeline</a>
+        <a class="list-group-item" href="#"><i class="ya ya-users"></i> Friends <span class="badge badge-secondary badge-pill">14</span></a>
+    </div>
+</div>
+
+<div class="widget widget-users">
+    <div class="widget-header">Friends (679)</div>
+    <div class="widget-body">
+        <a href="#" data-toggle="tooltip" title="Venom">
+            <img src="img/user-2.jpg" alt="Venom">
+        </a>
+        <a href="#" data-toggle="tooltip" title="Elizabeth">
+            <img src="img/user-3.jpg" alt="Elizabeth">
+            <span class="badge badge-warning"></span>
+        </a>
+        <a href="#" data-toggle="tooltip" title="Trevor">
+            <img src="img/user-4.jpg" alt="Trevor">
+        </a>
+        <div><a class="btn btn-outline btn-block btn-sm mt-3" href="#">View all</a></div>
+    </div>
+</div>',
         }
     ]
 } %}
