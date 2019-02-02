@@ -2,7 +2,7 @@
     "config": {
         "title": "Gameforest Bootstrap Gaming Theme",
         "brand": "Gameforest",
-        "version": "5.0",
+        "version": "5.0.1",
         "navbar": "fixed",
         "footer": "static",
         "dateformat": "F d, Y",
