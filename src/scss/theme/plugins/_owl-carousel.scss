@@ -193,6 +193,17 @@
   }
 }
 
+.owl-img-games {
+  width: 450px;
+  height: 700px;
+  background-color: $dark;
+  @include img-cover;
+
+  @include media-breakpoint-down(sm) {
+    height: 500px;
+  }
+}
+
 .owl-width-md {
   width: 800px;
 
