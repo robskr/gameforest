@@ -608,10 +608,10 @@
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-classic/-/ckeditor5-build-classic-11.2.0.tgz#205ae1bd5495b2a7c9f5a4fef5241aca4118229a"
   integrity sha512-wpJf9C8wtnskaFF82BH17AxKITPgXgmlm4ro6QzCd2vYSCSReLkAVL3+OBuSocgxfePAqnrAO6yWjQrYtg8whw==
 
-"@fortawesome/fontawesome-free@^5.6.3":
-  version "5.6.3"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.6.3.tgz#61c122c420d7a91613f393d6a06e5a4c6ae6abf3"
-  integrity sha512-s5PLdI9NYgjBvfrv6rhirPHlAHWx+Sfo/IjsAeiXYfmemC/GSjwsyz1wLnGPazbLPXWfk62ks980o9AmsxYUEQ==
+"@fortawesome/fontawesome-free@^5.7.1":
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.7.1.tgz#e4bdc6fd2a7b5a41d5b599bcb62cf22c78f7f535"
+  integrity sha512-gukWJ7Mwf0WXQbkcwcm5zi8+H8aT5MMnphf5hpydOw898H1ibgm2cyejHgk6Km/FTvrPp5ppUHLrlFwt0QxsQw==
 
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
