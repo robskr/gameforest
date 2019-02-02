@@ -6,9 +6,18 @@
 {% endblock %}
 
 {% block body %}
-    <section class="bg-darken p-2">
+    <section class="bg-info py-3">
+        <div class="container">
+            <div class="promo py-0">
+                <h2 class="promo-title h6">New games are available in the store don't forget to check it!</h2>
+                <a class="btn btn-outline-light btn-sm ml-4 mt-3 mt-md-0" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Visit store <i class="ya ya-share"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-darken p-1">
         <div class="container-fluid px-0">
-            <div class="owl-carousel" ya-carousel="autowidth: true;dots: false;loop: false;margin: 8;items: 2">
+            <div class="owl-carousel" ya-carousel="autowidth: true;dots: false;loop: false;margin: 4;items: 2">
                 {% for carousel in carousel.games %}
                     <div class="owl-img owl-img-md lazyload" style="width: 450px;">
                         <img class="lazyload" data-src="{{ carousel.img }}" alt="">
@@ -17,15 +26,6 @@
                         </div>
                     </div>
                 {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-dark py-3">
-        <div class="container">
-            <div class="promo py-0">
-                <h2 class="promo-title h6">New games are available in the store don't forget to check it!</h2>
-                <a class="btn btn-outline-light btn-sm ml-4 mt-3 mt-md-0" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730" target="_blank" role="button">Visit store <i class="ya ya-share"></i></a>
             </div>
         </div>
     </section>
