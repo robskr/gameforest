@@ -1799,10 +1799,12 @@ function () {
   };
 
   _proto._fixHeight = function _fixHeight() {
-    var height = window.innerHeight - document.querySelector('.site-header').offsetHeight;
-    document.querySelectorAll('.owl-carousel-item').forEach(function (el) {
-      el.style.height = height + "px";
-    });
+    if (document.querySelector('.owl-height-100')) {
+      var height = window.innerHeight - document.querySelector('.site-header').offsetHeight;
+      document.querySelectorAll('.owl-carousel-item').forEach(function (el) {
+        el.style.height = height + "px";
+      });
+    }
   }; // private
 
 

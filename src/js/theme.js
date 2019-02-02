@@ -24,11 +24,13 @@ class Theme {
     }
 
     _fixHeight() {
-        const height = window.innerHeight - document.querySelector('.site-header').offsetHeight
+        if (document.querySelector('.owl-height-100')) {
+            const height = window.innerHeight - document.querySelector('.site-header').offsetHeight
 
-        document.querySelectorAll('.owl-carousel-item').forEach((el) => {
-            el.style.height =  `${height}px`
-        })
+            document.querySelectorAll('.owl-carousel-item').forEach((el) => {
+                el.style.height =  `${height}px`
+            })
+        }
     }
 
     // private
