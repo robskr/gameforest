@@ -1,12 +1,12 @@
 {
-  "categories": [
-    { "title": "Playstation 4", "posts": 41 },
-    { "title": "Xbox One" },
-    { "title": "PC", "posts": 12 },
-    { "title": "Steam", "posts": 25 },
-    { "title": "Rockstar" },
-    { "title": "CD Project" },
-    { "title": "Activision", "posts": 18 },
-    { "title": "BioWare" }
-  ]
+    "categories": [
+        { "title": "Playstation 4", "posts": 41 },
+        { "title": "Xbox One" },
+        { "title": "PC", "posts": 12 },
+        { "title": "Steam", "posts": 25 },
+        { "title": "Rockstar" },
+        { "title": "CD Project" },
+        { "title": "Activision", "posts": 18 },
+        { "title": "BioWare" }
+    ]
 }

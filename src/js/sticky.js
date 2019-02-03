@@ -29,47 +29,47 @@ const VERSION                = '1.0.0'
  */
 
 class Sticky extends Helpers {
-  constructor(element) {
-    super()
-    this._element       = element
-    this._attr          = element.getAttribute(DATA)
-    this._top           = document.querySelector('.site-header').offsetHeight
-    this._zindex        = 7
-  }
-
-  static get VERSION() {
-    return VERSION
-  }
-
-  _option() {
-    if (this._attr) {
-      this.loopArray(this._attr, this.options)
+    constructor(element) {
+        super()
+        this._element       = element
+        this._attr          = element.getAttribute(DATA)
+        this._top           = document.querySelector('.site-header').offsetHeight
+        this._zindex        = 7
     }
 
-    return this.options
-  }
+    static get VERSION() {
+        return VERSION
+    }
 
-  _set() {
-    return $(this._element).sticky({
-      topSpacing: this.options.top ? Number(this.options.top) : this._top,
-      bottomSpacing: this.options.bottom ? Number(this.options.bottom) : '',
-      zIndex: this.options.zindex ? Number(this.options.zindex) : this._zindex
-    })
-  }
+    _option() {
+        if (this._attr) {
+            this.loopArray(this._attr, this.options)
+        }
 
-  _get() {
-    // add otpion
-    this._option()
-    this._set()
+        return this.options
+    }
 
-    return true
-  }
+    _set() {
+        return $(this._element).sticky({
+            topSpacing: this.options.top ? Number(this.options.top) : this._top,
+            bottomSpacing: this.options.bottom ? Number(this.options.bottom) : '',
+            zIndex: this.options.zindex ? Number(this.options.zindex) : this._zindex
+        })
+    }
 
-  // static
-  static _init() {
-    const data = new Sticky(this)
-    data._get()
-  }
+    _get() {
+        // add otpion
+        this._option()
+        this._set()
+
+        return true
+    }
+
+    // static
+    static _init() {
+        const data = new Sticky(this)
+        data._get()
+    }
 }
 
 /**
@@ -79,9 +79,9 @@ class Sticky extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll(DATA_KEY).forEach((el) => {
-    Sticky._init.call(el)
-  })
+    document.querySelectorAll(DATA_KEY).forEach((el) => {
+        Sticky._init.call(el)
+    })
 })
 
 export default Sticky

@@ -28,25 +28,25 @@ const VERSION                = '1.0.0'
  */
 
 class Disqus extends Helpers {
-  constructor(element) {
-    super()
-    this._element       = element
-    this._attr          = element.getAttribute(DATA)
-  }
+    constructor(element) {
+        super()
+        this._element       = element
+        this._attr          = element.getAttribute(DATA)
+    }
 
-  static get VERSION() {
-    return VERSION
-  }
+    static get VERSION() {
+        return VERSION
+    }
 
-  _get() {
-    return this.disqus(DATA_KEY)
-  }
+    _get() {
+        return this.disqus(DATA_KEY)
+    }
 
-  // static
-  static _init() {
-    const data = new Disqus(this)
-    data._get()
-  }
+    // static
+    static _init() {
+        const data = new Disqus(this)
+        data._get()
+    }
 }
 
 /**
@@ -56,9 +56,9 @@ class Disqus extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll(DATA_KEY).forEach((el) => {
-    Disqus._init.call(el)
-  })
+    document.querySelectorAll(DATA_KEY).forEach((el) => {
+        Disqus._init.call(el)
+    })
 })
 
 export default Disqus

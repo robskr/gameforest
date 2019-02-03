@@ -29,87 +29,87 @@ const VERSION                = '1.0.0'
  */
 
 class Notify extends Helpers {
-  constructor(element) {
-    super()
-    this._element       = element
-    this._attr          = element.getAttribute(DATA)
-    this._title         = element.getAttribute(DATA_TITLE)
-  }
-
-  static get VERSION() {
-    return VERSION
-  }
-
-  _remove(notify) {
-    const time = {
-      hide      : 3000,
-      remove    : 4000
+    constructor(element) {
+        super()
+        this._element       = element
+        this._attr          = element.getAttribute(DATA)
+        this._title         = element.getAttribute(DATA_TITLE)
     }
 
-    setTimeout(() => {
-      notify.classList.remove('fadeInDown')
-      notify.classList.add('fadeOutUp')
-    }, time.hide)
-
-    setTimeout(() => {
-      document.body.removeChild(notify)
-    }, time.remove)
-  }
-
-  _option() {
-    if (this._attr) {
-      this.loopArray(this._attr, this.options)
+    static get VERSION() {
+        return VERSION
     }
 
-    return this.options
-  }
+    _remove(notify) {
+        const time = {
+            hide      : 3000,
+            remove    : 4000
+        }
 
-  _set(notify, alert) {
-    this._option()
+        setTimeout(() => {
+            notify.classList.remove('fadeInDown')
+            notify.classList.add('fadeOutUp')
+        }, time.hide)
 
-    if (this.options.align) {
-      notify.classList.add(`notify-${this.options.align}`)
+        setTimeout(() => {
+            document.body.removeChild(notify)
+        }, time.remove)
     }
 
-    if (this.options.alert) {
-      alert.classList.remove('alert-darken-primary')
-      alert.classList.add(`alert-darken-${this.options.alert}`)
+    _option() {
+        if (this._attr) {
+            this.loopArray(this._attr, this.options)
+        }
+
+        return this.options
     }
-  }
 
-  _add() {
-    // constants
-    const notify = document.createElement('div')
-    const alert = document.createElement('div')
-    const text = document.createTextNode(this._title)
+    _set(notify, alert) {
+        this._option()
 
-    notify.classList.add('notify', 'animated', 'fadeInDown', 'fast')
-    alert.classList.add('alert', 'alert-darken-primary')
+        if (this.options.align) {
+            notify.classList.add(`notify-${this.options.align}`)
+        }
 
-    document.body.appendChild(notify)
-    notify.appendChild(alert)
-    alert.appendChild(text)
+        if (this.options.alert) {
+            alert.classList.remove('alert-darken-primary')
+            alert.classList.add(`alert-darken-${this.options.alert}`)
+        }
+    }
 
-    // set notify options
-    this._set(notify, alert)
+    _add() {
+        // constants
+        const notify = document.createElement('div')
+        const alert = document.createElement('div')
+        const text = document.createTextNode(this._title)
 
-    // remove notify
-    this._remove(notify)
-  }
+        notify.classList.add('notify', 'animated', 'fadeInDown', 'fast')
+        alert.classList.add('alert', 'alert-darken-primary')
 
-  _get() {
-    this._element.addEventListener('click', (e) => {
-      e.preventDefault()
+        document.body.appendChild(notify)
+        notify.appendChild(alert)
+        alert.appendChild(text)
 
-      this._add(this._element)
-    }, false)
-  }
+        // set notify options
+        this._set(notify, alert)
 
-  // static
-  static _init() {
-    const data = new Notify(this)
-    data._get()
-  }
+        // remove notify
+        this._remove(notify)
+    }
+
+    _get() {
+        this._element.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            this._add(this._element)
+        }, false)
+    }
+
+    // static
+    static _init() {
+        const data = new Notify(this)
+        data._get()
+    }
 }
 
 /**
@@ -119,9 +119,9 @@ class Notify extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll(DATA_KEY).forEach((el) => {
-    Notify._init.call(el)
-  })
+    document.querySelectorAll(DATA_KEY).forEach((el) => {
+        Notify._init.call(el)
+    })
 })
 
 export default Notify

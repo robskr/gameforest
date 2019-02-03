@@ -19,18 +19,18 @@ const VERSION                = '1.0.0'
 const PATH                   = window.path ? window.path : 'plugins'
 
 const Font = {
-  SOLID                : '.fas',
-  REGULAR              : '.far',
-  BRAND                : '.fab',
-  LIGHT                : '.fal'
+    SOLID                : '.fas',
+    REGULAR              : '.far',
+    BRAND                : '.fab',
+    LIGHT                : '.fal'
 }
 
 const FontAwesome = {
-  CSS                  : `${PATH}/fontawesome/css/fontawesome.min.css`,
-  REGULAR              : `${PATH}/fontawesome/css/regular.min.css`,
-  BRAND                : `${PATH}/fontawesome/css/brands.min.css`,
-  SOLID                : `${PATH}/fontawesome/css/solid.min.css`,
-  LIGHT                : `${PATH}/fontawesome/css/light.min.css`
+    CSS                  : `${PATH}/fontawesome/css/fontawesome.min.css`,
+    REGULAR              : `${PATH}/fontawesome/css/regular.min.css`,
+    BRAND                : `${PATH}/fontawesome/css/brands.min.css`,
+    SOLID                : `${PATH}/fontawesome/css/solid.min.css`,
+    LIGHT                : `${PATH}/fontawesome/css/light.min.css`
 }
 
 /**
@@ -40,88 +40,88 @@ const FontAwesome = {
  */
 
 class Icons {
-  constructor() {
-    this._stylesheet            = document.createElement('link')
-    this._stylesheet.rel        = 'stylesheet'
-    this._stylesheet.href       = FontAwesome.CSS
-  }
-
-  static get VERSION() {
-    return VERSION
-  }
-
-  _solid() {
-    if (document.querySelector(Font.SOLID)) {
-      // create stylesheet
-      const fas = document.createElement('link')
-      fas.rel = 'stylesheet'
-      fas.href = FontAwesome.SOLID
-
-      // append stylesheet
-      document.head.appendChild(fas)
+    constructor() {
+        this._stylesheet            = document.createElement('link')
+        this._stylesheet.rel        = 'stylesheet'
+        this._stylesheet.href       = FontAwesome.CSS
     }
 
-    return true
-  }
-
-  _brand() {
-    if (document.querySelector(Font.BRAND)) {
-      // create stylesheet
-      const fab = document.createElement('link')
-      fab.rel = 'stylesheet'
-      fab.href = FontAwesome.BRAND
-
-      // append stylesheet
-      document.head.appendChild(fab)
+    static get VERSION() {
+        return VERSION
     }
 
-    return true
-  }
+    _solid() {
+        if (document.querySelector(Font.SOLID)) {
+            // create stylesheet
+            const fas = document.createElement('link')
+            fas.rel = 'stylesheet'
+            fas.href = FontAwesome.SOLID
 
-  _light() {
-    if (document.querySelector(Font.LIGHT)) {
-      // create stylesheet
-      const fal = document.createElement('link')
-      fal.rel = 'stylesheet'
-      fal.href = FontAwesome.LIGHT
+            // append stylesheet
+            document.head.appendChild(fas)
+        }
 
-      // append stylesheet
-      document.head.appendChild(fal)
+        return true
     }
 
-    return true
-  }
+    _brand() {
+        if (document.querySelector(Font.BRAND)) {
+            // create stylesheet
+            const fab = document.createElement('link')
+            fab.rel = 'stylesheet'
+            fab.href = FontAwesome.BRAND
 
-  _regular() {
-    if (document.querySelector(Font.REGULAR)) {
-      // create stylesheet
-      const far = document.createElement('link')
-      far.rel = 'stylesheet'
-      far.href = FontAwesome.REGULAR
+            // append stylesheet
+            document.head.appendChild(fab)
+        }
 
-      // append stylesheet
-      document.head.appendChild(far)
+        return true
     }
 
-    return true
-  }
+    _light() {
+        if (document.querySelector(Font.LIGHT)) {
+            // create stylesheet
+            const fal = document.createElement('link')
+            fal.rel = 'stylesheet'
+            fal.href = FontAwesome.LIGHT
 
-  _get() {
-    // append stylesheet
-    document.head.appendChild(this._stylesheet)
+            // append stylesheet
+            document.head.appendChild(fal)
+        }
 
-    // detect type
-    this._solid()
-    this._brand()
-    this._light()
-    this._regular()
-  }
+        return true
+    }
 
-  // static
-  static _init() {
-    const data = new Icons()
-    data._get()
-  }
+    _regular() {
+        if (document.querySelector(Font.REGULAR)) {
+            // create stylesheet
+            const far = document.createElement('link')
+            far.rel = 'stylesheet'
+            far.href = FontAwesome.REGULAR
+
+            // append stylesheet
+            document.head.appendChild(far)
+        }
+
+        return true
+    }
+
+    _get() {
+        // append stylesheet
+        document.head.appendChild(this._stylesheet)
+
+        // detect type
+        this._solid()
+        this._brand()
+        this._light()
+        this._regular()
+    }
+
+    // static
+    static _init() {
+        const data = new Icons()
+        data._get()
+    }
 }
 
 /**
@@ -131,9 +131,9 @@ class Icons {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.querySelector(Font.SOLID) || document.querySelector(Font.BRAND) || document.querySelector(Font.REGULAR) || document.querySelector(Font.LIGHT)) {
-    Icons._init.call()
-  }
+    if (document.querySelector(Font.SOLID) || document.querySelector(Font.BRAND) || document.querySelector(Font.REGULAR) || document.querySelector(Font.LIGHT)) {
+        Icons._init.call()
+    }
 })
 
 export default Icons

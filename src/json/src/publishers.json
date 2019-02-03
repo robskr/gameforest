@@ -1,13 +1,13 @@
 {
-  "publishers": [
-    "Rockstar Games",
-    "Sony Interactive",
-    "Square Enix",
-    "Ubisoft",
-    "Activision",
-    "Microsoft Studios",
-    "CD Projekt Red",
-    "Bethesda Softworks",
-    "Bandai Namco"
-  ]
+    "publishers": [
+        "Rockstar Games",
+        "Sony Interactive",
+        "Square Enix",
+        "Ubisoft",
+        "Activision",
+        "Microsoft Studios",
+        "CD Projekt Red",
+        "Bethesda Softworks",
+        "Bandai Namco"
+    ]
 }

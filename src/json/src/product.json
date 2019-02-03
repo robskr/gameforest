@@ -1,72 +1,72 @@
 {
-  "product": {
-    "title": "Red Dead Redemption 2",
-    "text": "Red Dead Redemption 2 is an epic tale of life in America’s unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience. America, 1899. The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. Those who will not surrender or succumb are killed. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee.",
-    "tags": [ "red", "redemption2", "large", "released", "xbox" ],
-    "img": [
-      "https://img.youtube.com/vi/SG4hoev5uaI/maxresdefault.jpg",
-      "https://static.giantbomb.com/uploads/original/5/56742/3058984-4450753062-rdr2-.jpg",
-      "https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg",
-      "https://static.giantbomb.com/uploads/original/5/56742/3058944-7481166741-rdr2-.jpg",
-      "https://static.giantbomb.com/uploads/original/5/56742/3058974-3631271585-rdr2-.jpg",
-      "https://static.giantbomb.com/uploads/original/5/56742/3058973-6072516909-rdr2-.jpg"
-    ],
-    "review": 3,
-    "price": {
-      "original": "$69"
-    },
-    "requirements": {
-      "Minimum": {
-        "fab fa-windows": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit",
-        "fas fa-microchip": "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs)",
-        "fas fa-memory": "4 GB RAM",
-        "fas fa-desktop": "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)",
-        "fas fa-hdd": "72 GB available space",
-        "fas fa-microphone": "100% DirectX 10 compatible"
-      },
-      "Recommended": {
-        "fab fa-windows": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit",
-        "fas fa-microchip": "Intel Core i5 3470 @ 3.2GHz (4 CPUs)",
-        "fas fa-memory": "8 GB RAM",
-        "fas fa-desktop": "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
-        "fas fa-hdd": "72 GB available space",
-        "fas fa-microphone": "100% DirectX 10 compatible"
-      }
-    },
-    "reviews": [
-      {
-        "friend": true,
-        "user": 3,
-        "like": 96,
-        "date": 1536735750,
-        "text": "Attended no do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking am. But attention sex questions applauded how happiness.<br><br>Started several mistake joy say painful removed reached end. State burst think end are its. Arrived off she elderly beloved him affixed noisier yet. An course regard to up he hardly. View four has said does men saw find dear shy. Talent men wicket add garden.Indulgence ten remarkably nor are impression out. Power is lived means oh every in we quiet. Remainder provision an in intention. Saw supported too joy promotion engrossed propriety. Me till like it sure no sons. "
-      },
-      {
-        "user": 1,
-        "like": 27,
-        "date": 1536825750,
-        "text": "Repulsive questions contented him few extensive supported. Of remarkably thoroughly he appearance in. Supposing tolerably applauded or of be. Suffering unfeeling so objection agreeable allowance me of. Ask within entire season sex common far who family. Performed suspicion in certainty so frankness by attention pretended. Newspaper or in tolerably education enjoyment. Extremity excellent certainty discourse sincerity no he so resembled. ",
-        "reply": [
-          {
-            "user": 4,
-            "like": 72,
-            "date": 1536753750,
-            "text": "Delightful remarkably mr on announcing themselves entreaties favourable. About to in so terms voice at. Equal an would is found seems of. The particular friendship one sufficient terminated frequently themselves."
-          },
-          {
-            "user": 5,
-            "like": 29,
-            "date": 1536757350,
-            "text": "To sorry world an at do spoil along. Incommode he depending do frankness remainder to. Edward day almost active him friend thirty piqued."
-          }
+    "product": {
+        "title": "Red Dead Redemption 2",
+        "text": "Red Dead Redemption 2 is an epic tale of life in America’s unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience. America, 1899. The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. Those who will not surrender or succumb are killed. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee.",
+        "tags": [ "red", "redemption2", "large", "released", "xbox" ],
+        "img": [
+            "https://img.youtube.com/vi/SG4hoev5uaI/maxresdefault.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058984-4450753062-rdr2-.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058976-8068256880-rdr2-.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058944-7481166741-rdr2-.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058974-3631271585-rdr2-.jpg",
+            "https://static.giantbomb.com/uploads/original/5/56742/3058973-6072516909-rdr2-.jpg"
+        ],
+        "review": 3,
+        "price": {
+            "original": "$69"
+        },
+        "requirements": {
+            "Minimum": {
+                "fab fa-windows": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit",
+                "fas fa-microchip": "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs)",
+                "fas fa-memory": "4 GB RAM",
+                "fas fa-desktop": "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)",
+                "fas fa-hdd": "72 GB available space",
+                "fas fa-microphone": "100% DirectX 10 compatible"
+            },
+            "Recommended": {
+                "fab fa-windows": "Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit",
+                "fas fa-microchip": "Intel Core i5 3470 @ 3.2GHz (4 CPUs)",
+                "fas fa-memory": "8 GB RAM",
+                "fas fa-desktop": "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
+                "fas fa-hdd": "72 GB available space",
+                "fas fa-microphone": "100% DirectX 10 compatible"
+            }
+        },
+        "reviews": [
+            {
+                "friend": true,
+                "user": 3,
+                "like": 96,
+                "date": 1536735750,
+                "text": "Attended no do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking am. But attention sex questions applauded how happiness.<br><br>Started several mistake joy say painful removed reached end. State burst think end are its. Arrived off she elderly beloved him affixed noisier yet. An course regard to up he hardly. View four has said does men saw find dear shy. Talent men wicket add garden.Indulgence ten remarkably nor are impression out. Power is lived means oh every in we quiet. Remainder provision an in intention. Saw supported too joy promotion engrossed propriety. Me till like it sure no sons. "
+            },
+            {
+                "user": 1,
+                "like": 27,
+                "date": 1536825750,
+                "text": "Repulsive questions contented him few extensive supported. Of remarkably thoroughly he appearance in. Supposing tolerably applauded or of be. Suffering unfeeling so objection agreeable allowance me of. Ask within entire season sex common far who family. Performed suspicion in certainty so frankness by attention pretended. Newspaper or in tolerably education enjoyment. Extremity excellent certainty discourse sincerity no he so resembled. ",
+                "reply": [
+                    {
+                        "user": 4,
+                        "like": 72,
+                        "date": 1536753750,
+                        "text": "Delightful remarkably mr on announcing themselves entreaties favourable. About to in so terms voice at. Equal an would is found seems of. The particular friendship one sufficient terminated frequently themselves."
+                    },
+                    {
+                        "user": 5,
+                        "like": 29,
+                        "date": 1536757350,
+                        "text": "To sorry world an at do spoil along. Incommode he depending do frankness remainder to. Edward day almost active him friend thirty piqued."
+                    }
+                ]
+            },
+            {
+                "user": 2,
+                "like": 48,
+                "date": 1536759330,
+                "text": "Barton did feebly change man she afford square add. Want eyes by neat so just must. Past draw tall up face show rent oh mr. Required is debating extended wondered as do. New get described applauded incommode shameless out extremity but. Resembled at perpetual no believing is otherwise sportsman."
+            }
         ]
-      },
-      {
-        "user": 2,
-        "like": 48,
-        "date": 1536759330,
-        "text": "Barton did feebly change man she afford square add. Want eyes by neat so just must. Past draw tall up face show rent oh mr. Required is debating extended wondered as do. New get described applauded incommode shameless out extremity but. Resembled at perpetual no believing is otherwise sportsman."
-      }
-    ]
-  }
+    }
 }

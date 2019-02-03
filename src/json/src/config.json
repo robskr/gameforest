@@ -1,16 +1,16 @@
 {
-  "config": {
-    "title": "Gameforest Bootstrap Gaming Theme",
-    "brand": "Gameforest",
-    "version": "5.0.1",
-    "navbar": "fixed",
-    "footer": "static",
-    "dateformat": "F d, Y",
-    "disqus": "gameforestyakuzieu",
-    "facebook": {
-      "lang": "en_US",
-      "version": "v3.2",
-      "appID": ""
+    "config": {
+        "title": "Gameforest Bootstrap Gaming Theme",
+        "brand": "Gameforest",
+        "version": "5.0.1",
+        "navbar": "fixed",
+        "footer": "static",
+        "dateformat": "F d, Y",
+        "disqus": "gameforestyakuzieu",
+        "facebook": {
+            "lang": "en_US",
+            "version": "v3.2",
+            "appID": ""
+        }
     }
-  }
 }

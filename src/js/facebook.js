@@ -28,24 +28,24 @@ const VERSION                = '1.0.0'
  */
 
 class Facebook extends Helpers {
-  constructor(element) {
-    super()
-    this._element       = element
-  }
+    constructor(element) {
+        super()
+        this._element       = element
+    }
 
-  static get VERSION() {
-    return VERSION
-  }
+    static get VERSION() {
+        return VERSION
+    }
 
-  _get() {
-    return this.facebook(DATA_KEY)
-  }
+    _get() {
+        return this.facebook(DATA_KEY)
+    }
 
-  // static
-  static _init() {
-    const data = new Facebook(this)
-    data._get()
-  }
+    // static
+    static _init() {
+        const data = new Facebook(this)
+        data._get()
+    }
 }
 
 /**
@@ -55,9 +55,9 @@ class Facebook extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll(DATA_KEY).forEach((el) => {
-    Facebook._init.call(el)
-  })
+    document.querySelectorAll(DATA_KEY).forEach((el) => {
+        Facebook._init.call(el)
+    })
 })
 
 export default Facebook

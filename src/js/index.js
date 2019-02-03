@@ -25,18 +25,18 @@ import Theme from './theme'
  */
 
 export {
-  Background,
-  Carousel,
-  Disqus,
-  Embed,
-  Facebook,
-  Icons,
-  Lightbox,
-  Navbar,
-  Notify,
-  Progress,
-  Sticky,
-  Style,
-  Svg,
-  Theme
+    Background,
+    Carousel,
+    Disqus,
+    Embed,
+    Facebook,
+    Icons,
+    Lightbox,
+    Navbar,
+    Notify,
+    Progress,
+    Sticky,
+    Style,
+    Svg,
+    Theme
 }
