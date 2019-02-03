@@ -10,7 +10,7 @@
     "js": "gulp js",
     "icon": "gulp icon",
     "image": "gulp image",
-    "html": "gulp html",
+    "html": "gulp compile",
     "plugins": "gulp plugins",
     "docs": "browser-sync start --server --startPath docs --no-notify",
     "docs:dev": "cd src/docs && gulp"

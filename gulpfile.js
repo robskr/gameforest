@@ -186,6 +186,7 @@ function html() {
     }))
     .pipe(prettify({
       unformatted: ['span', 'i'],
+      indent_size: 2,
       extra_liners: ' ',
       max_preserve_newlines: 0
     }))
@@ -195,16 +196,17 @@ function html() {
 
 function compile() {
   return gulp.src(path.src.twig)
-      .pipe(twig({
-          base: './src/twig/views',
-          data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
-      }))
-      .pipe(prettify({
-          unformatted: ['span', 'i'],
-          extra_liners: ' ',
-          max_preserve_newlines: 0
-      }))
-      .pipe(gulp.dest(path.dist.html))
+    .pipe(twig({
+      base: './src/twig/views',
+      data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
+    }))
+    .pipe(prettify({
+      unformatted: ['span', 'i'],
+      indent_size: 2,
+      extra_liners: ' ',
+      max_preserve_newlines: 0
+    }))
+    .pipe(gulp.dest(path.dist.html))
 }
 
 /**
