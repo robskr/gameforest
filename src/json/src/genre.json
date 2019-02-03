@@ -1,23 +1,23 @@
 {
-    "genre": [
-        "All",
-        "Action & Shooter",
-        "Action",
-        "Adventure",
-        "Arcade & Platform",
-        "Casual",
-        "Early Access",
-        "Economy",
-        "Fighting",
-        "Horror",
-        "Indie",
-        "Massively Multiplayer",
-        "Puzzle",
-        "Racing",
-        "RPG",
-        "Simulation",
-        "Sports",
-        "Stealth",
-        "Strategy"
-    ]
+  "genre": [
+    "All",
+    "Action & Shooter",
+    "Action",
+    "Adventure",
+    "Arcade & Platform",
+    "Casual",
+    "Early Access",
+    "Economy",
+    "Fighting",
+    "Horror",
+    "Indie",
+    "Massively Multiplayer",
+    "Puzzle",
+    "Racing",
+    "RPG",
+    "Simulation",
+    "Sports",
+    "Stealth",
+    "Strategy"
+  ]
 }

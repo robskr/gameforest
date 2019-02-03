@@ -1,71 +1,71 @@
 {
-    "carousel": {
-        "landing": [
-            {
-                "title": "The Witcher 3: Wild Hunt",
-                "text": "The world is in chaos. The air is thick with tension and the smoke of burnt villages. The fearsome Empire of Nilfgaard has struck again, ravaging the hapless.",
-                "img": "img/carousel-1.jpg",
-                "url": "https://www.youtube.com/watch?v=c0i88t0Kacs",
-                "opacity": ".28"
-            },
-            {
-                "title": "For Honor: The Berserker",
-                "text": "Enter the chaos of a raging war as a bold knight, brutal viking, or mysterious samurai, three of <br>the greatest warrior legacies.",
-                "img": "https://img.youtube.com/vi/BhTkoDVgF6s/maxresdefault.jpg",
-                "url": "https://www.youtube.com/watch?v=zFUymXnQ5z8",
-                "opacity": ".3"
-            },
-            {
-                "title": "Tom Clancy's The Division",
-                "text": "An online-only open-world shooter-RPG from Ubisoft Massive set in a chaotic New York City <br>that is wrought by disease.",
-                "img": "https://static.giantbomb.com/uploads/original/0/2840/2495891-the-division_2013_06-10-13_008.jpg",
-                "url": "https://www.youtube.com/watch?v=yPq_NVi-TC4",
-                "opacity": ".35"
-            }
-        ],
-        "magazine": [
-            {
-                "title": "Cyberpunk 2077 Dev CD Projekt Red Enlists Multiplayer Studio",
-                "img": "https://static.giantbomb.com/uploads/original/13/135472/3043863-2132118041-xuYesStF"
-            },
-            {
-                "title": "Play The Division 2 Before It Launches At PAX Aus This Month",
-                "img": "https://static.giantbomb.com/uploads/original/0/7772/3028596-image_tom_clancy_s_the_division_2-38412-4034_0003.jpg"
-            },
-            {
-                "title": "Former Dragon Age Director Joins Assassin's Creed Odyssey Studio",
-                "img": "https://static.giantbomb.com/uploads/original/13/135472/3031131-assassins+creed+odyssey+screen+4.jpg"
-            },
-            {
-                "title": "God Of War PS4: Watch Conan And Bill Hader Play New Game",
-                "img": "https://static.giantbomb.com/uploads/original/0/1992/2862202-27046828293_28e9c64a2b_o.jpg"
-            }
-        ],
-        "games": [
-            {
-                "title": "God of War",
-                "img": "https://static.giantbomb.com/uploads/original/0/1992/2862202-27046828293_28e9c64a2b_o.jpg"
-            },
-            {
-                "title": "The Division 2",
-                "img": "https://static.giantbomb.com/uploads/original/13/135472/3043941-5881871274-IsUman1n"
-            },
-            {
-                "title": "Dead Island 2",
-                "img": "https://static.giantbomb.com/uploads/original/8/81005/2644135-14384067381_83a6e6c758_b.jpg"
-            },
-            {
-                "title": "Marvel's Spider-Man",
-                "img": "https://static.giantbomb.com/uploads/original/13/135472/3015262-1249798788-Hah9zjpb"
-            },
-            {
-                "title": "Uncharted 4",
-                "img": "https://static.giantbomb.com/uploads/original/9/95676/2644892-u4.jpg"
-            },
-            {
-                "title": "Ratchet and Clank",
-                "img": "https://static.giantbomb.com/uploads/original/0/3699/2757242-ratchet+%26+clank+v3.jpg"
-            }
-        ]
-    }
+  "carousel": {
+    "landing": [
+      {
+        "title": "The Witcher 3: Wild Hunt",
+        "text": "The world is in chaos. The air is thick with tension and the smoke of burnt villages. The fearsome Empire of Nilfgaard has struck again, ravaging the hapless.",
+        "img": "img/carousel-1.jpg",
+        "url": "https://www.youtube.com/watch?v=c0i88t0Kacs",
+        "opacity": ".28"
+      },
+      {
+        "title": "For Honor: The Berserker",
+        "text": "Enter the chaos of a raging war as a bold knight, brutal viking, or mysterious samurai, three of <br>the greatest warrior legacies.",
+        "img": "https://img.youtube.com/vi/BhTkoDVgF6s/maxresdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=zFUymXnQ5z8",
+        "opacity": ".3"
+      },
+      {
+        "title": "Tom Clancy's The Division",
+        "text": "An online-only open-world shooter-RPG from Ubisoft Massive set in a chaotic New York City <br>that is wrought by disease.",
+        "img": "https://static.giantbomb.com/uploads/original/0/2840/2495891-the-division_2013_06-10-13_008.jpg",
+        "url": "https://www.youtube.com/watch?v=yPq_NVi-TC4",
+        "opacity": ".35"
+      }
+    ],
+    "magazine": [
+      {
+        "title": "Cyberpunk 2077 Dev CD Projekt Red Enlists Multiplayer Studio",
+        "img": "https://static.giantbomb.com/uploads/original/13/135472/3043863-2132118041-xuYesStF"
+      },
+      {
+        "title": "Play The Division 2 Before It Launches At PAX Aus This Month",
+        "img": "https://static.giantbomb.com/uploads/original/0/7772/3028596-image_tom_clancy_s_the_division_2-38412-4034_0003.jpg"
+      },
+      {
+        "title": "Former Dragon Age Director Joins Assassin's Creed Odyssey Studio",
+        "img": "https://static.giantbomb.com/uploads/original/13/135472/3031131-assassins+creed+odyssey+screen+4.jpg"
+      },
+      {
+        "title": "God Of War PS4: Watch Conan And Bill Hader Play New Game",
+        "img": "https://static.giantbomb.com/uploads/original/0/1992/2862202-27046828293_28e9c64a2b_o.jpg"
+      }
+    ],
+    "games": [
+      {
+        "title": "God of War",
+        "img": "https://static.giantbomb.com/uploads/original/0/1992/2862202-27046828293_28e9c64a2b_o.jpg"
+      },
+      {
+        "title": "The Division 2",
+        "img": "https://static.giantbomb.com/uploads/original/13/135472/3043941-5881871274-IsUman1n"
+      },
+      {
+        "title": "Dead Island 2",
+        "img": "https://static.giantbomb.com/uploads/original/8/81005/2644135-14384067381_83a6e6c758_b.jpg"
+      },
+      {
+        "title": "Marvel's Spider-Man",
+        "img": "https://static.giantbomb.com/uploads/original/13/135472/3015262-1249798788-Hah9zjpb"
+      },
+      {
+        "title": "Uncharted 4",
+        "img": "https://static.giantbomb.com/uploads/original/9/95676/2644892-u4.jpg"
+      },
+      {
+        "title": "Ratchet and Clank",
+        "img": "https://static.giantbomb.com/uploads/original/0/3699/2757242-ratchet+%26+clank+v3.jpg"
+      }
+    ]
+  }
 }

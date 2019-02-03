@@ -39,11 +39,11 @@ const sizereport      = require('gulp-sizereport')
  */
 
 const config = {
-    host: './',
-    font: {
-        name: 'nucleo',
-        class: 'ya'
-    },
+  host: './',
+  font: {
+    name: 'nucleo',
+    class: 'ya'
+  },
 }
 
 /**
@@ -53,25 +53,25 @@ const config = {
  */
 
 const path = {
-    src: {
-        scss:    './src/scss/**/*.scss',
-        js:      './src/js/**/*.js',
-        svg:     './src/svg/*.svg',
-        json:    './src/json/src/*.json',
-        img:     './src/img/*',
-        twig:    './src/twig/*.twig',
-        views:   './src/twig/views/*.twig'
-    },
-    dist: {
-        css:     './dist/css',
-        js:      './dist/js',
-        svg:     './dist/fonts',
-        icon:    './src/fonts',
-        json:    './src/json/dist',
-        img:     './dist/img',
-        html:    './dist',
-        plugins: './dist/plugins/*'
-    }
+  src: {
+    scss:    './src/scss/**/*.scss',
+    js:      './src/js/**/*.js',
+    svg:     './src/svg/*.svg',
+    json:    './src/json/src/*.json',
+    img:     './src/img/*',
+    twig:    './src/twig/*.twig',
+    views:   './src/twig/views/*.twig'
+  },
+  dist: {
+    css:     './dist/css',
+    js:      './dist/js',
+    svg:     './dist/fonts',
+    icon:    './src/fonts',
+    json:    './src/json/dist',
+    img:     './dist/img',
+    html:    './dist',
+    plugins: './dist/plugins/*'
+  }
 }
 
 /**
@@ -81,25 +81,25 @@ const path = {
  */
 
 function scss() {
-    return gulp.src(path.src.scss)
-        .pipe(stylelint({
-            failAfterError: false,
-            reporters: [
-                {formatter: 'string', console: true}
-            ],
-            debug: true
-        }))
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            includePaths: ['./node_modules/', './src/scss/theme/'],
-            outputStyle: 'compressed'
-        }))
-        .pipe(postcss())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(path.dist.css))
+  return gulp.src(path.src.scss)
+    .pipe(stylelint({
+      failAfterError: false,
+      reporters: [
+        {formatter: 'string', console: true}
+      ],
+      debug: true
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      includePaths: ['./node_modules/', './src/scss/theme/'],
+      outputStyle: 'compressed'
+    }))
+    .pipe(postcss())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(path.dist.css))
 }
 
 /**
@@ -109,36 +109,36 @@ function scss() {
  */
 
 function lint() {
-    return gulp.src(path.src.js)
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError())
+  return gulp.src(path.src.js)
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
 }
 
 function babel() {
-    return rollup('./rollup.config.js')
-        .pipe(source('theme.js'))
-        .pipe(gulp.dest(path.dist.js))
+  return rollup('./rollup.config.js')
+    .pipe(source('theme.js'))
+    .pipe(gulp.dest(path.dist.js))
 }
 
 function minify() {
-    return gulp.src('./dist/js/theme.js')
-        .pipe(concat('theme.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(path.dist.js))
+  return gulp.src('./dist/js/theme.js')
+    .pipe(concat('theme.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(path.dist.js))
 }
 
 function script() {
-    return gulp.src([
-            'node_modules/owl.carousel/dist/owl.carousel.min.js',
-            'node_modules/jquery-sticky/jquery.sticky.js',
-            './dist/js/theme.js'
-        ])
-        .pipe(concat('theme.bundle.js'))
-        .pipe(gulp.dest(path.dist.js))
-        .pipe(concat('theme.bundle.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(path.dist.js))
+  return gulp.src([
+      'node_modules/owl.carousel/dist/owl.carousel.min.js',
+      'node_modules/jquery-sticky/jquery.sticky.js',
+      './dist/js/theme.js'
+    ])
+    .pipe(concat('theme.bundle.js'))
+    .pipe(gulp.dest(path.dist.js))
+    .pipe(concat('theme.bundle.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(path.dist.js))
 }
 
 /**
@@ -148,13 +148,13 @@ function script() {
  */
 
 function image() {
-    return gulp.src(path.src.img)
-        .pipe(changed(path.dist.img))
-        .pipe(imagemin({
-            mozjpeg: ['-quality', 90]
-        }))
-        .pipe(gulp.dest(path.dist.img))
-        .pipe(browserSync.stream())
+  return gulp.src(path.src.img)
+    .pipe(changed(path.dist.img))
+    .pipe(imagemin({
+      mozjpeg: ['-quality', 90]
+    }))
+    .pipe(gulp.dest(path.dist.img))
+    .pipe(browserSync.stream())
 }
 
 /**
@@ -164,9 +164,9 @@ function image() {
  */
 
 function json() {
-    return gulp.src(path.src.json)
-        .pipe(merge({ fileName: 'theme.json' }))
-        .pipe(gulp.dest(path.dist.json))
+  return gulp.src(path.src.json)
+    .pipe(merge({ fileName: 'theme.json' }))
+    .pipe(gulp.dest(path.dist.json))
 }
 
 /**
@@ -176,35 +176,35 @@ function json() {
  */
 
 function html() {
-    return gulp.src(path.src.twig)
-        .pipe(changed(path.dist.html, {
-            extension: '.html'
-        }))
-        .pipe(twig({
-            base: './src/twig/views',
-            data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
-        }))
-        .pipe(prettify({
-            unformatted: ['span', 'i'],
-            extra_liners: ' ',
-            max_preserve_newlines: 0
-        }))
-        .pipe(gulp.dest(path.dist.html))
-        .pipe(browserSync.stream())
+  return gulp.src(path.src.twig)
+    .pipe(changed(path.dist.html, {
+      extension: '.html'
+    }))
+    .pipe(twig({
+      base: './src/twig/views',
+      data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
+    }))
+    .pipe(prettify({
+      unformatted: ['span', 'i'],
+      extra_liners: ' ',
+      max_preserve_newlines: 0
+    }))
+    .pipe(gulp.dest(path.dist.html))
+    .pipe(browserSync.stream())
 }
 
 function compile() {
-    return gulp.src(path.src.twig)
-        .pipe(twig({
-            base: './src/twig/views',
-            data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
-        }))
-        .pipe(prettify({
-            unformatted: ['span', 'i'],
-            extra_liners: ' ',
-            max_preserve_newlines: 0
-        }))
-        .pipe(gulp.dest(path.dist.html))
+  return gulp.src(path.src.twig)
+      .pipe(twig({
+          base: './src/twig/views',
+          data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
+      }))
+      .pipe(prettify({
+          unformatted: ['span', 'i'],
+          extra_liners: ' ',
+          max_preserve_newlines: 0
+      }))
+      .pipe(gulp.dest(path.dist.html))
 }
 
 /**
@@ -214,27 +214,27 @@ function compile() {
  */
 
 function svg() {
-    return gulp.src(path.src.svg)
-        .pipe(iconfontcss({
-            fontName: config.font.name,
-            path: './src/fonts/icons.sass',
-            targetPath: '../scss/theme/_icons.scss',
-            fontPath: '../fonts/',
-            cssClass: config.font.class
-        }))
-        .pipe(iconfont({
-            centerHorizontally: true,
-            fontName: config.font.name,
-            normalize: true,
-            fontHeight: 1024,
-            descent: 127,
-            formats: ['ttf', 'eot', 'woff', 'svg']
-        }))
-        .pipe(gulp.dest(path.dist.icon))
+  return gulp.src(path.src.svg)
+    .pipe(iconfontcss({
+      fontName: config.font.name,
+      path: './src/fonts/icons.sass',
+      targetPath: '../scss/theme/_icons.scss',
+      fontPath: '../fonts/',
+      cssClass: config.font.class
+    }))
+    .pipe(iconfont({
+      centerHorizontally: true,
+      fontName: config.font.name,
+      normalize: true,
+      fontHeight: 1024,
+      descent: 127,
+      formats: ['ttf', 'eot', 'woff', 'svg']
+    }))
+    .pipe(gulp.dest(path.dist.icon))
 }
 
 function svg_copy() {
-    return gulp.src(['./src/fonts/*', '!./src/fonts/icons.sass' ]).pipe(gulp.dest(path.dist.svg))
+  return gulp.src(['./src/fonts/*', '!./src/fonts/icons.sass' ]).pipe(gulp.dest(path.dist.svg))
 }
 
 /**
@@ -244,20 +244,20 @@ function svg_copy() {
  */
 
 function browser() {
-    return browserSync.init({
-        files : [
-            path.dist.css    + '/theme.min.css',
-            path.dist.js     + '/theme.bundle.min.js',
-            path.dist.html   + '/*.html'
-        ],
-        notify: false,
-        server: {
-            baseDir: config.host,
-            routes: {
-                "/": "dist"
-            }
-        }
-    })
+  return browserSync.init({
+    files : [
+      path.dist.css    + '/theme.min.css',
+      path.dist.js     + '/theme.bundle.min.js',
+      path.dist.html   + '/*.html'
+    ],
+    notify: false,
+    server: {
+      baseDir: config.host,
+      routes: {
+        "/": "dist"
+      }
+    }
+  })
 }
 
 /**
@@ -267,29 +267,25 @@ function browser() {
  */
 
 function report() {
-    return gulp.src(['./dist/css/*', './dist/js/*'])
-        .pipe(sizereport());
+  return gulp.src(['./dist/css/*', './dist/js/*'])
+    .pipe(sizereport());
 }
 
 function report_css() {
-    return gulp.src('./dist/css/*')
-        .pipe(sizereport({
-            // 'theme.min.css': {
-            //     'maxSize': 266240
-            // }
-        }));
+  return gulp.src('./dist/css/*')
+    .pipe(sizereport());
 }
 
 function report_js() {
-    return gulp.src('./dist/js/*')
-        .pipe(sizereport({
-            'theme.bundle.min.js': {
-                'maxSize': 89088
-            },
-            'theme.bundle.js': {
-                'maxSize': 126976
-            }
-        }));
+  return gulp.src('./dist/js/*')
+    .pipe(sizereport({
+      'theme.bundle.min.js': {
+        'maxSize': 89088
+      },
+      'theme.bundle.js': {
+        'maxSize': 126976
+      }
+    }));
 }
 
 /**
@@ -299,8 +295,8 @@ function report_js() {
  */
 
 function clear() {
-    return gulp.src(path.dist.plugins, {read: false})
-        .pipe(clean());
+  return gulp.src(path.dist.plugins, {read: false})
+    .pipe(clean());
 }
 
 function bootstrap()        { return gulp.src('./node_modules/bootstrap/dist/**/*').pipe(gulp.dest('./dist/plugins/bootstrap')) }
@@ -327,16 +323,16 @@ function lazysizes()        { return gulp.src(['./node_modules/lazysizes/lazysiz
  */
 
 const build = {
-    dev:         gulp.parallel(watch, browser),
-    css:         gulp.series(scss, report_css),
-    image:       image,
-    js:          gulp.series(babel, minify, script, lint, report_js),
-    html:        html,
-    compile:     compile,
-    report:      report,
-    json:        gulp.series(json, compile),
-    icon:        gulp.series(svg, svg_copy),
-    plugins:     gulp.series(clear, bootstrap, jquery, popper, fontawesome, ckeditor, easypiechart, bootstrap_select, flatpickr, sticky, datatables, morris, raphael, parallax, countdown, nouislider, lazysizes)
+  dev:         gulp.parallel(watch, browser),
+  css:         gulp.series(scss, report_css),
+  image:       image,
+  js:          gulp.series(babel, minify, script, lint, report_js),
+  html:        html,
+  compile:     compile,
+  report:      report,
+  json:        gulp.series(json, compile),
+  icon:        gulp.series(svg, svg_copy),
+  plugins:     gulp.series(clear, bootstrap, jquery, popper, fontawesome, ckeditor, easypiechart, bootstrap_select, flatpickr, sticky, datatables, morris, raphael, parallax, countdown, nouislider, lazysizes)
 }
 
 /**
@@ -346,13 +342,13 @@ const build = {
  */
 
 function watch() {
-    gulp.watch(path.src.twig,  {events: ['change', 'unlink']}, build.html)
-    gulp.watch(path.src.views, {events: ['change', 'unlink']}, build.compile)
-    gulp.watch(path.src.json,  {events: ['change', 'unlink']}, build.json)
-    gulp.watch(path.src.scss,  {events: ['change', 'unlink']}, build.css)
-    gulp.watch(path.src.js,    {events: ['change', 'unlink']}, build.js)
-    gulp.watch(path.src.img, build.image)
-    gulp.watch(path.src.svg, build.icon)
+  gulp.watch(path.src.twig,  {events: ['change', 'unlink']}, build.html)
+  gulp.watch(path.src.views, {events: ['change', 'unlink']}, build.compile)
+  gulp.watch(path.src.json,  {events: ['change', 'unlink']}, build.json)
+  gulp.watch(path.src.scss,  {events: ['change', 'unlink']}, build.css)
+  gulp.watch(path.src.js,    {events: ['change', 'unlink']}, build.js)
+  gulp.watch(path.src.img, build.image)
+  gulp.watch(path.src.svg, build.icon)
 }
 
 /**

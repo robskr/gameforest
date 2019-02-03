@@ -1,5 +1,5 @@
 {
-    "plugins": {
-        "bootstrap": { "version": "4.1" }
-    }
+  "plugins": {
+    "bootstrap": { "version": "4.1" }
+  }
 }

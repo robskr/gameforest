@@ -1,84 +1,84 @@
 {
-    "gallery": [
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/2862190-27046534534_059ff73a97_o.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/1992/2862190-27046534534_059ff73a97_o.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/2862191-27379838530_ccef720520_o.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/1992/2862191-27379838530_ccef720520_o.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010682-spider-man+ps4+screen+1.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3010682-spider-man+ps4+screen+1.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010683-spider-man+ps4+screen+2.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3010683-spider-man+ps4+screen+2.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010684-spider-man+ps4+screen+3.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3010684-spider-man+ps4+screen+3.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015260-1933084277-KT8quWcf",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015260-1933084277-KT8quWcf"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015261-4155852020-p7vzWmWK",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015261-4155852020-p7vzWmWK"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015262-1249798788-Hah9zjpb",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015262-1249798788-Hah9zjpb"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015263-3838970909-ARoDlvct",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015263-3838970909-ARoDlvct"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015266-1745908185-HeWpIRUO",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3015266-1745908185-HeWpIRUO"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028605-nibellion_2018-jun-12+1.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/7772/3028605-nibellion_2018-jun-12+1.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028606-nibellion_2018-jun-12+2.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/7772/3028606-nibellion_2018-jun-12+2.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028607-nibellion_2018-jun-12+3.jpg",
-            "gallery": "https://static.giantbomb.com/uploads/original/0/7772/3028607-nibellion_2018-jun-12+3.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028608-nibellion_2018-jun-12.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/7772/3028608-nibellion_2018-jun-12.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/3029308-spiderman-1.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/1992/3029308-spiderman-1.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3031605-4775784493-9HTTFa3F",
-            "large": "https://static.giantbomb.com/uploads/original/13/135472/3031605-4775784493-9HTTFa3F"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/3070088-marvel%27s+spider-man_20180911200453.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/1992/3070088-marvel%27s+spider-man_20180911200453.png"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/3070093-marvel%27s+spider-man_20180912182728.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/1992/3070093-marvel%27s+spider-man_20180912182728.png"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/3/39162/3066789-landscape-1528812542-spider-man-playstation-4-e3-2018-trailer.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/3/39162/3066789-landscape-1528812542-spider-man-playstation-4-e3-2018-trailer.jpg"
-        },
-        {
-            "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028608-nibellion_2018-jun-12.jpg",
-            "large": "https://static.giantbomb.com/uploads/original/0/7772/3028608-nibellion_2018-jun-12.jpg"
-        }
-    ]
+  "gallery": [
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/2862190-27046534534_059ff73a97_o.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/1992/2862190-27046534534_059ff73a97_o.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/2862191-27379838530_ccef720520_o.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/1992/2862191-27379838530_ccef720520_o.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010682-spider-man+ps4+screen+1.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3010682-spider-man+ps4+screen+1.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010683-spider-man+ps4+screen+2.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3010683-spider-man+ps4+screen+2.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3010684-spider-man+ps4+screen+3.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3010684-spider-man+ps4+screen+3.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015260-1933084277-KT8quWcf",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3015260-1933084277-KT8quWcf"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015261-4155852020-p7vzWmWK",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3015261-4155852020-p7vzWmWK"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015262-1249798788-Hah9zjpb",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3015262-1249798788-Hah9zjpb"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015263-3838970909-ARoDlvct",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3015263-3838970909-ARoDlvct"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3015266-1745908185-HeWpIRUO",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3015266-1745908185-HeWpIRUO"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028605-nibellion_2018-jun-12+1.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/7772/3028605-nibellion_2018-jun-12+1.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028606-nibellion_2018-jun-12+2.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/7772/3028606-nibellion_2018-jun-12+2.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028607-nibellion_2018-jun-12+3.jpg",
+      "gallery": "https://static.giantbomb.com/uploads/original/0/7772/3028607-nibellion_2018-jun-12+3.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028608-nibellion_2018-jun-12.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/7772/3028608-nibellion_2018-jun-12.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/3029308-spiderman-1.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/1992/3029308-spiderman-1.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/13/135472/3031605-4775784493-9HTTFa3F",
+      "large": "https://static.giantbomb.com/uploads/original/13/135472/3031605-4775784493-9HTTFa3F"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/3070088-marvel%27s+spider-man_20180911200453.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/1992/3070088-marvel%27s+spider-man_20180911200453.png"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/1992/3070093-marvel%27s+spider-man_20180912182728.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/1992/3070093-marvel%27s+spider-man_20180912182728.png"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/3/39162/3066789-landscape-1528812542-spider-man-playstation-4-e3-2018-trailer.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/3/39162/3066789-landscape-1528812542-spider-man-playstation-4-e3-2018-trailer.jpg"
+    },
+    {
+      "image": "https://static.giantbomb.com/uploads/square_medium/0/7772/3028608-nibellion_2018-jun-12.jpg",
+      "large": "https://static.giantbomb.com/uploads/original/0/7772/3028608-nibellion_2018-jun-12.jpg"
+    }
+  ]
 }
