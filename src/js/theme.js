@@ -18,32 +18,32 @@ import $ from 'jquery'
  */
 
 class Theme {
-    _bootstrap() {
-        $('[data-toggle="tooltip"]').tooltip()
-        $('[data-toggle="popover"]').popover()
-    }
+  _bootstrap() {
+    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="popover"]').popover()
+  }
 
-    _fixHeight() {
-        if (document.querySelector('.owl-height-100')) {
-            const height = window.innerHeight - document.querySelector('.site-header').offsetHeight
+  _fixHeight() {
+    if (document.querySelector('.owl-height-100')) {
+      const height = window.innerHeight - document.querySelector('.site-header').offsetHeight
 
-            document.querySelectorAll('.owl-carousel-item').forEach((el) => {
-                el.style.height =  `${height}px`
-            })
-        }
+      document.querySelectorAll('.owl-carousel-item').forEach((el) => {
+        el.style.height =  `${height}px`
+      })
     }
+  }
 
-    // private
-    _load() {
-        this._bootstrap()
-        this._fixHeight()
-    }
+  // private
+  _load() {
+    this._bootstrap()
+    this._fixHeight()
+  }
 
-    // static
-    static _init() {
-        const data = new Theme()
-        data._load()
-    }
+  // static
+  static _init() {
+    const data = new Theme()
+    data._load()
+  }
 }
 
 /**
@@ -53,7 +53,7 @@ class Theme {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    Theme._init.call()
+  Theme._init.call()
 })
 
 export default Theme

@@ -19,8 +19,8 @@ const DATA                   = '.progress-loaded'
 const VERSION                = '1.0.0'
 
 const Selector = {
-    VALUE       : 'aria-valuenow',
-    BAR         : '.progress-bar'
+  VALUE       : 'aria-valuenow',
+  BAR         : '.progress-bar'
 }
 
 /**
@@ -30,36 +30,36 @@ const Selector = {
  */
 
 class Progress {
-    constructor(element) {
-        this._element       = element
-        this._bar           = element.querySelector(Selector.BAR)
-        this._value         = this._bar.getAttribute(Selector.VALUE)
-    }
+  constructor(element) {
+    this._element       = element
+    this._bar           = element.querySelector(Selector.BAR)
+    this._value         = this._bar.getAttribute(Selector.VALUE)
+  }
 
-    static get VERSION() {
-        return VERSION
-    }
+  static get VERSION() {
+    return VERSION
+  }
 
-    _get() {
-        let current = 0
+  _get() {
+    let current = 0
 
-        setInterval((el) => {
-            if (current >= this._value) {
-                clearInterval(el)
-            } else {
-                current += 1
-                this._bar.style.setProperty('width', `${current}%`)
-            }
-        }, 0)
+    setInterval((el) => {
+      if (current >= this._value) {
+        clearInterval(el)
+      } else {
+        current += 1
+        this._bar.style.setProperty('width', `${current}%`)
+      }
+    }, 0)
 
-        return true
-    }
+    return true
+  }
 
-    // static
-    static _init() {
-        const data = new Progress(this)
-        data._get()
-    }
+  // static
+  static _init() {
+    const data = new Progress(this)
+    data._get()
+  }
 }
 
 /**
@@ -69,9 +69,9 @@ class Progress {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA).forEach((el) => {
-        Progress._init.call(el)
-    })
+  document.querySelectorAll(DATA).forEach((el) => {
+    Progress._init.call(el)
+  })
 })
 
 export default Progress

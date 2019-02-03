@@ -28,40 +28,40 @@ const VERSION                = '1.0.0'
  */
 
 class Style extends Helpers {
-    constructor(element) {
-        super()
-        this._element       = element
-        this._attr          = element.getAttribute(DATA)
-        this.option         = []
+  constructor(element) {
+    super()
+    this._element       = element
+    this._attr          = element.getAttribute(DATA)
+    this.option         = []
+  }
+
+  static get VERSION() {
+    return VERSION
+  }
+
+  // private
+  _set(option) {
+    const Defaults = {
+      bg: option['background-color'] ? `background-color: ${option['background-color']} !important;` : '',
+      height: option.height ? `height: ${option.height} !important;` : '',
+      opacity: option.opacity ? `opacity: ${option.opacity} !important;` : '',
+      borderColor: option['border-color'] ? `border-color: ${option['border-color']};` : ' '
     }
 
-    static get VERSION() {
-        return VERSION
-    }
+    return Defaults.height + Defaults.bg + Defaults.opacity + Defaults.borderColor
+  }
 
-    // private
-    _set(option) {
-        const Defaults = {
-            bg: option['background-color'] ? `background-color: ${option['background-color']} !important;` : '',
-            height: option.height ? `height: ${option.height} !important;` : '',
-            opacity: option.opacity ? `opacity: ${option.opacity} !important;` : '',
-            borderColor: option['border-color'] ? `border-color: ${option['border-color']};` : ' '
-        }
+  _get() {
+    this.loopArray(this._attr, this.option)
+    this._element.style.cssText = this._set(this.option)
+    this._element.removeAttribute(DATA)
+  }
 
-        return Defaults.height + Defaults.bg + Defaults.opacity + Defaults.borderColor
-    }
-
-    _get() {
-        this.loopArray(this._attr, this.option)
-        this._element.style.cssText = this._set(this.option)
-        this._element.removeAttribute(DATA)
-    }
-
-    // static
-    static _init() {
-        const data = new Style(this)
-        data._get()
-    }
+  // static
+  static _init() {
+    const data = new Style(this)
+    data._get()
+  }
 }
 
 /**
@@ -71,9 +71,9 @@ class Style extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA_KEY).forEach((el) => {
-        Style._init.call(el)
-    })
+  document.querySelectorAll(DATA_KEY).forEach((el) => {
+    Style._init.call(el)
+  })
 })
 
 export default Style
