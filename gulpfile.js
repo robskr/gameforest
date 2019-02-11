@@ -43,7 +43,7 @@ const config = {
     font: {
         name: 'nucleo',
         class: 'ya'
-    },
+    }
 }
 
 /**
@@ -234,7 +234,7 @@ function svg() {
 }
 
 function svg_copy() {
-    return gulp.src(['./src/fonts/*', '!./src/fonts/icons.sass' ]).pipe(gulp.dest(path.dist.svg))
+    return gulp.src(['./src/fonts/*', '!./src/fonts/icons.sass']).pipe(gulp.dest(path.dist.svg))
 }
 
 /**
@@ -246,15 +246,15 @@ function svg_copy() {
 function browser() {
     return browserSync.init({
         files : [
-            path.dist.css    + '/theme.min.css',
-            path.dist.js     + '/theme.bundle.min.js',
-            path.dist.html   + '/*.html'
+            `${path.dist.css}/theme.min.css`,
+            `${path.dist.js}/theme.bundle.min.js`,
+            `${path.dist.html}/*.html`
         ],
         notify: false,
         server: {
             baseDir: config.host,
             routes: {
-                "/": "dist"
+                '/': 'dist'
             }
         }
     })
@@ -268,28 +268,24 @@ function browser() {
 
 function report() {
     return gulp.src(['./dist/css/*', './dist/js/*'])
-        .pipe(sizereport());
+        .pipe(sizereport())
 }
 
 function report_css() {
     return gulp.src('./dist/css/*')
-        .pipe(sizereport({
-            // 'theme.min.css': {
-            //     'maxSize': 266240
-            // }
-        }));
+        .pipe(sizereport())
 }
 
 function report_js() {
     return gulp.src('./dist/js/*')
         .pipe(sizereport({
             'theme.bundle.min.js': {
-                'maxSize': 89088
+                maxSize: 89088
             },
             'theme.bundle.js': {
-                'maxSize': 126976
+                maxSize: 126976
             }
-        }));
+        }))
 }
 
 /**
@@ -300,7 +296,7 @@ function report_js() {
 
 function clear() {
     return gulp.src(path.dist.plugins, {read: false})
-        .pipe(clean());
+        .pipe(clean())
 }
 
 function bootstrap()        { return gulp.src('./node_modules/bootstrap/dist/**/*').pipe(gulp.dest('./dist/plugins/bootstrap')) }
