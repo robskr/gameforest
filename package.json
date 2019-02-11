@@ -67,7 +67,7 @@
         "@ckeditor/ckeditor5-build-classic": "^11.2.0",
         "@fortawesome/fontawesome-free": "^5.7.1",
         "bootstrap": "^4.2.1",
-        "bootstrap-select": "^1.13.3",
+        "bootstrap-select": "^1.13.5",
         "datatables.net-bs4": "^1.10.19",
         "easy-pie-chart": "^2.1.7",
         "flatpickr": "^4.5.2",
