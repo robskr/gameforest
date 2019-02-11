@@ -52,6 +52,7 @@
                 <th>Version</th>
                 <th>Description</th>
                 <th>URL</th>
+                <th>Github</th>
             </tr>
         </thead>
         <tbody>
@@ -61,6 +62,7 @@
                     <td>{{ plugin.version }}</td>
                     <td>{{ plugin.text }}</td>
                     <td><a class="link" href="{{ plugin.url }}" target="_blank">{{ plugin.url }}</a></td>
+                    <td class="text-center"><a href="{{ plugin.github }}" target="_blank"><i class="ya ya-github"></i></a></td>
                 </tr>
         {% endfor %}
         </tbody>
