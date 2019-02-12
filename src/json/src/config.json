@@ -4,6 +4,7 @@
         "brand": "Gameforest",
         "version": "5.0.1",
         "navbar": "fixed",
+        "bootstrap": "4.3",
         "footer": "static",
         "dateformat": "F d, Y",
         "disqus": "gameforestyakuzieu",
