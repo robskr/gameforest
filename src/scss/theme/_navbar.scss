@@ -279,7 +279,7 @@
 
 // Navbar search
 .navbar-search {
-  position: fixed;
+  position: absolute;
   top: -#{$navbar-padding-fixed};
   left: 0;
   z-index: -1;
@@ -339,6 +339,10 @@
     top: 0;
     z-index: 8;
     width: 100%;
+  }
+
+  .navbar-search {
+    position: absolute;
   }
 
   .anchor {
