@@ -309,7 +309,7 @@ function lazysizes()        { return gulp.src(['./node_modules/lazysizes/lazysiz
  */
 
 const build = {
-    dev:         gulp.parallel(watch, browser),
+    host:        gulp.parallel(watch, browser),
     css:         gulp.series(scss, report_css),
     image:       image,
     js:          gulp.series(babel, minify, script, lint, report_js),
@@ -351,4 +351,4 @@ gulp.task('css',        build.css)
 gulp.task('js',         build.js)
 gulp.task('image',      build.image)
 gulp.task('plugins',    build.plugins)
-gulp.task('default',    build.dev)
+gulp.task('default',    build.host)

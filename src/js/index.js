@@ -16,7 +16,7 @@ import Theme from './theme'
 /**
  * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: index.js
- * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
+ * Copyright (c) 2019 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
  * @version   5.0.3
