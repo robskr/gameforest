@@ -34,7 +34,7 @@ function _inheritsLoose(subClass, superClass) {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -139,7 +139,6 @@ function () {
       autoplay: this.options.autoplay ? this.options.autoplay : 1,
       mute: this.options.mute ? this.options.mute : 0,
       loop: this.options.loop ? this.options.loop + "&amp;playlist=" + id : 0,
-      recommends: this.options.recommends ? this.options.recommends : 0,
       start: this.options.start ? this.options.start : 0
     };
     return "?rel=0&amp;autoplay=" + player.autoplay + "&amp;controls=" + player.controls + "&amp;mute=" + player.mute + "&amp;start=" + player.start + "&amp;loop=" + player.loop;
@@ -187,7 +186,7 @@ function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -255,8 +254,8 @@ function (_Helpers) {
       video.width = Math.ceil(video.height * ratio);
       video.marginLeft = Math.ceil(-((video.width - el.width) / num.half));
     }
-  }; // private
-
+  } // private
+  ;
 
   _proto._add = function _add(src) {
     // create container
@@ -291,8 +290,8 @@ function (_Helpers) {
 
   _proto._get = function _get() {
     return this._add(this._element);
-  }; // static
-
+  } // static
+  ;
 
   Background._init = function _init() {
     var data = new Background(this);
@@ -328,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -421,13 +420,13 @@ function (_Helpers) {
         }
       }
     });
-  }; // private
-
+  } // private
+  ;
 
   _proto._get = function _get() {
     return this._add();
-  }; // static
-
+  } // static
+  ;
 
   Carousel._init = function _init() {
     var data = new Carousel(this);
@@ -463,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -500,8 +499,8 @@ function (_Helpers) {
 
   _proto._get = function _get() {
     return this.disqus(DATA_KEY$2);
-  }; // static
-
+  } // static
+  ;
 
   Disqus._init = function _init() {
     var data = new Disqus(this);
@@ -537,7 +536,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -633,8 +632,8 @@ function (_Helpers) {
     }
 
     return true;
-  }; // private
-
+  } // private
+  ;
 
   _proto._add = function _add(src) {
     // create an element
@@ -662,8 +661,8 @@ function (_Helpers) {
       e.preventDefault();
       return _this2._add(_this2._element);
     }, false);
-  }; // static
-
+  } // static
+  ;
 
   Embed._init = function _init() {
     var data = new Embed(this);
@@ -699,7 +698,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -735,8 +734,8 @@ function (_Helpers) {
 
   _proto._get = function _get() {
     return this.facebook(DATA_KEY$4);
-  }; // static
-
+  } // static
+  ;
 
   Facebook._init = function _init() {
     var data = new Facebook(this);
@@ -772,7 +771,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -878,8 +877,8 @@ function () {
     this._light();
 
     this._regular();
-  }; // static
-
+  } // static
+  ;
 
   Icons._init = function _init() {
     var data = new Icons();
@@ -915,7 +914,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -1031,8 +1030,8 @@ function (_Helpers) {
       return false;
     }, false);
     return true;
-  }; // gallery
-
+  } // gallery
+  ;
 
   _proto._gallery = function _gallery(lightbox) {
     var _this3 = this;
@@ -1063,8 +1062,8 @@ function (_Helpers) {
       items: 1
     });
     return true;
-  }; // video
-
+  } // video
+  ;
 
   _proto._video = function _video(lightbox, src) {
     lightbox.item.className = ClassName$3.ITEM;
@@ -1078,8 +1077,8 @@ function (_Helpers) {
     lightbox.item.appendChild(lightbox.embed);
     lightbox.embed.appendChild(lightbox.element);
     return true;
-  }; // image
-
+  } // image
+  ;
 
   _proto._image = function _image(lightbox) {
     lightbox.item.className = ClassName$3.ITEM;
@@ -1131,8 +1130,8 @@ function (_Helpers) {
 
       _this4._add(_this4._element);
     }, false);
-  }; // static
-
+  } // static
+  ;
 
   Lightbox._init = function _init() {
     var data = new Lightbox(this);
@@ -1168,7 +1167,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -1220,8 +1219,8 @@ function () {
       e.preventDefault();
       return false;
     });
-  }; // private
-
+  } // private
+  ;
 
   _proto._toggle = function _toggle() {
     return this._element.classList.toggle('active');
@@ -1251,8 +1250,8 @@ function () {
     this._fix();
 
     this._hover();
-  }; // static
-
+  } // static
+  ;
 
   Navbar._init = function _init() {
     var data = new Navbar(this);
@@ -1288,7 +1287,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -1385,8 +1384,8 @@ function (_Helpers) {
 
       _this2._add(_this2._element);
     }, false);
-  }; // static
-
+  } // static
+  ;
 
   Notify._init = function _init() {
     var data = new Notify(this);
@@ -1422,7 +1421,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -1470,8 +1469,8 @@ function () {
       }
     }, 0);
     return true;
-  }; // static
-
+  } // static
+  ;
 
   Progress._init = function _init() {
     var data = new Progress(this);
@@ -1507,7 +1506,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -1567,8 +1566,8 @@ function (_Helpers) {
     this._set();
 
     return true;
-  }; // static
-
+  } // static
+  ;
 
   Sticky._init = function _init() {
     var data = new Sticky(this);
@@ -1604,7 +1603,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -1656,8 +1655,8 @@ function (_Helpers) {
     this._element.style.cssText = this._set(this.option);
 
     this._element.removeAttribute(DATA$9);
-  }; // static
-
+  } // static
+  ;
 
   Style._init = function _init() {
     var data = new Style(this);
@@ -1693,7 +1692,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -1739,8 +1738,8 @@ function () {
     }
 
     return true;
-  }; // static
-
+  } // static
+  ;
 
   Svg._init = function _init() {
     var data = new Svg(this);
@@ -1776,7 +1775,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -1805,15 +1804,15 @@ function () {
         el.style.height = height + "px";
       });
     }
-  }; // private
-
+  } // private
+  ;
 
   _proto._load = function _load() {
     this._bootstrap();
 
     this._fixHeight();
-  }; // static
-
+  } // static
+  ;
 
   Theme._init = function _init() {
     var data = new Theme();

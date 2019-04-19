@@ -32,7 +32,8 @@ class Helpers {
         if (element.substring(element.length - 1) === ';') {
             element = element.substring(0, element.length - 1)
         }
-        return element.split(';').forEach((s) => {
+
+        return element.split(';').forEach(s => {
             const arr = s.split(':')
             value[this.replaceString(arr[0])] = this.replaceString(arr[1])
         })
@@ -113,7 +114,6 @@ class Helpers {
             autoplay:   this.options.autoplay ? this.options.autoplay : 1,
             mute:       this.options.mute ? this.options.mute : 0,
             loop:       this.options.loop ? `${this.options.loop}&amp;playlist=${id}` : 0,
-            recommends: this.options.recommends ? this.options.recommends : 0,
             start:      this.options.start ? this.options.start : 0
         }
 

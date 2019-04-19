@@ -127,7 +127,7 @@ class Background extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA_KEY).forEach((el) => {
+    document.querySelectorAll(DATA_KEY).forEach(el => {
         Background._init.call(el)
     })
 })

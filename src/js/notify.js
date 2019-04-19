@@ -98,7 +98,7 @@ class Notify extends Helpers {
     }
 
     _get() {
-        this._element.addEventListener('click', (e) => {
+        this._element.addEventListener('click', e => {
             e.preventDefault()
 
             this._add(this._element)
@@ -119,7 +119,7 @@ class Notify extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA_KEY).forEach((el) => {
+    document.querySelectorAll(DATA_KEY).forEach(el => {
         Notify._init.call(el)
     })
 })

@@ -71,7 +71,7 @@ class Style extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA_KEY).forEach((el) => {
+    document.querySelectorAll(DATA_KEY).forEach(el => {
         Style._init.call(el)
     })
 })

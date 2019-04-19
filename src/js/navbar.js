@@ -58,7 +58,7 @@ class Navbar {
             $(this).toggleClass('show')
         })
 
-        $('.dropdown > .dropdown-menu > .dropdown > .dropdown-item').click((e) => {
+        $('.dropdown > .dropdown-menu > .dropdown > .dropdown-item').click(e => {
             e.preventDefault()
 
             return false
@@ -76,13 +76,13 @@ class Navbar {
 
     _get() {
         if (this._icon) {
-            this._icon.addEventListener('click', (e) => {
+            this._icon.addEventListener('click', e => {
                 e.preventDefault()
 
                 this._toggle()
             }, false)
 
-            this._close.addEventListener('click', (e) => {
+            this._close.addEventListener('click', e => {
                 e.preventDefault()
 
                 this._remove()
@@ -107,7 +107,7 @@ class Navbar {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(Selector.NAVBAR).forEach((el) => {
+    document.querySelectorAll(Selector.NAVBAR).forEach(el => {
         Navbar._init.call(el)
     })
 })

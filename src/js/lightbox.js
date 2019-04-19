@@ -101,7 +101,7 @@ class Lightbox extends Helpers {
         }
 
         // remove lightbox
-        lightbox.item.addEventListener('click', (e) => {
+        lightbox.item.addEventListener('click', e => {
             e.preventDefault()
 
             if (!lightbox.element.contains(e.target)) {
@@ -135,7 +135,7 @@ class Lightbox extends Helpers {
         lightbox.carousel.appendChild(lightbox.element)
 
         // detect gallery
-        document.querySelectorAll(`${DATA_KEY}[rel=${this._rel}]`).forEach((el) => {
+        document.querySelectorAll(`${DATA_KEY}[rel=${this._rel}]`).forEach(el => {
             if (this._attr !== el.getAttribute('href')) {
                 lightbox.element              = document.createElement('img')
                 lightbox.element.className    = ClassName.IMAGE
@@ -218,7 +218,7 @@ class Lightbox extends Helpers {
     }
 
     _get() {
-        this._element.addEventListener('click', (e) => {
+        this._element.addEventListener('click', e => {
             e.preventDefault()
 
             this._add(this._element)
@@ -239,7 +239,7 @@ class Lightbox extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA_KEY).forEach((el) => {
+    document.querySelectorAll(DATA_KEY).forEach(el => {
         Lightbox._init.call(el)
     })
 })

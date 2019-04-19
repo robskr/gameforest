@@ -79,7 +79,7 @@ class Sticky extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA_KEY).forEach((el) => {
+    document.querySelectorAll(DATA_KEY).forEach(el => {
         Sticky._init.call(el)
     })
 })

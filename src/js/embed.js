@@ -123,7 +123,7 @@ class Embed extends Helpers {
         this._set()
 
         // click event
-        this._element.addEventListener('click', (e) => {
+        this._element.addEventListener('click', e => {
             e.preventDefault()
 
             return this._add(this._element)
@@ -144,7 +144,7 @@ class Embed extends Helpers {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA_KEY).forEach((el) => {
+    document.querySelectorAll(DATA_KEY).forEach(el => {
         Embed._init.call(el)
     })
 })

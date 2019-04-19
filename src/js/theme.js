@@ -27,7 +27,7 @@ class Theme {
         if (document.querySelector('.owl-height-100')) {
             const height = window.innerHeight - document.querySelector('.site-header').offsetHeight
 
-            document.querySelectorAll('.owl-carousel-item').forEach((el) => {
+            document.querySelectorAll('.owl-carousel-item').forEach(el => {
                 el.style.height =  `${height}px`
             })
         }

@@ -43,7 +43,7 @@ class Progress {
     _get() {
         let current = 0
 
-        setInterval((el) => {
+        setInterval(el => {
             if (current >= this._value) {
                 clearInterval(el)
             } else {
@@ -69,7 +69,7 @@ class Progress {
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(DATA).forEach((el) => {
+    document.querySelectorAll(DATA).forEach(el => {
         Progress._init.call(el)
     })
 })
