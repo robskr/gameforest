@@ -46,6 +46,7 @@ export declare type Instance = Elements & Formatting & {
     latestSelectedDateObj?: Date;
     _selectedDateObj?: Date;
     selectedDates: Date[];
+    _initialDate: Date;
     config: ParsedOptions;
     l10n: Locale;
     currentYear: number;
@@ -58,7 +59,7 @@ export declare type Instance = Elements & Formatting & {
     _showTimeInput: boolean;
     changeMonth: (value: number, is_offset?: boolean, from_keyboard?: boolean) => void;
     changeYear: (year: number) => void;
-    clear: (emitChangeEvent?: boolean) => void;
+    clear: (emitChangeEvent?: boolean, toInitial?: boolean) => void;
     close: () => void;
     destroy: () => void;
     isEnabled: (date: DateOption, timeless?: boolean) => boolean;
@@ -93,7 +94,9 @@ export declare type Instance = Elements & Formatting & {
     };
 };
 export interface FlatpickrFn {
-    (selector: NodeList | HTMLElement | string, config?: Options): Instance | Instance[];
+    (selector: Node, config?: Options): Instance;
+    (selector: ArrayLike<Node>, config?: Options): Instance[];
+    (selector: string, config?: Options): Instance | Instance[];
     defaultConfig: ParsedOptions;
     l10ns: {
         [k in LocaleKey]?: CustomLocale;

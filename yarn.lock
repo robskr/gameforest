@@ -603,15 +603,15 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@ckeditor/ckeditor5-build-classic@^12.0.0":
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-classic/-/ckeditor5-build-classic-12.0.0.tgz#0a738809ee5d45be7bf18a474b73cb15902ba871"
-  integrity sha512-BdD7+u3obrWuPC2kxG/JBXBrtohfPbCzLrNOYE0ITe7qokqmzvfY4WAMwPuI2wBwbuHzuPeGJCnWvjQZgtRZoQ==
+"@ckeditor/ckeditor5-build-classic@^12.1.0":
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-classic/-/ckeditor5-build-classic-12.1.0.tgz#bd8127b8f11ce0a33a3dd8893546bbed5ab5fd30"
+  integrity sha512-SYT+stYBS8JqxWZNye5x9AlwNmwY7+bp2IKNdZDsolKFF1CjOC18gmIB4isGfINzFgn/ke1H21XDenZYp3IxqA==
 
-"@fortawesome/fontawesome-free@^5.7.2":
-  version "5.7.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.7.2.tgz#1498c3eb78ee7c78c5488418707de90aaf58d5d7"
-  integrity sha512-Ha4HshKdCVKgu4TVCtG8XyPPYdzTzNW4/fvPnn+LT7AosRABryhlRv4cc4+o84dgpvVJN9reN7jo/c+nYujFug==
+"@fortawesome/fontawesome-free@^5.8.1":
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.8.1.tgz#cbafbfe8894c4e3e3c3a9da6774e249ac1f2da8b"
+  integrity sha512-GJtx6e55qLEOy2gPOsok2lohjpdWNGrYGtQx0FFT/++K4SYx+Z8LlPHdQBaFzKEwH5IbBB4fNgb//uyZjgYXoA==
 
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
@@ -1337,10 +1337,10 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap-select@^1.13.5:
-  version "1.13.5"
-  resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.5.tgz#12f000b25a95ed642fe371ae9e311d3afbb8c53f"
-  integrity sha512-1uYsYLB4FvGdwM6qzIfTxp6sP5gDqjPgWNHJztBfYUTIo1GUYG5zzmMVWiJvdxJlsvBXZ9AObmeZdzi0eg2jaA==
+bootstrap-select@^1.13.10:
+  version "1.13.10"
+  resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.10.tgz#b0cf57f8d448bc0488faba04ecaa2f4c5216e144"
+  integrity sha512-mwfyd+VWHY8wDN4je4Y8PPEaOAzDPUz95z5F5zxzlIqebqxtbrujclFWLrhkVOyETpsgZCL1rsfyEnHpAugtGg==
 
 bootstrap@^4.3.1:
   version "4.3.1"
@@ -3458,10 +3458,10 @@ flat-cache@^1.2.1:
     rimraf "~2.6.2"
     write "^0.2.1"
 
-flatpickr@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.2.tgz#47c8ad472a096e5fb7e74b809b0703535383f20d"
-  integrity sha512-jDy4QYGpmiy7+Qk8QvKJ4spjDdxcx9cxMydmq1x427HkKWBw0qizLYeYM2F6tMcvvqGjU5VpJS55j4LnsaBblA==
+flatpickr@^4.5.7:
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.7.tgz#6efc0d93c65547aa77294205c67830ebabe3565c"
+  integrity sha512-JqPfihUc9A/j9QAsh6otoARmMyUauPE17vRBEG+ThJwbl8zAq4ssGpxlPK3wWM/i8EFxkHg9UuVo0ds7XluKxw==
 
 flush-write-stream@^1.0.2:
   version "1.0.3"
@@ -5164,10 +5164,15 @@ jquery-sticky@^1.0.4:
   dependencies:
     jquery "*"
 
-jquery@*, jquery@>=1.7, jquery@>=1.8.3, jquery@^3.3.1:
+jquery@*, jquery@>=1.7, jquery@>=1.8.3:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
   integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
+
+jquery@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.0.tgz#8de513fa0fa4b2c7d2e48a530e26f0596936efdf"
+  integrity sha512-ggRCXln9zEqv6OqAGXFEcshF5dSBvCkzj6Gm2gzuR5fWawaX8t7cxKVkkygKODrDAzKdoYw3l/e3pm3vlT4IbQ==
 
 js-base64@^2.1.8:
   version "2.4.9"
@@ -5349,10 +5354,10 @@ lazy-req@^1.0.0:
   resolved "https://registry.yarnpkg.com/lazy-req/-/lazy-req-1.1.0.tgz#bdaebead30f8d824039ce0ce149d4daa07ba1fac"
   integrity sha1-va6+rTD42CQDnODOFJ1Nqge6H6w=
 
-lazysizes@^4.1.5:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-4.1.5.tgz#37c5a34aab03d11285f9ff29919b2e664941a32b"
-  integrity sha512-ttO/1WiM7xQyyc9QWtmErltnsli21HYh59AqSQJKpjsUoykUG+vAZqp9zGr52/hHg2ICIBm8XyB0RHvATnOw9w==
+lazysizes@^4.1.7:
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-4.1.7.tgz#3e11c543c3b7695a75c15c3b9670f5f959de1151"
+  integrity sha512-icCNEAj4uQJt3MVBHo5Gx7FEuX6UYMrsS2x3M6jlUVnLGeb/K8iD4GsjCsLAlOJcpCJZgTFPozaYZboK3WigHw==
 
 lazystream@^1.0.0:
   version "1.0.0"
@@ -6193,10 +6198,10 @@ normalize-url@2.0.1:
     query-string "^5.0.1"
     sort-keys "^2.0.0"
 
-nouislider@^13.1.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-13.1.0.tgz#23a57f25e5302117dc8f7e391954c9f111e8cf84"
-  integrity sha512-XNayuw//xm5pVYXvXKr9IOSxFgbyPkRXZC99xnNMysJ+5nZaiIxOe2WK1QM3VpHOBKktI/Q1TikisH4HjXpw0w==
+nouislider@^13.1.4:
+  version "13.1.4"
+  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-13.1.4.tgz#1927e8787b3f8876d7b942999e9968b234e8bc8f"
+  integrity sha512-XcGdAkjDNjaciL4rBdf6/0Yfj7cVCPD9lUjFfOJnUdku4XaJUFa3Im3w8NnCuJFZ3NraRATREjpqDfbQIRRU0w==
 
 now-and-later@^2.0.0:
   version "2.0.0"
@@ -6828,10 +6833,10 @@ pngquant-bin@^5.0.0:
     execa "^0.10.0"
     logalot "^2.0.0"
 
-popper.js@^1.14.7:
-  version "1.14.7"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.7.tgz#e31ec06cfac6a97a53280c3e55e4e0c860e7738e"
-  integrity sha512-4q1hNvoUre/8srWsH7hnoSJ5xVmIL4qgz+s4qf2TnJIMyZFUFMGH+9vE7mXynAlHSZ/NdTmmow86muD0myUkVQ==
+popper.js@^1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
+  integrity sha512-w010cY1oCUmI+9KwwlWki+r5jxKfTFDVoadl7MSrIujHU5MJ5OR6HTDj6Xo8aoR/QsA56x8jKjA59qGH4ELtrA==
 
 portscanner@2.1.1:
   version "2.1.1"

@@ -7,6 +7,7 @@ declare const _default: {
     tr?: CustomLocale | undefined;
     ar?: CustomLocale | undefined;
     at?: CustomLocale | undefined;
+    az?: CustomLocale | undefined;
     be?: CustomLocale | undefined;
     bg?: CustomLocale | undefined;
     bn?: CustomLocale | undefined;
@@ -21,12 +22,14 @@ declare const _default: {
     et?: CustomLocale | undefined;
     fa?: CustomLocale | undefined;
     fi?: CustomLocale | undefined;
+    fo?: CustomLocale | undefined;
     fr?: CustomLocale | undefined;
     gr?: CustomLocale | undefined;
     he?: CustomLocale | undefined;
     hi?: CustomLocale | undefined;
     hu?: CustomLocale | undefined;
     id?: CustomLocale | undefined;
+    is?: CustomLocale | undefined;
     it?: CustomLocale | undefined;
     ja?: CustomLocale | undefined;
     ko?: CustomLocale | undefined;
@@ -54,6 +57,7 @@ declare const _default: {
     uk?: CustomLocale | undefined;
     vn?: CustomLocale | undefined;
     zh?: CustomLocale | undefined;
+    zh_tw?: CustomLocale | undefined;
 } & {
     default: import("../types/locale").Locale;
 };

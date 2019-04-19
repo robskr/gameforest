@@ -1,4 +1,4 @@
-/*! nouislider - 13.1.0 - 2/8/2019 */
+/*! nouislider - 13.1.4 - 3/20/2019 */
 (function(factory) {
     if (typeof define === "function" && define.amd) {
         // AMD. Register as an anonymous module.
@@ -13,7 +13,9 @@
 })(function() {
     "use strict";
 
-    var VERSION = "13.1.0";
+    var VERSION = "13.1.4";
+
+    //region Helper Methods
 
     function isValidFormatter(entry) {
         return typeof entry === "object" && typeof entry.to === "function" && typeof entry.from === "function";
@@ -194,7 +196,9 @@
         return window.CSS && CSS.supports && CSS.supports("touch-action", "none");
     }
 
-    // Value calculation
+    //endregion
+
+    //region Range Calculation
 
     // Determine the size of a sub-range in relation to a full range.
     function subRangeRatio(pa, pb) {
@@ -215,8 +219,6 @@
     function isPercentage(range, value) {
         return (value * (range[1] - range[0])) / 100 + range[0];
     }
-
-    // Range conversion
 
     function getJ(value, arr) {
         var j = 1;
@@ -286,8 +288,6 @@
         return xPct[j - 1] + closest(value - xPct[j - 1], xSteps[j - 1]);
     }
 
-    // Entry parsing
-
     function handleEntryPoint(index, value, that) {
         var percentage;
 
@@ -336,7 +336,14 @@
     function handleStepPoint(i, n, that) {
         // Ignore 'false' stepping.
         if (!n) {
-            return true;
+            return;
+        }
+
+        // Step over zero-length ranges (#948);
+        if (that.xVal[i] === that.xVal[i + 1]) {
+            that.xSteps[i] = that.xHighestCompleteStep[i] = that.xVal[i];
+
+            return;
         }
 
         // Factor to range ratio
@@ -350,7 +357,9 @@
         that.xHighestCompleteStep[i] = step;
     }
 
-    // Interface
+    //endregion
+
+    //region Spectrum
 
     function Spectrum(entry, snap, singleStep) {
         this.xPct = [];
@@ -465,6 +474,10 @@
     Spectrum.prototype.convert = function(value) {
         return this.getStep(this.toStepping(value));
     };
+
+    //endregion
+
+    //region Options
 
     /*	Every input option is tested and parsed. This'll prevent
         endless validation in internal methods. These tests are
@@ -945,6 +958,8 @@
         return parsed;
     }
 
+    //endregion
+
     function scope(target, options, originalOptions) {
         var actions = getActions();
         var supportsTouchActionNone = getSupportsTouchActionNone();
@@ -959,9 +974,6 @@
         var scope_Connects;
         var scope_Pips;
         var scope_Tooltips;
-
-        // Override for the 'animate' option
-        var scope_ShouldAnimate = true;
 
         // Slider state values
         var scope_Spectrum = options.spectrum;
@@ -1087,6 +1099,10 @@
             }
 
             return addNodeTo(handle.firstChild, options.cssClasses.tooltip);
+        }
+
+        function isSliderDisabled() {
+            return scope_Target.hasAttribute("disabled");
         }
 
         // Disable the slider dragging if any handle is disabled
@@ -1428,7 +1444,7 @@
 
                 // doNotReject is passed by all end events to make sure released touches
                 // are not rejected, leaving the slider "stuck" to the cursor;
-                if (scope_Target.hasAttribute("disabled") && !data.doNotReject) {
+                if (isSliderDisabled() && !data.doNotReject) {
                     return false;
                 }
 
@@ -1768,7 +1784,7 @@
         // Handles keydown on focused handles
         // Don't move the document when pressing arrow keys on focused handles
         function eventKeydown(event, handleNumber) {
-            if (isHandleDisabled(handleNumber)) {
+            if (isSliderDisabled() || isHandleDisabled(handleNumber)) {
                 return false;
             }
 
@@ -1808,14 +1824,13 @@
                 step = scope_Spectrum.getDefaultStep(scope_Locations[handleNumber], isDown, 10);
             }
 
+            // Step over zero-length ranges (#948);
+            step = Math.max(step, 0.0000001);
+
             // Decrement for down steps
             step = (isDown ? -1 : 1) * step;
 
-            scope_ShouldAnimate = false;
-
             valueSetHandle(handleNumber, scope_Values[handleNumber] + step, true);
-
-            scope_ShouldAnimate = true;
 
             return false;
         }
@@ -2159,7 +2174,7 @@
 
             // Animation is optional.
             // Make sure the initial values were set before using animated placement.
-            if (options.animate && !isInit && scope_ShouldAnimate) {
+            if (options.animate && !isInit) {
                 addClassFor(scope_Target, options.cssClasses.tap, options.animationDuration);
             }
 
@@ -2192,8 +2207,6 @@
 
         // Set value for a single handle
         function valueSetHandle(handleNumber, value, fireSetEvent) {
-            var values = [];
-
             // Ensure numeric input
             handleNumber = Number(handleNumber);
 
@@ -2201,13 +2214,14 @@
                 throw new Error("noUiSlider (" + VERSION + "): invalid handle number, got: " + handleNumber);
             }
 
-            for (var i = 0; i < scope_HandleNumbers.length; i++) {
-                values[i] = null;
+            // Look both backward and forward, since we don't want this handle to "push" other handles (#960);
+            setHandle(handleNumber, resolveToValue(value, handleNumber), true, true);
+
+            fireEvent("update", handleNumber);
+
+            if (fireSetEvent) {
+                fireEvent("set", handleNumber);
             }
-
-            values[handleNumber] = value;
-
-            valueSet(values, fireSetEvent);
         }
 
         // Get the slider value.
@@ -2244,6 +2258,14 @@
             var value = scope_Values[handleNumber];
             var increment = nearbySteps.thisStep.step;
             var decrement = null;
+
+            // If snapped, directly use defined step value
+            if (options.snap) {
+                return [
+                    value - nearbySteps.stepBefore.startValue || null,
+                    nearbySteps.stepAfter.startValue - value || null
+                ];
+            }
 
             // If the next value in this step moves into the next step,
             // the increment is the start of the next step - the current value

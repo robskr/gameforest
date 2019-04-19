@@ -314,7 +314,7 @@ function raphael()          { return gulp.src(['./node_modules/raphael/raphael.j
 function parallax()         { return gulp.src('./node_modules/jquery-parallax.js/*').pipe(gulp.dest('./dist/plugins/parallax')) }
 function countdown()        { return gulp.src('./node_modules/jquery-countdown/dist/*').pipe(gulp.dest('./dist/plugins/jquery-countdown')) }
 function nouislider()       { return gulp.src('./node_modules/nouislider/distribute/*').pipe(gulp.dest('./dist/plugins/nouislider')) }
-function lazysizes()        { return gulp.src(['./node_modules/lazysizes/lazysizes.js', './node_modules/lazysizes/lazysizes.min.js']).pipe(gulp.dest('./dist/plugins/lazysizes')) }
+function lazysizes()        { return gulp.src(['./node_modules/lazysizes/lazysizes.js']).pipe(gulp.dest('./dist/plugins/lazysizes')) }
 
 /**
  * ------------------------------------------------------------------------

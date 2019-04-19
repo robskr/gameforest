@@ -64,22 +64,22 @@
         "vinyl-source-stream": "^2.0.0"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^12.0.0",
-        "@fortawesome/fontawesome-free": "^5.7.2",
+        "@ckeditor/ckeditor5-build-classic": "^12.1.0",
+        "@fortawesome/fontawesome-free": "^5.8.1",
         "bootstrap": "^4.3.1",
-        "bootstrap-select": "^1.13.5",
+        "bootstrap-select": "^1.13.10",
         "datatables.net-bs4": "^1.10.19",
         "easy-pie-chart": "^2.1.7",
-        "flatpickr": "^4.5.2",
-        "jquery": "^3.3.1",
+        "flatpickr": "^4.5.7",
+        "jquery": "^3.4.0",
         "jquery-countdown": "^2.2.0",
         "jquery-parallax.js": "^1.5.0",
         "jquery-sticky": "^1.0.4",
-        "lazysizes": "^4.1.5",
+        "lazysizes": "^4.1.7",
         "morris.js": "^0.5.0",
-        "nouislider": "^13.1.0",
+        "nouislider": "^13.1.4",
         "owl.carousel": "^2.3.4",
-        "popper.js": "^1.14.7",
+        "popper.js": "^1.15.0",
         "raphael": "^2.2.7"
     }
 }
