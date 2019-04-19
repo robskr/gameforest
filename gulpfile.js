@@ -4,7 +4,7 @@
  * Copyright (c) 2018 yakuthemes.com (https://yakuthemes.com)
  *
  * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.2
+ * @version   5.0.3
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
  * ---------------------------------------------------------------------------------------
  */
@@ -31,20 +31,6 @@ const merge           = require('gulp-merge-json')
 const changed         = require('gulp-changed')
 const clean           = require('gulp-clean')
 const sizereport      = require('gulp-sizereport')
-
-/**
- * ------------------------------------------------------------------------
- * CONFIGURATION
- * ------------------------------------------------------------------------
- */
-
-const config = {
-    host: './',
-    font: {
-        name: 'nucleo',
-        class: 'ya'
-    }
-}
 
 /**
  * ------------------------------------------------------------------------
@@ -216,15 +202,15 @@ function compile() {
 function svg() {
     return gulp.src(path.src.svg)
         .pipe(iconfontcss({
-            fontName: config.font.name,
+            fontName: 'nucleo',
             path: './src/fonts/icons.sass',
             targetPath: '../scss/theme/_icons.scss',
             fontPath: '../fonts/',
-            cssClass: config.font.class
+            cssClass: 'ya'
         }))
         .pipe(iconfont({
             centerHorizontally: true,
-            fontName: config.font.name,
+            fontName: 'nucleo',
             normalize: true,
             fontHeight: 1024,
             descent: 127,
@@ -252,7 +238,7 @@ function browser() {
         ],
         notify: false,
         server: {
-            baseDir: config.host,
+            baseDir: './',
             routes: {
                 '/': 'dist'
             }
