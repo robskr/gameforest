@@ -2,8 +2,9 @@
 
 **5.0.3 - (April 2019)**
 - Fix eslint errors in js
-- Changed lazysizes.min.js to lazysizes.js
-- Update eslint
+- Changed lazysizes.min.js was removed from plugins
+- Changed yarn scripts and added cross-env
+- Update eslint configuration
 - Update devDependencies to the latest version
 - Update CKEditor 5 from 12.0.0 to 12.1.0
 - Update FontAwesome 5 from 5.7.2 to 5.8.1
