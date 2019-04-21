@@ -142,7 +142,7 @@
 
     {% for nav in nav[2] %}
         {% for component in nav %}
-            {% extends '../docs/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
+            {% extends '../../docs/src/twig/' ~ component.title|lower|replace({' ': "-"}) ~ '.twig' %}
 
             {% if (docs) and (component.preview != false) %}
                 <section class="{{ loop.first ? 'pt-5 pt-lg-6 pb-5' : 'py-lg-5' }}">
