@@ -1,4 +1,5 @@
 **/*.min.js
 **/dist/
 **/node_modules/
+/docs/src/js/*.js
 gulpfile.js

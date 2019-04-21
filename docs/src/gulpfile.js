@@ -21,18 +21,7 @@ const fs              = require('fs');
 const rename          = require('gulp-rename');
 const twig            = require('gulp-twig');
 const prettify        = require('gulp-jsbeautifier');
-const merge           = require('gulp-merge-json');
 const changed         = require('gulp-changed');
-
-/**
- * ------------------------------------------------------------------------
- * CONFIGURATION
- * ------------------------------------------------------------------------
- */
-
-const config = {
-    host: '../../'
-}
 
 /**
  * ------------------------------------------------------------------------
@@ -42,17 +31,17 @@ const config = {
 
 const path = {
     src: {
-        scss:    '../../src/docs/scss/**/*.scss',
-        js:      '../../src/docs/js/docs.js',
-        json:    '../../src/docs/json/components.json',
-        twig:    '../../src/docs/twig/*.twig',
-        views:   '../../src/docs/twig/views/*.twig'
+        scss:    '../../docs/src/sass/**/*.scss',
+        js:      '../../docs/src/js/docs.js',
+        json:    '../../docs/src/json/components.json',
+        twig:    '../../docs/src/twig/*.twig',
+        views:   '../../docs/src/twig/views/*.twig'
     },
     dist: {
-        css:     '../../docs/css',
-        js:      '../../docs/js',
-        json:    '../../docs/json',
-        html:    '../../docs'
+        css:     '../assets/css',
+        js:      '../assets/js',
+        json:    '../assets/json',
+        html:    '../'
     }
 }
 
@@ -117,8 +106,8 @@ function html() {
             extension: '.html'
         }))
         .pipe(twig({
-            base: '../../src/docs/twig/views',
-            data: JSON.parse(fs.readFileSync('../../src/json/dist/theme.json'))
+            base: '../../docs/src/twig/views',
+            data: JSON.parse(fs.readFileSync('../../dist/js/theme.json'))
         }))
         .pipe(prettify({
             unformatted: ['span', 'i'],
@@ -132,8 +121,8 @@ function html() {
 function compile() {
     return gulp.src(path.src.twig)
         .pipe(twig({
-            base: '../../src/docs/twig/views',
-            data: JSON.parse(fs.readFileSync('../../src/json/dist/theme.json'))
+            base: '../../docs/src/twig/views',
+            data: JSON.parse(fs.readFileSync('../../dist/js/theme.json'))
         }))
         .pipe(prettify({
             unformatted: ['span', 'i'],
@@ -154,14 +143,14 @@ function browser() {
     return browserSync.init({
         files : [
             '../../dist/css/theme.min.css',
-            '../../docs/css/docs.min.css',
+            '../../docs/assets/css/docs.min.css',
             '../../docs/*.html',
-            '../../dist/js/theme.bundle.min.js',
-            '../../docs/js/docs.min.js'
+            '../../dist/assets/js/theme.bundle.min.js',
+            '../../docs/assets/js/docs.min.js'
         ],
         notify: false,
         server: {
-            baseDir: config.host,
+            baseDir: '../',
             routes: {
                 "/": "../../dist"
             }
