@@ -78,12 +78,9 @@ function scss() {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['./node_modules/', './src/scss/theme/'],
-            outputStyle: 'compressed'
+            outputStyle: process.env.NODE_ENV === 'production' ? 'compressed' : 'expanded'
         }))
         .pipe(postcss())
-        .pipe(rename({
-            suffix: '.min'
-        }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(path.dist.css))
 }

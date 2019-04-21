@@ -11,12 +11,12 @@
     <title>{% if page.title %}{{ page.title ~ ' - ' }}{% endif %}{{ config.title }}</title>
 
     {% if block("css") is defined %}
-        <!-- css: plugins -->
+        <!-- plugins css -->
         {% block css %}{% endblock %}
     {% endif %}
 
-    <!-- css: theme -->
-    <link rel="stylesheet" href="css/theme.min.css">
+    <!-- theme css -->
+    <link rel="stylesheet" href="css/theme.css">
 </head>
 <body class="{% if (page.navbar != 'static') and (config.navbar == 'fixed') and (page.header != false) %}fixed-navbar{% endif %}{% if page.footer == 'sticky' %} sticky-footer{% endif %}{% if page.class %} {{ page.class }}{% endif %}">
     <div class="site{% if page.center %} d-flex align-items-center{% endif %}">
@@ -41,16 +41,19 @@
     </div>
     <!-- end .site -->
 
-    <!-- js: vendor -->
+    <!-- vendor js -->
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- js: theme -->
+
+    <!-- theme js -->
     <script src="js/theme.bundle.min.js"></script>
+
     {% if block("js") is defined %}
-        <!-- js: plugins -->
+        <!-- plugins js -->
         {% block js %}{% endblock %}
     {% endif %}
-    <!-- js: theme settings -->
+
+    <!-- theme settings -->
     <script>
         var gameforest = {
             disqus: '{{ config.disqus }}',
