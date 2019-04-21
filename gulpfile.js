@@ -40,7 +40,7 @@ const sizereport      = require('gulp-sizereport')
 
 const path = {
     src: {
-        scss:    './src/scss/**/*.scss',
+        scss:    './src/sass/**/*.scss',
         js:      './src/js/**/*.js',
         svg:     './src/svg/*.svg',
         json:    './src/json/src/*.json',
@@ -77,7 +77,7 @@ function scss() {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({
-            includePaths: ['./node_modules/', './src/scss/theme/'],
+            includePaths: './node_modules/',
             outputStyle: process.env.NODE_ENV === 'production' ? 'compressed' : 'expanded'
         }))
         .pipe(postcss())
@@ -201,7 +201,7 @@ function svg() {
         .pipe(iconfontcss({
             fontName: 'nucleo',
             path: './src/fonts/icons.sass',
-            targetPath: '../scss/theme/_icons.scss',
+            targetPath: '../sass/_icons.scss',
             fontPath: '../fonts/',
             cssClass: 'ya'
         }))
@@ -307,7 +307,7 @@ function lazysizes()        { return gulp.src(['./node_modules/lazysizes/lazysiz
 
 const build = {
     host:        gulp.parallel(watch, browser),
-    css:         gulp.series(scss, report_css),
+    sass:        gulp.series(scss, report_css),
     image:       image,
     js:          gulp.series(babel, minify, script, lint, report_js),
     html:        html,
@@ -344,7 +344,7 @@ gulp.task('icon',       build.icon)
 gulp.task('html',       build.html)
 gulp.task('report',     build.report)
 gulp.task('compile',    build.compile)
-gulp.task('css',        build.css)
+gulp.task('sass',       build.sass)
 gulp.task('js',         build.js)
 gulp.task('image',      build.image)
 gulp.task('plugins',    build.plugins)
