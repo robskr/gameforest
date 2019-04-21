@@ -7,7 +7,7 @@
 ## Installation
 In order to use theme features you have to install npm packages by using [yarn](https://yarnpkg.com). After you installed packages with yarn just run the following command to start a new dev environment.
 ```
-yarn start
+yarn watch
 ```
 It will open the compiled html files in a new browser tab. You just have to edit required scss, js or twig files and the tab will be refreshed by automatically.
 
