@@ -1,4 +1,4 @@
-# Changelog
+### Changelog
 
 **5.0.3 - (April 2019)**
 - Fix eslint errors in js
