@@ -407,7 +407,7 @@
 	"config": {
 		"title": "Gameforest Bootstrap Gaming Theme",
 		"brand": "Gameforest",
-		"version": "5.0.1",
+		"version": "5.0.3",
 		"navbar": "fixed",
 		"bootstrap": "4.3",
 		"footer": "static",

@@ -43,7 +43,7 @@ const path = {
         scss:    './src/sass/**/*.scss',
         js:      './src/js/**/*.js',
         svg:     './src/svg/*.svg',
-        json:    './src/json/src/*.json',
+        json:    './src/json/*.json',
         img:     './src/img/*',
         twig:    './src/twig/*.twig',
         views:   './src/twig/views/*.twig'
@@ -53,7 +53,7 @@ const path = {
         js:      './dist/js',
         svg:     './dist/fonts',
         icon:    './src/fonts',
-        json:    './src/json/dist',
+        json:    './dist/js',
         img:     './dist/img',
         html:    './dist',
         plugins: './dist/plugins/*'
@@ -113,8 +113,8 @@ function minify() {
 
 function script() {
     return gulp.src([
-            'node_modules/owl.carousel/dist/owl.carousel.min.js',
-            'node_modules/jquery-sticky/jquery.sticky.js',
+            './node_modules/owl.carousel/dist/owl.carousel.min.js',
+            './node_modules/jquery-sticky/jquery.sticky.js',
             './dist/js/theme.js'
         ])
         .pipe(concat('theme.bundle.js'))
@@ -165,7 +165,7 @@ function html() {
         }))
         .pipe(twig({
             base: './src/twig/views',
-            data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
+            data: JSON.parse(fs.readFileSync('./dist/js/theme.json'))
         }))
         .pipe(prettify({
             unformatted: ['span', 'i'],
@@ -180,7 +180,7 @@ function compile() {
     return gulp.src(path.src.twig)
         .pipe(twig({
             base: './src/twig/views',
-            data: JSON.parse(fs.readFileSync('./src/json/dist/theme.json'))
+            data: JSON.parse(fs.readFileSync('./dist/js/theme.json'))
         }))
         .pipe(prettify({
             unformatted: ['span', 'i'],
@@ -328,7 +328,7 @@ function watch() {
     gulp.watch(path.src.twig,  {events: ['change', 'unlink']}, build.html)
     gulp.watch(path.src.views, {events: ['change', 'unlink']}, build.compile)
     gulp.watch(path.src.json,  {events: ['change', 'unlink']}, build.json)
-    gulp.watch(path.src.scss,  {events: ['change', 'unlink']}, build.css)
+    gulp.watch(path.src.scss,  {events: ['change', 'unlink']}, build.sass)
     gulp.watch(path.src.js,    {events: ['change', 'unlink']}, build.js)
     gulp.watch(path.src.img, build.image)
     gulp.watch(path.src.svg, build.icon)
@@ -346,6 +346,7 @@ gulp.task('report',     build.report)
 gulp.task('compile',    build.compile)
 gulp.task('sass',       build.sass)
 gulp.task('js',         build.js)
+gulp.task('json',       build.json)
 gulp.task('image',      build.image)
 gulp.task('plugins',    build.plugins)
 gulp.task('default',    build.host)
