@@ -106,6 +106,7 @@
   .dropdown-menu {
     width: 330px;
     border: $dropdown-border-width solid $dropdown-border-color !important; /* stylelint-disable-line */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important; /* stylelint-disable-line */
 
     .dropdown-list-meta {
       display: flex;
@@ -158,10 +159,15 @@
     width: 60px;
   }
 
+  .dropdown-footer {
+    margin-bottom: -8px;
+  }
+
   .dropdown-menu {
     width: 330px;
     padding: .5rem 0 !important; /* stylelint-disable-line */
     border: $dropdown-border-width solid $dropdown-border-color !important; /* stylelint-disable-line */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important; /* stylelint-disable-line */
 
     .cart-remove {
       position: absolute;

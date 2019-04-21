@@ -229,7 +229,7 @@ function svg_copy() {
 function browser() {
     return browserSync.init({
         files : [
-            `${path.dist.css}/theme.min.css`,
+            `${path.dist.css}/theme.css`,
             `${path.dist.js}/theme.bundle.min.js`,
             `${path.dist.html}/*.html`
         ],
