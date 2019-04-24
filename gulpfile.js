@@ -27,9 +27,11 @@ const fs              = require('fs')
 const twig            = require('gulp-twig')
 const prettify        = require('gulp-jsbeautifier')
 const merge           = require('gulp-merge-json')
+const rename          = require('gulp-rename')
 const changed         = require('gulp-changed')
 const clean           = require('gulp-clean')
 const sizereport      = require('gulp-sizereport')
+const cleancss        = require('gulp-clean-css');
 
 /**
  * ------------------------------------------------------------------------
@@ -77,10 +79,19 @@ function scss() {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: './node_modules/',
-            outputStyle: process.env.NODE_ENV === 'production' ? 'compressed' : 'expanded'
+            outputStyle: 'expanded'
         }))
         .pipe(postcss())
         .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(path.dist.css))
+}
+
+function scssmin() {
+    return gulp.src(`${path.dist.css}/*.css`)
+        .pipe(cleancss())
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest(path.dist.css))
 }
 
@@ -215,7 +226,7 @@ function svg() {
         .pipe(gulp.dest(path.dist.icon))
 }
 
-function svg_copy() {
+function svgcopy() {
     return gulp.src(['./src/fonts/*', '!./src/fonts/icons.sass']).pipe(gulp.dest(path.dist.svg))
 }
 
@@ -249,16 +260,16 @@ function browser() {
  */
 
 function report() {
-    return gulp.src(['./dist/css/*', './dist/js/*'])
+    return gulp.src(['./dist/css/*.css', './dist/js/*'])
         .pipe(sizereport())
 }
 
-function report_css() {
-    return gulp.src('./dist/css/*')
+function reportcss() {
+    return gulp.src('./dist/css/*.css')
         .pipe(sizereport())
 }
 
-function report_js() {
+function reportjs() {
     return gulp.src('./dist/js/*')
         .pipe(sizereport({
             'theme.bundle.min.js': {
@@ -306,14 +317,14 @@ function lazysizes()        { return gulp.src(['./node_modules/lazysizes/lazysiz
 
 const build = {
     host:        gulp.parallel(watch, browser),
-    sass:        gulp.series(scss, report_css),
+    sass:        gulp.series(scss, scssmin, reportcss),
     image:       image,
-    js:          gulp.series(babel, minify, script, lint, report_js),
+    js:          gulp.series(babel, minify, script, lint, reportjs),
     html:        html,
     compile:     compile,
     report:      report,
     json:        gulp.series(json, compile),
-    icon:        gulp.series(svg, svg_copy),
+    icon:        gulp.series(svg, svgcopy),
     plugins:     gulp.series(clear, bootstrap, jquery, popper, fontawesome, ckeditor, easypiechart, bootstrap_select, flatpickr, sticky, datatables, morris, raphael, parallax, countdown, nouislider, lazysizes)
 }
 
@@ -348,4 +359,5 @@ gulp.task('js',         build.js)
 gulp.task('json',       build.json)
 gulp.task('image',      build.image)
 gulp.task('plugins',    build.plugins)
+gulp.task('host',       build.host)
 gulp.task('default',    build.host)

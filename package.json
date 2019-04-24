@@ -4,7 +4,7 @@
   "version": "5.0.3",
   "private": true,
   "scripts": {
-    "watch": "cross-env NODE_ENV=development gulp",
+    "watch": "cross-env NODE_ENV=development gulp host",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development gulp",
     "prod": "npm run production",
@@ -41,6 +41,7 @@
     "gulp": "^4.0.0",
     "gulp-changed": "^3.2.0",
     "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^5.0.0",
     "gulp-iconfont": "^10.0.2",
