@@ -221,6 +221,9 @@ function compile() {
 
 function svg() {
     return gulp.src(path.src.svg)
+        .pipe(changed('./src/svg', {
+            extension: '.svg'
+        }))
         .pipe(iconfontcss({
             fontName: 'nucleo',
             path: './src/fonts/icons.sass',
