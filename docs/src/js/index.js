@@ -3,6 +3,7 @@ import Carousel from '../../../src/js/carousel'
 import Disqus from '../../../src/js/disqus'
 import Embed from '../../../src/js/embed'
 import Facebook from '../../../src/js/facebook'
+import Help from './help'
 import Icons from '../../../src/js/icons'
 import Lightbox from '../../../src/js/lightbox'
 import Navbar from '../../../src/js/navbar'
@@ -11,7 +12,6 @@ import Progress from '../../../src/js/progress'
 import Sticky from '../../../src/js/sticky'
 import Style from '../../../src/js/style'
 import Svg from '../../../src/js/svg'
-import Theme from './theme'
 
 /**
  * ---------------------------------------------------------------------------------------
@@ -30,6 +30,7 @@ export {
     Disqus,
     Embed,
     Facebook,
+    Help,
     Icons,
     Lightbox,
     Navbar,
@@ -37,6 +38,5 @@ export {
     Progress,
     Sticky,
     Style,
-    Svg,
-    Theme
+    Svg
 }

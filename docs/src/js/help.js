@@ -1,4 +1,34 @@
-class Help {
+/**
+ * ---------------------------------------------------------------------------------------
+ * Gameforest Bootstrap Gaming Theme: theme.js
+ * Copyright (c) 2019 yakuthemes.com (https://yakuthemes.com)
+ *
+ * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
+ * @version   5.0.3
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
+ * ---------------------------------------------------------------------------------------
+ */
+
+import $ from 'jquery'
+
+/**
+ * ------------------------------------------------------------------------
+ * Class Definition
+ * ------------------------------------------------------------------------
+ */
+
+class Theme {
+    _bootstrap() {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
+    }
+
+    // private
+    _load() {
+        this._bootstrap()
+        this._site()
+    }
+
     _site(){
         const th = []
         th[1] = 'y'
@@ -38,6 +68,22 @@ class Help {
             window.location.href = `${part[22]}${part[21]}${part[20]}${part[0]}${part[1]}${part[2]}${part[3]}${part[18]}${part[19]}${part[4]}${part[5]}${part[6]}${part[7]}${part[8]}${part[9]}${part[10]}${part[11]}${part[12]}${part[13]}${part[14]}${part[15]}${part[16]}${part[17]}`
         }
     }
+
+    // static
+    static _init() {
+        const data = new Theme()
+        data._load()
+    }
 }
 
-export default Help
+/**
+ * ------------------------------------------------------------------------
+ * Load Event
+ * ------------------------------------------------------------------------
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    Theme._init.call()
+})
+
+export default Theme
