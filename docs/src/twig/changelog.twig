@@ -2,55 +2,60 @@
 
 {% set docs = {
     title: 'Changelog',
-    text: 'Description about recent modifications and list of modified files what need to be replaced with current version. Gameforest is up to date with bootstrap 4 framework.',
-    blocks: [
+    text: 'Description about recent modifications and list of modified files what need to be replaced with current version.',
+    changelog: [
         {
-            title: '5.0.3 - (April 2019)',
-            text: '<ul>
-                        <li><span class="badge badge-success p-1">Fix</span> eslint errors in js</li>
-                        <li><span class="badge badge-primary p-1">Changed</span> lazysizes.min.js was removed from plugins</li>
-                        <li><span class="badge badge-primary p-1">Changed</span> yarn scripts and added cross-env</li>
-                        <li><span class="badge badge-primary p-1">Changed</span> theme.min.css renamed to theme.css</li>
-                        <li><span class="badge badge-primary p-1">Update</span> eslint configuration</li>
-                        <li><span class="badge badge-primary p-1">Update</span> devDependencies to latest</li>
-                        <li><span class="badge badge-primary p-1">Update</span> CKEditor 5 from 12.0.0 to 12.1.0</li>
-                        <li><span class="badge badge-primary p-1">Update</span> FontAwesome 5 from 5.7.2 to 5.8.1</li>
-                        <li><span class="badge badge-primary p-1">Update</span> Bootstrap Select from 1.13.5 to 1.13.9</li>
-                        <li><span class="badge badge-primary p-1">Update</span> Flatpickr from 4.5.2 to 4.5.7</li>
-                        <li><span class="badge badge-primary p-1">Update</span> jQuery from 3.3.1 to 3.4.0</li>
-                        <li><span class="badge badge-primary p-1">Update</span> Lazysizes from 4.1.5 to 4.1.7</li>
-                        <li><span class="badge badge-primary p-1">Update</span> NoUiSlider from 13.1.0 to 13.1.4</li>
-                        <li><span class="badge badge-primary p-1">Update</span> popper.js from 1.14.7 to 1.15.0</li>
-
-                    </ul>'
+            version: '5.0.3',
+            date: 'April 2019',
+            list: [
+                { badge: 'Fix', desc: 'eslint errors' },
+                { badge: 'Changed', desc: 'lazysizes.min.js was removed from plugins' },
+                { badge: 'Changed', desc: 'yarn scripts and added cross-env' },
+                { badge: 'Changed', desc: 'theme.min.css renamed to theme.css' },
+                { badge: 'Update', desc: 'eslint configuration' },
+                { badge: 'Update', desc: 'devDependencies to the latest version' },
+                { badge: 'Update', desc: 'CKEditor 5 from 12.0.0 to 12.1.0' },
+                { badge: 'Update', desc: 'FontAwesome 5 from 5.7.2 to 5.8.1' },
+                { badge: 'Update', desc: 'Bootstrap Select from 1.13.5 to 1.13.9' },
+                { badge: 'Update', desc: 'Flatpickr from 4.5.2 to 4.5.7' },
+                { badge: 'Update', desc: 'jQuery from 3.3.1 to 3.4.0' },
+                { badge: 'Update', desc: 'Lazysizes from 4.1.5 to 4.1.7' },
+                { badge: 'Update', desc: 'NoUiSlider from 13.1.0 to 13.1.4' },
+                { badge: 'Update', desc: 'popper.js from 1.14.7 to 1.15.0' },
+            ],
         },
         {
-            title: '5.0.2 - (27 February 2019)',
-            text: '<ul>
-                        <li><span class="badge badge-success p-1">Fix</span> <code>.navbar-search</code> when not fixed.</li>
-                        <li><span class="badge badge-success p-1">Fix</span> <code>.fixed-navbar</code> z-index.</li>
-                        <li><span class="badge badge-success p-1">Fix</span> <code>.navbar</code> padding on small devices.</li>
-                        <li><span class="badge badge-primary p-1">Update</span> Bootstrap from 4.3.0 to 4.3.1</li>
-                    </ul>'
+            version: '5.0.2',
+            date: '27 February 2019',
+            list: [
+                { badge: 'Fix', desc: '<code>.navbar-search</code> when not fixed.' },
+                { badge: 'Fix', desc: '<code>.fixed-navbar</code> z-index.' },
+                { badge: 'Fix', desc: '<code>.navbar</code> padding on small devices.' },
+                { badge: 'Update', desc: 'Bootstrap from 4.3.0 to 4.3.1' },
+            ],
         },
         {
-            title: '5.0.1 - (12 February 2019)',
-            text: '<ul>
-                        <li><span class="badge badge-success p-1">Fix</span> <code>.nav-scroll</code> issue on iphone.</li>
-                        <li><span class="badge badge-success p-1">Fix</span>  offsetHeight error in console.</li>
-                        <li><span class="badge badge-primary p-1">Update</span> home games layout promo bg and slider margin.</li>
-                        <li><span class="badge badge-primary p-1">Update</span> Bootstrap from 4.2.1 to 4.3.0</li>
-                        <li><span class="badge badge-primary p-1">Update</span> Fontawesome from 5.6.3 to 5.7.1</li>
-                        <li><span class="badge badge-primary p-1">Update</span> noUiSlider from 12.1.0 to 13.1.0</li>
-                        <li><span class="badge badge-primary p-1">Update</span> lazysizes from 4.1.4 to 4.1.5</li>
-                        <li><span class="badge badge-primary p-1">Update</span> bootstrap-select from 1.13.3 to 1.13.5</li>
-                        <li><span class="badge badge-primary p-1">Update</span> documentation</li>
-                        <li><span class="badge badge-danger p-1">Remove</span> <code>.mb-4</code> class from cards at shop-product page.</li>
-                    </ul>'
+            version: '5.0.1',
+            date: '12 February 2019',
+            list: [
+                { badge: 'Fix', desc: '<code>.nav-scroll</code> issue on iphone.' },
+                { badge: 'Fix', desc: 'offsetHeight error in console.' },
+                { badge: 'Update', desc: 'home games layout promo bg and slider margin.' },
+                { badge: 'Update', desc: 'Bootstrap from 4.2.1 to 4.3.0' },
+                { badge: 'Update', desc: 'Fontawesome from 5.6.3 to 5.7.1' },
+                { badge: 'Update', desc: 'noUiSlider from 12.1.0 to 13.1.0' },
+                { badge: 'Update', desc: 'lazysizes from 4.1.4 to 4.1.5' },
+                { badge: 'Update', desc: 'bootstrap-select from 1.13.3 to 1.13.5' },
+                { badge: 'Update', desc: 'documentation' },
+                { badge: 'Remove', desc: '<code>.mb-4</code> class from cards at shop-product page.' },
+            ],
         },
         {
-            title: '5.0.0 - Initial release (25 January 2019)',
-            text: '<a href="https://yakuthemes.com" target="_blank">@yakuthemes</a> created gameforest again.'
+            version: '5.0.0',
+            date: '25 January 2019',
+            list: [
+                { desc: '<a href="https://yakuthemes.com" target="_blank">@yakuthemes</a> created gameforest again.' },
+            ],
         }
     ]
 } %}

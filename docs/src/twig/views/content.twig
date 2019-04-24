@@ -50,7 +50,6 @@
             <tr>
                 <th scope="col">Plugin name</th>
                 <th>Version</th>
-                <th>Description</th>
                 <th>URL</th>
                 <th>Github</th>
             </tr>
@@ -58,13 +57,41 @@
         <tbody>
             {% for plugin in docs.plugins %}
                 <tr>
-                    <td class="font-weight-semibold" scope="row">{{ plugin.title }}</td>
+                    <td scope="row">{{ plugin.title }}</td>
                     <td>{{ plugin.version }}</td>
-                    <td>{{ plugin.text }}</td>
                     <td><a class="link" href="{{ plugin.url }}" target="_blank">{{ plugin.url }}</a></td>
                     <td class="text-center"><a href="{{ plugin.github }}" target="_blank"><i class="ya ya-github"></i></a></td>
                 </tr>
         {% endfor %}
         </tbody>
     </table>
+{% endif %}
+
+{% if docs.changelog %}
+    {% for changelog in docs.changelog %}
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+                <span>{{ changelog.version }} -</span>
+                <i class="ya ya-calendar mr-2 ml-1 text-muted font-size-md mb-1"></i> {{ changelog.date }}
+            </div>
+
+            {% for log in changelog.list %}
+                {% if log.badge == 'Fix' %}{% set badge = 'success' %}{% endif %}
+                {% if log.badge == 'Changed' %}{% set badge = 'warning' %}{% endif %}
+                {% if log.badge == 'Update' %}{% set badge = 'primary' %}{% endif %}
+                {% if log.badge == 'Remove' %}{% set badge = 'danger' %}{% endif %}
+
+                <div class="card shadow-none mb-2">
+                    <div class="card-body py-2">
+                        {% if log.badge %}
+                            <div class="d-inline-block" style="width: 90px">
+                                <span class="d-inline-block badge badge-{{ badge }}" style="padding: 5px 8px;">{{ log.badge }}</span>
+                            </div>
+                        {% endif %}
+                        {{ log.desc }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
 {% endif %}

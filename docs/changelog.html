@@ -94,82 +94,263 @@
             <section>
                 <div class="container">
                     <div class="row">
-                        <div class="col-9">
+                        <div class="col">
                             <h1 class="mb-4">Changelog</h1>
-                            <p class="lead">Description about recent modifications and list of modified files what need to be replaced with current version. Gameforest is up to date with bootstrap 4 framework.</p>
+                            <p class="lead">Description about recent modifications and list of modified files what need to be replaced with current version.</p>
                             <hr class="docs-separator my-5">
-                            <div class="docs-block">
-                                <h4 id="5.0.3---(april-2019)" class="mb-3 anchor">
-                                    5.0.3 - (April 2019)
-                                </h4>
-                                <p>
-                                    <ul>
-                                        <li><span class="badge badge-success p-1">Fix</span> eslint errors in js</li>
-                                        <li><span class="badge badge-primary p-1">Changed</span> lazysizes.min.js was removed from plugins</li>
-                                        <li><span class="badge badge-primary p-1">Changed</span> yarn scripts and added cross-env</li>
-                                        <li><span class="badge badge-primary p-1">Changed</span> theme.min.css renamed to theme.css</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> eslint configuration</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> devDependencies to latest</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> CKEditor 5 from 12.0.0 to 12.1.0</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> FontAwesome 5 from 5.7.2 to 5.8.1</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> Bootstrap Select from 1.13.5 to 1.13.9</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> Flatpickr from 4.5.2 to 4.5.7</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> jQuery from 3.3.1 to 3.4.0</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> Lazysizes from 4.1.5 to 4.1.7</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> NoUiSlider from 13.1.0 to 13.1.4</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> popper.js from 1.14.7 to 1.15.0</li>
-                                    </ul>
-                                </p>
+                            <div class="mb-5">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span>5.0.3 -</span>
+                                    <i class="ya ya-calendar mr-2 ml-1 text-muted font-size-md mb-1"></i> April 2019
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-success" style="padding: 5px 8px;">Fix</span>
+                                        </div>
+                                        eslint errors
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-warning" style="padding: 5px 8px;">Changed</span>
+                                        </div>
+                                        lazysizes.min.js was removed from plugins
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-warning" style="padding: 5px 8px;">Changed</span>
+                                        </div>
+                                        yarn scripts and added cross-env
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-warning" style="padding: 5px 8px;">Changed</span>
+                                        </div>
+                                        theme.min.css renamed to theme.css
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        eslint configuration
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        devDependencies to the latest version
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        CKEditor 5 from 12.0.0 to 12.1.0
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        FontAwesome 5 from 5.7.2 to 5.8.1
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        Bootstrap Select from 1.13.5 to 1.13.9
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        Flatpickr from 4.5.2 to 4.5.7
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        jQuery from 3.3.1 to 3.4.0
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        Lazysizes from 4.1.5 to 4.1.7
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        NoUiSlider from 13.1.0 to 13.1.4
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        popper.js from 1.14.7 to 1.15.0
+                                    </div>
+                                </div>
                             </div>
-                            <div class="docs-block">
-                                <h4 id="5.0.2---(27-february-2019)" class="mb-3 anchor">
-                                    5.0.2 - (27 February 2019)
-                                </h4>
-                                <p>
-                                    <ul>
-                                        <li><span class="badge badge-success p-1">Fix</span> <code>.navbar-search</code> when not fixed.</li>
-                                        <li><span class="badge badge-success p-1">Fix</span> <code>.fixed-navbar</code> z-index.</li>
-                                        <li><span class="badge badge-success p-1">Fix</span> <code>.navbar</code> padding on small devices.</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> Bootstrap from 4.3.0 to 4.3.1</li>
-                                    </ul>
-                                </p>
+                            <div class="mb-5">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span>5.0.2 -</span>
+                                    <i class="ya ya-calendar mr-2 ml-1 text-muted font-size-md mb-1"></i> 27 February 2019
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-success" style="padding: 5px 8px;">Fix</span>
+                                        </div>
+                                        <code>.navbar-search</code> when not fixed.
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-success" style="padding: 5px 8px;">Fix</span>
+                                        </div>
+                                        <code>.fixed-navbar</code> z-index.
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-success" style="padding: 5px 8px;">Fix</span>
+                                        </div>
+                                        <code>.navbar</code> padding on small devices.
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        Bootstrap from 4.3.0 to 4.3.1
+                                    </div>
+                                </div>
                             </div>
-                            <div class="docs-block">
-                                <h4 id="5.0.1---(12-february-2019)" class="mb-3 anchor">
-                                    5.0.1 - (12 February 2019)
-                                </h4>
-                                <p>
-                                    <ul>
-                                        <li><span class="badge badge-success p-1">Fix</span> <code>.nav-scroll</code> issue on iphone.</li>
-                                        <li><span class="badge badge-success p-1">Fix</span> offsetHeight error in console.</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> home games layout promo bg and slider margin.</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> Bootstrap from 4.2.1 to 4.3.0</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> Fontawesome from 5.6.3 to 5.7.1</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> noUiSlider from 12.1.0 to 13.1.0</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> lazysizes from 4.1.4 to 4.1.5</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> bootstrap-select from 1.13.3 to 1.13.5</li>
-                                        <li><span class="badge badge-primary p-1">Update</span> documentation</li>
-                                        <li><span class="badge badge-danger p-1">Remove</span> <code>.mb-4</code> class from cards at shop-product page.</li>
-                                    </ul>
-                                </p>
+                            <div class="mb-5">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span>5.0.1 -</span>
+                                    <i class="ya ya-calendar mr-2 ml-1 text-muted font-size-md mb-1"></i> 12 February 2019
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-success" style="padding: 5px 8px;">Fix</span>
+                                        </div>
+                                        <code>.nav-scroll</code> issue on iphone.
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-success" style="padding: 5px 8px;">Fix</span>
+                                        </div>
+                                        offsetHeight error in console.
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        home games layout promo bg and slider margin.
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        Bootstrap from 4.2.1 to 4.3.0
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        Fontawesome from 5.6.3 to 5.7.1
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        noUiSlider from 12.1.0 to 13.1.0
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        lazysizes from 4.1.4 to 4.1.5
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        bootstrap-select from 1.13.3 to 1.13.5
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-primary" style="padding: 5px 8px;">Update</span>
+                                        </div>
+                                        documentation
+                                    </div>
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <div class="d-inline-block" style="width: 90px">
+                                            <span class="d-inline-block badge badge-danger" style="padding: 5px 8px;">Remove</span>
+                                        </div>
+                                        <code>.mb-4</code> class from cards at shop-product page.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="docs-block">
-                                <h4 id="5.0.0---initial-release-(25-january-2019)" class="mb-3 anchor">
-                                    5.0.0 - Initial release (25 January 2019)
-                                </h4>
-                                <p><a href="https://yakuthemes.com" target="_blank">@yakuthemes</a> created gameforest again.</p>
+                            <div class="mb-5">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span>5.0.0 -</span>
+                                    <i class="ya ya-calendar mr-2 ml-1 text-muted font-size-md mb-1"></i> 25 January 2019
+                                </div>
+                                <div class="card shadow-none mb-2">
+                                    <div class="card-body py-2">
+                                        <a href="https://yakuthemes.com" target="_blank">@yakuthemes</a> created gameforest again.
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-3">
-                            <nav class="nav nav-docs flex-column" ya-sticky="top: 100">
-                                <a class="nav-link" href="#503---(april-2019)">5.0.3 - (April 2019)</a>
-                                <a class="nav-link" href="#502---(27-february-2019)">5.0.2 - (27 February 2019)</a>
-                                <a class="nav-link" href="#501---(12-february-2019)">5.0.1 - (12 February 2019)</a>
-                                <a class="nav-link" href="#500---initial-release-(25-january-2019)">5.0.0 - Initial release (25 January 2019)</a>
-                                <div class="divider"></div>
-                                <a class="nav-link" href="https://github.com/yakuthemes/gameforest/issues" target="_blank"><i class="ya ya-help"></i> Report issue</a>
-                                <a class="nav-link" href="https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730/comments" target="_blank"><i class="ya ya-link"></i> Get help</a>
-                            </nav>
                         </div>
                     </div>
                 </div>

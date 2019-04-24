@@ -11,11 +11,11 @@
     <title>{% if page.title %}{{ page.title ~ ' - ' }}{% endif %}{{ config.title }}</title>
 
     {% if block("css") is defined %}
-        <!-- plugins css -->
+        <!-- css: plugins -->
         {% block css %}{% endblock %}
     {% endif %}
 
-    <!-- theme css -->
+    <!-- css: theme -->
     <link rel="stylesheet" href="css/theme.css">
 </head>
 <body class="{% if (page.navbar != 'static') and (config.navbar == 'fixed') and (page.header != false) %}fixed-navbar{% endif %}{% if page.footer == 'sticky' %} sticky-footer{% endif %}{% if page.class %} {{ page.class }}{% endif %}">
@@ -41,15 +41,15 @@
     </div>
     <!-- end .site -->
 
-    <!-- vendor js -->
+    <!-- js: vendor -->
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- theme js -->
+    <!-- js: theme -->
     <script src="js/theme.bundle.min.js"></script>
 
     {% if block("js") is defined %}
-        <!-- plugins js -->
+        <!-- js: plugins -->
         {% block js %}{% endblock %}
     {% endif %}
 
