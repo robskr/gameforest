@@ -121,15 +121,17 @@ function minify() {
         .pipe(gulp.dest(path.dist.js))
 }
 
-function script() {
+function bundle() {
     return gulp.src([
+            './node_modules/popper.js/dist/umd/popper.min.js',
+            './node_modules/jquery/dist/jquery.min.js',
+            './node_modules/bootstrap/dist/js/bootstrap.min.js',
             './node_modules/owl.carousel/dist/owl.carousel.min.js',
-            './node_modules/jquery-sticky/jquery.sticky.js',
-            './dist/js/theme.js'
+            './node_modules/jquery-sticky/jquery.sticky.js'
         ])
-        .pipe(concat('theme.bundle.js'))
+        .pipe(concat('vendor.js'))
         .pipe(gulp.dest(path.dist.js))
-        .pipe(concat('theme.bundle.min.js'))
+        .pipe(concat('vendor.js'))
         .pipe(uglify())
         .pipe(gulp.dest(path.dist.js))
 }
@@ -183,7 +185,11 @@ function json() {
         .pipe(prettify({
             unformatted: ['span', 'i'],
             extra_liners: ' ',
-            max_preserve_newlines: 0
+            max_preserve_newlines: 0,
+            eol: process.env.NODE_ENV === 'host' ? '' : '\n',
+            indent_size: process.env.NODE_ENV === 'host' ? '' : 4,
+            indent_char: process.env.NODE_ENV === 'host' ? '' : ' ',
+            indent_with_tabs: process.env.NODE_ENV === 'host' ? false : true
         }))
         .pipe(gulp.dest(path.dist.html))
         .pipe(browserSync.stream())
@@ -198,7 +204,11 @@ function compile() {
         .pipe(prettify({
             unformatted: ['span', 'i'],
             extra_liners: ' ',
-            max_preserve_newlines: 0
+            max_preserve_newlines: 0,
+            eol: process.env.NODE_ENV === 'host' ? '' : '\n',
+            indent_size: process.env.NODE_ENV === 'host' ? '' : 4,
+            indent_char: process.env.NODE_ENV === 'host' ? '' : ' ',
+            indent_with_tabs: process.env.NODE_ENV === 'host' ? false : true
         }))
         .pipe(gulp.dest(path.dist.html))
 }
@@ -322,7 +332,8 @@ const build = {
     host:        gulp.parallel(watch, browser),
     sass:        gulp.series(scss, scssmin, reportcss),
     image:       image,
-    js:          gulp.series(babel, minify, script, lint, reportjs),
+    js:          gulp.series(babel, minify, lint, reportjs),
+    bundle:      bundle,
     html:        html,
     compile:     compile,
     report:      report,
@@ -359,8 +370,9 @@ gulp.task('report',     build.report)
 gulp.task('compile',    build.compile)
 gulp.task('sass',       build.sass)
 gulp.task('js',         build.js)
+gulp.task('bundle',     build.bundle)
 gulp.task('json',       build.json)
 gulp.task('image',      build.image)
 gulp.task('plugins',    build.plugins)
 gulp.task('host',       build.host)
-gulp.task('default',    build.host)
+gulp.task('default',    gulp.series(build.js, build.bundle, build.icon, build.sass, build.image, build.json))

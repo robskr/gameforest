@@ -37,7 +37,8 @@
                     </div>
 
                     {% for log in changelog.list %}
-                        {% if log.badge == 'Fixed' %}{% set badge = 'success' %}{% endif %}
+                        {% if log.badge == 'Fixed' %}{% set badge = 'info' %}{% endif %}
+                        {% if log.badge == 'Added' %}{% set badge = 'success' %}{% endif %}
                         {% if log.badge == 'Changed' %}{% set badge = 'warning' %}{% endif %}
                         {% if log.badge == 'Updated' %}{% set badge = 'primary' %}{% endif %}
                         {% if log.badge == 'Removed' %}{% set badge = 'danger' %}{% endif %}

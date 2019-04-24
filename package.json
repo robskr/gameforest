@@ -9,6 +9,7 @@
     "development": "cross-env NODE_ENV=development gulp",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production gulp",
+    "live": "cross-env NODE_ENV=host gulp",
     "docs": "browser-sync start --server --startPath docs --no-notify"
   },
   "homepage": "https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730",
