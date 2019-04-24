@@ -150,7 +150,7 @@ function browser() {
         ],
         notify: false,
         server: {
-            baseDir: '../',
+            baseDir: '../../',
             routes: {
                 "/": "../../dist"
             }

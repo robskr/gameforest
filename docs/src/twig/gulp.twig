@@ -26,11 +26,11 @@
             pre: 'yarn watch',
             single: true,
             small: true,
-            custom: '<p class="mt-4"><code>start</code> task is watching <code>./src</code> folder to see current file changes and your browser will be reloaded if you\'ve made a successful modification.</p>'
+            custom: '<p class="mt-4"><code>watch</code> task is watching <code>./src</code> folder to see current file changes and your browser will be reloaded if you\'ve made a successful modification.</p>'
         },
         {
             title: 'Available Tasks',
-            text: 'It is also possible to run single gulp task from terminal by typing <code>yarn *</code> when made a small modification just choose from tasks below.',
+            text: 'It is also possible to run npm scripts from the terminal by typing <code>yarn *</code> when you made a small modification just choose from tasks below.',
             table: {
                 head: [
                     { title: 'Name' },
@@ -38,39 +38,43 @@
                 ],
                 body: [
                     [
-                        { text: 'watch', code: true },
+                        { text: 'yarn watch', code: true },
                         { text: 'Running a development environment for our project.' }
                     ],
                     [
-                        { text: 'build', code: true },
-                        { text: 'Run css and js task together.' }
+                        { text: 'yarn prod', code: true },
+                        { text: 'Build production ready version of gameforest.' }
                     ],
                     [
-                        { text: 'css', code: true },
+                        { text: 'yarn dev', code: true },
+                        { text: 'Build development ready version of gameforest.' }
+                    ],
+                    [
+                        { text: 'gulp css', code: true },
                         { text: 'Compile scss files into minified and unminified css.' }
                     ],
                     [
-                        { text: 'js', code: true },
+                        { text: 'gulp js', code: true },
                         { text: 'Build javascript files with babel.' }
                     ],
                     [
-                        { text: 'icon', code: true },
+                        { text: 'gulp icon', code: true },
                         { text: 'Generate icon fonts from svg.' }
                     ],
                     [
-                        { text: 'html', code: true },
+                        { text: 'gulp html', code: true },
                         { text: 'Compile twig files to html version.' }
                     ],
                     [
-                        { text: 'image', code: true },
+                        { text: 'gulp image', code: true },
                         { text: 'Optimize images from src to dist folder.' }
                     ],
                     [
-                        { text: 'plugins', code: true },
+                        { text: 'gulp plugins', code: true },
                         { text: 'Move available plugins from node to dist.' }
                     ],
                     [
-                        { text: 'docs', code: true },
+                        { text: 'gulp docs', code: true },
                         { text: 'Run the docs folder on localhost.' }
                     ]
                 ]

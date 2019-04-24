@@ -120,21 +120,21 @@
                                 <p class="mt-4">It will install the dev and regular dependencies to our theme directory.</p>
                             </div>
                             <div class="docs-block">
-                                <h4 id="start-to-build" class="mb-3 anchor">
-                                    Start to build
+                                <h4 id="watch-files-and-build" class="mb-3 anchor">
+                                    Watch files and build
                                 </h4>
-                                <p>We are ready to run a development environment by typing <code>yarn start</code> command into the terminal. Gameforest will be opened in a new browser tab.</p>
+                                <p>We are ready to run a development environment by typing <code>yarn watch</code> command into the terminal. Gameforest will be opened in a new browser tab.</p>
                                 <div class="docs-code mt-0">
-                                    <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#start-to-build_code"><i class="ya ya-save"></i></button>
-                                    <pre class="pre"><code id="start-to-build_code" class="twig shell-session p-4">yarn start</code></pre>
+                                    <button class="btn btn-default btn-icon btn-clipboard" data-toggle="tooltip" title="Copy" rel="#watch-files-and-build_code"><i class="ya ya-save"></i></button>
+                                    <pre class="pre"><code id="watch-files-and-build_code" class="twig shell-session p-4">yarn watch</code></pre>
                                 </div>
-                                <p class="mt-4"><code>start</code> task is watching <code>./src</code> folder to see current file changes and your browser will be reloaded if you've made a successful modification.</p>
+                                <p class="mt-4"><code>watch</code> task is watching <code>./src</code> folder to see current file changes and your browser will be reloaded if you've made a successful modification.</p>
                             </div>
                             <div class="docs-block">
                                 <h4 id="available-tasks" class="mb-3 anchor">
                                     Available Tasks
                                 </h4>
-                                <p>It is also possible to run single gulp task from terminal by typing <code>yarn *</code> when made a small modification just choose from tasks below.</p>
+                                <p>It is also possible to run npm scripts from the terminal by typing <code>yarn *</code> when you made a small modification just choose from tasks below.</p>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -144,39 +144,43 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><code>start</code></td>
+                                            <td><code>yarn watch</code></td>
                                             <td>Running a development environment for our project.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>build</code></td>
-                                            <td>Run css and js task together.</td>
+                                            <td><code>yarn prod</code></td>
+                                            <td>Build production ready version of gameforest.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>css</code></td>
+                                            <td><code>yarn dev</code></td>
+                                            <td>Build development ready version of gameforest.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>gulp css</code></td>
                                             <td>Compile scss files into minified and unminified css.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>js</code></td>
+                                            <td><code>gulp js</code></td>
                                             <td>Build javascript files with babel.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>icon</code></td>
+                                            <td><code>gulp icon</code></td>
                                             <td>Generate icon fonts from svg.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>html</code></td>
+                                            <td><code>gulp html</code></td>
                                             <td>Compile twig files to html version.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>image</code></td>
+                                            <td><code>gulp image</code></td>
                                             <td>Optimize images from src to dist folder.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>plugins</code></td>
+                                            <td><code>gulp plugins</code></td>
                                             <td>Move available plugins from node to dist.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>docs</code></td>
+                                            <td><code>gulp docs</code></td>
                                             <td>Run the docs folder on localhost.</td>
                                         </tr>
                                     </tbody>
@@ -187,7 +191,7 @@
                             <nav class="nav nav-docs flex-column" ya-sticky="top: 100">
                                 <a class="nav-link" href="#how-to-install">How to install</a>
                                 <a class="nav-link" href="#dependencies">Dependencies</a>
-                                <a class="nav-link" href="#start-to-build">Start to build</a>
+                                <a class="nav-link" href="#watch-files-and-build">Watch files and build</a>
                                 <a class="nav-link" href="#available-tasks">Available Tasks</a>
                                 <div class="divider"></div>
                                 <a class="nav-link" href="https://github.com/yakuthemes/gameforest/issues" target="_blank"><i class="ya ya-help"></i> Report issue</a>
