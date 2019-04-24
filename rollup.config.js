@@ -3,7 +3,7 @@
 import babel from 'rollup-plugin-babel'
 
 export default {
-    input: './src/js/index.js',
+    input: process.env.NODE_ENV === 'host' ? './docs/src/js/index.js' : './src/js/index.js',
     format: 'umd',
     file: 'theme.js',
     name: 'gameforest',

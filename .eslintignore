@@ -3,3 +3,4 @@
 **/node_modules/
 /docs/src/js/*.js
 gulpfile.js
+rollup.config.js

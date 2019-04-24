@@ -7,6 +7,7 @@
     "watch": "cross-env NODE_ENV=development gulp host",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development gulp",
+    "devjs": "cross-env NODE_ENV=host gulp js",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production gulp",
     "live": "cross-env NODE_ENV=host gulp",
