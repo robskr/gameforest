@@ -5,6 +5,8 @@
 - Changed lazysizes.min.js was removed from plugins
 - Changed yarn scripts and added cross-env
 - Changed theme.min.css renamed to theme.css
+- Renamed scss folder to sass
+- Moved scss/themes/*.scss files to sass/ dir
 - Update eslint configuration
 - Update devDependencies to the latest version
 - Update CKEditor 5 from 12.0.0 to 12.1.0
