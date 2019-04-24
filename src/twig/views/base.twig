@@ -16,7 +16,7 @@
     {% endif %}
 
     <!-- css: theme -->
-    <link rel="stylesheet" href="css/{{ env == 'dev' ? 'theme.css' : 'theme.min.css' }}{{ env == 'host' ? '?ver=' ~ config.version : '' }}">
+    <link rel="stylesheet" href="css/{{ env == 'development' ? 'theme.css' : 'theme.min.css' }}{{ env == 'host' ? '?ver=' ~ config.version : '' }}">
 </head>
 <body class="{% if (page.navbar != 'static') and (config.navbar == 'fixed') and (page.header != false) %}fixed-navbar{% endif %}{% if page.footer == 'sticky' %} sticky-footer{% endif %}{% if page.class %} {{ page.class }}{% endif %}">
     <div class="site{% if page.center %} d-flex align-items-center{% endif %}">
@@ -43,7 +43,7 @@
 
     <!-- js: vendor -->
     <script src="js/vendor.js"></script>
-    <script src="js/theme.min.js{{ env == 'host' ? '?ver=' ~ config.version : '' }}"></script>
+    <script src="js/{{ env == 'development' ? 'theme.js' : 'theme.min.js' }}{{ env == 'host' ? '?ver=' ~ config.version : '' }}"></script>
 
     {% if block("js") is defined %}
         <!-- js: plugins -->
