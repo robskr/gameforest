@@ -428,6 +428,7 @@
   .navbar-toggler {
     z-index: 2;
     height: $navbar-xs-height;
+    font-size: $font-size-base;
     border-right: 1px solid rgba($white, .03);
   }
 

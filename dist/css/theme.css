@@ -14838,6 +14838,7 @@ section > .divider path {
   .navbar-toggler {
     z-index: 2;
     height: 52px;
+    font-size: 1rem;
     border-right: 1px solid rgba(255, 255, 255, 0.03);
   }
   .navbar-brand {
