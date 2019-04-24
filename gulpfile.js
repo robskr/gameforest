@@ -87,7 +87,7 @@ function scss() {
 }
 
 function scssmin() {
-    return gulp.src(`${path.dist.css}/*.css`)
+    return gulp.src(`${path.dist.css}/theme.css`)
         .pipe(cleancss())
         .pipe(rename({
             suffix: '.min'
@@ -158,7 +158,10 @@ function image() {
 
 function json() {
     return gulp.src(path.src.json)
-        .pipe(merge({ fileName: 'theme.json' }))
+        .pipe(merge({
+            fileName: 'theme.json',
+            startObj: { env: process.env.NODE_ENV },
+        }))
         .pipe(gulp.dest(path.dist.json))
 }
 
@@ -168,7 +171,7 @@ function json() {
  * ------------------------------------------------------------------------
  */
 
-function html() {
+ function html() {
     return gulp.src(path.src.twig)
         .pipe(changed(path.dist.html, {
             extension: '.html'
