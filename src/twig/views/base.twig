@@ -16,7 +16,7 @@
     {% endif %}
 
     <!-- css: theme -->
-    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/{{ env == 'dev' ? 'theme.css' : 'theme.min.css' }}{{ env == 'host' ? '?ver=' ~ config.version : '' }}">
 </head>
 <body class="{% if (page.navbar != 'static') and (config.navbar == 'fixed') and (page.header != false) %}fixed-navbar{% endif %}{% if page.footer == 'sticky' %} sticky-footer{% endif %}{% if page.class %} {{ page.class }}{% endif %}">
     <div class="site{% if page.center %} d-flex align-items-center{% endif %}">
@@ -43,7 +43,7 @@
 
     <!-- js: vendor -->
     <script src="js/vendor.js"></script>
-    <script src="js/theme.min.js"></script>
+    <script src="js/theme.min.js{{ env == 'host' ? '?ver=' ~ config.version : '' }}"></script>
 
     {% if block("js") is defined %}
         <!-- js: plugins -->
@@ -61,5 +61,16 @@
             }
         }
     </script>
+
+    {% if env == 'host' %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99337124-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-99337124-1');
+        </script>
+    {% endif %}
 </body>
 </html>
