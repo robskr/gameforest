@@ -17349,8 +17349,21 @@ mark {
 }
 
 .owl-height-100 {
-  height: 100%;
   background-color: #313133;
+}
+
+.owl-height-100,
+.owl-height-100 .owl-item,
+.owl-height-100 .owl-carousel-item {
+  height: calc(100vh - 60px);
+}
+
+@media (max-width: 991.98px) {
+  .owl-height-100,
+  .owl-height-100 .owl-item,
+  .owl-height-100 .owl-carousel-item {
+    height: calc(100vh - 52px);
+  }
 }
 
 .owl-height-100 .owl-caption-container {

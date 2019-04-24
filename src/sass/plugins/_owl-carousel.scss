@@ -69,8 +69,17 @@
 }
 
 .owl-height-100 {
-  height: 100%;
   background-color: #313133;
+
+  &,
+  .owl-item,
+  .owl-carousel-item {
+    height: calc(100vh - #{$navbar-height});
+
+    @include media-breakpoint-down(md) {
+      height: calc(100vh - #{$navbar-xs-height});
+    }
+  }
 
   .owl-caption-container {
     width: 50%;

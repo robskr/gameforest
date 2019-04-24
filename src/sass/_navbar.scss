@@ -280,7 +280,7 @@
 // Navbar search
 .navbar-search {
   position: absolute;
-  top: -#{$navbar-padding-fixed};
+  top: -#{$navbar-height};
   left: 0;
   z-index: -1;
   width: 100%;
@@ -293,10 +293,10 @@
   }
 
   &.active {
-    top: $navbar-padding-fixed;
+    top: $navbar-height;
 
     @include media-breakpoint-down(md) {
-      top: $navbar-padding-fixed - 8;
+      top: $navbar-height - 8;
     }
   }
 
@@ -332,7 +332,7 @@
 
 // Fixed navbar
 .fixed-navbar {
-  padding-top: $navbar-padding-fixed;
+  padding-top: $navbar-height;
 
   .site-header {
     position: fixed;
@@ -346,12 +346,12 @@
   }
 
   .anchor {
-    padding-top: $navbar-padding-fixed + 40px;
-    margin-top: - $navbar-padding-fixed - 40px;
+    padding-top: $navbar-height + 40px;
+    margin-top: - $navbar-height - 40px;
   }
 
   @include media-breakpoint-down(md) {
-    padding-top: $navbar-padding-fixed - 8;
+    padding-top: $navbar-height - 8;
 
     .anchor {
       padding-top: 0;
@@ -362,7 +362,7 @@
 
 // Fixed nav bottom
 .fixed-nav-bottom {
-  padding-top: $navbar-padding-fixed + 36px;
+  padding-top: $navbar-height + 36px;
 
   .anchor {
     padding-top: 150px;
@@ -474,14 +474,14 @@
 
   .navbar-collapse {
     position: absolute;
-    top: $navbar-padding-fixed - 8;
+    top: $navbar-height - 8;
     display: block;
     width: 100%;
     overflow: auto;
 
     &.collapse.show {
       height: 100vh;
-      padding-bottom: $navbar-padding-fixed - 8;
+      padding-bottom: $navbar-height - 8;
     }
 
     .navbar-nav {

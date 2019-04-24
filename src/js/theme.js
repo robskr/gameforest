@@ -23,20 +23,9 @@ class Theme {
         $('[data-toggle="popover"]').popover()
     }
 
-    _fixHeight() {
-        if (document.querySelector('.owl-height-100')) {
-            const height = window.innerHeight - document.querySelector('.site-header').offsetHeight
-
-            document.querySelectorAll('.owl-carousel-item').forEach(el => {
-                el.style.height =  `${height}px`
-            })
-        }
-    }
-
     // private
     _load() {
         this._bootstrap()
-        this._fixHeight()
     }
 
     // static

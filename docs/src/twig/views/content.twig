@@ -76,10 +76,10 @@
             </div>
 
             {% for log in changelog.list %}
-                {% if log.badge == 'Fix' %}{% set badge = 'success' %}{% endif %}
+                {% if log.badge == 'Fixed' %}{% set badge = 'success' %}{% endif %}
                 {% if log.badge == 'Changed' %}{% set badge = 'warning' %}{% endif %}
-                {% if log.badge == 'Update' %}{% set badge = 'primary' %}{% endif %}
-                {% if log.badge == 'Remove' %}{% set badge = 'danger' %}{% endif %}
+                {% if log.badge == 'Updated' %}{% set badge = 'primary' %}{% endif %}
+                {% if log.badge == 'Removed' %}{% set badge = 'danger' %}{% endif %}
 
                 <div class="card shadow-none mb-2">
                     <div class="card-body py-2">
