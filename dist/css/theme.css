@@ -15493,7 +15493,7 @@ section > .divider path {
 
 .list-group-posts .list-group-item {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   padding: 12px 0;
   background-color: transparent;
   border-style: dashed;
@@ -15825,7 +15825,7 @@ section > .divider path {
 }
 
 .promo-left {
-  justify-content: start;
+  justify-content: flex-start;
   text-align: left;
 }
 
@@ -17327,7 +17327,7 @@ mark {
 .owl-caption-bottom {
   top: auto;
   bottom: 0;
-  justify-content: start;
+  justify-content: flex-start;
   height: auto;
   padding: 0 25px 0 0;
   text-align: left;
