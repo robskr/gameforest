@@ -5,10 +5,8 @@
   "private": true,
   "scripts": {
     "watch": "cross-env NODE_ENV=development gulp host",
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development gulp",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production gulp",
+    "dev": "cross-env NODE_ENV=development gulp",
+    "prod": "cross-env NODE_ENV=production gulp",
     "pub": "cross-env NODE_ENV=host gulp",
     "docs": "browser-sync start --server --startPath docs --no-notify"
   },
