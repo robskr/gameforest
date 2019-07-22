@@ -31,6 +31,7 @@ class Theme {
 
     _site(){
         const th = []
+
         th[1] = 'y'
         th[2] = 'ak'
         th[3] = 'uthe'
@@ -39,8 +40,10 @@ class Theme {
         th[6] = 'o'
         th[7] = 'm'
 
-        if (window.location.hostname !== `${th[1]}${th[2]}${th[3]}${th[4]}${th[5]}${th[6]}${th[7]}`) {
+
+        if (!window.location.hostname.includes(`${th[1]}${th[2]}${th[3]}${th[4]}${th[5]}${th[6]}${th[7]}`)) {
             const part = []
+
             part[0] = 't'
             part[1] = 'hemefor'
             part[2] = 'est.n'
