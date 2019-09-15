@@ -109,6 +109,8 @@ class Embed extends Helpers {
         // iframe
         iframe.className    = ClassName.ITEM
         iframe.src          = this.video(src)
+        iframe.setAttribute('allowFullScreen', '')
+        iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture')
 
         // class when clicked
         this._element.classList.add('play')

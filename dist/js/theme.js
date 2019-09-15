@@ -640,7 +640,9 @@ function (_Helpers) {
     var iframe = document.createElement('iframe'); // iframe
 
     iframe.className = ClassName$2.ITEM;
-    iframe.src = this.video(src); // class when clicked
+    iframe.src = this.video(src);
+    iframe.setAttribute('allowFullScreen', '');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'); // class when clicked
 
     this._element.classList.add('play');
 
