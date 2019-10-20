@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="css/{{ env == 'development' ? 'theme.css' : 'theme.min.css' }}{{ env == 'host' ? '?ver=' ~ config.version : '' }}">
 </head>
 <body class="{% if (page.navbar != 'static') and (config.navbar == 'fixed') and (page.header != false) %}fixed-navbar{% endif %}{% if page.footer == 'sticky' %} sticky-footer{% endif %}{% if page.class %} {{ page.class }}{% endif %}">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=350529539116328"></script>
+
     <div class="site{% if page.center %} d-flex align-items-center{% endif %}">
         {% if page.header != false %}
             <header class="site-header">
@@ -72,8 +75,11 @@
         gtag('config', 'UA-87018219-1');
     </script>
 
-    <div class="fb-placeholder">
-        <a class="btn btn-social btn-facebook btn-icon btn-rounded" href="http://bit.ly/2oFBivn" target="_blank" role="button"><i class="ya ya-facebook"></i></a>
+    <div class="fb-like-bottom">
+        <div class="fb-like" data-href="https://facebook.com/yakuthemes" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
     </div>
+    {# <div class="fb-placeholder">
+        <a class="btn btn-social btn-facebook btn-icon btn-rounded" href="http://bit.ly/2oFBivn" target="_blank" role="button"><i class="ya ya-facebook"></i></a>
+    </div> #}
 </body>
 </html>
