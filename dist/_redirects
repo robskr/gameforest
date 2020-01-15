@@ -2,3 +2,4 @@
 
 # Redirect default Netlify subdomain to primary domain
 https://gameforest.netlify.com/* https://gameforest.yakuthemes.com/:splat 301!
+https://www.gameforest.yakuthemes.com/* https://gameforest.yakuthemes.com/:splat 301!
