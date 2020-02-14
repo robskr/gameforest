@@ -205,7 +205,7 @@ function compile() {
             unformatted: ['span', 'i'],
             extra_liners: ' ',
             max_preserve_newlines: 0,
-            eol: process.env.NODE_ENV === 'host' ? '' : '\n',
+            eol: process.env.NODE_ENV === 'host' ? '\n' : '\n',
             indent_size: process.env.NODE_ENV === 'host' ? '' : 4,
             indent_char: process.env.NODE_ENV === 'host' ? '' : ' ',
             indent_with_tabs: process.env.NODE_ENV === 'host' ? false : true

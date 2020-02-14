@@ -769,6 +769,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /**
  * ---------------------------------------------------------------------------------------
+ * Gameforest Bootstrap Gaming Theme: theme.js
+ * Copyright (c) 2019 yakuthemes.com (https://yakuthemes.com)
+ *
+ * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
+ * @version   5.0.3
+ * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
+ * ---------------------------------------------------------------------------------------
+ */
+/**
+ * ------------------------------------------------------------------------
+ * Class Definition
+ * ------------------------------------------------------------------------
+ */
+
+var Theme =
+/*#__PURE__*/
+function () {
+  function Theme() {}
+
+  var _proto = Theme.prototype;
+
+  _proto._bootstrap = function _bootstrap() {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+  } // private
+  ;
+
+  _proto._load = function _load() {
+    this._bootstrap();
+  } // static
+  ;
+
+  Theme._init = function _init() {
+    var data = new Theme();
+
+    data._load();
+  };
+
+  return Theme;
+}();
+/**
+ * ------------------------------------------------------------------------
+ * Load Event
+ * ------------------------------------------------------------------------
+*/
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  Theme._init.call();
+});
+
+/**
+ * ---------------------------------------------------------------------------------------
  * Gameforest Bootstrap Gaming Theme: icons.js
  * Copyright (c) 2019 yakuthemes.com (https://yakuthemes.com)
  *
@@ -1771,64 +1824,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-/**
- * ---------------------------------------------------------------------------------------
- * Gameforest Bootstrap Gaming Theme: theme.js
- * Copyright (c) 2019 yakuthemes.com (https://yakuthemes.com)
- *
- * @link      https://themeforest.net/item/gameforest-responsive-gaming-html-theme/5007730
- * @version   5.0.3
- * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3 License
- * ---------------------------------------------------------------------------------------
- */
-/**
- * ------------------------------------------------------------------------
- * Class Definition
- * ------------------------------------------------------------------------
- */
-
-var Theme =
-/*#__PURE__*/
-function () {
-  function Theme() {}
-
-  var _proto = Theme.prototype;
-
-  _proto._bootstrap = function _bootstrap() {
-    $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover();
-  } // private
-  ;
-
-  _proto._load = function _load() {
-    this._bootstrap();
-  } // static
-  ;
-
-  Theme._init = function _init() {
-    var data = new Theme();
-
-    data._load();
-  };
-
-  return Theme;
-}();
-/**
- * ------------------------------------------------------------------------
- * Load Event
- * ------------------------------------------------------------------------
-*/
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  Theme._init.call();
-});
-
 exports.Background = Background;
 exports.Carousel = Carousel;
 exports.Disqus = Disqus;
 exports.Embed = Embed;
 exports.Facebook = Facebook;
+exports.Help = Theme;
 exports.Icons = Icons;
 exports.Lightbox = Lightbox;
 exports.Navbar = Navbar;
@@ -1837,7 +1838,6 @@ exports.Progress = Progress;
 exports.Sticky = Sticky;
 exports.Style = Style;
 exports.Svg = Svg;
-exports.Theme = Theme;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
